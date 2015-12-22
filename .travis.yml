@@ -1,6 +1,6 @@
 branches:
     only:
-        - davide/feat/travisCI
+        - master
 
 install:
     - sudo add-apt-repository ppa:texlive-backports/ppa -y
@@ -27,7 +27,7 @@ after_success:
     - mkdir -p build/
     - cd build/
     - cp -f $HOME/build/BugBusterSWE/documentation/RR/NormeDiProgetto/main.pdf .
-    - mv main.pdf normeDiProgetto_lastest.pdf
+    - mv main.pdf NormeDiProgetto_lastest.pdf
     - git add normeDiProgetto_last.pdf
     - git commit -m "Travis CI autocommit from travis build ${TRAVIS_BUILD_NUMBER}"
     - git push -f origin gh-pages
