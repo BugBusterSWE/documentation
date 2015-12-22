@@ -26,7 +26,8 @@ after_success:
     - cd travis-build/
     - mkdir -p build/
     - cd build/
-    - cp -f $HOME/build/bugbusterswe/documentation/main.pdf .
+    - ls -lR
+    - cp -f $HOME/build/BugBusterSWE/documentation/main.pdf .
     - git add main.pdf
     - git commit -m "Travis CI autocommit from travis build ${TRAVIS_BUILD_NUMBER}"
     - git push -fq origin gh-pages > /dev/null
