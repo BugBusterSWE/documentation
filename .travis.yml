@@ -23,11 +23,12 @@ after_success:
     - git config --global user.email ${GIT_EMAIL}
     - git config --global user.name ${GIT_NAME}
     - git clone --quiet --branch=gh-pages https://${GH_TOKEN}@github.com/bugbusterswe/documentation travis-build
+    - cd
+    - ls -lR
     - cd travis-build/
     - mkdir -p build/
     - cd build/
-    - ls -lR
-    - cp -f $HOME/build/BugBusterSWE/documentation/main.pdf .
+    - cp -f $HOME/BugBusterSWE/documentation/main.pdf .
     - git add main.pdf
     - git commit -m "Travis CI autocommit from travis build ${TRAVIS_BUILD_NUMBER}"
     - git push -fq origin gh-pages > /dev/null
