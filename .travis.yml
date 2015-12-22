@@ -17,7 +17,7 @@ install:
     - sudo getnonfreefonts-sys garamond
 
 script:
-    - latexmk -pdflatex='pdflatex -interaction=nonstopmode' -pdf
+    - cd RR/NormeDiProgetto/ && latexmk -pdflatex='pdflatex -interaction=nonstopmode' -pdf && cd -
 
 after_success:
     - git config --global user.email ${GIT_EMAIL}
