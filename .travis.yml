@@ -27,11 +27,7 @@ after_success:
     - mkdir -p build/
     - cd build/
     - cp -f $HOME/build/BugBusterSWE/documentation/RR/NormeDiProgetto/main.pdf .
-    - mv main.pdf normeDiProgetto_last.pdf
+    - mv main.pdf normeDiProgetto_lastest.pdf
     - git add normeDiProgetto_last.pdf
     - git commit -m "Travis CI autocommit from travis build ${TRAVIS_BUILD_NUMBER}"
     - git push -f origin gh-pages
-
-
-#    - gem install travis
-#    - travis restart -r johnfoster-pge-utexas/johnfoster-pge-utexas.github.io --token ${TRAVIS_TOKEN} --skip-completion-check
