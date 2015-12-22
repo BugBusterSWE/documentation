@@ -28,6 +28,6 @@ after_success:
     - cd build/
     - cp -f $HOME/build/BugBusterSWE/documentation/RR/NormeDiProgetto/main.pdf .
     - mv main.pdf NormeDiProgetto_lastest.pdf
-    - git add normeDiProgetto_last.pdf
+    - git add NormeDiProgetto_last.pdf
     - git commit -m "Travis CI autocommit from travis build ${TRAVIS_BUILD_NUMBER}"
     - git push -f origin gh-pages
