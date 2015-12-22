@@ -22,13 +22,15 @@ script:
 after_success:
     - git config --global user.email ${GIT_EMAIL}
     - git config --global user.name ${GIT_NAME}
-    - git clone --quiet --branch=gh-pages https://${GH_TOKEN}@github.com/bugbusterswe/documentation travis-build > /dev/null
-    - cd travis-build/build
+    - git clone --quiet --branch=gh-pages https://${GH_TOKEN}@github.com/bugbusterswe/documentation travis-build
+    - cd travis-build/
+    - mkdir -p build/
+    - cd build/
     - cp -f $HOME/build/bugbusterswe/documentation/main.pdf .
     - git add main.pdf
     - git commit -m "Travis CI autocommit from travis build ${TRAVIS_BUILD_NUMBER}"
     - git push -fq origin gh-pages > /dev/null
-    - gem install travis
 
 
+#    - gem install travis
 #    - travis restart -r johnfoster-pge-utexas/johnfoster-pge-utexas.github.io --token ${TRAVIS_TOKEN} --skip-completion-check
