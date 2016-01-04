@@ -22,6 +22,66 @@ Lo standard ISO/IEC 9126 classifica la qualit\`a del software e definisce delle 
 
 \subsection{Procedure di controllo}
 \subsubsection{Qualit\`a di processo}
-
+La pianificazione delle attivit\`a volte al miglioramento continuo dei processi sono descritte nel \textit{Piano di Progetto v1.0.0}. Le linee guida per la gestione della qualit\`a del processo, invece, seguono il modello PCDA e descrivono come devono essere attuate le procedure di controllo:
+\begin{itemize}
+	\item la pianificazione deve essere dettagliata, e le attivit\`a pianificate devono essere monitorate;
+	\item le risorse necessarie per conseguire gli obiettivi devono essere definite;
+	\item il miglioramento della qualit\`a del processo deve essere verificato attraverso l'utilizzo di apposite metriche, che verranno descritte in seguito.
+\end{itemize}
 
 \subsubsection{Qualit\`a di prodotto}
+Il controllo per la qualit\`a del prodotto definisce i seguenti processi:
+\begin{itemize}
+	\item \textit{\textbf{SQA}} (\textbf{S}oftware \textbf{Q}uality \textbf{A}ssurance}): si occupa di assicurare che i processi siano implementati secondo quanto pianificato e che siano forniti sistemi di misurazione dei processi;
+	\item \textbf{verifica}: si occupa di accertare che l'esecuzione dei processi non abbia introdotto degli errori, e accerta il rispetto delle regole, delle convenzioni e delle procedure;
+	\item \textbf{validazione}: si occupa di accertare che i prodotti realizzati siano conformi alle attese.
+\end{itemize}
+
+\subsection{Strategia}
+Nel piano di progetto vengono fissate delle scadenze che devono necessariamente essere rispettate: \`e dunque necessario definire un'efficace strategia di qualifica. I controlli saranno effettuati in maniera automatica secondo quanto previsto nelle \textit{Norme di Progetto v1.0.0}. 
+
+\subsection{Responsabilit\`a}
+La responsabilit\`a della verifica viene affidata al \textit{Responsabile di progetto} e ai \textit{Verificatori} secondo quanto previsto nel \textit{Piano di Progetto v1.0.0}.
+
+\subsection{Risorse}
+Vengono consumati due tipi di risorse:
+\begin{itemize}
+	\item \textbf{umane}: in particolare il \textit{Responsabile di progetto} e il \textit{Verificatore}; le ore impiegate vengono contabilizzate e messe a calendario secondo quanto previsto dal \textit{Piano di Progetto v1.0.0} e dalle \href{regole}{http://www.math.unipd.it/~tullio/IS-1/2015/Dispense/PD01.pdf} del progetto didattico. Ai fini della qualifica, tuttavia, si pu\`o tralasciare l'aspetto economico, in quanto esso non rientra nel dominio del presente documento;
+		\item \textbf{tecnologiche}: i \textit{tool} utilizzati per il controllo della qualit\`a. Le operazioni effettuate  consumeranno unit\`a di calcolo considerate a costo nullo, in quanto le elaborazioni verranno effettuate su macchine per le quali non \`e richiesto nessun contributo e per un tempo non degno di nota.
+\end{itemize}
+
+\subsection{Misure e Metriche}
+Di seguito sono elencate le metriche utilizzate per valutare i processi in modo quantitativo.
+\subsubsection{Metriche per i processi}
+Le seguenti metriche rappresentano un indicare volto a monitorare i tempi e i costi associati al progetto. Sono metriche di tipo \textit{consuntivo} che danno un riscontro immediato sullo stato attuale: gli indici verranno valutati dal \textit{Responsabile di progetto} e, se necessario, verranno presi provvedimenti per sistemare la situazione. 
+
+\paragraph{Durata del progetto}
+Rappresenta la durata del progetto espresso in numero di mesi o, per progetti di dimensioni contenute, in settimane. \`E utilizzata per valutare l'effettiva disponibilità del prodotto realizzato.\\
+\textit{Durata del progetto = Numero di mesi (o di settimane o di giorni)}
+
+\paragraph{Schedule Variance}
+Indica se si \`e in linea, in anticipo o in ritardo rispetto alla schedulazione delle attività di progetto
+pianificate. \\
+\textit{SV = BCW P − BCW S} \\
+Dove:
+\begin{itemize}
+	\item \textbf{BCW P}: indica il valore delle attivit\`a realizzate alla data corrente;
+	\item \textbf{BCW S}: indica il costo pianificato per realizzare le attività di progetto alla data corrente.
+\end{itemize}
+\`E un indicatore di
+efficacia soprattutto nei confronti del \textit{Cliente}. Se SV > 0 significa che il progetto sta procedendo
+con maggior velocit\`a rispetto a quanto pianificato, viceversa se negativo.
+
+\paragraph{Budget Variance}
+Indica se alla data corrente si \`e speso di pi\`u o di meno rispetto a quanto previsto.\\
+\textit{BV = BCW S − ACW P}\\
+Dove:
+\begin{itemize}
+	\item \textbf{BCW S}: indica il costo pianificato per realizzare le attivit\`a di progetto alla data corrente;
+	\item \textbf{ACW P}: indica il costo effettivo sostenuto alla data corrente. \`E un indicatore con
+un valore unicamente contabile e finanziario. Se BV > 0 significa che il progetto sta spendendo
+il proprio budget con minor velocit\`a di quanto pianificato, viceversa se negativo.
+\end{itemize}
+
+\paragraph{Produttivit\`a}
+% todo
