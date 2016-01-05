@@ -52,36 +52,54 @@ Vengono consumati due tipi di risorse:
 
 \subsection{Misure e Metriche}
 Di seguito sono elencate le metriche utilizzate per valutare i processi in modo quantitativo.
+
+\subsubsection{Metriche per il prodotto}
+%todo, messo prima per la necessità di esprimere le unità di misura della dimensione del progetto
+
 \subsubsection{Metriche per i processi}
 Le seguenti metriche rappresentano un indicare volto a monitorare i tempi e i costi associati al progetto. Sono metriche di tipo \textit{consuntivo} che danno un riscontro immediato sullo stato attuale: gli indici verranno valutati dal \textit{Responsabile di progetto} e, se necessario, verranno presi provvedimenti per sistemare la situazione. 
-
-\paragraph{Durata del progetto}
-Rappresenta la durata del progetto espresso in numero di mesi o, per progetti di dimensioni contenute, in settimane. \`E utilizzata per valutare l'effettiva disponibilità del prodotto realizzato.\\
-\textit{Durata del progetto = Numero di mesi (o di settimane o di giorni)}
 
 \paragraph{Schedule Variance}
 Indica se si \`e in linea, in anticipo o in ritardo rispetto alla schedulazione delle attività di progetto
 pianificate. \\
-\textit{SV = BCW P − BCW S} \\
+\textit{SV = EV − PV} \\
 Dove:
 \begin{itemize}
-	\item \textbf{BCW P}: indica il valore delle attivit\`a realizzate alla data corrente;
-	\item \textbf{BCW S}: indica il costo pianificato per realizzare le attività di progetto alla data corrente.
+	\item \textbf{EV}: indica il valore delle attivit\`a realizzate alla data corrente;
+	\item \textbf{PV}: indica il costo pianificato per realizzare le attività di progetto alla data corrente.
 \end{itemize}
-\`E un indicatore di
-efficacia soprattutto nei confronti del \textit{Cliente}. Se SV > 0 significa che il progetto sta procedendo
-con maggior velocit\`a rispetto a quanto pianificato, viceversa se negativo.
+\`E un indicatore di efficacia soprattutto nei confronti del \textit{Cliente}. Se SV > 0 significa che il progetto sta procedendo con maggior velocit\`a rispetto a quanto pianificato, viceversa se negativo. Alla fine del progetto questo indice assumer\`a il valore 0, perch\`e in quel momento tutte le attivit\`a saranno state realizzate.
 
 \paragraph{Budget Variance}
 Indica se alla data corrente si \`e speso di pi\`u o di meno rispetto a quanto previsto.\\
-\textit{BV = BCW S − ACW P}\\
+\textit{BV = EV – AC}\\
 Dove:
 \begin{itemize}
-	\item \textbf{BCW S}: indica il costo pianificato per realizzare le attivit\`a di progetto alla data corrente;
-	\item \textbf{ACW P}: indica il costo effettivo sostenuto alla data corrente. \`E un indicatore con
+	\item \textbf{EV}: indica il costo pianificato per realizzare le attivit\`a di progetto alla data corrente;
+	\item \textbf{AC}: indica il costo effettivo sostenuto alla data corrente. \`E un indicatore con
 un valore unicamente contabile e finanziario. Se BV > 0 significa che il progetto sta spendendo
 il proprio budget con minor velocit\`a di quanto pianificato, viceversa se negativo.
 \end{itemize}
 
 \paragraph{Produttivit\`a}
 % todo
+
+\paragraph{Numero di cambiamenti apportati}
+Rappresenta il numero di modifiche apportate al progetto in corso d'opera. Queste modifiche possono riguardare i requisiti rilevati, le funzionalit\`a, la progettazione, il codice e i manuali o documenti scritti, e sono causate, molto spesso, da un cambiamento dei requisiti, sia esso voluto dal committente o derivato da un'errata interpretazione del fornitore. Misurare il numero di modifiche apportate al progetto \`e dunque fondamentale al fine di valutare gli impatti sui tempi di realizzazione e sui costi.//
+\textit{M = MA} //
+Dove \textbf{MA} indica le modifiche apportate al progetto.
+
+\paragraph{Numero di errori rilevati}
+Rappresenta il numero di errori rilevati nel prodotto durante le diverse fasi di sviluppo. Gli errori possono essere di tre tipi:
+\begin{itemize}
+	\item \textbf{di documentazione}, rilevati durante le attivit\`a di revisione;
+	\item \textbf{di codice}, rilevati durante le attivit\`a di test;
+		item \textbf{di progettazione}.
+\end{itemize}
+Questa metrica \`e fondamentale per valutare la qualit\`a del prodotto sviluppato e l'efficacia delle attivit\`a di revisione e test. Il numero di errori \`e normalizzato rispetto alle dimensioni del progetto (in KLOCs o FPs).//
+\textit{NE = NER / DP} //
+Dove:
+\begin{itemize}
+	\item \textbf{NER} \`e il nuemro di errori rilevati;
+	\item \textbf{DP} \`e la dimensione del progetto espressa in KLOCs o FPs.
+\end{itemize}
