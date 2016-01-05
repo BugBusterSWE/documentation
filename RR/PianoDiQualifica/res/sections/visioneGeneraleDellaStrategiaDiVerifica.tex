@@ -32,7 +32,7 @@ La pianificazione delle attivit\`a volte al miglioramento continuo dei processi 
 \subsubsection{Qualit\`a di prodotto}
 Il controllo per la qualit\`a del prodotto definisce i seguenti processi:
 \begin{itemize}
-	\item \textit{\textbf{SQA}} (\textbf{S}oftware \textbf{Q}uality \textbf{A}ssurance}): si occupa di assicurare che i processi siano implementati secondo quanto pianificato e che siano forniti sistemi di misurazione dei processi;
+	\item \textit{\textbf{SQA}} (\textbf{S}oftware \textbf{Q}uality \textbf{A}ssurance): si occupa di assicurare che i processi siano implementati secondo quanto pianificato e che siano forniti sistemi di misurazione dei processi;
 	\item \textbf{verifica}: si occupa di accertare che l'esecuzione dei processi non abbia introdotto degli errori, e accerta il rispetto delle regole, delle convenzioni e delle procedure;
 	\item \textbf{validazione}: si occupa di accertare che i prodotti realizzati siano conformi alle attese.
 \end{itemize}
@@ -62,17 +62,17 @@ Le seguenti metriche rappresentano un indicare volto a monitorare i tempi e i co
 \paragraph{Schedule Variance}
 Indica se si \`e in linea, in anticipo o in ritardo rispetto alla schedulazione delle attività di progetto
 pianificate. \\
-\textit{SV = EV − PV} \\
+\textit{SV = EV - PV} \\
 Dove:
 \begin{itemize}
 	\item \textbf{EV}: indica il valore delle attivit\`a realizzate alla data corrente;
 	\item \textbf{PV}: indica il costo pianificato per realizzare le attività di progetto alla data corrente.
 \end{itemize}
-\`E un indicatore di efficacia soprattutto nei confronti del \textit{Cliente}. Se SV > 0 significa che il progetto sta procedendo con maggior velocit\`a rispetto a quanto pianificato, viceversa se negativo. Alla fine del progetto questo indice assumer\`a il valore 0, perch\`e in quel momento tutte le attivit\`a saranno state realizzate.
+\`E un indicatore di efficacia soprattutto nei confronti del \textit{Cliente}. Se \begin{math}{SV > 0}\end{math} significa che il progetto sta procedendo con maggior velocit\`a rispetto a quanto pianificato, viceversa se negativo. Alla fine del progetto questo indice assumer\`a il valore 0, perch\`e in quel momento tutte le attivit\`a saranno state realizzate.
 
 \paragraph{Budget Variance}
 Indica se alla data corrente si \`e speso di pi\`u o di meno rispetto a quanto previsto.\\
-\textit{BV = EV – AC}\\
+\textit{BV = EV - AC}\\
 Dove:
 \begin{itemize}
 	\item \textbf{EV}: indica il costo pianificato per realizzare le attivit\`a di progetto alla data corrente;
@@ -85,8 +85,8 @@ il proprio budget con minor velocit\`a di quanto pianificato, viceversa se negat
 % todo
 
 \paragraph{Numero di cambiamenti apportati}
-Rappresenta il numero di modifiche apportate al progetto in corso d'opera. Queste modifiche possono riguardare i requisiti rilevati, le funzionalit\`a, la progettazione, il codice e i manuali o documenti scritti, e sono causate, molto spesso, da un cambiamento dei requisiti, sia esso voluto dal committente o derivato da un'errata interpretazione del fornitore. Misurare il numero di modifiche apportate al progetto \`e dunque fondamentale al fine di valutare gli impatti sui tempi di realizzazione e sui costi.//
-\textit{M = MA} //
+Rappresenta il numero di modifiche apportate al progetto in corso d'opera. Queste modifiche possono riguardare i requisiti rilevati, le funzionalit\`a, la progettazione, il codice e i manuali o documenti scritti, e sono causate, molto spesso, da un cambiamento dei requisiti, sia esso voluto dal committente o derivato da un'errata interpretazione del fornitore. Misurare il numero di modifiche apportate al progetto \`e dunque fondamentale al fine di valutare gli impatti sui tempi di realizzazione e sui costi.\\
+\textit{M = MA}\\
 Dove \textbf{MA} indica le modifiche apportate al progetto.
 
 \paragraph{Numero di errori rilevati}
@@ -96,8 +96,8 @@ Rappresenta il numero di errori rilevati nel prodotto durante le diverse fasi di
 	\item \textbf{di codice}, rilevati durante le attivit\`a di test;
 		item \textbf{di progettazione}.
 \end{itemize}
-Questa metrica \`e fondamentale per valutare la qualit\`a del prodotto sviluppato e l'efficacia delle attivit\`a di revisione e test. Il numero di errori \`e normalizzato rispetto alle dimensioni del progetto (in KLOCs o FPs).//
-\textit{NE = NER / DP} //
+Questa metrica \`e fondamentale per valutare la qualit\`a del prodotto sviluppato e l'efficacia delle attivit\`a di revisione e test. Il numero di errori \`e normalizzato rispetto alle dimensioni del progetto (in KLOCs o FPs).\\
+\textit{NE = NER / DP} \\
 Dove:
 \begin{itemize}
 	\item \textbf{NER} \`e il nuemro di errori rilevati;
