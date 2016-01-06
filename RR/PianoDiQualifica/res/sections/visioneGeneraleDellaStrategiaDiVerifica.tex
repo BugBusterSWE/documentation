@@ -51,18 +51,56 @@ Vengono consumati due tipi di risorse:
 \end{itemize}
 
 \subsection{Misure e Metriche}
-Di seguito sono elencate le metriche utilizzate per valutare i processi in modo quantitativo.
+Di seguito sono elencate le metriche utilizzate per valutare i processi in modo quantitativo. Vengono inoltre riportati i range utilizzati, secondo la seguente classificazione:
+\begin{itemize}
+	\item \textbf{di accettazione}, il valore ha raggiunto la soglia minima dell'accettazione;
+	\item \textbf{ottimale}, il valore ha raggiunto le massime aspettative del team. L'obiettivo \`e quello che tutti i valori siano all'interno di questo range.
+\end{itemize}
+I valori che non rientrano in questi due range sono considerati non accettabili.
 
-\subsubsection{Metriche per il prodotto}
-%todo, messo prima per la necessità di esprimere le unità di misura della dimensione del progetto
+\subsubsection{Metriche per la documentazione}
+La qualit\`a di un documento dipende fortemente dai suoi contenuti e dalla sua leggibilit\`a. Tuttavia, a causa della pressoch\'e nulla esperienza dei membri del team, valutarla risulta molto difficile. Si \`e pertanto scelto di affidarsi a parametri oggettivi e facilmente misurabili attraverso dei tools automatici.
+
+\paragraph{Indice di leggibilit\`a}
+Per valutare la leggibilit\`a di un documento si \`è scelto di usare l'indice \textit{Gulpease}, studiato appositamente per la lingua italiana. \\
+Rispetto ad altri indici, questo ha il vantaggio di basarsi sulla lunghezza delle parole e non sulla loro divisione in sillabe, semplificando la valutazione automatica. \\
+\begin{center}
+	\textit{Indice Gulpease} = 89 + 
+		\dfrac	{300 * (\textit{numero delle frasi}) - 10 * (\textit{numero delle lettere})}
+				{\textit{numero delle parole}}}
+\end{center}
+I risultati sono compresi tra 0 e 100, dove un valore alto indica alta leggibilit\`a, e viceversa. \\
+In generale risulta che testi con indice:
+\begin{itemize}
+	\item \textbf{inferiore a 80} risultano difficili da leggere per chi ha la licenza elementare;
+	\item \textbf{inferiore a 60} risultano difficili da leggere per chi ha la licenza media;
+	\item \textbf{inferiore a 40} risultano difficili da leggere per chi ha la licenza superiore;
+\end{itemize}
+\textbf{Range utilizzati}:\\
+\begin{itemize}
+	\item Range di accettazione : [40 - 100]
+	\item Range ottimale: [50 - 100]
+\end{itemize}
+Questi valori sono stati fissati tenendo conto delle soglie di cui sopra, e soprattutto del fatto che la documentazione del presente progetto \`e destinata a persone sufficientemente preparate, competenti ed istruite.
 
 \subsubsection{Metriche per i processi}
 Le seguenti metriche rappresentano un indicare volto a monitorare i tempi e i costi associati al progetto. Sono metriche di tipo \textit{consuntivo} che danno un riscontro immediato sullo stato attuale: gli indici verranno valutati dal \textit{Responsabile di progetto} e, se necessario, verranno presi provvedimenti per sistemare la situazione. 
 
+\paragraph{Capability Maturity Model}
+Per valutare i processi si \`e deciso di applicare il modello \textit{CMM} (\textbf{C}apability \textbf{M}aturity \textbf{M}odel) che, se correttamente applicato, fornisce un'ottima base di valutazione dei processi. \\
+L'indice pu\`o assumere valori interi da 1 a 5, dove 1 indica il valore peggiore e 5 il migliore.
+\textbf{Range utilizzati}:\\
+\begin{itemize}
+	\item Range di accettazione : [2 - 3]
+	\item Range ottimale: [4 - 5]
+\end{itemize}
+
 \paragraph{Schedule Variance}
 Indica se si \`e in linea, in anticipo o in ritardo rispetto alla schedulazione delle attività di progetto
 pianificate. \\
-\textit{SV = EV - PV} \\
+\begin{center}
+	\textit{Schedule Variance} = \textit{EV} - \textit{PV} 
+\end{center}
 Dove:
 \begin{itemize}
 	\item \textbf{EV}: indica il valore delle attivit\`a realizzate alla data corrente;
@@ -72,7 +110,9 @@ Dove:
 
 \paragraph{Budget Variance}
 Indica se alla data corrente si \`e speso di pi\`u o di meno rispetto a quanto previsto.\\
-\textit{BV = EV - AC}\\
+\begin{center}
+	\textit{Budget Variance} = \textit{EV] - \textit{AC}
+\end{center}
 Dove:
 \begin{itemize}
 	\item \textbf{EV}: indica il costo pianificato per realizzare le attivit\`a di progetto alla data corrente;
@@ -82,24 +122,141 @@ il proprio budget con minor velocit\`a di quanto pianificato, viceversa se negat
 \end{itemize}
 
 \paragraph{Produttivit\`a}
-% todo
+Rappresenta la produttivit\`a media delle risorse impiegate nelle diverse fasi del progetto. Questa metrica pu\`o dunque riferirsi al progetto in senso generale, oppure ad una specifica fase. \`E utilizzata per valutare lo sforzo richiesto per lo sviluppo del progetto, a fronte delle sue dimensioni.
+\begin{center}
+	\textit{Produttivit\`a} = \frac	{\textit{Quantit\`a di output ottenuto}}
+									{\textit{Quantit\`a di input utilizzato}}
+\end{center}
+Per quanto detto, i parametri "input" e "output" assumono valori diversi in base ai processi, e alle relative attivit\`a, cui la formula viene applicata:
+\begin{itemize}
+	\item \textbf{documentazione}: 
+		\begin{center}
+			\dfrac	{\textit{ore necessarie alla scrittura della documentazione}}
+					{\textit{numero di parole scritte}}
+		\end{center}	
+	\item \textbf{codifica}: 
+		begin{center}
+			\dfrac	{\textit{ore necessarie alla scrittura del codice}}
+					{\textit{numero di linee di codice scritte}}
+		\end{center}	
+	\item \textbf{verifica}: 
+		begin{center}
+			\dfrac	{\textit{ore necessarie alle attivit\`a di verifica}}
+					{\textit{numero di anomalie rilevate}}
+		\end{center}		
+	\item \textbf{validazione}: 
+		begin{center}
+			\dfrac	{\textit{numero di test di accettazione}}
+					{\textit{numero di test di accettazione superati}}
+		\end{center}		
+\end{itemize}
+
+\textbf{Range utilizzati}: \\
+I valori che si ottengono con questa metrica sono difficilmente valutabili in modo assoluto, ma assumono importanza se confrontati in momenti diversi del progetto.
 
 \paragraph{Numero di cambiamenti apportati}
-Rappresenta il numero di modifiche apportate al progetto in corso d'opera. Queste modifiche possono riguardare i requisiti rilevati, le funzionalit\`a, la progettazione, il codice e i manuali o documenti scritti, e sono causate, molto spesso, da un cambiamento dei requisiti, sia esso voluto dal committente o derivato da un'errata interpretazione del fornitore. Misurare il numero di modifiche apportate al progetto \`e dunque fondamentale al fine di valutare gli impatti sui tempi di realizzazione e sui costi.\\
-\textit{M = MA}\\
-Dove \textbf{MA} indica le modifiche apportate al progetto.
-
-\paragraph{Numero di errori rilevati}
-Rappresenta il numero di errori rilevati nel prodotto durante le diverse fasi di sviluppo. Gli errori possono essere di tre tipi:
+Rappresenta il numero di modifiche apportate al progetto in corso d'opera. Queste modifiche piossono riguardare i requisiti rilevati, le funzionalit\`a, la progettazione, il codice e i manuali o documenti scritti, e sono causate, molto spesso, da un cambiamento dei requisiti, sia esso voluto dal committente o derivato da un'errata interpretazione del fornitore. Misurare il numero di modifiche apportate al progetto \`e dunque fondamentale al fine di valutare gli impatti sui tempi di realizzazione e sui costi.
+\begin{center}
+	\textit{Numero di cambiamenti apportati} = \textit{Numero di modifiche}
+\end{center}
+\textbf{Range utilizzati}:
 \begin{itemize}
-	\item \textbf{di documentazione}, rilevati durante le attivit\`a di revisione;
-	\item \textbf{di codice}, rilevati durante le attivit\`a di test;
-		item \textbf{di progettazione}.
+	\item Range di accettazione : [0 - 20]
+	\item Range ottimale: [0 - 10]
 \end{itemize}
-Questa metrica \`e fondamentale per valutare la qualit\`a del prodotto sviluppato e l'efficacia delle attivit\`a di revisione e test. Il numero di errori \`e normalizzato rispetto alle dimensioni del progetto (in KLOCs o FPs).\\
-\textit{NE = NER / DP} \\
+
+\paragraph{Copertura dei test}
+Rappresenta il livello di copertura che i test eseguiti forniscono rispetto alle funzionalit\`a del prodotto. \\
+\begin{center}
+	\textit{Copertura dei test} = \frac{\textit{Numero di funzionalit\`a testate}}{\textit{•Numero totoale delle funzionalit\`a disponibili}} * 100.
+\end{center}
+\textbf{Range utilizzati}:
+\begin{itemize}
+	\item Range di accettazione : [70 - 100]
+	\item Range ottimale: [80 - 100]
+\end{itemize}
+
+\subsubsection{Metriche per il prodotto software}
+%todo spiegazione
+
+\paragraph{Dimensioni del prodotto software}
+Rappresenta le dimensioni del prodotto software; generalmente \`e misurata in termini di migliaia di linee di codice (\textit{KLOCs}, Thousands \textbf{L}ine \textbf{O}f \textbf{C}ode), ma da alcuni anni \`e stata introdotto una nuova misura, legata al numero di funzionalit\ `a offerte, e quindi dal valore che il prodotto ha per l'utente. Questa seconda misurazione \`e espressa come numero di punti funzione (\textit{FPs}, \textbf{F}unction \textbf{P}oints). \\
+\begin{center}
+	\textit{Dimensioni del prodotto software} = \textit{KLOCs} \\
+	\textit{Dimensioni del prodotto software} = \textit{FPs} 
+\end{center}
+
+\paragraph{Complessit\`a ciclomatica}
+Permette di misurare la complessit\`a del flusso di controllo di una \textit{componente} (procedura, metodo, classe o modulo) calcolando tutti i possibili cammini indipendenti del grafo del flusso di controllo. Tale grafo \`e composto dai seguenti elementi:
+\begin{itemize}
+	\item i nodi corrispondono a gruppi indivisibili di comandi;
+	\item gli archi collegano due nodi se e solo se il secondo gruppo di istruzioni pu\`o essere eseguito immediatamente dopo il primo.
+\end{itemize}
+Si vuole utilizzare tale metrica per limitare la complessit\`a durante la fase di sviluppo e per determinare il numero di casi di test necessari per la verifica, in quanto permette di dare un limite superiore al numero di test necessari per raggiungere la massima copertura della componente analizzata \footnote{Stein, C., G. Cox and L. Etzkorn, 2005. Exploring the Relationship between Cohesion and Complexity. J. Comput. Sci., 1: 137-144.}.
+\begin{center}
+	\textit{Complessit\`a ciclomatica v(G)} = \textit{e} - \textit{n} + 2 * \textit{p}
+\end{center}
 Dove:
 \begin{itemize}
-	\item \textbf{NER} \`e il nuemro di errori rilevati;
-	\item \textbf{DP} \`e la dimensione del progetto espressa in KLOCs o FPs.
+	\item \textbf{e} \`e il numero di archi del grafo \textit{G};
+	\item \textbf{n} \`e il numero di nodi del grafo \textit{G};
+	\item \textbf{p} \`e il numero di componenti connesse del grafo \textit{G}.
 \end{itemize}
+\textbf{Range utilizzati}:
+\begin{itemize}
+	\item Range di accettazione : [0 - 15]
+	\item Range ottimale: [0 - 10]
+\end{itemize}
+
+\paragraph{Number of methods}
+Rappresenta la media di occorrenze di metodi per \textit{package}: un package, infatti, non dovrebbe contenere un numero eccessivo di metodi. Valori troppo elevati indicano la necessit\`a di una migliore decomposizione del package. \\
+\textbf{Range utilizzati}:
+\begin{itemize}
+	\item Range di accettazione : [3 - 10]
+	\item Range ottimale: [0 - 7]
+\end{itemize}
+
+\paragraph{\textit{Bug}s per linee di codice}
+Rappresenta il numero di bug trovati in un insieme di linee di codice: con la crescita del prodotto \`e utile misurare il rapporto tra i difetti trovati e la dimensione del prodotto (in termini di KLOCs), tenendo conto del fatto che un incremento del sorgente comporta un aumento della possibilit\`a di inserimento di un errore. \\
+\textbf{Range utilizzati}:
+\begin{itemize}
+	\item Range di accettazione : [0 - 60]
+	\item Range ottimale: [0 - 20]
+\end{itemize}
+Misurati sull'intera dimensione in KLOCs del prodotto.
+
+\paragraph{Variabili non utilizzate e/o non definite}
+Rappresenta il numero di variabili che vengono definite, ma non utilizzate, o viceversa. Questo viene considerato \textit{pollution}, e pertanto considerato inaccettabile. La misurazione avviene mediante un'analisi dell'\textbf{\textit{AST}} (\textbf{A}bstract \textbf{S}yntax \textbf{T}ree). \\
+\textbf{Range utilizzati}:
+\begin{itemize}
+	\item Range di accettazione : [0 - 0]
+	\item Range ottimale: [0 - 0]
+\end{itemize}
+
+
+\paragraph{Numero di parametri per metodo}
+Rappresenta il numero di parametri formali di un metodo. Un metodo con troppi parametri formali risulta complesso e poco mantenibile; pertanto \`e necessario che tale numero sia contenuto. \\
+\textbf{Range utilizzati}:
+\begin{itemize}
+	\item Range di accettazione : [0 - 6]
+	\item Range ottimale: [0 - 4]
+\end{itemize}
+
+\paragraph{Numero di funzioni d'interfaccia per package}
+Rappresenta il numero di funzioni che il package mette a disposizione dei suoi utenti. \\
+\textbf{Range utilizzati}:
+\begin{itemize}
+	\item Range di accettazione : [0 - 20]
+	\item Range ottimale: [1 - 10]
+\end{itemize}
+
+\paragraph{Indice di mantenibilit\`a}
+Rappresenta, in una scala che va da 0 a 100, la mantenibilit\`a del codice, ed \`e calcolata a partire dalla complessit\`a ciclomatica e dall’indice Halstead effort. %todo
+Un valore alto indica una maggiore mantenibilit\`a. \\
+\textbf{Range utilizzati}:
+\begin{itemize}
+	\item Range di accettazione : [10 - 29]
+	\item Range ottimale: [30 - 100]
+\end{itemize}
+
+%todo altre??
