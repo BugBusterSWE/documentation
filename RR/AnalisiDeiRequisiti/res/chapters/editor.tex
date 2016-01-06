@@ -1,0 +1,94 @@
+\chapter{Editor}
+
+Di seguito viengono elencati i casi d'uso per l'editor.
+
+\newpage
+
+\section{Casi d'Uso}
+
+\subsection{UC-E0}
+
+    \begin{figure}[h]
+      \begin{center}
+        \includegraphics[width=12cm]{res/img/UCEditor/UC-E0-test}
+      \caption{UC-E0 - Visualizzazione editor}
+      \end{center} 
+    \end{figure}    
+    
+    %Tabella 
+    \begin{center}
+      \bgroup
+      \def\arraystretch{1.8}     
+      \begin{longtable}{  p{3.5cm} | p{8cm} } 
+        
+        \hline
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E0 - Visualizzazione editor}} \\ 
+        \hline
+        
+        \textbf{Attori Primari} & Super-Admin, Direttore d'azienda, Admin, User \\ 
+        \textbf{Scopo e Descrizione} & L'utente richiede la visualizzzione dell'editor. \\ 
+        
+        \textbf{Precondizioni}  & L'attore ha i diritti per accesso all'editor.\\ 
+        
+        \textbf{Postcondizioni} & L'attore visualizza l'editor. \\ 
+        \textbf{Flusso Principale} & Nessuno \\ %da aggiungere?
+        \textbf{Estensioni} & a. Il supporto alla tecnologia JavaScript non \`e presente (UC-E1) \\ %vedere lista puntata inline https://en.wikibooks.org/wiki/LaTeX/List_Structures#Inline_lists
+      \end{longtable}
+      \egroup
+    \end{center}
+
+    
+    \subsection{UC-E1}
+    
+    %Tabella 
+    \begin{center}
+      \bgroup
+      \def\arraystretch{1.8}     
+      \begin{longtable}{  p{3.5cm} | p{8cm} } 
+        
+        \hline
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E1 - JavaScript non presente}} \\ 
+        \hline
+        
+        \textbf{Attori Primari} & Super-Admin, Direttore d'azienda, Admin, User \\ 
+        \textbf{Scopo e Descrizione} & Viene visualizzato un messaggio a schermo che informa l'attore primario dell'impossibilit\`a di eseguire codice JavaScript \\ 
+        
+        \textbf{Precondizioni}  & Il sistema non ha potuto eseguire il codice JavaScript.\\ 
+        
+        \textbf{Postcondizioni} & L'applicazione ha mostrato un messaggio d'errore. \\ 
+        \textbf{Flusso Principale} & Nessuno \\ %da aggiungere?
+      \end{longtable}
+      \egroup
+    \end{center}
+
+
+    \subsection{UC-E2}
+
+    \begin{figure}[h]
+      \begin{center}
+        \includegraphics[width=12cm]{res/img/UCEditor/UC-E2-test}
+      \caption{UC-E2 - Uso dell'editor}
+      \end{center} 
+    \end{figure}    
+    
+    %Tabella 
+    \begin{center}
+      \bgroup
+      \def\arraystretch{1.8}     
+      \begin{longtable}{  p{3.5cm} | p{8cm} } 
+        
+        \hline
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2 - Uso dell'editor}} \\ 
+        \hline
+        
+        \textbf{Attori Primari} & Super-Admin, Direttore d'azienda, Admin, User \\ 
+        \textbf{Scopo e Descrizione} & L'utente pu\`o usare i servizi dell'editor: a. Salvataggio, b. Scrittura, c. Caricamento salvataggi, d. Utilizzo dell'editor offline. \\ 
+        
+        \textbf{Precondizioni}  & L'utente sta visualizzando l'editor.\\ 
+        
+        \textbf{Postcondizioni} & L'utente ha usato i servizi offerti dall'editor per svolgere le sue attivit\`a. \\ 
+        \textbf{Flusso Principale} & Nessuno \\ %da aggiungere?
+        \textbf{Estensioni} & a. Il supporto alla tecnologia JavaScript non \`e presente (UC-E1) \\ %vedere lista puntata inline https://en.wikibooks.org/wiki/LaTeX/List_Structures#Inline_lists
+      \end{longtable}
+      \egroup
+    \end{center}
