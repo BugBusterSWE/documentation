@@ -1,0 +1,47 @@
+\documentclass[11pt,a4paper]{book}
+
+\usepackage[utf8]{inputenc}
+
+%is a document for us, we can use italian here
+\usepackage[italian]{babel}
+
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks,
+  citecolor=gray,
+  filecolor=red,
+  linkcolor=blue,
+  urlcolor=blue
+}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{listings}
+\lstset{%
+	commentstyle=\color{green},
+	frame=single,
+	keepspaces=true,
+	keywordstyle=\color{blue},
+	numbers=left,
+	numberstyle=\tiny\color{black},
+	rulecolor=\color{black},
+        basicstyle=\ttfamily
+}
+
+
+\title{\textbf{Analisi Dei Requisiti}}
+\author{BugBuster}
+
+\date{22 Gennaio 2016}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\include{res/versions}
+\include{res/listOfChapters}
+
+\end{document}
