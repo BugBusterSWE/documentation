@@ -18,6 +18,7 @@ install:
 
 script:
     - cd RR/NormeDiProgetto/ && latexmk -pdflatex='pdflatex -interaction=nonstopmode' -pdf && cd -
+    - cd RR/PianoDiQualifica/ && latexmk -pdflatex='pdflatex -interaction=nonstopmode' -pdf && cd -
 
 after_success:
     - git config --global user.email ${GIT_EMAIL}
