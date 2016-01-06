@@ -92,3 +92,116 @@ Di seguito viengono elencati i casi d'uso per l'editor.
       \end{longtable}
       \egroup
     \end{center}
+
+
+    \subsection{UC-E3}
+    
+    %Tabella 
+    \begin{center}
+      \bgroup
+      \def\arraystretch{1.8}     
+      \begin{longtable}{  p{3.5cm} | p{8cm} } 
+        
+        \hline
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E3 - L'utente si disconnette dalla rete}} \\ 
+        \hline
+        
+        \textbf{Attori Primari} & Super-Admin, Direttore d'azienda, Admin, User \\ 
+        \textbf{Scopo e Descrizione} & Viene visualizzato un messaggio a schermo che informa l'attore primario dell'impossibilit\`a di connettersi alla rete internet. \\ 
+        
+        \textbf{Precondizioni}  & L'utente si \`e disconnesso dalla rete. \\ 
+        
+        \textbf{Postcondizioni} & L'attore non \`e pi\`u in grado di lavorare con il sistema. \\ 
+      \end{longtable}
+      \egroup
+    \end{center}
+
+\newpage
+    
+\subsection{UC-E4}
+
+    \begin{figure}[h]
+      \begin{center}
+        \includegraphics[width=12cm]{res/img/UCEditor/UC-E4-test}
+      \caption{UC-E4 - Caricamento del DSL}
+      \end{center} 
+    \end{figure}    
+    
+    %Tabella 
+    \begin{center}
+      \bgroup
+      \def\arraystretch{1.8}     
+      \begin{longtable}{  p{3.5cm} | p{8cm} } 
+        
+        \hline
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E4 - Caricamento del DSL}} \\ 
+        \hline
+        
+        \textbf{Attori Primari} & Super-Admin, Direttore d'azienda, Admin, User \\ 
+        \textbf{Scopo e Descrizione} & Lo scopo principale \`e inviare il DSL corretto al server in modo tale da creare una Collection \\ 
+        
+        \textbf{Precondizioni}  & Lo scopo principale \`e inviare il DSL corretto al server in modo tale da creare una Collection \\ 
+        
+        \textbf{Postcondizioni} & \`E stato avvisato l'utente dell'effettivo caricamento del DSL nel server \\ 
+        \textbf{Flusso Principale} & Nessuno \\ %da aggiungere?
+        \textbf{Estensioni} & a. L'utente si disconnette dalla rete (UC-E3)
+      \end{longtable}
+      \egroup
+    \end{center}
+
+\newpage
+
+
+\subsection{UC-E5}
+
+    \begin{figure}[h]
+      \begin{center}
+        \includegraphics[width=12cm]{res/img/UCEditor/UC-E5-test}
+      \caption{UC-E5 - Validazione DSL}
+      \end{center} 
+    \end{figure}    
+    
+    %Tabella 
+    \begin{center}
+      \bgroup
+      \def\arraystretch{1.8}     
+      \begin{longtable}{  p{3.5cm} | p{8cm} } 
+        
+        \hline
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E5 - Validazione DSL}} \\ 
+        \hline
+        
+        \textbf{Attori Primari} & Super-Admin, Direttore d'azienda, Admin, User \\ 
+        \textbf{Scopo e Descrizione} & Verificare e validare il DSL prodotto dall'editor \\ 
+        
+        \textbf{Precondizioni}  & Verificare e validare il DSL prodotto dall'editor \\ 
+        
+        \textbf{Postcondizioni} & Il DSL \`e stato validato con successo \\ 
+        \textbf{Flusso Principale} & Nessuno \\ %da aggiungere?
+        \textbf{Estensioni} & a. Il DSL non \`e valido
+      \end{longtable}
+      \egroup
+    \end{center} 
+
+
+    \subsection{UC-E6}
+    
+    %Tabella 
+    \begin{center}
+      \bgroup
+      \def\arraystretch{1.8}     
+      \begin{longtable}{  p{3.5cm} | p{8cm} } 
+        
+        \hline
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E6 - Il DSL non \`e valido}} \\ 
+        \hline
+        
+        \textbf{Attori Primari} & Super-Admin, Direttore d'azienda, Admin, User \\ 
+        \textbf{Scopo e Descrizione} & Viene visualizzato un messaggio a schermo che informa l'attore primario della non validit\`a del DSL \\ 
+        
+        \textbf{Precondizioni}  & Il DSL non ha passato il test del validatore \\ 
+        
+        \textbf{Postcondizioni} & L'applicazione ha mostrato un messaggio d'errore. \\ 
+      \end{longtable}
+      \egroup
+    \end{center}
