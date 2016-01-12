@@ -17,7 +17,7 @@ install:
     - sudo getnonfreefonts-sys garamond
 
 script:
-    - cd RR/NormeDiProgetto/ && latexmk -pdflatex='pdflatex -interaction=nonstopmode' -pdf && cd -
+    - cd RR/PianoDiProgetto/ && latexmk -pdflatex='pdflatex -interaction=nonstopmode' -pdf && cd -
 
 after_success:
     - git config --global user.email ${GIT_EMAIL}
@@ -26,8 +26,8 @@ after_success:
     - cd travis-build/
     - mkdir -p build/
     - cd build/
-    - cp -f $HOME/build/BugBusterSWE/documentation/RR/NormeDiProgetto/main.pdf .
-    - mv main.pdf NormeDiProgetto_lastest.pdf
-    - git add NormeDiProgetto_lastest.pdf
+    - cp -f $HOME/build/BugBusterSWE/documentation/RR/PianoDiProgetto/main.pdf .
+    - mv main.pdf PianoDiProgetto_lastest.pdf
+    - git add PianoDiProgetto_lastest.pdf
     - git commit -m "Travis CI autocommit from travis build ${TRAVIS_BUILD_NUMBER}"
     - git push -f origin gh-pages
