@@ -140,7 +140,7 @@ function add_UC() {
 
     echo "
 
-\subsection{$UC_ID}
+\subsubsection{$UC_ID}
 
     \begin{figure}[h]
       \begin{center}
