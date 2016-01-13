@@ -28,20 +28,26 @@
 	rulecolor=\color{black},
         basicstyle=\ttfamily
 }
+\usepackage[toc]{glossaries}
 
-
-\title{\textbf{Norme di Progetto}}
+\title{\textbf{Glossario}}
 \author{BugBuster}
 
 \date{22 Gennaio 2016}
 
+\makeglossaries
+
+
 \begin{document}
+
+\include{res/glossary}
 
 \maketitle
 
 \tableofcontents
 
-\include{res/versions}
-\include{res/listOfChapters}
+
+\glsaddall %stampa tutto il glossario, necessario?
+\printglossary[title=Glossario,toctitle=Glossario dei termini,style=indexgroup]
 
 \end{document}
