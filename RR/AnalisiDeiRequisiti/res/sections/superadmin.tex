@@ -1,0 +1,157 @@
+\section{Super-Admin}
+
+Di seguito vengono elencati i casi d'uso per il superadmin.
+
+\newpage
+
+\subsection{Casi d'Uso}
+
+\subsection{UC-S 0}
+
+    \begin{figure}[h]
+      \begin{center}
+        \includegraphics[width=12cm]{%todo include image}
+      \caption{UC-S 0 - Gestione aziende}
+      \end{center} 
+    \end{figure}    
+    
+    %Tabella 
+    \begin{center}
+      \bgroup
+      \def\arraystretch{1.8}     
+      \begin{longtable}{  p{3.5cm} | p{8cm} } 
+        
+        \hline
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-S 0 - Gestione aziende}} \\ 
+        \hline
+        
+        \textbf{Attori Primari} & Super-Admin\\  
+        \textbf{Precondizioni}  & l'applicazione mostra al superadmin la pagina di gestione delle aziende  \\ 
+        
+        \textbf{Postcondizioni} & l'applicazione mostra al superadmin la pagina di gestione delle aziende \\ 
+        \textbf{Scenario principale} & 1. il superadmin pu\`o creare una nuova azienda (UC-S 0.0) \newline 2. il superadmin può visualizzare il dettaglio di un'azienda 
+        \newline 3. il superadmin pu\`o modificare i dati di un'azienda \newline \\ 
+        \textbf{Scenari alternativi} & 1. fallisce l'inserimento di una nuova azienda \newline 2. fallisce la modifica dei dati di un'azienda \\
+      \end{longtable}
+      \egroup
+    \end{center}
+
+\subsection{UC-S 0.0}
+    \begin{figure}[h]
+      \begin{center}
+        \includegraphics[width=12cm]{%todo include image}
+      \caption{UC-S 0.0 - Creazione di una nuova azienda}
+      \end{center} 
+    \end{figure}    
+    
+    %Tabella 
+    \begin{center}
+      \bgroup
+      \def\arraystretch{1.8}     
+      \begin{longtable}{  p{3.5cm} | p{8cm} } 
+        
+        \hline
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-S 0.0 - Creazione di una nuova azienda}} \\ 
+        \hline
+        
+        \textbf{Attori Primari} & Super-Admin\\  
+        \textbf{Precondizioni}  & il sistema fornisce al super-admin un form di registrazione  \\ 
+        
+        \textbf{Postcondizioni} & il sistema ha aggiunto una nuova azienda e il suo owner \\ 
+        \textbf{Scenario principale} & 1. l'attore inserisce il nome dell'azienda \newline 2. l'attore inserisce la propria email
+        \newline 3. l'attore inserisce una password \newline \\ 
+        \textbf{Scenari alternativi} & 1. l'azienda esiste gi\`a  \newline 2. la email inserita \`e gi\`a stata usata \\
+      \end{longtable}
+      \egroup
+    \end{center}
+
+\subsection{UC-S 0.1}
+    \begin{figure}[h]
+      \begin{center}
+        \includegraphics[width=12cm]{%todo include image}
+      \caption{UC-S 0.1 - Visualizzazione dettaglio di azienda}
+      \end{center} 
+    \end{figure}    
+    
+    %Tabella 
+    \begin{center}
+      \bgroup
+      \def\arraystretch{1.8}     
+      \begin{longtable}{  p{3.5cm} | p{8cm} } 
+        
+        \hline
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-S 0.1 - Visualizzazione dettaglio di azienda}} \\ 
+        \hline
+        
+        \textbf{Attori Primari} & Super-Admin\\  
+        \textbf{Precondizioni}  & l'applicazione mette diposizione la pagina di visualizzazione dei dettagli di un'azienda  \\ 
+        
+        \textbf{Postcondizioni} & l'applicazione ha reindirizzato il super-admin alla pagina di visualizzazione dell'azienda
+		     		     selezionata \\ 
+        \textbf{Scenario principale} & 1. il superadmin può modificare i dati dell'azienda (UC-S 0.1.0) \newline 2. il superadmin può aggiungere un nuovo utente dell'azienda
+        \newline 3. il superadmin può visualizzare uno specifico utente dell'azienda \newline 4. il super-admin pu\`o modificare i dati di uno specifico utente \\ 
+        \textbf{Scenari alternativi} & 1. fallimento della modifica dei dati dell'azienda   \newline 2. fallimento dell'aggiunta di un nuovo utente \newline
+        3. fallimento modifica utente \\
+      \end{longtable}
+      \egroup
+    \end{center}
+
+
+\subsection{UC-S 0.1.0}
+    \begin{figure}[h]
+      \begin{center}
+        \includegraphics[width=12cm]{%todo include image}
+      \caption{UC-S 0.1.0 - Modifica dei dati di un'azienda}
+      \end{center} 
+    \end{figure}    
+    
+    %Tabella 
+    \begin{center}
+      \bgroup
+      \def\arraystretch{1.8}     
+      \begin{longtable}{  p{3.5cm} | p{8cm} } 
+        
+        \hline
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-S 0.1.0 - Modifica dei dati di un'azienda}} \\ 
+        \hline
+        
+        \textbf{Attori Primari} & Super-Admin\\  
+        \textbf{Precondizioni}  & l'applicazione mostra il form per la modifica dei dati dell'azienda selezionata  \\ 
+        
+        \textbf{Postcondizioni} & il sistema ha modificato il profilo dell'azienda sulla base dei dati inseriti dal super-admin  \\ 
+        \textbf{Scenari alternativi} & 1. fallimento della modifica
+      \end{longtable}
+      \egroup
+    \end{center}
+
+\subsection{UC-S 0.1.1}
+    \begin{figure}[h]
+      \begin{center}
+        \includegraphics[width=12cm]{%todo include image}
+      \caption{UC-S 0.1.1 - Aggiunta di un nuovo utente nell'azienda selezionata}
+      \end{center} 
+    \end{figure}    
+    
+    %Tabella 
+    \begin{center}
+      \bgroup
+      \def\arraystretch{1.8}     
+      \begin{longtable}{  p{3.5cm} | p{8cm} } 
+        
+        \hline
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-S 0.1.1 - Aggiunta di un nuovo utente nell'azienda selezionata}} \\ 
+        \hline
+        
+        \textbf{Attori Primari} & Super-Admin\\  
+        \textbf{Precondizioni}  & l'applicazione mostra il form per l'aggiunta di un nuovo utente  \\ 
+        
+        \textbf{Postcondizioni} & il sistema ha aggiunto un nuovo utente associandolo all'azienda precedentemente selezionata  \\ 
+      \end{longtable}
+      \egroup
+    \end{center}
+    
+
+
+
+
+
