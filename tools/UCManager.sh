@@ -175,11 +175,11 @@ function add_UC() {
         
         \textbf{Postcondizioni} & $POST \\\\ 
         \textbf{Flusso Principale} & $FLUX \\\\ %da aggiungere?
-        \textbf{Estensioni} & $EXTENSION
+        \textbf{Estensioni} & $EXTENSION \\\\
         \textbf{Inclusioni} & $INCLUSION
       \end{longtable}
       \egroup
-    \end{center} " | tee -a ../RR/AnalisiDeiRequisiti/res/chapters/$TEX_PATH
+    \end{center} " | tee -a ../RR/AnalisiDeiRequisiti/res/sections/$TEX_PATH
 
     local result=$?
 
