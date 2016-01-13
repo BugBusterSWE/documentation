@@ -1,48 +1,17 @@
-\chapter{Superadmin}
+\section{Super-Admin}
 
 Di seguito vengono elencati i casi d'uso per il superadmin.
 
 \newpage
 
-\section{Casi d'Uso}
+\subsection{Casi d'Uso}
 
-\subsection{UC-E}
-
-    %\begin{figure}[h]
-    %  \begin{center}
-    %    \includegraphics[width=12cm]{res/img/UCEditor/UC-E0-test}
-    %  \caption{UC-E0 - Visualizzazione editor}
-    %  \end{center} 
-    %\end{figure}    
-    
-    %Tabella 
-    \begin{center}
-      \bgroup
-      \def\arraystretch{1.8}     
-      \begin{longtable}{  p{3.5cm} | p{8cm} } 
-        
-        \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E - Operazioni ad alto livello - Uso dell'editor}} \\ 
-        \hline
-        
-        \textbf{Attori Primari} & Super-Admin, Direttore d'azienda, Admin, User \\ 
-        \textbf{Scopo e Descrizione} & Con l'uso dell'editor \`e possibile realizzare nuove DSL oppure modificare quelle presenti. La rappresentazione verr\`a con elementi grafici astraendo il linguaggio DSL permettendo all'utente di non conoscerne la struttura \\ 
-        
-        \textbf{Precondizioni}  & Il browser carica la pagina dell'editor ed il sistema riconosce l'identificatore dell'utente\\ 
-        
-        \textbf{Postcondizioni} & La DSL formata dall'insieme delle azioni compiute \`e caricata e visibile nel browser \\ 
-        \textbf{Flusso Principale} & 1. UC-E0 2. UC-E7 3. UC-E9 4. UC-E8 \\ %da aggiungere?
-        \textbf{Estensioni} & a. L'utente si disconnette dalla rete (UC-E3) \\ %vedere lista puntata inline https://en.wikibooks.org/wiki/LaTeX/List_Structures#Inline_lists
-      \end{longtable}
-      \egroup
-    \end{center}
-
-\subsection{UC-E0}
+\subsection{UC-S 0}
 
     \begin{figure}[h]
       \begin{center}
-        \includegraphics[width=12cm]{res/img/UCEditor/UC-E0-test}
-      \caption{UC-E0 - Visualizzazione editor}
+        \includegraphics[width=12cm]{%todo include image}
+      \caption{UC-S 0 - Gestione aziende}
       \end{center} 
     \end{figure}    
     
@@ -53,53 +22,25 @@ Di seguito vengono elencati i casi d'uso per il superadmin.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E0 - Visualizzazione editor}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-S 0 - Gestione aziende}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Super-Admin, Direttore d'azienda, Admin, User \\ 
-        \textbf{Scopo e Descrizione} & L'utente richiede la visualizzzione dell'editor. \\ 
+        \textbf{Attori Primari} & Super-Admin\\  
+        \textbf{Precondizioni}  & l'applicazione mostra al superadmin la pagina di gestione delle aziende  \\ 
         
-        \textbf{Precondizioni}  & L'attore ha i diritti per accesso all'editor.\\ 
-        
-        \textbf{Postcondizioni} & L'attore visualizza l'editor. \\ 
-        \textbf{Flusso Principale} & Nessuno \\ %da aggiungere?
-        \textbf{Estensioni} & a. Il supporto alla tecnologia JavaScript non \`e presente (UC-E1) \\ %vedere lista puntata inline https://en.wikibooks.org/wiki/LaTeX/List_Structures#Inline_lists
+        \textbf{Postcondizioni} & l'applicazione mostra al superadmin la pagina di gestione delle aziende \\ 
+        \textbf{Scenario principale} & 1. il superadmin pu\`o creare una nuova azienda (UC-S 0.0) \newline 2. il superadmin può visualizzare il dettaglio di un'azienda 
+        \newline 3. il superadmin pu\`o modificare i dati di un'azienda \newline \\ 
+        \textbf{Scenari alternativi} & 1. fallisce l'inserimento di una nuova azienda \newline 2. fallisce la modifica dei dati di un'azienda \\
       \end{longtable}
       \egroup
     \end{center}
 
-    
-    \subsection{UC-E1}
-    
-    %Tabella 
-    \begin{center}
-      \bgroup
-      \def\arraystretch{1.8}     
-      \begin{longtable}{  p{3.5cm} | p{8cm} } 
-        
-        \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E1 - JavaScript non presente}} \\ 
-        \hline
-        
-        \textbf{Attori Primari} & Super-Admin, Direttore d'azienda, Admin, User \\ 
-        \textbf{Scopo e Descrizione} & Viene visualizzato un messaggio a schermo che informa l'attore primario dell'impossibilit\`a di eseguire codice JavaScript \\ 
-        
-        \textbf{Precondizioni}  & Il sistema non ha potuto eseguire il codice JavaScript.\\ 
-        
-        \textbf{Postcondizioni} & L'applicazione ha mostrato un messaggio d'errore. \\ 
-        \textbf{Flusso Principale} & Nessuno \\ %da aggiungere?
-      \end{longtable}
-      \egroup
-    \end{center}
-
-    \newpage
-
-    \subsection{UC-E2}
-
+\subsection{UC-S 0.0}
     \begin{figure}[h]
       \begin{center}
-        \includegraphics[width=12cm]{res/img/UCEditor/UC-E2-test}
-      \caption{UC-E2 - Uso dell'editor}
+        \includegraphics[width=12cm]{%todo include image}
+      \caption{UC-S 0.0 - Creazione di una nuova azienda}
       \end{center} 
     \end{figure}    
     
@@ -110,51 +51,25 @@ Di seguito vengono elencati i casi d'uso per il superadmin.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2 - Uso dell'editor}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-S 0.0 - Creazione di una nuova azienda}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Super-Admin, Direttore d'azienda, Admin, User \\ 
-        \textbf{Scopo e Descrizione} & L'utente pu\`o usare i servizi dell'editor: a. Salvataggio, b. Scrittura, c. Caricamento salvataggi, d. Utilizzo dell'editor offline. \\ 
+        \textbf{Attori Primari} & Super-Admin\\  
+        \textbf{Precondizioni}  & il sistema fornisce al super-admin un form di registrazione  \\ 
         
-        \textbf{Precondizioni}  & L'utente sta visualizzando l'editor.\\ 
-        
-        \textbf{Postcondizioni} & L'utente ha usato i servizi offerti dall'editor per svolgere le sue attivit\`a. \\ 
-        \textbf{Flusso Principale} & Nessuno \\ %da aggiungere?
-        \textbf{Estensioni} & a. Il supporto alla tecnologia JavaScript non \`e presente (UC-E1) \\ %vedere lista puntata inline https://en.wikibooks.org/wiki/LaTeX/List_Structures#Inline_lists
+        \textbf{Postcondizioni} & il sistema ha aggiunto una nuova azienda e il suo owner \\ 
+        \textbf{Scenario principale} & 1. l'attore inserisce il nome dell'azienda \newline 2. l'attore inserisce la propria email
+        \newline 3. l'attore inserisce una password \newline \\ 
+        \textbf{Scenari alternativi} & 1. l'azienda esiste gi\`a  \newline 2. la email inserita \`e gi\`a stata usata \\
       \end{longtable}
       \egroup
     \end{center}
 
-
-    \subsection{UC-E3}
-    
-    %Tabella 
-    \begin{center}
-      \bgroup
-      \def\arraystretch{1.8}     
-      \begin{longtable}{  p{3.5cm} | p{8cm} } 
-        
-        \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E3 - Disconnessione dalla rete}} \\ 
-        \hline
-        
-        \textbf{Attori Primari} & Super-Admin, Direttore d'azienda, Admin, User \\ 
-        \textbf{Scopo e Descrizione} & Viene visualizzato un messaggio a schermo che informa l'attore primario dell'impossibilit\`a di connettersi alla rete internet. \\ 
-        
-        \textbf{Precondizioni}  & L'utente si \`e disconnesso dalla rete. \\ 
-        
-        \textbf{Postcondizioni} & L'attore non \`e pi\`u in grado di lavorare con il sistema. \\ 
-      \end{longtable}
-      \egroup
-    \end{center}
-
-    
-\subsection{UC-E4}
-
+\subsection{UC-S 0.1}
     \begin{figure}[h]
       \begin{center}
-        \includegraphics[width=12cm]{res/img/UCEditor/UC-E4-test}
-      \caption{UC-E4 - Caricamento del DSL}
+        \includegraphics[width=12cm]{%todo include image}
+      \caption{UC-S 0.1 - Visualizzazione dettaglio di azienda}
       \end{center} 
     \end{figure}    
     
@@ -165,28 +80,28 @@ Di seguito vengono elencati i casi d'uso per il superadmin.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E4 - Caricamento del DSL}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-S 0.1 - Visualizzazione dettaglio di azienda}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Super-Admin, Direttore d'azienda, Admin, User \\ 
-        \textbf{Scopo e Descrizione} & Lo scopo principale \`e inviare il DSL corretto al server in modo tale da creare una Collection \\ 
+        \textbf{Attori Primari} & Super-Admin\\  
+        \textbf{Precondizioni}  & l'applicazione mette diposizione la pagina di visualizzazione dei dettagli di un'azienda  \\ 
         
-        \textbf{Precondizioni}  & Lo scopo principale \`e inviare il DSL corretto al server in modo tale da creare una Collection \\ 
-        
-        \textbf{Postcondizioni} & \`E stato avvisato l'utente dell'effettivo caricamento del DSL nel server \\ 
-        \textbf{Flusso Principale} & Nessuno \\ %da aggiungere?
-        \textbf{Estensioni} & a. L'utente si disconnette dalla rete (UC-E3)
+        \textbf{Postcondizioni} & l'applicazione ha reindirizzato il super-admin alla pagina di visualizzazione dell'azienda
+		     		     selezionata \\ 
+        \textbf{Scenario principale} & 1. il superadmin può modificare i dati dell'azienda (UC-S 0.1.0) \newline 2. il superadmin può aggiungere un nuovo utente dell'azienda
+        \newline 3. il superadmin può visualizzare uno specifico utente dell'azienda \newline 4. il super-admin pu\`o modificare i dati di uno specifico utente \\ 
+        \textbf{Scenari alternativi} & 1. fallimento della modifica dei dati dell'azienda   \newline 2. fallimento dell'aggiunta di un nuovo utente \newline
+        3. fallimento modifica utente \\
       \end{longtable}
       \egroup
     \end{center}
 
 
-\subsection{UC-E5}
-
+\subsection{UC-S 0.1.0}
     \begin{figure}[h]
       \begin{center}
-        \includegraphics[width=12cm]{res/img/UCEditor/UC-E5-test}
-      \caption{UC-E5 - Validazione DSL}
+        \includegraphics[width=12cm]{%todo include image}
+      \caption{UC-S 0.1.0 - Modifica dei dati di un'azienda}
       \end{center} 
     \end{figure}    
     
@@ -197,54 +112,25 @@ Di seguito vengono elencati i casi d'uso per il superadmin.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E5 - Validazione DSL}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-S 0.1.0 - Modifica dei dati di un'azienda}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Super-Admin, Direttore d'azienda, Admin, User \\ 
-        \textbf{Scopo e Descrizione} & Verificare e validare il DSL prodotto dall'editor \\ 
+        \textbf{Attori Primari} & Super-Admin\\  
+        \textbf{Precondizioni}  & l'applicazione mostra il form per la modifica dei dati dell'azienda selezionata  \\ 
         
-        \textbf{Precondizioni}  & Verificare e validare il DSL prodotto dall'editor \\ 
-        
-        \textbf{Postcondizioni} & Il DSL \`e stato validato con successo \\ 
-        \textbf{Flusso Principale} & Nessuno \\ %da aggiungere?
-        \textbf{Inclusione} & a. Il DSL valido viene caricato nel Server MaaS (UC-E4) \\
-        \textbf{Estensioni} & a. Il DSL non \`e valido
-      \end{longtable}
-      \egroup
-    \end{center} 
-
-
-    \subsection{UC-E6}
-    
-    %Tabella 
-    \begin{center}
-      \bgroup
-      \def\arraystretch{1.8}     
-      \begin{longtable}{  p{3.5cm} | p{8cm} } 
-        
-        \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E6 - Il DSL non \`e valido}} \\ 
-        \hline
-        
-        \textbf{Attori Primari} & Super-Admin, Direttore d'azienda, Admin, User \\ 
-        \textbf{Scopo e Descrizione} & Viene visualizzato un messaggio a schermo che informa l'attore primario della non validit\`a del DSL \\ 
-        
-        \textbf{Precondizioni}  & Il DSL non ha passato il test del validatore \\ 
-        
-        \textbf{Postcondizioni} & L'applicazione ha mostrato un messaggio d'errore. \\ 
+        \textbf{Postcondizioni} & il sistema ha modificato il profilo dell'azienda sulla base dei dati inseriti dal super-admin  \\ 
+        \textbf{Scenari alternativi} & 1. fallimento della modifica
       \end{longtable}
       \egroup
     \end{center}
 
-
-\subsection{UC-E7}
-
-    %\begin{figure}[h]
-    %  \begin{center}
-    %    \includegraphics[width=12cm]{res/img/UCEditor/UC-E7-test}
-    %  \caption{UC-E7 - Gestione DSL Element}
-    %  \end{center} 
-    %\end{figure}    
+\subsection{UC-S 0.1.1}
+    \begin{figure}[h]
+      \begin{center}
+        \includegraphics[width=12cm]{%todo include image}
+      \caption{UC-S 0.1.1 - Aggiunta di un nuovo utente nell'azienda selezionata}
+      \end{center} 
+    \end{figure}    
     
     %Tabella 
     \begin{center}
@@ -253,324 +139,19 @@ Di seguito vengono elencati i casi d'uso per il superadmin.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E7 - Gestione DSL Element}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-S 0.1.1 - Aggiunta di un nuovo utente nell'azienda selezionata}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Super-Admin, Direttore d'azienda, Admin, User \\ 
-        \textbf{Scopo e Descrizione} & Il DSL Element \`e l'unit\`a base per la realizzazione del DSL. L'insieme di tutti i DSL Element collegati formeranno la DSL completa. \\ 
+        \textbf{Attori Primari} & Super-Admin\\  
+        \textbf{Precondizioni}  & l'applicazione mostra il form per l'aggiunta di un nuovo utente  \\ 
         
-        \textbf{Precondizioni}  & Il DSL Element \`e l'unit\`a base per la realizzazione del DSL. L'insieme di tutti i DSL Element collegati formeranno la DSL completa. \\ 
-        
-        \textbf{Postcondizioni} & Viene generato un DSL Element valido da collegare ad altri DSL Element validi. \\ 
-        \textbf{Flusso Principale} & 1. L'attore principale aggiunge un nuovo DSL Element (UC-E7.1)
-2. L'attore principale compila i campi obbligatori dell'DSL Element (UC-E7.2)
-3. L'attore principale compila i campi opzionali dell'DSL Element (UC-E7.3)
-4. L'attore principale crea un DSL Dependent Element all'DSL Element creato (UC-E7.4)
-5. L'attore principale rimuove un DSL Element (UC-E7.5) \\ %da aggiungere?
-        \textbf{Estensioni} & Nessuna
+        \textbf{Postcondizioni} & il sistema ha aggiunto un nuovo utente associandolo all'azienda precedentemente selezionata  \\ 
       \end{longtable}
       \egroup
-    \end{center} 
-
-
-\subsection{UC-E8}
-
-    %\begin{figure}[h]
-    %  \begin{center}
-    %    \includegraphics[width=12cm]{res/img/UCEditor/UC-E8-test}
-    %  \caption{UC-E8 - Invio DSL}
-    %  \end{center} 
-    %\end{figure}    
+    \end{center}
     
-    %Tabella 
-    \begin{center}
-      \bgroup
-      \def\arraystretch{1.8}     
-      \begin{longtable}{  p{3.5cm} | p{8cm} } 
-        
-        \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E8 - Invio DSL}} \\ 
-        \hline
-        
-        \textbf{Attori Primari} & Super-Admin, Direttore d'azienda, Admin, User \\ 
-        \textbf{Scopo e Descrizione} & Una volta conclusa la fase di elaborazione della DSL viene prima controllata ed in mancanza di errori viene caricata sull'archivio sul server delle DSL dell'utente registrato \\ 
-        
-        \textbf{Precondizioni}  & Una volta conclusa la fase di elaborazione della DSL viene prima controllata ed in mancanza di errori viene caricata sull'archivio sul server delle DSL dell'utente registrato \\ 
-        
-        \textbf{Postcondizioni} & Il DSL viene validato e caricato sull'archivio delle DSL dell'utente \\ 
-        \textbf{Flusso Principale} & Nessuno \\ %da aggiungere?
-        \textbf{Inclusione} & a. Viene validato il DSL (UC-E5) \\
-        \textbf{Estensioni} & Nessuna
-      \end{longtable}
-      \egroup
-    \end{center} 
 
 
-\subsection{UC-E9}
-
-    %\begin{figure}[h]
-    %  \begin{center}
-    %    \includegraphics[width=12cm]{res/img/UCEditor/UC-E9}
-    %  \caption{UC-E9 - Importare una DSL esistente}
-    %  \end{center} 
-    %\end{figure}    
-    
-    %Tabella 
-    \begin{center}
-      \bgroup
-      \def\arraystretch{1.8}     
-      \begin{longtable}{  p{3.5cm} | p{8cm} } 
-        
-        \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E9 - Importare una DSL esistente}} \\ 
-        \hline
-        
-        \textbf{Attori Primari} & Super-Admin, Direttore d'azienda, Admin, User \\ 
-        \textbf{Scopo e Descrizione} & L'editor deve permettere anche la modifica di DSL perci\`o \`e necessario poter caricare uno gi\`a presente nel Server MaaS \\ 
-        
-        \textbf{Precondizioni}  & L'editor deve permettere anche la modifica di DSL perci\`o \`e necessario poter caricare uno gi\`a presente nel Server MaaS \\ 
-        
-        \textbf{Postcondizioni} & Appare nell'area editabile la rappresentazione grafica del DSL e sono settate variabili d'ambienti necessarie per eseguire correttamente tutte le operazioni. \\ 
-        \textbf{Flusso Principale} & Nessuno. \\ %da aggiungere?
-        \textbf{Estensioni} & Nessuno.
-      \end{longtable}
-      \egroup
-    \end{center} 
 
 
-\subsection{UC-E10}
 
-    %\begin{figure}[h]
-    %  \begin{center}
-    %    \includegraphics[width=12cm]{res/img/UCEditor/UC-E10}
-    %  \caption{UC-E10 - Gestione della Function Element}
-    %  \end{center} 
-    %\end{figure}    
-    
-    %Tabella 
-    \begin{center}
-      \bgroup
-      \def\arraystretch{1.8}     
-      \begin{longtable}{  p{3.5cm} | p{8cm} } 
-        
-        \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E10 - Gestione della Function Element}} \\ 
-        \hline
-        
-        \textbf{Attori Primari} & Super-Admin, Direttore d'azienda, Admin, User \\ 
-        \textbf{Scopo e Descrizione} & Rappresentazione grafica di una funzione in JavaScript, comprendendo parametri d'entrata e parametri d'uscita. \\ 
-        
-        \textbf{Precondizioni}  & Rappresentazione grafica di una funzione in JavaScript, comprendendo parametri d'entrata e parametri d'uscita. \\ 
-        
-        \textbf{Postcondizioni} & Estende le funzionalit\`a di un DSL Element aggiungendo le funzionalit\`a di Function Element. \\ 
-        \textbf{Flusso Principale} & 1. L'attore principale definisce gli statement da eseguire dalla Function Element. (UC-E10.1)
-2. L'attore principale salva la Function Element. (UC-E10.2)
-3. L'attore principale carica una Function Element \\ %da aggiungere?
-        \textbf{Estensioni} & Nessuna.
-      \end{longtable}
-      \egroup
-    \end{center} 
-
-    \newpage
-
-\subsection{UC-E11}
-
-    %\begin{figure}[h]
-    %  \begin{center}
-    %    \includegraphics[width=12cm]{res/img/UCEditor/UC-E11}
-    %  \caption{UC-E11 - Gestione di Collection Element}
-    %  \end{center} 
-    %\end{figure}    
-    
-    %Tabella 
-    \begin{center}
-      \bgroup
-      \def\arraystretch{1.8}     
-      \begin{longtable}{  p{3.5cm} | p{8cm} } 
-        
-        \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E11 - Gestione di Collection Element}} \\ 
-        \hline
-        
-        \textbf{Attori Primari} & Super-Admin, Direttore d'azienda, Admin, User \\ 
-        \textbf{Scopo e Descrizione} & Rappresentazione grafica di una Collection in DSL. \\ 
-        
-        \textbf{Precondizioni}  & Rappresentazione grafica di una sezione index. \\ 
-        
-        \textbf{Postcondizioni} & Estende le funzionalit\`a di un DSL Element aggiungendo le funzionalit\`a di Collection Element \\ 
-        \textbf{Flusso Principale} & 1. Permette di creare o agganciare una Function Element da Label (UC-E11.1)
-2. Permette di creare una Index Element da Index (UC-E11.2)
-3. Permette di creare una Show Element da Show (UC-11.3) \\ %da aggiungere?
-        \textbf{Estensioni} & Nessuna.
-      \end{longtable}
-      \egroup
-    \end{center} 
-
-
-\subsection{UC-E12}
-
-    %\begin{figure}[h]
-    %  \begin{center}
-    %    \includegraphics[width=12cm]{res/img/UCEditor/UC-E12}
-    %  \caption{UC-E12 - Gestione di Index Element}
-    %  \end{center} 
-    %\end{figure}    
-    
-    %Tabella 
-    \begin{center}
-      \bgroup
-      \def\arraystretch{1.8}     
-      \begin{longtable}{  p{3.5cm} | p{8cm} } 
-        
-        \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E12 - Gestione di Index Element}} \\ 
-        \hline
-        
-        \textbf{Attori Primari} & Super-Admin, Direttore d'azienda, Admin, User \\ 
-        \textbf{Scopo e Descrizione} & Rappresentazione grafica di una section index. \\ 
-        
-        \textbf{Precondizioni}  & Rappresentazione grafica di una section index. \\ 
-        
-        \textbf{Postcondizioni} & Estende le funzionalit\`a di un DSL Element aggiundo le funzionalit\`a di Index Element. \\ 
-        \textbf{Flusso Principale} & 1. Permette di creare una Column Element da Sortby (UC-E12.1)
-2. Permette di creare o agganciare una Function Element da Query (UC-E12.2)
-3. Permette di creare o aggiungere una Column Element da Colum (UC-E12.3) \\ %da aggiungere?
-        \textbf{Estensioni} & Nessuna.
-      \end{longtable}
-      \egroup
-    \end{center} 
-
-
-\subsection{UC-E13}
-
-    %\begin{figure}[h]
-    %  \begin{center}
-    %    \includegraphics[width=12cm]{res/img/UCEditor/UC-E13}
-    %  \caption{UC-E13 - Gestione di Column Element}
-    %  \end{center} 
-    %\end{figure}    
-    
-    %Tabella 
-    \begin{center}
-      \bgroup
-      \def\arraystretch{1.8}     
-      \begin{longtable}{  p{3.5cm} | p{8cm} } 
-        
-        \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E13 - Gestione di Column Element}} \\ 
-        \hline
-        
-        \textbf{Attori Primari} & Super-Admin, Direttore d'azienda, Admin, User \\ 
-        \textbf{Scopo e Descrizione} & Rappresentazione grafica di una Column del DSL \\ 
-        
-        \textbf{Precondizioni}  & Rappresentazione grafica di una Column del DSL \\ 
-        
-        \textbf{Postcondizioni} & Estende le funzionalit\`a di un DSL Element aggiungendo le funzionalit\`a di Column Element. \\ 
-        \textbf{Flusso Principale} & 1. Permette di creare o agganciare una Function Element da Name (UC-E13.1)
-2. Permette di creare o agganciare una Function Element da Label (UC-E13.2)
-3. Permette di creare o agganciare una Function Element da Transformation (UC-E13.3) \\ %da aggiungere?
-        \textbf{Estensioni} & Nessuna.
-      \end{longtable}
-      \egroup
-    \end{center} 
-
-
-\subsection{UC-E14}
-
-    %\begin{figure}[h]
-    %  \begin{center}
-    %    \includegraphics[width=12cm]{res/img/UCEditor/UC-E14}
-    %  \caption{UC-E14 - Gestione di Show Element}
-    %  \end{center} 
-    %\end{figure}    
-    
-    %Tabella 
-    \begin{center}
-      \bgroup
-      \def\arraystretch{1.8}     
-      \begin{longtable}{  p{3.5cm} | p{8cm} } 
-        
-        \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E14 - Gestione di Show Element}} \\ 
-        \hline
-        
-        \textbf{Attori Primari} & Super-Admin, Direttore d'azienda, Admin, User \\ 
-        \textbf{Scopo e Descrizione} & Rappresentazione grafica di una sezione Show del DSL. \\ 
-        
-        \textbf{Precondizioni}  & Rappresentazione grafica di una sezione Show del DSL. \\ 
-        
-        \textbf{Postcondizioni} & Estende le funzionalit\`a di un DSL Element aggiungendo le funzionalit\`a di Show Element \\ 
-        \textbf{Flusso Principale} & 1. Permette di creare un Column Element da Populate (UC-E14.1)
-2. Permette di creare o aggiungere un Row Element da Row (UC-E14.2) \\ %da aggiungere?
-        \textbf{Estensioni} & Nessuna.
-      \end{longtable}
-      \egroup
-    \end{center} 
-
-
-\subsection{UC-E15}
-
-    %\begin{figure}[h]
-    %  \begin{center}
-    %    \includegraphics[width=12cm]{res/img/UCEditor/UC-E15}
-    %  \caption{UC-E15 - Gestione di Row Element}
-    %  \end{center} 
-    %\end{figure}    
-    
-    %Tabella 
-    \begin{center}
-      \bgroup
-      \def\arraystretch{1.8}     
-      \begin{longtable}{  p{3.5cm} | p{8cm} } 
-        
-        \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E15 - Gestione di Row Element}} \\ 
-        \hline
-        
-        \textbf{Attori Primari} & Super-Admin, Direttore d'azienda, Admin, User \\ 
-        \textbf{Scopo e Descrizione} & Rappresentazione di una Row del DSL. \\ 
-        
-        \textbf{Precondizioni}  & Rappresentazione di una Row del DSL. \\ 
-        
-        \textbf{Postcondizioni} & Estende le funzionalit\`a di un DSL Element aggiungendo le funzionalit\`a di Row Element. \\ 
-        \textbf{Flusso Principale} & 1. Permette di creare o agganciare una Function Element da Name (UC-E15.1)
-2. Permette di creare o aggiungere una Function Element da Transformation (UC-E15.2) \\ %da aggiungere?
-        \textbf{Estensioni} & Nessuna.
-      \end{longtable}
-      \egroup
-    \end{center} 
-
-
-\subsection{UC-E16}
-
-    %\begin{figure}[h]
-    %  \begin{center}
-    %    \includegraphics[width=12cm]{res/img/UCEditor/UC-E16}
-    %  \caption{UC-E16 - Gestione di Document Element}
-    %  \end{center} 
-    %\end{figure}    
-    
-    %Tabella 
-    \begin{center}
-      \bgroup
-      \def\arraystretch{1.8}     
-      \begin{longtable}{  p{3.5cm} | p{8cm} } 
-        
-        \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E16 - Gestione di Document Element}} \\ 
-        \hline
-        
-        \textbf{Attori Primari} & Super-Admin, Direttore d'azienda, Admin, User \\ 
-        \textbf{Scopo e Descrizione} & Rappresentazione grafica di un JSON \\ 
-        
-        \textbf{Precondizioni}  & Rappresentazione grafica di un JSON \\ 
-        
-        \textbf{Postcondizioni} & Estende le funzionalit\`a di un DSL Element aggiungendo le funzionalit\`a di Document Element. \\ 
-        \textbf{Flusso Principale} & 1. Permette di creare una voce attributo (UC-E16.1)
-2. Permette di modificare una voce attributo (UC-E16.2)
-3. Permette di eliminare una voce attributo (UC-E16.3)
-4. Ogni attributo pu\`o essere composto da sottoattributi (UC-E16.4) \\ %da aggiungere?
-        \textbf{Estensioni} & Nessuna.
-      \end{longtable}
-      \egroup
-    \end{center} 
