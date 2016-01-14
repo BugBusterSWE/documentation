@@ -58,6 +58,7 @@ function add_UC() {
     local POST=
     local FLUX=
     local EXTENSION=
+    local INCLUSION=
 
     #this make no sense for now
     if [ -z $TEX_PATH ]
@@ -136,6 +137,14 @@ function add_UC() {
         $PROGRAM /tmp/extension_$UC_ID
         EXTENSION=$(</tmp/extension_$UC_ID)
     fi
+
+    if [ -z $INCLUSION ]
+    then
+	msg v "Insert a inclusion. $PROGRAM will be used"
+	sleep 1
+	$PROGRAM /tmp/inclusion_$UC_ID
+	$INCLUSION=$(</tmp/extension_$UC_ID)
+    fi
     
 
     echo "
@@ -166,10 +175,11 @@ function add_UC() {
         
         \textbf{Postcondizioni} & $POST \\\\ 
         \textbf{Flusso Principale} & $FLUX \\\\ %da aggiungere?
-        \textbf{Estensioni} & $EXTENSION
+        \textbf{Estensioni} & $EXTENSION \\\\
+        \textbf{Inclusioni} & $INCLUSION
       \end{longtable}
       \egroup
-    \end{center} " | tee -a ../RR/AnalisiDeiRequisiti/res/chapters/$TEX_PATH
+    \end{center} " | tee -a ../RR/AnalisiDeiRequisiti/res/sections/$TEX_PATH
 
     local result=$?
 
