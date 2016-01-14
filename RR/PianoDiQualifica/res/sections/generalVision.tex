@@ -9,7 +9,7 @@ Molto spesso prodotti scadenti derivano da processi scadenti. Per questo motivo,
 	\item permette di contenere i costi;
 	\item migliora la stima dei rischi e degli impegni.
 \end{itemize}
-Un processo dovrebbe essere in grado di migliorare costantemente le proprie performance, che devono quindi essere costantemente misurabili e misurate. Inoltre, le attività di ciascun processo e i costi associati devono essere in linea con quanto indicato nel \textit{Piano di Progetto v1.0.0}. \\
+Un processo dovrebbe essere in grado di migliorare costantemente le proprie performance, che devono quindi essere costantemente misurabili e misurate. Inoltre, le attività di ciascun processo e i costi associati devono essere in linea con quanto indicato nel \PianoDiProgetto. \\
 Si è dunque deciso di perseguire la qualità servendosi dei seguenti modelli: 
 \begin{itemize}
 	\item \textit{SPICE}\footnote{Si veda appendice \ref{AppQualitaProcessi} per approfondimenti} (Simulation \textbf{P}rogram with \textbf{I}ntegrated \textbf{C}ircuit \textbf{E}mphasis): definito nello standard ISO/IEC 15504, per poter valutare in modo oggettivo i processi dal punto di vista della maturità;
@@ -21,7 +21,7 @@ Lo standard ISO/IEC 9126\footnote{Si veda appendice \ref{AppQualitaProdotto} per
 
 \subsection{Procedure di controllo}
 \subsubsection{Qualità di processo}
-La pianificazione delle attività volte al miglioramento continuo dei processi sono descritte nel \textit{Piano di Progetto v1.0.0}. Le linee guida per la gestione della qualità del processo, invece, seguono il modello PCDA e descrivono come devono essere attuate le procedure di controllo:
+La pianificazione delle attività volte al miglioramento continuo dei processi sono descritte nel \PianoDiProgetto. Le linee guida per la gestione della qualità del processo, invece, seguono il modello PCDA e descrivono come devono essere attuate le procedure di controllo:
 \begin{itemize}
 	\item la pianificazione deve essere dettagliata, e le attività pianificate devono essere monitorate;
 	\item le risorse necessarie per conseguire gli obiettivi devono essere definite;
@@ -37,7 +37,7 @@ Il controllo per la qualità del prodotto definisce i seguenti processi:
 \end{itemize}
 
 \subsection{Strategia}
-Nel piano di progetto vengono fissate delle scadenze che devono necessariamente essere rispettate: è dunque necessario definire un'efficace strategia di qualifica. I controlli saranno effettuati in maniera automatica secondo quanto previsto nelle \textit{Norme di Progetto v1.0.0}. 
+Nel piano di progetto vengono fissate delle scadenze che devono necessariamente essere rispettate: è dunque necessario definire un'efficace strategia di qualifica. I controlli saranno effettuati in maniera automatica secondo quanto previsto nelle \NormeDiProgetto. 
 
 \subsection{Responsabilità}
 La responsabilità della verifica viene affidata al \textit{Responsabile di progetto} e ai \textit{Verificatori} secondo quanto previsto nel \textit{Piano di Progetto v1.0.0}.
@@ -45,11 +45,11 @@ La responsabilità della verifica viene affidata al \textit{Responsabile di prog
 \subsection{Risorse}
 Vengono consumati due tipi di risorse:
 \begin{itemize}
-	\item \textbf{umane}: in particolare il \textit{Responsabile di progetto} e il \textit{Verificatore}; le ore impiegate vengono contabilizzate e messe a calendario secondo quanto previsto dal \textit{Piano di Progetto v1.0.0} e dalle \href{http://www.math.unipd.it/~tullio/IS-1/2015/Dispense/PD01.pdf}{regole} del progetto didattico. Ai fini della qualifica, tuttavia, si può tralasciare l'aspetto economico, in quanto esso non rientra nel dominio del presente documento;
+	\item \textbf{umane}: in particolare il \textit{Responsabile di progetto} e il \textit{Verificatore}; le ore impiegate vengono contabilizzate e messe a calendario secondo quanto previsto dal \PianoDiProgetto e dalle \href{http://www.math.unipd.it/~tullio/IS-1/2015/Dispense/PD01.pdf}{regole} del progetto didattico. Ai fini della qualifica, tuttavia, si può tralasciare l'aspetto economico, in quanto esso non rientra nel dominio del presente documento;
 		\item \textbf{tecnologiche}: i \textit{tool} utilizzati per il controllo della qualità. Le operazioni effettuate  consumeranno unità di calcolo considerate a costo nullo, in quanto le elaborazioni verranno effettuate su macchine per le quali non è richiesto nessun contributo e per un tempo non degno di nota.
 \end{itemize}
 
-\subsection{Misure e Metriche}
+\subsection{Misure e Metriche}\label{MisureMetriche}
 Di seguito sono elencate le metriche utilizzate per valutare i processi in modo quantitativo. Vengono inoltre riportati i range utilizzati, secondo la seguente classificazione:
 \begin{itemize}
 	\item \textbf{di accettazione}: il valore ha raggiunto la soglia minima dell'accettazione;
@@ -57,7 +57,7 @@ Di seguito sono elencate le metriche utilizzate per valutare i processi in modo 
 \end{itemize}
 I valori che non rientrano in questi due range sono considerati non accettabili.
 
-\subsubsection{Metriche per la documentazione}
+\subsubsection{Metriche per la documentazione}\label{MetricheDoc}
 \hypertarget{metriche_documenti}{}
 La qualità di un documento dipende fortemente dai suoi contenuti e dalla sua leggibilità. Tuttavia, a causa della scarsa esperienza dei membri del team, valutarla risulta molto difficile. Si è pertanto scelto di affidarsi a parametri oggettivi e facilmente misurabili attraverso dei tools automatici.\\
 
@@ -87,7 +87,7 @@ In generale risulta che testi con indice:
 \end{itemize}
 Questi valori sono stati fissati tenendo conto delle soglie di cui sopra, e soprattutto del fatto che la documentazione del presente progetto è destinata a persone sufficientemente preparate, competenti ed istruite.
 
-\subsubsection{Metriche per i processi}
+\subsubsection{Metriche per i processi}\label{MetricheProc}
 \hypertarget{metriche_processi}{}
 Le seguenti metriche rappresentano un indicatore volto a monitorare i tempi e i costi associati al progetto. Sono metriche di tipo \textit{consuntivo} che danno un riscontro immediato sullo stato attuale: gli indici verranno valutati dal \textit{Responsabile di progetto} e, se necessario, verranno presi provvedimenti per sistemare la situazione.\\
 
@@ -130,7 +130,7 @@ un valore unicamente contabile e finanziario. Se BV > 0 significa che il progett
 il proprio budget con minor velocità di quanto pianificato, viceversa se negativo.
 \end{itemize}
 
-\textbf{Produttivit\`a}\\
+\textbf{Produttività}\\
 
 Rappresenta la produttività media delle risorse impiegate nelle diverse fasi del progetto. Questa metrica può dunque riferirsi al progetto in senso generale, oppure ad una specifica fase.\\ \`E utilizzata per valutare lo sforzo richiesto per lo sviluppo del progetto, a fronte delle sue dimensioni.
 \begin{center}
@@ -201,8 +201,8 @@ Rappresenta il livello di copertura che i test eseguiti forniscono rispetto alle
 	\item Range ottimale: [80 - 100]
 \end{itemize}
 
-\subsubsection{Metriche per il prodotto software}
-%todo spiegazione
+\subsubsection{Metriche per il prodotto software}\label{MetricheSoftware}
+Di seguito vengono indicate le metriche riguardanti il software che il team BugBusters ha deciso di adottare.
 
 \textbf{Dimensioni del prodotto software}\\
 
@@ -212,7 +212,7 @@ Rappresenta le dimensioni del prodotto software; generalmente \`e misurata in te
 	\textit{Dimensioni del prodotto software} = \textit{FPs} 
 \end{center}
 
-\textbf{Complessit\`a ciclomatica}\\
+\textbf{Complessità ciclomatica}\\
 
 Permette di misurare la complessità del flusso di controllo di una \textit{componente} (procedura, metodo, classe o modulo) calcolando tutti i possibili cammini indipendenti del grafo del flusso di controllo. Tale grafo è composto dai seguenti elementi:
 \begin{itemize}
