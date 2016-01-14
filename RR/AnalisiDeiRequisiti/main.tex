@@ -1,44 +1,6 @@
-\documentclass[11pt,a4paper]{article}
-
-\usepackage[utf8]{inputenc}
-
-%is a document for us, we can use italian here
-\usepackage[italian]{babel}
-
-%link e colori
-\usepackage{hyperref}
-\hypersetup{
-  colorlinks,
-  citecolor=gray,
-  filecolor=red,
-  linkcolor=blue,
-  urlcolor=blue
-}
-
-%colore all'interno delle tabelle
-\usepackage[table]{xcolor}
-
-%tabelle su pi\`u pagine
-\usepackage{longtable}
-
-\usepackage{amsmath}
-
-\usepackage{graphicx}
-
-\usepackage{amsfonts}
-
-\usepackage{listings}
-\lstset{%
-	commentstyle=\color{green},
-	frame=single,
-	keepspaces=true,
-	keywordstyle=\color{blue},
-	numbers=left,
-	numberstyle=\tiny\color{black},
-	rulecolor=\color{black},
-        basicstyle=\ttfamily
-}
-
+\input{../../common/style/global.tex}
+\input{../../common/style/layout.tex}
+\input{res/local}
 
 \title{\textbf{Analisi Dei Requisiti}}
 \author{BugBuster}
@@ -47,7 +9,9 @@
 
 \begin{document}
 
-\maketitle
+%\maketitle
+
+\makeFrontPage
 
 \tableofcontents
 
