@@ -1,36 +1,35 @@
 \section{Visione generale della strategia di verifica}
-La volont\`a del team \`e quella di automatizzare il pi\`u possibile il lavoro di verifica. Saranno quindi utilizzati dei \textit{tools} adeguatamente configurati, con lo scopo di avere un riscontro affidabile e quantitativo che permetta di assicurare il grado di qualit\`a voluto. 
+La volontà del team è quella di automatizzare il più possibile il lavoro di verifica. Saranno quindi utilizzati dei \textit{tools} adeguatamente configurati, con lo scopo di avere un riscontro affidabile e quantitativo che permetta di assicurare il grado di qualità voluto. 
 
 \subsection{Definizione degli obiettivi}
-\subsubsection{Qualit\`a di processo}
-Molto spesso i prodotti scadenti derivano da processi scadenti. Per questo motivo, e per le seguenti ragioni, assicurare la qualità dei processi \`e un obiettivo primario per il team BugBusters:
+\subsubsection{Qualità di processo}
+Molto spesso prodotti scadenti derivano da processi scadenti. Per questo motivo, e per le seguenti ragioni, assicurare la qualità dei processi è un obiettivo primario per il team BugBusters:
 \begin{itemize}
 	\item aiuta ad ottimizzare l'uso di risorse;
 	\item permette di contenere i costi;
 	\item migliora la stima dei rischi e degli impegni.
 \end{itemize}
-Un processo dovrebbe essere in grado di migliorare costantemente le proprie performance, che devono quindi essere costantemente misurabili e misurate. Inoltre, le attivit\`a di ciascun processo e i costi associati devono essere in linea con quanto indicato nel \textit{Piano di Progetto}. \\
-Si \`e dunque deciso di perseguire la qualit\`a servendosi dei seguenti modelli: 
-% todo: note a pie di pagina o link??
+Un processo dovrebbe essere in grado di migliorare costantemente le proprie performance, che devono quindi essere costantemente misurabili e misurate. Inoltre, le attività di ciascun processo e i costi associati devono essere in linea con quanto indicato nel \textit{Piano di Progetto v1.0.0}. \\
+Si è dunque deciso di perseguire la qualità servendosi dei seguenti modelli: 
 \begin{itemize}
-	\item \textit{SPICE} (Simulation \textbf{P}rogram with \textbf{I}ntegrated \textbf{C}ircuit \textbf{E}mphasis): definito nello standard ISO/IEC 15504, per poter valutare in modo oggettivo i processi dal punto di vista della maturit\`a;
-	\item \textit{PCDA} (\textbf{P}lan \textbf{D}o \textbf{C}hek \textbf{A}ct): per il controllo delle attività di processo ripetibili e misurabili e per la manutenibilità dei processi stessi incrementandone la qualit\`a.
+	\item \textit{SPICE}\footnote{Si veda appendice \ref{AppQualitaProcessi} per approfondimenti} (Simulation \textbf{P}rogram with \textbf{I}ntegrated \textbf{C}ircuit \textbf{E}mphasis): definito nello standard ISO/IEC 15504, per poter valutare in modo oggettivo i processi dal punto di vista della maturità;
+	\item \textit{PCDA}\footnote{Si veda appendice \ref{AppQualita} per approfondimenti} (\textbf{P}lan \textbf{D}o \textbf{C}hek \textbf{A}ct): per il controllo delle attività di processo ripetibili e misurabili e per la manutenibilità dei processi stessi incrementandone la qualità.
 \end{itemize}
 
-\subsubsection{Qualit\`a di prodotto}
-Lo standard ISO/IEC 9126 classifica la qualit\`a del software e definisce delle metriche per la sua misurazione. Il team BugBusters ha scelto di utilizzare queste metriche, al fine di assicurare la qualit\`a del prodotto finale.
+\subsubsection{Qualità di prodotto}
+Lo standard ISO/IEC 9126\footnote{Si veda appendice \ref{AppQualitaProdotto} per approfondimenti} classifica la qualità del software e definisce delle metriche per la sua misurazione. Il team BugBusters ha scelto di utilizzare queste metriche, al fine di assicurare la qualità del prodotto finale.
 
 \subsection{Procedure di controllo}
-\subsubsection{Qualit\`a di processo}
-La pianificazione delle attivit\`a volte al miglioramento continuo dei processi sono descritte nel \textit{Piano di Progetto v1.0.0}. Le linee guida per la gestione della qualit\`a del processo, invece, seguono il modello PCDA e descrivono come devono essere attuate le procedure di controllo:
+\subsubsection{Qualità di processo}
+La pianificazione delle attività volte al miglioramento continuo dei processi sono descritte nel \textit{Piano di Progetto v1.0.0}. Le linee guida per la gestione della qualità del processo, invece, seguono il modello PCDA e descrivono come devono essere attuate le procedure di controllo:
 \begin{itemize}
-	\item la pianificazione deve essere dettagliata, e le attivit\`a pianificate devono essere monitorate;
+	\item la pianificazione deve essere dettagliata, e le attività pianificate devono essere monitorate;
 	\item le risorse necessarie per conseguire gli obiettivi devono essere definite;
-	\item il miglioramento della qualit\`a del processo deve essere verificato attraverso l'utilizzo di apposite metriche, che verranno descritte in seguito.
+	\item il miglioramento della qualità del processo deve essere verificato attraverso l'utilizzo di apposite metriche, che verranno descritte in seguito.
 \end{itemize}
 
-\subsubsection{Qualit\`a di prodotto}
-Il controllo per la qualit\`a del prodotto definisce i seguenti processi:
+\subsubsection{Qualità di prodotto}
+Il controllo per la qualità del prodotto definisce i seguenti processi:
 \begin{itemize}
 	\item \textit{\textbf{SQA}} (\textbf{S}oftware \textbf{Q}uality \textbf{A}ssurance): si occupa di assicurare che i processi siano implementati secondo quanto pianificato e che siano forniti sistemi di misurazione dei processi;
 	\item \textbf{verifica}: si occupa di accertare che l'esecuzione dei processi non abbia introdotto degli errori, e accerta il rispetto delle regole, delle convenzioni e delle procedure;
@@ -38,33 +37,33 @@ Il controllo per la qualit\`a del prodotto definisce i seguenti processi:
 \end{itemize}
 
 \subsection{Strategia}
-Nel piano di progetto vengono fissate delle scadenze che devono necessariamente essere rispettate: \`e dunque necessario definire un'efficace strategia di qualifica. I controlli saranno effettuati in maniera automatica secondo quanto previsto nelle \textit{Norme di Progetto v1.0.0}. 
+Nel piano di progetto vengono fissate delle scadenze che devono necessariamente essere rispettate: è dunque necessario definire un'efficace strategia di qualifica. I controlli saranno effettuati in maniera automatica secondo quanto previsto nelle \textit{Norme di Progetto v1.0.0}. 
 
-\subsection{Responsabilit\`a}
-La responsabilit\`a della verifica viene affidata al \textit{Responsabile di progetto} e ai \textit{Verificatori} secondo quanto previsto nel \textit{Piano di Progetto v1.0.0}.
+\subsection{Responsabilità}
+La responsabilità della verifica viene affidata al \textit{Responsabile di progetto} e ai \textit{Verificatori} secondo quanto previsto nel \textit{Piano di Progetto v1.0.0}.
 
 \subsection{Risorse}
 Vengono consumati due tipi di risorse:
 \begin{itemize}
-	\item \textbf{umane}: in particolare il \textit{Responsabile di progetto} e il \textit{Verificatore}; le ore impiegate vengono contabilizzate e messe a calendario secondo quanto previsto dal \textit{Piano di Progetto v1.0.0} e dalle \href{http://www.math.unipd.it/~tullio/IS-1/2015/Dispense/PD01.pdf}{regole} del progetto didattico. Ai fini della qualifica, tuttavia, si pu\`o tralasciare l'aspetto economico, in quanto esso non rientra nel dominio del presente documento;
-		\item \textbf{tecnologiche}: i \textit{tool} utilizzati per il controllo della qualit\`a. Le operazioni effettuate  consumeranno unit\`a di calcolo considerate a costo nullo, in quanto le elaborazioni verranno effettuate su macchine per le quali non \`e richiesto nessun contributo e per un tempo non degno di nota.
+	\item \textbf{umane}: in particolare il \textit{Responsabile di progetto} e il \textit{Verificatore}; le ore impiegate vengono contabilizzate e messe a calendario secondo quanto previsto dal \textit{Piano di Progetto v1.0.0} e dalle \href{http://www.math.unipd.it/~tullio/IS-1/2015/Dispense/PD01.pdf}{regole} del progetto didattico. Ai fini della qualifica, tuttavia, si può tralasciare l'aspetto economico, in quanto esso non rientra nel dominio del presente documento;
+		\item \textbf{tecnologiche}: i \textit{tool} utilizzati per il controllo della qualità. Le operazioni effettuate  consumeranno unità di calcolo considerate a costo nullo, in quanto le elaborazioni verranno effettuate su macchine per le quali non è richiesto nessun contributo e per un tempo non degno di nota.
 \end{itemize}
 
 \subsection{Misure e Metriche}
 Di seguito sono elencate le metriche utilizzate per valutare i processi in modo quantitativo. Vengono inoltre riportati i range utilizzati, secondo la seguente classificazione:
 \begin{itemize}
 	\item \textbf{di accettazione}: il valore ha raggiunto la soglia minima dell'accettazione;
-	\item \textbf{ottimale}: il valore ha raggiunto le massime aspettative del team. L'obiettivo \'e quello che tutti i valori siano all'interno di questo range.
+	\item \textbf{ottimale}: il valore ha raggiunto le massime aspettative del team. L'obiettivo è quello che tutti i valori siano all'interno di questo range.
 \end{itemize}
 I valori che non rientrano in questi due range sono considerati non accettabili.
 
 \subsubsection{Metriche per la documentazione}
 \hypertarget{metriche_documenti}{}
-La qualit\`a di un documento dipende fortemente dai suoi contenuti e dalla sua leggibilit\`a. Tuttavia, a causa della scarsa esperienza dei membri del team, valutarla risulta molto difficile. Si \`e pertanto scelto di affidarsi a parametri oggettivi e facilmente misurabili attraverso dei tools automatici.\\
+La qualità di un documento dipende fortemente dai suoi contenuti e dalla sua leggibilità. Tuttavia, a causa della scarsa esperienza dei membri del team, valutarla risulta molto difficile. Si è pertanto scelto di affidarsi a parametri oggettivi e facilmente misurabili attraverso dei tools automatici.\\
 
-\textbf{Indice di leggibilit\`a}\\
+\textbf{Indice di leggibilità}\\
 
-Per valutare la leggibilit\`a di un documento si \`e scelto di usare l'indice \textit{Gulpease}, studiato appositamente per la lingua italiana.\\
+Per valutare la leggibilità di un documento si è scelto di usare l'indice \textit{Gulpease}, studiato appositamente per la lingua italiana.\\
 Rispetto ad altri indici, questo ha il vantaggio di basarsi sulla lunghezza delle parole e non sulla loro divisione in sillabe, semplificando la valutazione automatica.\\
 L'indice di Gulpease è calcolato secondo la seguente formula:
 \begin{center}
@@ -74,7 +73,7 @@ L'indice di Gulpease è calcolato secondo la seguente formula:
 				{\textit{numero delle parole}}
 \end{math}
 \end{center}
-I risultati sono compresi tra 0 e 100, dove un valore alto indica alta leggibilit\`a, e viceversa. \\
+I risultati sono compresi tra 0 e 100, dove un valore alto indica alta leggibilità, e viceversa. \\
 In generale risulta che testi con indice:
 \begin{itemize}
 	\item \textbf{inferiore a 80} risultano difficili da leggere per chi ha la licenza elementare;
@@ -86,7 +85,7 @@ In generale risulta che testi con indice:
 	\item Range di accettazione : [40 - 100]
 	\item Range ottimale: [50 - 100]
 \end{itemize}
-Questi valori sono stati fissati tenendo conto delle soglie di cui sopra, e soprattutto del fatto che la documentazione del presente progetto \`e destinata a persone sufficientemente preparate, competenti ed istruite.
+Questi valori sono stati fissati tenendo conto delle soglie di cui sopra, e soprattutto del fatto che la documentazione del presente progetto è destinata a persone sufficientemente preparate, competenti ed istruite.
 
 \subsubsection{Metriche per i processi}
 \hypertarget{metriche_processi}{}
@@ -94,8 +93,8 @@ Le seguenti metriche rappresentano un indicatore volto a monitorare i tempi e i 
 
 \textbf{Capability Maturity Model}\\
 
-Per valutare i processi si \`e deciso di applicare il modello \textit{CMM} (\textbf{C}apability \textbf{M}aturity \textbf{M}odel) che, se correttamente applicato, fornisce un'ottima base di valutazione dei processi. \\
-L'indice pu\`o assumere valori interi da 1 a 5, dove 1 indica il valore peggiore e 5 il migliore.\\
+Per valutare i processi si è deciso di applicare il modello \textit{CMM} (\textbf{C}apability \textbf{M}aturity \textbf{M}odel) che, se correttamente applicato, fornisce un'ottima base di valutazione dei processi. \\
+L'indice può assumere valori interi da 1 a 5, dove 1 indica il valore peggiore e 5 il migliore.\\
 
 \textbf{Range utilizzati}:
 \begin{itemize}
@@ -105,7 +104,7 @@ L'indice pu\`o assumere valori interi da 1 a 5, dove 1 indica il valore peggiore
 
 \textbf{Schedule Variance}\\
 
-Indica se si \`e in linea, in anticipo o in ritardo rispetto alla schedulazione delle attività di progetto
+Indica se si è in linea, in anticipo o in ritardo rispetto alla schedulazione delle attività di progetto
 pianificate.
 \begin{center}
 	\textit{Schedule Variance} = \textit{EV} - \textit{PV} 
@@ -125,22 +124,22 @@ Indica se alla data corrente si \`e speso di pi\`u o di meno rispetto a quanto p
 \end{center}
 Dove:
 \begin{itemize}
-	\item \textbf{EV}: indica il costo pianificato per realizzare le attivit\`a di progetto alla data corrente;
+	\item \textbf{EV}: indica il costo pianificato per realizzare le attività di progetto alla data corrente;
 	\item \textbf{AC}: indica il costo effettivo sostenuto alla data corrente. \`E un indicatore con
 un valore unicamente contabile e finanziario. Se BV > 0 significa che il progetto sta spendendo
-il proprio budget con minor velocit\`a di quanto pianificato, viceversa se negativo.
+il proprio budget con minor velocità di quanto pianificato, viceversa se negativo.
 \end{itemize}
 
 \textbf{Produttivit\`a}\\
 
-Rappresenta la produttivit\`a media delle risorse impiegate nelle diverse fasi del progetto. Questa metrica pu\`o dunque riferirsi al progetto in senso generale, oppure ad una specifica fase.\\ \`E utilizzata per valutare lo sforzo richiesto per lo sviluppo del progetto, a fronte delle sue dimensioni.
+Rappresenta la produttività media delle risorse impiegate nelle diverse fasi del progetto. Questa metrica può dunque riferirsi al progetto in senso generale, oppure ad una specifica fase.\\ \`E utilizzata per valutare lo sforzo richiesto per lo sviluppo del progetto, a fronte delle sue dimensioni.
 \begin{center}
 \begin{math}
-	\textit{Produttivit\`a} = \frac	{\textit{Quantit\`a di output ottenuto}}
-									{\textit{Quantit\`a di input utilizzato}}
+	\textit{Produttività} = \frac	{\textit{Quantità di output ottenuto}}
+									{\textit{Quantità di input utilizzato}}
 \end{math}
 \end{center}
-Per quanto detto, i parametri "input" e "output" assumono valori diversi in base ai processi, e alle relative attivit\`a, cui la formula viene applicata:
+Per quanto detto, i parametri "input" e "output" assumono valori diversi in base ai processi, e alle relative attività, cui la formula viene applicata:
 \begin{itemize}
 	\item \textbf{documentazione}:
 	\begin{center} 
@@ -178,7 +177,7 @@ I valori che si ottengono con questa metrica sono difficilmente valutabili in mo
 
 \textbf{Numero di cambiamenti apportati}\\
 
-Rappresenta il numero di modifiche apportate al progetto in corso d'opera. Queste modifiche piossono riguardare i requisiti rilevati, le funzionalit\`a, la progettazione, il codice e i manuali o documenti scritti, e sono causate, molto spesso, da un cambiamento dei requisiti, sia esso voluto dal committente o derivato da un'errata interpretazione del fornitore. Misurare il numero di modifiche apportate al progetto \`e dunque fondamentale al fine di valutare gli impatti sui tempi di realizzazione e sui costi.
+Rappresenta il numero di modifiche apportate al progetto in corso d'opera. Queste modifiche piossono riguardare i requisiti rilevati, le funzionalità, la progettazione, il codice e i manuali o documenti scritti, e sono causate, molto spesso, da un cambiamento dei requisiti, sia esso voluto dal committente o derivato da un'errata interpretazione del fornitore. Misurare il numero di modifiche apportate al progetto è dunque fondamentale al fine di valutare gli impatti sui tempi di realizzazione e sui costi.
 \begin{center}
 	\textit{Numero di cambiamenti apportati} = \textit{Numero di modifiche}
 \end{center}
@@ -190,10 +189,10 @@ Rappresenta il numero di modifiche apportate al progetto in corso d'opera. Quest
 
 \textbf{Copertura dei test}\\
 
-Rappresenta il livello di copertura che i test eseguiti forniscono rispetto alle funzionalit\`a del prodotto. \\
+Rappresenta il livello di copertura che i test eseguiti forniscono rispetto alle funzionalità del prodotto. \\
 \begin{center}
 \begin{math}
-	\textit{Copertura dei test} = \frac{\textit{Numero di funzionalit\`a testate}}{\textit{Numero totoale delle funzionalit\`a disponibili}} * 100.
+	\textit{Copertura dei test} = \frac{\textit{Numero di funzionalità \footnote{Si veda appendice \ref{appendice-qualitaDelProdottotestate}}{\textit{Numero totoale delle funzionalità disponibili}} * 100.
 \end{math}
 \end{center}
 \textbf{Range utilizzati}:
@@ -207,7 +206,7 @@ Rappresenta il livello di copertura che i test eseguiti forniscono rispetto alle
 
 \textbf{Dimensioni del prodotto software}\\
 
-Rappresenta le dimensioni del prodotto software; generalmente \`e misurata in termini di migliaia di linee di codice (\textit{KLOCs}, Thousands \textbf{L}ine \textbf{O}f \textbf{C}ode), ma da alcuni anni \`e stata introdotto una nuova misura, legata al numero di funzionalit\`a offerte, e quindi dal valore che il prodotto ha per l'utente. Questa seconda misurazione \`e espressa come numero di punti funzione (\textit{FPs}, \textbf{F}unction \textbf{P}oints). \\
+Rappresenta le dimensioni del prodotto software; generalmente \`e misurata in termini di migliaia di linee di codice (\textit{KLOCs}, Thousands \textbf{L}ine \textbf{O}f \textbf{C}ode), ma da alcuni anni è stata introdotto una nuova misura, legata al numero di funzionalità offerte, e quindi dal valore che il prodotto ha per l'utente. Questa seconda misurazione è espressa come numero di punti funzione (\textit{FPs}, \textbf{F}unction \textbf{P}oints). \\
 \begin{center}
 	\textit{Dimensioni del prodotto software} = \textit{KLOCs} \\
 	\textit{Dimensioni del prodotto software} = \textit{FPs} 
@@ -215,20 +214,20 @@ Rappresenta le dimensioni del prodotto software; generalmente \`e misurata in te
 
 \textbf{Complessit\`a ciclomatica}\\
 
-Permette di misurare la complessit\`a del flusso di controllo di una \textit{componente} (procedura, metodo, classe o modulo) calcolando tutti i possibili cammini indipendenti del grafo del flusso di controllo. Tale grafo \`e composto dai seguenti elementi:
+Permette di misurare la complessità del flusso di controllo di una \textit{componente} (procedura, metodo, classe o modulo) calcolando tutti i possibili cammini indipendenti del grafo del flusso di controllo. Tale grafo è composto dai seguenti elementi:
 \begin{itemize}
 	\item i nodi corrispondono a gruppi indivisibili di comandi;
-	\item gli archi collegano due nodi se e solo se il secondo gruppo di istruzioni pu\`o essere eseguito immediatamente dopo il primo.
+	\item gli archi collegano due nodi se e solo se il secondo gruppo di istruzioni può essere eseguito immediatamente dopo il primo.
 \end{itemize}
-Si vuole utilizzare tale metrica per limitare la complessit\`a durante la fase di sviluppo e per determinare il numero di casi di test necessari per la verifica, in quanto permette di dare un limite superiore al numero di test necessari per raggiungere la massima copertura della componente analizzata \footnote{Stein, C., G. Cox and L. Etzkorn, 2005. Exploring the Relationship between Cohesion and Complexity. J. Comput. Sci., 1: 137-144.}.
+Si vuole utilizzare tale metrica per limitare la complessità durante la fase di sviluppo e per determinare il numero di casi di test necessari per la verifica, in quanto permette di dare un limite superiore al numero di test necessari per raggiungere la massima copertura della componente analizzata \footnote{Stein, C., G. Cox and L. Etzkorn, 2005. Exploring the Relationship between Cohesion and Complexity. J. Comput. Sci., 1: 137-144.}.
 \begin{center}
-	\textit{Complessit\`a ciclomatica v(G)} = \textit{e} - \textit{n} + 2 * \textit{p}
+	\textit{Complessità ciclomatica v(G)} = \textit{e} - \textit{n} + 2 * \textit{p}
 \end{center}
 Dove:
 \begin{itemize}
-	\item \textbf{e} \`e il numero di archi del grafo \textit{G};
-	\item \textbf{n} \`e il numero di nodi del grafo \textit{G};
-	\item \textbf{p} \`e il numero di componenti connesse del grafo \textit{G}.
+	\item \textbf{e} è il numero di archi del grafo \textit{G};
+	\item \textbf{n} è il numero di nodi del grafo \textit{G};
+	\item \textbf{p} è il numero di componenti connesse del grafo \textit{G}.
 \end{itemize}
 \textbf{Range utilizzati}:
 \begin{itemize}
@@ -238,7 +237,7 @@ Dove:
 
 \textbf{Number of methods}\\
 
-Rappresenta la media di occorrenze di metodi per \textit{package}: un package, infatti, non dovrebbe contenere un numero eccessivo di metodi. Valori troppo elevati indicano la necessit\`a di una migliore decomposizione del package. \\
+Rappresenta la media di occorrenze di metodi per \textit{package}: un package, infatti, non dovrebbe contenere un numero eccessivo di metodi. Valori troppo elevati indicano la necessità di una migliore decomposizione del package. \\
 
 \textbf{Range utilizzati}:
 \begin{itemize}
@@ -248,7 +247,7 @@ Rappresenta la media di occorrenze di metodi per \textit{package}: un package, i
 
 \textbf{\textit{Bug}s per linee di codice}\\
 
-Rappresenta il numero di bug trovati in un insieme di linee di codice: con la crescita del prodotto \`e utile misurare il rapporto tra i difetti trovati e la dimensione del prodotto (in termini di KLOCs), tenendo conto del fatto che un incremento del sorgente comporta un aumento della possibilit\`a di inserimento di un errore. \\
+Rappresenta il numero di bug trovati in un insieme di linee di codice: con la crescita del prodotto è utile misurare il rapporto tra i difetti trovati e la dimensione del prodotto (in termini di KLOCs), tenendo conto del fatto che un incremento del sorgente comporta un aumento della possibilità di inserimento di un errore. \\
 
 \textbf{Range utilizzati}:
 \begin{itemize}
@@ -270,7 +269,7 @@ Rappresenta il numero di variabili che vengono definite, ma non utilizzate, o vi
 
 \textbf{Numero di parametri per metodo}\\
 
-Rappresenta il numero di parametri formali di un metodo. Un metodo con troppi parametri formali risulta complesso e poco mantenibile; pertanto \`e necessario che tale numero sia contenuto. \\
+Rappresenta il numero di parametri formali di un metodo. Un metodo con troppi parametri formali risulta complesso e poco mantenibile; pertanto è necessario che tale numero sia contenuto. \\
 
 \textbf{Range utilizzati}:
 \begin{itemize}
