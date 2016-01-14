@@ -1,0 +1,140 @@
+\section{Analisi dei rischi}
+Sezione dove il gruppo BugBusters elenca i rischi incontrati durente lo svolgimento del progetto e gli strumenti e tecniche adoperare per ridurlo o debellarlo. Inoltre \`e presente le descrizione di ogni elemento informativo che il gruppo BugBusters ha trovato sufficiente per categorizzare un rischio.
+Ad ogni rischio \`e assegnato un identificativo nel formato: 
+
+\begin{center}
+\textit{[codice gruppo][codice probabilit\`a rischio][indice numerico crescente]}  
+\end{center}
+
+dando al lettore una veloce comprensione del rischio.
+
+Il \textit{codice gruppo} indica l'appartentenza ad una delle seguenti categorie:
+\begin{itemize}
+\item \textbf{T} - Rischi tecnologici: guasti o malfunzionamenti hardware;
+\item \textbf{P} - Rischi sulle persone: riguardante i membri del gruppo;
+\item \textbf{M} - Rischi organizzativi: derivati dall'ambiente e dalle necessit\`a organizzative;
+\item \textbf{S} - Rischi sugli strumenti software: problemi sul software impiegato a supporto del progetto;
+\item \textbf{R} - Rischi sui requisiti: mal comprensione, mancanza o necessit\`a di aggiunta di requisiti;
+\item \textbf{V} - Rischi sulle stime: sottostima dei tempi e dei costi necessari;
+\end{itemize}
+
+Il \textit{codice propabilit\`a rischio} \`e assiociato alle seguenti probabilit\`a di rischio: 
+\begin{itemize}
+\item \textbf{L} - Molto Bassa
+\item \textbf{S} - Bassa
+\item \textbf{M} - Media
+\item \textbf{H} - Alta
+\end{itemize}
+
+L' \textit{indice numerico crescente} indica la posizione all'interno della sua categoria. 
+
+\`E anche stabilit un \textit{Effetto} che quel rischio ha sul progetto. Non sono indicati nell'identificativo del rischio in quanto criterio di ricerca merno rilevante. Il livello degli effetti sono:
+\begin{itemize}
+\item Tollerabili;
+\item Seri;
+\item Catastrofici;
+\end{itemize}
+
+L'analisi dei rischi di suddivide in 4 parti:
+\begin{itemize}
+\item \textit{Identificazione}: breve descrizione del rischio analizzato;
+\item \textit{Probabilit\`a}': probabilit\`a di rischio;
+\item \textit{Effetti}: tipologia effetto;
+\item \textit{Pianificazione}: la procedura che il gruppo BugBusters adotta in caso si verificasse il rischio;
+\item \textit{Controllo}: metodo per la verifica del successo della pianificazione;
+\end{itemize}
+
+\subsection{Rischi tecnologici}
+\subsubsection{Guasto Hardware - TS1}
+Ogni membro del gruppo \`e provvisto di un computer portatile o fisso in cui svolgere il proprio ruolo. Il rischio sta in un guasto ai computer di un elemente del gruppo che gli rende impossibile il proseguimento dei compiti assegnatogli.
+\begin{enumerate}
+\item \textit{Probabilit\`a}: Bassa;
+\item \textit{Effetti}: Tollerabile; 
+\item \textit{Pianificazione}: l'Universit\`a di Padova metta a disposizione laboratori informatici per gli studenti che ne richiedono l'uso;
+\item \textit{Controllo}: il numero dei computer rimane invariato durante tutto lo sviluppo del software, quindi il rischio resta invariato.
+\end{enumerate}
+
+\subsection{Rischi sulle persone}
+\subsubsection{Problemi dei componenti del gruppo - PM1}
+Ogni membro del gruppo ha impegni personali perci\`o non potr\`a svolgere un orario regolare di lavoro al progetto. Inoltre \`e da prendere in considerazioni, per motivi lavorativi o di salute, periodi di assenza prolungati.
+\begin{enumerate}
+\item \textit{Probabilit\`a}: Media;
+\item \textit{Effetti}: Tollerabile;
+\item \textit{Pianificazione}: nel caso un elemento del gruppo sia impossibilitat\`o a svolgere per un periodo limitato i propri task, il responsabile provveder\`a a riassegnare i task ad altri;
+\item \textit{Controllo}: utilizzo del calendario di gruppo per individuare le fasi critiche.
+\end{enumerate}
+
+\subsubsection{Problemi tra i componenti del gruppo - PM2}
+Per ogni membro del gruppo \`e la prima esperienza su un progetto con un gruppo numeroso di persone ed un lungo periodo di lavoro. La probabilit\`a di insorgere in conflitti aumenta con l'incrementare del lavoro e l'avvicinamento alle date di consegna.
+\begin{enumerate}
+\item \textit{Probabilit\`a}: Media;
+\item \textit{Effetti}: Seri;
+\item \textit{Pianificazione}: nel caso di forte contrasto, sar\`a compito del \textit{Responsabile di progetto} mediare al fine di risolvere il conflitto;
+\item \textit{Controllo}: l'\textit{Amministratore} ha il compito di mantenere un clima cooperativo all'interno del gruppo.
+\end{enumerate} 
+
+\subsection{Scarsa conoscenza delle tecnologie - PA3}
+Essendo un progetto ad ampio spettro \`e certo che si dovranno usare tecnologie non trattate durante il percorso di studi o offrontate personalemente.
+\begin{enumerate}
+\item \textit{Probabilit\`a}: Alta;
+\item \textit{Effetti}: Seri;
+\item \textit{Pianificazione}: ogni membro del gruppo \`e tenuto a studiare le tecnologie coinvolte durante lo sviluppo. \`E inoltre data la disponibilit\`a del proponente per discutere degli argomenti pi\`u complessi;
+\item \textit{Controllo}: il \textit{Responsabile} ha il compito di verificare il grado delle conoscenze sulle tecnologie da parte dei membri del gruppo.
+\end{enumerate}
+
+\subsection{Rischi organizzativi}
+\subsubsection{Rotazione dei ruoli - MS1}
+Il cambio di ruolo pu\`o creare difficolt\`a ai componenti del gruppo a causa del cambio di responsabilit\`a e competenze assiociati al ruolo da coprire. Ne potrebbe conseguire un periodo d'abbassamento d'efficacia di tutto il gruppo.
+\begin{enumerate}
+\item \textit{Probabilit\`a}: Bassa;
+\item \textit{Effetti}: Tollerabile;
+\item \textit{Pianificazione}: la rotazione dei ruoli viene prestabilit\`a prima di avviare i lavori, perci\`o ogni membro del gruppo ha la possibilit\`a di studiare preventivamente i compiti e le metodologie del nuovo ruolo;
+\item \textit{Controllo}: il \textit{Responsabile} verifica che ogni membro del gruppo ricopra tutti i ruoli previsti dalle \textit{Norme di progetto}.
+\end{enumerate}
+
+\subsection{Rischi sugli strumenti software}
+\subsubsection{Piattaforme fuori servizio - SL1}
+Le piattaforme coinvolte sono Teamwork e GitHub.
+\begin{enumerate}
+\item \textit{Probabilit\`a}: Molto bassa;
+\item \textit{Effetti}: Catastrofici;
+\item \textit{Pianificazione}: suddivio nelle piattaforme coinvolte.
+  \begin{itemize}
+    \item Teamwork dichiara di appoggiarsi ai servizi di backup offerti da Amazon;
+    \item GitHub dichiara di effettuare backup su tre differenti server, di cui uno fuori sede. All'indirizzo \href{https://help.github.com/articles/github-security/}{https://help.github.com/articles/github-security/} \`e possibile trovare tutte le informazioni rilasciate da GitHub sulle misure di sicurezza adottate. Inoltre, ogni elemento del gruppo ha un copia in locale del progetto, consentendo un recupero parziale o totale.
+  \end{itemize}
+\item \textit{Controllo}: ci si affida alle misure di sicurezza adottare dai servizi adottati.
+\end{enumerate}
+
+\subsubsection{Cambio di un programma - SS2}
+Data l'inesperienza sulla gestione di un gruppo cosi numeroso e i softaware pi\'u capaci a supportarlo non si pu\'o escludere il passaggio ad un programma valutato migliore di quello adottato fin'ora.
+\begin{enumerate}
+\item \textit{Probabilit\`a}: Bassa;
+\item \textit{Effetti}: Seri;
+\item \textit{Pianificazione}: prima della reale sostituzione l'\textit{Amministratore} procede alla verifica che il software sostitutivo soddisfi i seguenti requisiti:
+  \begin{itemize}
+    \item retrocompatibilit\`a - tutto il materiale precedentemente prodotto deve essere riprodotto con il nuovo programma;
+    \item migliorante - il nuovo programma adottato dovr\`a consentire di svolgere lo stesso lavoro in tempo minori e/o con una qualit\`a superiore.
+  \end{itemize}
+\item \textit{Controllo}: il \textit{Verificatore} controller\`a che il materiale prodotto con il nuovo softaware rispetti i criteri attesi.
+\end{enumerate}
+
+\subsection{Rischi sui requisiti}
+\subsubsection{Comprensione errata dei requisiti - RM1}
+Data l'inesperienza dei componenti del gruppo nell'analisi dei requisiti, \`e possibile un'errata compensione dei requisiti comportando un'offerta non conforme alla richieste.
+\begin{enumerate}
+\item \textit{Probabilit\`a}: Media;
+\item \textit{Effetti}: Seri;
+\item \textit{Pianificazione}: i membri del gruppo sono tenuti a colmare le lacune sui fondamenti dell'analisi dei requisiti;
+\item \textit{Controllo}: in caso di dubbi rivolgersi agli altri membri del gruppo per chiarimenti o contattare il Prof. Riccardo Cardin.
+\end{enumerate}
+
+\subsubsection{Modifica dei requisiti - RS2}
+Durante gli incontri con il proponente \`e emersa la possibilit\`a di poter modificare i requisiti segnati nel capitolato.
+\begin{enumerate}
+\item \textit{Probabilit\`a}: Bassa;
+\item \textit{Effetti}: Seri;
+\item \textit{Pianificazione}: il cambio di requisiti deve svolgersi prima della prima data di revisione del progetto in modo da non rallentare o bloccare i \textit{Progettisti} durante la stesura della Specifica tecnica.
+\end{enumarate}
+
+
