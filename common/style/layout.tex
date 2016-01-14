@@ -7,7 +7,8 @@
 
 % permette di modificare i margini
 %\usepackage[top=3.1cm, bottom=3.1cm, left=2.2cm, right=2.2cm]{geometry}
-\usepackage[a4paper]{../../modello/geometry} %TODO
+%\usepackage[a4paper]{../../common/style/geometry} %TODO
+\usepackage[a4paper]{geometry}
 
 % specifica con quale codifica bisogna leggere i file
 \usepackage[utf8]{inputenc}
@@ -73,7 +74,7 @@
 \usepackage{booktabs}
 
 % tabelle con il campo X per riempire lo spazio rimanente sulla riga
-\usepackage{tabularx}
+%\usepackage{tabularx}
 
 % multirow per tabelle
 \usepackage{multirow}
@@ -86,10 +87,10 @@
 
 % permette di fare longtable larghe tutta la pagina (parametro x)
 % su Ubuntu non si può installare il pacchetto, deve essere in modello/
-\usepackage{../../modello/tabu}
+%\usepackage{../../modello/tabu}
 
 % imposta lo spazio tra le righe di una tabella
-\setlength{\tabulinesep}{6pt}
+%\setlength{\tabulinesep}{6pt}
 
 % definisci un nuovo tipo di colonna P che permette di andare a capo con \newline
 % e giustificata a sinistra
@@ -108,14 +109,14 @@
 
 %Permette di includere i grafici a barre
 %IMPORTANTE: deve essere caricato prima di /pgfgantt altrimenti causa conflitto
-\usepackage{pgfplots}
+%\usepackage{pgfplots}
 
 % permette di includere i diagrammi Gantt
 % su Ubuntu non si può installare il pacchetto, deve essere in modello/
-\usepackage{../../modello/pgfgantt}
+%\usepackage{../../modello/pgfgantt}
 
 % permette di includere i grafici a torta
-\usepackage{../../modello/pgf-pie}
+%\usepackage{../../modello/pgf-pie}
 
 % necessario per pgf-pie
 \usepackage{tikz}
@@ -134,7 +135,7 @@
 	\fancyhf{}
 
 	\lhead{
-		\includegraphics[height=1.5cm, width=1.5cm, keepaspectratio=true]{../../modello/steakman.png}
+		\includegraphics[height=1.5cm, width=1.5cm, keepaspectratio=true]{../../common/style/logo.png}
 		\parbox[b]{10cm}{
 			\emph{\GroupName{}} \vspace{0pt} \\
 			\emph{Progetto \ProjectName{}} \vspace{7pt}
@@ -197,3 +198,9 @@
 % Permetti di utilizzare il grassetto per i caratteri Typewriter (per es. il font di \code{...} e \file{...})
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
+
+
+%package added
+\usepackage{amsmath}
+
+\usepackage{amsfonts}
