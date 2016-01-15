@@ -174,7 +174,7 @@ function add_UC() {
         \textbf{Precondizioni}  & $PRE \\\\ 
         
         \textbf{Postcondizioni} & $POST \\\\ 
-        \textbf{Flusso Principale} & $FLUX \\\\ %da aggiungere?
+        \textbf{Flusso Principale} & $FLUX \\\\
         \textbf{Estensioni} & $EXTENSION \\\\
         \textbf{Inclusioni} & $INCLUSION
       \end{longtable}
