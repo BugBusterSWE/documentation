@@ -145,19 +145,26 @@ function add_UC() {
 	$PROGRAM /tmp/inclusion_$UC_ID
 	$INCLUSION=$(</tmp/inclusion_$UC_ID)
     fi
-    
 
-    echo "
+    echo "\subsubsection{$UC_ID}" | tee -a ../RR/AnalisiDeiRequisiti/res/sections/$TEX_PATH
 
-\subsubsection{$UC_ID}
+    if [ -z $IMG_PATH ]
+    then
+	msg v "No image added"
+    else
+	msg v "Adding image to UC"
+	
+	echo " 
 
     \begin{figure}[H]
       \begin{center}
         \includegraphics[width=12cm]{res/img/$IMG_PATH}
       \caption{$UC_ID - $UC_NAME}
       \end{center} 
-    \end{figure}    
-    
+    \end{figure}" | tee -a ../RR/AnalisiDeiRequisiti/res/sections/$TEX_PATH
+    fi
+
+    echo "
     %Tabella 
     \begin{center}
       \bgroup
@@ -179,7 +186,7 @@ function add_UC() {
         \textbf{Inclusioni} & $INCLUSION
       \end{longtable}
       \egroup
-    \end{center} " | tee -a ../RR/AnalisiDeiRequisiti/res/sections/$TEX_PATH
+    \end{center}" | tee -a ../RR/AnalisiDeiRequisiti/res/sections/$TEX_PATH
 
     local result=$?
 
