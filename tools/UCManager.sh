@@ -142,7 +142,7 @@ function add_UC() {
 
 \subsubsection{$UC_ID}
 
-    \begin{figure}[h]
+    \begin{figure}[H]
       \begin{center}
         \includegraphics[width=12cm]{res/img/$IMG_PATH}
       \caption{$UC_ID - $UC_NAME}
