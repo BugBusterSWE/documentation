@@ -110,7 +110,7 @@ function add_UC() {
 	msg v "Insert a pre. $PROGRAM will be used"
 	sleep 1
         $PROGRAM /tmp/pre_$UC_ID
-        PRE=$(</tmp/purpose_$UC_ID)
+        PRE=$(</tmp/pre_$UC_ID)
     fi
 
     
@@ -143,7 +143,7 @@ function add_UC() {
 	msg v "Insert a inclusion. $PROGRAM will be used"
 	sleep 1
 	$PROGRAM /tmp/inclusion_$UC_ID
-	$INCLUSION=$(</tmp/extension_$UC_ID)
+	$INCLUSION=$(</tmp/inclusion_$UC_ID)
     fi
     
 
