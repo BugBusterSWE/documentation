@@ -235,3 +235,297 @@ Di seguito viengono elencati i casi d'uso per l'editor.
       \end{longtable}
       \egroup
     \end{center}
+\subsubsection{UC-E2.1}
+ 
+
+    \begin{figure}[H]
+      \begin{center}
+        \includegraphics[width=12cm]{res/img/UCEditor/UC-2.1-CollectionElement}
+      \caption{UC-E2.1 - Collection Element}
+      \end{center} 
+    \end{figure}
+
+    %Tabella 
+    \begin{center}
+      \bgroup
+      \def\arraystretch{1.8}     
+      \begin{longtable}{  p{3.5cm} | p{8cm} } 
+        
+        \hline
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.1 - Collection Element}} \\ 
+        \hline
+        
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Proprietario \\ 
+        \textbf{Scopo e Descrizione} & Rappresentazione della sezione della parte della collection del DSL \\ 
+        
+        \textbf{Precondizioni}  & L'utente sta visualizzando l'editor \\ 
+        
+        \textbf{Postcondizioni} & L'utente ha gestito la gestione collection del DSL \\ 
+        \textbf{Flusso Principale} & 1. Aggancia un Index Element (UC-E2.1.1)
+2. Aggancia un Document Element (UC-E2.1.2) \\
+        \textbf{Estensioni} &  \\
+        \textbf{Inclusioni} & 
+      \end{longtable}
+      \egroup
+    \end{center}
+\subsubsection{UC-E2.1.1}
+
+    %Tabella 
+    \begin{center}
+      \bgroup
+      \def\arraystretch{1.8}     
+      \begin{longtable}{  p{3.5cm} | p{8cm} } 
+        
+        \hline
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.1.1 - Aggancia un Index Element}} \\ 
+        \hline
+        
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Proprietario \\ 
+        \textbf{Scopo e Descrizione} & Unire alla collection creata un elemento Index del DSL \\ 
+        
+        \textbf{Precondizioni}  & La Collection esiste o \`e appena stata creata \\ 
+        
+        \textbf{Postcondizioni} & Un Index Element \`e stato agganciato a una Collection \\ 
+        \textbf{Flusso Principale} &  \\
+        \textbf{Estensioni} &  \\
+        \textbf{Inclusioni} & 
+      \end{longtable}
+      \egroup
+    \end{center}
+\subsubsection{UC-E2.1.2}
+
+    %Tabella 
+    \begin{center}
+      \bgroup
+      \def\arraystretch{1.8}     
+      \begin{longtable}{  p{3.5cm} | p{8cm} } 
+        
+        \hline
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.1.2 - Aggancia un Document Element}} \\ 
+        \hline
+        
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Proprietario \\ 
+        \textbf{Scopo e Descrizione} & Inserisce la sezione Show relativa alla collection creata nel DSL \\ 
+        
+        \textbf{Precondizioni}  & L'utente visualizza l'editor \\ 
+        
+        \textbf{Postcondizioni} & L'utente ha con successo agganciato una Show al Document Element \\ 
+        \textbf{Flusso Principale} &  \\
+        \textbf{Estensioni} &  \\
+        \textbf{Inclusioni} & 
+      \end{longtable}
+      \egroup
+    \end{center}
+\subsubsection{UC-E2.2}
+ 
+
+    \begin{figure}[H]
+      \begin{center}
+        \includegraphics[width=12cm]{res/img/UCEditor/UC-E2.2-FunctionElement}
+      \caption{UC-E2.2 - Function Element}
+      \end{center} 
+    \end{figure}
+
+    %Tabella 
+    \begin{center}
+      \bgroup
+      \def\arraystretch{1.8}     
+      \begin{longtable}{  p{3.5cm} | p{8cm} } 
+        
+        \hline
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.2 - Function Element}} \\ 
+        \hline
+        
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Proprietario \\ 
+        \textbf{Scopo e Descrizione} & Rappresentare una canonica funzione in cui \`e possibile agganciare un elemento che verr\`a considerato un input e collegare l'output ad un altro DSL Element \\ 
+        
+        \textbf{Precondizioni}  & L'utente sta visualizzando l'editor \\ 
+        
+        \textbf{Postcondizioni} & L'utente ha collegato un function al valore del DSL desiderato \\ 
+        \textbf{Flusso Principale} & 1. Definizione funzione (UC-E2.2.1)
+2. Salvataggio Function Element (UC-E2.2.2)
+3. Importare Function Element (UC-E2.2.3)  \\
+        \textbf{Estensioni} &  \\
+        \textbf{Inclusioni} & 
+      \end{longtable}
+      \egroup
+    \end{center}
+\subsubsection{UC-E2.2.1}
+
+    %Tabella 
+    \begin{center}
+      \bgroup
+      \def\arraystretch{1.8}     
+      \begin{longtable}{  p{3.5cm} | p{8cm} } 
+        
+        \hline
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.2.1 - Definizione funzione}} \\ 
+        \hline
+        
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Proprietario \\ 
+        \textbf{Scopo e Descrizione} & L'utente ha la possibilit\`a di scrivere in un campo testo una funzione con il linguaggio definito da MaaS \\ 
+        
+        \textbf{Precondizioni}  & L'utente sta visualizzando l'editor \\ 
+        
+        \textbf{Postcondizioni} & L'utente ha definito con successo una funzione \\ 
+        \textbf{Flusso Principale} &  \\
+        \textbf{Estensioni} &  \\
+        \textbf{Inclusioni} & 
+      \end{longtable}
+      \egroup
+    \end{center}
+\subsubsection{UC-E2.2.2}
+
+    %Tabella 
+    \begin{center}
+      \bgroup
+      \def\arraystretch{1.8}     
+      \begin{longtable}{  p{3.5cm} | p{8cm} } 
+        
+        \hline
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.2.2 - Salvataggio Function Element}} \\ 
+        \hline
+        
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Proprietario \\ 
+        \textbf{Scopo e Descrizione} & L'utente ha la possibilit\`a di storicizzare la sua Function Element creata \\ 
+        
+        \textbf{Precondizioni}  & L'utente ha inserito una Function Element valida \\ 
+        
+        \textbf{Postcondizioni} & La Function Element \`e stata salvata con successo in MaaS \\ 
+        \textbf{Flusso Principale} &  \\
+        \textbf{Estensioni} &  \\
+        \textbf{Inclusioni} & 
+      \end{longtable}
+      \egroup
+    \end{center}
+\subsubsection{UC-E2.2.3}
+
+    %Tabella 
+    \begin{center}
+      \bgroup
+      \def\arraystretch{1.8}     
+      \begin{longtable}{  p{3.5cm} | p{8cm} } 
+        
+        \hline
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.2.3 - Importare Function Element}} \\ 
+        \hline
+        
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Proprietario \\ 
+        \textbf{Scopo e Descrizione} & Permette di importare nella sessione corrente una Function Element precedentemente definita \\ 
+        
+        \textbf{Precondizioni}  & L'utente ha i diritti per caricare la Function Element \\ 
+        
+        \textbf{Postcondizioni} & L'utente ha caricato la Function Element con successo \\ 
+        \textbf{Flusso Principale} &  \\
+        \textbf{Estensioni} &  \\
+        \textbf{Inclusioni} & 
+      \end{longtable}
+      \egroup
+    \end{center}
+\subsubsection{UC-E2.3}
+ 
+
+    \begin{figure}[H]
+      \begin{center}
+        \includegraphics[width=12cm]{res/img/UCEditor/UC-E2.3-IndexElement}
+      \caption{UC-E2.3 - Index Element}
+      \end{center} 
+    \end{figure}
+
+    %Tabella 
+    \begin{center}
+      \bgroup
+      \def\arraystretch{1.8}     
+      \begin{longtable}{  p{3.5cm} | p{8cm} } 
+        
+        \hline
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.3 - Index Element}} \\ 
+        \hline
+        
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Proprietario \\ 
+        \textbf{Scopo e Descrizione} & Rappresentazione della sezione index del DSL nell'editor \\ 
+        
+        \textbf{Precondizioni}  & L'aggiunta dell'Index Element dev'essere eseguita in una Collection Element esistente \\ 
+        
+        \textbf{Postcondizioni} & \`E stata aggiunta la sezione Index alla Collection del DSL corrente \\ 
+        \textbf{Flusso Principale} & 1. Riferimento ad un Column Element (UC-E2.6.1)
+2. Agganciare un Input Element (UC-E2.8.2)
+3. Aggiungere/Rimuovere un attributo ``column" (UC-E2.3.1)
+4. Agganciare un Column Element (UC-E2.3.2) \\
+        \textbf{Estensioni} &  \\
+        \textbf{Inclusioni} & 
+      \end{longtable}
+      \egroup
+    \end{center}
+\subsubsection{UC-E2.3.1}
+
+    %Tabella 
+    \begin{center}
+      \bgroup
+      \def\arraystretch{1.8}     
+      \begin{longtable}{  p{3.5cm} | p{8cm} } 
+        
+        \hline
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.3.1 - Aggiungere/Rimuovere un attributo ``column''}} \\ 
+        \hline
+        
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Proprietario \\ 
+        \textbf{Scopo e Descrizione} & Si da la possibilit\`a di rimuovere o aggiungere dall'Index un attributo \\ 
+        
+        \textbf{Precondizioni}  & Sia collegata a un Index Element \\ 
+        
+        \textbf{Postcondizioni} & Nel DSL nella sezione Index \`e aggiunto o rimosso un attributo ``column'' \\ 
+        \textbf{Flusso Principale} &  \\
+        \textbf{Estensioni} &  \\
+        \textbf{Inclusioni} & 
+      \end{longtable}
+      \egroup
+    \end{center}
+\subsubsection{UC-E2.3.2}
+
+    %Tabella 
+    \begin{center}
+      \bgroup
+      \def\arraystretch{1.8}     
+      \begin{longtable}{  p{3.5cm} | p{8cm} } 
+        
+        \hline
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.3.2 - Agganciare un Column Element}} \\ 
+        \hline
+        
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Proprietario \\ 
+        \textbf{Scopo e Descrizione} & \`E possibile agganciare un Column Element all'attributo ``column'' \\ 
+        
+        \textbf{Precondizioni}  & Deve essere presente un attributo Column \\ 
+        
+        \textbf{Postcondizioni} & La sezione del DSL ``column'' viene riempita con i valori impostati sul Column Element  \\ 
+        \textbf{Flusso Principale} &  \\
+        \textbf{Estensioni} &  \\
+        \textbf{Inclusioni} & 
+      \end{longtable}
+      \egroup
+    \end{center}
+\subsubsection{UC-E2.4}
+
+    %Tabella 
+    \begin{center}
+      \bgroup
+      \def\arraystretch{1.8}     
+      \begin{longtable}{  p{3.5cm} | p{8cm} } 
+        
+        \hline
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.4 - Column Element}} \\ 
+        \hline
+        
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, membro, Admin, Proprietario \\ 
+        \textbf{Scopo e Descrizione} & Dare tutte le funzionalit\`a espresse nel DSL Element \\ 
+        
+        \textbf{Precondizioni}  & Deve riferirsi ad una struttura column presente nel DSL corrente \\ 
+        
+        \textbf{Postcondizioni} & L'utente manipola le parti che compongono la struttura \\ 
+        \textbf{Flusso Principale} &  \\
+        \textbf{Estensioni} &  \\
+        \textbf{Inclusioni} & 
+      \end{longtable}
+      \egroup
+    \end{center}
