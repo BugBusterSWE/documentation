@@ -143,7 +143,7 @@ function add_UC() {
 	msg v "Insert a inclusion. $PROGRAM will be used"
 	sleep 1
 	$PROGRAM /tmp/inclusion_$UC_ID
-	$INCLUSION=$(</tmp/inclusion_$UC_ID)
+	INCLUSION=$(</tmp/inclusion_$UC_ID)
     fi
 
     echo "\subsubsection{$UC_ID}" | tee -a ../RR/AnalisiDeiRequisiti/res/sections/$TEX_PATH
