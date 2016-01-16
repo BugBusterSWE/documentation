@@ -957,3 +957,342 @@ e. date \\
       \end{longtable}
       \egroup
     \end{center}
+\subsubsection{UC-E2.10}
+ 
+
+    \begin{figure}[H]
+      \begin{center}
+        \includegraphics[width=12cm]{res/img/UCEditor/UC-E2.10-DashRowElement}
+      \caption{UC-E2.10 - DashRow Element}
+      \end{center} 
+    \end{figure}
+
+    %Tabella 
+    \begin{center}
+      \bgroup
+      \def\arraystretch{1.8}     
+      \begin{longtable}{  p{3.5cm} | p{8cm} } 
+        
+        \hline
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.10 - DashRow Element}} \\ 
+        \hline
+        
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Proprietario \\ 
+        \textbf{Scopo e Descrizione} & Definire la struttura di una ``row'' di una Dashboard in modo che l'utente possa scegliere quale configurazione applicare alla sua Dashboard \\ 
+        
+        \textbf{Precondizioni}  & Ci sia una Dashboard Element a cui far riferimento \\ 
+        
+        \textbf{Postcondizioni} & L'utente ha deciso la configurazione della riga della Dashboard \\ 
+        \textbf{Flusso Principale} & 1. Agganciare un Cell Element (UC-E2.10.1)
+2. Agganciare un Document Element (UC-E2.10.2)
+3. Agganciare un Collection Element (UC-E2.10.3) \\
+        \textbf{Estensioni} &  \\
+        \textbf{Inclusioni} & 
+      \end{longtable}
+      \egroup
+    \end{center}
+\subsubsection{UC-E2.10.1}
+
+    %Tabella 
+    \begin{center}
+      \bgroup
+      \def\arraystretch{1.8}     
+      \begin{longtable}{  p{3.5cm} | p{8cm} } 
+        
+        \hline
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.10.1 - Agganciare un Cell Element}} \\ 
+        \hline
+        
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Proprietario \\ 
+        \textbf{Scopo e Descrizione} & Inserire nella riga della Dashboard una colonna rappresentante un Cell del DLS \\ 
+        
+        \textbf{Precondizioni}  & Ci sia una DashRow Element a cui riferirsi \\ 
+        
+        \textbf{Postcondizioni} & Nella Row del DSL viene aggiunta una colonna che visualizza un Cell \\ 
+        \textbf{Flusso Principale} &  \\
+        \textbf{Estensioni} &  \\
+        \textbf{Inclusioni} & 
+      \end{longtable}
+      \egroup
+    \end{center}
+\subsubsection{UC-E2.10.2}
+
+    %Tabella 
+    \begin{center}
+      \bgroup
+      \def\arraystretch{1.8}     
+      \begin{longtable}{  p{3.5cm} | p{8cm} } 
+        
+        \hline
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.10.2 - Agganciare un Document Element}} \\ 
+        \hline
+        
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Proprietario \\ 
+        \textbf{Scopo e Descrizione} & Inserire nella riga della Dashboard una colonna rappresentante un Document del DLS \\ 
+        
+        \textbf{Precondizioni}  & Ci sia una DashRow Element a cui riferirsi \\ 
+        
+        \textbf{Postcondizioni} & Nella Row del DSL viene aggiunta una colonna che visualizza un Document \\ 
+        \textbf{Flusso Principale} &  \\
+        \textbf{Estensioni} &  \\
+        \textbf{Inclusioni} & 
+      \end{longtable}
+      \egroup
+    \end{center}
+\subsubsection{UC-E2.10.3}
+
+    %Tabella 
+    \begin{center}
+      \bgroup
+      \def\arraystretch{1.8}     
+      \begin{longtable}{  p{3.5cm} | p{8cm} } 
+        
+        \hline
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.10.3 - Agganciare un Collection Element}} \\ 
+        \hline
+        
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Proprietario \\ 
+        \textbf{Scopo e Descrizione} & Inserire nella riga della Dashboard una colonna rappresentante un Collection del DLS \\ 
+        
+        \textbf{Precondizioni}  & Ci sia una DashRow Element a cui riferirsi \\ 
+        
+        \textbf{Postcondizioni} & Nella Row del DSL viene aggiunta una colonna che visualizza un Collection \\ 
+        \textbf{Flusso Principale} &  \\
+        \textbf{Estensioni} &  \\
+        \textbf{Inclusioni} & 
+      \end{longtable}
+      \egroup
+    \end{center}
+\subsubsection{UC-E2.11}
+ 
+
+    \begin{figure}[H]
+      \begin{center}
+        \includegraphics[width=12cm]{res/img/UCEditor/UC-E2.11-ActionElement}
+      \caption{UC-E2.11 - Action Element}
+      \end{center} 
+    \end{figure}
+
+    %Tabella 
+    \begin{center}
+      \bgroup
+      \def\arraystretch{1.8}     
+      \begin{longtable}{  p{3.5cm} | p{8cm} } 
+        
+        \hline
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.11 - Action Element}} \\ 
+        \hline
+        
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Proprietario \\ 
+        \textbf{Scopo e Descrizione} & Presentazione dell'Action del DSL nel quale si associa un'input ad una azione definita \\ 
+        
+        \textbf{Precondizioni}  & Ci dev'essere un documento o una collezione a cui si da riferimento \\ 
+        
+        \textbf{Postcondizioni} & Si \`e associato a quell'azione o a quel documento l'action desiderato \\ 
+        \textbf{Flusso Principale} & 1. Selezione input (UC-E2.11.1)
+2. Selezione tipo d'azione (UC-E2.11.2) \\
+        \textbf{Estensioni} &  \\
+        \textbf{Inclusioni} & 
+      \end{longtable}
+      \egroup
+    \end{center}
+\subsubsection{UC-E2.11.1}
+
+    %Tabella 
+    \begin{center}
+      \bgroup
+      \def\arraystretch{1.8}     
+      \begin{longtable}{  p{3.5cm} | p{8cm} } 
+        
+        \hline
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.11.1 - Selezione input}} \\ 
+        \hline
+        
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Proprietario \\ 
+        \textbf{Scopo e Descrizione} & Selezionare il tipo di Action definite dall'Admin \\ 
+        
+        \textbf{Precondizioni}  & Ci dev'essere una Collection o un Document a cui fare riferimento \\ 
+        
+        \textbf{Postcondizioni} & L'Action viene legata all'elemento selezionata come input \\ 
+        \textbf{Flusso Principale} &  \\
+        \textbf{Estensioni} &  \\
+        \textbf{Inclusioni} & 
+      \end{longtable}
+      \egroup
+    \end{center}
+\subsubsection{UC-E2.11.2}
+
+    %Tabella 
+    \begin{center}
+      \bgroup
+      \def\arraystretch{1.8}     
+      \begin{longtable}{  p{3.5cm} | p{8cm} } 
+        
+        \hline
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.11.2 - Selezione tipo d'azione}} \\ 
+        \hline
+        
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Proprietario \\ 
+        \textbf{Scopo e Descrizione} & L'utente pu\`o definire l'azione legata all'Action \\ 
+        
+        \textbf{Precondizioni}  & C'\`e un'Action a cui fa riferimento \\ 
+        
+        \textbf{Postcondizioni} & L'utente ha definito quali azioni intraprendere eseguendo quell'Action \\ 
+        \textbf{Flusso Principale} &  \\
+        \textbf{Estensioni} &  \\
+        \textbf{Inclusioni} & 
+      \end{longtable}
+      \egroup
+    \end{center}
+\subsubsection{UC-E3}
+ 
+
+    \begin{figure}[H]
+      \begin{center}
+        \includegraphics[width=12cm]{res/img/UCEditor/UC-E3}
+      \caption{UC-E3 - Invio DSL}
+      \end{center} 
+    \end{figure}
+
+    %Tabella 
+    \begin{center}
+      \bgroup
+      \def\arraystretch{1.8}     
+      \begin{longtable}{  p{3.5cm} | p{8cm} } 
+        
+        \hline
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E3 - Invio DSL}} \\ 
+        \hline
+        
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Proprietario \\ 
+        \textbf{Scopo e Descrizione} & Inviare la DSL al server per salvarla ed eseguirla \\ 
+        
+        \textbf{Precondizioni}  & L'utente visualizza l'editor \\ 
+        
+        \textbf{Postcondizioni} & Il DSL \`e stato caricato con successo sul MaaS ed eseguito \\ 
+        \textbf{Flusso Principale} & 1. Richiesta invio DSL (UC-E3.1) \\
+        \textbf{Estensioni} &  \\
+        \textbf{Inclusioni} & 
+      \end{longtable}
+      \egroup
+    \end{center}
+\subsubsection{UC-E3.1}
+
+    %Tabella 
+    \begin{center}
+      \bgroup
+      \def\arraystretch{1.8}     
+      \begin{longtable}{  p{3.5cm} | p{8cm} } 
+        
+        \hline
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E3.1 - Richiesta invio DSL}} \\ 
+        \hline
+        
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Proprietario \\ 
+        \textbf{Scopo e Descrizione} & L'utente chiede al programma dell'editor di eseguire tutte le operazioni necessarie affinch\`e ci sia l'invio del DSL al server e la sua esecuzione \\ 
+        
+        \textbf{Precondizioni}  & L'utente visualizza l'Editor \\ 
+        
+        \textbf{Postcondizioni} & Si sono avviate tutte le procedure dell'editor per eseguire i passi necessari per l'invio del DSL \\ 
+        \textbf{Flusso Principale} &  \\
+        \textbf{Estensioni} &  \\
+        \textbf{Inclusioni} & 
+      \end{longtable}
+      \egroup
+    \end{center}
+\subsubsection{UC-E3.2}
+
+    %Tabella 
+    \begin{center}
+      \bgroup
+      \def\arraystretch{1.8}     
+      \begin{longtable}{  p{3.5cm} | p{8cm} } 
+        
+        \hline
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E3.2 - Validazione DSL}} \\ 
+        \hline
+        
+        \textbf{Attori Primari} &  \\ 
+        \textbf{Scopo e Descrizione} & Al DSL creato vengano eseguiti tutti i controlli affinch\`e il parser possa interpretarli in maniera corretta \\ 
+        
+        \textbf{Precondizioni}  & L'utente ha fatto richiesta di invio del DSL \\ 
+        
+        \textbf{Postcondizioni} & Il DSL \`e stato correttamente validato e la sua correttezza \`e stata garantita \\ 
+        \textbf{Flusso Principale} &  \\
+        \textbf{Estensioni} & 1. DSL non \`e valido (UC-E3.4) \\
+        \textbf{Inclusioni} & 
+      \end{longtable}
+      \egroup
+    \end{center}
+\subsubsection{UC-E3.3}
+
+    %Tabella 
+    \begin{center}
+      \bgroup
+      \def\arraystretch{1.8}     
+      \begin{longtable}{  p{3.5cm} | p{8cm} } 
+        
+        \hline
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E3.3 - Caricamento del DSL}} \\ 
+        \hline
+        
+        \textbf{Attori Primari} &  \\ 
+        \textbf{Scopo e Descrizione} & Inviare al server il DSL valido affinch\`e possa essere eseguito \\ 
+        
+        \textbf{Precondizioni}  & Il DSL deve essere valido \\ 
+        
+        \textbf{Postcondizioni} & Il DSL \`e stato correttamente caricato nel server MaaS \\ 
+        \textbf{Flusso Principale} &  \\
+        \textbf{Estensioni} & 1. Disconnessione dalla rete (UC-E3.5) \\
+        \textbf{Inclusioni} & 
+      \end{longtable}
+      \egroup
+    \end{center}
+\subsubsection{UC-E3.4}
+
+    %Tabella 
+    \begin{center}
+      \bgroup
+      \def\arraystretch{1.8}     
+      \begin{longtable}{  p{3.5cm} | p{8cm} } 
+        
+        \hline
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E3.4 - DSL non `e valido}} \\ 
+        \hline
+        
+        \textbf{Attori Primari} &  \\ 
+        \textbf{Scopo e Descrizione} & Avvisare l'utente dove si trovano gli errori nel DSL definito \\ 
+        
+        \textbf{Precondizioni}  & Il DSL non \`e corretto \\ 
+        
+        \textbf{Postcondizioni} & L'utente \`e stato avvisato tramite un messaggio dove sono gli errori \\ 
+        \textbf{Flusso Principale} &  \\
+        \textbf{Estensioni} &  \\
+        \textbf{Inclusioni} & 
+      \end{longtable}
+      \egroup
+    \end{center}
+\subsubsection{UC-E3.5}
+
+    %Tabella 
+    \begin{center}
+      \bgroup
+      \def\arraystretch{1.8}     
+      \begin{longtable}{  p{3.5cm} | p{8cm} } 
+        
+        \hline
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E3.5 - Disconnessione dalla rete}} \\ 
+        \hline
+        
+        \textbf{Attori Primari} &  \\ 
+        \textbf{Scopo e Descrizione} & Avvisare l'utente dell'impossibilit\`a di effettuare il caricamento del DSL sul server \\ 
+        
+        \textbf{Precondizioni}  & Non \`e pi\`u possibile comunicare con il server MaaS \\ 
+        
+        \textbf{Postcondizioni} & L'utente \`e stato avvisato con un messaggio di errore dell'impossibilit\`a di caricare il DSL sul server MaaS \\ 
+        \textbf{Flusso Principale} &  \\
+        \textbf{Estensioni} &  \\
+        \textbf{Inclusioni} & 
+      \end{longtable}
+      \egroup
+    \end{center}
