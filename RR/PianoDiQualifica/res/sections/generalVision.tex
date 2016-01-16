@@ -1,6 +1,6 @@
 \newpage
 \section{Visione generale della strategia di verifica}
-La volontà del team è quella di automatizzare il più possibile il lavoro di verifica. Saranno quindi utilizzati dei \textit{tools} adeguatamente configurati, con lo scopo di avere un riscontro affidabile e quantitativo che permetta di assicurare il grado di qualità voluto. 
+La volontà del team è quella di automatizzare il più possibile il lavoro di verifica. Saranno quindi utilizzati dei tools adeguatamente configurati, con lo scopo di avere un riscontro affidabile e quantitativo che permetta di assicurare il grado di qualità voluto. 
 
 \subsection{Definizione degli obiettivi}
 \subsubsection{Qualità di processo}
@@ -13,8 +13,8 @@ Molto spesso prodotti scadenti derivano da processi scadenti. Per questo motivo,
 Un processo dovrebbe essere in grado di migliorare costantemente le proprie performance, che devono quindi essere costantemente misurabili e misurate. Inoltre, le attività di ciascun processo e i costi associati devono essere in linea con quanto indicato nel \PianoDiProgetto. \\
 Si è dunque deciso di perseguire la qualità servendosi dei seguenti modelli: 
 \begin{itemize}
-	\item \textit{SPICE}\footnote{Si veda appendice \ref{AppQualitaProcessi} per approfondimenti} (Simulation \textbf{P}rogram with \textbf{I}ntegrated \textbf{C}ircuit \textbf{E}mphasis): definito nello standard ISO/IEC 15504, per poter valutare in modo oggettivo i processi dal punto di vista della maturità;
-	\item \textit{PCDA}\footnote{Si veda appendice \ref{AppPDCA} per approfondimenti} (\textbf{P}lan \textbf{D}o \textbf{C}hek \textbf{A}ct): per il controllo delle attività di processo ripetibili e misurabili e per la manutenibilità dei processi stessi incrementandone la qualità.
+	\item SPICE\footnote{Si veda appendice \ref{AppQualitaProcessi} per approfondimenti} (\textbf{S}imulation \textbf{P}rogram with \textbf{I}ntegrated \textbf{C}ircuit \textbf{E}mphasis): definito nello standard ISO/IEC 15504, per poter valutare in modo oggettivo i processi dal punto di vista della maturità;
+	\item PDCA\footnote{Si veda appendice \ref{AppPDCA} per approfondimenti} (\textbf{P}lan \textbf{D}o \textbf{C}hek \textbf{A}ct): per il controllo delle attività di processo ripetibili e misurabili e per la manutenibilità dei processi stessi incrementandone la qualità.
 \end{itemize}
 
 \subsubsection{Qualità di prodotto}
@@ -32,7 +32,7 @@ La pianificazione delle attività volte al miglioramento continuo dei processi s
 \subsubsection{Qualità di prodotto}
 Il controllo per la qualità del prodotto definisce i seguenti processi:
 \begin{itemize}
-	\item \textit{\textbf{SQA}} (\textbf{S}oftware \textbf{Q}uality \textbf{A}ssurance): si occupa di assicurare che i processi siano implementati secondo quanto pianificato e che siano forniti sistemi di misurazione dei processi;
+	\item \textbf{SQA} (\textbf{S}oftware \textbf{Q}uality \textbf{A}ssurance): si occupa di assicurare che i processi siano implementati secondo quanto pianificato e che siano forniti sistemi di misurazione dei processi;
 	\item \textbf{verifica}: si occupa di accertare che l'esecuzione dei processi non abbia introdotto degli errori, e accerta il rispetto delle regole, delle convenzioni e delle procedure;
 	\item \textbf{validazione}: si occupa di accertare che i prodotti realizzati siano conformi alle attese.
 \end{itemize}
@@ -41,13 +41,13 @@ Il controllo per la qualità del prodotto definisce i seguenti processi:
 Nel piano di progetto vengono fissate delle scadenze che devono necessariamente essere rispettate: è dunque necessario definire un'efficace strategia di qualifica. I controlli saranno effettuati in maniera automatica secondo quanto previsto nelle \NormeDiProgetto. 
 
 \subsection{Responsabilità}
-La responsabilità della verifica viene affidata al \textit{Responsabile di progetto} e ai \textit{Verificatori} secondo quanto previsto nel \textit{Piano di Progetto v1.0.0}.
+La responsabilità della verifica viene affidata al \textit{Responsabile} e ai \textit{Verificatori} secondo quanto previsto nel \PianoDiProgetto.
 
 \subsection{Risorse}
 Vengono consumati due tipi di risorse:
 \begin{itemize}
-	\item \textbf{umane}: in particolare il \textit{Responsabile di progetto} e il \textit{Verificatore}; le ore impiegate vengono contabilizzate e messe a calendario secondo quanto previsto dal \PianoDiProgetto e dalle \href{http://www.math.unipd.it/~tullio/IS-1/2015/Dispense/PD01.pdf}{regole} del progetto didattico. Ai fini della qualifica, tuttavia, si può tralasciare l'aspetto economico, in quanto esso non rientra nel dominio del presente documento;
-		\item \textbf{tecnologiche}: i \textit{tool} utilizzati per il controllo della qualità. Le operazioni effettuate  consumeranno unità di calcolo considerate a costo nullo, in quanto le elaborazioni verranno effettuate su macchine per le quali non è richiesto nessun contributo e per un tempo non degno di nota.
+	\item \textbf{umane}: in particolare il \textit{Responsabile} e il \textit{Verificatore}; le ore impiegate vengono contabilizzate e messe a calendario secondo quanto previsto dal \PianoDiProgetto e dalle \href{http://www.math.unipd.it/~tullio/IS-1/2015/Dispense/PD01.pdf}{regole} del progetto didattico. Ai fini della qualifica, tuttavia, si può tralasciare l'aspetto economico, in quanto esso non rientra nel dominio del presente documento;
+		\item \textbf{tecnologiche}: i tool utilizzati per il controllo della qualità. Le operazioni effettuate  consumeranno unità di calcolo considerate a costo nullo, in quanto le elaborazioni verranno effettuate su macchine per le quali non è richiesto nessun contributo e per un tempo non degno di nota.
 \end{itemize}
 
 \subsection{Misure e Metriche}\label{MisureMetriche}
@@ -64,7 +64,7 @@ La qualità di un documento dipende fortemente dai suoi contenuti e dalla sua le
 
 \textbf{Indice di leggibilità}\\
 
-Per valutare la leggibilità di un documento si è scelto di usare l'indice \textit{Gulpease}, studiato appositamente per la lingua italiana.\\
+Per valutare la leggibilità di un documento si è scelto di usare l'indice Gulpease, studiato appositamente per la lingua italiana.\\
 Rispetto ad altri indici, questo ha il vantaggio di basarsi sulla lunghezza delle parole e non sulla loro divisione in sillabe, semplificando la valutazione automatica.\\
 L'indice di Gulpease è calcolato secondo la seguente formula:
 \begin{center}
@@ -90,7 +90,7 @@ Questi valori sono stati fissati tenendo conto delle soglie di cui sopra, e sopr
 
 \subsubsection{Metriche per i processi}\label{MetricheProc}
 \hypertarget{metriche_processi}{}
-Le seguenti metriche rappresentano un indicatore volto a monitorare i tempi e i costi associati al progetto. Sono metriche di tipo \textit{consuntivo} che danno un riscontro immediato sullo stato attuale: gli indici verranno valutati dal \textit{Responsabile di progetto} e, se necessario, verranno presi provvedimenti per sistemare la situazione.\\
+Le seguenti metriche rappresentano un indicatore volto a monitorare i tempi e i costi associati al progetto. Sono metriche di tipo consuntivo che danno un riscontro immediato sullo stato attuale: gli indici verranno valutati dal \textit{Responsabile} e, se necessario, verranno presi provvedimenti per sistemare la situazione.\\
 
 \textbf{Schedule Variance}\\
 
@@ -104,7 +104,7 @@ Dove:
 	\item \textbf{EV}: indica il valore delle attivit\`a realizzate alla data corrente;
 	\item \textbf{PV}: indica il costo pianificato per realizzare le attività di progetto alla data corrente.
 \end{itemize}
-\`E un indicatore di efficacia soprattutto nei confronti del \textit{Cliente}. Se \begin{math}{SV > 0}\end{math} significa che il progetto sta procedendo con maggior velocit\`a rispetto a quanto pianificato, viceversa se negativo. Alla fine del progetto questo indice assumer\`a il valore 0, perch\`e in quel momento tutte le attivit\`a saranno state realizzate.\\
+\`E un indicatore di efficacia soprattutto nei confronti del cliente. Se \begin{math}{SV > 0}\end{math} significa che il progetto sta procedendo con maggior velocit\`a rispetto a quanto pianificato, viceversa se negativo. Alla fine del progetto questo indice assumer\`a il valore 0, perch\`e in quel momento tutte le attivit\`a saranno state realizzate.\\
 
 \textbf{Budget Variance}\\
 
@@ -196,7 +196,7 @@ Di seguito vengono indicate le metriche riguardanti il software che il team BugB
 
 \textbf{Dimensioni del prodotto software}\\
 
-Rappresenta le dimensioni del prodotto software; generalmente \`e misurata in termini di migliaia di linee di codice (\textit{KLOCs}, Thousands \textbf{L}ine \textbf{O}f \textbf{C}ode), ma da alcuni anni è stata introdotto una nuova misura, legata al numero di funzionalità offerte, e quindi dal valore che il prodotto ha per l'utente. Questa seconda misurazione è espressa come numero di punti funzione (\textit{FPs}, \textbf{F}unction \textbf{P}oints). \\
+Rappresenta le dimensioni del prodotto software; generalmente \`e misurata in termini di migliaia di linee di codice (KLOCs, Thousands \textbf{L}ine \textbf{O}f \textbf{C}ode), ma da alcuni anni è stata introdotto una nuova misura, legata al numero di funzionalità offerte, e quindi dal valore che il prodotto ha per l'utente. Questa seconda misurazione è espressa come numero di punti funzione (FPs, \textbf{F}unction \textbf{P}oints). \\
 \begin{center}
 	\textit{Dimensioni del prodotto software} = \textit{KLOCs} \\
 	\textit{Dimensioni del prodotto software} = \textit{FPs} 
@@ -204,7 +204,7 @@ Rappresenta le dimensioni del prodotto software; generalmente \`e misurata in te
 
 \textbf{Complessità ciclomatica}\\
 
-Permette di misurare la complessità del flusso di controllo di una \textit{componente} (procedura, metodo, classe o modulo) calcolando tutti i possibili cammini indipendenti del grafo del flusso di controllo. Tale grafo è composto dai seguenti elementi:
+Permette di misurare la complessità del flusso di controllo di una componente (procedura, metodo, classe o modulo) calcolando tutti i possibili cammini indipendenti del grafo del flusso di controllo. Tale grafo è composto dai seguenti elementi:
 \begin{itemize}
 	\item i nodi corrispondono a gruppi indivisibili di comandi;
 	\item gli archi collegano due nodi se e solo se il secondo gruppo di istruzioni può essere eseguito immediatamente dopo il primo.
@@ -227,7 +227,7 @@ Dove:
 
 \textbf{Number of methods}\\
 
-Rappresenta la media di occorrenze di metodi per \textit{package}: un package, infatti, non dovrebbe contenere un numero eccessivo di metodi. Valori troppo elevati indicano la necessità di una migliore decomposizione del package. \\
+Rappresenta la media di occorrenze di metodi per package: un package, infatti, non dovrebbe contenere un numero eccessivo di metodi. Valori troppo elevati indicano la necessità di una migliore decomposizione del package. \\
 
 \textbf{Range utilizzati}:
 \begin{itemize}
@@ -235,7 +235,7 @@ Rappresenta la media di occorrenze di metodi per \textit{package}: un package, i
 	\item Range ottimale: [0 - 7]
 \end{itemize}
 
-\textbf{\textit{Bug}s per linee di codice}\\
+\textbf{Bugs per linee di codice}\\
 
 Rappresenta il numero di bug trovati in un insieme di linee di codice: con la crescita del prodotto è utile misurare il rapporto tra i difetti trovati e la dimensione del prodotto (in termini di KLOCs), tenendo conto del fatto che un incremento del sorgente comporta un aumento della possibilità di inserimento di un errore. \\
 
@@ -248,7 +248,7 @@ Misurati sull'intera dimensione in KLOCs del prodotto.\\
 
 \textbf{Variabili non utilizzate e/o non definite}\\
 
-Rappresenta il numero di variabili che vengono definite, ma non utilizzate, o viceversa. Questo viene considerato \textit{pollution}, e pertanto considerato inaccettabile. La misurazione avviene mediante un'analisi dell'\textbf{\textit{AST}} (\textbf{A}bstract \textbf{S}yntax \textbf{T}ree). \\
+Rappresenta il numero di variabili che vengono definite, ma non utilizzate, o viceversa. Questo viene considerato pollution, e pertanto considerato inaccettabile. La misurazione avviene mediante un'analisi dell'\textbf{AST} (\textbf{A}bstract \textbf{S}yntax \textbf{T}ree). \\
 
 \textbf{Range utilizzati}:
 \begin{itemize}
