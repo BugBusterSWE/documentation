@@ -876,3 +876,84 @@ e. date \\
       \end{longtable}
       \egroup
     \end{center}
+\subsubsection{UC-E2.9}
+ 
+
+    \begin{figure}[H]
+      \begin{center}
+        \includegraphics[width=12cm]{res/img/UCEditor/UC-E2.9-DashboardElement}
+      \caption{UC-E2.9 - Dashboard Element}
+      \end{center} 
+    \end{figure}
+
+    %Tabella 
+    \begin{center}
+      \bgroup
+      \def\arraystretch{1.8}     
+      \begin{longtable}{  p{3.5cm} | p{8cm} } 
+        
+        \hline
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.9 - Dashboard Element}} \\ 
+        \hline
+        
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Proprietario \\ 
+        \textbf{Scopo e Descrizione} & Rappresentazione di un elemento Dashboard nel DSL \\ 
+        
+        \textbf{Precondizioni}  & L'utente sta visualizzando l'editor \\ 
+        
+        \textbf{Postcondizioni} & Viene scritto nel DSL l'elemento Dashboard \\ 
+        \textbf{Flusso Principale} & 1. Agganciare un DashRow Element (UC-E2.9.1)
+2. Aggiungere/Rimuovere una riga (UC-E2.9.2) \\
+        \textbf{Estensioni} &  \\
+        \textbf{Inclusioni} & 
+      \end{longtable}
+      \egroup
+    \end{center}
+\subsubsection{UC-E2.9.1}
+
+    %Tabella 
+    \begin{center}
+      \bgroup
+      \def\arraystretch{1.8}     
+      \begin{longtable}{  p{3.5cm} | p{8cm} } 
+        
+        \hline
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.9.1 - Agganciare un DashRow Element}} \\ 
+        \hline
+        
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Proprietario \\ 
+        \textbf{Scopo e Descrizione} & Permette di definire la struttura di una Row e di legarla a una Dashboard \\ 
+        
+        \textbf{Precondizioni}  & Ci sia una Dashboard a cui fare riferimento \\ 
+        
+        \textbf{Postcondizioni} & Viene inserita nel DSL la configurazione della struttura ``row'' \\ 
+        \textbf{Flusso Principale} &  \\
+        \textbf{Estensioni} &  \\
+        \textbf{Inclusioni} & 
+      \end{longtable}
+      \egroup
+    \end{center}
+\subsubsection{UC-E2.9.2}
+
+    %Tabella 
+    \begin{center}
+      \bgroup
+      \def\arraystretch{1.8}     
+      \begin{longtable}{  p{3.5cm} | p{8cm} } 
+        
+        \hline
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.9.2 - Aggiungere/Rimuovere una riga}} \\ 
+        \hline
+        
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Proprietario \\ 
+        \textbf{Scopo e Descrizione} & Definire una nuova riga all'interno della Dashboard \\ 
+        
+        \textbf{Precondizioni}  & Ci sia una Dashboard a cui fare riferimento \\ 
+        
+        \textbf{Postcondizioni} & Viene aggiunto e rimosso un attributo ``row'' \\ 
+        \textbf{Flusso Principale} &  \\
+        \textbf{Estensioni} &  \\
+        \textbf{Inclusioni} & 
+      \end{longtable}
+      \egroup
+    \end{center}
