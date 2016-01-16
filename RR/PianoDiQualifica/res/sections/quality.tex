@@ -1,168 +1,105 @@
 \section{Standard di qualità} 
-	\subsection{Standard ISO/IEC 15504}\label{AppQualitaProcessi}
-
-		ISO/IEC 15504 denominato anche Software Process Improvement and Capability dEtermination (\textbf{SPICE}), consiste di un insieme di normative e linee guida per lo sviluppo di processi software.
-	
-		Definisce un modello di riferimento per dare una valutazione complessiva della maturità dei processi in un'organizzazione del settore IT.\\
-	
-		\textbf{Livelli di maturità dei processi}\\
-
-		Per ogni processo, il modello ISO/IEC 15504 definisce un livello di maturità che può variare nella seguente scala:
-		
-		\begin{enumerate}
-
-			\item Optimizing process
-			\item Predictable process
-			\item Established process
-			\item Managed process
-			\item Performed process
-			\item Incomplete process
-
-		\end{enumerate}
-		
-		Ciascun livello di maturità viene misurato sulla base dei seguenti attributi, che possono essere non posseduti (0\% - 15\%), parzialmente soddisfatti (16\% - 50\%), largamente soddisfatti (51\% - 85\%), pienamente soddisfatti (86\% - 100\%):
-		
-		\begin{enumerate}
-		
-			\item Process performance
-			\item Performance management
-			\item Work product management
-			\item Process definition
-			\item Process deployment
-			\item Process measurement
-			\item Process control
-			\item Process innovation
-			\item Process optimization
-			
-		\end{enumerate}
-		
-		\subsubsection{Ciclo di Deming} \label{AppPDCA}
-		
-			Il ciclo PDCA si suddivide nelle seguenti 4 fasi:
-			
-			\begin{enumerate}
-			
-				\item \textbf{Plan}: fase di pianificazione. Si definisce cosa andrà realizzato e come andrà controllato (se si sta ripetendo il ciclo questa fase ha lo scopo di pianificare le attività nell'ottica di apportare dei miglioramenti).
-				\item \textbf{Do}: fase di esecuzione. Si agisce in base a quanto pianificato nella fase Plan.
-				\item \textbf{Check}: fase di verifica. Vengono controllati i risultati ottenuti nella fase Do e confrontati con i risultati attesi dalla fase Plan. Le informazioni raccolte saranno utili alla prossima fase.
-				\item \textbf{Act}: Fase di “miglioramento continuo”. Se i risultati prodotti in Do hanno apportato un miglioramento o un peggioramento rispetto a quelli attesi dalla fase Plan, allora probabilmente è necessario ripetere di nuovo il ciclo PDCA.
-				
-			\end{enumerate}
-
-	\subsection{Standard ISO/IEC 9126}\label{AppQualitaProdotto}
-	
-		Lo standard ISO/IEC 9126 consiste di una serie di normative e linee guida che hanno lo scopo di descrivere un modello di qualità del software. 
-		
-		Tale modello di qualità è classificato da un insieme di 6 caratteristiche generali, a loro volta suddivise in sotto caratteristiche.
-		
-		Si fa notare che lo standard descritto in questa sezione è stato sostituito dallo standard \href{http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=35733}{ISO/IEC 25010:2011}, nel quale sono state apportate delle modifiche al modello di qualità (sono state aggiunte/rimosse/modificate alcune caratteristiche e sotto caratteristiche).\\
-		Noi faremo riferimento allo standard ISO/IEC 9126.
-		
-		La norma tecnica relativa alla qualità del software si compone di quattro parti:
-		\begin{itemize}
-		
-			\item Modello della qualità del software
-			\item Metriche per la qualità esterna
-			\item Metriche per la qualità interna
-			\item Metriche per la qualità in uso
-			
-		\end{itemize}
-		
-		\textbf{Modello di qualità - caratteristiche}
-		
-		\begin{itemize}
-		
-			\item \textbf{Funzionalità}: capacità di un prodotto software di fornire funzioni che soddisfino esigenze stabilite.
-			
-			Sotto caratteristiche:
-			
-			\begin{itemize}
-			
-				\item Appropriatezza
-				\item Accuratezza
-				\item Interoperabilità
-				\item Conformità
-				\item Sicurezza
-
-			\end{itemize}
-
-		\item \textbf{Affidabilità}: capacità del prodotto software di mantenere un certo livello di prestazioni quando usato in date condizioni per un dato periodo.
-		
-			Sotto caratteristiche:
-			
-			\begin{itemize}
-			
-				\item Maturità
-				\item Tolleranza agli errori
-				\item Resistenza agli errori
-				\item Aderenza
-
-			\end{itemize}
-
-		\item \textbf{Efficienza}: capacità di fornire appropriate prestazioni relativamente alla quantità di risorse usate.
-		
-			Sotto caratteristiche:
-			
-			\begin{itemize}
-			
-				\item Comportamento rispetto al tempo
-				\item Utilizzo delle risorse
-				\item Conformità
-				
-			\end{itemize}
-
-		\item \textbf{Usabilità}: capacità del prodotto software di essere capito, appreso e usato ottimamente dall'utente, sotto condizioni specificate.
-		
-			Sotto caratteristiche:
-			
-			\begin{itemize}
-			
-				\item Comprensibilità
-				\item Apprendibilità
-				\item Operabilità
-				\item Attrattivà
-				\item Conformità
-
-			\end{itemize}
-
-		\item \textbf{Manutenibilità}: capacità del software di essere modificato, includendo correzioni, miglioramenti o adattamenti.
-		
-			Sotto caratteristiche:
-		
-			\begin{itemize}
-			
-				\item Analizzabilità
-				\item Modificabilità
-				\item Stabilità
-				\item Testabilità
-				
-			\end{itemize}
-
-		\item \textbf{Portabilità}: capacità del software di essere trasportato da un ambiente di lavoro ad un altro. (Ambiente che può variare dall'hardware al sistema operativo).
-		
-			Sotto caratteristiche:
-			
-			\begin{itemize}
-			
-				\item Adattabilità
-				\item Installabilità
-				\item Sostituibilità
-				\item Conformità
-				
-			\end{itemize}
-			
-		\end{itemize}
-		
-		\textbf{Metriche per la qualità esterna}\\
-		
-			Le metriche esterne, specificate nella norma ISO/IEC 9126-2, misurano i comportamenti del software sulla base dei test, dell'operatività e dell'osservazione durante la sua esecuzione, in funzione degli obiettivi stabiliti in un contesto tecnico rilevante o di business.\\
-			
-		\textbf{Metriche per la qualità interna}\\
-		
-			La qualità interna è specificata nella norma ISO/IEC 9126-3 e si applica al software non eseguibile (ad esempio il codice sorgente) durante le fasi di progettazione e codifica. 
-
-			Le metriche interne permettono di individuare eventuali problemi che potrebbero influire sulla qualità finale del prodotto prima che sia realizzato il software eseguibile.\\
-
-		\textbf{Metriche per la qualità in uso}\\
-		
-			La qualità in uso rappresenta il punto di vista dell'utente sul software. La qualità in uso permette di abilitare specificati utenti a raggiungere specificati obiettivi con efficacia, produttività, sicurezza e soddisfazione.
+\subsection{Standard ISO/IEC 15504}\label{AppQualitaProcessi}
+ISO/IEC 15504 denominato anche \textbf{SPICE} (\textbf{S}oftware \textbf{P}rocess \textbf{I}mprovement and \textbf{C}apability d\textbf{E}termination), consiste di un insieme di normative e linee guida per lo sviluppo di processi software.
+Definisce un modello di riferimento per dare una valutazione complessiva della maturità dei processi in un'organizzazione del settore IT.\\
+\textbf{Livelli di maturità dei processi}\\
+Per ogni processo, il modello ISO/IEC 15504 definisce un livello di maturità che può variare nella seguente scala:
+\begin{enumerate}
+\item Optimizing process
+\item Predictable process
+\item Established process
+\item Managed process
+\item Performed process
+\item Incomplete process
+\end{enumerate}
+Ciascun livello di maturità viene misurato sulla base dei seguenti attributi, che possono essere non posseduti (0\% - 15\%), parzialmente soddisfatti (16\% - 50\%), largamente soddisfatti (51\% - 85\%), pienamente soddisfatti (86\% - 100\%):
+\begin{enumerate}
+\item Process performance
+\item Performance management
+\item Work product management
+\item Process definition
+\item Process deployment
+\item Process measurement
+\item Process control
+\item Process innovation
+\item Process optimization
+\end{enumerate}
+\subsubsection{Ciclo di Deming} \label{AppPDCA}
+Il ciclo PDCA si suddivide nelle seguenti 4 fasi:
+\begin{enumerate}
+\item \textbf{Plan}: fase di pianificazione. Si definisce cosa andrà realizzato e come andrà controllato (se si sta ripetendo il ciclo questa fase ha lo scopo di pianificare le attività nell'ottica di apportare dei miglioramenti).
+\item \textbf{Do}: fase di esecuzione. Si agisce in base a quanto pianificato nella fase Plan.
+\item \textbf{Check}: fase di verifica. Vengono controllati i risultati ottenuti nella fase Do e confrontati con i risultati attesi dalla fase Plan. Le informazioni raccolte saranno utili alla prossima fase.
+\item \textbf{Act}: Fase di “miglioramento continuo”. Se i risultati prodotti in Do hanno apportato un miglioramento o un peggioramento rispetto a quelli attesi dalla fase Plan, allora probabilmente è necessario ripetere di nuovo il ciclo PDCA.
+\end{enumerate}
+\subsection{Standard ISO/IEC 9126}\label{AppQualitaProdotto}
+Lo standard ISO/IEC 9126 consiste di una serie di normative e linee guida che hanno lo scopo di descrivere un modello di qualità del software. 
+Tale modello di qualità è classificato da un insieme di 6 caratteristiche generali, a loro volta suddivise in sotto caratteristiche.
+Si fa notare che lo standard descritto in questa sezione è stato sostituito dallo standard \href{http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=35733}{ISO/IEC 25010:2011}, nel quale sono state apportate delle modifiche al modello di qualità (sono state aggiunte/rimosse/modificate alcune caratteristiche e sotto caratteristiche).\\
+Il team BugBusters farà riferimento allo standard ISO/IEC 9126.
+La norma tecnica relativa alla qualità del software si compone di quattro parti:
+\begin{itemize}
+\item Modello della qualità del software
+\item Metriche per la qualità esterna
+\item Metriche per la qualità interna
+\item Metriche per la qualità in uso
+\end{itemize}
+\textbf{Modello di qualità - caratteristiche}
+\begin{itemize}
+\item \textbf{Funzionalità}: capacità di un prodotto software di fornire funzioni che soddisfino esigenze stabilite.
+Sotto caratteristiche:
+\begin{itemize}
+\item Appropriatezza
+\item Accuratezza
+\item Interoperabilità
+\item Conformità
+\item Sicurezza
+\end{itemize}
+\item \textbf{Affidabilità}: capacità del prodotto software di mantenere un certo livello di prestazioni quando usato in date condizioni per un dato periodo.
+Sotto caratteristiche:
+\begin{itemize}
+\item Maturità
+\item Tolleranza agli errori
+\item Resistenza agli errori
+\item Aderenza
+\end{itemize}
+\item \textbf{Efficienza}: capacità di fornire appropriate prestazioni relativamente alla quantità di risorse usate.
+Sotto caratteristiche:
+\begin{itemize}
+\item Comportamento rispetto al tempo
+\item Utilizzo delle risorse
+\item Conformità
+\end{itemize}
+\item \textbf{Usabilità}: capacità del prodotto software di essere capito, appreso e usato ottimamente dall'utente, sotto condizioni specificate.
+Sotto caratteristiche:
+\begin{itemize}
+\item Comprensibilità
+\item Apprendibilità
+\item Operabilità
+\item Attrattivà
+\item Conformità
+\end{itemize}
+\item \textbf{Manutenibilità}: capacità del software di essere modificato, includendo correzioni, miglioramenti o adattamenti.
+Sotto caratteristiche:
+\begin{itemize}
+\item Analizzabilità
+\item Modificabilità
+\item Stabilità
+\item Testabilità
+\end{itemize}
+\item \textbf{Portabilità}: capacità del software di essere trasportato da un ambiente di lavoro ad un altro. (Ambiente che può variare dall'hardware al sistema operativo).
+Sotto caratteristiche:
+\begin{itemize}
+\item Adattabilità
+\item Installabilità
+\item Sostituibilità
+\item Conformità
+\end{itemize}
+\end{itemize}
+\textbf{Metriche per la qualità esterna}\\
+Le metriche esterne, specificate nella norma ISO/IEC 9126-2, misurano i comportamenti del software sulla base dei test, dell'operatività e dell'osservazione durante la sua esecuzione, in funzione degli obiettivi stabiliti in un contesto tecnico rilevante o di business.\\
+\textbf{Metriche per la qualità interna}\\
+La qualità interna è specificata nella norma ISO/IEC 9126-3 e si applica al software non eseguibile (ad esempio il codice sorgente) durante le fasi di progettazione e codifica. 
+Le metriche interne permettono di individuare eventuali problemi che potrebbero influire sulla qualità finale del prodotto prima che sia realizzato il software eseguibile.\\
+\textbf{Metriche per la qualità in uso}\\
+La qualità in uso rappresenta il punto di vista dell'utente sul software. La qualità in uso permette di abilitare specificati utenti a raggiungere specificati obiettivi con efficacia, produttività, sicurezza e soddisfazione.
