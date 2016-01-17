@@ -1,0 +1,59 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{letter}
+
+% Use A4 paper margins
+\usepackage[a4paper]{geometry}
+
+% specifica con quale codifica bisogna leggere il file
+\usepackage[utf8]{inputenc}
+
+% per scrivere in italiano e in inglese;
+% l'ultima lingua (l'italiano) risulta predefinita
+\usepackage[english, italian]{babel}
+
+% imposta lo stile italiano per i paragrafi
+\usepackage{parskip}
+
+% permetti di calcolare la larghezza facendo sottrazioni
+\usepackage{calc}
+
+% importa il simbolo dell'euro
+\usepackage{eurosym}
+% permetti di includere le immagini
+\usepackage{graphicx}
+
+% configura l'header e il footer
+\usepackage{fancyhdr}
+
+\fancypagestyle{firstpage}{
+	% cancella tutti i campi di intestazione e piè di pagina
+	\fancyhf{}
+	\renewcommand{\headrulewidth}{0.0pt}
+	\renewcommand{\footrulewidth}{0.3pt}
+	
+	\fancyhead[L]{
+		\includegraphics[height=4cm, keepaspectratio=true]{../../common/style/logo}
+	}
+    \fancyhead[R]{
+		\Huge{\textbf{Gruppo \GroupName{}}} \\
+		\vspace{5pt}
+	} 
+    
+	\cfoot{ \small{
+		Gruppo \GroupName{} \textendash{} Email: \GroupEmail{}
+	}}
+}
+
+% allarga l'header a tutta la pagina
+%\fancyhfoffset[L]{\oddsidemargin + \hoffset + 1in}
+%\fancyhfoffset[R]{\evensidemargin + \marginparwidth - \marginparsep}
+\setlength{\headheight}{40pt}
+
+\pagestyle{plain}
+
+
+
+\usepackage{eurosym}
