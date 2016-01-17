@@ -7,7 +7,7 @@
 VERBOSE=1
 DEBUG=1
 VERSION=0.0.1
-PROGRAM="emacs"
+PROGRAM="emacs -nw"
 ###ENDO CONFIGURATION###
 
 function msg() {
