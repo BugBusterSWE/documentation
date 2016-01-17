@@ -32,7 +32,7 @@ Tale processo deve garanire:
   \end{itemize}
 
   \subsubsection{Diario delle modifiche}
-  All'interno del documento deve essere presente, subito dopo la proma pagina, una sezione riguardante le modifiche apportate al documento in questione. Tale sezione deve consistere in una tabella cos\`i formattata:
+  All'interno del documento deve essere presente, subito dopo la proma pagina, una sezione rsiguardante le modifiche apportate al documento in questione. Tale sezione deve consistere in una tabella cos\`i formattata:
   \begin{itemize}
   \item Sommario delle modifiche svolte
   \item nome e cognome dell'autore della modifica
