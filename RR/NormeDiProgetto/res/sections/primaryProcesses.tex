@@ -12,17 +12,28 @@
 %\href{nome}{url}
 \section{Processi primari}
 	\section{Processo di sviluppo}
+        \subsection{Scopo del processo}
+        Lo scopo del presente processo \`e la realizzazione di un elemento di sistema implementato come prodotto
+        \textit{software}. Il processo in esame produce un software che soddisfa i requisiti architetturali, sottoposto
+        in seguito alle attivit\`a di verifica e validazione.
+        \subsection{Risultati principali del processo}
+        Sono stati previsti i seguenti risultati positivi derivanti da una corretta implementazione del \textit{processo di sviluppo}:
+        \begin{itemize}
+          \item requisiti software ben delineati
+          \item gli elementi tecnologici e di progettazione sono identificati
+          \item l'attivit\`a di codifica consiste in una mera traduzione dell'output proveniente dall'attivit\`a di progettazione,
+            riducendo cos\`i i rischi provenienti dalla libert\`a dei programmatori
+        \end{itemize}
+        
 		\subsubsection{Attività di Analisi dei requisiti}
 			\paragraph*{Scopo}
 				Gli analisti del gruppo dovranno ricavare i requisiti utili per il progetto
 				dal capitolato e dagli incontri con il proponente, avendo come obiettivo la
-				produzione del documento `Analisi dei Requisiti'.
-			
-			%parlare di: IEEE 830-1998: Recommended Practice
-			%for Software Requirements Specifications (slide 32 in ING_REQUISITI)
-			La presente attività ha come scopo la produzione una specifica dei
-			requisiti conforme ai principi dello standard IEEE 830-1998, espressi in 8 qualit\`a
-			essenziali:
+				stesura del documento \textit{Analisi dei Requisiti}.
+			        %parlare di: IEEE 830-1998: Recommended Practice
+			        %for Software Requirements Specifications (slide 32 in ING_REQUISITI)
+			        Inotre la specifica dei requisiti dev'essere conforme ai principi dello standard \textit{IEEE 830-1998}, espressi in 8 qualit\`a
+			        essenziali:
 				\begin{itemize}
 				\item Priva di ambiguit\`a (UNAMBIGOUS)
 				\item Corretta (CORRECT)
@@ -33,12 +44,20 @@
 				\item Tracciabile (TRACEABLE)
 				\item Ordinata per rilevanza (RANKED)
 				\end{itemize}
-			
+			        %slide 40 di ING_REQUISITI: Cause di abbandono
+			        La stesura di un'Analisi dei Requisiti di qualit\`a \`e cruciale, infatti
+			        da un rapporto dello Standish Group del 1995 si nota come due delle cause primarie
+			        di abbandono dei progetti siano le seguenti:
+				\begin{itemize}
+				\item Requisiti incompleti
+				\item Volatilità di specifiche e requisiti
+				\end{itemize}
 			
 			
 			%casi d'uso: si parte da 0 nella numerazione
-			\paragraph*{Casi d'uso}
-			Ogni caso d'uso dovrà presentare i seguenti campi:
+			\paragraph*{Struttura del documento}
+			Il documento prodotto dalla presente attivit\`a consister\`a essenzialmente in un elenco dei \textit{casi d'uso} individuati,
+                        ognuno avente la seguente forma:
 				\begin{itemize}
 				\item Codice identificativo
 					\paragraph Precisazione sul punto corrente
@@ -49,103 +68,90 @@
 						nell'Analisi dei Requisiti, in particolare:
 							\begin{itemize}
 							\item [] \textbf{B} = Ambito Backend  %backend va precisato
-							\item [] \textbf{G} = Ambito utente Guest %guest va precisato
-							\item [] \textbf{S} = Ambito SuperAdmin %superadmin va precisato
+							\item [] \textbf{G} = Ambito Utente Guest %guest va precisato
+							\item [] \textbf{S} = Ambito Super-Admin %superadmin va precisato
 							\item [] \textbf{O} = Ambito Owner %owner va precisato
 							\item [] \textbf{E} = Ambito Editor %editor va precisato
 							\end{itemize}
 						\end{itemize}
 				\item Titolo
 				\item Diagramma UML
-				\item Attori
+				\item Attori primari
 				\item Scopo e descrizione
 				\item Precondizioni
 				\item Postcondizione
-				\item Flusso principale
+				\item Scenario principale
+                                \item Estensioni
 				\end{itemize}
-			
-			
-			
-			%Obiettivi: slide 36 di ING_REQUISITI
-			
-			
-			%slide 40 di ING_REQUISITI: Cause di abbandono
-			La stesura di un' Analisi dei Requisiti di qualità è cruciale, infatti
-			da un rapporto dello Standish Group del 1995 si nota come due delle cause primarie
-			di abbandono dei progetti siano le seguenti:
-				\begin{itemize}
-				\item Requisiti incompleti
-				\item Volatilità di specifiche e requisiti
-				\end{itemize}
-			
 			
 			%parlare degli STRUMENTI utilizzati
 			\paragraph*{Strumenti}
-				Per i diagrammi dei casi d'uso verrà utilizzato il linguaggio UML 2.0,
-				in quanto noto a tutti i membri del gruppo dato che è stato trattato a lezione
-				di Ingegneria del Software.
-				Si scelto inoltre di adottare l'editor online \emph{draw.io}.
+				Per i diagrammi dei casi d'uso verrà utilizzato il linguaggio \textit{UML 2.0},
+				noto a tutti i membri del gruppo in quanto trattato durante il corso
+				di \textit{Ingegneria del Software}.
+				Si \`e scelto inoltre di adottare l'editor UML \textit{Astah}.   %riferimento per astah
 			
 			
 		\subsubsection{Attività di Progettazione}
 			\paragraph*{Scopo}
-		 %Costruzione a priori perseguendo la correttezza per costruzione
-		 %invece che inseguendo la correttezza per correzione     <<  slide PROGETTAZIONE
-			 %Procede dall'analisi dei requisiti   <<  slide PROGETTAZIONE	
-		     La presente attivit\`a, che procede dall'Analisi dei Requisiti, persegue l'obiettivo
-		     della correttezza per costruzione, permettendo di ridurre al minimo le attività di correzione
-		     in fase di codifica.
-		     
-                     I documenti elaborati in questa fase sono:
-                     \begin{itemize}
-                       \item Specifica Tecnica, nel quale vengono individuate le componenti macroscopiche del sistema,
-                         procedura utile per la paralellizazione del lavoro
-                       \item Definizione di Prodotto, documento che fornisce al \textit{programmatore} tutte le direttive necessarie per la codifica
-                     \end{itemize}
-		 
-		 %si useranno Design patterns
-		 Per la progettazione al livello di sistema si useranno \textit{Design pattern}
+		     %Costruzione a priori perseguendo la correttezza per costruzione
+		     %invece che inseguendo la correttezza per correzione     <<  slide PROGETTAZIONE
+		     %Procede dall'analisi dei requisiti   <<  slide PROGETTAZIONE	
+		        La presente attivit\`a, che procede dall'Analisi dei Requisiti, persegue l'obiettivo
+		        della correttezza del prodotto per costruzione, permettendo di ridurre al minimo le attività di correzione
+		        in fase di codifica.
+                        I documenti elaborati in questa fase sono:
+                        \begin{itemize}
+                        \item \textbf{Specifica Tecnica}, nel quale vengono individuate le componenti macroscopiche del sistema,
+                          divisione utile per la parallelizzazione del lavoro successivo
+                        \item \textbf{Definizione di Prodotto}, documento che fornisce al \textit{programmatore} tutte le direttive necessarie per la codifica
+                        \end{itemize}
+		    %si useranno Design patterns
+		        Per la progettazione a livello di sistema si utilizzeranno \textit{design pattern} architetturali globalmente affermati.
                  
-                 %diagrammi UML prodotti
-                      \paragraph*{Diagrammi prodotti}
-                      Nel corso di questa fase verranno prodotti quattro tipi di diagrammi \textit{UML}:
-                      \begin{itemize}
+                        %diagrammi UML prodotti
+                        \paragraph*{Diagrammi prodotti}
+                        Nel corso di questa fase verranno prodotti quattro tipi di diagrammi \textit{UML}:
+                        \begin{itemize}
                         \item Diagrammi delle classi
                         \item Diagrammi dei \textit{package}
                         \item Diagrammi di sequenza
                         \item Diagrammi di attivit\`a
-                      \end{itemize}
-                      I tipi di diagrammi sopra elencati andranno a far parte dei due documenti menzionati sopra.
+                        \end{itemize}
+                        I tipi di diagrammi sopra elencati andranno a far parte dei due documenti menzionati sopra.
 		
 		 
 		 %parlare degli STRUMENTI utilizzati
-		 \paragraph*{Strumenti}
-		 Anche per questa attivit\`a, i membri del gruppo hanno stabilito l'utilizzo del linguaggio UML 2.0 per i seguenti
-		 diagrammi:
-		 \begin{itemize}
-			\item Diagrammi delle package  
-			\item Diagrammi delle classi	
-			\item Diagrammi di attivit\`a
-		\end{itemize}
+		        \paragraph*{Strumenti}
+		        Come per l'attivit\`a precedente e per gli stessi motivi, i membri del gruppo hanno stabilito l'utilizzo del linguaggio UML 2.0 per i seguenti
+		        diagrammi:
+		        \begin{itemize}
+			\item Diagrammi dei \textit{package}  
+			\item Diagrammi delle \textit{classi}	
+			\item Diagrammi di \textit{attivit\`a}
+		        \end{itemize}
 			 
 		
 		\subsubsection{Attività di Codifica}
                 %citare https://github.com/RisingStack/node-style-guide/blob/master/README.md
-                \subsubsection{Scopo}
-                La presente attività ha come scopo la traduzione in codice sorgente dei risultati ottenuti in sede
-                di \textit{Specifica Tecnica} e \textit{Definizione di Prodotto}.
-                In sede di \textit{Revisione dei Requisiti} non è ancora possibile fornire una visione precisa sulla presente attivit\`a,
+                \paragraph*{Scopo}
+                La presente attivit\`a ha come scopo la traduzione in codice sorgente dei risultati ottenuti in sede
+                di \textit{Specifica Tecnica} e di \textit{Definizione di Prodotto}.
+                In sede di \textit{Revisione dei Requisiti} non \`e ancora possibile fornire una visione precisa sulla presente attivit\`a,
                 tuttavia per il codice \textit{Javascript} %termine da glossario
-                è stata stabilita l'adozione delle direttive presenti in \href{https://github.com/RisingStack/node-style-guide/blob/master/README.md}{RisingStack Node.js Style Guide()}
+                si \`e stabilito di adottare le direttive presenti in \href{https://github.com/RisingStack/node-style-guide/blob/master/README.md}{RisingStack Node.js Style Guide()}.
      		%<<< slide 22/30 di ANALISI_STATICA
-		%L’adozione di standard di codifica e di sottoinsiemi del linguaggio appropriati deve essere coerente con la scelta dei metodi di verifica adottati   
-		%La verifica solo retrospettiva (a valle dello sviluppo) è spesso inadeguata
-		%Il costo di rilevazione e correzione di un errore è tanto maggiore quanto più avanzato è lo stadio di sviluppo        
-
-		%<<< slide 30/30 di ANALISI_STATICA
-		%L’efficacia dei metodi di analisi è funzione della qualità di strutturazione del codice
+                Questa scelta \`e strettamente correlata alla teoria sull'\textit{Analisi Statica}, in quanto da essa si evince che:
+                \begin{itemize}
+		  \item L’adozione di \textit{standard} di codifica 
+                    deve essere coerente con la scelta dei metodi di verifica adottati,         
+                     %<<< slide 30/30 di ANALISI_STATICA
+		  \item L’efficacia dei metodi di analisi statica \`e strettamente correlata alla qualit\`a di strutturazione del codice
+                \end{itemize}
                 
-                
-                
-		
-	\subsection{Processo di Fornitura}
+                \paragraph*{Strumenti}
+                Il gruppo ha stabilito di utilizzare i seguenti editor:
+                \begin{itemize}
+                  \item \textbf{emacs} per la stesura del codice \textit{LaTeX}    %https://www.gnu.org/software/emacs/
+                  \item \textbf{WebStorm} per il codice \textit{Javascript}       %https://www.jetbrains.com/webstorm/
+                \end{itemize}
