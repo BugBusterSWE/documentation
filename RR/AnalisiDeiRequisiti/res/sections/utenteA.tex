@@ -141,6 +141,43 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
       \end{longtable}
       \egroup
     \end{center}
+\subsubsection{UC-U13}
+
+        \begin{figure}[H]
+          \begin{center}
+            \includegraphics[width=12cm]{res/img/UCUtenti/UCUtenteA/UC-U13-Operazioni sugli Utenti/UC-U13-Operazioni sugli Utenti}
+          \caption{UC-U9.1 - Modifica indirizzo email}
+          \end{center} 
+        \end{figure}
+        
+        %Tabella 
+        \begin{center}
+          \bgroup
+          \def\arraystretch{1.8}     
+          \begin{longtable}{  p{3.5cm} | p{8cm} } 
+            
+            \hline
+            \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U13 - Operazioni sugli utenti}} \\ 
+            \hline
+            
+            \textbf{Attori Primari} & Amministratore, Proprietario \\ 
+            \textbf{Scopo e Descrizione} & L’utente visualizza la pagina per apportare modifiche sugli utenti. Può decidere di: operare su una specifica DSL accedendo all'editor e inserire, rimuovere, invitare un nuovo utente.\\ 
+            
+            \textbf{Precondizioni}  & L'amministratore e il proprietario dispongono dei permessi. \\ 
+            
+            \textbf{Postcondizioni} & Le (eventuali) modifiche sono state apportate. \\ 
+            \textbf{Flusso Principale} & 1. L'utente può eseguire operazioni su una specifica DSL (UC-U13.1)  
+            
+            2. L'utente può invitare un nuovo utente(Questa funzionalità è presente solo per il proprietario) (UC-U13.4)
+            
+            3. L'utente può rimuovere un utente(Questa funzionalità è presente solo per il proprietario) (UC-U13.5)
+            
+            4. L'utente può aggiungere un nuovo utente(Questa funzionalità è presente solo per il proprietario) (UC-U13.6)\\
+            \textbf{Estensioni} & Nessuna \\
+            \textbf{Inclusioni} & Nessuna
+          \end{longtable}
+          \egroup
+        \end{center}
 \subsubsection{UC-U13.6.2}
 
     %Tabella 
