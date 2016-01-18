@@ -13,6 +13,9 @@ Tale processo deve garanire:
   Per produrre la documentazione è stato deciso di utilizzare il linguaggio di markup \Hologo{LaTeX}. Tale scelta è stata effettuata per permettere un miglior versionamento dei file e per permettere una formattazione dei testi uniforme.
   Per la realizzazione di ciascun documento \`e stato realizzato un modello .tex reperibile presso il repository dei documenti (.......)
 
+  \subsection{Linguaggio da utilizzare}
+  Nel capitolato viene espresso l'obbligo di documentazione in lingua inglese. Il Responsabile di progetto, dopo aver contattato il Committente, ha specificato che la richiesta di documentare in tale lingua è obbligatoria solo per i documenti rivolti all'utente finale. Si è decdiso quindi che la documentazione interna (Norme di Progetto) e la documentazione non riservata all'utente finale (Analisi dei Requisiti, Piano di Qualifica e Piano di Progetto) venga stesa utilizzando la lingua italiana  
+  
   \subsection{Struttura comune dei documenti}
   \subsubsection{Prima pagina}
   La prima pagina del documento deve sempre seguire questa struttura:
@@ -149,3 +152,23 @@ In cui:
 \item L'indice z indica la modifica del documento da parte di un redatore.
 \end{itemize}
 
+\subsection{Glossario}
+Al fine di evitare ambiguita o fraintendimenti dovuti all'utilizzo di alcune terminologie deve essere sempre tenuto aggiornato il Glossario. Tale operazione deve essere fatta dagli autori della documentazione che, evidenziato un vocabolo critico, deve provvedere ad inserirlo nel Glossario fornendone una breve descrizione. I vocaboli presenti possono essere utilizzati durante la stesura degli altri documenti riportandoli con la sintassi \glossary{Nome Elemento}
+
+\section{Processo di verifica}
+\subsection{Scopo del processo}
+Tale processo ha come obiettivo confermare che ogni componente prodotta durante il ciclo di vita del software sia conforme agli standard decisi dal Team.
+\subsection{Risultati attesi dal processo}
+Il processo di verifica deve raggiungere questi obiettivi:
+\begin{itemize}
+\item Individuazione e applicazione di una strategia per la verifica;
+\item I criteri che la verifica deve accertare.
+\end{itemize}
+
+\subsection{Verifica dei documenti}
+A seguito viene descritto il processo di verifica per la documentazione affinchè i Verificatori possano garantire che al termine del loro lavoro, la documentazione prodotta sia conforme alla struttura decisa dal Team e che sia corretta rispetto alle regole decise dal Gruppo e dal punto di vista sintattico per il linguaggio deciso per il documento.
+
+\subsubsection{Procedura}
+\begin{itemize}
+\item \textbf{Controllo sintattico e del periodo}: Un passaggio preliminare per la correzione di errori grammaticali viene garantito dal software GNU Aspell in fase di pre-commit. Questo passaggio non risulta sufficiente a garantire la correttezza del documento perciò in fase di verifica, il Verificatore incaricato deve sottoporre il documento in esame ad un walkthrough per evidenziare e correggere errori sintattici;
+  \item \textbf{Rispetto delle norme di progetto}: Ciascun Verificatore incaricato di esaminare la correttezza di un documento deve sottoporre il testo ad una verifica delle convenzioni stilistiche e di forma scelte dal gruppo e reperibili nel documento Norme di Progetto pi\`u aggiornato presente nel repository dei documenti.
