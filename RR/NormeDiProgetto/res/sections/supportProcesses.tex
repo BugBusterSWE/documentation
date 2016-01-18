@@ -10,7 +10,7 @@ Tale processo deve garanire:
 \item l'individuazione degli standard a cui tali documenti devono aderire
 \end{itemize}
   \subsection{Procedura}
-  Per produrre la documentazione si è stabilito di utilizzare il linguaggio di \textit{markup} \Hologo{LaTeX}. Tale scelta è stata effettuata per permettere un miglior versionamento dei file e una formattazione uniforme dei testi.
+  Per produrre la documentazione si è stabilito di utilizzare il \glossaryItem{linguaggio di markup} \Hologo{LaTeX}. Tale scelta è stata effettuata per permettere un miglior versionamento dei file e una formattazione uniforme dei testi.
   Per la realizzazione di ciascun documento \`e stato allestito un modello .tex reperibile presso il repository dei documenti (.......)
 
   \subsection{Linguaggio da utilizzare}
@@ -58,7 +58,7 @@ Tale processo deve garanire:
   Ciascuna pagina inoltre deve riportare anche un pi\'e di pagina con le seguenti informazioni:
   \beign{itemize}
   \item Nome e versione del documento;
-  \item Pagina corrente del documento nel formato 'X di N' dove X è il numero di pagina corrente ed N è il numero di pagine totali.
+  \item Pagina corrente del documento nel formato X di N dove X è il numero di pagina corrente ed N è il numero di pagine totali.
   \end{itemize}
 
 \subsection{Norme tipografiche}
@@ -129,9 +129,12 @@ In questa sezione vengono trattate le convenzioni riguardanti tipografia, ortogr
 \subsection{Componenti grafiche}
 \subsubsection{Tabelle}
 Per ciascuna tabella presente nei documenti deve essere fornita una didascalia in cui viene riportato un numero identificativo per garantirne la tracciabilità all'interno del documento.
+
 \subsubsection{Immagini}
-Le immagini presenti nei documenti devono essere nel formato \textit{SVG}. %glossario
-In questo modo si ottiene una qualità superiore dell'immagine, anche nel caso di ridimensionamento. Qualora le immagini non possano essere salvate in formato vettoriale, si preferisce il formato \textit{JPEG}.
+Le immagini presenti nei documenti devono essere nel formato \glossaryItem{PNG}.
+
+%Le immagini presenti nei documenti devono essere nel formato \textit{SVG}. %glossario
+%In questo modo si ottiene una qualità superiore dell'immagine, anche nel caso di ridimensionamento. Qualora le immagini non possano essere salvate in formato vettoriale, si preferisce il formato \textit{JPEG}.
 
 \subsection{Classificazione dei documenti}
 \subsubsection{Documenti informali}
@@ -154,7 +157,7 @@ In cui:
 \end{itemize}
 
 \subsection{Glossario}
-Al fine di evitare ambiguita o fraintendimenti dovuti all'utilizzo di alcune terminologie deve essere sempre tenuto aggiornato il Glossario. Tale operazione deve essere fatta dagli autori della documentazione che, evidenziato un vocabolo critico, deve provvedere ad inserirlo nel Glossario fornendone una breve descrizione. I vocaboli presenti possono essere utilizzati durante la stesura degli altri documenti riportandoli con la sintassi \glossary{Nome Elemento}
+Al fine di evitare ambiguita o fraintendimenti dovuti all'utilizzo di alcune terminologie deve essere sempre tenuto aggiornato il Glossario. Tale operazione deve essere fatta dagli autori della documentazione che, evidenziato un vocabolo critico, deve provvedere ad inserirlo nel Glossario fornendone una breve descrizione. I vocaboli presenti possono essere utilizzati durante la stesura degli altri documenti riportandoli con la sintassi \glossaryItem{Nome Elemento}
 
 \section{Processo di verifica}
 \subsection{Scopo del processo}
@@ -171,7 +174,7 @@ A seguito viene descritto il processo di verifica per la documentazione affinch�
 
 \subsubsection{Procedura}
 \begin{itemize}
-\item \textbf{Controllo sintattico e del periodo}: Un passaggio preliminare per la correzione di errori grammaticali viene garantito dal software GNU Aspell in fase di pre-commit. Questo passaggio non risulta sufficiente a garantire la correttezza del documento perciò, in fase di verifica, il Verificatore incaricato deve sottoporre il documento in esame ad un walkthrough per evidenziare e correggere errori sintattici;
+\item \textbf{Controllo sintattico e del periodo}: Un passaggio preliminare per la correzione di errori grammaticali viene garantito dal software \textit{GNU Aspell} in fase di pre-commit. Questo passaggio non risulta sufficiente a garantire la correttezza del documento perciò, in fase di verifica, il Verificatore incaricato deve sottoporre il documento in esame ad un walkthrough per evidenziare e correggere errori sintattici;
   \item \textbf{Rispetto delle norme di progetto}: Ciascun Verificatore incaricato di esaminare la correttezza di un documento deve sottoporre il testo ad una verifica delle convenzioni stilistiche e di forma scelte dal gruppo e reperibili nel documento Norme di Progetto pi\`u aggiornato presente nel repository dei documenti;
   \item \textbf{Verifica dei vocaboli del Glossario}: Il Verificatore deve controllare la presenza effettiva dei termini marcati all'interno del Glossario e che questi presentino anche la loro descrizione;
   \item \textbf{In caso di anomalie}: Il Verificatore deve aprire una issue nel repository dei documenti dando riferimenti al redatore su come procedere per apportare le modifiche necessarie al documento esaminato.
