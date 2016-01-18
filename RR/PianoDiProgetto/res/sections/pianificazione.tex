@@ -4,7 +4,7 @@ Questa fase ha inizio il 2015-12-17 e termina il 2016-01-18 prima della data di 
 
 I ruoli attivi sono quelli di \textit{Amministratore}, \textit{Analista}, \textit{Responsabile}, \textit{Progettista} e \textit{Verificatore}.
 
-La suddivisione in task \`e incentrata sull'\textit{Analisi dei requisiti}. Per tale motivo viene redatta e verificata subito la parte del \textit{Piano di progetto} relativo all'analisi. Aderendo al mododello incrementale: alla conclusione di ogni una stesura segue un periodo di verificia per avere una baseline non corrotta.
+La suddivisione in task \`e incentrata sull'\textit{Analisi dei requisiti}. Per tale motivo viene redatta e verificata subito la parte del \textit{Piano di progetto} relativo all'analisi. Aderendo al mododello incrementale: alla conclusione di ogni una stesura segue un periodo di verifica per avere una baseline non corrotta.
 \subsubsection{Diagramma di Gantt}
 
 \subsubsection{Ripartizione ore}
@@ -136,47 +136,40 @@ Infine, il \textit{Programmatore} affiancato dal \textit{Progettista} avr\`a il 
 	
 	\textbf{AM1} & \textbf{Norme di progetto} \\
 	\cline{3-4}
-	AM1.1 & Incremento & Amministratore1 & 6\\ 
-    & & Amministratore2 & 4\\
-    & & Amministratore3 & 5 \\
-    & & Responsabile & 4 \\
+	AM1.1 & Incremento & Amministratore & 4\\ 
     \cline{3-4}
-	AM1.2 & Verifica & Verificatore &  5\\
+	AM1.2 & Verifica & Verificatore & 2\\
 	
 	\hline
 	\textbf{AM2} & \textbf{Analisi dei Requisiti} \\
 	\cline{3-4}
-	AM2.1 & Increment & Analista1 & 2\\ 
-    & & Analista2 & 3\\
-    & & Analista3 & 3 \\
-    \cline{3-4}
-	AM2.2 & Verifica & Verificatore &  2\\
-	
-	\hline
-	\textbf{AM3} & \textbf{Piano di Progetto} \\
-	\cline{3-4}
-	AM3.1 & Incremento & Amministratore & 5\\ 
-    & & Responsabile & 5\\
-    \cline{3-4}
-	AM3.2 & Verifica AN & Verificatore &  2\\
+	AM2.1 & Incremento & Analista & 4\\ 
+        \cline{3-4}
+	AM2.2 & Verifica & Verificatore & 2\\
 
         \hline
-	\textbf{AM4} & \textbf{Piano di Qualifica} \\
+	\textbf{AM3} & \textbf{Piano di Qualifica} \\
 	\cline{3-4}
-	AM4.1 & Incremento & Amministratore & 5\\ 
-        & & Responsabile & 5\\
+	AM3.1 & Incremento & & Verificatore & 1\\
+        & & Progettista & 3\\
         \cline{3-4}
-	AM4.2 & Verifica AN & Verificatore &  2\\
-
+	AM3.2 & Verifica & Verificatore & 2\\
+        
+	\hline
+	\textbf{AM4} & \textbf{Piano di Progetto} \\
+	\cline{3-4}
+	AM4.1 & Incremento & Responsabile & 1\\ 
+        & & Amministratore & 3\\
+    \cline{3-4}
+	AM4.2 & Verifica AN & Verificatore & 2\\
 
 	\hline
 	\textbf{AM5} & \textbf{Glossario} \\
 	\cline{3-4}
-	AM5.1 & Incremento & Analista1 & 11\\ 
-    & & Analista2 & 10\\
-    & & Analista3 & 11\\
-    \cline{3-4}
-	AM5.2 & Verifica & Verificatore &  6\\
+	AM5.1 & Incremento & Amministratore & 2\\ 
+        & & Amministratore & 2\\
+        \cline{3-4}
+	AM5.2 & Verifica & Verificatore & 2\\
 
         \hline
 	\end{tabular*}
@@ -207,56 +200,77 @@ Si suddivide la progettazione architetturale in progettazione dei requisiti fond
 	
 	\textbf{PA1} & \textbf{Norme di progetto} \\
 	\cline{3-4}
-	PA1.1 & Incremento & Amministratore1 & 6\\ 
-    & & Amministratore2 & 4\\
-    & & Amministratore3 & 5 \\
-    & & Responsabile & 4 \\
-    \cline{3-4}
-	PA1.2 & Verifica & Verificatore &  5\\
+	PA1.1 & Incremento & Amministratore & 2\\ 
+        \cline{3-4}
+	PA1.2 & Verifica & Verificatore & 1\\
 	
 	\hline
 	\textbf{PA2} & \textbf{Piano di Qualifica} \\
 	\cline{3-4}
-	PA2.1 & Increment & Analista1 & 2\\ 
-    & & Analista2 & 3\\
-    & & Analista3 & 3 \\
-    \cline{3-4}
-	PA2.2 & Verifica & Verificatore &  2\\
+	PA2.1 & Incremento & Verificatore & 3\\ 
+        & & Verificatore & 2\\
+        & & Progettista & 2 \\
+        \cline{3-4}
+	PA2.2 & Verifica & Verificatore &  3\\
 	
 	\hline
 	\textbf{PA3} & \textbf{Piano di progetto} \\
 	\cline{3-4}
-	PA3.1 & Incremento & Amministratore & 5\\ 
-    & & Responsabile & 5\\
-    \cline{3-4}
-	PA3.2 & Verifica AN & Verificatore &  2\\
+	PA3.1 & Incremento & Responsabile & 2\\ 
+        \cline{3-4}
+	PA3.2 & Verifica & Verificatore & 1\\
 
 	\hline
 	\textbf{PA4} & \textbf{Glossario} \\
 	\cline{3-4}
-	PA4.1 & Incremento & Analista1 & 11\\ 
-    & & Analista2 & 10\\
-    & & Analista3 & 11\\
-    \cline{3-4}
-	PA4.2 & Verifica & Verificatore &  6\\
+	PA4.1 & Incremento & Amministratore & 3\\ 
+        & & Amministratore & 3\\
+        \cline{3-4}
+	PA4.2 & Verifica & Verificatore & 2\\
+        & & Verificatore & 2\\
 
         \hline
-        \textbf{PA5} & \textbf{Specifica Tecnica} \\
+        \textbf{PA5} & \textbf{Analisi Requisiti}
+        \cline{3-4}
+        PA5.1 & Incremento & Analista & 3\\
+        \cline{3-4}
+        PA5.2 & Verifica & Verificatore & 2\\
+        & & Verificatore & 2\\
+        
+        \hline
+        \textbf{PA6} & \textbf{Specifica Tecnica} \\
 	\cline{3-4}
-	PA5.1 & Progettazione requisiti fondamentali e desiderabili & Progettista & 9\\ 
-        & & Verificatore & 3 \\
+	PA6.1 & Progettazione requisiti fondamentali e desiderabili & Progettista & 20\\ 
+        & & Progettista & 20\\
+        & & Progettista & 20\\
         \cline{3-4}
-	PA5.2 & Verifica requisiti fondamentali e desiderabili & Verificatore &  4\\
+	PA6.2 & Verifica requisiti fondamentali e desiderabili & Verificatore & 14\\
+        & & Verificatore & 14\\
         \cline{3-4}
-	PA5.3 & Stesura requisiti fondamentali e desiderabili & Verificatore &  4\\
+	PA6.3 & Stesura requisiti fondamentali e desiderabili & Progettista & 5\\
+        & & Progettista & 4\\
+        & & Progettista & 4\\
+        & & Progettista & 4\\
         \cline{3-4}
-	PA5.4 & Progettazione requisiti opzionali & Verificatore &  4\\
+	PA6.4 & Progettazione requisiti opzionali & Progettista & 8\\
+        & & Progettista & 9\\
+        & & Progettista & 9\\
+        & & Progettista & 9\\
         \cline{3-4}
-	PA5.5 & Stesura requisiti opzionali & Verificatore &  4\\
+	PA6.5 & Stesura requisiti opzionali & Progettista & 3\\
+        & & Progettista & 3\\
+        & & Progettista & 2\\
+        & & Progettista & 2\\
         \cline{3-4}
-	PA5.6 & Tracciamento & Verificatore &  4\\
+	PA6.6 & Tracciamento & Progettista & 5\\
+        & & Progettista & 5\\
+        & & Progettista & 5\\
+        & & Progettista & 5\\
         \cline{3-4}
-	PA5.7 & Verifica & Verificatore &  4\\
+	PA6.7 & Verifica & Verificatore & 8\\
+        & & Verificatore & 8\\
+        & & Verificatore & 7\\
+        & & Verificatore & 7\\
         \hline
 	\end{tabular*}
         \caption{Allocazione risorse, periodo di Progettazione Architetturale}
@@ -286,68 +300,78 @@ Oltre gli incrementi presenti per mantenere aggioranti i documenti in questa fas
 	
 	\textbf{PDC1} & \textbf{Norme di progetto} \\
 	\cline{3-4}
-	PA1.1 & Incremento & Amministratore1 & 6\\ 
-    & & Amministratore2 & 4\\
-    & & Amministratore3 & 5 \\
-    & & Responsabile & 4 \\
-    \cline{3-4}
-	PDC1.2 & Verifica & Verificatore &  5\\
+	PA1.1 & Incremento & Amministratore & 3\\ 
+        \cline{3-4}
+	PDC1.2 & Verifica & Verificatore & 1\\
 	
 	\hline
 	\textbf{PDC2} & \textbf{Piano di Qualifica} \\
 	\cline{3-4}
-	PDC2.1 & Increment & Analista1 & 2\\ 
-    & & Analista2 & 3\\
-    & & Analista3 & 3 \\
-    \cline{3-4}
-	PDC2.2 & Verifica & Verificatore &  2\\
+	PDC2.1 & Incremento & Progettista & 4\\
+        & & Verificatore & 2\\
+        \cline{3-4}
+	PDC2.2 & Verifica & Verificatore & 2\\
 	
 	\hline
 	\textbf{PDC3}  & \textbf{Piano di progetto} \\
 	\cline{3-4}
-	PDC3.1 & Incremento & Amministratore & 5\\ 
-    & & Responsabile & 5\\
-    \cline{3-4}
-	PDC3.2 & Verifica AN & Verificatore &  2\\
+	PDC3.1 & Incremento & Responsabile & 3\\ 
+        \cline{3-4}
+	PDC3.2 & Verifica & Verificatore & 2\\
 
 	\hline
 	\textbf{PDC4} & \textbf{Glossario} \\
 	\cline{3-4}
-	PDC4.1 & Incremento & Analista1 & 11\\ 
-    & & Analista2 & 10\\
-    & & Analista3 & 11\\
-    \cline{3-4}
-	PDC4.2 & Verifica & Verificatore &  6\\
+	PDC4.1 & Incremento & Amministratore & 3\\ 
+        \cline{3-4}
+	PDC4.2 & Verifica & Verificatore & 1\\
 
         \hline
-        \textbf{PDC5} & \textbf{Progettazione di Dettaglio} \\
-	\cline{3-4}
-	PDC5.1 & Progettazione requisiti fondamentali e desiderabili & Progettista & 9\\ 
-        & & Verificatore & 3 \\
+        \textbf{PDC5} & \textbf{Analisi dei Requisiti}
         \cline{3-4}
-	PDC5.2 & Verifica requisiti fondamentali e desiderabili & Verificatore &  4\\
+        PDC5.1 & Incremento & Analista & 3\\
         \cline{3-4}
-	PDC5.3 & Progettazione requisiti opzionali & Verificatore &  4\\
-        \cline{3-4}
-	PDC5.4 & Verifica requisiti opzionali & Verificatore &  4\\
+        PDC5.2 & Verifica & Verificatore 2\\
 
         \hline
-        \textbf{PDC6} & \textbf{Definizione di Prodotto} \\
-	\cline{3-4}
-	PDC6.1 & Stesura & Progettista & 9\\ 
-        & & Verificatore & 3 \\
-        \cline{3-4}
-        PDC6.2 & Verifica & Progettista & 9\\
+        \textbf{PDC6} & \textbf{Preparazione Ambiente di lavoro} & Amministratore & 10\\
 
         \hline
-        \textbf{PDC7} & \textbf{Codifica} \\
+        \textbf{PDC7} & \textbf{Progettazione di Dettaglio} \\
 	\cline{3-4}
-	PDC7.1 & Codifica requisiti fondamentali e desiderabili & Progettista & 9\\ 
-        & & Verificatore & 3 \\
+	PDC5.1 & Progettazione requisiti fondamentali e desiderabili & Progettista & 30\\ 
+        & & Progettista & 9\\
+        & & Progettista & 9\\
         \cline{3-4}
-	PDC7.2 & Codifica requisiti opzionali & Verificatore & 4\\
+	PDC5.2 & Verifica requisiti fondamentali e desiderabili & Verificatore & 10\\
         \cline{3-4}
-        PDC7.3 & Verifica & Verificatore & 8\\
+	PDC5.3 & Progettazione requisiti opzionali & Progettista & 15\\
+        & & Progettista & 13\\
+        \cline{3-4}
+	PDC5.4 & Verifica requisiti opzionali & Verificatore & 5\\
+
+        \hline
+        \textbf{PDC7} & \textbf{Definizione di Prodotto} \\
+	\cline{3-4}
+	PDC7.1 & Stesura & Progettista & 40\\ 
+        \cline{3-4}
+        PDC7.2 & Verifica & Verifica & 7\\
+        & & Verifica & 4\\
+
+        \hline
+        \textbf{PDC8} & \textbf{Codifica} \\
+	\cline{3-4}
+	PDC8.1 & Codifica requisiti fondamentali e desiderabili & Programmatore & 32\\
+        & & Programmatore & 31\\
+        & & Programmatore & 8\\
+        & & Programmatore & 8\\
+        & & Programmatore & 8\\
+        \cline{3-4}
+	PDC8.2 & Codifica requisiti opzionali & Programmatore & 20\\
+        & & Programmatore & 19\\
+        & & Programmatore & 19\\
+        \cline{3-4}
+        PDC8.3 & Verifica & Verificatore & 9\\
 
         \hline
         \end{tabular*}
@@ -365,10 +389,10 @@ Oltre gli incrementi presenti per mantenere aggioranti i documenti in questa fas
         \hline
 	\textbf{PDC8} & \textbf{Manuale Utente} \\
 	\cline{3-4}
-	PDC8.1 & Stesura & Progettista & 9\\ 
-        & & Verificatore & 3 \\
+	PDC8.1 & Stesura & Amministratore & 35\\ 
         \cline{3-4}
-	PDC8.2 & Verifica & Verificatore & 4\\
+	PDC8.2 & Verifica & Verificatore & 7\\
+        & & Verificatore & 4\\
         \hline
 	\end{tabular*}
         \caption{Allocazione risorse, periodo di Progettazione di Dettaglio e Codifica}
