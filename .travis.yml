@@ -19,6 +19,7 @@ install:
 script:
     - cd RR/NormeDiProgetto/ && latexmk -pdflatex='pdflatex -interaction=nonstopmode' -pdf && cd -
     - cd RR/StudioDiFattibilita/ && latexmk -pdflatex='pdflatex -interaction=nonstopmode' -pdf && cd -
+    - cd RR/PianoDiQualifica/ && latexmk -pdflatex='pdflatex -interaction=nonstopmode' -pdf && cd -
 
 after_success:
     - git config --global user.email ${GIT_EMAIL}
@@ -31,6 +32,8 @@ after_success:
     - mv main.pdf NormeDiProgetto_lastest.pdf
     - cp -f $HOME/build/BugBusterSWE/documentation/RR/StudioDiFattibilita/main.pdf .
     - mv main.pdf StudioDiFattibilita_lastest.pdf
-    - git add NormeDiProgetto_lastest.pdf StudioDiFattibilita_lastest.pdf
+    - cp -f $HOME/build/BugBusterSWE/documentation/RR/PianoDiQualifica/main.pdf .
+    - mv main.pdf PianoDiQualifica_lastest.pdf
+    - git add NormeDiProgetto_lastest.pdf StudioDiFattibilita_lastest.pdf PianoDiQualifica_lastest.pdf 
     - git commit -m "Travis CI autocommit from travis build ${TRAVIS_BUILD_NUMBER}"
     - git push -f origin gh-pages
