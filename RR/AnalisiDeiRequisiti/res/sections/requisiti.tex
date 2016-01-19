@@ -1,0 +1,46 @@
+\section{Requisiti }
+I requisiti funzionali, prestazionali, di qualità e di vincolo individuati sono riportati nelle seguenti tabelle. Ogni requisito è identificato da un codice univoco.
+Viene inoltre indicato se si tratta di un requisito fondamentale, desiderabile o facoltativo, una sua descrizione e il caso d'uso da cui è stato individuato. 
+
+Ogni requisito è identificato da un codice, che segue il seguente formalismo:
+\begin{center}
+		\code{R\{X\}\{Y\} \{Gerarchia\}}
+\end{center}
+
+Dove:
+\begin{itemize}
+ \item \textbf{X} corrisponde alla tipologia del requisito e può assumere i seguenti valori:
+		\begin{itemize}
+		 \item[] \textbf{1} = Funzionale;
+		 \item[] \textbf{2} = Prestazionale;
+		 \item[] \textbf{3} = Di Qualità;
+		 \item[] \textbf{4} = Vincolo.
+		\end{itemize}
+
+ \item \textbf{Y} corrisponde alla priorità del requisito e può assumere i seguenti valori:
+		\begin{itemize}
+		 \item[] \textbf{O} = Obbligatorio
+		 \item[] \textbf{D} = Desiderabile
+		 \item[] \textbf{F} = Facoltativo o Opzionale
+		\end{itemize}
+
+ \item \textbf{Gerarchia} identifica la relazione gerarchica che c'è tra i requisiti di uno stesso tipo. C'è quindi una struttura gerarchica per ogni tipologia di requisito.
+\end{itemize}
+
+\subsection{Requisiti funzionali}
+
+		%Tabella 
+			\begin{center}
+			\bgroup
+			\def\arraystretch{1.8}
+			\begin{longtable}{ | l | p{2cm} | p{5cm} | p{1.7cm} |}
+		        \hline
+			\cellcolor[gray]{0.9} \textbf{Requisito} & \cellcolor[gray]{0.9} \textbf{Tipologia} 
+			& \cellcolor[gray]{0.9} \textbf{Descrizione} & \cellcolor[gray]{0.9} \textbf{Fonti} \\ \hline
+      
+				R1O X & Funzionale \newline  Obbligatorio  & Il sistema permette all'utente non autenticato di autenticarsi tramite la visualizzazione di una pagina web, la quale conterrà al suo interno i campi di testo necessari. &  Capitolato \newline  UCU 1 \newline  \\ \hline      
+
+			\caption{Requisiti funzionali}
+			\end{longtable}
+			\egroup
+			\end{center}  
