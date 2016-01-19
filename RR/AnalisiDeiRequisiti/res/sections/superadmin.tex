@@ -11,7 +11,7 @@ Di seguito vengono elencati i casi d'uso per il super-admin.
     \begin{figure}[h]
       \begin{center}
         \includegraphics[width=12cm]{res/img/UCSuperadmin/UCS0.png}
-      \caption{UC-S 0 - Gestione aziende}
+      \caption{UC-S 0 - Gestione \textit{Company}}
       \end{center} 
     \end{figure}    
     
@@ -29,9 +29,12 @@ Di seguito vengono elencati i casi d'uso per il super-admin.
         \textbf{Precondizioni}  & l'applicazione mostra al superadmin la pagina di gestione delle aziende  \\ 
         
         \textbf{Postcondizioni} & l'applicazione mostra al superadmin la pagina di gestione delle aziende \\ 
-        \textbf{Scenario principale} & 1. il superadmin pu\`o creare una nuova azienda (UC-S 0.0) \newline 2. il superadmin può visualizzare il dettaglio di un'azienda 
-        \newline 3. il superadmin pu\`o modificare i dati di un'azienda \newline \\ 
-        \textbf{Scenari alternativi} & 1. fallisce l'inserimento di una nuova azienda \newline 2. fallisce la modifica dei dati di un'azienda \\
+        \textbf{Scenario principale} & 1. il superadmin pu\`o creare una nuova \textit{Company} (UC-S 0.0) 
+        
+        2. il superadmin può visualizzare il dettaglio di una \textit{Company} 
+        
+        3. il superadmin pu\`o modificare i dati di una \textit{Company}  \\ 
+        \textbf{Scenari alternativi} & 1. fallisce l'inserimento di una nuova \textit{Company} \newline 2. fallisce la modifica dei dati di una \textit{Company} \\
       \end{longtable}
       \egroup
     \end{center}
@@ -40,7 +43,7 @@ Di seguito vengono elencati i casi d'uso per il super-admin.
     \begin{figure}[h]
       \begin{center}
         \includegraphics[width=12cm]{res/img/UCSuperadmin/UCS0.0.png}
-      \caption{UC-S 0.0 - Creazione di una nuova azienda}
+      \caption{UC-S 0.0 - Creazione di una nuova \textit{Company}}
       \end{center} 
     \end{figure}    
     
@@ -57,10 +60,15 @@ Di seguito vengono elencati i casi d'uso per il super-admin.
         \textbf{Attori Primari} & Super-Admin\\  
         \textbf{Precondizioni}  & il sistema fornisce al super-admin un form di registrazione  \\ 
         
-        \textbf{Postcondizioni} & il sistema ha aggiunto una nuova azienda e il suo owner \\ 
-        \textbf{Scenario principale} & 1. l'attore inserisce il nome dell'azienda \newline 2. l'attore inserisce la propria email
-        \newline 3. l'attore inserisce una password \newline \\ 
-        \textbf{Scenari alternativi} & 1. l'azienda esiste gi\`a  \newline 2. la email inserita \`e gi\`a stata usata \\
+        \textbf{Postcondizioni} & il sistema ha aggiunto una nuova \textit{Company} e il suo owner \\ 
+        \textbf{Scenario principale} & 1. l'attore inserisce il nome della \textit{Company}
+        
+        2. l'attore inserisce la propria email
+        
+        3. l'attore inserisce una password \\ 
+        \textbf{Estensioni} & 1. la \textit{Company} esiste gi\`a 
+        
+        2. la email inserita \`e gi\`a stata usata \\
       \end{longtable}
       \egroup
     \end{center}
@@ -80,17 +88,23 @@ Di seguito vengono elencati i casi d'uso per il super-admin.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-S 0.1 - Visualizzazione dettaglio di azienda}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-S 0.1 - Visualizzazione dettaglio di \textit{Company}}} \\ 
         \hline
         
         \textbf{Attori Primari} & Super-Admin\\  
-        \textbf{Precondizioni}  & l'applicazione mette diposizione la pagina di visualizzazione dei dettagli di un'azienda  \\ 
+        \textbf{Precondizioni}  & l'applicazione mette diposizione la pagina di visualizzazione dei dettagli di una \textit{Company}  \\ 
         
-        \textbf{Postcondizioni} & l'applicazione ha reindirizzato il super-admin alla pagina di visualizzazione dell'azienda
+        \textbf{Postcondizioni} & l'applicazione ha reindirizzato il super-admin alla pagina di visualizzazione della \textit{Company}
 		     		     selezionata \\ 
-        \textbf{Scenario principale} & 1. il superadmin può modificare i dati dell'azienda (UC-S 0.1.0) \newline 2. il superadmin può aggiungere un nuovo utente dell'azienda
-        \newline 3. il superadmin può visualizzare uno specifico utente dell'azienda \newline 4. il super-admin pu\`o modificare i dati di uno specifico utente \\ 
-        \textbf{Scenari alternativi} & 1. fallimento della modifica dei dati dell'azienda   \newline 2. fallimento dell'aggiunta di un nuovo utente \newline
+        \textbf{Scenario principale} & 1. il superadmin può modificare i dati della \textit{Company}(UC-S 0.1.0)  
+        
+        2. il superadmin può aggiungere un nuovo utente dell'azienda
+        
+        3. il superadmin può visualizzare uno specifico utente dell'azienda \newline 4. il super-admin pu\`o modificare i dati di uno specifico utente \\ 
+        \textbf{Scenari alternativi} & 1. fallimento della modifica dei dati dell'azienda
+        
+        2. fallimento dell'aggiunta di un nuovo utente
+        
         3. fallimento modifica utente \\
       \end{longtable}
       \egroup
@@ -174,9 +188,10 @@ Di seguito vengono elencati i casi d'uso per il super-admin.
         \textbf{Precondizioni}  & il sistema presenta la pagina di visualizzazione in dettaglio di un utente  \\ 
         
         \textbf{Postcondizioni} & il sistema ha ricevuto l'input dall'attore  \\ 
-         \textbf{Scenario principale} & 1. il super-admin pu\`o modificare il profilo dell'utente  \newline 2. il super-admin pu\`o eliminare l'utente  \\
+         \textbf{Scenario principale} & 1. il super-admin pu\`o modificare il profilo dell'utente 
+         
+         2. il super-admin pu\`o eliminare l'utente  \\
         
-         \textbf{Scenari alternativi} & 1.   \newline 2.  \\
      
      \end{longtable}
       \egroup
@@ -207,7 +222,8 @@ Di seguito vengono elencati i casi d'uso per il super-admin.
         \textbf{Precondizioni}  & l'applicazione predispone un form di modifica del profilo \\ 
         
         \textbf{Postcondizioni} & il sistema ha modificato il profilo dell'utente sulla base di quanto inserito dall'attore \\ 
-         \textbf{Scenario principale} & 1. l'utente ha la possibilit\`a di modificare la tipologia dell'utente  \newline 2.   \\
+         \textbf{Scenario principale} & 1. l'utente ha la possibilit\`a di modificare la tipologia dell'utente 
+        
         
          \textbf{Scenari alternativi} & 1. uscita dalla pagina senza salvataggio delle modifiche  \\
      
@@ -242,8 +258,9 @@ Di seguito vengono elencati i casi d'uso per il super-admin.
         \textbf{Precondizioni}  & l'applicazione richiede la conferma dell'eliminazione dell'utente \\ 
         
         \textbf{Postcondizioni} & il sistema ha seguito le indicazioni dell'attore \\ 
-         \textbf{Scenario principale} & 1. l'attore ha la possibilit\`a di confermare l'eliminazione  \newline 2. l'attore
-         ha la possibilit\`a ritirare la richiesta di eliminazione \\
+         \textbf{Scenario principale} & 1. l'attore ha la possibilit\`a di confermare l'eliminazione 
+         
+         2. l'attore ha la possibilit\`a ritirare la richiesta di eliminazione \\
         
          \textbf{Scenari alternativi} & 1. uscita dalla pagina senza salvataggio delle modifiche  \\
      
@@ -277,8 +294,9 @@ vedere in un elenco quelli già presenti e poterne vedere le informazioni in det
         \textbf{Precondizioni}  & il super-admin entra nella pagina di gestione dei super-admin\\ 
         
         \textbf{Postcondizioni} & il sistema ha preso in carico le indicazioni dell'attore \\ 
-         \textbf{Scenario principale} & 1. l'attore ha la possibilit\`a di aggiungere un nuovo super-admin  \newline 2. l'attore
-         ha la possibilit\`a di visualizzare in dettaglio il profilo di un super-admin esistente \\
+         \textbf{Scenario principale} & 1. l'attore ha la possibilit\`a di aggiungere un nuovo super-admin  
+         
+         2. l'attore ha la possibilit\`a di visualizzare in dettaglio il profilo di un super-admin esistente \\
         
          \textbf{Scenari alternativi} & 1. fallimento dell'inserimento di un super-admin  \\
      
@@ -311,11 +329,13 @@ vedere in un elenco quelli già presenti e poterne vedere le informazioni in det
       
         \textbf{Precondizioni}  &  l'attore entra nella pagina di creazione di un nuovo super-admin 
         \textbf{Postcondizioni} & il sistema ha creato un nuovo super-admin nel database \\ 
-         \textbf{Scenario principale} & 1. l'attore inserisce l'email dell'utente da registrare  \newline 2. l'attore
-         aggiunge una password nell'apposito campo\\
+         \textbf{Scenario principale} & 1. l'attore inserisce l'email dell'utente da registrare  
+         
+         2. l'attore aggiunge una password nell'apposito campo\\
         
-         \textbf{Scenari alternativi} & 1. l'attore esce dalla pagina  \newline 2. l'email inserita \`e gi\`a presente
-         nel database e il nuovo super-admin non pu\`o essere creato\\ 
+         \textbf{Scenari alternativi} & 1. l'attore esce dalla pagina  
+         
+         2. l'email inserita \`e gi\`a presente nel database e il nuovo super-admin non pu\`o essere creato\\ 
      
      \end{longtable}
       \egroup
