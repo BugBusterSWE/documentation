@@ -31,7 +31,7 @@ Di seguito vengono elencati i casi d'uso per l'utente non autenticato.
         Il sistema mostra all’utente non autenticato la pagina principale fornendo le funzionalità di autenticazione, registrazione e recupero password. \\ 
         
         \textbf{Postcondizioni} & L'applicazione ha eseguito le richieste dell'utente. \\ 
-        \textbf{Flusso Principale} & 1. L'utente non autenticato crea un account per la propria azienda e si registra a MaaS come proprietario (UC-U1)
+        \textbf{Scenario principale} & 1. L'utente non autenticato crea un account per la propria azienda e si registra a MaaS come proprietario (UC-U1)
         
 2. L'utente non autenticato riceve un invito per registrarsi a MaaS (UC-U3)
 
@@ -43,7 +43,6 @@ Di seguito vengono elencati i casi d'uso per l'utente non autenticato.
 2. L'utente non autenticato visualizza un messaggio d'errore durante il login dovuto all'inserimento di un indirizzo email/password non corretti (UC-U5)
 
 3. L'utente non autenticato visualizza un messaggio d'errore durante la procedura di recupero password (UC-U7)  \\
-        \textbf{Inclusioni} & Nessuna \\ 
       \end{longtable}
       \egroup
     \end{center} 
@@ -70,18 +69,16 @@ Di seguito vengono elencati i casi d'uso per l'utente non autenticato.
         \textbf{Attori Primari} & Utente non autenticato \\ 
         \textbf{Scopo e Descrizione} & L'utente non autenticato può creare un account per la propria azienda, inserendo i seguenti dati: nome dell'azienda, indirizzo email del proprietario e una password. \\ 
         
-        \textbf{Precondizioni}  & L’applicazione MaaS è funzionante e pronta all’utilizzo.
+        \textbf{Precondizioni}  & L’applicazione è funzionante e pronta all’utilizzo.
         
 Il sistema presenta all'utente la pagina di registrazione per un'azienda. \\ 
         
         \textbf{Postcondizioni} & Un'azienda è stata registrata presso MaaS e l'utente non autenticato ne è divenuto il proprietario. \\ 
-        \textbf{Flusso Principale} & 1. L'utente non autenticato inserisce il nome della propria azienda (UC-U1.1)
+        \textbf{Scenario principale} & 1. L'utente non autenticato inserisce il nome della propria azienda (UC-U1.1)
         
 2. L'utente non autenticato inserisce il proprio indirizzo email (UC-U1.2)
 
 3. L'utente non autenticato inserisce una password e l'azienda viene registrata (UC-U1.3) \\
-        \textbf{Estensioni} & Nessuna  \\
-        \textbf{Inclusioni} & Nessuna \\
       \end{longtable}
       \egroup
     \end{center} 
@@ -105,9 +102,6 @@ Il sistema presenta all'utente la pagina di registrazione per un'azienda. \\
 L'utente non autenticato ha visualizzato la pagina per la creazione dell'account di un'azienda. \\ 
         
         \textbf{Postcondizioni} & Il campo testo \`e stato compilato con il contenuto richiesto. \\ 
-        \textbf{Flusso Principale} & Nessuno \\
-        \textbf{Estensioni} & Nessuna \\
-        \textbf{Inclusioni} & Nessuna \\
       \end{longtable}
       \egroup
     \end{center} 
@@ -132,9 +126,6 @@ L'utente non autenticato ha visualizzato la pagina per la creazione dell'account
         di un'azienda.  \\ 
         
         \textbf{Postcondizioni} & Il campo testo \`e stato compilato con il contenuto richiesto. \\ 
-        \textbf{Flusso Principale} & Nessuno \\
-        \textbf{Estensioni} & Nessuna \\
-        \textbf{Inclusioni} & Nessuna \\ 
       \end{longtable}
       \egroup
     \end{center} 
@@ -144,7 +135,7 @@ L'utente non autenticato ha visualizzato la pagina per la creazione dell'account
     \begin{figure}[H]
       \begin{center}
         \includegraphics[width=12cm]{res/img/UCUtenti/UCUtenteNA/UC-U1.3-Registrazione Azienda/UC-U1.3-RegistrazioneAzienda}
-      \caption{UC-U1.3 - Registrazione Azienda}
+      \caption{UC-U1.3 - Inserimento della password}
       \end{center} 
     \end{figure}    
     
@@ -155,7 +146,7 @@ L'utente non autenticato ha visualizzato la pagina per la creazione dell'account
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U1.3 - Registrazione Azienda}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U1.3 - Inserimento della password}} \\ 
         \hline
         
         \textbf{Attori Primari} & Utente non autenticato \\ 
@@ -164,13 +155,13 @@ L'utente non autenticato ha visualizzato la pagina per la creazione dell'account
         \textbf{Precondizioni}  & L'utente non autenticato ha visualizzato la pagina per la registrazione dell'azienda. \\ 
         
         \textbf{Postcondizioni} & L'utente non autenticato ha inserito una password associata all'account dell'azienda. \\ 
-        \textbf{Flusso Principale} & 1. L'utente non autenticato inserisce una password associata all'account dell'azienda. \\
-        \textbf{Estensioni} & Nessuna \\
-        \textbf{Inclusioni} & Nessuna \\
+        \textbf{Scenario principale} & 1. L'utente non autenticato inserisce una password associata all'account dell'azienda. \\
       \end{longtable}
       \egroup
     \end{center}
-    
+
+%TODO: scrivere UC-2
+
 \subsubsection{UC-U3}
 
     \begin{figure}[H]
@@ -193,12 +184,10 @@ L'utente non autenticato ha visualizzato la pagina per la creazione dell'account
         \textbf{Attori Primari} & Utente non autenticato \\ 
         \textbf{Scopo e Descrizione} & L'utente non autenticato può registrarsi su MaaS. \\ 
         
-        \textbf{Precondizioni}  & L'utente non autenticato è in possesso di un account valido. \\ 
+        \textbf{Precondizioni}  & L'utente ha ricevuto un invito dalla \textit{Company}. \\ 
         
         \textbf{Postcondizioni} & L'utente non autenticato ha creato un account valido presso MaaS e può effettuare il login. \\ 
-        \textbf{Flusso Principale} & 1. L'utente inserisce la propria password (UC-U3.1) \\
-        \textbf{Estensioni} & Nessuna \\
-        \textbf{Inclusioni} & Nessuna \\
+        \textbf{Scenario principale} & 1. L'utente inserisce la propria password (UC-U3.1) \\
       \end{longtable}
       \egroup
     \end{center} 
@@ -228,11 +217,9 @@ L'utente non autenticato ha visualizzato la pagina per la creazione dell'account
         \textbf{Precondizioni}  & L'utente non autenticato è in possesso di un account valido. \\ 
         
         \textbf{Postcondizioni} & L'utente non autenticato diventa un utente autenticato e ha accesso alle funzionalità di MaaS concesse dalla tipologia di account (ruolo). \\ 
-        \textbf{Flusso Principale} & 1. L'utente non autenticato inserisce il proprio indirizzo email (UC-U4.1)
+        \textbf{Scenario principale} & 1. L'utente non autenticato inserisce il proprio indirizzo email (UC-U4.1)
         
 2. L'utente non autenticato inserisce la password (UC-U4.2) \\
-        \textbf{Estensioni} & Nessuna \\
-        \textbf{Inclusioni} & Nessuna \\
       \end{longtable}
       \egroup
     \end{center} 
@@ -255,9 +242,6 @@ L'utente non autenticato ha visualizzato la pagina per la creazione dell'account
         \textbf{Precondizioni}  & L'utente non autenticato è in possesso di un account valido. \\ 
         
         \textbf{Postcondizioni} & Il campo testo \`e stato compilato con il contenuto richiesto. \\ 
-        \textbf{Flusso Principale} & Nessuno \\
-        \textbf{Estensioni} & Nessuna \\
-        \textbf{Inclusioni} & Nessuna \\
       \end{longtable}
       \egroup
     \end{center} 
@@ -280,9 +264,6 @@ L'utente non autenticato ha visualizzato la pagina per la creazione dell'account
         \textbf{Precondizioni}  & L'utente non autenticato è in possesso di un account valido. \\ 
         
         \textbf{Postcondizioni} & Il campo testo \`e stato compilato con il contenuto richiesto. \\
-        \textbf{Flusso Principale} & Nessuno \\
-        \textbf{Estensioni} & Nessuna \\
-        \textbf{Inclusioni} & Nessuna \\ 
       \end{longtable}
       \egroup
     \end{center} 
@@ -309,14 +290,12 @@ L'utente non autenticato ha visualizzato la pagina per la creazione dell'account
         \textbf{Attori Primari} & Utente non autenticato \\ 
         \textbf{Scopo e Descrizione} & L'utente non autenticato effettua la procedura per il recupero della password, inserendo il proprio indirizzo email e il codice segreto che gli verrà inviato. \\ 
         
-        \textbf{Precondizioni}  & L'utente non autenticato è in possesso di un account. \\ 
+        \textbf{Precondizioni}  & L'utente possiede un account all'interno dell'applicazione. \\ 
         
         \textbf{Postcondizioni} & L'utente non autenticato ha ottenuto una nuova password per accedere a MaaS. \\ 
-        \textbf{Flusso Principale} & 1. L'utente non autenticato inserisce il proprio indirizzo email (UC-U4.1)
+        \textbf{Scenario principale} & 1. L'utente non autenticato inserisce il proprio indirizzo email (UC-U4.1)
         
 2. L'utente non autenticato inserisce il codice segreto ricevuto (UC-U4.2) \\
-        \textbf{Estensioni} & Nessuna \\
-        \textbf{Inclusioni} & Nessuna \\
       \end{longtable}
       \egroup
     \end{center} 
@@ -339,9 +318,6 @@ L'utente non autenticato ha visualizzato la pagina per la creazione dell'account
         \textbf{Precondizioni}  & L'utente non autenticato  ha inserito correttamente il proprio indirizzo email durante la procedura di recupero della password. \\ 
         
         \textbf{Postcondizioni} & Il campo testo \`e stato compilato con il contenuto richiesto. \\ 
-        \textbf{Flusso Principale} & Nessuno \\
-        \textbf{Estensioni} & Nessuna \\
-        \textbf{Inclusioni} & Nessuna \\
       \end{longtable}
       \egroup
     \end{center} 
