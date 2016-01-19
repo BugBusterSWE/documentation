@@ -6,6 +6,10 @@ I ruoli attivi sono quelli di \textit{Amministratore}, \textit{Analista}, \texti
 
 La suddivisione in task \`e incentrata sull'\textit{Analisi dei requisiti}. Per tale motivo viene redatta e verificata prima di tutto la parte del \textit{Piano di progetto} relativa all'analisi. Seguendo la prassi del modello incrementale, alla conclusione di ogni stesura segue un periodo di verifica per ottenere una baseline non corrotta.
 \subsubsection{Diagramma di Gantt}
+\begin{figure}[ht!]
+\includegraphics[width=1\textwidth]{res/img/PianoDiProgetto/Analisi.png}
+\caption{Diagramma di Gantt, periodo di Analisi}
+\end{figure}
 
 \subsubsection{Ripartizione ore}
 
@@ -21,8 +25,8 @@ La suddivisione in task \`e incentrata sull'\textit{Analisi dei requisiti}. Per 
 	
 	\textbf{AN1} & \textbf{Norme di progetto} \\
 	\cline{3-4}
-	AN1.1 & Stesura & Amministratore1 & 8\\ 
-    & & Amministratore2 & 6\\
+	AN1.1 & Stesura & Amministratore & 8\\ 
+    & & Amministratore & 6\\
     & & Responsabile & 4 \\
     \cline{3-4}
 	AN1.2 & Verifica & Verificatore & 4\\
@@ -30,8 +34,8 @@ La suddivisione in task \`e incentrata sull'\textit{Analisi dei requisiti}. Per 
 	\hline
 	\textbf{AN2} & \textbf{Studio di fattibilità} \\
 	\cline{3-4}
-	AN2.1 & Stesura & Analista1 & 3\\ 
-    & & Analista2 & 3\\
+	AN2.1 & Stesura & Analista & 3\\ 
+    & & Analista & 3\\
     \cline{3-4}
 	AN2.2 & Verifica & Verificatore &  1\\
 	
@@ -39,8 +43,8 @@ La suddivisione in task \`e incentrata sull'\textit{Analisi dei requisiti}. Per 
 	\textbf{AN3} & \textbf{Piano di progetto} \\
 	\cline{3-4}
 	AN3.1 & Stesura AN & Amministratore & 2\\ 
-    & & Responsabile1 & 8\\
-    & & Responsabile2 & 8\\
+    & & Responsabile & 8\\
+    & & Responsabile & 8\\
     \cline{3-4}
 	AN3.2 & Verifica AN & Verificatore & 3\\
 	\cline{3-4}
@@ -76,8 +80,8 @@ La suddivisione in task \`e incentrata sull'\textit{Analisi dei requisiti}. Per 
         \textbf{AN5} & \textbf{Piano di qualifica} \\
 	\cline{3-4}
 	AN5.1 & Stesura & Progettista & 4\\
-	& & Progettista & 4
-        & & Verificatore & 3 \\
+	& & Progettista & 4\\
+        & & Verificatore & 3\\
         \cline{3-4}
 	AN5.2 & Verifica & Verificatore1 & 4\\
 	& & Verificatore2 & 2\\
@@ -96,9 +100,9 @@ La suddivisione in task \`e incentrata sull'\textit{Analisi dei requisiti}. Per 
 	\hline
 	\textbf{AN6} & \textbf{Glossario} \\
 	\cline{3-4}
-	AN6.1 & Stesura & \\%Progettista & 9\\
+	AN6.1 & Stesura & Amministratore & 5\\
         \cline{3-4}
-	AN6.2 & Verifica & Verificatore & 3 \\
+	AN6.2 & Verifica & Verificatore & 3\\
 	
 	\hline
 	\end{tabular*}
@@ -120,6 +124,11 @@ Il \textit{Validatore} dovr\`a occuparsi di verificare la qualit\`a di quest'ult
 Infine, il \textit{Programmatore} affiancato dal \textit{Progettista} avr\`a il compito di allestire l'ambiente di lavoro.
 
 \subsubsection{Diagramma di Gantt}
+\begin{figure}[ht!]
+\includegraphics[width=1\textwidth]{res/img/PianoDiProgetto/AnalisiMiglioramenti.png}
+\caption{Diagramma di Gantt, periodo di Analisi Miglioramenti}
+\end{figure}
+
 
 \subsubsection{Ripartizione ore}
 
@@ -149,7 +158,7 @@ Infine, il \textit{Programmatore} affiancato dal \textit{Progettista} avr\`a il 
         \hline
 	\textbf{AM3} & \textbf{Piano di Qualifica} \\
 	\cline{3-4}
-	AM3.1 & Incremento & & Verificatore & 1\\
+	AM3.1 & Incremento & Verificatore & 1\\
         & & Progettista & 3\\
         \cline{3-4}
 	AM3.2 & Verifica & Verificatore & 2\\
@@ -172,7 +181,7 @@ Infine, il \textit{Programmatore} affiancato dal \textit{Progettista} avr\`a il 
 
         \hline
 	\end{tabular*}
-        \caption{Allocazione risorse, periodo di Progettazione Architetturale}
+        \caption{Allocazione risorse, periodi di Analisi Miglioramenti}
 	\end{table}
 
 \newpage
@@ -185,6 +194,10 @@ I ruoli attivi sono quelli di \textit{Amministratore}, \textit{Analista}, \texti
 Si suddivide la progettazione architetturale in progettazione dei requisiti fondamentali e desiderabili e progettazione dei requisiti opzionali. Inoltre, rimane attiva la stesura e verifica dei documenti scritti precedentemente, per tutte le aggiunte e i miglioramenti emersi durante la progettazione architetturale.
 
 \subsubsection{Diagramma di Gantt}
+\begin{figure}[ht!]
+  \includegraphics[width=1\textwidth]{res/img/PianoDiProgetto/ProgettazioneArchitetturale}
+  \caption{Diagramma di Gantt, periodo Progettazione Architetturale}
+\end{figure}
 
 \subsubsection{Ripartizione ore}
 \begin{table}[H]
@@ -229,7 +242,7 @@ Si suddivide la progettazione architetturale in progettazione dei requisiti fond
         & & Verificatore & 2\\
 
         \hline
-        \textbf{PA5} & \textbf{Analisi Requisiti}
+        \textbf{PA5} & \textbf{Analisi Requisiti}\\
         \cline{3-4}
         PA5.1 & Incremento & Analista & 3\\
         \cline{3-4}
@@ -255,7 +268,23 @@ Si suddivide la progettazione architetturale in progettazione dei requisiti fond
         & & Progettista & 9\\
         & & Progettista & 9\\
         & & Progettista & 9\\
-        \cline{3-4}
+
+        \hline
+        \end{tabular*}
+\end{table}
+
+\newpage
+
+\begin{table}[H]
+	\centering
+	\begin{tabular*}{1\textwidth}{ @{\extracolsep{\fill} } l l l c  }
+	\hline
+	\multicolumn{1}{c}{\textbf{Id}} & 
+	\multicolumn{1}{c}{\textbf{Nome}} & 
+	\multicolumn{1}{c}{\textbf{Ruolo}}& 
+	\multicolumn{1}{c}{\textbf{Ore}} \\
+
+        \hline
 	PA6.5 & Stesura requisiti opzionali & Progettista & 3\\
         & & Progettista & 3\\
         & & Progettista & 2\\
@@ -285,6 +314,10 @@ I ruoli attivi in questa fase sono quello di \textit{Amministratore}, \textit{Pr
 Oltre agli incrementi presenti per mantenere aggiornati i documenti, in questa fase si pianifica la realizzazione del prodotto completo che soddisfi i requisiti fondamentali, desiderabili ed opzionali. Una volta avvenuta la verifica su tutta la progettazione, si effettua la codifica e la stesura del manuale dell'utente da consegnare al proponente come verifica dei requisiti richiesti e la qualit\`a fissata.
 
 \subsubsection{Diagramma di Gantt}
+\begin{figure}[ht!]
+  \includegraphics[width=1\textwidth]{res/img/PianoDiProgetto/ProgettazioneDettaglioECodifica.png}
+  \caption{Diagramma di Gantt, periodo Progettazione di Dettaglio e Codifica}
+\end{figure}
 
 \subsubsection{Ripartizione orario}
 \begin{table}[H]
@@ -326,7 +359,7 @@ Oltre agli incrementi presenti per mantenere aggiornati i documenti, in questa f
 	PDC4.2 & Verifica & Verificatore & 1\\
 
         \hline
-        \textbf{PDC5} & \textbf{Analisi dei Requisiti}
+        \textbf{PDC5} & \textbf{Analisi dei Requisiti}\\
         \cline{3-4}
         PDC5.1 & Incremento & Analista & 3\\
         \cline{3-4}
@@ -358,6 +391,20 @@ Oltre agli incrementi presenti per mantenere aggiornati i documenti, in questa f
         & & Verifica & 4\\
 
         \hline
+        \end{tabular*}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular*}{1\textwidth}{ @{\extracolsep{\fill} } l l l c  }
+	\hline
+	\multicolumn{1}{c}{\textbf{Id}} & 
+	\multicolumn{1}{c}{\textbf{Nome}} & 
+	\multicolumn{1}{c}{\textbf{Ruolo}}& 
+	\multicolumn{1}{c}{\textbf{Ore}} \\
+
+        \hline
+
         \textbf{PDC8} & \textbf{Codifica} \\
 	\cline{3-4}
 	PDC8.1 & Codifica requisiti fondamentali e desiderabili & Programmatore & 32\\
@@ -371,20 +418,6 @@ Oltre agli incrementi presenti per mantenere aggiornati i documenti, in questa f
         & & Programmatore & 19\\
         \cline{3-4}
         PDC8.3 & Verifica & Verificatore & 9\\
-
-        \hline
-        \end{tabular*}
-\end{table}
-
-\begin{table}[H]
-	\centering
-	\begin{tabular*}{1\textwidth}{ @{\extracolsep{\fill} } l l l c  }
-	\hline
-	\multicolumn{1}{c}{\textbf{Id}} & 
-	\multicolumn{1}{c}{\textbf{Nome}} & 
-	\multicolumn{1}{c}{\textbf{Ruolo}}& 
-	\multicolumn{1}{c}{\textbf{Ore}} \\
-
         \hline
 	\textbf{PDC8} & \textbf{Manuale Utente} \\
 	\cline{3-4}
@@ -406,6 +439,10 @@ I ruoli attivi sono quello di \textit{Amministratore}, \textit{Progettista}, \te
 Con l'adozione del modello incrementale il risultato \`e un ultimo momento molto breve in cui eseguire i test di sistema e rilasciare il prodotto completo per il collaudo dell'RA. Nello stesso momento vengono redatte le ultime versioni dei documenti da rilasciare alla commissione e al committente.
 
 \subsubsection{Diagramma di Gantt}
+\begin{figure}[ht!]
+  \includegraphics[width=1\textwidth]{res/img/PianoDiProgetto/VerificaEValidazione.png}
+  \caption{Diagramma di Gantt, periodo di Verifica e Validazione}
+\end{figure}
 
 \subsubsection{Ripartizione orario}
 
@@ -470,5 +507,8 @@ Con l'adozione del modello incrementale il risultato \`e un ultimo momento molto
 
         \hline
 	\end{tabular*}
-        \caption{Allocazione risorse, periodo di Progettazione Architetturale}
+        \caption{Allocazione risorse, periodo di Verifica e Validazione}
 	\end{table}
+
+
+
