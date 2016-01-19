@@ -25,10 +25,11 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \textbf{Attori Primari} & Utente autenticato \\ 
         \textbf{Scopo e Descrizione} & L’utente autenticato può: modificare il proprio profilo, effettuare delle operazioni nella pagina Dashboard, effettuare delle operazioni di creazione/modifica/esecuzione del DSL (a seconda dei suoi permessi) e gestire altri utenti (quest'ultima funzionalità è riservata ad un ruolo superiore o uguale all'admin). \\ 
         
-        \textbf{Precondizioni}  & L’applicazione MaaS è funzionante e pronta all'uso. L'utente autenticato può accedere alla propria pagina Dashboard. \\ 
+        \textbf{Precondizioni}  & L’applicazione è funzionante e pronta all'uso. L'utente autenticato ha visualizzato la
+        pagina \textit{Dashboard}. \\ 
         
         \textbf{Postcondizioni} & L'applicazione ha eseguito le azioni richieste dall'utente. \\ 
-        \textbf{Flusso Principale} & 1. L'utente modifica il proprio profilo (UC-U9)
+        \textbf{Scenario principale} & 1. L'utente modifica il proprio profilo (UC-U9)
         
 2. L'utente effettua delle operazioni nella pagina Dashboard (UC-U15)
 
@@ -40,7 +41,6 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
 2. L'utente autenticato visualizza un messaggio di errore durante le operazioni effettuate sul DSL dovuto alla violazione dei permessi (UC-U12)
 
 3. L'utente autenticato visualizza un messaggio di errore durante le operazioni sugli utenti dovute alla violazione dei permessi (UC-u14) \\
-        \textbf{Inclusioni} & Nessuna \\
       \end{longtable}
       \egroup
     \end{center} 
@@ -68,10 +68,11 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \textbf{Attori Primari} & Utente autenticato \\ 
         \textbf{Scopo e Descrizione} & L'utente autenticato visualizza la pagina per apportare modifiche al profilo personale. Può decidere di: modificare l'indirizzo email, la password, o rimuovere il profilo. \\ 
         
-        \textbf{Precondizioni}  & L’applicazione MaaS è funzionante e pronta all'uso. L'utente autenticato può accedere alla propria pagina Dashboard. \\ 
+        \textbf{Precondizioni}  & L’applicazione è funzionante e pronta all'uso. L'utente autenticato ha visualizzato la
+        pagina \textit{Dashboard}. \\ 
         
         \textbf{Postcondizioni} & Le (eventuali) modifiche del profilo richieste dall'utente sono state apportate. \\ 
-        \textbf{Flusso Principale} & 1. L'utente autenticato modifica il proprio indirizzo email (UC-U9.1)
+        \textbf{Scenario principale} & 1. L'utente autenticato modifica il proprio indirizzo email (UC-U9.1)
         
 2. L'utente autenticato modifica la propria password (UC-U9.2)
 
@@ -79,7 +80,6 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
 
 4. Il proprietario rimuove la propria azienda (UC-U9.4) \\
         \textbf{Estensioni} & 1. L'utente visualizza un messaggio di errore durante la modifica dell'email dovuto all'inserimento di un indirizzo email già presente. (UC-U13.6.2) \\
-        \textbf{Inclusioni} & Nessuna \\
       \end{longtable}
       \egroup
     \end{center} 
@@ -110,9 +110,8 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina di modifica del profilo. \\ 
         
         \textbf{Postcondizioni} & L'utente autenticato dispone di un nuovo indirizzo email, che sostituisce il vecchio. \\ 
-        \textbf{Flusso Principale} & 1. L'utente autenticato inserisce un nuovo indirizzo email (UC-U9.1.1) \\
+        \textbf{Scenario principale} & 1. L'utente autenticato inserisce un nuovo indirizzo email (UC-U9.1.1) \\
         \textbf{Estensioni} & 1. L'utente autenticato visualizza un messaggio di errore causato dall'inserimento di un indirizzo email già presente (UC-U13.6.2) \\
-        \textbf{Inclusioni} & Nessuna
       \end{longtable}
       \egroup
     \end{center}
@@ -135,9 +134,7 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina di modifica del profilo. \\ 
         
         \textbf{Postcondizioni} & L'utente autenticato ha inserito un nuovo indirizzo email. \\ 
-        \textbf{Flusso Principale} & Nessuno \\
-        \textbf{Estensioni} & Nessuna \\
-        \textbf{Inclusioni} & Nessuna
+        \textbf{Scenario principale} & Nessuno \\
       \end{longtable}
       \egroup
     \end{center}
@@ -167,7 +164,7 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina di modifica del profilo. \\ 
         
         \textbf{Postcondizioni} & L'utente autenticato ha sostituito la password precedente con quella da lui inserita. \\ 
-        \textbf{Flusso Principale} & 1. L'utente autenticato inserisce la password corrente (UC-U9.2.1)
+        \textbf{Scenario principale} & 1. L'utente autenticato inserisce la password corrente (UC-U9.2.1)
         
 2. L'utente autenticato inserisce una nuova password (UC-U9.2.2)
 
@@ -175,7 +172,6 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \textbf{Estensioni} & 1. L'utente autenticato visualizza un messaggio di errore dovuto all'inserimento di una password errata (UC-U9.2.4)
         
 2. L'utente autenticato visualizza un messaggio di errore dovuto al reinserimento della nuova password (non corrisponde alla nuova password già inserita) (UC-U9.2.5) \\
-        \textbf{Inclusioni} & Nessuna
       \end{longtable}
       \egroup
     \end{center}
@@ -198,9 +194,7 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina di modifica del profilo. \\ 
         
         \textbf{Postcondizioni} & L'utente autenticato ha inserito la propria password. \\ 
-        \textbf{Flusso Principale} & Nessuno \\
-        \textbf{Estensioni} & Nessuna \\
-        \textbf{Inclusioni} & Nessuna
+        \textbf{Scenario principale} & Nessuno \\
       \end{longtable}
       \egroup
     \end{center}
@@ -222,9 +216,7 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina di modifica del profilo. \\ 
         
         \textbf{Postcondizioni} & L'utente autenticato ha inserito una nuova password. \\ 
-        \textbf{Flusso Principale} & Nessuno \\
-        \textbf{Estensioni} & Nessuna \\
-        \textbf{Inclusioni} & Nessuna
+        \textbf{Scenario principale} & Nessuno \\
       \end{longtable}
       \egroup
     \end{center}
@@ -247,9 +239,6 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \textbf{Precondizioni}  & L'utente autenticato ha precedentemente inserito la nuova password. (UC-U9.2.2) \\ 
         
         \textbf{Postcondizioni} & L'utente autenticato ha completato la procedura di cambiamento della password. La nuova password inserita ha sostituito la password precedente. \\ 
-        \textbf{Flusso Principale} & Nessuno \\
-        \textbf{Estensioni} & Nessuna \\
-        \textbf{Inclusioni} & Nessuna
       \end{longtable}
       \egroup
     \end{center}
@@ -272,9 +261,6 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \textbf{Precondizioni}  & L'utente autenticato ha inserito una password errata nella procedura di cambio della password. \\ 
         
         \textbf{Postcondizioni} & L'utente autenticato ha visualizzato il messaggio di errore. \\ 
-        \textbf{Flusso Principale} & Nessuno \\
-        \textbf{Estensioni} & Nessuna \\
-        \textbf{Inclusioni} & Nessuna
       \end{longtable}
       \egroup
     \end{center}
@@ -297,9 +283,6 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \textbf{Precondizioni}  & L'utente autenticato non ha reinserito correttamente la nuova password. \\ 
         
         \textbf{Postcondizioni} & L'utente autenticato ha visualizzato il messaggio di errore. \\ 
-        \textbf{Flusso Principale} & Nessuno \\
-        \textbf{Estensioni} & Nessuna \\
-        \textbf{Inclusioni} & Nessuna
       \end{longtable}
       \egroup
     \end{center}
@@ -321,9 +304,6 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \textbf{Precondizioni}  & L'utente autenticato ha acconsentito con la continuazione della procedura. \\ 
         
         \textbf{Postcondizioni} & L'utente autenticato visualizza un messaggio di avvenuta cancellazione e le sue credenziali vengono eliminate da MaaS. \\ 
-        \textbf{Flusso Principale} & Nessuno \\
-        \textbf{Estensioni} & Nessuna \\
-        \textbf{Inclusioni} & Nessuna
       \end{longtable}
       \egroup
     \end{center}
@@ -345,9 +325,6 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \textbf{Precondizioni}  & Il proprietario ha acconsentito con la continuazione della procedura. \\ 
         
         \textbf{Postcondizioni} & Il proprietario visualizza un messaggio di avvenuta cancellazione e tutti i dati e gli utenti registrati nell'azienda vengono cancellati da MaaS. \\ 
-        \textbf{Flusso Principale} & Nessuno \\
-        \textbf{Estensioni} & Nessuna \\
-        \textbf{Inclusioni} & Nessuna
       \end{longtable}
       \egroup
     \end{center}
@@ -376,7 +353,7 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
             \textbf{Precondizioni}  & L’applicazione MaaS è funzionante e pronta all'uso. Gli utenti possono accedere alla propria pagina Dashboard. \\ 
             
             \textbf{Postcondizioni} & Le (eventuali) modifiche sono state apportate. \\ 
-            \textbf{Flusso Principale} & 1. L'Ospite, il Membro, l'Admin e il Proprietario possono eseguire una specifica DSL (UC-U11.1)  
+            \textbf{Scenario principale} & 1. L'Ospite, il Membro, l'Admin e il Proprietario possono eseguire una specifica DSL (UC-U11.1)  
             
             2. Il Membro, l'Admin e il Proprietario possono modificare una specifica DSL (UC-U11.2)
             
@@ -384,7 +361,6 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
             
             4. Il Membro, l'Admin e il Proprietario possono leggere una specifica DSL (UC-U11.4)\\
             \textbf{Estensioni} & 1. L'utente visualizza un messaggio di errore in quanto non ha i permessi per operare sulla specifica DSL (UC-U12)  \\
-            \textbf{Inclusioni} & Nessuna
           \end{longtable}
           \egroup
         \end{center}
@@ -405,9 +381,8 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
                     \textbf{Precondizioni}  & L’applicazione MaaS è funzionante e pronta all'uso. Gli utenti possono accedere alla propria pagina Dashboard.\\ 
                     
                     \textbf{Postcondizioni} & L'utente visualizza il risultato della DSL \\ 
-                    \textbf{Flusso Principale} & Nessuno\\
+                    \textbf{Scenario principale} & Nessuno\\
                     \textbf{Estensioni} & 1. L'utente visualizza un messaggio di errore in quanto non ha i permessi per operare sulla specifica DSL (UC-U12)  \\
-                    \textbf{Inclusioni} & Nessuna
                   \end{longtable}
                   \egroup
                 \end{center}
@@ -428,9 +403,7 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
                     \textbf{Precondizioni}  & L’applicazione MaaS è funzionante e pronta all'uso. Gli utenti possono accedere alla propria pagina Dashboard. \\ 
                     
                     \textbf{Postcondizioni} & L'utente modifica la DSL \\ 
-                    \textbf{Flusso Principale} & Nessuno\\
                     \textbf{Estensioni} & 1. L'utente visualizza un messaggio di errore in quanto non ha i permessi per operare sulla specifica DSL (UC-U12)  \\
-                    \textbf{Inclusioni} & Nessuna
                   \end{longtable}
                   \egroup
                 \end{center}
@@ -451,9 +424,7 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
                     \textbf{Precondizioni}  & L’applicazione MaaS è funzionante e pronta all'uso. Gli utenti possono accedere alla propria pagina Dashboard.\\ 
                     
                     \textbf{Postcondizioni} & L'utente aggiunge la DSL a MaaS \\ 
-                    \textbf{Flusso Principale} & Nessuno\\
                     \textbf{Estensioni} & 1. L'utente visualizza un messaggio di errore in quanto non ha i permessi per operare sulla specifica DSL (UC-U12)  \\
-                    \textbf{Inclusioni} & Nessuna
                   \end{longtable}
                   \egroup
                 \end{center}
@@ -474,9 +445,7 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
                     \textbf{Precondizioni}  & L’applicazione MaaS è funzionante e pronta all'uso. Gli utenti possono accedere alla propria pagina Dashboard.\\ 
                     
                     \textbf{Postcondizioni} & L'utente legge la DSL \\ 
-                    \textbf{Flusso Principale} & Nessuno\\
                     \textbf{Estensioni} & 1. L'utente visualizza un messaggio di errore in quanto non ha i permessi per operare sulla specifica DSL (UC-U12)  \\
-                    \textbf{Inclusioni} & Nessuna
                   \end{longtable}
                   \egroup
                 \end{center}
@@ -498,9 +467,6 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
             \textbf{Precondizioni}  & L'utente autenticato ha eseguito un'operazione sul DSL di cui non dispone i permessi. \\ 
             
             \textbf{Postcondizioni} & L'utente autenticato ha visualizzato il messaggio di errore. \\ 
-            \textbf{Flusso Principale} & Nessuno \\
-            \textbf{Estensioni} & Nessuna  \\
-            \textbf{Inclusioni} & Nessuna
           \end{longtable}
           \egroup
         \end{center}
@@ -529,15 +495,13 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
             \textbf{Precondizioni}  & L'amministratore e il Proprietario dispongono dei permessi. \\ 
             
             \textbf{Postcondizioni} & Le (eventuali) modifiche sono state apportate. \\ 
-            \textbf{Flusso Principale} & 1. L'Amministratore e il Proprietario possono eseguire operazioni su una specifica DSL (UC-U13.1)  
+            \textbf{Scenario principale} & 1. L'Amministratore e il Proprietario possono eseguire operazioni su una specifica DSL (UC-U13.1)  
             
             2. Il Proprietario può invitare un nuovo utente (UC-U13.4)
             
             3. Il Proprietario può rimuovere un utente (UC-U13.5)
             
             4. Il Proprietario può aggiungere un nuovo utente (UC-U13.6)\\
-            \textbf{Estensioni} & Nessuna \\
-            \textbf{Inclusioni} & Nessuna
           \end{longtable}
           \egroup
         \end{center}
@@ -558,9 +522,6 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
                     \textbf{Precondizioni}  & La DSL selezzionata è già stata creata in precedenza. \\ 
                     
                     \textbf{Postcondizioni} & L'operazione sulla specifica DSL è apportata. \\ 
-                    \textbf{Flusso Principale} & Nessuno\\
-                    \textbf{Estensioni} & Nessuna \\
-                    \textbf{Inclusioni} & Nessuna
                   \end{longtable}
                   \egroup
                 \end{center}
@@ -581,9 +542,6 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
                     \textbf{Precondizioni}  & La DSL selezzionata è già stata creata in precedenza. \\ 
                     
                     \textbf{Postcondizioni} & La modifica sui permessi di una specifica DSL è apportata. \\ 
-                    \textbf{Flusso Principale} & Nessuno\\
-                    \textbf{Estensioni} & Nessuna \\
-                    \textbf{Inclusioni} & Nessuna
                   \end{longtable}
                   \egroup
                 \end{center}
@@ -604,9 +562,6 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
                     \textbf{Precondizioni}  & La DSL selezzionata è già stata creata in precedenza. \\ 
                     
                     \textbf{Postcondizioni} & La cancellazione del permesso sulla specifica DSL è apportata. \\ 
-                    \textbf{Flusso Principale} & Nessuno\\
-                    \textbf{Estensioni} & Nessuna \\
-                    \textbf{Inclusioni} & Nessuna
                   \end{longtable}
                   \egroup
                 \end{center}
@@ -627,9 +582,6 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
                     \textbf{Precondizioni}  & Nessuna. \\ 
                     
                     \textbf{Postcondizioni} & L'utente è stato invitato. \\ 
-                    \textbf{Flusso Principale} & Nessuno\\
-                    \textbf{Estensioni} & Nessuna \\
-                    \textbf{Inclusioni} & Nessuna
                   \end{longtable}
                   \egroup
                 \end{center}
@@ -650,9 +602,6 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
                     \textbf{Precondizioni}  & L'indirizzo email utente è presente in MaaS. \\ 
                     
                     \textbf{Postcondizioni} & L'utente è stato rimosso. \\ 
-                    \textbf{Flusso Principale} & Nessuno \\
-                    \textbf{Estensioni} & Nessuna \\
-                    \textbf{Inclusioni} & Nessuna
                   \end{longtable}
                   \egroup
                 \end{center}
@@ -674,9 +623,6 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \textbf{Precondizioni}  & L'utente autenticato ha inserito un indirizzo email già presente nel sistema. \\ 
         
         \textbf{Postcondizioni} & L'utente autenticato ha visualizzato il messaggio di errore. \\ 
-        \textbf{Flusso Principale} & Nessuno \\
-        \textbf{Estensioni} & Nessuna \\
-        \textbf{Inclusioni} & Nessuna
       \end{longtable}
       \egroup
     \end{center}
@@ -698,9 +644,6 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
             \textbf{Precondizioni}  & L'utente autenticato ha eseguito un'operazione su un utente di cui non dispone i permessi. \\ 
             
             \textbf{Postcondizioni} & L'utente autenticato ha visualizzato il messaggio di errore. \\ 
-            \textbf{Flusso Principale} & Nessuno \\
-            \textbf{Estensioni} & Nessuna  \\
-            \textbf{Inclusioni} & Nessuna
           \end{longtable}
           \egroup
         \end{center}
@@ -730,13 +673,11 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \textbf{Precondizioni}  & L'utente autenticato si trova nella pagina iniziale Dashboard. \\ 
         
         \textbf{Postcondizioni} & L'applicazione MaaS ha eseguito le operazioni richieste dall'utente. \\ 
-        \textbf{Flusso Principale} & 1. L'utente autenticato visualizza la Dashboard (UC-U15.1)
+        \textbf{Scenario principale} & 1. L'utente autenticato visualizza la Dashboard (UC-U15.1)
         
 2. L'utente autenticato effettua delle operazioni sulle righe (UC-U16)
 
 3. L'utente autenticato rimuove delle righe dalla Dashboard (UC-U15.2) \\
-        \textbf{Estensioni} & Nessuna \\
-        \textbf{Inclusioni} & Nessuna
       \end{longtable}
       \egroup
     \end{center}
@@ -759,9 +700,6 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \textbf{Precondizioni}  & L'utente si trova nella pagina Dashboard. \\ 
         
         \textbf{Postcondizioni} & L'utente ha visualizzato la propria Dashboard. \\ 
-        \textbf{Flusso Principale} & Nessuno \\
-        \textbf{Estensioni} & Nessuna \\
-        \textbf{Inclusioni} & Nessuna
       \end{longtable}
       \egroup
     \end{center}
@@ -784,9 +722,6 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \textbf{Precondizioni}  & L'utente si trova nella pagina Dashboard e seleziona la riga che vuole eliminare. \\ 
         
         \textbf{Postcondizioni} & L'utente visualizzando la Dashboard non visualizza più la riga rimossa. \\ 
-        \textbf{Flusso Principale} & Nessuno \\
-        \textbf{Estensioni} & Nessuna \\
-        \textbf{Inclusioni} & Nessuna
       \end{longtable}
       \egroup
     \end{center}
@@ -816,7 +751,7 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina iniziale Dashboard. \\ 
         
         \textbf{Postcondizioni} & L'applicazione MaaS ha eseguito le operazioni sulle righe della Dashboard richieste dall'utente autenticato. \\ 
-        \textbf{Flusso Principale} & 1. Visualizzazione element Dashboard (UC-U16.1)
+        \textbf{Scenario principale} & 1. Visualizzazione element Dashboard (UC-U16.1)
         
 1.1 L'utente visualizza una Cell (UC-U16.2)
 
@@ -831,8 +766,6 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
 2.2 L'utente effettua un'operazione su un Document (UC-U16.6)
 
 2.3 L'utente effettua un'operazione su una Collection (UC-U16.7) \\
-        \textbf{Estensioni} & Nessuna \\
-        \textbf{Inclusioni} & Nessuna
       \end{longtable}
       \egroup
     \end{center}
@@ -855,9 +788,6 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \textbf{Precondizioni}  & L'utente autenticato ha visualizzato un element della Dashboard. \\ 
         
         \textbf{Postcondizioni} & L'utente autenticato ha visualizzato un element di una riga della Dashboard. \\ 
-        \textbf{Flusso Principale} & Nessuno \\
-        \textbf{Estensioni} & Nessuna \\
-        \textbf{Inclusioni} & Nessuna
       \end{longtable}
       \egroup
     \end{center}
@@ -882,9 +812,6 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina Dashboard. \\ 
         
         \textbf{Postcondizioni} & L'utente autenticato è stato reindirizzato nella pagina Cell e ne ha visualizzato il contenuto. \\ 
-        \textbf{Flusso Principale} & Nessuno \\
-        \textbf{Estensioni} & Nessuna \\
-        \textbf{Inclusioni} & Nessuna
       \end{longtable}
       \egroup
     \end{center}
@@ -907,9 +834,6 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina Dashboard. \\ 
         
         \textbf{Postcondizioni} & L'utente autenticato è stato reindirizzato nella pagina Document e ne ha visualizzato il contenuto. \\ 
-        \textbf{Flusso Principale} & Nessuno \\
-        \textbf{Estensioni} & Nessuna \\
-        \textbf{Inclusioni} & Nessuna
       \end{longtable}
       \egroup
     \end{center}
@@ -932,9 +856,6 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina Dashboard. \\ 
         
         \textbf{Postcondizioni} & L'utente autenticato è stato reindirizzato nella pagina Collection e ne ha visualizzato il contenuto. \\ 
-        \textbf{Flusso Principale} & Nessuno \\
-        \textbf{Estensioni} & Nessuna \\
-        \textbf{Inclusioni} & Nessuna
       \end{longtable}
       \egroup
     \end{center}
@@ -965,13 +886,11 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina Cell. \\ 
         
         \textbf{Postcondizioni} & L'applicazione MaaS ha eseguito le operazioni richieste dall'utente autenticato. \\ 
-        \textbf{Flusso Principale} & 1. L'utente autenticato aggiunge un valore arbitrario nella Cell (UC-U16.5.1)
+        \textbf{Scenario principale} & 1. L'utente autenticato aggiunge un valore arbitrario nella Cell (UC-U16.5.1)
         
 2. L'utente autenticato modifica il valore nella Cell (UC-U16.5.2)
 
 3. L'utente autenticato ordina il valore nella Cell (UC-U16.5.3) \\
-        \textbf{Estensioni} & Nessuna \\
-        \textbf{Inclusioni} & Nessuna
       \end{longtable}
       \egroup
     \end{center}
@@ -994,9 +913,6 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina Cell.  \\ 
         
         \textbf{Postcondizioni} & L'utente autenticato ha aggiunto un valore arbitrario nella Cell. \\ 
-        \textbf{Flusso Principale} & Nessuno \\
-        \textbf{Estensioni} & Nessuna \\
-        \textbf{Inclusioni} & Nessuna
       \end{longtable}
       \egroup
     \end{center}
@@ -1019,9 +935,6 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina Cell. \\ 
         
         \textbf{Postcondizioni} & L'utente autenticato ha modificato il valore della Cell. \\ 
-        \textbf{Flusso Principale} & Nessuno \\
-        \textbf{Estensioni} & Nessuna \\
-        \textbf{Inclusioni} & Nessuna
       \end{longtable}
       \egroup
     \end{center}
@@ -1043,9 +956,6 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina Cell. \\ 
         
         \textbf{Postcondizioni} & L'utente autenticato ha ordinato il valore della Cell. \\ 
-        \textbf{Flusso Principale} & Nessuno \\
-        \textbf{Estensioni} & Nessuna \\
-        \textbf{Inclusioni} & Nessuna
       \end{longtable}
       \egroup
     \end{center}
@@ -1076,7 +986,7 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina Document. \\ 
         
         \textbf{Postcondizioni} & L'applicazione MaaS ha eseguito le operazioni richieste dall'utente autenticato. \\ 
-        \textbf{Flusso Principale} & 1. L'utente autenticato modifica un Document (UC-U16.6.1)
+        \textbf{Scenario principale} & 1. L'utente autenticato modifica un Document (UC-U16.6.1)
 2. L'utente autenticato rimuove un Document (UC-U16.6.3)
 
 3. L'utente autenticato esporta il json e il csv di un Document (UC-U16.6.4)
@@ -1085,7 +995,6 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
 
 5. L'utente autenticato esegue un'azione personalizzata (UC-U16.6.6) \\
         \textbf{Estensioni} & 1. L'utente desidera annullare le modifiche apportate a un Document (UC-U16.6.2) \\
-        \textbf{Inclusioni} & Nessuna
       \end{longtable}
       \egroup
     \end{center}
@@ -1108,9 +1017,6 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \textbf{Precondizioni}  & L'utente autenticato ha visualizzato una pagina Document all'interno della quale desidera apportare delle modifiche. \\ 
         
         \textbf{Postcondizioni} & L'applicazione MaaS ha apportato le modifiche richieste dall'utente al Document selezionato. \\ 
-        \textbf{Flusso Principale} & Nessuno \\
-        \textbf{Estensioni} & Nessuna \\
-        \textbf{Inclusioni} & Nessuna
       \end{longtable}
       \egroup
     \end{center}
@@ -1133,9 +1039,6 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \textbf{Precondizioni}  & L'utente autenticato ha apportato delle modifiche a un Document. \\ 
         
         \textbf{Postcondizioni} & Le modifiche apportate dall'utente autenticato al Document selezionato sono state annullate. \\ 
-        \textbf{Flusso Principale} & Nessuno \\
-        \textbf{Estensioni} & Nessuna \\
-        \textbf{Inclusioni} & Nessuna
       \end{longtable}
       \egroup
     \end{center}
@@ -1158,9 +1061,6 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina Document da rimuovere. \\ 
         
         \textbf{Postcondizioni} & La pagina Document selezionata è stata rimossa. \\ 
-        \textbf{Flusso Principale} & Nessuno \\
-        \textbf{Estensioni} & Nessuna \\
-        \textbf{Inclusioni} & Nessuna
       \end{longtable}
       \egroup
     \end{center}
@@ -1183,9 +1083,6 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina del Document su cui effettuare l'azione di default export. \\ 
         
         \textbf{Postcondizioni} & L'applicazione MaaS ha eseguito la richiesta dell'utente. \\ 
-        \textbf{Flusso Principale} & Nessuno \\
-        \textbf{Estensioni} & Nessuna \\
-        \textbf{Inclusioni} & Nessuna
       \end{longtable}
       \egroup
     \end{center}
@@ -1208,9 +1105,6 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina Document su cui effettuare l'operazione di default send mail. \\ 
         
         \textbf{Postcondizioni} & L'applicazione MaaS ha inviato la mail. \\ 
-        \textbf{Flusso Principale} & Nessuno \\
-        \textbf{Estensioni} & Nessuna \\
-        \textbf{Inclusioni} & Nessuna
       \end{longtable}
       \egroup
     \end{center}
@@ -1233,9 +1127,6 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina del Document sul quale desidera effettuare un'azione personalizzata disponibile. \\ 
         
         \textbf{Postcondizioni} & L'applicazione MaaS ha eseguito la richiesta dell'utente autenticato. \\ 
-        \textbf{Flusso Principale} & Nessuno \\
-        \textbf{Estensioni} & Nessuna \\
-        \textbf{Inclusioni} & Nessuna
       \end{longtable}
       \egroup
     \end{center}
@@ -1266,7 +1157,7 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina Collection. \\ 
         
         \textbf{Postcondizioni} & L'applicazione MaaS ha eseguito le operazioni richieste dall'utente autenticato. \\ 
-        \textbf{Flusso Principale} & 1. L'utente autenticato può modificare un Document (UC-U16.6.1)
+        \textbf{Scenario principale} & 1. L'utente autenticato può modificare un Document (UC-U16.6.1)
 
 2. L'utente autenticato può ordinare i Documents (UC-U16.7.1)
 
@@ -1278,7 +1169,6 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
 
 6. L'utente autenticato può eseguire un'azione personalizzata(UC-U16.7.2) \\
         \textbf{Estensioni} & 1. L'utente può decidere di selezionare solo un sottoinsieme di elementi per i quali desidera esportare i file .json e .csv (UC-U16.7.6) \\
-        \textbf{Inclusioni} & Nessuna
       \end{longtable}
       \egroup
     \end{center}
@@ -1301,9 +1191,6 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina Collection. \\ 
         
         \textbf{Postcondizioni} & L'applicazione MaaS ha eseguito le operazioni richieste dall'utente. \\ 
-        \textbf{Flusso Principale} & Nessuno \\
-        \textbf{Estensioni} & Nessuna \\
-        \textbf{Inclusioni} & Nessuna
       \end{longtable}
       \egroup
     \end{center}
@@ -1327,9 +1214,6 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina della Collection sulla quale desidera effettuare un'azione personalizzata disponibile. \\ 
         
         \textbf{Postcondizioni} & L'applicazione MaaS ha eseguito la richiesta dell'utente autenticato. \\ 
-        \textbf{Flusso Principale} & Nessuno \\
-        \textbf{Estensioni} & Nessuna \\
-        \textbf{Inclusioni} & Nessuna
       \end{longtable}
       \egroup
     \end{center}
@@ -1352,9 +1236,6 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \textbf{Precondizioni}  & L'utente ha visualizzato la pagina Collection. \\ 
         
         \textbf{Postcondizioni} & L'applicazione MaaS ha inviato la mail. \\ 
-        \textbf{Flusso Principale} & Nessuno \\
-        \textbf{Estensioni} & Nessuna \\
-        \textbf{Inclusioni} & Nessuna
       \end{longtable}
       \egroup
      \end{center}
@@ -1377,9 +1258,6 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina del Document su cui effettuare l'azione di default export. \\ 
         
         \textbf{Postcondizioni} & L'applicazione MaaS ha eseguito la richiesta dell'utente. \\ 
-        \textbf{Flusso Principale} & Nessuno \\
-        \textbf{Estensioni} & Nessuna \\
-        \textbf{Inclusioni} & Nessuna
       \end{longtable}
       \egroup
     \end{center}
@@ -1402,9 +1280,6 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina Collection e intende eseguire l'azione di default. \\ 
         
         \textbf{Postcondizioni} & L'utente autenticato ha selezionato un sottoinsieme di Documents su cui effettuare l'operazione export. \\ 
-        \textbf{Flusso Principale} & Nessuno \\
-        \textbf{Estensioni} & Nessuna \\
-        \textbf{Inclusioni} & Nessuna
       \end{longtable}
       \egroup
     \end{center}
@@ -1428,9 +1303,6 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
             \textbf{Precondizioni}  & L'utente autenticato è loggato con le sue credenziali su MaaS. \\ 
             
             \textbf{Postcondizioni} & L'utente autenticato visualizza un messaggio di avvenuto logout e viene disconnesso da MaaS. \\ 
-            \textbf{Flusso Principale} & Nessuno \\
-            \textbf{Estensioni} & Nessuna  \\
-            \textbf{Inclusioni} & Nessuna
           \end{longtable}
           \egroup
         \end{center}
