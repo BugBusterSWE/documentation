@@ -450,7 +450,7 @@ Di seguito vengono elencati i casi d'uso per l'editor.
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.3.1 - Aggiungere/Rimuovere un attributo ``column''}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Proprietario \\ 
         \textbf{Scopo e Descrizione} & L'utente ha la possibilit\`a di rimuovere o aggiungere dall'Index Element un attributo ``column''. \\ 
         
         \textbf{Precondizioni}  &  L'utente \`e all'interno dell'editor e sta visualizzando un Index Element da modificare. \\ 
@@ -471,17 +471,15 @@ Di seguito vengono elencati i casi d'uso per l'editor.
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.3.2 - Associare un \textit{Column Element} ad un Index Element}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
-        \textbf{Scopo e Descrizione} & L'utente ha la possibilit\`a di associare un Column Element ad un attributo ``column'' di un Index Element. \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Proprietario \\ 
+        \textbf{Scopo e Descrizione} & \`E possibile agganciare un Column Element all'attributo ``column'' \\ 
         
-        \textbf{Precondizioni}  & L'utente visualizza un Index Element su cui associare il Column Element. \\ 
+        \textbf{Precondizioni}  & Deve essere presente un attributo Column \\ 
         
-        \textbf{Postcondizioni} & Il sistema associa correttamente il Column Element all Index Element indicato dall'utente.
+        \textbf{Postcondizioni} & La sezione del DSL ``column'' viene riempita con i valori impostati sul Column Element  
       \end{longtable}
       \egroup
     \end{center}
-    
-    
 \subsubsection{UC-E2.4}
 
     %Tabella 
@@ -491,19 +489,18 @@ Di seguito vengono elencati i casi d'uso per l'editor.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.4 - Manipolazione di un Column Element}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.4 - Column Element}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, membro, Admin, Owner \\ 
-        \textbf{Scopo e Descrizione} & L'utente ha la possibilit\`a di aggiungere, rimuovere o modificare un Column Element \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, membro, Admin, Proprietario \\ 
+        \textbf{Scopo e Descrizione} & Dare tutte le funzionalit\`a espresse nel DSL Element \\ 
         
-        \textbf{Precondizioni}  & L'editor \`e visualizzato dall'utente. \\ 
+        \textbf{Precondizioni}  & Deve riferirsi ad una struttura column presente nel DSL corrente \\ 
         
-        \textbf{Postcondizioni} & Il sistema compie le operazioni sul Column Element indicato dall'utente.
+        \textbf{Postcondizioni} & L'utente manipola le parti che compongono la struttura 
       \end{longtable}
       \egroup
     \end{center}
-    
 \subsubsection{UC-E2.5}
 
     %Tabella 
@@ -513,15 +510,15 @@ Di seguito vengono elencati i casi d'uso per l'editor.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.5 - Manipolazione di Row Element}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.5 - Row Element}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
-        \textbf{Scopo e Descrizione} & L'utente ha la possibilit\`a di aggiungere, rimuovere o modificare un Row Element \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Proprietario \\ 
+        \textbf{Scopo e Descrizione} & Rappresentazione di una struttura Row all'interno del DSL \\ 
         
-        \textbf{Precondizioni}  & L'editor \`e visualizzato dall'utente. \\ 
+        \textbf{Precondizioni}  & Dev'essere legata a una struttura Document \\ 
         
-        \textbf{Postcondizioni} & Il sistema compie le operazioni sul Column Element indicato dall'utente.
+        \textbf{Postcondizioni} & Viene definita la struttura della Row all'interno del DSL corrente 
       \end{longtable}
       \egroup
     \end{center}

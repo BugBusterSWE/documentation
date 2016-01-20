@@ -1,6 +1,6 @@
 \section{Utente Non Autenticato}
 
-Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'utente non autenticato.
+Di seguito vengono elencati i casi d'uso per l'utente non autenticato.
 
 \subsection{Casi d'uso}
 
@@ -24,25 +24,25 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'utente non autenti
         \hline
         
         \textbf{Attori Primari} & Utente non autenticato \\ 
-        \textbf{Scopo e Descrizione} & L’utente non autenticato può creare un nuovo account per la propria \glossaryItem{Company} e registrarsi a \glossaryItem{MaaS}, oppure effettuare la registrazione dopo aver ricevuto un invito. Può effettuare il login e il recupero della propria password. \\ 
+        \textbf{Scopo e Descrizione} & L’utente non autenticato può creare un nuovo account per la propria \textit{Company} e registrarsi a MaaS, oppure effettuare la registrazione dopo aver ricevuto un invito. Può effettuare il login e il recupero della propria password. \\ 
         
         \textbf{Precondizioni}  & L’applicazione è funzionante e pronta all’utilizzo.
         
         Il sistema mostra all’utente non autenticato la pagina principale fornendo le funzionalità di autenticazione, registrazione e recupero password. \\ 
         
         \textbf{Postcondizioni} & L'applicazione ha eseguito le richieste dell'utente. \\ 
-        \textbf{Scenario principale} & 1. L'utente non autenticato crea un account per la propria \glossaryItem{Company} e si registra a \glossaryItem{MaaS} come \glossaryItem{Owner}. (UC-U1)
+        \textbf{Scenario principale} & 1. L'utente non autenticato crea un account per la propria \textit{Company} e si registra a MaaS come \textit{Owner}. (UC-U1)
         
-2. L'utente non autenticato riceve un invito per registrarsi a \glossaryItem{MaaS}. (UC-U3)
+2. L'utente non autenticato riceve un invito per registrarsi a MaaS. (UC-U3)
 
 3. L'utente non autenticato in possesso di un account  effettua il login. (UC-U4)
 
 4. L'utente non autenticato può richiedere il recupero della password. (UC-U6) \\
-        \textbf{Estensioni} & 1. L'utente non autenticato visualizza un messaggio di errore dovuto all'inserimento di dati di una \glossaryItem{Company} già esistente. (UC-U2)
+        \textbf{Estensioni} & 1. L'utente non autenticato visualizza un messaggio di errore dovuto all'inserimento di dati di una \textit{Company} già esistente. (UC-U2)
         
 2. L'utente non autenticato visualizza un messaggio d'errore durante il login dovuto all'inserimento di un indirizzo email/password non corretti. (UC-U5)
 
-3. L'utente non autenticato visualizza un messaggio d'errore durante la \glossaryItem{procedura} di recupero password. (UC-U7)  \\
+3. L'utente non autenticato visualizza un messaggio d'errore durante la procedura di recupero password. (UC-U7)  \\
       \end{longtable}
       \egroup
     \end{center} 
@@ -52,7 +52,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'utente non autenti
     \begin{figure}[H]
       \begin{center}
         \includegraphics[width=12cm]{res/img/UCUtenti/UCUtenteNA/UC-U1-Creazione Account Azienda/UC-U1.png}
-      \caption{UC-U1 - Creazione account di una \glossaryItem{Company}}
+      \caption{UC-U1 - Creazione account di una \textit{Company}}
       \end{center} 
     \end{figure}    
     
@@ -63,22 +63,22 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'utente non autenti
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U1 - Creazione account di una \glossaryItem{Company}}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U1 - Creazione account di una \textit{Company}}} \\ 
         \hline
         
         \textbf{Attori Primari} & Utente non autenticato \\ 
-        \textbf{Scopo e Descrizione} & L'utente non autenticato può creare un account per la propria \glossaryItem{Company}, inserendo i seguenti dati: nome della \glossaryItem{Company}, indirizzo email dell'\glossaryItem{Owner} e una password. \\ 
+        \textbf{Scopo e Descrizione} & L'utente non autenticato può creare un account per la propria \textit{Company}, inserendo i seguenti dati: nome della \textit{Company}, indirizzo email dell'\textit{Owner} e una password. \\ 
         
         \textbf{Precondizioni}  & L’applicazione è funzionante e pronta all’utilizzo.
         
-Il sistema presenta all'utente la pagina di registrazione per una \glossaryItem{Company}. \\ 
+Il sistema presenta all'utente la pagina di registrazione per una \textit{Company}. \\ 
         
-        \textbf{Postcondizioni} & Una \glossaryItem{Company} è stata registrata presso \glossaryItem{MaaS} e l'utente non autenticato ne è divenuto l'\glossaryItem{Owner}. \\ 
-        \textbf{Scenario principale} & 1. L'utente non autenticato inserisce il nome della propria \glossaryItem{Company}. (UC-U1.1)
+        \textbf{Postcondizioni} & Una \textit{Company} è stata registrata presso MaaS e l'utente non autenticato ne è divenuto l'\textit{Owner}. \\ 
+        \textbf{Scenario principale} & 1. L'utente non autenticato inserisce il nome della propria \textit{Company}. (UC-U1.1)
         
 2. L'utente non autenticato inserisce il proprio indirizzo email. (UC-U1.2)
 
-3. L'utente non autenticato inserisce una password e la \glossaryItem{Company} viene registrata. (UC-U1.3) \\
+3. L'utente non autenticato inserisce una password e la \textit{Company} viene registrata. (UC-U1.3) \\
       \end{longtable}
       \egroup
     \end{center} 
@@ -92,14 +92,14 @@ Il sistema presenta all'utente la pagina di registrazione per una \glossaryItem{
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U1.1 - Inserimento nome \glossaryItem{Company}}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U1.1 - Inserimento nome \textit{Company}}} \\ 
         \hline
         
         \textbf{Attori Primari} & Utente non autenticato \\ 
-        \textbf{Scopo e Descrizione} & L'utente non autenticato inserisce il nome della \glossaryItem{Company} durante \glossaryItem{procedura} di creazione dell'account. \\ 
+        \textbf{Scopo e Descrizione} & L'utente non autenticato inserisce il nome della \textit{Company} durante procedura di creazione dell'account. \\ 
         
         \textbf{Precondizioni}  & 
-L'utente non autenticato ha visualizzato la pagina per la creazione dell'account di una \glossaryItem{Company}. \\ 
+L'utente non autenticato ha visualizzato la pagina per la creazione dell'account di una \textit{Company}. \\ 
         
         \textbf{Postcondizioni} & Il campo testo \`e stato compilato con il contenuto richiesto. \\ 
       \end{longtable}
@@ -116,14 +116,14 @@ L'utente non autenticato ha visualizzato la pagina per la creazione dell'account
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U1.2 - Inserimento indirizzo email dell'\glossaryItem{Owner}}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U1.2 - Inserimento indirizzo email dell'\textit{Owner}}} \\ 
         \hline
         
         \textbf{Attori Primari} & Utente non autenticato \\ 
-        \textbf{Scopo e Descrizione} & L'utente non autenticato inserisce il proprio indirizzo email durante \glossaryItem{procedura} di creazione dell'account della \glossaryItem{Company}. \\ 
+        \textbf{Scopo e Descrizione} & L'utente non autenticato inserisce il proprio indirizzo email durante procedura di creazione dell'account della \textit{Company}. \\ 
         
         \textbf{Precondizioni}  & L'utente non autenticato ha visualizzato la pagina per la creazione dell'account
-        di una \glossaryItem{Company}.  \\ 
+        di una \textit{Company}.  \\ 
         
         \textbf{Postcondizioni} & Il campo testo \`e stato compilato con il contenuto richiesto. \\ 
       \end{longtable}
@@ -143,12 +143,12 @@ L'utente non autenticato ha visualizzato la pagina per la creazione dell'account
         \hline
         
         \textbf{Attori Primari} & Utente non autenticato \\ 
-        \textbf{Scopo e Descrizione} & L'utente non autenticato inserisce la password associata all'account della propria \glossaryItem{Company}. \\ 
+        \textbf{Scopo e Descrizione} & L'utente non autenticato inserisce la password associata all'account della propria \textit{Company}. \\ 
         
-        \textbf{Precondizioni}  & L'utente non autenticato ha visualizzato la pagina per la registrazione della \glossaryItem{Company}. \\ 
+        \textbf{Precondizioni}  & L'utente non autenticato ha visualizzato la pagina per la registrazione della \textit{Company}. \\ 
         
-        \textbf{Postcondizioni} & L'utente non autenticato ha inserito una password associata all'account della \glossaryItem{Company}. \\ 
-        \textbf{Scenario principale} & 1. L'utente non autenticato inserisce una password associata all'account della \glossaryItem{Company}. \\
+        \textbf{Postcondizioni} & L'utente non autenticato ha inserito una password associata all'account della \textit{Company}. \\ 
+        \textbf{Scenario principale} & 1. L'utente non autenticato inserisce una password associata all'account della \textit{Company}. \\
       \end{longtable}
       \egroup
     \end{center}
@@ -162,13 +162,13 @@ L'utente non autenticato ha visualizzato la pagina per la creazione dell'account
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U2 - Messaggio d’errore per \glossaryItem{Company} già esistente}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U2 - Messaggio d’errore per \textit{Company} già esistente}} \\ 
         \hline
         
         \textbf{Attori Primari} & Utente non autenticato \\ 
-        \textbf{Scopo e Descrizione} & L'utente non autenticato visualizza un messaggio d'errore dovuto all'inserimento di dati di una \glossaryItem{Company} già registrata. \\ 
+        \textbf{Scopo e Descrizione} & L'utente non autenticato visualizza un messaggio d'errore dovuto all'inserimento di dati di una \textiti{Company} già registrata. \\ 
         
-        \textbf{Precondizioni}  & L'utente ha inserito i dati di una \glossaryItem{Company} già registrata. \\ 
+        \textbf{Precondizioni}  & L'utente ha inserito i dati di una \textit{Company} già registrata. \\ 
         
         \textbf{Postcondizioni} & L'utente ha visualizzato il messaggio di errore. \\ 
         \textbf{Scenario principale} & 1. L'utente visualizza il messaggio di errore. \\
@@ -180,7 +180,7 @@ L'utente non autenticato ha visualizzato la pagina per la creazione dell'account
 
     \begin{figure}[H]
       \begin{center}
-        \includegraphics[width=12cm]{res/img/UCUtenti/UCUtenteNA/UC-U3-Registrazione Utente/UC-U3.png}
+        \includegraphics[width=12cm]{res/img/UCUtenti/UCUtenteNA/UC-U3-Registrazione Utente/UC-U3-RegistrazioneUtente}
       \caption{UC-U3 - Registrazione Utente}
       \end{center} 
     \end{figure}    
@@ -196,9 +196,9 @@ L'utente non autenticato ha visualizzato la pagina per la creazione dell'account
         \hline
         
         \textbf{Attori Primari} & Utente non autenticato \\ 
-        \textbf{Scopo e Descrizione} & L'utente non autenticato può registrarsi su \glossaryItem{MaaS} con un invito precedentemente ricevuto da un \glossaryItem{Company} \glossaryItem{Owner}. \\ 
+        \textbf{Scopo e Descrizione} & L'utente non autenticato può registrarsi su MaaS con un invito precedentemente ricevuto da un \textit{Company} \textit{Owner}. \\ 
         
-        \textbf{Precondizioni}  & L'utente ha ricevuto un invito dalla \glossaryItem{Company}. \\ 
+        \textbf{Precondizioni}  & L'utente ha ricevuto un invito dalla \textit{Company}. \\ 
         
         \textbf{Postcondizioni} & L'utente non autenticato ha creato un account valido e può effettuare il login. \\ 
         \textbf{Scenario principale} & 1. L'utente inserisce la propria password. (UC-U3.1) \\
@@ -210,7 +210,7 @@ L'utente non autenticato ha visualizzato la pagina per la creazione dell'account
 
     \begin{figure}[H]
       \begin{center}
-        \includegraphics[width=12cm]{res/img/UCUtenti/UCUtenteNA/UC-U4-Login/UC-U4.png}
+        \includegraphics[width=12cm]{res/img/UCUtenti/UCUtenteNA/UC-U4-Login/UC-U4-Login}
       \caption{UC-U4 - Login}
       \end{center} 
     \end{figure}    
@@ -230,7 +230,7 @@ L'utente non autenticato ha visualizzato la pagina per la creazione dell'account
         
         \textbf{Precondizioni}  & L'utente non autenticato è in possesso di un account valido. \\ 
         
-        \textbf{Postcondizioni} & L'\glossaryItem{attore} viene autenticato e ha accesso alle funzionalità dell'applicazione concesse in base al ruolo espresso nel suo account. \\ 
+        \textbf{Postcondizioni} & L'attore viene autenticato e ha accesso alle funzionalità dell'applicazione concesse in base al ruolo espresso nel suo account. \\ 
         \textbf{Scenario principale} & 1. L'utente non autenticato inserisce il proprio indirizzo email (UC-U4.1)
         
 2. L'utente non autenticato inserisce la password (UC-U4.2) \\
@@ -295,7 +295,7 @@ L'utente non autenticato ha visualizzato la pagina per la creazione dell'account
         \hline
         
         \textbf{Attori Primari} & Utente non autenticato \\ 
-        \textbf{Scopo e Descrizione} & L'utente non autenticato visualizza un messaggio d'errore dovuto all'inserimento di un indirizzo email o di una password non corretti durante la \glossaryItem{procedura} di Login. \\ 
+        \textbf{Scopo e Descrizione} & L'utente non autenticato visualizza un messaggio d'errore dovuto all'inserimento di un indirizzo email o di una password non corretti durante la procedura di Login. \\ 
         
         \textbf{Precondizioni}  & L'utente ha inserito un indirizzo email o una password non corretti. \\ 
         
@@ -309,7 +309,7 @@ L'utente non autenticato ha visualizzato la pagina per la creazione dell'account
 
     \begin{figure}[H]
       \begin{center}
-        \includegraphics[width=12cm]{res/img/UCUtenti/UCUtenteNA/UC-U6-Recupero Password/UC-U6.png}
+        \includegraphics[width=12cm]{res/img/UCUtenti/UCUtenteNA/UC-U6-Recupero Password/UC-U6-RecuperoPassword}
       \caption{UC-U6 - Recupero password}
       \end{center} 
     \end{figure}    
@@ -325,7 +325,7 @@ L'utente non autenticato ha visualizzato la pagina per la creazione dell'account
         \hline
         
         \textbf{Attori Primari} & Utente non autenticato \\ 
-        \textbf{Scopo e Descrizione} & L'utente non autenticato effettua la \glossaryItem{procedura} per il recupero della password, inserendo il proprio indirizzo email e il codice segreto che gli verrà inviato. \\ 
+        \textbf{Scopo e Descrizione} & L'utente non autenticato effettua la procedura per il recupero della password, inserendo il proprio indirizzo email e il codice segreto che gli verrà inviato. \\ 
         
         \textbf{Precondizioni}  & L'utente possiede un account all'interno dell'applicazione. \\ 
         
@@ -350,9 +350,9 @@ L'utente non autenticato ha visualizzato la pagina per la creazione dell'account
         \hline
         
         \textbf{Attori Primari} & Utente non autenticato \\ 
-        \textbf{Scopo e Descrizione} & L'utente non autenticato inserisce il codice segreto ricevuto tramite email mentre stava effettuando la \glossaryItem{procedura} di  recupero della password. \\ 
+        \textbf{Scopo e Descrizione} & L'utente non autenticato inserisce il codice segreto ricevuto tramite email mentre stava effettuando la procedura di  recupero della password. \\ 
         
-        \textbf{Precondizioni}  & L'utente non autenticato ha inserito correttamente il proprio indirizzo email durante la \glossaryItem{procedura} di recupero della password. \\ 
+        \textbf{Precondizioni}  & L'utente non autenticato ha inserito correttamente il proprio indirizzo email durante la procedura di recupero della password. \\ 
         
         \textbf{Postcondizioni} & Il campo testo \`e stato compilato con il contenuto richiesto. \\ 
       \end{longtable}
