@@ -180,7 +180,7 @@ L'utente non autenticato ha visualizzato la pagina per la creazione dell'account
 
     \begin{figure}[H]
       \begin{center}
-        \includegraphics[width=12cm]{res/img/UCUtenti/UCUtenteNA/UC-U3-Registrazione Utente/UC-U3.png}
+        \includegraphics[width=12cm]{res/img/UCUtenti/UCUtenteNA/UC-U3-Registrazione Utente/UC-U3-RegistrazioneUtente}
       \caption{UC-U3 - Registrazione Utente}
       \end{center} 
     \end{figure}    
@@ -210,7 +210,7 @@ L'utente non autenticato ha visualizzato la pagina per la creazione dell'account
 
     \begin{figure}[H]
       \begin{center}
-        \includegraphics[width=12cm]{res/img/UCUtenti/UCUtenteNA/UC-U4-Login/UC-U4.png}
+        \includegraphics[width=12cm]{res/img/UCUtenti/UCUtenteNA/UC-U4-Login/UC-U4-Login}
       \caption{UC-U4 - Login}
       \end{center} 
     \end{figure}    
@@ -309,7 +309,7 @@ L'utente non autenticato ha visualizzato la pagina per la creazione dell'account
 
     \begin{figure}[H]
       \begin{center}
-        \includegraphics[width=12cm]{res/img/UCUtenti/UCUtenteNA/UC-U6-Recupero Password/UC-U6.png}
+        \includegraphics[width=12cm]{res/img/UCUtenti/UCUtenteNA/UC-U6-Recupero Password/UC-U6-RecuperoPassword}
       \caption{UC-U6 - Recupero password}
       \end{center} 
     \end{figure}    
