@@ -1,47 +1,28 @@
-\documentclass[11pt,a4paper]{article}
-
-\usepackage[utf8]{inputenc}
-
-%is a document for us, we can use italian here
-\usepackage[italian]{babel}
-
-\usepackage{hyperref}
-\hypersetup{
-  colorlinks,
-  citecolor=gray,
-  filecolor=red,
-  linkcolor=blue,
-  urlcolor=blue
-}
-
-\usepackage{amsmath}
-\usepackage{graphicx}
-\usepackage{amsfonts}
-\usepackage{listings}
-\lstset{%
-	commentstyle=\color{green},
-	frame=single,
-	keepspaces=true,
-	keywordstyle=\color{blue},
-	numbers=left,
-	numberstyle=\tiny\color{black},
-	rulecolor=\color{black},
-        basicstyle=\ttfamily
-}
+\input{../../common/style/global.tex}
+%Il glossario ha un proprio layout
+%\input{../../common/style/layout.tex}
+\input{res/local}
 
 
-\title{\textbf{Norme di Progetto}}
-\author{BugBuster}
+\usepackage{tracklang}
+\usepackage[toc,nonumberlist,translate=babel,xindy,nopostdot]{glossaries}
+
+\title{\textbf{Glossario}}
+\author{BugBusters}
 
 \date{22 Gennaio 2016}
 
+\makeglossaries
+
+
 \begin{document}
 
-\maketitle
+\include{res/glossary}
 
-\tableofcontents
+\makeFrontPage
 
-\include{res/versions}
-\include{res/listOfChapters}
+
+\glsaddall %stampa tutto il glossario, necessario?
+\printglossary[title=Glossario,toctitle=Glossario dei termini,style=indexgroup,style=altlistgroup]
 
 \end{document}
