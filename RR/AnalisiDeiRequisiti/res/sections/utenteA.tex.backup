@@ -1155,9 +1155,9 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
 
 4. L'utente autenticato può eseguire l'azione di `send mail`. (UC-U16.7.3)
 
-5. L'utente autenticato può eseguire l'azione di `export` su un singolo Document. (UC-U16.6.4) \\
+5. L'utente autenticato può eseguire l'azione di `export`. (UC-U16.7.4) \\
 
-        \textbf{Estensioni} & 1. L'utente può selezionare solo un sottoinsieme di elementi ed esportarli in formato .json o .csv (UC-U16.7.4) \\
+        \textbf{Estensioni} & 1. L'utente può decidere di selezionare solo un sottoinsieme di elementi che desidera esportare in formato .json o .csv (UC-U16.7.6) \\
       \end{longtable}
       \egroup
     \end{center}
@@ -1179,7 +1179,7 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         
         \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina Collection. \\ 
         
-        \textbf{Postcondizioni} & L'applicazione ha ordinato i Document secondo l'ordine indicato dall'utente. \\ 
+        \textbf{Postcondizioni} & L'applicazione MaaS ha eseguito le operazioni richieste dall'utente. \\ 
       \end{longtable}
       \egroup
     \end{center}
@@ -1196,15 +1196,15 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U16.7.3 - Send mail da una Collection}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U16.7.3 - Azione di default - Send mail}} \\ 
         \hline
         
         \textbf{Attori Primari} & Utente autenticato \\ 
-        \textbf{Scopo e Descrizione} & L'utente autenticato può inviare una mail contenente i Documents selezionati a un altro utente. \\ 
+        \textbf{Scopo e Descrizione} & L'utente autenticato può inviare una mail a un altro utente di MaaS. \\ 
         
         \textbf{Precondizioni}  & L'utente ha visualizzato la pagina Collection. \\ 
         
-        \textbf{Postcondizioni} & L'applicazione ha inviato la mail con i Documents selezionati al destinatario indicato dall'utente. \\ 
+        \textbf{Postcondizioni} & L'applicazione MaaS ha inviato la mail. \\ 
       \end{longtable}
       \egroup
      \end{center}
@@ -1218,15 +1218,38 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U16.7.4 - Export di una Collection}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U16.7.4 - Export}} \\ 
         \hline
         
         \textbf{Attori Primari} & Utente autenticato \\ 
-        \textbf{Scopo e Descrizione} & L'utente autenticato può esportare i Documents selezionati da una Collection in formato json o csv. \\ 
+        \textbf{Scopo e Descrizione} & L'utente autenticato può esportare i file .json e .csv del Document corrente. \\ 
         
-        \textbf{Precondizioni}  & L'utente autenticato ha selezionato i documenti da esportare e il formato di file con cui intende scaricarli. \\ 
+        \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina del Document su cui effettuare l'azione di default export. \\ 
         
-        \textbf{Postcondizioni} & L'applicazione ha eseguito creato il file con i dati selezionati scaricabile nel formato scelto dall'utente . \\ 
+        \textbf{Postcondizioni} & L'applicazione MaaS ha eseguito la richiesta dell'utente. \\ 
+      \end{longtable}
+      \egroup
+    \end{center}
+    
+\subsubsection{UC-U16.7.5}
+
+    %Tabella 
+    \begin{center}
+      \bgroup
+      \def\arraystretch{1.8}     
+      \begin{longtable}{  p{3.5cm} | p{8cm} } 
+        
+        \hline
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U16.7.5 - Azione export su un sottoinsieme di Documents}} \\ 
+        \hline
+        
+        \textbf{Attori Primari} & Utente autenticato \\ 
+        \textbf{Scopo e Descrizione} & L'utente autenticato ha visualizzato la pagina \textit{Collection} 
+        e intende esportarla. \\ 
+        
+        \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina Collection e intende eseguire l'azione di default. \\ 
+        
+        \textbf{Postcondizioni} & L'utente autenticato ha selezionato un sottoinsieme di Documents su cui effettuare l'operazione export. \\ 
       \end{longtable}
       \egroup
     \end{center}
@@ -1245,11 +1268,11 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
             \hline
             
             \textbf{Attori Primari} & Utente autenticato \\ 
-            \textbf{Scopo e Descrizione} & L’utente autenticato vuole effettuare il logout dall'applicazione.\\ 
+            \textbf{Scopo e Descrizione} & L’utente autenticato vuole effettuare il logout da MaaS.\\ 
             
-            \textbf{Precondizioni}  & L'utente autenticato è loggato con le sue credenziali. \\ 
+            \textbf{Precondizioni}  & L'utente autenticato è loggato con le sue credenziali su MaaS. \\ 
             
-            \textbf{Postcondizioni} & L'utente autenticato visualizza un messaggio di avvenuto logout e viene disconnesso. \\ 
+            \textbf{Postcondizioni} & L'utente autenticato visualizza un messaggio di avvenuto logout e viene disconnesso da MaaS. \\ 
           \end{longtable}
           \egroup
         \end{center}
