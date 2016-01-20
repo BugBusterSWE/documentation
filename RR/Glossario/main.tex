@@ -1,10 +1,11 @@
 \input{../../common/style/global.tex}
-\input{../../common/style/layout.tex}
+%Il glossario ha un proprio layout
+%\input{../../common/style/layout.tex}
 \input{res/local}
 
 
 \usepackage{tracklang}
-\usepackage[toc,nonumberlist,translate=babel]{glossaries}
+\usepackage[toc,nonumberlist,translate=babel,xindy,nopostdot]{glossaries}
 
 \title{\textbf{Glossario}}
 \author{BugBusters}
@@ -20,10 +21,8 @@
 
 \makeFrontPage
 
-\tableofcontents
-
 
 \glsaddall %stampa tutto il glossario, necessario?
-\printglossary[title=Glossario,toctitle=Glossario dei termini,style=indexgroup]
+\printglossary[title=Glossario,toctitle=Glossario dei termini,style=indexgroup,style=altlistgroup]
 
 \end{document}
