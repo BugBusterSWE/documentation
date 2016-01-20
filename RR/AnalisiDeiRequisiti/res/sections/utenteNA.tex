@@ -26,23 +26,23 @@ Di seguito vengono elencati i casi d'uso per l'utente non autenticato.
         \textbf{Attori Primari} & Utente non autenticato \\ 
         \textbf{Scopo e Descrizione} & L’utente non autenticato può creare un nuovo account per la propria \textit{Company} e registrarsi a MaaS, oppure effettuare la registrazione dopo aver ricevuto un invito. Può effettuare il login e il recupero della propria password. \\ 
         
-        \textbf{Precondizioni}  & L’applicazione MaaS è funzionante e pronta all’utilizzo.
+        \textbf{Precondizioni}  & L’applicazione è funzionante e pronta all’utilizzo.
         
         Il sistema mostra all’utente non autenticato la pagina principale fornendo le funzionalità di autenticazione, registrazione e recupero password. \\ 
         
         \textbf{Postcondizioni} & L'applicazione ha eseguito le richieste dell'utente. \\ 
-        \textbf{Scenario principale} & 1. L'utente non autenticato crea un account per la propria \textit{Company} e si registra a MaaS come \textit{Owner} (UC-U1)
+        \textbf{Scenario principale} & 1. L'utente non autenticato crea un account per la propria \textit{Company} e si registra a MaaS come \textit{Owner}. (UC-U1)
         
-2. L'utente non autenticato riceve un invito per registrarsi a MaaS (UC-U3)
+2. L'utente non autenticato riceve un invito per registrarsi a MaaS. (UC-U3)
 
-3. L'utente non autenticato in possesso di un account  effettua il login (UC-U4)
+3. L'utente non autenticato in possesso di un account  effettua il login. (UC-U4)
 
-4. L'utente non autenticato può richiedere il recupero della password (UC-U6) \\
-        \textbf{Estensioni} & 1. L'utente non autenticato visualizza un messaggio di errore dovuto all'inserimento di dati di una \textit{Company} già esistente (UC-U2)
+4. L'utente non autenticato può richiedere il recupero della password. (UC-U6) \\
+        \textbf{Estensioni} & 1. L'utente non autenticato visualizza un messaggio di errore dovuto all'inserimento di dati di una \textit{Company} già esistente. (UC-U2)
         
-2. L'utente non autenticato visualizza un messaggio d'errore durante il login dovuto all'inserimento di un indirizzo email/password non corretti (UC-U5)
+2. L'utente non autenticato visualizza un messaggio d'errore durante il login dovuto all'inserimento di un indirizzo email/password non corretti. (UC-U5)
 
-3. L'utente non autenticato visualizza un messaggio d'errore durante la procedura di recupero password (UC-U7)  \\
+3. L'utente non autenticato visualizza un messaggio d'errore durante la procedura di recupero password. (UC-U7)  \\
       \end{longtable}
       \egroup
     \end{center} 
@@ -74,11 +74,11 @@ Di seguito vengono elencati i casi d'uso per l'utente non autenticato.
 Il sistema presenta all'utente la pagina di registrazione per una \textit{Company}. \\ 
         
         \textbf{Postcondizioni} & Una \textit{Company} è stata registrata presso MaaS e l'utente non autenticato ne è divenuto l'\textit{Owner}. \\ 
-        \textbf{Scenario principale} & 1. L'utente non autenticato inserisce il nome della propria \textit{Company} (UC-U1.1)
+        \textbf{Scenario principale} & 1. L'utente non autenticato inserisce il nome della propria \textit{Company}. (UC-U1.1)
         
-2. L'utente non autenticato inserisce il proprio indirizzo email (UC-U1.2)
+2. L'utente non autenticato inserisce il proprio indirizzo email. (UC-U1.2)
 
-3. L'utente non autenticato inserisce una password e la \textit{Company} viene registrata (UC-U1.3) \\
+3. L'utente non autenticato inserisce una password e la \textit{Company} viene registrata. (UC-U1.3) \\
       \end{longtable}
       \egroup
     \end{center} 
@@ -178,7 +178,7 @@ L'utente non autenticato ha visualizzato la pagina per la creazione dell'account
         \textbf{Precondizioni}  & L'utente ha inserito i dati di una \textit{Company} già registrata. \\ 
         
         \textbf{Postcondizioni} & L'utente ha visualizzato il messaggio di errore. \\ 
-        \textbf{Scenario principale} & 1. L'utente visualizza il messaggio di errore (UC-U2) \\
+        \textbf{Scenario principale} & 1. L'utente visualizza il messaggio di errore. \\
       \end{longtable}
       \egroup
     \end{center} 
@@ -203,12 +203,12 @@ L'utente non autenticato ha visualizzato la pagina per la creazione dell'account
         \hline
         
         \textbf{Attori Primari} & Utente non autenticato \\ 
-        \textbf{Scopo e Descrizione} & L'utente non autenticato può registrarsi su MaaS. \\ 
+        \textbf{Scopo e Descrizione} & L'utente non autenticato può registrarsi su MaaS con un invito precedentemente ricevuto da un \textit{Company} \textit{Owner}. \\ 
         
         \textbf{Precondizioni}  & L'utente ha ricevuto un invito dalla \textit{Company}. \\ 
         
-        \textbf{Postcondizioni} & L'utente non autenticato ha creato un account valido presso MaaS e può effettuare il login. \\ 
-        \textbf{Scenario principale} & 1. L'utente inserisce la propria password (UC-U3.1) \\
+        \textbf{Postcondizioni} & L'utente non autenticato ha creato un account valido e può effettuare il login. \\ 
+        \textbf{Scenario principale} & 1. L'utente inserisce la propria password. (UC-U3.1) \\
       \end{longtable}
       \egroup
     \end{center} 
@@ -237,7 +237,7 @@ L'utente non autenticato ha visualizzato la pagina per la creazione dell'account
         
         \textbf{Precondizioni}  & L'utente non autenticato è in possesso di un account valido. \\ 
         
-        \textbf{Postcondizioni} & L'utente non autenticato diventa un utente autenticato e ha accesso alle funzionalità di MaaS concesse dalla tipologia di account (ruolo). \\ 
+        \textbf{Postcondizioni} & L'attore viene autenticato e ha accesso alle funzionalità dell'applicazione concesse in base al ruolo espresso nel suo account. \\ 
         \textbf{Scenario principale} & 1. L'utente non autenticato inserisce il proprio indirizzo email (UC-U4.1)
         
 2. L'utente non autenticato inserisce la password (UC-U4.2) \\
@@ -307,7 +307,7 @@ L'utente non autenticato ha visualizzato la pagina per la creazione dell'account
         \textbf{Precondizioni}  & L'utente ha inserito un indirizzo email o una password non corretti. \\ 
         
         \textbf{Postcondizioni} & L'utente ha visualizzato il messaggio di errore. \\ 
-        \textbf{Scenario principale} & 1. L'utente visualizza il messaggio di errore (UC-U5) \\
+        \textbf{Scenario principale} & 1. L'utente visualizza il messaggio di errore. \\
       \end{longtable}
       \egroup
     \end{center}    
