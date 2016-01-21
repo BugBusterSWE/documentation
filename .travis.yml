@@ -23,6 +23,7 @@ install:
     - sudo getnonfreefonts-sys garamond
 
 before_script:
+    - ls -la /usr/share/texmf-texlive/
     - sudo cp -fr RR/Glossario/res/glossaries /usr/share/texmf-texlive/tex/latex/
     - sudo cp -fr RR/Glossario/res/glossaries-italian/ /usr/share/texmf-texlive/tex/latex/
 
