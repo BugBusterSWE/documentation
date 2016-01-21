@@ -23,7 +23,7 @@ script:
     - cd RR/PianoDiQualifica/ && latexmk -pdflatex='pdflatex -interaction=nonstopmode' -pdf && cd -
     - cd RR/LetteraDiPresentazione/ && latexmk -pdflatex='pdflatex -interaction=nonstopmode' -pdf && cd -
     - cd RR/PianoDiProgetto/ && latexmk -pdflatex='pdflatex -interaction=nonstopmode' -pdf && cd -
-    - cd RR/Glossario/ && ./build.sh && cd -
+    - cd RR/Glossario/ && ./build.sh; cd -
 
 after_success:
     - git config --global user.email ${GIT_EMAIL}
