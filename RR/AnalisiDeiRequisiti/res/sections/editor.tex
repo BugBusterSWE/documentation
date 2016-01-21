@@ -1,6 +1,6 @@
 \section{Editor}
 
-Di seguito vengono elencati i casi d'uso per l'editor.
+Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'editor.
 
 \subsection{Casi d'Uso}
 
@@ -25,13 +25,15 @@ Di seguito vengono elencati i casi d'uso per l'editor.
         \hline
         
         \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
-        \textbf{Scopo e Descrizione} & L'utente visualizza l'interfaccia dell'Editor tramite cui puo\` svolgere operazioni di importazione di \glossaryItem{DSL} esistenti, manipolazione dei \glossaryItem{DSL Element} e salvataggio del \glossaryItem{DSL} corrente
+        \textbf{Scopo e Descrizione} & L'utente visualizza l'interfaccia dell'editor tramite cui pu\`o svolgere operazioni di importazione di \glossaryItem{DSL} esistenti, manipolazione dei \glossaryItem{DSL Element} e salvataggio del \glossaryItem{DSL} corrente
         \\
-        \textbf{Precondizioni}  & L'applicazione dispone l'interfaccia grafica dell'Editor \\ 
+        \textbf{Precondizioni}  & L'applicazione apre l'interfaccia grafica dell'editor. \\ 
         
-        \textbf{Postcondizioni} & L'utente ha utilizzato l'editor ed ha eseguito le azioni volute \\ 
+        \textbf{Postcondizioni} & L'utente ha utilizzato l'editor ed ha eseguito le azioni volute. \\ 
         \textbf{Scenario principale} & 1. L'utilizzatore pu\`o importare un \glossaryItem{DSL} esistente. (UC-E1)
+        
 2. L'utente pu\`o manipolare un \glossaryItem{DSL Element}. (UC-E2)
+
 3. L'utente pu\`o salvare il \glossaryItem{DSL}. (UC-E3)
       \end{longtable}
       \egroup
@@ -79,17 +81,22 @@ Di seguito vengono elencati i casi d'uso per l'editor.
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2 - Manipolazione di un \glossaryItem{DSL Element}}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \glossaryItem{Owner} \\ 
         \textbf{Scopo e Descrizione} & L'utente pu\`o creare, manipolare o rimuovere un \glossaryItem{DSL Element} all'interno dell'editor. \\ 
         
         \textbf{Precondizioni}  & L'utente visualizza l'editor. \\ 
         
         \textbf{Postcondizioni} & L'utente ha eseguito le sue operazioni sul \glossaryItem{DSL Element} con successo. \\ 
         \textbf{Scenario Principale} & 1. L'utente pu\`o aggiungere un \glossaryItem{DSL Element}. (UC-E2.0.1)
+        
 2. L'attore pu\`o compilare i campi informativi del \glossaryItem{DSL Element}. (UC-E2.0.2)
+
 3. L'utente pu\`o collegare un \glossaryItem{DSL Dependent Element} ad un attributo. (UC-E2.0.3)
+
 4. L'utente ha la possibilit\`a di rimuovere un \glossaryItem{DSL Element}. (UC-E2.0.4)
+
 5. L'utente ha la possibilit\`a di associare un \glossaryItem{Function Element} al \glossaryItem{DSL Element}. (UC-E2.0.5)
+
 6. L'utente ha la possibilit\`a di accedere ai campi opzionali di un \glossaryItem{DSL Element}. (UC-E2.0.6)
       \end{longtable}
       \egroup
@@ -108,7 +115,7 @@ Di seguito vengono elencati i casi d'uso per l'editor.
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.0.1 - Aggiunta di un \glossaryItem{DSL Element}}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \glossaryItem{Owner} \\ 
         \textbf{Scopo e Descrizione} & L'utente ha la possibilità di aggiungere un \glossaryItem{DSL Element} e di deciderne il tipo. \\ 
         
         \textbf{Precondizioni}  & L'utente visualizza l'editor. \\ 
@@ -130,7 +137,7 @@ Di seguito vengono elencati i casi d'uso per l'editor.
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.0.2 - Compilazione campi del \glossaryItem{DSL Element}}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \glossaryItem{Owner} \\ 
         \textbf{Scopo e Descrizione} & L'utente ha la possibilit\`a di compilare i campi informativi del \glossaryItem{DSL Element}. \\ 
         
         \textbf{Precondizioni}  & L'utente visualizza un \glossaryItem{DSL Element}. \\ 
@@ -152,10 +159,10 @@ Di seguito vengono elencati i casi d'uso per l'editor.
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.0.3 - Associare un \glossaryItem{DSL Dependent Element} ad un attributo}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \glossaryItem{Owner} \\ 
         \textbf{Scopo e Descrizione} & L'utente ha la possibilit\`a di associare un \glossaryItem{DSL Dependent Element} ad un attributo. \\ 
         
-        \textbf{Precondizioni}  & L'utente ha a seleziona un attributo e un \glossaryItem{DSL Dependent Element} da associare. \\ 
+        \textbf{Precondizioni}  & L'utente seleziona un attributo e un \glossaryItem{DSL Dependent Element} da associare. \\ 
         
         \textbf{Postcondizioni} & L'utente ha collegato con successo l'attributo e il \glossaryItem{DSL Dependent Element}.
       \end{longtable}
@@ -173,7 +180,7 @@ Di seguito vengono elencati i casi d'uso per l'editor.
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.0.4 - Rimuovere un \glossaryItem{DSL Element}}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \glossaryItem{Owner} \\ 
         \textbf{Scopo e Descrizione} & \`E possibile rimuovere un \glossaryItem{DSL Element}. \\ 
         
         \textbf{Precondizioni}  & L'utente sta visualizzando l'editor e il \glossaryItem{DSL Element} che vuole eliminare \`e presente nell'interfaccia dell'editor. \\ 
@@ -194,7 +201,7 @@ Di seguito vengono elencati i casi d'uso per l'editor.
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.0.5 - Associare un \glossaryItem{Function Element} ad un attributo}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \glossaryItem{Owner} \\ 
         \textbf{Scopo e Descrizione} & L'utente ha la possibilit\`a di associare un \glossaryItem{Function Element} ad un attributo selezionabile di un \glossaryItem{DSL Element}. \\ 
         
         \textbf{Precondizioni}  & L'utente visualizza il \glossaryItem{Function Element} e il \glossaryItem{DSL Element} a cui associarlo. \\ 
@@ -217,8 +224,8 @@ Di seguito vengono elencati i casi d'uso per l'editor.
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.0.6 - Accedere ai campi opzionali di un \glossaryItem{DSL Element}}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
-        \textbf{Scopo e Descrizione} & L'utente decide di poter aver accesso ai campi opzionali di un \glossaryItem{DSL Element} e a renderli modificabili. \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \glossaryItem{Owner} \\ 
+        \textbf{Scopo e Descrizione} & L'utente ha accesso ai campi opzionali di un \glossaryItem{DSL Element} e a vuole renderli modificabili. \\ 
         
         \textbf{Precondizioni}  & L'utente sta visualizzando uno specifico \glossaryItem{DSL Element} con campi opzionali. \\ 
         
@@ -249,14 +256,15 @@ Di seguito vengono elencati i casi d'uso per l'editor.
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.1 - Manipolazione di un \glossaryItem{Collection Element}}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \glossaryItem{Owner} \\ 
         \textbf{Scopo e Descrizione} & L'utente pu\`o creare, manipolare o rimuovere un \glossaryItem{Collection Element} all'interno dell'editor. \\ 
         
         \textbf{Precondizioni}  & L'utente sta visualizzando l'editor. \\ 
         
         \textbf{Postcondizioni} & L'utente ha manipolato il \glossaryItem{Collection Element}. \\ 
-        \textbf{Scenario principale} & 1. L'utente pu\`o associare un \glossaryItem{Index Element} (UC-E2.1.1)
-2. L'utente pu\`o associare un \glossaryItem{Document Element} (UC-E2.1.2) \\
+        \textbf{Scenario principale} & 1. L'utente pu\`o associare un \glossaryItem{Index Element}. (UC-E2.1.1)
+        
+2. L'utente pu\`o associare un \glossaryItem{Document Element}. (UC-E2.1.2) \\
 \end{longtable}
       \egroup
     \end{center}
@@ -274,12 +282,12 @@ Di seguito vengono elencati i casi d'uso per l'editor.
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.1.1 - Associare un \glossaryItem{Index Element} ad un \glossaryItem{Collection Element}}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
-        \textbf{Scopo e Descrizione} & L'utente ha la possibilit\`a di associare un \glossaryItem{Index Element} all'attributo \glossaryItem{Index} del \glossaryItem{Collection Element} \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \glossaryItem{Owner} \\ 
+        \textbf{Scopo e Descrizione} & L'utente ha la possibilit\`a di associare un \glossaryItem{Index Element} all'attributo \glossaryItem{Index} del \glossaryItem{Collection Element}. \\ 
         
-        \textbf{Precondizioni}  & Il \glossaryItem{Collection Element} a cui associare l'\glossaryItem{Index Element} \`e visualizzato nell'editor \\ 
+        \textbf{Precondizioni}  & Il \glossaryItem{Collection Element} a cui associare l'\glossaryItem{Index Element} \`e visualizzato nell'editor. \\ 
         
-        \textbf{Postcondizioni} & L'\glossaryItem{Index Element} \`e stato associato ad un \glossaryItem{Collection Element}
+        \textbf{Postcondizioni} & L'\glossaryItem{Index Element} \`e stato associato ad un \glossaryItem{Collection Element}.
       \end{longtable}
       \egroup
     \end{center}
@@ -298,7 +306,7 @@ Di seguito vengono elencati i casi d'uso per l'editor.
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.1.2 - Associare un \glossaryItem{Document Element} ad un \glossaryItem{Collection Element}}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \glossaryItem{Owner} \\ 
         \textbf{Scopo e Descrizione} & L'utente ha la possibilit\`a di associare un \glossaryItem{Document Element} all'attributo \glossaryItem{Show} del \glossaryItem{Collection Element}. \\ 
         
         \textbf{Precondizioni}  & Il \glossaryItem{Collection Element} a cui associare il \glossaryItem{Document Element} \`e visualizzato nell'editor.  \\ 
@@ -327,7 +335,7 @@ Di seguito vengono elencati i casi d'uso per l'editor.
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.2 - Manipolare un \glossaryItem{Function Element}}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \glossaryItem{Owner} \\ 
         \textbf{Scopo e Descrizione} & Viene data la possibilit\`a all'utente di creare 
             un \glossaryItem{Function Element} collegabile ad un attributo del \glossaryItem{DSL Element}. \\ 
         
@@ -335,8 +343,10 @@ Di seguito vengono elencati i casi d'uso per l'editor.
         
         \textbf{Postcondizioni} & L'utente ha creato, modificato o rimosso uno specifico \glossaryItem{Function Element}. \\ 
         \textbf{Scenario principale} & 1. L'utente ha la possibilit\`a di definire un \glossaryItem{Function Element} (UC-E2.2.1)
-2. L'utente ha la possibilit\`a di salvare \glossaryItem{Function Element} (UC-E2.2.2)
-3. L'utente ha la possibilit\`a di importare \glossaryItem{Function Element} (UC-E2.2.3)  \\
+        
+2. L'utente ha la possibilit\`a di salvare \glossaryItem{Function Element}. (UC-E2.2.2)
+
+3. L'utente ha la possibilit\`a di importare \glossaryItem{Function Element}. (UC-E2.2.3)  \\
       \end{longtable}
       \egroup
     \end{center}
@@ -352,7 +362,7 @@ Di seguito vengono elencati i casi d'uso per l'editor.
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.2.1 - Definizione di un \glossaryItem{Function Element}}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \glossaryItem{Owner} \\ 
         \textbf{Scopo e Descrizione} & L'utente ha la possibilit\`a di definire all'interno di un \glossaryItem{Function Element} una funzione nella sintassi del \glossaryItem{DSL}. \\ 
         
         \textbf{Precondizioni}  & L'utente sta visualizzando il form di compilazione di un \glossaryItem{Function Element}. \\ 
@@ -373,7 +383,7 @@ Di seguito vengono elencati i casi d'uso per l'editor.
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.2.2 - Salvataggio di un \glossaryItem{Function Element}}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \glossaryItem{Owner} \\ 
         \textbf{Scopo e Descrizione} & L'utente ha la possibilit\`a di salvare il \glossaryItem{Function Element} creato. \\ 
         
         \textbf{Precondizioni}  & L'utente ha inserito un \glossaryItem{Function Element} valido \\ 
@@ -396,7 +406,7 @@ Di seguito vengono elencati i casi d'uso per l'editor.
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.2.3 - Importare un \glossaryItem{Function Element}}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \glossaryItem{Owner} \\ 
         \textbf{Scopo e Descrizione} & Il sistema permette di importare un \glossaryItem{Function Element} precedentemente definito.\\ 
         
         \textbf{Precondizioni}  & Il sistema fornisce i \glossaryItem{Function Element} salvati nel sistema. \\ 
@@ -425,15 +435,18 @@ Di seguito vengono elencati i casi d'uso per l'editor.
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.3 - Manipolare un \glossaryItem{Index Element}}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \glossaryItem{Owner} \\ 
         \textbf{Scopo e Descrizione} & L'utente ha la possibilit\`a di aggiungere, modificare o eliminare un \glossaryItem{Index Element} \\ 
         
         \textbf{Precondizioni}  & L'utente \`e all'interno dell'editor. \\ 
         
         \textbf{Postcondizioni} & \`E stato manipolato l'\glossaryItem{Index Element} secondo le opzioni indicate dall'utente. \\ 
         \textbf{Scenario Principale} & 1. L'utente pu\`o aggiungere un riferimento ad un \glossaryItem{Column Element}. (UC-E2.6.1)
+        
 2. L'utente pu\`o associare un \glossaryItem{Input Element}. (UC-E2.8.2)
+
 3. L'utente pu\`o aggiungere/rimuovere un attributo \glossaryItem{Column}. (UC-E2.3.1)
+
 4. L'utente ha la possibilit\'a di associare un \glossaryItem{Column Element}. (UC-E2.3.2)
       \end{longtable}
       \egroup
@@ -450,7 +463,7 @@ Di seguito vengono elencati i casi d'uso per l'editor.
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.3.1 - Aggiungere/Rimuovere un attributo \glossaryItem{Column}}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \glossaryItem{Owner} \\ 
         \textbf{Scopo e Descrizione} & L'utente ha la possibilit\`a di rimuovere o aggiungere dall'\glossaryItem{Index Element} un attributo \glossaryItem{Column}. \\ 
         
         \textbf{Precondizioni}  &  L'utente \`e all'interno dell'editor e sta visualizzando un \glossaryItem{Index Element} da modificare. \\ 
@@ -471,7 +484,7 @@ Di seguito vengono elencati i casi d'uso per l'editor.
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.3.2 - Associare un \textit{\glossaryItem{Column Element}} ad un \glossaryItem{Index Element}}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \glossaryItem{Owner} \\ 
         \textbf{Scopo e Descrizione} & L'utente ha la possibilit\`a di associare un \glossaryItem{Column Element} ad un attributo \glossaryItem{Column} di un \glossaryItem{Index Element}. \\ 
         
         \textbf{Precondizioni}  & L'utente visualizza un \glossaryItem{Index Element} su cui associare il \glossaryItem{Column Element}. \\ 
@@ -494,7 +507,7 @@ Di seguito vengono elencati i casi d'uso per l'editor.
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.4 - Manipolazione di un \glossaryItem{Column Element}}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, membro, Admin, Owner \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, membro, Admin, \glossaryItem{Owner} \\ 
         \textbf{Scopo e Descrizione} & L'utente ha la possibilit\`a di aggiungere, rimuovere o modificare un \glossaryItem{Column Element} \\ 
         
         \textbf{Precondizioni}  & L'editor \`e visualizzato dall'utente. \\ 
@@ -516,7 +529,7 @@ Di seguito vengono elencati i casi d'uso per l'editor.
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.5 - Manipolazione di \glossaryItem{Row Element}}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \glossaryItem{Owner} \\ 
         \textbf{Scopo e Descrizione} & L'utente ha la possibilit\`a di aggiungere, rimuovere o modificare un \glossaryItem{Row Element} \\ 
         
         \textbf{Precondizioni}  & L'editor \`e visualizzato dall'utente. \\ 
@@ -545,15 +558,18 @@ Di seguito vengono elencati i casi d'uso per l'editor.
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.6 - Manipolazione un \glossaryItem{Document Element}}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
-        \textbf{Scopo e Descrizione} & L'editor offre la possibilit\`a di manipolare un \glossaryItem{Document Element} agganciandogli altri elementi \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \glossaryItem{Owner} \\ 
+        \textbf{Scopo e Descrizione} & L'editor offre la possibilit\`a di manipolare un \glossaryItem{Document Element} agganciandogli altri elementi. \\ 
         
-        \textbf{Precondizioni}  & L'utente visualizza l'editor \\ 
+        \textbf{Precondizioni}  & L'utente visualizza l'editor. \\ 
         
-        \textbf{Postcondizioni} & Viene generato l'elemento Document nel \glossaryItem{DSL} \\ 
+        \textbf{Postcondizioni} & Viene generato l'elemento Document nel \glossaryItem{DSL}. \\ 
         \textbf{Scenario Principale} & 1. L'utente ha la possibilit\`a di aggiungere un riferimento ad un \glossaryItem{Column Element}. (UC-E2.6.1)
+        
 2. L\`utente pu\`o aggiungere/aimuovere un attributo \glossaryItem{Row}. (UC-E2.6.2)
+
 3. L\`utente pu\`o associare un \glossaryItem{Row Element}. (UC-E2.6.3)
+
 4. L\`utente pu\`o associare agganciare un \glossaryItem{Action Element}. (UC-E2.6.4) 
       \end{longtable}
       \egroup
@@ -570,10 +586,10 @@ Di seguito vengono elencati i casi d'uso per l'editor.
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.6.1 - Aggiungere un riferimento ad un \glossaryItem{Column Element}}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \glossaryItem{Owner} \\ 
         \textbf{Scopo e Descrizione} & Si da la possibilit\`a di aggiungere una \glossaryItem{associazione per riferimento} tra il \glossaryItem{Column Element} e l'attributo \glossaryItem{Populate} del \glossaryItem{Document Element}. \\ 
         
-        \textbf{Precondizioni}  & Il \glossaryItem{Document Element} esiste nella sessione corrente dell'editor \\ 
+        \textbf{Precondizioni}  & Il \glossaryItem{Document Element} esiste nella sessione corrente dell'editor. \\ 
         
         \textbf{Postcondizioni} & Il sistema aggiunge un riferimento tra il \glossaryItem{Column Element} e il \glossaryItem{Document Element}.
       \end{longtable}
@@ -593,12 +609,12 @@ Di seguito vengono elencati i casi d'uso per l'editor.
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.6.2 - Aggiungere/Rimuovere un attributo \glossaryItem{Row}}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \glossaryItem{Owner} \\ 
         \textbf{Scopo e Descrizione} & Il sistema dispone la possibilit\`a di aggiungere o rimuovere un attributo \glossaryItem{Row} da un \glossaryItem{Document Element}. \\ 
         
         \textbf{Precondizioni}  & Il \glossaryItem{Document Element} su cui operare l'aggiunta/rimozione di un attributo \glossaryItem{Row} esiste nella sessione corrente dell'editor. \\ 
         
-        \textbf{Postcondizioni} & \`E stata manipolata (aggiunta o rimossa) un attributo \glossaryItem{Row} all'interno del \glossaryItem{Document Element}.
+        \textbf{Postcondizioni} & \`E stato manipolato (aggiunto o rimosso) un attributo \glossaryItem{Row} all'interno del \glossaryItem{Document Element}.
       \end{longtable}
       \egroup
     \end{center}
@@ -614,7 +630,7 @@ Di seguito vengono elencati i casi d'uso per l'editor.
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.6.3 - Associare un \glossaryItem{Row Element} ad un attributo \glossaryItem{Row}}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \glossaryItem{Owner} \\ 
         \textbf{Scopo e Descrizione} & Il sistema dispone la funzionalit\`a di aggiungere un'associazione tra un \glossaryItem{Row Element} e un attributo \glossaryItem{Row} di uno specifico \glossaryItem{Document Element}.  \\ 
         
         \textbf{Precondizioni}  & Il \glossaryItem{Document Element} e il \glossaryItem{Row Element} decisi dall'utente esistono nella sessione corrente dell'editor. \\ 
@@ -635,7 +651,7 @@ Di seguito vengono elencati i casi d'uso per l'editor.
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.6.4 - Associare un \glossaryItem{Action Element}}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \glossaryItem{Owner} \\ 
         \textbf{Scopo e Descrizione} & Il sistema dispone la funzionalit\`a di associare un \glossaryItem{Action Element} ad un attributo \glossaryItem{Row} di un \glossaryItem{Document Element}. \\ 
         
         \textbf{Precondizioni}  & Il \glossaryItem{Document Element} con il relativo attributo \glossaryItem{Row} esistono nella sessione corrente. \\ 
@@ -664,15 +680,15 @@ Di seguito vengono elencati i casi d'uso per l'editor.
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.7 - Manipolazione di un \glossaryItem{Input Element}}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \glossaryItem{Owner} \\ 
         \textbf{Scopo e Descrizione} & Il sistema da la possibilit\`a all'utente di modificare un \glossaryItem{Input Element} agendo  sui suoi attributi.  \\ 
         
         \textbf{Precondizioni}  & L'utente si trova in una sessione dell'editor valida. \\ 
         
         \textbf{Postcondizioni} & Il sistema ha eseguito le operazioni indicate dall'utente. \\ 
-        \textbf{Scenario Principale} & 1. L\`utente pu\`o creare/eliminare un nuovo attributo per l'\glossaryItem{Input Element}. (UC-E2.7.1)
-2. L\`utente pu\`o modificare un attributo dell'\glossaryItem{Input Element}. (UC-E2.7.2)
-3. L\`utente pu\`o aggiungere ad un attributo dei sottoattributi. (UC-E2.7.3)
+        \textbf{Scenario Principale} & 1. L'utente pu\`o creare/eliminare un nuovo attributo per l'\glossaryItem{Input Element}. (UC-E2.7.1)
+2. L'utente pu\`o modificare un attributo dell'\glossaryItem{Input Element}. (UC-E2.7.2)
+3. L'utente pu\`o aggiungere ad un attributo dei sottoattributi. (UC-E2.7.3)
       \end{longtable}
       \egroup
     \end{center}
@@ -688,10 +704,10 @@ Di seguito vengono elencati i casi d'uso per l'editor.
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.7.1 - Creare/Eliminare un nuovo attributo dell'\glossaryItem{Input Element}}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \glossaryItem{Owner} \\ 
         \textbf{Scopo e Descrizione} & Il sistema fornisce le operazioni di creazione ed eliminazione di un attributo di un \glossaryItem{Input Element} selezionato. \\ 
         
-        \textbf{Precondizioni}  & L'utente si deve riferire a un \glossaryItem{Input Element} presente nella sessione corrente dell'editor. \\ 
+        \textbf{Precondizioni}  & L'utente si è riferito a un \glossaryItem{Input Element} presente nella sessione corrente dell'editor. \\ 
         
         \textbf{Postcondizioni} & Il sistema agisce sull'\glossaryItem{Input Element} aggiungendo o rimuovendo un attributo.
       \end{longtable}
@@ -709,7 +725,7 @@ Di seguito vengono elencati i casi d'uso per l'editor.
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.7.2 - Modificare un attributo dell'\glossaryItem{Input Element}}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \glossaryItem{Owner} \\ 
         \textbf{Scopo e Descrizione} & L'utente ha la possibilit\`a di modificare la chiave o il valore di un attributo dell'\glossaryItem{Input Element}. \\ 
         
         \textbf{Precondizioni}  & L'\glossaryItem{Input Element} selezionato dall'utente possiede l'attributo da modificare. \\ 
@@ -730,7 +746,7 @@ Di seguito vengono elencati i casi d'uso per l'editor.
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.7.3 - Aggiunta di sottoattributi ad un attributo}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \glossaryItem{Owner} \\ 
         \textbf{Scopo e Descrizione} & L'utente ha la possibilit\`a di poter definire strutture complesse associate ad un attributo. \\ 
         
         \textbf{Precondizioni}  & L'\glossaryItem{Input Element} che possiede l'attributo da espandere esiste nella sessione corrente dell'editor. \\ 
@@ -759,13 +775,14 @@ Di seguito vengono elencati i casi d'uso per l'editor.
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.8 - Manipolazione di un \glossaryItem{Cell Element}}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \glossaryItem{Owner} \\ 
         \textbf{Scopo e Descrizione} & L'applicazione fornisce i metodi per definire un \glossaryItem{Cell Element} valido. \\ 
         
         \textbf{Precondizioni}  & L'utente sta visualizzando l'editor. \\ 
         
         \textbf{Postcondizioni} & Il sistema espone il \glossaryItem{Cell Element} valido appena definito. \\ 
         \textbf{Scenario Principale} &  1. Selezionare il tipo del dato associato al \glossaryItem{Cell Element}. (UC-E2.8.1)
+        
 2. L'utente pu\`o associare un \glossaryItem{Input Element}. (UC-E2.8.2)
       \end{longtable}
       \egroup
@@ -785,12 +802,16 @@ Di seguito vengono elencati i casi d'uso per l'editor.
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.8.1 - Selezionare il tipo del dato associato al \glossaryItem{Cell Element}}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \glossaryItem{Owner} \\ 
         \textbf{Scopo e Descrizione} & L'utente pu\`o indicare il tipo di dato da visualizzare tra:
 a. string;
+
 b. number;
+
 c. link;
+
 d. image;
+
 e. date. \\ 
         
         \textbf{Precondizioni}  & Il \glossaryItem{Cell Element} su cui si vuole operare esiste nella sessione attiva dell'editor. \\ 
@@ -811,7 +832,7 @@ e. date. \\
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.8.2 - Associare un \glossaryItem{Input Element} ad un \glossaryItem{Cell Element}}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \glossaryItem{Owner} \\ 
         \textbf{Scopo e Descrizione} & Il sistema dispone l'operazione di collegamento tra un \glossaryItem{Input Element} e la sua rappresentazione tramite \glossaryItem{Cell Element}. \\ 
         
         \textbf{Precondizioni}  & L'\glossaryItem{Input Element} e il \glossaryItem{Cell Element} da collegare esistono nella sessione corrente dell'editor. \\ 
@@ -840,13 +861,14 @@ e. date. \\
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.9 - Manipolazione di un \glossaryItem{Dashboard Element}}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \glossaryItem{Owner} \\ 
         \textbf{Scopo e Descrizione} & L'utente ha la possibilit\`a di manipolare un \glossaryItem{Dashboard Element}. \\ 
         
         \textbf{Precondizioni}  & L'utente sta visualizzando l'editor. \\ 
         
         \textbf{Postcondizioni} & Il sistema ha memorizzato una definizione valida per il \glossaryItem{Dashboard Element}. \\ 
         \textbf{Scenario Principale} & 1. L'utente pu\`o associare un \glossaryItem{DashRow Element} ad un \glossaryItem{Dashboard Element}. (UC-E2.9.1)
+        
 2. L'utente pu\`o aggiungere/rimuovere un attributo \glossaryItem{Row} dal \glossaryItem{Dashboard Element}. (UC-E2.9.2)
       \end{longtable}
       \egroup
@@ -865,10 +887,10 @@ e. date. \\
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.9.1 - Associare un \glossaryItem{DashRow Element} ad un \glossaryItem{Dashboard Element}}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \glossaryItem{Owner} \\ 
         \textbf{Scopo e Descrizione} & Permette di definire la struttura di una \glossaryItem{Row} e di legarla a una \glossaryItem{Dashboard}. \\ 
         
-        \textbf{Precondizioni}  & il \glossaryItem{Dashboard Element} e il \glossaryItem{DashRow Element} da collegare esistono nella sessione corrente dell'editor. \\ 
+        \textbf{Precondizioni}  & Il \glossaryItem{Dashboard Element} e il \glossaryItem{DashRow Element} da collegare esistono nella sessione corrente dell'editor. \\ 
         
         \textbf{Postcondizioni} & Il sistema ha memorizzato il collegamento tra l'attributo \glossaryItem{Row} del \glossaryItem{Dashboard Element} e il \glossaryItem{DashRow Element}.
       \end{longtable}
@@ -886,8 +908,8 @@ e. date. \\
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.9.2 - Aggiungere/Rimuovere un attributo \glossaryItem{Row} dal \glossaryItem{Dashboard Element}}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
-        \textbf{Scopo e Descrizione} & L'utente pu\`o definire una nuovo attributo \glossaryItem{Row} all'interno della \glossaryItem{Dashboard} \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \glossaryItem{Owner} \\ 
+        \textbf{Scopo e Descrizione} & L'utente pu\`o definire una nuovo attributo \glossaryItem{Row} all'interno della \glossaryItem{Dashboard}. \\ 
         
         \textbf{Precondizioni}  & Il \glossaryItem{Dashboard Element} esiste nella sessione corrente dell'editor. \\ 
         
@@ -917,14 +939,16 @@ e. date. \\
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.10 - Manipolazione di un \glossaryItem{DashRow Element}}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \glossaryItem{Owner} \\ 
         \textbf{Scopo e Descrizione} & Il sistema fornisce i metodi necessari alla manipolazione di un \glossaryItem{DashRow Element}. \\ 
         
         \textbf{Precondizioni}  & Il \glossaryItem{DashRow Element} da manipolare esiste nella sessione corrente dell'editor. \\ 
         
         \textbf{Postcondizioni} & Il sistema ha memorizzato la configurazione del \glossaryItem{DashRow Element}. \\ 
         \textbf{Scenario Principale} & 1. L'utente pu\`o associare un \glossaryItem{Cell Element} al \glossaryItem{DashRow Element}. (UC-E2.10.1)
+        
 2. L'utente pu\`o associare un \glossaryItem{Document Element} al \glossaryItem{DashRow Element}. (UC-E2.10.2)
+
 3. L'utente pu\`o associare un \glossaryItem{Collection Element} al \glossaryItem{DashRow Element}. (UC-E2.10.3)
       \end{longtable}
       \egroup
@@ -941,7 +965,7 @@ e. date. \\
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.10.1 - Associare un \glossaryItem{Cell Element} al \glossaryItem{DashRow Element}}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \glossaryItem{Owner} \\ 
         \textbf{Scopo e Descrizione} & Il sistema da la possibilit\`a di associare un \glossaryItem{Cell Element} ad un \glossaryItem{DashRow Element}. \\ 
         
         \textbf{Precondizioni}  & Il \glossaryItem{Cell Element} e il \glossaryItem{DashRow Element} da associare esistono nella sessione corrente dell'editor. \\ 
@@ -962,7 +986,7 @@ e. date. \\
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.10.2 - Associare un \glossaryItem{Document Element} al \glossaryItem{DashRow Element}}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \glossaryItem{Owner} \\ 
         \textbf{Scopo e Descrizione} & Il sistema da la possibilit\`a di associare un \glossaryItem{Document Element} ad un \glossaryItem{DashRow Element}. \\ 
         
         \textbf{Precondizioni}  & Il \glossaryItem{Document Element} e il \glossaryItem{DashRow Element} esistono nella sessione corrente dell'editor. \\ 
@@ -983,7 +1007,7 @@ e. date. \\
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.10.3 - Associare un \glossaryItem{Collection Element} ad un \glossaryItem{DashRow Element}}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \glossaryItem{Owner} \\ 
         \textbf{Scopo e Descrizione} & Il sistema da la possibilit\`a di associare un \glossaryItem{Collection Element} ad un \glossaryItem{DashRow Element}. \\ 
         
         \textbf{Precondizioni}  & Il \glossaryItem{Collection Element} e il \glossaryItem{DashRow Element} esistono nella sessione corrente dell'editor. \\ 
@@ -1012,13 +1036,14 @@ e. date. \\
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.11 - Definire un \glossaryItem{Action Element}}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \glossaryItem{Owner} \\ 
         \textbf{Scopo e Descrizione} & Il sistema fornisce le modalit\`a di definizione di un \glossaryItem{Action Element}. \\ 
         
         \textbf{Precondizioni}  & L'utente sta visualizzando l'editor. \\ 
         
         \textbf{Postcondizioni} &  Il sistema ha registrato la definizione dell'\glossaryItem{Action Element}. \\ 
         \textbf{Scenario Principale} & 1. L'utente seleziona un input per l'\glossaryItem{Action Element}. (UC-E2.11.1)
+        
 2. L'utente seleziona il tipo d'azione per l'\glossaryItem{Action Element}. (UC-E2.11.2) 
       \end{longtable}
       \egroup
@@ -1035,7 +1060,7 @@ e. date. \\
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.11.1 - Selezione input per \glossaryItem{Action Element}}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \glossaryItem{Owner} \\ 
         \textbf{Scopo e Descrizione} & L'utente ha la possibilit\`a di selezionare l'input per l'\glossaryItem{Action Element}. \\ 
         
         \textbf{Precondizioni}  & L'\glossaryItem{Action Element} su cui operare esiste nella sessione corrente dell'editor. \\ 
@@ -1057,8 +1082,8 @@ e. date. \\
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.11.2 - Selezione tipo d'azione per l'\glossaryItem{Action Element}}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
-        \textbf{Scopo e Descrizione} & L'utente pu\`o definire l'azione legata all'\glossaryItem{Action Element} \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \glossaryItem{Owner} \\ 
+        \textbf{Scopo e Descrizione} & L'utente pu\`o definire l'azione legata all'\glossaryItem{Action Element}. \\ 
         
         \textbf{Precondizioni}  & L'azione e l'\glossaryItem{Action Element} da collegare sono presenti nella sessione attiva dell'editor. \\ 
         
@@ -1089,7 +1114,7 @@ e. date. \\
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E3 - Salvataggio \glossaryItem{DSL}}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \glossaryItem{Owner} \\ 
         \textbf{Scopo e Descrizione} & Il sistema fornisce una modalit\`a di salvataggio per i \glossaryItem{DSL} definiti da un utente. \\ 
         
         \textbf{Precondizioni}  & L'utente visualizza l'editor e ha creato un \glossaryItem{DSL} valido da salvare. \\ 
@@ -1111,8 +1136,8 @@ e. date. \\
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E3.1 - Richiedere il salvataggio del \glossaryItem{DSL}}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
-        \textbf{Scopo e Descrizione} & L'utente chiede all'applicazione di eseguire le operazioni necessarie affinch\`e il \glossaryItem{DSL} venga salvato ed eseguito con successo. \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \glossaryItem{Owner} \\ 
+        \textbf{Scopo e Descrizione} & L'utente chiede all'applicazione di eseguire le operazioni necessarie affinché il \glossaryItem{DSL} venga salvato ed eseguito con successo. \\ 
         
         \textbf{Precondizioni}  & L'utente visualizza l'editor e ha definito un \glossaryItem{DSL}\\ 
         
@@ -1131,7 +1156,7 @@ e. date. \\
         \hline
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E3.2 - Validazione del \glossaryItem{DSL}}} \\ 
         \hline
-        
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \glossaryItem{Owner} \\ 
         \textbf{Scopo e Descrizione} & Il sistema esegue i controlli di validazione per il \glossaryItem{DSL} creato. \\ 
         
         \textbf{Precondizioni}  & L'utente ha fatto richiesta di salvataggio del \glossaryItem{DSL} \\ 
@@ -1154,12 +1179,12 @@ e. date. \\
         \hline
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E3.3 - Memorizzazione del \glossaryItem{DSL}}} \\ 
         \hline
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \glossaryItem{Owner} \\ 
+         \textbf{Scopo e Descrizione} &  Il sistema esegue la procedura di memorizzazione del \glossaryItem{DSL}. \\ 
         
-         \textbf{Scopo e Descrizione} &  il sistema esegue la procedura di memorizzazione del \glossaryItem{DSL} \\ 
+        \textbf{Precondizioni}  & Il \glossaryItem{DSL} in input deve essere valido. \\ 
         
-        \textbf{Precondizioni}  & Il \glossaryItem{DSL} in input deve essere valido \\ 
-        
-        \textbf{Postcondizioni} & Il \glossaryItem{DSL} \`e stato correttamente memorizzato al sistema \\ 
+        \textbf{Postcondizioni} & Il \glossaryItem{DSL} \`e stato correttamente memorizzato nel sistema. \\ 
       \end{longtable}
       \egroup
     \end{center}
@@ -1174,10 +1199,10 @@ e. date. \\
         \hline
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E3.4 - \glossaryItem{DSL} non `e valido}} \\ 
         \hline
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \glossaryItem{Owner} \\ 
+        \textbf{Scopo e Descrizione} & Il sistema fornisce un messaggio di errore che evidenzia i punti del \glossaryItem{DSL} non validi. \\ 
         
-        \textbf{Scopo e Descrizione} & Il sistema fornisce un messaggio di errore che evidenzia i punti del \glossaryItem{DSL} non validi \\ 
-        
-        \textbf{Precondizioni}  & Il \glossaryItem{DSL} non \`e corretto \\ 
+        \textbf{Precondizioni}  & Il \glossaryItem{DSL} non \`e corretto. \\ 
         
         \textbf{Postcondizioni} & L'utente \`e stato avvisato tramite un messaggio della presenza di errori nel \glossaryItem{DSL}.
       \end{longtable}
