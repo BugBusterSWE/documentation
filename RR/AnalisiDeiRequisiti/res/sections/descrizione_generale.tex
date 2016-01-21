@@ -4,24 +4,24 @@
 \subsection{Funzione di Prodotto}
 
 \subsection{Entit\`a}
-Le entit\`a (e le relazioni esistenti tra di loro) definite nel modello SaaS di MaaS vengono esposte di seguito. La loro descrizione \`e stata utile nell'identificazione delle varie tipologie di attori nella trattazione dei casi d'uso.
+Le entit\`a (e le relazioni esistenti tra di loro) definite nel modello \glossaryItem{SaaS} di \glossaryItem{MaaS} vengono esposte di seguito. La loro descrizione \`e stata utile nell'identificazione delle varie tipologie di attori per la trattazione dei casi d'uso.
 \begin{description}
 	\item[\glossaryItem{Company}] \hfill \\\\
-	Una \glossaryItem{Company} \`e un'entit\`a in relazione con gli utenti: un insieme di utenti appartiene a una \glossaryItem{Company} e ciascun utente deve appartenere a una \glossaryItem{Company}.
+	Una \glossaryItem{Company} \`e un'entit\`a in relazione con gli utenti: un insieme di utenti appartiene a una \glossaryItem{Company} e ciascun utente deve appartenere a una \glossaryItem{Company};
 	\item[Utente] \hfill \\\\
-	Ogni utente appartenente a una \glossaryItem{Company} ha un ruolo; ciascun ruolo pu\`o svolgere diverse funzioni.	
+	Ogni utente appartenente ad una \glossaryItem{Company} ha un ruolo; a ciascun ruolo sono associate diverse funzioni.	
 	
 	I ruoli sono i seguenti: \glossaryItem{Owner}, \glossaryItem{Admin}, \glossaryItem{Member}, \glossaryItem{Guest}.	
-	Ciascuna funzione associata a un ruolo \`e pu\`o essere eseguita solo nell'ambito della \glossaryItem{Company} di appartenenza. \\\\
+	Ciascuna funzione associata ad un ruolo pu\`o essere eseguita solo nell'ambito della \glossaryItem{Company} di appartenenza. \\\\
 	\textbf{Ruoli e funzioni} \hfill \\\\
-		La seguente elencazione dei ruoli rispecchia la gerarchia individuata per gli attori nei casi d'uso.
+		Il seguente elenco dei ruoli rispecchia la gerarchia individuata per gli attori nei casi d'uso.
 		\begin{description}
 			\item[Guest] Pu\`o eseguire il \glossaryItem{DSL} a cui ha accesso.
 			\item[Member] Pu\`o eseguire, leggere e scrivere una specifica \glossaryItem{DSL} a cui ha accesso e crearne una nuova.
 			\item[Admin] Pu\`o eseguire qualsiasi operazione sul \glossaryItem{DSL} appartenente alla relativa \glossaryItem{Company}. Pu\`o invitare altri utenti, aggiungere/togliere/modificare ruoli e aggiungere/togliere/modificare permessi in lettura/scrittura al \glossaryItem{DSL}.
 			\item[Owner] Pu\`o eseguire le stesse funzioni dell'admin, non pu\`o essere eliminato e pu\`o impersonare altri utenti all-interno della \glossaryItem{Company}
 		\end{description}
-	\item[\glossaryItem{SuperAdmin}] \hfill \\\\
-	Il \glossaryItem{SuperAdmin} non appartiene a nessuna \glossaryItem{Company}. Questo ruolo \`e utile per gli amministratori di sistema, che hanno il compito di fornire supporto agli utenti.
+	\item[\glossaryItem{Super-Admin}] \hfill \\\\
+	Il \glossaryItem{Super-Admin} non appartiene a nessuna \glossaryItem{Company}. Questo ruolo \`e utile per gli amministratori di sistema, che hanno il compito di fornire supporto agli utenti.
 \end{description}
 \subsection{Vincoli}
