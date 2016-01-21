@@ -22,12 +22,6 @@ install:
     - sudo texlua install-getnonfreefonts
     - sudo getnonfreefonts-sys garamond
 
-before_script:
-    - ls -la /usr/share/texmf/tex/
-    - sudo mkdir -p /usr/share/texmf-texlive/tex/latex
-    - sudo cp -fr RR/Glossario/res/glossaries /usr/share/texmf-texlive/tex/latex/
-    - sudo cp -fr RR/Glossario/res/glossaries-italian/ /usr/share/texmf-texlive/tex/latex/
-
 script:
     - cd RR/NormeDiProgetto/ && latexmk -pdflatex='pdflatex -interaction=nonstopmode' -pdf && cd -
     - cd RR/StudioDiFattibilita/ && latexmk -pdflatex='pdflatex -interaction=nonstopmode' -pdf && cd -
