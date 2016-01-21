@@ -25,14 +25,14 @@ Di seguito vengono elencati i casi d'uso per l'editor.
         \hline
         
         \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
-        \textbf{Scopo e Descrizione} & L'utente visualizza l'interfaccia dell'Editor tramite cui puo\` svolgere operazioni di importazione di DSL esistenti, manipolazione dei DSL Element e salvataggio del DSL corrente
+        \textbf{Scopo e Descrizione} & L'utente visualizza l'interfaccia dell'Editor tramite cui puo\` svolgere operazioni di importazione di \glossaryItem{DSL} esistenti, manipolazione dei \glossaryItem{DSL Element} e salvataggio del \glossaryItem{DSL} corrente
         \\
         \textbf{Precondizioni}  & L'applicazione dispone l'interfaccia grafica dell'Editor \\ 
         
         \textbf{Postcondizioni} & L'utente ha utilizzato l'editor ed ha eseguito le azioni volute \\ 
-        \textbf{Scenario principale} & 1. L'utilizzatore pu\`o importare un DSL esistente. (UC-E1)
-2. L'utente pu\`o manipolare un DSL element. (UC-E2)
-3. L'utente pu\`o salvare il DSL. (UC-E3)
+        \textbf{Scenario principale} & 1. L'utilizzatore pu\`o importare un \glossaryItem{DSL} esistente. (UC-E1)
+2. L'utente pu\`o manipolare un \glossaryItem{DSL} element. (UC-E2)
+3. L'utente pu\`o salvare il \glossaryItem{DSL}. (UC-E3)
       \end{longtable}
       \egroup
     \end{center}
@@ -46,15 +46,15 @@ Di seguito vengono elencati i casi d'uso per l'editor.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E1 - Importazione di un DSL esistente}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E1 - Importazione di un \glossaryItem{DSL} esistente}} \\ 
         \hline
         
         \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
-        \textbf{Scopo e Descrizione} & L'utente pu\`o importare un DSL esistente tra quelli personali o quelli della Company. \\ 
+        \textbf{Scopo e Descrizione} & L'utente pu\`o importare un \glossaryItem{DSL} esistente tra quelli personali o quelli della Company. \\ 
         
-        \textbf{Precondizioni}  & L'applicazione fornisce la lista di DSL tra cui scegliere quello da importare. \\ 
+        \textbf{Precondizioni}  & L'applicazione fornisce la lista di \glossaryItem{DSL} tra cui scegliere quello da importare. \\ 
         
-        \textbf{Postcondizioni} & L'applicazione ha caricato con successo il DSL richiesto dall'utente.
+        \textbf{Postcondizioni} & L'applicazione ha caricato con successo il \glossaryItem{DSL} richiesto dall'utente.
       \end{longtable}
       \egroup
     \end{center} 
@@ -65,7 +65,7 @@ Di seguito vengono elencati i casi d'uso per l'editor.
     \begin{figure}[H]
       \begin{center}
         \includegraphics[width=12cm]{res/img/UCEditor/UC-E2.png}
-      \caption{UC-E2 - DSL Element}
+      \caption{UC-E2 - \glossaryItem{DSL Element}}
       \end{center} 
     \end{figure}    
     
@@ -76,21 +76,21 @@ Di seguito vengono elencati i casi d'uso per l'editor.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2 - Manipolazione di un DSL Element}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2 - Manipolazione di un \glossaryItem{DSL Element}}} \\ 
         \hline
         
         \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
-        \textbf{Scopo e Descrizione} & L'utente pu\`o creare, manipolare o rimuovere un DSL Element all'interno dell'editor. \\ 
+        \textbf{Scopo e Descrizione} & L'utente pu\`o creare, manipolare o rimuovere un \glossaryItem{DSL Element} all'interno dell'editor. \\ 
         
         \textbf{Precondizioni}  & L'utente visualizza l'editor. \\ 
         
-        \textbf{Postcondizioni} & L'utente ha eseguito le sue operazioni sul DSL Element con successo. \\ 
-        \textbf{Scenario Principale} & 1. L'utente pu\`o aggiungere un DSL Element. (UC-E2.0.1)
-2. L'attore pu\`o compilare i campi informativi del DSL Element. (UC-E2.0.2)
+        \textbf{Postcondizioni} & L'utente ha eseguito le sue operazioni sul \glossaryItem{DSL Element} con successo. \\ 
+        \textbf{Scenario Principale} & 1. L'utente pu\`o aggiungere un \glossaryItem{DSL Element}. (UC-E2.0.1)
+2. L'attore pu\`o compilare i campi informativi del \glossaryItem{DSL Element}. (UC-E2.0.2)
 3. L'utente pu\`o collegare un DSL Dependent Element ad un attributo. (UC-E2.0.3)
-4. L'utente ha la possibilit\`a di rimuovere un DSL Element. (UC-E2.0.4)
-5. L'utente ha la possibilit\`a di associare un Function Element al DSL Element. (UC-E2.0.5)
-6. L'utente ha la possibilit\`a di accedere ai campi opzionali di un DSL Element. (UC-E2.0.6)
+4. L'utente ha la possibilit\`a di rimuovere un \glossaryItem{DSL Element}. (UC-E2.0.4)
+5. L'utente ha la possibilit\`a di associare un Function Element al \glossaryItem{DSL Element}. (UC-E2.0.5)
+6. L'utente ha la possibilit\`a di accedere ai campi opzionali di un \glossaryItem{DSL Element}. (UC-E2.0.6)
       \end{longtable}
       \egroup
     \end{center} 
@@ -105,15 +105,15 @@ Di seguito vengono elencati i casi d'uso per l'editor.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.0.1 - Aggiunta di un DSL Element}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.0.1 - Aggiunta di un \glossaryItem{DSL Element}}} \\ 
         \hline
         
         \textbf{Attori Primari} & Utente Autenticato, Ospiete, Membro, Admin, Owner \\ 
-        \textbf{Scopo e Descrizione} & L'utente ha la possibiltà di aggiungere un DSL Element e di deciderne il tipo. \\ 
+        \textbf{Scopo e Descrizione} & L'utente ha la possibiltà di aggiungere un \glossaryItem{DSL Element} e di deciderne il tipo. \\ 
         
         \textbf{Precondizioni}  & L'utente visualizza l'editor. \\ 
         
-        \textbf{Postcondizioni} & L'utente ha aggiunto con successo un DSL Element.
+        \textbf{Postcondizioni} & L'utente ha aggiunto con successo un \glossaryItem{DSL Element}.
       \end{longtable}
       \egroup
     \end{center} 
@@ -127,15 +127,15 @@ Di seguito vengono elencati i casi d'uso per l'editor.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.0.2 - Compilazione campi del DSL Element}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.0.2 - Compilazione campi del \glossaryItem{DSL Element}}} \\ 
         \hline
         
         \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
-        \textbf{Scopo e Descrizione} & L'utente ha la possibilit\`a di compilare i campi informativi del DSL Element. \\ 
+        \textbf{Scopo e Descrizione} & L'utente ha la possibilit\`a di compilare i campi informativi del \glossaryItem{DSL Element}. \\ 
         
-        \textbf{Precondizioni}  & L'utente visualizza un DSL Element. \\ 
+        \textbf{Precondizioni}  & L'utente visualizza un \glossaryItem{DSL Element}. \\ 
         
-        \textbf{Postcondizioni} & Le informazioni desiderate dall'utente sono stati aggiunte nel DSL Element.
+        \textbf{Postcondizioni} & Le informazioni desiderate dall'utente sono stati aggiunte nel \glossaryItem{DSL Element}.
       \end{longtable}
       \egroup
     \end{center}
@@ -170,15 +170,15 @@ Di seguito vengono elencati i casi d'uso per l'editor.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.0.4 - Rimuovere un DSL Element}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.0.4 - Rimuovere un \glossaryItem{DSL Element}}} \\ 
         \hline
         
         \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
-        \textbf{Scopo e Descrizione} & \`E possibile rimuovere un DSL Element. \\ 
+        \textbf{Scopo e Descrizione} & \`E possibile rimuovere un \glossaryItem{DSL Element}. \\ 
         
-        \textbf{Precondizioni}  & L'utente sta visualizzando l'editor e il DSL Element che vuole eliminare \`e presente nell'interfaccia dell'editor. \\ 
+        \textbf{Precondizioni}  & L'utente sta visualizzando l'editor e il \glossaryItem{DSL Element} che vuole eliminare \`e presente nell'interfaccia dell'editor. \\ 
         
-        \textbf{Postcondizioni} & L'utente ha eliminato con successo il DSL Element selezionato.
+        \textbf{Postcondizioni} & L'utente ha eliminato con successo il \glossaryItem{DSL Element} selezionato.
       \end{longtable}
       \egroup
     \end{center}
@@ -195,11 +195,11 @@ Di seguito vengono elencati i casi d'uso per l'editor.
         \hline
         
         \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
-        \textbf{Scopo e Descrizione} & L'utente ha la possibilit\`a di associare un Function Element ad un attributo selezionabile di un DSL Element. \\ 
+        \textbf{Scopo e Descrizione} & L'utente ha la possibilit\`a di associare un Function Element ad un attributo selezionabile di un \glossaryItem{DSL Element}. \\ 
         
-        \textbf{Precondizioni}  & L'utente visualizza il Function Element e il DSL Element a cui associarlo. \\ 
+        \textbf{Precondizioni}  & L'utente visualizza il Function Element e il \glossaryItem{DSL Element} a cui associarlo. \\ 
         
-        \textbf{Postcondizioni} & L'utente ha associato con successo la Function Element ad un attributo del DSL Element.
+        \textbf{Postcondizioni} & L'utente ha associato con successo la Function Element ad un attributo del \glossaryItem{DSL Element}.
       \end{longtable}
       \egroup
     \end{center}
@@ -214,15 +214,15 @@ Di seguito vengono elencati i casi d'uso per l'editor.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.0.6 - Accedere ai campi opzionali di un DSL Element}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.0.6 - Accedere ai campi opzionali di un \glossaryItem{DSL Element}}} \\ 
         \hline
         
         \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
-        \textbf{Scopo e Descrizione} & L'utente decide di poter aver accesso ai campi opzionali di un DSL Element e a renderli modificabili. \\ 
+        \textbf{Scopo e Descrizione} & L'utente decide di poter aver accesso ai campi opzionali di un \glossaryItem{DSL Element} e a renderli modificabili. \\ 
         
-        \textbf{Precondizioni}  & L'utente sta visualizzando uno specifico DSL Element con campi opzionali. \\ 
+        \textbf{Precondizioni}  & L'utente sta visualizzando uno specifico \glossaryItem{DSL Element} con campi opzionali. \\ 
         
-        \textbf{Postcondizioni} & L'utente ha reso modificabili i campi opzionali del DSL Element. Tali campi possono essere modificati come descritto su caso d'uso UC-E2.0.2.
+        \textbf{Postcondizioni} & L'utente ha reso modificabili i campi opzionali del \glossaryItem{DSL Element}. Tali campi possono essere modificati come descritto su caso d'uso UC-E2.0.2.
       \end{longtable}
       \egroup
     \end{center}
@@ -329,7 +329,7 @@ Di seguito vengono elencati i casi d'uso per l'editor.
         
         \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
         \textbf{Scopo e Descrizione} & Viene data la possibilit\`a all'utente di creare 
-            un Function Element collegabile ad un attributo del DSL Element. \\ 
+            un Function Element collegabile ad un attributo del \glossaryItem{DSL Element}. \\ 
         
         \textbf{Precondizioni}  & L'editor \`e pronto per l'utilizzo. \\ 
         
@@ -353,7 +353,7 @@ Di seguito vengono elencati i casi d'uso per l'editor.
         \hline
         
         \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
-        \textbf{Scopo e Descrizione} & L'utente ha la possibilit\`a di definire all'interno di un Function Element una funzione nella sintassi del \textit{DSL}. \\ 
+        \textbf{Scopo e Descrizione} & L'utente ha la possibilit\`a di definire all'interno di un Function Element una funzione nella sintassi del \glossaryItem{DSL}. \\ 
         
         \textbf{Precondizioni}  & L'utente sta visualizzando il form di compilazione di un Function Element. \\ 
         
@@ -550,7 +550,7 @@ Di seguito vengono elencati i casi d'uso per l'editor.
         
         \textbf{Precondizioni}  & L'utente visualizza l'editor \\ 
         
-        \textbf{Postcondizioni} & Viene generato l'elemento Document nel DSL \\ 
+        \textbf{Postcondizioni} & Viene generato l'elemento Document nel \glossaryItem{DSL} \\ 
         \textbf{Scenario Principale} & 1. L'utente ha la possibilit\`a di aggiungere un riferimento ad un Column Element. (UC-E2.6.1)
 2. L\`utente pu\`o aggiungere/aimuovere un attributo row. (UC-E2.6.2)
 3. L\`utente pu\`o associare un Row Element. (UC-E2.6.3)
@@ -598,7 +598,7 @@ Di seguito vengono elencati i casi d'uso per l'editor.
         
         \textbf{Precondizioni}  & Il Document Element su cui operare l'aggiunta/rimozione di un attributo Row esiste nella sessione corrente dell'editor. \\ 
         
-        \textbf{Postcondizioni} & \`E stata manipolata (aggiunta o rimossa) un attributo Row all'interno del DSL Document.
+        \textbf{Postcondizioni} & \`E stata manipolata (aggiunta o rimossa) un attributo Row all'interno del Document Element.
       \end{longtable}
       \egroup
     \end{center}
@@ -1075,7 +1075,7 @@ e. date. \\
     \begin{figure}[H]
       \begin{center}
         \includegraphics[width=12cm]{res/img/UCEditor/UC-E3}
-      \caption{UC-E3 - Salvataggio DSL}
+      \caption{UC-E3 - Salvataggio \glossaryItem{DSL}}
       \end{center} 
     \end{figure}
 
@@ -1086,16 +1086,16 @@ e. date. \\
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E3 - Salvataggio DSL}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E3 - Salvataggio \glossaryItem{DSL}}} \\ 
         \hline
         
         \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
-        \textbf{Scopo e Descrizione} & Il sistema fornisce una modalit\`a di salvataggio per i DSL definiti da un utente. \\ 
+        \textbf{Scopo e Descrizione} & Il sistema fornisce una modalit\`a di salvataggio per i \glossaryItem{DSL} definiti da un utente. \\ 
         
-        \textbf{Precondizioni}  & L'utente visualizza l'editor e ha creato un DSL valido da salvare. \\ 
+        \textbf{Precondizioni}  & L'utente visualizza l'editor e ha creato un \glossaryItem{DSL} valido da salvare. \\ 
         
-        \textbf{Postcondizioni} & Il DSL \`e stato memorizzato con successo nel sistema. \\ 
-        \textbf{Scenario Principale} & 1. L'utente richiede il salvataggio del DSL. (UC-E3.1) 
+        \textbf{Postcondizioni} & Il \glossaryItem{DSL} \`e stato memorizzato con successo nel sistema. \\ 
+        \textbf{Scenario Principale} & 1. L'utente richiede il salvataggio del \glossaryItem{DSL}. (UC-E3.1) 
       \end{longtable}
       \egroup
     \end{center}
@@ -1108,15 +1108,15 @@ e. date. \\
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E3.1 - Richiedere il salvataggio del DSL}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E3.1 - Richiedere il salvataggio del \glossaryItem{DSL}}} \\ 
         \hline
         
         \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
-        \textbf{Scopo e Descrizione} & L'utente chiede all'applicazione di eseguire le operazioni necessarie affinch\`e il DSL venga salvato ed eseguito con successo. \\ 
+        \textbf{Scopo e Descrizione} & L'utente chiede all'applicazione di eseguire le operazioni necessarie affinch\`e il \glossaryItem{DSL} venga salvato ed eseguito con successo. \\ 
         
-        \textbf{Precondizioni}  & L'utente visualizza l'editor e ha definito un DSL\\ 
+        \textbf{Precondizioni}  & L'utente visualizza l'editor e ha definito un \glossaryItem{DSL}\\ 
         
-        \textbf{Postcondizioni} & Il sistema ha preso in carico la richiesta di salvataggio del DSL.
+        \textbf{Postcondizioni} & Il sistema ha preso in carico la richiesta di salvataggio del \glossaryItem{DSL}.
       \end{longtable}
       \egroup
     \end{center}
@@ -1129,15 +1129,15 @@ e. date. \\
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E3.2 - Validazione del DSL}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E3.2 - Validazione del \glossaryItem{DSL}}} \\ 
         \hline
         
-        \textbf{Scopo e Descrizione} & Il sistema esegue i controlli di validazione per il DSL creato. \\ 
+        \textbf{Scopo e Descrizione} & Il sistema esegue i controlli di validazione per il \glossaryItem{DSL} creato. \\ 
         
-        \textbf{Precondizioni}  & L'utente ha fatto richiesta di salvataggio del DSL \\ 
+        \textbf{Precondizioni}  & L'utente ha fatto richiesta di salvataggio del \glossaryItem{DSL} \\ 
         
-        \textbf{Postcondizioni} & Il DSL \`e stato correttamente validato. \\ 
-        \textbf{Estensioni} & 1. Il DSL non \`e valido (UC-E3.4)
+        \textbf{Postcondizioni} & Il \glossaryItem{DSL} \`e stato correttamente validato. \\ 
+        \textbf{Estensioni} & 1. Il \glossaryItem{DSL} non \`e valido (UC-E3.4)
       \end{longtable}
       \egroup
     \end{center}
@@ -1152,14 +1152,14 @@ e. date. \\
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E3.3 - Memorizzazione del DSL}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E3.3 - Memorizzazione del \glossaryItem{DSL}}} \\ 
         \hline
         
-         \textbf{Scopo e Descrizione} &  il sistema esegue la procedura di memorizzazione del DSL \\ 
+         \textbf{Scopo e Descrizione} &  il sistema esegue la procedura di memorizzazione del \glossaryItem{DSL} \\ 
         
-        \textbf{Precondizioni}  & Il DSL in input deve essere valido \\ 
+        \textbf{Precondizioni}  & Il \glossaryItem{DSL} in input deve essere valido \\ 
         
-        \textbf{Postcondizioni} & Il DSL \`e stato correttamente memorizzato al sistema \\ 
+        \textbf{Postcondizioni} & Il \glossaryItem{DSL} \`e stato correttamente memorizzato al sistema \\ 
       \end{longtable}
       \egroup
     \end{center}
@@ -1172,14 +1172,14 @@ e. date. \\
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E3.4 - DSL non `e valido}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E3.4 - \glossaryItem{DSL} non `e valido}} \\ 
         \hline
         
-        \textbf{Scopo e Descrizione} & Il sistema fornisce un messaggio di errore che evidenzia i punti del DSL non validi \\ 
+        \textbf{Scopo e Descrizione} & Il sistema fornisce un messaggio di errore che evidenzia i punti del \glossaryItem{DSL} non validi \\ 
         
-        \textbf{Precondizioni}  & Il DSL non \`e corretto \\ 
+        \textbf{Precondizioni}  & Il \glossaryItem{DSL} non \`e corretto \\ 
         
-        \textbf{Postcondizioni} & L'utente \`e stato avvisato tramite un messaggio della presenza di errori nel DSL.
+        \textbf{Postcondizioni} & L'utente \`e stato avvisato tramite un messaggio della presenza di errori nel \glossaryItem{DSL}.
       \end{longtable}
       \egroup
     \end{center}
