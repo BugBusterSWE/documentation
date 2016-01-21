@@ -31,9 +31,9 @@ Di seguito vengono elencati i casi d'uso per il \glossaryItem{Super-Admin}.
         \textbf{Postcondizioni} & L'applicazione ha dato la possibilità al Super-Admin di interagire con la pagina di gestione delle \glossaryItem{Company}. \\ 
         \textbf{Scenario principale} & 1. Il Super-Admin pu\`o creare una nuova \glossaryItem{Company}. (UC-S1) 
         
-        2. Il Super-Admin pu\`o modificare i dati di una \glossaryItem{Company}. (UC-S2)  \\ 
+        2. Il Super-Admin può visualizzare il dettaglio di una \glossaryItem{Company}. (UC-S2)
         
-        3. Il Super-Admin può visualizzare il dettaglio di una \glossaryItem{Company}. (UC-S3)
+        3. Il Super-Admin pu\`o modificare i dati di una \glossaryItem{Company}. (UC-S3)  \\ 
         
         \textbf{Estensioni} & 1. Fallisce l'inserimento di una nuova \glossaryItem{Company}.
         
@@ -45,7 +45,7 @@ Di seguito vengono elencati i casi d'uso per il \glossaryItem{Super-Admin}.
 \subsection{UC-S1}
     \begin{figure}[H]
       \begin{center}
-        \includegraphics[width=12cm]{res/img/UCSuperadmin/UCS0.0.png}
+        \includegraphics[width=12cm]{res/img/UCSuperadmin/UC-S1.png}
       \caption{UC-S1 - Creazione di una nuova \glossaryItem{Company}}
       \end{center} 
     \end{figure}    
@@ -79,7 +79,7 @@ Di seguito vengono elencati i casi d'uso per il \glossaryItem{Super-Admin}.
 \subsection{UC-S2}
     \begin{figure}[H]
       \begin{center}
-        \includegraphics[width=12cm]{res/img/UCSuperadmin/UCS0.1.png}
+        \includegraphics[width=12cm]{res/img/UCSuperadmin/UC-S2.png}
       \caption{UC-S2 - Visualizzazione dettaglio di una \glossaryItem{Company}}
       \end{center} 
     \end{figure}    
@@ -99,13 +99,13 @@ Di seguito vengono elencati i casi d'uso per il \glossaryItem{Super-Admin}.
         
         \textbf{Postcondizioni} & L'applicazione ha reindirizzato il \glossaryItem{Super-Admin} alla pagina di visualizzazione della \glossaryItem{Company} selezionata. \\
         
-        \textbf{Scenario principale} & 1. Il \glossaryItem{Super-Admin} può modificare i dati della \glossaryItem{Company}(UC-S 0.1.0);  
+        \textbf{Scenario principale} & 1. Il \glossaryItem{Super-Admin} può modificare i dati della \glossaryItem{Company} (UC-S2.0);  
         
-        2. Il \glossaryItem{Super-Admin} può aggiungere un nuovo utente della \glossaryItem{Company};
+        2. Il \glossaryItem{Super-Admin} può aggiungere un nuovo utente della \glossaryItem{Company} (UC-S2.1);
         
-        3. Il \glossaryItem{Super-Admin} può visualizzare uno specifico utente della \glossaryItem{Company}; 
+        3. Il \glossaryItem{Super-Admin} può visualizzare uno specifico utente della \glossaryItem{Company} (UC-S2.2); 
         
-        4. Il \glossaryItem{Super-Admin} pu\`o modificare i dati di uno specifico utente. \\ 
+        4. Il \glossaryItem{Super-Admin} pu\`o modificare i dati di uno specifico utente. (UC-S2.3) \\ 
         
         \textbf{Estensioni} & 1. Fallimento della modifica dei dati della \glossaryItem{Company};
         
@@ -117,11 +117,11 @@ Di seguito vengono elencati i casi d'uso per il \glossaryItem{Super-Admin}.
     \end{center}
 
 
-\subsection{UC-S3}
+\subsection{UC-S2.0}
     \begin{figure}[H]
       \begin{center}
-        \includegraphics[width=12cm]{res/img/UCSuperadmin/UCS0.1.0.png}
-      \caption{UC-S 0.1.0 - Modifica dei dati di una \glossaryItem{Company}}
+        \includegraphics[width=12cm]{res/img/UCSuperadmin/UC-S2.0.png}
+      \caption{UC-S2.0 - Modifica dei dati di una \glossaryItem{Company}}
       \end{center} 
     \end{figure}    
     
@@ -132,7 +132,7 @@ Di seguito vengono elencati i casi d'uso per il \glossaryItem{Super-Admin}.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-S 0.1.0 - Modifica dei dati di una \glossaryItem{Company}}}. \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-S2.0 - Modifica dei dati di una \glossaryItem{Company}}}. \\ 
         \hline
         
         \textbf{Attori Primari} & \glossaryItem{Super-Admin}.\\  
@@ -144,10 +144,10 @@ Di seguito vengono elencati i casi d'uso per il \glossaryItem{Super-Admin}.
       \egroup
     \end{center}
 
-\subsection{UC-S0.1.1}
+\subsection{UC-S2.1}
     \begin{figure}[H]
       \begin{center}
-        \includegraphics[width=12cm]{res/img/UCSuperadmin/UCS0.1.1.png}
+        \includegraphics[width=12cm]{res/img/UCSuperadmin/UC-S2.1.png}
       \caption{UC-S 0.1.1 - Aggiunta di un nuovo utente nella \glossaryItem{Company} selezionata}
       \end{center} 
     \end{figure}    
@@ -159,7 +159,7 @@ Di seguito vengono elencati i casi d'uso per il \glossaryItem{Super-Admin}.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-S 0.1.1 - Aggiunta di un nuovo utente nella \glossaryItem{Company} selezionata}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-S2.1 - Aggiunta di un nuovo utente nella \glossaryItem{Company} selezionata}} \\ 
         \hline
         
         \textbf{Attori Primari} & \glossaryItem{Super-Admin}.\\  
@@ -170,11 +170,11 @@ Di seguito vengono elencati i casi d'uso per il \glossaryItem{Super-Admin}.
       \egroup
     \end{center}
 
-\subsection{UC-S0.1.2}
+\subsection{UC-S2.2}
     \begin{figure}[H]
       \begin{center}
-        \includegraphics[width=12cm]{res/img/UCSuperadmin/UCS0.1.2.png}
-      \caption{UC-S 0.1.2 - Visualizzazione in dettaglio di un utente della \glossaryItem{Company}}
+        \includegraphics[width=12cm]{res/img/UCSuperadmin/UC-S2.2.png}
+      \caption{UC-S2.2 - Visualizzazione in dettaglio di un utente della \glossaryItem{Company}}
       \end{center} 
     \end{figure}    
     
@@ -185,7 +185,7 @@ Di seguito vengono elencati i casi d'uso per il \glossaryItem{Super-Admin}.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-S 0.1.2 - Visualizzazione in dettaglio di un utente della \glossaryItem{Company}}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-S2.2 - Visualizzazione in dettaglio di un utente della \glossaryItem{Company}}} \\ 
         \hline
         
         \textbf{Attori Primari} & \glossaryItem{Super-Admin}\\  
@@ -193,20 +193,20 @@ Di seguito vengono elencati i casi d'uso per il \glossaryItem{Super-Admin}.
         \textbf{Precondizioni}  & il sistema presenta la pagina di visualizzazione in dettaglio di un utente;  \\ 
         
         \textbf{Postcondizioni} & il sistema ha ricevuto l'input dall'\glossaryItem{Attore}.  \\ 
-         \textbf{Scenario principale} & 1. il \glossaryItem{Super-Admin} pu\`o modificare il profilo dell'utente; 
+         \textbf{Scenario principale} & 1. il \glossaryItem{Super-Admin} pu\`o modificare il profilo dell'utente (UC-S2.3); 
          
-         2. il \glossaryItem{Super-Admin} pu\`o eliminare l'utente.  \\
+         2. il \glossaryItem{Super-Admin} pu\`o eliminare l'utente. (UC-S2.4) \\
         
      
      \end{longtable}
       \egroup
     \end{center}
 
-\subsection{UC-S0.1.3}
+\subsection{UC-S2.3}
     \begin{figure}[H]
       \begin{center}
-        \includegraphics[width=12cm]{res/img/UCSuperadmin/UCS0.1.3.png}
-      \caption{UC-S 0.1.3 - Modifica del profilo di un utente}
+        \includegraphics[width=12cm]{res/img/UCSuperadmin/UC-S2.3.png}
+      \caption{UC-S2.3 - Modifica del profilo di un utente}
       \end{center} 
     \end{figure}    
     
@@ -217,7 +217,7 @@ Di seguito vengono elencati i casi d'uso per il \glossaryItem{Super-Admin}.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-S 0.1.3 - Modifica del profilo di un utente }} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-S2.3 - Modifica del profilo di un utente }} \\ 
         \hline
         
         \textbf{Attori Primari} & \glossaryItem{Super-Admin}\\  
@@ -238,11 +238,11 @@ Di seguito vengono elencati i casi d'uso per il \glossaryItem{Super-Admin}.
 
 
 
-\subsection{UC-S0.1.4}
+\subsection{UC-S2.4}
     \begin{figure}[H]
       \begin{center}
-        \includegraphics[width=12cm]{res/img/UCSuperadmin/UCS0.1.4.png}
-      \caption{UC-S 0.1.4 - Eliminazione di un utente}
+        \includegraphics[width=12cm]{res/img/UCSuperadmin/UC-S2.4.png}
+      \caption{UC-S2.4 - Eliminazione di un utente}
       \end{center} 
     \end{figure}    
     
@@ -253,7 +253,7 @@ Di seguito vengono elencati i casi d'uso per il \glossaryItem{Super-Admin}.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-S 0.1.4 - Eliminazione di un utente }} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-S2.4 - Eliminazione di un utente }} \\ 
         \hline
         
         \textbf{Attori Primari} & \glossaryItem{Super-Admin}\\  
@@ -274,11 +274,11 @@ Di seguito vengono elencati i casi d'uso per il \glossaryItem{Super-Admin}.
     \end{center}
 
 
-\subsection{UC-S1}
+\subsection{UC-S3}
     \begin{figure}[H]
       \begin{center}
-        \includegraphics[width=12cm]{res/img/UCSuperadmin/UCS1.png}
-      \caption{UC-S 1 - Gestione di altri \glossaryItem{Super-Admin}}
+        \includegraphics[width=12cm]{res/img/UCSuperadmin/UC-S3.png}
+      \caption{UC-S3 - Gestione di altri \glossaryItem{Super-Admin}}
       \end{center} 
     \end{figure}    
     
@@ -289,7 +289,7 @@ Di seguito vengono elencati i casi d'uso per il \glossaryItem{Super-Admin}.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-S 1 - Gestione di altri \glossaryItem{Super-Admin} }} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-S3 - Gestione di altri \glossaryItem{Super-Admin} }} \\ 
         \hline
         
         \textbf{Attori Primari} & \glossaryItem{Super-Admin}.\\  
@@ -309,10 +309,10 @@ vedere in un elenco quelli già presenti e poterne vedere le informazioni in det
     \end{center}
 
 
-\subsection{UC-S1.0}
+\subsection{UC-S3.0}
     \begin{figure}[H]
       \begin{center}
-        \includegraphics[width=12cm]{res/img/UCSuperadmin/UCS1.0.png}
+        \includegraphics[width=12cm]{res/img/UCSuperadmin/UC-S3.0.png}
       \caption{UC-S 1.0 - Creazione di un \glossaryItem{Super-Admin}}
       \end{center} 
     \end{figure}    
@@ -324,7 +324,7 @@ vedere in un elenco quelli già presenti e poterne vedere le informazioni in det
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-S 1.0 - Creazione di un \glossaryItem{Super-Admin} }} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-S3.0 - Creazione di un \glossaryItem{Super-Admin} }} \\ 
         \hline
         
         \textbf{Attori Primari} & \glossaryItem{Super-Admin}.\\  
