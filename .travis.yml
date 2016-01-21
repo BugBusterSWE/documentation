@@ -1,3 +1,8 @@
+language:
+        - ruby
+
+sudo : required
+
 branches:
     only:
         - master
@@ -16,6 +21,10 @@ install:
     - wget http://tug.org/fonts/getnonfreefonts/install-getnonfreefonts
     - sudo texlua install-getnonfreefonts
     - sudo getnonfreefonts-sys garamond
+
+before_script:
+    - sudo cp -fr RR/Glossario/res/glossaries /usr/share/texmf-texlive/tex/latex/
+    - sudo cp -fr RR/Glossario/res/glossaries-italian/ /usr/share/texmf-texlive/tex/latex/
 
 script:
     - cd RR/NormeDiProgetto/ && latexmk -pdflatex='pdflatex -interaction=nonstopmode' -pdf && cd -
