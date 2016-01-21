@@ -615,6 +615,27 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
                   \egroup
                 \end{center}
                 
+\subsubsection{UC-U13.6}
+                %Tabella 
+                \begin{center}
+                  \bgroup
+                  \def\arraystretch{1.8}     
+                  \begin{longtable}{  p{3.5cm} | p{8cm} } 
+                    
+                    \hline
+                    \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U13.6 - Inserimento nuovo utente}} \\ 
+                    \hline
+                    
+                    \textbf{Attori Primari} & \textit{Owner} \\ 
+                    \textbf{Scopo e Descrizione} & L'\textit{Owner} inserisce un nuovo utente all'applicazione.\\ 
+                    
+                    \textbf{Precondizioni}  & Nessuna \\ 
+                    
+                    \textbf{Postcondizioni} & Un nuovo utente \`e stato aggiunto a \glossaryItem{MaaS}. \\ 
+                  \end{longtable}
+                  \egroup
+                \end{center}
+                
                 
 \subsubsection{UC-U13.6.2}
 
@@ -664,7 +685,7 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
     \begin{figure}[H]
       \begin{center}
         \includegraphics[width=12cm]{res/img/UCUtenti/UCUtenteA/UC-U15-Operazioni-dashboard/UC-U15.png}
-      \caption{UC-U15 - Operazioni Dashboard}
+      \caption{UC-U15 - Operazioni \glossaryItem{Dashboard}}
       \end{center} 
     \end{figure}
 
@@ -757,26 +778,26 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \hline
         
         \textbf{Attori Primari} & Utente autenticato \\ 
-        \textbf{Scopo e Descrizione} & L'utente autenticato può eseguire le seguenti azioni sugli elementi della \glossaryItem{Dashboard}: visualizzare un elemento (che può essere una Cell, un Document o una Collection) oppure effettuare un'operazione su di esso. \\ 
+        \textbf{Scopo e Descrizione} & L'utente autenticato può eseguire le seguenti azioni sugli elementi della \glossaryItem{Dashboard}: visualizzare un elemento (che può essere una \glossaryItem{Cell}, un \glossaryItem{Document} o una \glossaryItem{Collection}) oppure effettuare un'operazione su di esso. \\ 
         
         \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina iniziale \glossaryItem{Dashboard}. \\ 
         
         \textbf{Postcondizioni} & L'applicazione ha eseguito le operazioni sulle righe della \glossaryItem{Dashboard} richieste dall'utente autenticato. \\ 
         \textbf{Scenario principale} & 1. Visualizzazione element \glossaryItem{Dashboard} (UC-U16.1)
         
-1.1 L'utente visualizza una Cell (UC-U16.2)
+1.1 L'utente visualizza una \glossaryItem{Cell} (UC-U16.2)
 
-1.2 L'utente visualizza un Document (UC-U16.3)
+1.2 L'utente visualizza un \glossaryItem{Document} (UC-U16.3)
 
-1.3 L'utente visualizza una Collection (UC-U16.4)
+1.3 L'utente visualizza una \glossaryItem{Collection} (UC-U16.4)
 
 2. L'utente desidera effettuare un'operazione su una riga
 
-2.1 L'utente effettua un'operazione su una Cell (UC-U16.5)
+2.1 L'utente effettua un'operazione su una \glossaryItem{Cell} (UC-U16.5)
 
-2.2 L'utente effettua un'operazione su un Document (UC-U16.6)
+2.2 L'utente effettua un'operazione su un \glossaryItem{Document} (UC-U16.6)
 
-2.3 L'utente effettua un'operazione su una Collection (UC-U16.7) \\
+2.3 L'utente effettua un'operazione su una \glossaryItem{Collection} (UC-U16.7) \\
       \end{longtable}
       \egroup
     \end{center}
@@ -794,7 +815,7 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \hline
         
         \textbf{Attori Primari} & Utente autenticato \\ 
-        \textbf{Scopo e Descrizione} & L'utente autenticato sceglie di visualizzare un element dalla \glossaryItem{Dashboard} (che può essere una Cell, un Document o una Collection). \\ 
+        \textbf{Scopo e Descrizione} & L'utente autenticato sceglie di visualizzare un element dalla \glossaryItem{Dashboard} (che può essere una \glossaryItem{Cell}, un \glossaryItem{Document} o una \glossaryItem{Collection}). \\ 
         
         \textbf{Precondizioni}  & L'utente autenticato ha visualizzato un element della \glossaryItem{Dashboard}. \\ 
         
@@ -814,15 +835,15 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U16.2 - Visualizzazione Cell}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U16.2 - Visualizzazione \glossaryItem{Cell}}} \\ 
         \hline
         
         \textbf{Attori Primari} & Utente autenticato \\ 
-        \textbf{Scopo e Descrizione} & L'utente autenticato può visualizzare una Cell selezionata nella \glossaryItem{Dashboard}. \\ 
+        \textbf{Scopo e Descrizione} & L'utente autenticato può visualizzare una \glossaryItem{Cell} selezionata nella \glossaryItem{Dashboard}. \\ 
         
         \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina \glossaryItem{Dashboard}. \\ 
         
-        \textbf{Postcondizioni} & L'utente autenticato è stato reindirizzato nella pagina Cell e ne ha visualizzato il contenuto. \\ 
+        \textbf{Postcondizioni} & L'utente autenticato è stato reindirizzato nella pagina \glossaryItem{Cell} e ne ha visualizzato il contenuto. \\ 
       \end{longtable}
       \egroup
     \end{center}
@@ -836,15 +857,15 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U16.3 - Visualizzazione Document}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U16.3 - Visualizzazione \glossaryItem{Document}}} \\ 
         \hline
         
         \textbf{Attori Primari} & Utente autenticato \\ 
-        \textbf{Scopo e Descrizione} & L'utente autenticato può visualizzare un Document selezionato nella \glossaryItem{Dashboard}. \\ 
+        \textbf{Scopo e Descrizione} & L'utente autenticato può visualizzare un \glossaryItem{Document} selezionato nella \glossaryItem{Dashboard}. \\ 
         
         \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina \glossaryItem{Dashboard}. \\ 
         
-        \textbf{Postcondizioni} & L'utente autenticato è stato reindirizzato nella pagina Document e ne ha visualizzato il contenuto. \\ 
+        \textbf{Postcondizioni} & L'utente autenticato è stato reindirizzato nella pagina \glossaryItem{Document} e ne ha visualizzato il contenuto. \\ 
       \end{longtable}
       \egroup
     \end{center}
@@ -858,15 +879,15 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U16.4 - Visualizzazione Collection}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U16.4 - Visualizzazione \glossaryItem{Collection}}} \\ 
         \hline
         
         \textbf{Attori Primari} & Utente autenticato \\ 
-        \textbf{Scopo e Descrizione} & L'utente autenticato può visualizzare una Collection selezionato nella \glossaryItem{Dashboard}. \\ 
+        \textbf{Scopo e Descrizione} & L'utente autenticato può visualizzare una \glossaryItem{Collection} selezionato nella \glossaryItem{Dashboard}. \\ 
         
         \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina \glossaryItem{Dashboard}. \\ 
         
-        \textbf{Postcondizioni} & L'utente autenticato è stato reindirizzato nella pagina Collection e ne ha visualizzato il contenuto. \\ 
+        \textbf{Postcondizioni} & L'utente autenticato è stato reindirizzato nella pagina \glossaryItem{Collection} e ne ha visualizzato il contenuto. \\ 
       \end{longtable}
       \egroup
     \end{center}
@@ -877,7 +898,7 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
     \begin{figure}[H]
       \begin{center}
         \includegraphics[width=12cm]{res/img/UCUtenti/UCUtenteA/UC-U16.5-Operazioni_su_Cell/UC-U16.5-Operazioni_su_Cell}
-      \caption{UC-U16.5 - Operazioni su Cell}
+      \caption{UC-U16.5 - Operazioni su \glossaryItem{Cell}}
       \end{center} 
     \end{figure}
 
@@ -888,20 +909,20 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U16.5 - Operazioni su Cell}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U16.5 - Operazioni su \glossaryItem{Cell}}} \\ 
         \hline
         
         \textbf{Attori Primari} & Utente autenticato \\ 
-        \textbf{Scopo e Descrizione} & L'utente autenticato può eseguire le seguenti operazioni dalla pagina Cell: può aggiungere un valore arbitrario, può modificarne uno, può ordinare il valore nella Cell in base all'unico campo della query (scritta in un momento precedente nell'editor) che ha prodotto tale valore. \\ 
+        \textbf{Scopo e Descrizione} & L'utente autenticato può eseguire le seguenti operazioni dalla pagina \glossaryItem{Cell}: può aggiungere un valore arbitrario, può modificarne uno, può ordinare il valore nella \glossaryItem{Cell} in base all'unico campo della query (scritta in un momento precedente nell'editor) che ha prodotto tale valore. \\ 
         
-        \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina Cell. \\ 
+        \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina \glossaryItem{Cell}. \\ 
         
         \textbf{Postcondizioni} & L'applicazione MaaS ha eseguito le operazioni richieste dall'utente autenticato. \\ 
-        \textbf{Scenario principale} & 1. L'utente autenticato aggiunge un valore arbitrario nella Cell. (UC-U16.5.1)
+        \textbf{Scenario principale} & 1. L'utente autenticato aggiunge un valore arbitrario nella \glossaryItem{Cell}. (UC-U16.5.1)
         
-2. L'utente autenticato modifica il valore nella Cell. (UC-U16.5.2)
+2. L'utente autenticato modifica il valore nella \glossaryItem{Cell}. (UC-U16.5.2)
 
-3. L'utente autenticato ordina il valore nella Cell. (UC-U16.5.3) \\
+3. L'utente autenticato ordina il valore nella \glossaryItem{Cell}. (UC-U16.5.3) \\
       \end{longtable}
       \egroup
     \end{center}
@@ -915,15 +936,15 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U16.5.1 - Aggiunta di un valore nella Cell}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U16.5.1 - Aggiunta di un valore nella \glossaryItem{Cell}}} \\ 
         \hline
         
         \textbf{Attori Primari} & Utente autenticato \\ 
-        \textbf{Scopo e Descrizione} & L'utente autenticato può aggiungere un valore arbitrario nella Cell.  \\ 
+        \textbf{Scopo e Descrizione} & L'utente autenticato può aggiungere un valore arbitrario nella \glossaryItem{Cell}.  \\ 
         
-        \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina Cell.  \\ 
+        \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina \glossaryItem{Cell}.  \\ 
         
-        \textbf{Postcondizioni} & L'utente autenticato ha aggiunto un valore arbitrario nella Cell. \\ 
+        \textbf{Postcondizioni} & L'utente autenticato ha aggiunto un valore arbitrario nella \glossaryItem{Cell}. \\ 
       \end{longtable}
       \egroup
     \end{center}
@@ -937,15 +958,15 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U16.5.2 - Modifica valore Cell}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U16.5.2 - Modifica valore \glossaryItem{Cell}}} \\ 
         \hline
         
         \textbf{Attori Primari} & Utente autenticato \\ 
-        \textbf{Scopo e Descrizione} & L'utente autenticato può modificare il valore della Cell. \\ 
+        \textbf{Scopo e Descrizione} & L'utente autenticato può modificare il valore della \glossaryItem{Cell}. \\ 
         
-        \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina Cell. \\ 
+        \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina \glossaryItem{Cell}. \\ 
         
-        \textbf{Postcondizioni} & L'utente autenticato ha modificato il valore della Cell. \\ 
+        \textbf{Postcondizioni} & L'utente autenticato ha modificato il valore della \glossaryItem{Cell}. \\ 
       \end{longtable}
       \egroup
     \end{center}
@@ -958,15 +979,15 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U16.5.3 - Ordinamento Cell}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U16.5.3 - Ordinamento \glossaryItem{Cell}}} \\ 
         \hline
         
         \textbf{Attori Primari} & Utente autenticato \\ 
-        \textbf{Scopo e Descrizione} & L'utente autenticato può ordinare il valore nella Cell in base all'unico campo della query (scritta in un momento precedente nell'editor) che ha prodotto tale valore. \\ 
+        \textbf{Scopo e Descrizione} & L'utente autenticato può ordinare il valore nella \glossaryItem{Cell} in base all'unico campo della query (scritta in un momento precedente nell'editor) che ha prodotto tale valore. \\ 
         
-        \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina Cell. \\ 
+        \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina \glossaryItem{Cell}. \\ 
         
-        \textbf{Postcondizioni} & L'utente autenticato ha ordinato il valore della Cell. \\ 
+        \textbf{Postcondizioni} & L'utente autenticato ha ordinato il valore della \glossaryItem{Cell}. \\ 
       \end{longtable}
       \egroup
     \end{center}
@@ -977,7 +998,7 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
     \begin{figure}[H]
       \begin{center}
         \includegraphics[width=12cm]{res/img/UCUtenti/UCUtenteA/UC-U16.6-Operazioni_su_Document/UC-U16.6}
-      \caption{UC-U16.6 - Operazioni su Document}
+      \caption{UC-U16.6 - Operazioni su \glossaryItem{Document}}
       \end{center} 
     \end{figure}
 
@@ -988,22 +1009,22 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U16.6 - Operazioni su Document}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U16.6 - Operazioni su \glossaryItem{Document}}} \\ 
         \hline
         
         \textbf{Attori Primari} & Utente autenticato \\ 
         \textbf{Scopo e Descrizione} & L'utente autenticato può effettuare le seguenti operazioni sul \textit{Document}: modificarlo, rimuoverlo, eseguire un'operazione di `Export' o di `Send mail'. \\ 
         
-        \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina Document. \\ 
+        \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina \glossaryItem{Document}. \\ 
         
         \textbf{Postcondizioni} & L'applicazione MaaS ha eseguito le operazioni richieste dall'utente autenticato. \\ 
-        \textbf{Scenario principale} & 1. L'utente autenticato modifica un Document (UC-U16.6.1)
-2. L'utente autenticato rimuove un Document (UC-U16.6.3)
+        \textbf{Scenario principale} & 1. L'utente autenticato modifica un \glossaryItem{Document} (UC-U16.6.1)
+2. L'utente autenticato rimuove un \glossaryItem{Document} (UC-U16.6.3)
 
 3. L'utente autenticato esporta il \textit{Document} in formato \textit{json} o \textit{csv} (UC-U16.6.4)
 
 4. L'utente autenticato invia una mail a un altro utente (UC-U16.6.5)\\
-        \textbf{Estensioni} & 1. L'utente desidera annullare le modifiche apportate a un Document (UC-U16.6.2) \\
+        \textbf{Estensioni} & 1. L'utente desidera annullare le modifiche apportate a un \glossaryItem{Document} (UC-U16.6.2) \\
       \end{longtable}
       \egroup
     \end{center}
@@ -1017,15 +1038,15 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U16.6.1 - Modifica Document}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U16.6.1 - Modifica \glossaryItem{Document}}} \\ 
         \hline
         
         \textbf{Attori Primari} & Utente autenticato \\ 
-        \textbf{Scopo e Descrizione} & L'utente autenticato può modificare un Document (modifica il valore di uno dei campi visualizzati nella pagina Document selezionata). \\ 
+        \textbf{Scopo e Descrizione} & L'utente autenticato può modificare un \glossaryItem{Document} (modifica il valore di uno dei campi visualizzati nella pagina \glossaryItem{Document} selezionata). \\ 
         
-        \textbf{Precondizioni}  & L'utente autenticato ha visualizzato una pagina Document all'interno della quale desidera apportare delle modifiche. \\ 
+        \textbf{Precondizioni}  & L'utente autenticato ha visualizzato una pagina \glossaryItem{Document} all'interno della quale desidera apportare delle modifiche. \\ 
         
-        \textbf{Postcondizioni} & L'applicazione MaaS ha apportato le modifiche richieste dall'utente al Document selezionato. \\ 
+        \textbf{Postcondizioni} & L'applicazione MaaS ha apportato le modifiche richieste dall'utente al \glossaryItem{Document} selezionato. \\ 
       \end{longtable}
       \egroup
     \end{center}
@@ -1039,15 +1060,15 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U16.6.2 - Annullamento delle modifiche di Document}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U16.6.2 - Annullamento delle modifiche di \glossaryItem{Document}}} \\ 
         \hline
         
         \textbf{Attori Primari} & Utente autenticato \\ 
-        \textbf{Scopo e Descrizione} & L'utente autenticato può annullare le modifiche precedentemente apportate al Document selezionato. \\ 
+        \textbf{Scopo e Descrizione} & L'utente autenticato può annullare le modifiche precedentemente apportate al \glossaryItem{Document} selezionato. \\ 
         
-        \textbf{Precondizioni}  & L'utente autenticato ha apportato delle modifiche a un Document. \\ 
+        \textbf{Precondizioni}  & L'utente autenticato ha apportato delle modifiche a un \glossaryItem{Document}. \\ 
         
-        \textbf{Postcondizioni} & Le modifiche apportate dall'utente autenticato al Document selezionato sono state annullate. \\ 
+        \textbf{Postcondizioni} & Le modifiche apportate dall'utente autenticato al \glossaryItem{Document} selezionato sono state annullate. \\ 
       \end{longtable}
       \egroup
     \end{center}
@@ -1061,15 +1082,15 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U16.6.3 - Rimozione Document}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U16.6.3 - Rimozione \glossaryItem{Document}}} \\ 
         \hline
         
         \textbf{Attori Primari} & Utente autenticato \\ 
-        \textbf{Scopo e Descrizione} & L'utente autenticato può rimuovere un Document dalla \glossaryItem{Dashboard}. \\ 
+        \textbf{Scopo e Descrizione} & L'utente autenticato può rimuovere un \glossaryItem{Document} dalla \glossaryItem{Dashboard}. \\ 
         
-        \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina Document da rimuovere. \\ 
+        \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina \glossaryItem{Document} da rimuovere. \\ 
         
-        \textbf{Postcondizioni} & La pagina Document selezionata è stata rimossa. \\ 
+        \textbf{Postcondizioni} & La pagina \glossaryItem{Document} selezionata è stata rimossa. \\ 
       \end{longtable}
       \egroup
     \end{center}
@@ -1083,14 +1104,14 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U16.6.4 - Export di un Document}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U16.6.4 - Export di un \glossaryItem{Document}}} \\ 
         \hline
         
         \textbf{Attori Primari} & Utente autenticato \\ 
         \textbf{Scopo e Descrizione} & L'utente autenticato può esportare il \textit{Document} corrente in formato
         \textit{json} o \textit{csv}. \\ 
         
-        \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina del Document su cui effettuare le operazioni di `Export' o di `Send email'. \\ 
+        \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina del \glossaryItem{Document} su cui effettuare le operazioni di `Export' o di `Send email'. \\ 
         
         \textbf{Postcondizioni} & L'applicazione MaaS ha eseguito la richiesta dell'utente. \\ 
       \end{longtable}
@@ -1106,15 +1127,15 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U16.6.5 - Send Mail da un Document}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U16.6.5 - Send Mail da un \glossaryItem{Document}}} \\ 
         \hline
         
         \textbf{Attori Primari} & Utente autenticato \\ 
-        \textbf{Scopo e Descrizione} & L'utente autenticato può inviare una mail contenente il Document a un altro utente. \\ 
+        \textbf{Scopo e Descrizione} & L'utente autenticato può inviare una mail contenente il \glossaryItem{Document} a un altro utente. \\ 
         
-        \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina Document su cui effettuare l'operazione di `Send mail`. \\ 
+        \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina \glossaryItem{Document} su cui effettuare l'operazione di `Send mail`. \\ 
         
-        \textbf{Postcondizioni} & L'applicazione ha inviato la mail con il Document al destinatario segnalato dall'utente. \\ 
+        \textbf{Postcondizioni} & L'applicazione ha inviato la mail con il \glossaryItem{Document} al destinatario segnalato dall'utente. \\ 
       \end{longtable}
       \egroup
     \end{center}
@@ -1127,7 +1148,7 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
     \begin{figure}[H]
       \begin{center}
         \includegraphics[width=12cm]{res/img/UCUtenti/UCUtenteA/UC-U16.7-Operazioni_su_Collection/UC-U16.7.png}
-      \caption{UC-U16.7 - Operazioni su Collection}
+      \caption{UC-U16.7 - Operazioni su \glossaryItem{Collection}}
       \end{center} 
     \end{figure}
 
@@ -1138,24 +1159,24 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U16.7 - Operazioni su Collection}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U16.7 - Operazioni su \glossaryItem{Collection}}} \\ 
         \hline
         
         \textbf{Attori Primari} & Utente autenticato \\ 
-        \textbf{Scopo e Descrizione} & L'utente autenticato può eseguire una delle seguenti operazioni su un pagina Collection: modificare un Document, filtrare i Document, selezionare e visualizzare un sottoinsieme di attributi di un sottoinsieme di Document, rimuovere un Document, eseguire un'azione di default (Export o Send Mail), o un'azione personalizzata. \\ 
+        \textbf{Scopo e Descrizione} & L'utente autenticato può eseguire una delle seguenti operazioni su un pagina \glossaryItem{Collection}: modificare un \glossaryItem{Document}, filtrare i \glossaryItem{Document}, selezionare e visualizzare un sottoinsieme di attributi di un sottoinsieme di \glossaryItem{Document}, rimuovere un \glossaryItem{Document}, eseguire un'azione di default (Export o Send Mail), o un'azione personalizzata. \\ 
         
-        \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina Collection. \\ 
+        \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina \glossaryItem{Collection}. \\ 
         
         \textbf{Postcondizioni} & L'applicazione MaaS ha eseguito le operazioni richieste dall'utente autenticato. \\ 
-        \textbf{Scenario principale} & 1. L'utente autenticato può modificare un Document (UC-U16.6.1)
+        \textbf{Scenario principale} & 1. L'utente autenticato può modificare un \glossaryItem{Document} (UC-U16.6.1)
 
 2. L'utente autenticato può ordinare i Documents. (UC-U16.7.1)
 
-3. L'utente autenticato può rimuovere un Document. (UC-U16.6.3)
+3. L'utente autenticato può rimuovere un \glossaryItem{Document}. (UC-U16.6.3)
 
 4. L'utente autenticato può eseguire l'azione di `send mail`. (UC-U16.7.3)
 
-5. L'utente autenticato può eseguire l'azione di `export` su un singolo Document. (UC-U16.6.4) \\
+5. L'utente autenticato può eseguire l'azione di `export` su un singolo \glossaryItem{Document}. (UC-U16.6.4) \\
 
         \textbf{Estensioni} & 1. L'utente può selezionare solo un sottoinsieme di elementi ed esportarli in formato .json o .csv (UC-U16.7.4) \\
       \end{longtable}
@@ -1171,15 +1192,15 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U16.7.1 - Ordina Document}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U16.7.1 - Ordina \glossaryItem{Document}}} \\ 
         \hline
         
         \textbf{Attori Primari} & Utente autenticato \\ 
-        \textbf{Scopo e Descrizione} & L'utente autenticato può decidere di ordinare i Document della Collection in base a uno dei loro attributi. \\ 
+        \textbf{Scopo e Descrizione} & L'utente autenticato può decidere di ordinare i \glossaryItem{Document} della \glossaryItem{Collection} in base a uno dei loro attributi. \\ 
         
-        \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina Collection. \\ 
+        \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina \glossaryItem{Collection}. \\ 
         
-        \textbf{Postcondizioni} & L'applicazione ha ordinato i Document secondo l'ordine indicato dall'utente. \\ 
+        \textbf{Postcondizioni} & L'applicazione ha ordinato i \glossaryItem{Document} secondo l'ordine indicato dall'utente. \\ 
       \end{longtable}
       \egroup
     \end{center}
@@ -1196,13 +1217,13 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U16.7.3 - Send mail da una Collection}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U16.7.3 - Send mail da una \glossaryItem{Collection}}} \\ 
         \hline
         
         \textbf{Attori Primari} & Utente autenticato \\ 
         \textbf{Scopo e Descrizione} & L'utente autenticato può inviare una mail contenente i Documents selezionati a un altro utente. \\ 
         
-        \textbf{Precondizioni}  & L'utente ha visualizzato la pagina Collection. \\ 
+        \textbf{Precondizioni}  & L'utente ha visualizzato la pagina \glossaryItem{Collection}. \\ 
         
         \textbf{Postcondizioni} & L'applicazione ha inviato la mail con i Documents selezionati al destinatario indicato dall'utente. \\ 
       \end{longtable}
@@ -1218,11 +1239,11 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U16.7.4 - Export di una Collection}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U16.7.4 - Export di una \glossaryItem{Collection}}} \\ 
         \hline
         
         \textbf{Attori Primari} & Utente autenticato \\ 
-        \textbf{Scopo e Descrizione} & L'utente autenticato può esportare i Documents selezionati da una Collection in formato json o csv. \\ 
+        \textbf{Scopo e Descrizione} & L'utente autenticato può esportare i Documents selezionati da una \glossaryItem{Collection} in formato json o csv. \\ 
         
         \textbf{Precondizioni}  & L'utente autenticato ha selezionato i documenti da esportare e il formato di file con cui intende scaricarli. \\ 
         
