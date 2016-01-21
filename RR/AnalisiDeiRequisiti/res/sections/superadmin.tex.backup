@@ -29,11 +29,11 @@ Di seguito vengono elencati i casi d'uso per il \glossaryItem{Super-Admin}.
         \textbf{Precondizioni}  & L'applicazione mostra al Super-Admin la pagina di gestione delle \glossaryItem{Company}.  \\ 
         
         \textbf{Postcondizioni} & L'applicazione mostra al Super-Admin la pagina di gestione delle \glossaryItem{Company}. \\ 
-        \textbf{Scenario principale} & 1. Il Super-Admin pu\`o creare una nuova \glossaryItem{Company}. (UC-S1) 
+        \textbf{Scenario principale} & 1. Il Super-Admin pu\`o creare una nuova \glossaryItem{Company}. (UC-S 0.0) 
         
-        2. Il superadmin pu\`o modificare i dati di una \glossaryItem{Company}. (UC-S2)  \\ 
+        2. Il superadmin può visualizzare il dettaglio di una \glossaryItem{Company}.
         
-        3. Il superadmin può visualizzare il dettaglio di una \glossaryItem{Company}. (UC-S3)
+        3. Il superadmin pu\`o modificare i dati di una \glossaryItem{Company}.  \\ 
         
         \textbf{Estensioni} & 1. Fallisce l'inserimento di una nuova \glossaryItem{Company}.
         
@@ -99,11 +99,11 @@ Di seguito vengono elencati i casi d'uso per il \glossaryItem{Super-Admin}.
         
         \textbf{Postcondizioni} & L'applicazione ha reindirizzato il \glossaryItem{Super-Admin} alla pagina di visualizzazione della \glossaryItem{Company} selezionata. \\
         
-        \textbf{Scenario principale} & 1. Il \glossaryItem{Super-Admin} può modificare i dati della \glossaryItem{Company}(UC-S 0.1.0);  
+        \textbf{Scenario principale} & 1. Il Super-Admin può modificare i dati della \glossaryItem{Company}(UC-S 0.1.0);  
         
-        2. Il \glossaryItem{Super-Admin} può aggiungere un nuovo utente della \glossaryItem{Company};
+        2. Il Super-Admin può aggiungere un nuovo utente della \glossaryItem{Company};
         
-        3. Il \glossaryItem{Super-Admin} può visualizzare uno specifico utente della \glossaryItem{Company}; 
+        3. Il Super-Admin può visualizzare uno specifico utente della \glossaryItem{Company}; 
         
         4. Il \glossaryItem{Super-Admin} pu\`o modificare i dati di uno specifico utente. \\ 
         
@@ -117,7 +117,7 @@ Di seguito vengono elencati i casi d'uso per il \glossaryItem{Super-Admin}.
     \end{center}
 
 
-\subsection{UC-S3}
+\subsection{UC-S 0.1.0}
     \begin{figure}[H]
       \begin{center}
         \includegraphics[width=12cm]{res/img/UCSuperadmin/UCS0.1.0.png}

@@ -165,8 +165,6 @@ L'applicazione offre una procedura di recupero che richiede l’inserimento dell
     R1D X & Funzionale \newline Desiderabile & Selezionare la funzionalit\`a della \glossaryItem{Action}. & Capitolato \newline UC-E2.11 \newline UC-E.11.2\\ \hline
     
     R1D X & Funzionale \newline Desiderabile & La \glossaryItem{DSL} creata dall'editor deve essere inviata al server \glossaryItem{MaaS}. & Capitolato \newline UC-E3\\ \hline
-    
-    
     \caption{Requisiti funzionali}
   \end{longtable}
   \egroup
