@@ -23,15 +23,15 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \hline
         
         \textbf{Attori Primari} & Utente autenticato \\ 
-        \textbf{Scopo e Descrizione} & L’utente autenticato può: modificare il proprio profilo, effettuare delle operazioni nella pagina Dashboard, effettuare delle operazioni di creazione/modifica/esecuzione del DSL (a seconda dei suoi permessi) e gestire altri utenti (quest'ultima funzionalità è riservata ad un ruolo superiore o uguale all'admin). \\ 
+        \textbf{Scopo e Descrizione} & L’utente autenticato può: modificare il proprio profilo, effettuare delle operazioni nella pagina \glossaryItem{Dashboard}, effettuare delle operazioni di creazione/modifica/esecuzione del DSL (a seconda dei suoi permessi) e gestire altri utenti (quest'ultima funzionalità è riservata ad un ruolo superiore o uguale all'admin). \\ 
         
         \textbf{Precondizioni}  & L’applicazione è funzionante e pronta all'uso. L'utente autenticato ha visualizzato la
-        pagina \textit{Dashboard}. \\ 
+        pagina \glossaryItem{Dashboard}. \\ 
         
         \textbf{Postcondizioni} & L'applicazione ha eseguito le azioni richieste dall'utente. \\ 
         \textbf{Scenario principale} & 1. L'utente modifica il proprio profilo. (UC-U9)
         
-2. L'utente effettua delle operazioni nella pagina Dashboard. (UC-U15)
+2. L'utente effettua delle operazioni nella pagina \glossaryItem{Dashboard}. (UC-U15)
 
 3. L'utente effettua delle operazioni di creazione/modifica/esecuzione del DSL (a seconda dei suoi permessi). (UC-U11)
 
@@ -71,7 +71,7 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \textbf{Scopo e Descrizione} & L'utente autenticato visualizza la pagina per apportare modifiche al profilo personale. Può decidere di: modificare l'indirizzo email, la password, o rimuovere il profilo. \\ 
         
         \textbf{Precondizioni}  & L’applicazione è funzionante e pronta all'uso. L'utente autenticato ha visualizzato la
-        pagina \textit{Dashboard}. \\ 
+        pagina \glossaryItem{Dashboard}. \\ 
         
         \textbf{Postcondizioni} & Le (eventuali) modifiche del profilo richieste dall'utente sono state apportate. \\ 
         \textbf{Scenario principale} & 1. L'utente autenticato modifica il proprio indirizzo email. (UC-U9.1)
@@ -111,7 +111,7 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         
         \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina di modifica del profilo. \\ 
         
-        \textbf{Postcondizioni} & Il sistema registra una nuova mail per il profilo dell'attore. \\ 
+        \textbf{Postcondizioni} & Il sistema registra un nuovo indirizzo email per il profilo dell'attore. \\ 
         \textbf{Scenario principale} & 1. L'utente autenticato inserisce un nuovo indirizzo email. (UC-U9.1.1) \\
         \textbf{Estensioni} & 1. L'utente autenticato visualizza un messaggio di errore causato dall'inserimento di un indirizzo email già presente. (UC-U13.6.2) \\
       \end{longtable}
@@ -136,7 +136,6 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina di modifica del profilo. \\ 
         
         \textbf{Postcondizioni} & L'utente autenticato ha inserito un nuovo indirizzo email. \\ 
-        \textbf{Scenario principale} & Nessuno \\
       \end{longtable}
       \egroup
     \end{center}
@@ -318,15 +317,15 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U9.4 - Rimozione \textit{Company}}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U9.4 - Rimozione \glossaryItem{Company}}} \\ 
         \hline
         
-        \textbf{Attori Primari} & \textit{Owner} \\ 
-        \textbf{Scopo e Descrizione} & L'\textit{Owner} decide di rimuovere la \textit{Company} con tutte le sue informazioni e i suoi utenti. \\ 
+        \textbf{Attori Primari} & \glossaryItem{Owner} \\ 
+        \textbf{Scopo e Descrizione} & L'\glossaryItem{Owner} decide di rimuovere la \glossaryItem{Company} con tutte le sue informazioni e i suoi utenti. \\ 
         
-        \textbf{Precondizioni}  & L'\textit{Owner} ha acconsentito alla continuazione della procedura. \\ 
+        \textbf{Precondizioni}  & L'\glossaryItem{Owner} ha acconsentito alla continuazione della procedura. \\ 
         
-        \textbf{Postcondizioni} & L'attore visualizza un messaggio di avvenuta cancellazione e tutti i dati e gli utenti registrati della \textit{Company} vengono cancellati dal sistema. \\ 
+        \textbf{Postcondizioni} & L'\glossaryItem{Owner} visualizza un messaggio di avvenuta cancellazione e tutti i dati e gli utenti collegati alla \glossaryItem{Company} vengono cancellati dal sistema. \\ 
       \end{longtable}
       \egroup
     \end{center}
@@ -349,17 +348,17 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
             \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U11 - Operazioni DSL}} \\ 
             \hline
             
-            \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \textit{Owner} \\ 
+            \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \glossaryItem{Owner} \\ 
             \textbf{Scopo e Descrizione} & L’utente visualizza la pagina per apportare modifiche sulle DSL. Può decidere di: eseguire, modificare, creare e leggere una specifica DSL.\\ 
             
-            \textbf{Precondizioni}  & L’applicazione MaaS è funzionante e pronta all'uso. Gli utenti possono accedere alla propria pagina Dashboard. \\ 
+            \textbf{Precondizioni}  & L’applicazione MaaS è funzionante e pronta all'uso. Gli utenti possono accedere alla propria pagina \glossaryItem{Dashboard}. \\ 
             
             \textbf{Postcondizioni} & Le (eventuali) modifiche sono state apportate. \\ 
-            \textbf{Scenario principale} & 1. L'Ospite, il Membro, l'Admin e l'\textit{Owner} possono eseguire una specifica DSL (UC-U11.1)  
+            \textbf{Scenario principale} & 1. L'Ospite, il Membro, l'Admin e l'\glossaryItem{Owner} possono eseguire una specifica DSL (UC-U11.1)  
             
             2. Il Membro, l'Admin e l'\textit{Owner} possono modificare una specifica DSL (UC-U11.2)
             
-            3. Il Membro, l'Admin e l'\textit{Owner} possono creare una specifica DSL (UC-U11.3)
+            3. Il Membro, l'Admin e l'\glossaryItem{Owner} possono creare una specifica DSL (UC-U11.3)
             
             4. Il Membro, l'Admin e l'\textit{Owner} possono leggere una specifica DSL (UC-U11.4)\\
             \textbf{Estensioni} & 1. L'utente visualizza un messaggio di errore in quanto non ha i permessi per operare sulla specifica DSL (UC-U12)  \\
@@ -380,7 +379,7 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
                     \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \textit{Owner}  \\ 
                     \textbf{Scopo e Descrizione} & L'Utente Autenticato, Ospite, Membro, Admin, \textit{Owner} eseguono una specifica DSL\\ 
                     
-                    \textbf{Precondizioni}  & L’applicazione è funzionante e pronta all'uso. Gli utenti possono accedere alla propria pagina Dashboard.\\ 
+                    \textbf{Precondizioni}  & L’applicazione è funzionante e pronta all'uso. Gli utenti possono accedere alla propria pagina \glossaryItem{Dashboard}.\\ 
                     
                     \textbf{Postcondizioni} & L'utente visualizza il risultato della DSL \\ 
                     \textbf{Scenario principale} & Nessuno\\
@@ -402,7 +401,7 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
                     \textbf{Attori Primari} & Membro, Admin, \textit{Owner}  \\ 
                     \textbf{Scopo e Descrizione} & Il Membro, Admin, \textit{Owner} modificano una specifica DSL tramite l'editor\\ 
                     
-                    \textbf{Precondizioni}  & L’applicazione è funzionante e pronta all'uso. Gli utenti possono accedere alla propria Dashboard. \\ 
+                    \textbf{Precondizioni}  & L’applicazione è funzionante e pronta all'uso. Gli utenti possono accedere alla propria \glossaryItem{Dashboard}. \\ 
                     
                     \textbf{Postcondizioni} & L'utente modifica la DSL \\ 
                     \textbf{Estensioni} & 1. L'utente visualizza un messaggio di errore in quanto non ha i permessi per operare sulla specifica DSL (UC-U12)  \\
@@ -423,7 +422,7 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
                     \textbf{Attori Primari} & Membro, Admin, \textit{Owner}  \\ 
                     \textbf{Scopo e Descrizione} & Il Membro, Admin, \textit{Owner} creano una specifica DSL tramite l'editor\\ 
                     
-                    \textbf{Precondizioni}  & L’applicazione è funzionante e pronta all'uso. Gli utenti possono accedere alla propria pagina Dashboard.\\ 
+                    \textbf{Precondizioni}  & L’applicazione è funzionante e pronta all'uso. Gli utenti possono accedere alla propria pagina \glossaryItem{Dashboard}.\\ 
                     
                     \textbf{Postcondizioni} & L'utente aggiunge la DSL a MaaS \\ 
                     \textbf{Estensioni} & 1. L'utente visualizza un messaggio di errore in quanto non ha i permessi per operare sulla specifica DSL (UC-U12)  \\
@@ -444,7 +443,7 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
                     \textbf{Attori Primari} & Membro, Admin, \textit{Owner}  \\ 
                     \textbf{Scopo e Descrizione} & Il Membro, Admin, \textit{Owner} leggono una specifica DSL\\ 
                     
-                    \textbf{Precondizioni}  & L’applicazione è funzionante e pronta all'uso. Gli utenti possono accedere alla propria pagina Dashboard.\\ 
+                    \textbf{Precondizioni}  & L’applicazione è funzionante e pronta all'uso. Gli utenti possono accedere alla propria pagina \glossaryItem{Dashboard}.\\ 
                     
                     \textbf{Postcondizioni} & L'utente legge la DSL \\ 
                     \textbf{Estensioni} & 1. L'utente visualizza un messaggio di errore in quanto non ha i permessi per operare sulla specifica DSL (UC-U12)  \\
@@ -493,19 +492,19 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
             \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U13 - Operazioni sugli utenti}} \\ 
             \hline
             
-            \textbf{Attori Primari} & Amministratore, \textit{Owner} \\ 
-            \textbf{Scopo e Descrizione} & L'Amministratore e l'\textit{Owner} visualizzano la pagina per apportare modifiche sugli utenti. Possono decidere di: operare su una specifica DSL accedendo all'editor e inserire, rimuovere, invitare un nuovo utente.\\ 
+            \textbf{Attori Primari} & Admin, \glossaryItem{Owner} \\ 
+            \textbf{Scopo e Descrizione} & L'Admin e l'\glossaryItem{Owner} visualizzano la pagina per apportare modifiche sugli utenti. Possono decidere di: operare su una specifica DSL accedendo all'editor oppure inserire, rimuovere, invitare un nuovo utente.\\ 
             
-            \textbf{Precondizioni}  & L'amministratore e l'\textit{Owner} dispongono dei permessi. \\ 
+            \textbf{Precondizioni}  & L'Admin e l'\glossaryItem{Owner} dispongono dei permessi. \\ 
             
             \textbf{Postcondizioni} & Le (eventuali) modifiche sono state apportate. \\ 
-            \textbf{Scenario principale} & 1. L'Amministratore e l'\textit{Owner} possono eseguire operazioni su una specifica DSL (UC-U13.1)  
+            \textbf{Scenario principale} & 1. L'Admin e l'\glossaryItem{Owner} possono eseguire operazioni su una specifica DSL (UC-U13.1)  
             
-            2. L'\textit{Owner} può invitare un nuovo utente (UC-U13.4)
+            2. L'\glossaryItem{Owner} può invitare un nuovo utente (UC-U13.4)
             
-            3. L'\textit{Owner} può rimuovere un utente (UC-U13.5)
+            3. L'\glossaryItem{Owner} può rimuovere un utente (UC-U13.5)
             
-            4. L'\textit{Owner} può aggiungere un nuovo utente (UC-U13.6)\\
+            4. L'\glossaryItem{Owner} può aggiungere un nuovo utente (UC-U13.6)\\
           \end{longtable}
           \egroup
         \end{center}
@@ -520,8 +519,8 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
                     \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U13.1 - Operazione su un permesso di una specifica DSL}} \\ 
                     \hline
                     
-                    \textbf{Attori Primari} & Amministratore, \textit{Owner} \\ 
-                    \textbf{Scopo e Descrizione} & L'amministratore o l'\textit{Owner} decidono di operare su una specifica DSL\\ 
+                    \textbf{Attori Primari} & Amministratore, \glossaryItem{Owner} \\ 
+                    \textbf{Scopo e Descrizione} & L'amministratore o l'\glossaryItem{Owner} decidono di operare su una specifica DSL\\ 
                     
                     \textbf{Precondizioni}  & La DSL selezionata è già stata creata in precedenza. \\ 
                     
@@ -676,20 +675,20 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U15 - Operazioni Dashboard}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U15 - Operazioni \glossaryItem{Dashboard}}} \\ 
         \hline
         
         \textbf{Attori Primari} & Utente autenticato \\ 
-        \textbf{Scopo e Descrizione} & L'utente autenticato può: visualizzare la Dashboard, effettuare delle operazioni sulle righe della Dashboard, rimuovere le righe della Dashboard. \\ 
+        \textbf{Scopo e Descrizione} & L'utente autenticato può: visualizzare la \glossaryItem{Dashboard}, effettuare delle operazioni sulle righe della \glossaryItem{Dashboard}, rimuovere le righe della \glossaryItem{Dashboard}. \\ 
         
-        \textbf{Precondizioni}  & L'utente autenticato si trova nella pagina iniziale Dashboard. \\ 
+        \textbf{Precondizioni}  & L'utente autenticato si trova nella pagina iniziale \glossaryItem{Dashboard}. \\ 
         
         \textbf{Postcondizioni} & L'applicazione MaaS ha eseguito le operazioni richieste dall'utente. \\ 
-        \textbf{Scenario principale} & 1. L'utente autenticato visualizza la Dashboard (UC-U15.1)
+        \textbf{Scenario principale} & 1. L'utente autenticato visualizza la \glossaryItem{Dashboard} (UC-U15.1)
         
-2. L'utente autenticato effettua delle operazioni su un elemento della \textit{Dashboard} (UC-U16)
+2. L'utente autenticato effettua delle operazioni su un elemento della \glossaryItem{Dashboard} (UC-U16)
 
-3. L'utente autenticato rimuove degli elementi dalla \textit{Dashboard} (UC-U15.2) \\
+3. L'utente autenticato rimuove degli elementi dalla \glossaryItem{Dashboard} (UC-U15.2) \\
       \end{longtable}
       \egroup
     \end{center}
@@ -703,15 +702,15 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U15.1 - Visualizzazione Dashboard}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U15.1 - Visualizzazione \glossaryItem{Dashboard}}} \\ 
         \hline
         
         \textbf{Attori Primari} & Utente autenticato \\ 
-        \textbf{Scopo e Descrizione} & L'utente autenticato visualizza la Dashboard. \\ 
+        \textbf{Scopo e Descrizione} & L'utente autenticato visualizza la \glossaryItem{Dashboard}. \\ 
         
-        \textbf{Precondizioni}  & L'applicazione mostra la \textit{Dashboard}. \\ 
+        \textbf{Precondizioni}  & L'applicazione mostra la \glossaryItem{Dashboard}. \\ 
         
-        \textbf{Postcondizioni} & L'utente ha visualizzato la propria \textit{Dashboard}. \\ 
+        \textbf{Postcondizioni} & L'utente ha visualizzato la propria \glossaryItem{Dashboard}. \\ 
       \end{longtable}
       \egroup
     \end{center}
@@ -729,9 +728,9 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \hline
         
         \textbf{Attori Primari} & Utente autenticato \\ 
-        \textbf{Scopo e Descrizione} & L'utente autenticato intende eliminare degli elementi presenti nella sua Dashboard. \\ 
+        \textbf{Scopo e Descrizione} & L'utente autenticato intende eliminare degli elementi presenti nella sua \glossaryItem{Dashboard}. \\ 
         
-        \textbf{Precondizioni}  & L'utente si trova nella pagina Dashboard e seleziona l'elemento che vuole eliminare. \\ 
+        \textbf{Precondizioni}  & L'utente si trova nella pagina \glossaryItem{Dashboard} e seleziona l'elemento che vuole eliminare. \\ 
         
         \textbf{Postcondizioni} & Il sistema ha rimosso l'elemento. \\ 
       \end{longtable}
@@ -743,7 +742,7 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
     \begin{figure}[H]
       \begin{center}
         \includegraphics[width=12cm]{res/img/UCUtenti/UCUtenteA/UC-U16-Operazioni_sulle_righe/UC-U16.png}
-      \caption{UC-U16 - Operazioni sugli elementi della Dashboard}
+      \caption{UC-U16 - Operazioni sugli elementi della \glossaryItem{Dashboard}}
       \end{center} 
     \end{figure}
 
@@ -754,16 +753,16 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U16 - Operazioni sugli elementi della \textit{Dashboard}}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U16 - Operazioni sugli elementi della \glossaryItem{Dashboard}}} \\ 
         \hline
         
         \textbf{Attori Primari} & Utente autenticato \\ 
-        \textbf{Scopo e Descrizione} & L'utente autenticato può eseguire le seguenti azioni sugli elementi della \textit{Dashboard}: visualizzare un elemento (che può essere una Cell, un Document o una Collection) oppure effettuare un'operazione su di esso. \\ 
+        \textbf{Scopo e Descrizione} & L'utente autenticato può eseguire le seguenti azioni sugli elementi della \glossaryItem{Dashboard}: visualizzare un elemento (che può essere una Cell, un Document o una Collection) oppure effettuare un'operazione su di esso. \\ 
         
-        \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina iniziale Dashboard. \\ 
+        \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina iniziale \glossaryItem{Dashboard}. \\ 
         
-        \textbf{Postcondizioni} & L'applicazione ha eseguito le operazioni sulle righe della Dashboard richieste dall'utente autenticato. \\ 
-        \textbf{Scenario principale} & 1. Visualizzazione element Dashboard (UC-U16.1)
+        \textbf{Postcondizioni} & L'applicazione ha eseguito le operazioni sulle righe della \glossaryItem{Dashboard} richieste dall'utente autenticato. \\ 
+        \textbf{Scenario principale} & 1. Visualizzazione element \glossaryItem{Dashboard} (UC-U16.1)
         
 1.1 L'utente visualizza una Cell (UC-U16.2)
 
@@ -791,13 +790,13 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U16.1 - Visualizzazione element Dashboard}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U16.1 - Visualizzazione element \glossaryItem{Dashboard}}} \\ 
         \hline
         
         \textbf{Attori Primari} & Utente autenticato \\ 
-        \textbf{Scopo e Descrizione} & L'utente autenticato sceglie di visualizzare un element dalla Dashboard (che può essere una Cell, un Document o una Collection). \\ 
+        \textbf{Scopo e Descrizione} & L'utente autenticato sceglie di visualizzare un element dalla \glossaryItem{Dashboard} (che può essere una Cell, un Document o una Collection). \\ 
         
-        \textbf{Precondizioni}  & L'utente autenticato ha visualizzato un element della Dashboard. \\ 
+        \textbf{Precondizioni}  & L'utente autenticato ha visualizzato un element della \glossaryItem{Dashboard}. \\ 
         
         \textbf{Postcondizioni} & L'utente autenticato viene reindirizzato alla pagina di visione dell'element selezionato. \\ 
       \end{longtable}
@@ -819,9 +818,9 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \hline
         
         \textbf{Attori Primari} & Utente autenticato \\ 
-        \textbf{Scopo e Descrizione} & L'utente autenticato può visualizzare una Cell selezionata nella Dashboard. \\ 
+        \textbf{Scopo e Descrizione} & L'utente autenticato può visualizzare una Cell selezionata nella \glossaryItem{Dashboard}. \\ 
         
-        \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina Dashboard. \\ 
+        \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina \glossaryItem{Dashboard}. \\ 
         
         \textbf{Postcondizioni} & L'utente autenticato è stato reindirizzato nella pagina Cell e ne ha visualizzato il contenuto. \\ 
       \end{longtable}
@@ -841,9 +840,9 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \hline
         
         \textbf{Attori Primari} & Utente autenticato \\ 
-        \textbf{Scopo e Descrizione} & L'utente autenticato può visualizzare un Document selezionato nella Dashboard. \\ 
+        \textbf{Scopo e Descrizione} & L'utente autenticato può visualizzare un Document selezionato nella \glossaryItem{Dashboard}. \\ 
         
-        \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina Dashboard. \\ 
+        \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina \glossaryItem{Dashboard}. \\ 
         
         \textbf{Postcondizioni} & L'utente autenticato è stato reindirizzato nella pagina Document e ne ha visualizzato il contenuto. \\ 
       \end{longtable}
@@ -863,9 +862,9 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \hline
         
         \textbf{Attori Primari} & Utente autenticato \\ 
-        \textbf{Scopo e Descrizione} & L'utente autenticato può visualizzare una Collection selezionato nella Dashboard. \\ 
+        \textbf{Scopo e Descrizione} & L'utente autenticato può visualizzare una Collection selezionato nella \glossaryItem{Dashboard}. \\ 
         
-        \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina Dashboard. \\ 
+        \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina \glossaryItem{Dashboard}. \\ 
         
         \textbf{Postcondizioni} & L'utente autenticato è stato reindirizzato nella pagina Collection e ne ha visualizzato il contenuto. \\ 
       \end{longtable}
@@ -1066,7 +1065,7 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \hline
         
         \textbf{Attori Primari} & Utente autenticato \\ 
-        \textbf{Scopo e Descrizione} & L'utente autenticato può rimuovere un Document dalla Dashboard. \\ 
+        \textbf{Scopo e Descrizione} & L'utente autenticato può rimuovere un Document dalla \glossaryItem{Dashboard}. \\ 
         
         \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina Document da rimuovere. \\ 
         
