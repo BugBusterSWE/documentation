@@ -1,24 +1,24 @@
 \section{Introduzione}
-Lo scopo primario è la qualità del prodotto e dei suoi processi, ottenibile solo attraverso una serie continua di controlli. Il team si impone una rigida e costante attività di verifica, per poter individuare e correggere eventuali errori presenti nei documenti e nel codice sorgente. L'assenza di tali controlli porterebbe al deterioramento del prodotto, soprattutto se in presenza di un team giovane e con poca esperienza alle spalle. \\
-È volontà del team non operare by correction che comporterebbe il rischio di ritardi nella maturazione del prodotto.
+Lo scopo primario è la \glossaryItem{\glossaryItem{qualità}} del prodotto e dei suoi processi, ottenibile solo attraverso una serie continua di controlli. Il \glossaryItem{team} si impone una rigida e costante attività di \glossaryItem{verifica}, per poter individuare e correggere eventuali errori presenti nei documenti e nel \glossaryItem{codice sorgente}. L'assenza di tali controlli porterebbe al deterioramento del prodotto, soprattutto se in presenza di un \glossaryItem{team} giovane e con poca esperienza alle spalle. \\
+È volontà del \glossaryItem{team} non operare \glossaryItem{by correction} che comporterebbe il rischio di ritardi nella maturazione del prodotto.
 
 \subsection{Scopo del documento}
-Il presente documento contiene le strategie di verifica e validazione che il team BugBusters ha deciso di adottare. La ricerca della qualità, nei prodotti e nei processi, non rientra nei ruoli canonici di un progetto, ma è una funzione aziendale; il committente, potrà, attraverso le strategie qui documentate, valutare su basi oggettive il prodotto e disporre di una solida batteria di test.
+Il presente documento contiene le strategie di \glossaryItem{verifica} e \glossaryItem{validazione} che il \glossaryItem{team} BugBusters ha deciso di adottare. La ricerca della \glossaryItem{qualità}, nei prodotti e nei processi, non rientra nei ruoli canonici di un progetto, ma è una \glossaryItem{funzione aziendale}; il \glossaryItem{committente}, potrà, attraverso le strategie qui documentate, valutare su basi oggettive il prodotto e disporre di una solida batteria di test.
 
 \subsection{Scopo del prodotto}
-L'obiettivo che si pone MaaS (\textbf{M}ongoDB \textbf{a}s an \textbf{a}dmin \textbf{S}ervice) è quello di rendere il già funzionante MaaP (\textbf{M}ongoDB \textbf{a}s an \textbf{a}dmin \textbf{P}latform) un servizio, ovvero quello di renderlo disponibile a tutti, senza richiederne l'installazione. MaaS si propone di essere un'estensione di MaaP anche dal punto di vista delle funzionalità offerte all'utente finale. Sarà in grado di supportare i ruoli basilari di una company, permettendo ad utenti diversi di eseguire operazioni diverse. \\
-MaaS verrà realizzato utilizzando principalmente Node.js e MongoDB.
+L'obiettivo che si pone \glossaryItem{MaaS} (\textbf{M}ongoDB \textbf{a}s an \textbf{a}dmin \textbf{S}ervice) è quello di rendere il già funzionante \glossaryItem{MaaP} (\textbf{M}ongoDB \textbf{a}s an \textbf{a}dmin \textbf{P}latform) un servizio, ovvero quello di renderlo disponibile a tutti, senza richiederne l'installazione. \glossaryItem{MaaS} si propone di essere un'estensione di \glossaryItem{MaaP} anche dal punto di vista delle funzionalità offerte all'utente finale. Sarà in grado di supportare i ruoli basilari di una company, permettendo ad utenti diversi di eseguire operazioni diverse. \\
+\glossaryItem{MaaS} verrà realizzato utilizzando principalmente Node.js e MongoDB.
 
 \subsection{Glossario}
 Ogni occorrenza di acronimi, dei termini tecnici o di dominio è evidenziata con il corsivo e marcata con la lettera G in pedice. Nel documento \Glossario sono riportati i significati corrispondenti.
 
 \subsection{Riferimenti}
-Di seguito  sono elencati i riferimenti sui quali si basano il presente documento e le attività di verifica e validazione.
+Di seguito  sono elencati i riferimenti sui quali si basano il presente documento e le attività di \glossaryItem{verifica} e \glossaryItem{validazione}.
 
 \subsubsection{Normativi}
 \begin{itemize}
 \item \textbf{Norme di Progetto}: \NormeDiProgetto;
-\item \textbf{Capitolato d'appalto C4}: RedBabel, MaaS \url{http://www.math.unipd.it/~tullio/IS-1/2015/Progetto/C4.pdf};
+\item \textbf{Capitolato d'appalto C4}: RedBabel, \glossaryItem{MaaS} \url{http://www.math.unipd.it/~tullio/IS-1/2015/Progetto/C4.pdf};
 \item \textbf{Standard ISO/IEC 15504}: \url{http://en.wikipedia.org/wiki/ISO/IEC_15504};
 \item \textbf{Standard ISO/IEC 9126}: \url{http://en.wikipedia.org/wiki/ISO/IEC_9126};
 \item \textbf{Standard IEEE 610.12-90}: \url{https://cow.ceng.metu.edu.tr/Courses/download_courseFile.php?id=2677}.
@@ -28,8 +28,8 @@ Di seguito  sono elencati i riferimenti sui quali si basano il presente document
 \begin{itemize}
 \item \textbf{Piano di Progetto}: \PianoDiProgetto;
 \item \textbf{SWEBOK v3}: capitolo 10;
-\item \textbf{Slides del corso di Ingegneria del Software mod. A}: Qualità del software \url{http://www.math.unipd.it/~tullio/IS-1/2015/Dispense/L08.pdf};
-\item \textbf{Slides del corso di Ingegneria del Software mod. A}: Qualità del processo \url{http://www.math.unipd.it/~tullio/IS-1/2015/Dispense/L09.pdf};
+\item \textbf{Slides del corso di Ingegneria del Software mod. A}: \glossaryItem{Qualità} del software \url{http://www.math.unipd.it/~tullio/IS-1/2015/Dispense/L08.pdf};
+\item \textbf{Slides del corso di Ingegneria del Software mod. A}: \glossaryItem{Qualità} del processo \url{http://www.math.unipd.it/~tullio/IS-1/2015/Dispense/L09.pdf};
 \item \textbf{Software Engineering 9th - I. Sommerville (Pearson, 2011)}: capitoli 24 e 26;
 \item \textbf{Metriche del software G - Ercole F. Colonese}: \url{http://www.colonese.it/00-Manuali_Pubblicatii/08-Metriche%20del%20software_v1.0.pdf};
 \item \textbf{Ciclo di Deming}: \url{https://it.wikipedia.org/wiki/Ciclo_di_Deming};
