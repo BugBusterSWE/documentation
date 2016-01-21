@@ -9,7 +9,7 @@ Di seguito vengono elencati i casi d'uso per l'editor.
 
     \begin{figure}[H]
       \begin{center}
-        \includegraphics[width=12cm]{res/img/UCEditor/UC-E}
+        \includegraphics[width=12cm]{res/img/UCEditor/UC-E0.png}
       \caption{UC-E0 - Operazioni ad alto livello - Uso dell'editor}
       \end{center} 
     \end{figure}    
@@ -64,7 +64,7 @@ Di seguito vengono elencati i casi d'uso per l'editor.
 
     \begin{figure}[H]
       \begin{center}
-        \includegraphics[width=12cm]{res/img/UCEditor/UC-E2-DSLElement}
+        \includegraphics[width=12cm]{res/img/UCEditor/UC-E2.png}
       \caption{UC-E2 - DSL Element}
       \end{center} 
     \end{figure}    
@@ -85,12 +85,12 @@ Di seguito vengono elencati i casi d'uso per l'editor.
         \textbf{Precondizioni}  & L'utente visualizza l'editor. \\ 
         
         \textbf{Postcondizioni} & L'utente ha eseguito le sue operazioni sul DSL Element con successo. \\ 
-        \textbf{Scenario Principale} & 1. Aggiunta DSL Element (UC-E2.0.1)
-2. Compilazione campi (UC-E2.0.2)
-3. Associare un DSL Dependent Element ad un attributo (UC-E2.0.3)
-4. Rimuovere DSL Element (UC-E2.0.4)
-5. Associare un Function Element (UC-E2.0.5)
-6.  Accedere ai campi opzionali di un DSL Element (UC-E2.0.6)
+        \textbf{Scenario Principale} & 1. L'utente pu\`o aggiungere un DSL Element. (UC-E2.0.1)
+2. L'attore pu\`o compilare i campi informativi del DSL Element. (UC-E2.0.2)
+3. L'utente pu\`o collegare un DSL Dependent Element ad un attributo. (UC-E2.0.3)
+4. L'utente ha la possibilit\`a di rimuovere un DSL Element. (UC-E2.0.4)
+5. L'utente ha la possibilit\`a di associare un Function Element al DSL Element. (UC-E2.0.5)
+6. L'utente ha la possibilit\`a di accedere ai campi opzionali di un DSL Element. (UC-E2.0.6)
       \end{longtable}
       \egroup
     \end{center} 
@@ -234,7 +234,7 @@ Di seguito vengono elencati i casi d'uso per l'editor.
 
     \begin{figure}[H]
       \begin{center}
-        \includegraphics[width=12cm]{res/img/UCEditor/UC-E2.1-CollectionElement}
+        \includegraphics[width=12cm]{res/img/UCEditor/UC-E2.1.png}
       \caption{UC-E2.1 - Collection Element}
       \end{center} 
     \end{figure}
@@ -255,8 +255,8 @@ Di seguito vengono elencati i casi d'uso per l'editor.
         \textbf{Precondizioni}  & L'utente sta visualizzando l'editor. \\ 
         
         \textbf{Postcondizioni} & L'utente ha manipolato il Collection Element. \\ 
-        \textbf{Scenario principale} & 1. Aggancia un Index Element (UC-E2.1.1)
-2. Aggancia un Document Element (UC-E2.1.2) \\
+        \textbf{Scenario principale} & 1. L'utente pu\`o associare un Index Element (UC-E2.1.1)
+2. L'utente pu\`o associare un Document Element (UC-E2.1.2) \\
 \end{longtable}
       \egroup
     \end{center}
@@ -312,7 +312,7 @@ Di seguito vengono elencati i casi d'uso per l'editor.
 \subsubsection{UC-E2.2}
     \begin{figure}[H]
       \begin{center}
-        \includegraphics[width=12cm]{res/img/UCEditor/UC-E2.2-FunctionElement}
+        \includegraphics[width=12cm]{res/img/UCEditor/UC-E2.2.png}
       \caption{UC-E2.2 - Manipolare un Function Element}
       \end{center} 
     \end{figure}
@@ -334,9 +334,9 @@ Di seguito vengono elencati i casi d'uso per l'editor.
         \textbf{Precondizioni}  & L'editor \`e pronto per l'utilizzo. \\ 
         
         \textbf{Postcondizioni} & L'utente ha creato, modificato o rimosso uno specifico Function Element. \\ 
-        \textbf{Scenario principale} & 1. Definizione di un \textit{function element} (UC-E2.2.1)
-2. Salvataggio Function Element (UC-E2.2.2)
-3. Importare Function Element (UC-E2.2.3)  \\
+        \textbf{Scenario principale} & 1. L'utente ha la possibilit\`a di definire un \textit{function element} (UC-E2.2.1)
+2. L'utente ha la possibilit\`a di salvare Function Element (UC-E2.2.2)
+3. L'utente ha la possibilit\`a di importare Function Element (UC-E2.2.3)  \\
       \end{longtable}
       \egroup
     \end{center}
@@ -410,7 +410,7 @@ Di seguito vengono elencati i casi d'uso per l'editor.
 \subsubsection{UC-E2.3}
     \begin{figure}[H]
       \begin{center}
-        \includegraphics[width=12cm]{res/img/UCEditor/UC-E2.3-IndexElement}
+        \includegraphics[width=12cm]{res/img/UCEditor/UC-E2.3.png}
       \caption{UC-E2.3 - Index Element}
       \end{center} 
     \end{figure}
@@ -431,10 +431,10 @@ Di seguito vengono elencati i casi d'uso per l'editor.
         \textbf{Precondizioni}  & L'utente \`e all'interno dell'editor. \\ 
         
         \textbf{Postcondizioni} & \`E stato manipolato l'Index Element secondo le opzioni indicatre dall'utente. \\ 
-        \textbf{Scenario Principale} & 1. Riferimento ad un Column Element (UC-E2.6.1)
-2. Collegare un Input Element (UC-E2.8.2)
-3. Aggiungere/Rimuovere un attributo ``column'' (UC-E2.3.1)
-4. Collegare un Column Element (UC-E2.3.2)
+        \textbf{Scenario Principale} & 1. L'utente pu\`o aggiungere un riferimento ad un Column Element. (UC-E2.6.1)
+2. L'utente pu\`o associare un Input Element. (UC-E2.8.2)
+3. L'utente pu\`o aggiungere/rimuovere un attributo ``column''. (UC-E2.3.1)
+4. L'utente ha la possibilit\'a di associare un Column Element. (UC-E2.3.2)
       \end{longtable}
       \egroup
     \end{center}
@@ -450,7 +450,7 @@ Di seguito vengono elencati i casi d'uso per l'editor.
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.3.1 - Aggiungere/Rimuovere un attributo ``column''}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Proprietario \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
         \textbf{Scopo e Descrizione} & L'utente ha la possibilit\`a di rimuovere o aggiungere dall'Index Element un attributo ``column''. \\ 
         
         \textbf{Precondizioni}  &  L'utente \`e all'interno dell'editor e sta visualizzando un Index Element da modificare. \\ 
@@ -471,15 +471,17 @@ Di seguito vengono elencati i casi d'uso per l'editor.
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.3.2 - Associare un \textit{Column Element} ad un Index Element}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Proprietario \\ 
-        \textbf{Scopo e Descrizione} & \`E possibile agganciare un Column Element all'attributo ``column'' \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Scopo e Descrizione} & L'utente ha la possibilit\`a di associare un Column Element ad un attributo ``column'' di un Index Element. \\ 
         
-        \textbf{Precondizioni}  & Deve essere presente un attributo Column \\ 
+        \textbf{Precondizioni}  & L'utente visualizza un Index Element su cui associare il Column Element. \\ 
         
-        \textbf{Postcondizioni} & La sezione del DSL ``column'' viene riempita con i valori impostati sul Column Element  
+        \textbf{Postcondizioni} & Il sistema associa correttamente il Column Element all Index Element indicato dall'utente.
       \end{longtable}
       \egroup
     \end{center}
+    
+    
 \subsubsection{UC-E2.4}
 
     %Tabella 
@@ -489,18 +491,19 @@ Di seguito vengono elencati i casi d'uso per l'editor.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.4 - Column Element}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.4 - Manipolazione di un Column Element}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, membro, Admin, Proprietario \\ 
-        \textbf{Scopo e Descrizione} & Dare tutte le funzionalit\`a espresse nel DSL Element \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, membro, Admin, Owner \\ 
+        \textbf{Scopo e Descrizione} & L'utente ha la possibilit\`a di aggiungere, rimuovere o modificare un Column Element \\ 
         
-        \textbf{Precondizioni}  & Deve riferirsi ad una struttura column presente nel DSL corrente \\ 
+        \textbf{Precondizioni}  & L'editor \`e visualizzato dall'utente. \\ 
         
-        \textbf{Postcondizioni} & L'utente manipola le parti che compongono la struttura 
+        \textbf{Postcondizioni} & Il sistema compie le operazioni sul Column Element indicato dall'utente.
       \end{longtable}
       \egroup
     \end{center}
+    
 \subsubsection{UC-E2.5}
 
     %Tabella 
@@ -510,15 +513,15 @@ Di seguito vengono elencati i casi d'uso per l'editor.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.5 - Row Element}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.5 - Manipolazione di Row Element}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Proprietario \\ 
-        \textbf{Scopo e Descrizione} & Rappresentazione di una struttura Row all'interno del DSL \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Scopo e Descrizione} & L'utente ha la possibilit\`a di aggiungere, rimuovere o modificare un Row Element \\ 
         
-        \textbf{Precondizioni}  & Dev'essere legata a una struttura Document \\ 
+        \textbf{Precondizioni}  & L'editor \`e visualizzato dall'utente. \\ 
         
-        \textbf{Postcondizioni} & Viene definita la struttura della Row all'interno del DSL corrente 
+        \textbf{Postcondizioni} & Il sistema compie le operazioni sul Column Element indicato dall'utente.
       \end{longtable}
       \egroup
     \end{center}
@@ -539,19 +542,19 @@ Di seguito vengono elencati i casi d'uso per l'editor.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.6 - Document Element}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.6 - Manipulare un Document Element}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Proprietario \\ 
-        \textbf{Scopo e Descrizione} & Rappresenta l'elemento Document del DSL \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Scopo e Descrizione} & L'editor offre la possibilit\`a di manipulare un Document Element agganciandogli altri elementi \\ 
         
         \textbf{Precondizioni}  & L'utente visualizza l'editor \\ 
         
         \textbf{Postcondizioni} & Viene generato l'elemento Document nel DSL \\ 
-        \textbf{Scenario Principale} & 1. Riferimento ad un Column Element (UC-E2.6.1)
-2. Aggiungere/Rimuovere un attributo row (UC-E2.6.2)
-3. Agganciare un Row Element (UC-E2.6.3)
-4. Agganciare un Action Element (UC-E2.6.4) 
+        \textbf{Scenario Principale} & 1. L'utente ha la possibilit\`a di aggiungere un riferimento ad un Column Element. (UC-E2.6.1)
+2. L\`utente pu\`o aggiungere/aimuovere un attributo row. (UC-E2.6.2)
+3. L\`utente pu\`o associare un Row Element. (UC-E2.6.3)
+4. L\`utente pu\`o associare agganciare un Action Element. (UC-E2.6.4) 
       \end{longtable}
       \egroup
     \end{center}
@@ -564,18 +567,20 @@ Di seguito vengono elencati i casi d'uso per l'editor.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.6.1 - Riferimento ad un Column Element}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.6.1 - Aggiungere un riferimento ad un Column Element}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Proprietario \\ 
-        \textbf{Scopo e Descrizione} & Riferirsi ad un elemento colonna precedentemente definito in modo da applicare la populate del DSL \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Scopo e Descrizione} & Si da la possibilit\`a di aggiungere una \glossaryItem{associazione per riferimento} tra il Column Element e l'attributo populate del Document Element. \\ 
         
-        \textbf{Precondizioni}  & Esista almeno un elemento Document a cui si riferisca \\ 
+        \textbf{Precondizioni}  & Il Document Element esiste nella sessione corrente dell'editor \\ 
         
-        \textbf{Postcondizioni} & Viene composta la funzione populate
+        \textbf{Postcondizioni} & Il sistema aggiunge un riferimento tra il Column Element e il Document Element.
       \end{longtable}
       \egroup
     \end{center}
+    
+    
 \subsubsection{UC-E2.6.2}
 
     %Tabella 
@@ -585,15 +590,15 @@ Di seguito vengono elencati i casi d'uso per l'editor.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.6.2 - Aggiungere/Rimuovere un attributo row}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.6.2 - Aggiungere/Rimuovere un attributo Row}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Proprietario \\ 
-        \textbf{Scopo e Descrizione} & Aggiungere o rimuovere una struttura ``row'' all'interno del Document nella struttura DSL \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Scopo e Descrizione} & Il sistema dispone la possibilit\`a di aggiungere o rimuovere un attributo Row da un Document Element. \\ 
         
-        \textbf{Precondizioni}  & Si deve riferire a un Document esistente \\ 
+        \textbf{Precondizioni}  & Il Document Element su cui operare l'aggiunta/rimozione di un attributo Row esiste nella sessione corrente dell'editor. \\ 
         
-        \textbf{Postcondizioni} & \`E stata manipolata (aggiunta o rimossa) una ``row'' all'interno del DSL Document 
+        \textbf{Postcondizioni} & \`E stata manipolata (aggiunta o rimossa) un attributo Row all'interno del DSL Document.
       \end{longtable}
       \egroup
     \end{center}
@@ -606,15 +611,15 @@ Di seguito vengono elencati i casi d'uso per l'editor.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.6.3 - Agganciare un Row Element}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.6.3 - Associare un Row Element ad un attributo Row}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Proprietario \\ 
-        \textbf{Scopo e Descrizione} & Definire la struttura della ``row'' del DSL  \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Scopo e Descrizione} & Il sistema dispone la funzionalit\`a di aggiungere un'associazione tra un Row Element e un attributo Row di uno specifico Document Element.  \\ 
         
-        \textbf{Precondizioni}  & Sia presente un attributo ``row'' nel Document \\ 
+        \textbf{Precondizioni}  & Il Document Element e il Row Element decisi dall'utente esistono nella sessione corrente dell'editor. \\ 
         
-        \textbf{Postcondizioni} & Nel DSL vengono trascritti nella struttura ``row'' gli attributi e i rispettivi valori 
+        \textbf{Postcondizioni} & Il sistema ha creato l'associazione tra il Row Element e l'attributo Row del Document Element scelto.
       \end{longtable}
       \egroup
     \end{center}
@@ -627,15 +632,15 @@ Di seguito vengono elencati i casi d'uso per l'editor.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.6.4 - Agganciare un Action Element}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.6.4 - Associare un Action Element}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Proprietario \\ 
-        \textbf{Scopo e Descrizione} & Legare il contenuto informativo della ``row'' all'azione definita dalla ``action'' \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Scopo e Descrizione} & Il sistema dispone la funzionalit\`a di associare un Action Element ad un attributo Row di un Document Element. \\ 
         
-        \textbf{Precondizioni}  & \`E definita una ``row'' all'interno del DSL \\ 
+        \textbf{Precondizioni}  & Il Document Element con il relativo attributo Row esistono nella sessione corrente. \\ 
         
-        \textbf{Postcondizioni} & Verr\`a definita la ``action'' nella ``row'' 
+        \textbf{Postcondizioni} & Viene creata un'associazione tra Action Element e l'attributo Row del Document Element indicato dall'utente. 
       \end{longtable}
       \egroup
     \end{center}
@@ -656,18 +661,18 @@ Di seguito vengono elencati i casi d'uso per l'editor.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.7 - Input Element}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.7 - Manipolare un Input Element}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Proprietario \\ 
-        \textbf{Scopo e Descrizione} & Si occupa di rappresentare una dato in un specifico formato \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Scopo e Descrizione} & Il sistema da la possibilit\`a all'utente di modificare un Input Element agendo  sui suoi attributi.  \\ 
         
-        \textbf{Precondizioni}  & L'utente pu\`o visualizzare l'Editor \\ 
+        \textbf{Precondizioni}  & L'utente si trova in una sessione dell'editor valida. \\ 
         
-        \textbf{Postcondizioni} & Viene composto il dato con i valori inseriti dall'utente \\ 
-        \textbf{Scenario Principale} & 1. Creare/Eliminare un nuovo attributo (UC-E2.7.1)
-2. Modificare un attributo (UC-E2.7.2)
-3. Comporre un attributo con sottoattributi (UC-E2.7.3)
+        \textbf{Postcondizioni} & Il sistema ha eseguito le operazioni indicate dall'utente. \\ 
+        \textbf{Scenario Principale} & 1. L\`utente pu\`o creare/eliminare un nuovo attributo per l'Input Element. (UC-E2.7.1)
+2. L\`utente pu\`o modificare un attributo dell'Input Element. (UC-E2.7.2)
+3. L\`utente pu\`o aggiungere ad un attributo dei sottoattributi. (UC-E2.7.3)
       \end{longtable}
       \egroup
     \end{center}
@@ -680,15 +685,15 @@ Di seguito vengono elencati i casi d'uso per l'editor.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.7.1 - Creare/Eliminare un nuovo attributo}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.7.1 - Creare/Eliminare un nuovo attributo dell'Input Element}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Proprietario \\ 
-        \textbf{Scopo e Descrizione} & Essendo il dato componibile da pi\`u attributi, permette di definire una coppia chiave/valore per meglio definire il suo dato \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Scopo e Descrizione} & Il sistema fornisce le operazioni di creazione ed eliminazione di un attributo di un Input Element selezionato. \\ 
         
-        \textbf{Precondizioni}  & L'utente si deve riferire a un Data Element presente \\ 
+        \textbf{Precondizioni}  & L'utente si deve riferire a un Input Element presente nella sessione corrente dell'editor. \\ 
         
-        \textbf{Postcondizioni} & Si manipola l'attributo selezionato
+        \textbf{Postcondizioni} & Il sistema agisce sull'Input Element aggiungendo o rimuovendo un attributo.
       \end{longtable}
       \egroup
     \end{center}
@@ -701,15 +706,15 @@ Di seguito vengono elencati i casi d'uso per l'editor.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.7.2 - Modificare un attributo}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.7.2 - Modificare un attributo dell'Input Element}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Proprietario \\ 
-        \textbf{Scopo e Descrizione} & Poter rinominare o la chiave o il valore all'interno di un Data Element \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Scopo e Descrizione} & L'utente ha la possibilit\`a di modificare la chiave o il valore di un attributo dell'Input Element. \\ 
         
-        \textbf{Precondizioni}  & Ci sia un attributo a cui riferirsi \\ 
+        \textbf{Precondizioni}  & L'Input Element selezionato dall'utente possiede l'attributo da modificare. \\ 
         
-        \textbf{Postcondizioni} & Viene modificata o la chiave o il valore dell'attributo selezionato dall'utente
+        \textbf{Postcondizioni} & Il sistema ha modificato la chiave o il valore dell'attributo selezionato dall'utente.
       \end{longtable}
       \egroup
     \end{center}
@@ -722,15 +727,15 @@ Di seguito vengono elencati i casi d'uso per l'editor.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.7.3 - Comporre un attributo con sottoattributi}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.7.3 - L\`utente pu\`o aggiungere ad un attributo dei sottoattributi}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Proprietario \\ 
-        \textbf{Scopo e Descrizione} & Un utente \`e in grado di poter definire strutture complesse per i suoi scopi \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Scopo e Descrizione} & L'utente ha la possibilit\`a di poter definire strutture complesse associate ad un attributo. \\ 
         
-        \textbf{Precondizioni}  & Ci sia un Data Element a cui riferirsi \\ 
+        \textbf{Precondizioni}  & L'Input Element che possiede l'attributo da espandere esiste nella sessione corrente dell'editor. \\ 
         
-        \textbf{Postcondizioni} & L'attributo del dato \`e a sua volta costituito da altri attributi
+        \textbf{Postcondizioni} & Il sistema ha memorizzato la struttura complessa associata all'attributo selezionato dall'utente.
       \end{longtable}
       \egroup
     \end{center}
@@ -751,20 +756,23 @@ Di seguito vengono elencati i casi d'uso per l'editor.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.8 - Cell Element}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.8 - Manipolare un Cell Element}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Proprietario \\ 
-        \textbf{Scopo e Descrizione} & Rappresentare l'elemento Cell del DSL. \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Scopo e Descrizione} & L'applicazione fornisce i metodi per definire un Cell Element valido. \\ 
         
-        \textbf{Precondizioni}  & L'utente sta visualizzando l'editor \\ 
+        \textbf{Precondizioni}  & L'utente sta visualizzando l'editor. \\ 
         
-        \textbf{Postcondizioni} & Viene composta l'elemento Cell nel DSL \\ 
-        \textbf{Scenario Principale} &  1. Selezionare il tipo del dato (UC-E2.8.1)
-2. Agganciare un Data Element (UC-E2.8.2)
+        \textbf{Postcondizioni} & Il sistema espone il Cell Element valido appena definito. \\ 
+        \textbf{Scenario Principale} &  1. Selezionare il tipo del dato associato al Cell Element. (UC-E2.8.1)
+2. L'utente pu\`o associare un Input Element. (UC-E2.8.2)
       \end{longtable}
       \egroup
     \end{center}
+    
+    
+    
 \subsubsection{UC-E2.8.1}
 
     %Tabella 
@@ -774,20 +782,20 @@ Di seguito vengono elencati i casi d'uso per l'editor.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.8.1 - Selezionare il tipo del dato}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.8.1 - Selezionare il tipo del dato associato al Cell Element}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Proprietario \\ 
-        \textbf{Scopo e Descrizione} & Selezionare il tipo di dato da visualizzare, che pu\`o essere:
-a. string
-b. number
-c. link
-d. image
-e. date \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Scopo e Descrizione} & L'utente pu\`o indicare il tipo di dato da visualizzare tra:
+a. string;
+b. number;
+c. link;
+d. image;
+e. date. \\ 
         
-        \textbf{Precondizioni}  & Il tipo di input si deve riferire a un Cell Element \\ 
+        \textbf{Precondizioni}  & Il Cell Element su cui si vuole operare esiste nella sessione attiva dell'editor. \\ 
         
-        \textbf{Postcondizioni} & \`E definito nel DSL il tipo di visualizzazione di dato 
+        \textbf{Postcondizioni} & Il sistema memorizza il tipo di dato per il Cell Element. 
       \end{longtable}
       \egroup
     \end{center}
@@ -800,15 +808,15 @@ e. date \\
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.8.2 - Agganciare un Input Element}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.8.2 - Associare un Input Element ad un Cell Element}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Proprietario \\ 
-        \textbf{Scopo e Descrizione} & Definire quale input il Cell Element rapprensenter\`a \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Scopo e Descrizione} & Il sistema dispone l'operazione di collegamento tra un Input Element e la sua rappresentazione tramite Cell Element. \\ 
         
-        \textbf{Precondizioni}  & Ci sia un Data Element presente e un Cell Element da collegare \\ 
+        \textbf{Precondizioni}  & L'Input Element e il Cell Element da collegare esistono nella sessione corrente dell'editor. \\ 
         
-        \textbf{Postcondizioni} & Nel DSL \`e specificato quale valore il Cell Element rappresenta 
+        \textbf{Postcondizioni} & Il sistema ha creato il collegamento tra i due elementi.
       \end{longtable}
       \egroup
     \end{center}
@@ -829,20 +837,22 @@ e. date \\
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.9 - Dashboard Element}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.9 - Manipolare un Dashboard Element}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Proprietario \\ 
-        \textbf{Scopo e Descrizione} & Rappresentazione di un elemento Dashboard nel DSL \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Scopo e Descrizione} & L'utente ha la possibilit\`a di manipolare un Dashboard Element. \\ 
         
-        \textbf{Precondizioni}  & L'utente sta visualizzando l'editor \\ 
+        \textbf{Precondizioni}  & L'utente sta visualizzando l'editor. \\ 
         
-        \textbf{Postcondizioni} & Viene scritto nel DSL l'elemento Dashboard \\ 
-        \textbf{Scenario Principale} & 1. Agganciare un DashRow Element (UC-E2.9.1)
-2. Aggiungere/Rimuovere una riga (UC-E2.9.2)
+        \textbf{Postcondizioni} & Il sistema ha memorizzato una definizione valida per il Dashboard Element. \\ 
+        \textbf{Scenario Principale} & 1. L'utente pu\`o associare un DashRow Element ad un Dashboard Element. (UC-E2.9.1)
+2. L'utente pu\`o aggiungere/rimuovere un attributo Row dal Dashboard Element. (UC-E2.9.2)
       \end{longtable}
       \egroup
     \end{center}
+    
+    
 \subsubsection{UC-E2.9.1}
 
     %Tabella 
@@ -852,15 +862,15 @@ e. date \\
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.9.1 - Agganciare un DashRow Element}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.9.1 - Associare un DashRow Element ad un Dashboard Element}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Proprietario \\ 
-        \textbf{Scopo e Descrizione} & Permette di definire la struttura di una Row e di legarla a una Dashboard \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Scopo e Descrizione} & Permette di definire la struttura di una Row e di legarla a una Dashboard. \\ 
         
-        \textbf{Precondizioni}  & Ci sia una Dashboard a cui fare riferimento \\ 
+        \textbf{Precondizioni}  & il Dashboard Element e il DashRow Element da collegare esistono nella sessione corrente dell'editor. \\ 
         
-        \textbf{Postcondizioni} & Viene inserita nel DSL la configurazione della struttura ``row'' 
+        \textbf{Postcondizioni} & Il sistema ha memorizzato il collegamento tra l'attributo Row del Dashboard Element e il DashRow Element.
       \end{longtable}
       \egroup
     \end{center}
@@ -873,18 +883,20 @@ e. date \\
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.9.2 - Aggiungere/Rimuovere una riga}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.9.2 - Aggiungere/Rimuovere un attributo Row dal Dashboard Element}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Proprietario \\ 
-        \textbf{Scopo e Descrizione} & Definire una nuova riga all'interno della Dashboard \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Scopo e Descrizione} & L'utente pu\`o definire una nuovo attributo Row all'interno della Dashboard \\ 
         
-        \textbf{Precondizioni}  & Ci sia una Dashboard a cui fare riferimento \\ 
+        \textbf{Precondizioni}  & Il Dashboard Element esiste nella sessione corrente dell'editor. \\ 
         
-        \textbf{Postcondizioni} & Viene aggiunto e rimosso un attributo ``row'' 
+        \textbf{Postcondizioni} & Il sistema ha aggiunto o rimosso l'attributo Row dalla Dashboard Element. 
       \end{longtable}
       \egroup
     \end{center}
+    
+    
 \subsubsection{UC-E2.10}
  
 
@@ -902,18 +914,18 @@ e. date \\
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.10 - DashRow Element}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.10 - Manipolare un DashRow Element}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Proprietario \\ 
-        \textbf{Scopo e Descrizione} & Definire la struttura di una ``row'' di una Dashboard in modo che l'utente possa scegliere quale configurazione applicare alla sua Dashboard \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Scopo e Descrizione} & Il sistema fornisce i metodi necessari alla manipolazione di un DashRow Element. \\ 
         
-        \textbf{Precondizioni}  & Ci sia una Dashboard Element a cui far riferimento \\ 
+        \textbf{Precondizioni}  & Il DashRow Element da manipolare esiste nella sessione corrente dell'editor. \\ 
         
-        \textbf{Postcondizioni} & L'utente ha deciso la configurazione della riga della Dashboard \\ 
-        \textbf{Scenario Principale} & 1. Agganciare un Cell Element (UC-E2.10.1)
-2. Agganciare un Document Element (UC-E2.10.2)
-3. Agganciare un Collection Element (UC-E2.10.3)
+        \textbf{Postcondizioni} & Il sistema ha memorizzato la configurazione del DashRow Element. \\ 
+        \textbf{Scenario Principale} & 1. L'utente pu\`o associare un Cell Element al DashRow Element. (UC-E2.10.1)
+2. L'utente pu\`o associare un Document Element al DashRow Element. (UC-E2.10.2)
+3. L'utente pu\`o associare un Collection Element al DashRow Element. (UC-E2.10.3)
       \end{longtable}
       \egroup
     \end{center}
@@ -926,15 +938,15 @@ e. date \\
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.10.1 - Agganciare un Cell Element}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.10.1 - Associare un Cell Element al DashRow Element}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Proprietario \\ 
-        \textbf{Scopo e Descrizione} & Inserire nella riga della Dashboard una colonna rappresentante un Cell del DLS \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Scopo e Descrizione} & Il sistema da la possibilit\`a di associare un Cell Element ad un DashRow Element. \\ 
         
-        \textbf{Precondizioni}  & Ci sia una DashRow Element a cui riferirsi \\ 
+        \textbf{Precondizioni}  & Il Cell Element e il DashRow Element da associare esistono nella sessione corrente dell'editor. \\ 
         
-        \textbf{Postcondizioni} & Nella Row del DSL viene aggiunta una colonna che visualizza un Cell
+        \textbf{Postcondizioni} & Il sistema ha memorizzato il collegamento tra i due elementi.
       \end{longtable}
       \egroup
     \end{center}
@@ -947,15 +959,15 @@ e. date \\
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.10.2 - Agganciare un Document Element}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.10.2 - Associare un Document Element al DashRow Element}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Proprietario \\ 
-        \textbf{Scopo e Descrizione} & Inserire nella riga della Dashboard una colonna rappresentante un Document del DLS \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Scopo e Descrizione} & Il sistema da la possibilit\`a di associare un Document Element ad un DashRow Element. \\ 
         
-        \textbf{Precondizioni}  & Ci sia una DashRow Element a cui riferirsi \\ 
+        \textbf{Precondizioni}  & Il Document Element e il DashRow Element esistono nella sessione corrente dell'editor. \\ 
         
-        \textbf{Postcondizioni} & Nella Row del DSL viene aggiunta una colonna che visualizza un Document 
+        \textbf{Postcondizioni} & Il sistema ha memorizzato il collegamento tra i due elementi.
       \end{longtable}
       \egroup
     \end{center}
@@ -968,15 +980,15 @@ e. date \\
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.10.3 - Agganciare un Collection Element}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.10.3 - Associare un Collection Element ad un DashRow Element}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Proprietario \\ 
-        \textbf{Scopo e Descrizione} & Inserire nella riga della Dashboard una colonna rappresentante un Collection del DLS \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
+        \textbf{Scopo e Descrizione} & Il sistema da la possibilit\`a di associare un Collection Element ad un DashRow Element. \\ 
         
-        \textbf{Precondizioni}  & Ci sia una DashRow Element a cui riferirsi \\ 
+        \textbf{Precondizioni}  & Il Collection Element e il DashRow Element esistono nella sessione corrente dell'editor. \\ 
         
-        \textbf{Postcondizioni} & Nella Row del DSL viene aggiunta una colonna che visualizza un Collection
+        \textbf{Postcondizioni} & Il sistema ha memorizzato il collegamento tra i due elementi.
       \end{longtable}
       \egroup
     \end{center}
@@ -997,13 +1009,13 @@ e. date \\
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.11 - Action Element}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.11 - Definire un Action Element}} \\ 
         \hline
         
-        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Proprietario \\ 
-        \textbf{Scopo e Descrizione} & Presentazione dell'Action del DSL nel quale si associa un'input ad una azione definita \\ 
+        \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Onwer \\ 
+        \textbf{Scopo e Descrizione} & Il sistema fornisce le modalit\`a di definizione di un Action Element. \\ 
         
-        \textbf{Precondizioni}  & Ci dev'essere un documento o una collezione a cui si da riferimento \\ 
+        \textbf{Precondizioni}  & L'utente sta visualizzando l'editor. \\ 
         
         \textbf{Postcondizioni} & Si \`e associato a quell'azione o a quel documento l'action desiderato \\ 
         \textbf{Scenario Principale} & 1. Selezione input (UC-E2.11.1)
