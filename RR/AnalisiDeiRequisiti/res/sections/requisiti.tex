@@ -38,60 +38,63 @@ Dove:
     \cellcolor[gray]{0.9} \textbf{Requisito} & \cellcolor[gray]{0.9} \textbf{Tipologia} 
     & \cellcolor[gray]{0.9} \textbf{Descrizione} & \cellcolor[gray]{0.9} \textbf{Fonti} \\ \hline
     
-    R1O X & Funzionale \newline Obbligatorio & L’utente non autenticato deve poter creare un account per la propria \glossaryItem{Company}, tramite una pagina web che conterrà al suo interno una form per l’inserimento dei dati (nome \glossaryItem{Company}, email \glossaryItem{Owner}, password \glossaryItem{Owner}). &  Capitolato \newline  UC-U1, UC-U1.1, UC-U1.2, UC-U1.3 \newline  \\ \hline
+     R1O 0 & Funzionale \newline Obbligatorio & Realizzazione di \glossaryItem{MaaS} come presentato nel capitolato (rispettando il modello SaaS).
+&  Capitolato \newline  \\ \hline
     
-    R1O X & Funzionale \newline Obbligatorio & L’utente non autenticato che abbia ricevuto un invito dall’\glossaryItem{Owner} o da un suo delegato (uno degli amministratori dell’account della \glossaryItem{Company}), deve poter registrarsi a \glossaryItem{MaaS}.
+    R1O 1 & Funzionale \newline Obbligatorio & L’utente non autenticato deve poter creare un account per la propria \glossaryItem{Company}, tramite una pagina web che conterrà al suo interno una form per l’inserimento dei dati (nome \glossaryItem{Company}, email \glossaryItem{Owner}, password \glossaryItem{Owner}). &  Capitolato \newline  UC-U1, UC-U1.1, UC-U1.2, UC-U1.3 \newline  \\ \hline
+    
+    R1O 2 & Funzionale \newline Obbligatorio & L’utente non autenticato che abbia ricevuto un invito dall’\glossaryItem{Owner} o da un suo delegato (uno degli amministratori dell’account della \glossaryItem{Company}), deve poter registrarsi a \glossaryItem{MaaS}.
 La registrazione avviene tramite l’inserimento di una password che verrà associata all’account dell’utente (il sistema memorizza l’indirizzo email dell’utente nell’istante in cui l’invito viene spedito). &  Capitolato \newline UC-U3, Riunione con il proponente.\newline  \\ \hline
 	 
-	 R1O X & Funzionale \newline Obbligatorio & L’utente non autenticato registrato presso \glossaryItem{MaaS} deve poter accedere all'applicazione, tramite una pagina di login in cui vengono richiesti l’indirizzo email dell’utente e la password. Il sistema, tramite l’uso di un database indipendente verifica che l’email e la password siano associate a un utente registrato.
+	 R1O 2.1 & Funzionale \newline Obbligatorio & L’utente non autenticato registrato presso \glossaryItem{MaaS} deve poter accedere all'applicazione, tramite una pagina di login in cui vengono richiesti l’indirizzo email dell’utente e la password. Il sistema, tramite l’uso di un database indipendente verifica che l’email e la password siano associate a un utente registrato.
 &  Capitolato \newline UC-U4, UC-U4.1, UC-U4.2 \newline  \\ \hline
 	
-	R1O X & Funzionale \newline Obbligatorio & L’utente non autenticato in possesso di un account presso \glossaryItem{MaaS} deve poter recuperare la propria password se questa viene dimenticata.
+	R1O 2.2 & Funzionale \newline Obbligatorio & L’utente non autenticato in possesso di un account presso \glossaryItem{MaaS} deve poter recuperare la propria password se questa viene dimenticata.
 L'applicazione offre una procedura di recupero che richiede l’inserimento della mail e di un codice segreto (ottenuto dall’utente tramite email). &  Capitolato \newline UC-U6, UC-U6.1   \newline  \\ \hline
 	
-	R1O X & Funzionale \newline Obbligatorio & L’utente autenticato deve poter effettuare delle operazioni di modifica del profilo. &  Capitolato \newline  UC-U9  \newline  \\ \hline
+	R1O 2.3 & Funzionale \newline Obbligatorio & L’utente autenticato deve poter effettuare delle operazioni di modifica del profilo. &  Capitolato \newline  UC-U9  \newline  \\ \hline
 	
-	R1O X & Funzionale \newline Obbligatorio & L’utente autenticato deve poter modificare il proprio indirizzo email inserendone uno di sostitutivo. Il sistema, tramite l’uso di un database indipendente verifica che l’email inserita non sia già presente. &  Capitolato \newline  UC-U9, UC-U9.1  \newline  \\ \hline
+	R1O 2.3.1 & Funzionale \newline Obbligatorio & L’utente autenticato deve poter modificare il proprio indirizzo email inserendone uno di sostitutivo. Il sistema, tramite l’uso di un database indipendente verifica che l’email inserita non sia già presente. &  Capitolato \newline  UC-U9, UC-U9.1  \newline  \\ \hline
 	
-	R1O X & Funzionale \newline Obbligatorio & L’utente autenticato deve poter modificare la propria password. &  Capitolato \newline  UC-U9, UC-U9.2  \newline  \\ \hline
+	R1O 2.3.2 & Funzionale \newline Obbligatorio & L’utente autenticato deve poter modificare la propria password. &  Capitolato \newline  UC-U9, UC-U9.2  \newline  \\ \hline
 	
-	R1O X & Funzionale \newline Obbligatorio & L’utente autenticato deve poter rimuovere il proprio account da \glossaryItem{MaaS}. Nel caso in cui un \glossaryItem{Owner} decida di rimuoversi deve delegare ad un altro utente nella \glossaryItem{Company} tale ruolo. &  Capitolato \newline  UC-U9, UC-U9.3  \newline  \\ \hline
+	R1O 2.3.3 & Funzionale \newline Obbligatorio & L’utente autenticato deve poter rimuovere il proprio account da \glossaryItem{MaaS}. Nel caso in cui un \glossaryItem{Owner} decida di rimuoversi deve delegare ad un altro utente nella \glossaryItem{Company} tale ruolo. &  Capitolato \newline  UC-U9, UC-U9.3  \newline  \\ \hline
 	
-	R1O X & Funzionale \newline Obbligatorio & L’utente autenticato può accedere all’editor ed eseguire un’operazione su una \glossaryItem{DSL}. &  Capitolato \newline  UC-U11  \newline  \\ \hline
+	R1O 3 & Funzionale \newline Obbligatorio & L’utente autenticato può accedere all’editor ed eseguire un’operazione su una \glossaryItem{DSL}. &  Capitolato \newline  UC-U11  \newline  \\ \hline
 	
-	R1O X & Funzionale \newline Obbligatorio & L’utente autenticato può accedere all’editor ed eseguire una specifica \glossaryItem{DSL} &  Capitolato \newline  UC-U11, UC-U11.1  \newline  \\ \hline
+	R1O 3.1 & Funzionale \newline Obbligatorio & L’utente autenticato può accedere all’editor ed eseguire una specifica \glossaryItem{DSL} &  Capitolato \newline  UC-U11, UC-U11.1  \newline  \\ \hline
 	
-	R1O X & Funzionale \newline Obbligatorio & L’utente autenticato (con ruolo >= \glossaryItem{Member}) può accedere all’editor e modificare una specifica \glossaryItem{DSL}. &  Capitolato \newline  UC-U11, UC-U11.2  \newline  \\ \hline
+	R1O 3.2 & Funzionale \newline Obbligatorio & L’utente autenticato (con ruolo >= \glossaryItem{Member}) può accedere all’editor e modificare una specifica \glossaryItem{DSL}. &  Capitolato \newline  UC-U11, UC-U11.2  \newline  \\ \hline
 	
-	R1O X & Funzionale \newline Obbligatorio & L’utente autenticato (con ruolo >= \glossaryItem{Member})  può accedere all’editor e creare una specifica \glossaryItem{DSL}. &  Capitolato \newline  UC-U11, UC-U11.3  \newline  \\ \hline
+	R1O 3.3 & Funzionale \newline Obbligatorio & L’utente autenticato (con ruolo >= \glossaryItem{Member})  può accedere all’editor e creare una specifica \glossaryItem{DSL}. &  Capitolato \newline  UC-U11, UC-U11.3  \newline  \\ \hline
 	
-	R1O X & Funzionale \newline Obbligatorio & L’utente autenticato (con ruolo >= \glossaryItem{Member})  può accedere all’editor e leggere una specifica \glossaryItem{DSL}. &  Capitolato \newline  UC-U11, UC-U11.4  \newline  \\ \hline
+	R1O 3.4 & Funzionale \newline Obbligatorio & L’utente autenticato (con ruolo >= \glossaryItem{Member})  può accedere all’editor e leggere una specifica \glossaryItem{DSL}. &  Capitolato \newline  UC-U11, UC-U11.4  \newline  \\ \hline
 	
-	R1O X & Funzionale \newline Obbligatorio & L’Admin deve poter aggiungere/togliere a un utente appartenente alla \glossaryItem{Company} di competenza un permesso in lettura/scrittura a una specifica \glossaryItem{DSL}. &  Capitolato \newline   UC-U13, UC-U13.2, UC-U13.3  \newline  \\ \hline
+	R1O 3.5 & Funzionale \newline Obbligatorio & L’Admin deve poter aggiungere/togliere a un utente appartenente alla \glossaryItem{Company} di competenza un permesso in lettura/scrittura a una specifica \glossaryItem{DSL}. &  Capitolato \newline   UC-U13, UC-U13.2, UC-U13.3  \newline  \\ \hline
 	
-	R1O X & Funzionale \newline Obbligatorio & L’\glossaryItem{Owner} di una \glossaryItem{Company} (o un suo delegato) deve poter invitare un utente a registrarsi presso \glossaryItem{MaaS}. &  Capitolato \newline   UC-U13, UC-U13.4  \newline  \\ \hline
+	R1O 3.6 & Funzionale \newline Obbligatorio & L’\glossaryItem{Owner} di una \glossaryItem{Company} (o un suo delegato) deve poter invitare un utente a registrarsi presso \glossaryItem{MaaS}. &  Capitolato \newline   UC-U13, UC-U13.4  \newline  \\ \hline
 	
-	R1O X & Funzionale \newline Obbligatorio & L’\glossaryItem{Owner} di una \glossaryItem{Company} deve poter rimuovere un utente. &  Capitolato \newline UC-U13, UC-U13.5  \newline  \\ \hline
+	R1O 4 & Funzionale \newline Obbligatorio & L’utente autenticato deve poter accedere alla pagina \glossaryItem{Dashboard}, visualizzarne il contenuto ed effettuare delle operazioni sugli elementi presenti. &  Capitolato \newline UC-U15, UC-U15.1  \newline  \\ \hline
 	
-	R1O X & Funzionale \newline Obbligatorio & L’\glossaryItem{Owner} di una \glossaryItem{Company} deve poter inserire manualmente un nuovo utente presso \glossaryItem{MaaS}. &  Capitolato \newline UC-U13, UC-U13.6  \newline  \\ \hline
+	R1O 4.1 & Funzionale \newline Obbligatorio & L’utente autenticato deve poter visualizzare un elemento della \glossaryItem{Dashboard}, che può essere una \glossaryItem{Cell}, un \glossaryItem{Document} oppure una \glossaryItem{Collection}. &  Capitolato \newline UC-U15, UC-U16, UC-U16.1, UC-U16.2, UC-U16.3, UC-U16.4  \newline  \\ \hline
 	
-	R1O X & Funzionale \newline Obbligatorio & L’utente autenticato deve poter accedere alla pagina \glossaryItem{Dashboard}, visualizzarne il contenuto ed effettuare delle operazioni sugli elementi presenti. &  Capitolato \newline UC-U15, UC-U15.1  \newline  \\ \hline
+	R1O 4.2 & Funzionale \newline Obbligatorio & L’utente autenticato deve poter effettuare un’operazione su un elemento della \glossaryItem{Dashboard}, che può essere una \glossaryItem{Cell}, un \glossaryItem{Document} o una \glossaryItem{Collection}. &  Capitolato \newline UC-U15, UC-U16  \newline  \\ \hline
 	
-	R1O X & Funzionale \newline Obbligatorio & L’utente autenticato deve poter visualizzare un elemento della \glossaryItem{Dashboard}, che può essere una \glossaryItem{Cell}, un \glossaryItem{Document} oppure una \glossaryItem{Collection}. &  Capitolato \newline UC-U15, UC-U16, UC-U16.1, UC-U16.2, UC-U16.3, UC-U16.4  \newline  \\ \hline
+	R1O 4.2.1 & Funzionale \newline Obbligatorio & L’utente autenticato deve poter aggiungere, modificare e ordinare un valore in una \glossaryItem{Cell}. &  Capitolato \newline UC-U15, UC-U16, UC-U16.5, UC-U16.5.1,  UC-U16.5.2, UC-U16.5.3  \newline  \\ \hline
 	
-	R1O X & Funzionale \newline Obbligatorio & L’utente autenticato deve poter effettuare un’operazione su un elemento della \glossaryItem{Dashboard}, che può essere una \glossaryItem{Cell}, un \glossaryItem{Document} o una \glossaryItem{Collection}. &  Capitolato \newline UC-U15, UC-U16  \newline  \\ \hline
+	R1O 4.2.2 & Funzionale \newline Obbligatorio & L’utente autenticato deve poter modificare e rimuovere un \glossaryItem{Document}. &  Capitolato \newline UC-U15, UC-U16, UC-U16.6.1, UC-U16.6.2, UC-U16.6.3  \newline  \\ \hline
 	
-	R1O X & Funzionale \newline Obbligatorio & L’utente autenticato deve poter aggiungere, modificare e ordinare un valore in una \glossaryItem{Cell}. &  Capitolato \newline UC-U15, UC-U16, UC-U16.5, UC-U16.5.1,  UC-U16.5.2, UC-U16.5.3  \newline  \\ \hline
+	R1O 4.2.3 & Funzionale \newline Obbligatorio & L’utente autenticato deve poter eseguire un’azione di default (Send mail/Export) dalla pagina \glossaryItem{Document}.&  Capitolato \newline UC-U15, UC-U16, UC-U16.6.4, UC-U16.6.5  \newline  \\ \hline
 	
-	R1O X & Funzionale \newline Obbligatorio & L’utente autenticato deve poter modificare e rimuovere un \glossaryItem{Document}. &  Capitolato \newline UC-U15, UC-U16, UC-U16.6.1, UC-U16.6.2, UC-U16.6.3  \newline  \\ \hline
+	R1O 4.2.4 & Funzionale \newline Obbligatorio & L’utente autenticato deve poter ordinare i Documents all’interno di una \glossaryItem{Collection} in base a uno dei loro campi. &  Capitolato \newline UC-U15, UC-U16, UC-U16.7.1  \newline  \\ \hline
 	
-	R1O X & Funzionale \newline Obbligatorio & L’utente autenticato deve poter eseguire un’azione di default (Send mail/Export) dalla pagina \glossaryItem{Document}.&  Capitolato \newline UC-U15, UC-U16, UC-U16.6.4, UC-U16.6.5  \newline  \\ \hline
+	R1O 4.2.5 & Funzionale \newline Obbligatorio & L’utente autenticato deve poter rimuovere una \glossaryItem{Collection}. &  Capitolato \newline UC-U15, UC-U15.2, UC-U16  \newline  \\ \hline
 	
-	R1O X & Funzionale \newline Obbligatorio & L’utente autenticato deve poter ordinare i Documents all’interno di una \glossaryItem{Collection} in base a uno dei loro campi. &  Capitolato \newline UC-U15, UC-U16, UC-U16.7.1  \newline  \\ \hline
+	R1O 4.2.6 & Funzionale \newline Obbligatorio & L’utente autenticato deve poter eseguire un’azione di default(Send mail/Export) dalla pagina \glossaryItem{Collection}. &  Capitolato \newline UC-U15, UC-U16, UC-U16.7.3, UC-U16.7.4  \newline  \\ \hline
 	
-	R1O X & Funzionale \newline Obbligatorio & L’utente autenticato deve poter rimuovere una \glossaryItem{Collection}. &  Capitolato \newline UC-U15, UC-U15.2, UC-U16  \newline  \\ \hline
+	R1O 5 & Funzionale \newline Obbligatorio & L’\glossaryItem{Owner} di una \glossaryItem{Company} deve poter rimuovere un utente. &  Capitolato \newline UC-U13, UC-U13.5  \newline  \\ \hline
 	
-	R1O X & Funzionale \newline Obbligatorio & L’utente autenticato deve poter eseguire un’azione di default(Send mail/Export) dalla pagina \glossaryItem{Collection}. &  Capitolato \newline UC-U15, UC-U16, UC-U16.7.3, UC-U16.7.4  \newline  \\ \hline
+	R1O 6 & Funzionale \newline Obbligatorio & L’\glossaryItem{Owner} di una \glossaryItem{Company} deve poter inserire manualmente un nuovo utente presso \glossaryItem{MaaS}. &  Capitolato \newline UC-U13, UC-U13.6  \newline  \\ \hline
 	
 	%<< super-admin use cases
 	R1O X & Funzionale \newline Obbligatorio & L'applicazione deve mostrare al \glossaryItem{Super-Admin} la pagina di gestione delle \glossaryItem{Company}. &  Capitolato \newline UC-S0  \newline  \\ \hline
