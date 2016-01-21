@@ -1,7 +1,13 @@
 \section{Descrizione generale}
 \subsection{Contesto d'utilizzo}
+Il progetto MaaS mira a fornire un servizio online per le aziende per la visualizzazione dei propri dati aziendali attraverso un'interfaccia grafica. In particolare il progetto mira a creare un ambiente di sviluppo online per la modellazione di queste interfacce, in modo semplice e veloce per gli sviluppatori.
+Tale scopo è parzialmente raggiunto dall'applicazione MaaP: è un framework che offre gli strumenti necessari agli sviluppatori per creare tali interfacce. Quest'applicativo per\`o richiede l'installazione del framework necessario in un server per l'azienda che ne vuole usufruire, operazione onerosa e che richiede conoscenze informatiche molto spesso assenti nelle aziende. MaaS cerca di colmare questo punto critico mirando a creare un servizio: una piattaforma raggiungibile online che non necessita dei passaggi di installazione per l'utente, ma solo di un passaggio di registrazione per creare un proprio spazio.
+Oltre a questo MaaS punta ad estendere le funzionalità di MaaP, aggiungendo un editor per la creazione delle viste per agevolare l'utente nel processo di creazione e modifica delle proprie interfacce.
+
 
 \subsection{Funzione di Prodotto}
+MaaS deve fornire all'utente una piattaforma su cui effettuare la registrazione per la propria Company. Effettuato questo passaggio un Owner pu\`o invitare i propri collaboratori al servizio ed aggiungere gli accessi al proprio database MongoDB per poter creare le viste.
+Ciascun utente ha la possibilit\`a di creare le interfacce attraverso un editor che, attraverso una rappresentazione grafica, genera una richiesta in linguaggio DSL che il sistema può interpretare per generare le viste.
 
 \subsection{Entit\`a}
 Le entit\`a (e le relazioni esistenti tra di loro) definite nel modello \glossaryItem{SaaS} di \glossaryItem{MaaS} vengono esposte di seguito. La loro descrizione \`e stata utile nell'identificazione delle varie tipologie di attori per la trattazione dei casi d'uso.
