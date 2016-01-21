@@ -846,7 +846,7 @@ e. date. \\
         \textbf{Precondizioni}  & L'utente sta visualizzando l'editor. \\ 
         
         \textbf{Postcondizioni} & Il sistema ha memorizzato una definizione valida per il \glossaryItem{Dashboard Element}. \\ 
-        \textbf{Scenario Principale} & 1. L'utente pu\`o associare un Dash\glossaryItem{Row Element} ad un \glossaryItem{Dashboard Element}. (UC-E2.9.1)
+        \textbf{Scenario Principale} & 1. L'utente pu\`o associare un \glossaryItem{DashRow Element} ad un \glossaryItem{Dashboard Element}. (UC-E2.9.1)
 2. L'utente pu\`o aggiungere/rimuovere un attributo \glossaryItem{Row} dal \glossaryItem{Dashboard Element}. (UC-E2.9.2)
       \end{longtable}
       \egroup
@@ -862,15 +862,15 @@ e. date. \\
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.9.1 - Associare un Dash\glossaryItem{Row Element} ad un \glossaryItem{Dashboard Element}}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.9.1 - Associare un \glossaryItem{DashRow Element} ad un \glossaryItem{Dashboard Element}}} \\ 
         \hline
         
         \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
-        \textbf{Scopo e Descrizione} & Permette di definire la struttura di una \glossaryItem{Row} e di legarla a una Dashboard. \\ 
+        \textbf{Scopo e Descrizione} & Permette di definire la struttura di una \glossaryItem{Row} e di legarla a una \glossaryItem{Dashboard}. \\ 
         
-        \textbf{Precondizioni}  & il \glossaryItem{Dashboard Element} e il Dash\glossaryItem{Row Element} da collegare esistono nella sessione corrente dell'editor. \\ 
+        \textbf{Precondizioni}  & il \glossaryItem{Dashboard Element} e il \glossaryItem{DashRow Element} da collegare esistono nella sessione corrente dell'editor. \\ 
         
-        \textbf{Postcondizioni} & Il sistema ha memorizzato il collegamento tra l'attributo \glossaryItem{Row} del \glossaryItem{Dashboard Element} e il Dash\glossaryItem{Row Element}.
+        \textbf{Postcondizioni} & Il sistema ha memorizzato il collegamento tra l'attributo \glossaryItem{Row} del \glossaryItem{Dashboard Element} e il \glossaryItem{DashRow Element}.
       \end{longtable}
       \egroup
     \end{center}
@@ -903,7 +903,7 @@ e. date. \\
     \begin{figure}[H]
       \begin{center}
         \includegraphics[width=12cm]{res/img/UCEditor/UC-E2.10-DashRowElement}
-      \caption{UC-E2.10 - Dash\glossaryItem{Row Element}}
+      \caption{UC-E2.10 - \glossaryItem{Dash Row Element}}
       \end{center} 
     \end{figure}
 
@@ -914,18 +914,18 @@ e. date. \\
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.10 - Manipolazione di un Dash\glossaryItem{Row Element}}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.10 - Manipolazione di un \glossaryItem{DashRow Element}}} \\ 
         \hline
         
         \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
-        \textbf{Scopo e Descrizione} & Il sistema fornisce i metodi necessari alla manipolazione di un Dash\glossaryItem{Row Element}. \\ 
+        \textbf{Scopo e Descrizione} & Il sistema fornisce i metodi necessari alla manipolazione di un \glossaryItem{DashRow Element}. \\ 
         
-        \textbf{Precondizioni}  & Il Dash\glossaryItem{Row Element} da manipolare esiste nella sessione corrente dell'editor. \\ 
+        \textbf{Precondizioni}  & Il \glossaryItem{DashRow Element} da manipolare esiste nella sessione corrente dell'editor. \\ 
         
-        \textbf{Postcondizioni} & Il sistema ha memorizzato la configurazione del Dash\glossaryItem{Row Element}. \\ 
-        \textbf{Scenario Principale} & 1. L'utente pu\`o associare un \glossaryItem{Cell Element} al Dash\glossaryItem{Row Element}. (UC-E2.10.1)
-2. L'utente pu\`o associare un \glossaryItem{Document Element} al Dash\glossaryItem{Row Element}. (UC-E2.10.2)
-3. L'utente pu\`o associare un \glossaryItem{Collection Element} al Dash\glossaryItem{Row Element}. (UC-E2.10.3)
+        \textbf{Postcondizioni} & Il sistema ha memorizzato la configurazione del \glossaryItem{DashRow Element}. \\ 
+        \textbf{Scenario Principale} & 1. L'utente pu\`o associare un \glossaryItem{Cell Element} al \glossaryItem{DashRow Element}. (UC-E2.10.1)
+2. L'utente pu\`o associare un \glossaryItem{Document Element} al \glossaryItem{DashRow Element}. (UC-E2.10.2)
+3. L'utente pu\`o associare un \glossaryItem{Collection Element} al \glossaryItem{DashRow Element}. (UC-E2.10.3)
       \end{longtable}
       \egroup
     \end{center}
@@ -938,13 +938,13 @@ e. date. \\
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.10.1 - Associare un \glossaryItem{Cell Element} al Dash\glossaryItem{Row Element}}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.10.1 - Associare un \glossaryItem{Cell Element} al \glossaryItem{DashRow Element}}} \\ 
         \hline
         
         \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
-        \textbf{Scopo e Descrizione} & Il sistema da la possibilit\`a di associare un \glossaryItem{Cell Element} ad un Dash\glossaryItem{Row Element}. \\ 
+        \textbf{Scopo e Descrizione} & Il sistema da la possibilit\`a di associare un \glossaryItem{Cell Element} ad un \glossaryItem{DashRow Element}. \\ 
         
-        \textbf{Precondizioni}  & Il \glossaryItem{Cell Element} e il Dash\glossaryItem{Row Element} da associare esistono nella sessione corrente dell'editor. \\ 
+        \textbf{Precondizioni}  & Il \glossaryItem{Cell Element} e il \glossaryItem{DashRow Element} da associare esistono nella sessione corrente dell'editor. \\ 
         
         \textbf{Postcondizioni} & Il sistema ha memorizzato il collegamento tra i due elementi.
       \end{longtable}
@@ -959,13 +959,13 @@ e. date. \\
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.10.2 - Associare un \glossaryItem{Document Element} al Dash\glossaryItem{Row Element}}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.10.2 - Associare un \glossaryItem{Document Element} al \glossaryItem{DashRow Element}}} \\ 
         \hline
         
         \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
-        \textbf{Scopo e Descrizione} & Il sistema da la possibilit\`a di associare un \glossaryItem{Document Element} ad un Dash\glossaryItem{Row Element}. \\ 
+        \textbf{Scopo e Descrizione} & Il sistema da la possibilit\`a di associare un \glossaryItem{Document Element} ad un \glossaryItem{DashRow Element}. \\ 
         
-        \textbf{Precondizioni}  & Il \glossaryItem{Document Element} e il Dash\glossaryItem{Row Element} esistono nella sessione corrente dell'editor. \\ 
+        \textbf{Precondizioni}  & Il \glossaryItem{Document Element} e il \glossaryItem{DashRow Element} esistono nella sessione corrente dell'editor. \\ 
         
         \textbf{Postcondizioni} & Il sistema ha memorizzato il collegamento tra i due elementi.
       \end{longtable}
@@ -980,13 +980,13 @@ e. date. \\
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.10.3 - Associare un \glossaryItem{Collection Element} ad un Dash\glossaryItem{Row Element}}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.10.3 - Associare un \glossaryItem{Collection Element} ad un \glossaryItem{DashRow Element}}} \\ 
         \hline
         
         \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, Owner \\ 
-        \textbf{Scopo e Descrizione} & Il sistema da la possibilit\`a di associare un \glossaryItem{Collection Element} ad un Dash\glossaryItem{Row Element}. \\ 
+        \textbf{Scopo e Descrizione} & Il sistema da la possibilit\`a di associare un \glossaryItem{Collection Element} ad un \glossaryItem{DashRow Element}. \\ 
         
-        \textbf{Precondizioni}  & Il \glossaryItem{Collection Element} e il Dash\glossaryItem{Row Element} esistono nella sessione corrente dell'editor. \\ 
+        \textbf{Precondizioni}  & Il \glossaryItem{Collection Element} e il \glossaryItem{DashRow Element} esistono nella sessione corrente dell'editor. \\ 
         
         \textbf{Postcondizioni} & Il sistema ha memorizzato il collegamento tra i due elementi.
       \end{longtable}
