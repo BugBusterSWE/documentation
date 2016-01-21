@@ -28,6 +28,7 @@ script:
     - cd RR/PianoDiQualifica/ && latexmk -pdflatex='pdflatex -interaction=nonstopmode' -pdf && cd -
     - cd RR/LetteraDiPresentazione/ && latexmk -pdflatex='pdflatex -interaction=nonstopmode' -pdf && cd -
     - cd RR/PianoDiProgetto/ && latexmk -pdflatex='pdflatex -interaction=nonstopmode' -pdf && cd -
+    - cd RR/AnalisiDeiRequisiti/ && latexmk -pdflatex='pdflatex -interaction=nonstopmode' -pdf && cd -
     - cd RR/Glossario/ && ./build.sh; cd -
 
 after_success:
@@ -38,6 +39,7 @@ after_success:
     - mkdir -p build/
     - cd build/
     - cp -f $HOME/build/BugBusterSWE/documentation/RR/NormeDiProgetto/main.pdf .
+    - cp -f $HOME/build/BugBusterSWE/documentation/RR/AnalisiDeiRequisiti/main.pdf .
     - mv main.pdf NormeDiProgetto_lastest.pdf
     - cp -f $HOME/build/BugBusterSWE/documentation/RR/StudioDiFattibilita/main.pdf .
     - mv main.pdf StudioDiFattibilita_lastest.pdf
@@ -49,6 +51,8 @@ after_success:
     - mv main.pdf PianoDiProgetto_lastest.pdf
     - cp -f $HOME/build/BugBusterSWE/documentation/RR/Glossario/main.pdf .
     - mv main.pdf Glossario_lastest.pdf
-    - git add NormeDiProgetto_lastest.pdf StudioDiFattibilita_lastest.pdf PianoDiQualifica_lastest.pdf LetteraDiPresentazione_lastest.pdf PianoDiProgetto_lastest.pdf Glossario_lastest.pdf
+    - cp -f $HOME/build/BugBusterSWE/documentation/RR/AnalisiDeiRequisiti/main.pdf
+    - mv main.pdf AnalisiDeiRequisiti_lastest.pdf
+    - git add NormeDiProgetto_lastest.pdf StudioDiFattibilita_lastest.pdf PianoDiQualifica_lastest.pdf LetteraDiPresentazione_lastest.pdf PianoDiProgetto_lastest.pdf Glossario_lastest.pdf AnalisiDeiRequisiti_lastest.pdf
     - git commit -m "Travis CI autocommit from travis build ${TRAVIS_BUILD_NUMBER}"
     - git push -f origin gh-pages
