@@ -24,6 +24,7 @@ install:
 
 before_script:
     - ls -la /usr/share/texmf/tex/
+    - mkdir -p /usr/share/texmf-texlive/tex/latex
     - sudo cp -fr RR/Glossario/res/glossaries /usr/share/texmf-texlive/tex/latex/
     - sudo cp -fr RR/Glossario/res/glossaries-italian/ /usr/share/texmf-texlive/tex/latex/
 
