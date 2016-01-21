@@ -1,4 +1,4 @@
-\section{Requisiti }
+\section{Requisiti}
 I requisiti funzionali, prestazionali, di qualità e di vincolo individuati sono riportati nelle seguenti tabelle. Ogni requisito è identificato da un codice univoco.
 Viene inoltre indicato se si tratta di un requisito fondamentale, desiderabile o facoltativo, una sua descrizione e il caso d'uso da cui è stato individuato. 
 
@@ -50,7 +50,7 @@ La registrazione avviene tramite l’inserimento di una password che verrà asso
 &  Capitolato \newline UC-U4, UC-U4.1, UC-U4.2 \newline  \\ \hline
 	
 	R1O 2.2 & Funzionale \newline Obbligatorio & L’utente non autenticato in possesso di un account presso \glossaryItem{MaaS} deve poter recuperare la propria password se questa viene dimenticata.
-L'applicazione offre una procedura di recupero che richiede l’inserimento della mail e di un codice segreto (ottenuto dall’utente tramite email). &  Capitolato \newline UC-U6, UC-U6.1   \newline  \\ \hline
+L'applicazione offre una procedura di recupero che richiede l’inserimento della email e di un codice segreto (ottenuto dall’utente tramite email). &  Capitolato \newline UC-U6, UC-U6.1   \newline  \\ \hline
 	
 	R1O 2.3 & Funzionale \newline Obbligatorio & L’utente autenticato deve poter effettuare delle operazioni di modifica del profilo. &  Capitolato \newline  UC-U9  \newline  \\ \hline
 	
@@ -58,17 +58,17 @@ L'applicazione offre una procedura di recupero che richiede l’inserimento dell
 	
 	R1O 2.3.2 & Funzionale \newline Obbligatorio & L’utente autenticato deve poter modificare la propria password. &  Capitolato \newline  UC-U9, UC-U9.2  \newline  \\ \hline
 	
-	R1O 2.3.3 & Funzionale \newline Obbligatorio & L’utente autenticato deve poter rimuovere il proprio account da \glossaryItem{MaaS}. Nel caso in cui un \glossaryItem{Owner} decida di rimuoversi deve delegare ad un altro utente nella \glossaryItem{Company} tale ruolo. &  Capitolato \newline  UC-U9, UC-U9.3  \newline  \\ \hline
+	R1O 2.3.3 & Funzionale \newline Obbligatorio & L’utente autenticato deve poter rimuovere il proprio account da \glossaryItem{MaaS}. &  Capitolato \newline  UC-U9, UC-U9.3  \newline  \\ \hline
 	
 	R1O 3 & Funzionale \newline Obbligatorio & L’utente autenticato può accedere all’editor ed eseguire un’operazione su una \glossaryItem{DSL}. &  Capitolato \newline  UC-U11  \newline  \\ \hline
 	
 	R1O 3.1 & Funzionale \newline Obbligatorio & L’utente autenticato può accedere all’editor ed eseguire una specifica \glossaryItem{DSL} &  Capitolato \newline  UC-U11, UC-U11.1  \newline  \\ \hline
 	
-	R1O 3.2 & Funzionale \newline Obbligatorio & L’utente autenticato (con ruolo >= \glossaryItem{Member}) può accedere all’editor e modificare una specifica \glossaryItem{DSL}. &  Capitolato \newline  UC-U11, UC-U11.2  \newline  \\ \hline
+	R1O 3.2 & Funzionale \newline Obbligatorio & L’utente autenticato (con ruolo superiore a \glossaryItem{Member}) può accedere all’editor e modificare una specifica \glossaryItem{DSL}. &  Capitolato \newline  UC-U11, UC-U11.2  \newline  \\ \hline
 	
-	R1O 3.3 & Funzionale \newline Obbligatorio & L’utente autenticato (con ruolo >= \glossaryItem{Member})  può accedere all’editor e creare una specifica \glossaryItem{DSL}. &  Capitolato \newline  UC-U11, UC-U11.3  \newline  \\ \hline
+	R1O 3.3 & Funzionale \newline Obbligatorio & L’utente autenticato (con ruolo superiore a \glossaryItem{Member})  può accedere all’editor e creare una specifica \glossaryItem{DSL}. &  Capitolato \newline  UC-U11, UC-U11.3  \newline  \\ \hline
 	
-	R1O 3.4 & Funzionale \newline Obbligatorio & L’utente autenticato (con ruolo >= \glossaryItem{Member})  può accedere all’editor e leggere una specifica \glossaryItem{DSL}. &  Capitolato \newline  UC-U11, UC-U11.4  \newline  \\ \hline
+	R1O 3.4 & Funzionale \newline Obbligatorio & L’utente autenticato (con ruolo superiore a \glossaryItem{Member})  può accedere all’editor e leggere una specifica \glossaryItem{DSL}. &  Capitolato \newline  UC-U11, UC-U11.4  \newline  \\ \hline
 	
 	R1O 3.5 & Funzionale \newline Obbligatorio & L’Admin deve poter aggiungere/togliere a un utente appartenente alla \glossaryItem{Company} di competenza un permesso in lettura/scrittura a una specifica \glossaryItem{DSL}. &  Capitolato \newline   UC-U13, UC-U13.2, UC-U13.3  \newline  \\ \hline
 	
@@ -107,7 +107,7 @@ L'applicazione offre una procedura di recupero che richiede l’inserimento dell
 	
 	R1O 7.2 & Funzionale \newline Obbligatorio & Il \glossaryItem{Super-Admin} deve poter eliminare un utente. &  Capitolato \newline UC-S0.1.4  \newline  \\ \hline
 	
-	R1O 7.3 & Funzionale \newline Obbligatorio & Il \glossaryItem{Super-Admin} deve poter creare un altro Super-Admin. &  Capitolato \newline UC-S1.0  \newline  \\ \hline
+	R1O 7.3 & Funzionale \newline Obbligatorio & Il \glossaryItem{Super-Admin} deve poter creare un altro \glossaryItem{Super-Admin}. &  Capitolato \newline UC-S1.0  \newline  \\ \hline
 
 	R1O 8 & Funzionale \newline Obbligatorio & L’\glossaryItem{Owner} di una \glossaryItem{Company} deve poter rimuovere un utente. &  Capitolato \newline UC-U13, UC-U13.5  \newline  \\ \hline
 	
@@ -118,7 +118,7 @@ L'applicazione offre una procedura di recupero che richiede l’inserimento dell
 	
     R1O 10 & Funzionale \newline Obbligatorio & Il sistema permette all'utente di mantenere salvato un \glossaryItem{DSL} precedentemente creato. &  Capitolato \newline  UC-E1 \newline UC-E3.3  \\ \hline
     
-    R1D 11 & Funzionale \newline Desiderabile & Il sistema permette di scaricare nella \glossaryItem{Terminale} dell'utente un \glossaryItem{DSL}, in un qualche formato, leggibile dall'editor. &  Capitolato \newline  UC-E1 \newline \\ \hline
+    R1D 11 & Funzionale \newline Desiderabile & Il sistema permette all'utente di scaricare da \glossaryItem{Terminale} una specifica \glossaryItem{DSL}, in un formato leggibile dall'editor. &  Capitolato \newline  UC-E1 \newline \\ \hline
     
     R1D 12 & Funzionale \newline Desiderabile & Offrire un'interfaccia grafica per la manipolazione del \glossaryItem{DSL}. & Capitolato \newline UC-E1 \newline UC-E2 \newline UC-E3 \newline UC-E3 \\ \hline
     
@@ -201,8 +201,8 @@ L'applicazione offre una procedura di recupero che richiede l’inserimento dell
     \hline
     \cellcolor[gray]{0.9} \textbf{Requisito} & \cellcolor[gray]{0.9} \textbf{Tipologia} 
     & \cellcolor[gray]{0.9} \textbf{Descrizione} & \cellcolor[gray]{0.9} \textbf{Fonti} \\ \hline
-    R3O X & Qualità \newline Obbligatorio & Devono essere scritti e rilasciati manuali d’uso ed ogni altra documentazione tecnica (in lingua inglese) necessaria per l’utilizzo del prodotto. & Capitolato, Incontro con il proponente \\ \hline
-    R3O X & Qualità \newline Obbligatorio & Per lo sviluppo del prodotto richiesto verranno rispettate tutte le norme descritte nel documento Norme di Progetto v. & Capitolato \\ \hline
+    R3O 1 & Qualità \newline Obbligatorio & Devono essere scritti e rilasciati manuali d’uso ed ogni altra documentazione tecnica (in lingua inglese) necessaria per l’utilizzo del prodotto. & Capitolato, Incontro con il proponente \\ \hline
+    R3O 2 & Qualità \newline Obbligatorio & Per lo sviluppo del prodotto richiesto verranno rispettate tutte le norme descritte nel documento  \NormeDiProgetto & Capitolato \\ \hline
     \end{longtable}
   \egroup
 \end{center}  
@@ -215,12 +215,12 @@ L'applicazione offre una procedura di recupero che richiede l’inserimento dell
     \hline
     \cellcolor[gray]{0.9} \textbf{Requisito} & \cellcolor[gray]{0.9} \textbf{Tipologia} 
     & \cellcolor[gray]{0.9} \textbf{Descrizione} & \cellcolor[gray]{0.9} \textbf{Fonti} \\ \hline
-    R4O X & Vincolo \newline Obbligatorio & Il codice sorgente deve essere reso pubblico e posto sotto il controllo di versione usando github o bitbucket & Capitolato \\ \hline
-    R4O X & Vincolo \newline Obbligatorio & Lo \textit{stack tecnologico} da usare deve includere: \newline
+    R4O 1 & Vincolo \newline Obbligatorio & Il codice sorgente deve essere reso pubblico e posto sotto il controllo di versione usando github o bitbucket & Capitolato \\ \hline
+    R4O 2 & Vincolo \newline Obbligatorio & Lo \textit{stack tecnologico} da usare deve includere: \newline
 - \glossaryItem{Node.js} per il \glossaryItem{back end}. \newline 
 - \glossaryItem{MongoDB} (versione >= 3.x) per il database dell'applicazione. 
 & Capitolato \\ \hline
-    R4O X & Vincolo \newline Obbligatorio &  Obbligo di effettuare il \glossaryItem{deployment} su Heroku.
+    R4O 3 & Vincolo \newline Obbligatorio &  Obbligo di effettuare il \glossaryItem{deployment} su Heroku.
       & Capitolato \\ \hline
     \end{longtable}
   \egroup
