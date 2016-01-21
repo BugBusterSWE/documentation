@@ -19,12 +19,12 @@ Dove:
 
  \item \textbf{Y} corrisponde alla priorità del requisito e può assumere i seguenti valori:
 		\begin{itemize}
-		 \item[] \textbf{O} = Obbligatorio
-		 \item[] \textbf{D} = Desiderabile
-		 \item[] \textbf{F} = Facoltativo o Opzionale
+		 \item[] \textbf{O} = Obbligatorio;
+		 \item[] \textbf{D} = Desiderabile;
+		 \item[] \textbf{F} = Facoltativo o Opzionale.
 		\end{itemize}
 
- \item \textbf{Gerarchia} identifica la relazione gerarchica che c'è tra i requisiti di uno stesso tipo. C'è quindi una struttura gerarchica per ogni tipologia di requisito.
+ \item \textbf{Gerarchia} identifica la relazione gerarchica che c'è tra i requisiti di uno stesso tipo. Vi è dunque una struttura gerarchica per ogni tipologia di requisito.
 \end{itemize}
 
 \subsection{Requisiti funzionali}
@@ -40,7 +40,7 @@ Dove:
     
     R1O X & Funzionale \newline Obbligatorio & L’utente non autenticato deve poter creare un account per la propria \glossaryItem{Company}, tramite una pagina web che conterrà al suo interno una form per l’inserimento dei dati (nome \glossaryItem{Company}, email \glossaryItem{Owner}, password \glossaryItem{Owner}). &  Capitolato \newline  UC-U1, UC-U1.1, UC-U1.2, UC-U1.3 \newline  \\ \hline
     
-    R1O X & Funzionale \newline Obbligatorio & L’utente non autenticato che abbia ricevuto un invito dall’\glossaryItem{Owner} o da un suo delegato (uno degli amministratori dell’account della \glossaryItem{Company}) deve poter registrarsi a \glossaryItem{MaaS}.
+    R1O X & Funzionale \newline Obbligatorio & L’utente non autenticato che abbia ricevuto un invito dall’\glossaryItem{Owner} o da un suo delegato (uno degli amministratori dell’account della \glossaryItem{Company}), deve poter registrarsi a \glossaryItem{MaaS}.
 La registrazione avviene tramite l’inserimento di una password che verrà associata all’account dell’utente (il sistema memorizza l’indirizzo email dell’utente nell’istante in cui l’invito viene spedito). &  Capitolato \newline UC-U3, Riunione con il proponente.\newline  \\ \hline
 	 
 	 R1O X & Funzionale \newline Obbligatorio & L’utente non autenticato registrato presso \glossaryItem{MaaS} deve poter accedere all'applicazione, tramite una pagina di login in cui vengono richiesti l’indirizzo email dell’utente e la password. Il sistema, tramite l’uso di un database indipendente verifica che l’email e la password siano associate a un utente registrato.
@@ -107,7 +107,7 @@ L'applicazione offre una procedura di recupero che richiede l’inserimento dell
     
     R1D X & Funzionale \newline Desiderabile & L'utente, in caso di errori, deve essere avvisato con un messaggio d'errore. & UC-E3.4 \newline UC-E3.5 \\ \hline
     
-    R3D X & Funzionale \newline Desiderabile & Il messaggio d'errore in caso di fallimento della validazione del \glossaryItem{DSL}, deve indicare il \glossaryItem{DSL} Element che genera l'errore. & UC-E3.4 \\ \hline
+    R3D X & Funzionale \newline Desiderabile & Il messaggio d'errore in caso di fallimento della validazione del \glossaryItem{DSL} deve indicare il \glossaryItem{DSL} Element che genera l'errore. & UC-E3.4 \\ \hline
     
     R1D X & Funzionale \newline Desiderabile & Il \glossaryItem{Terminale} dell'utente deve potersi connettere attraverso Internet al sistema. & UC-E3.3 \\ \hline
     
@@ -122,19 +122,19 @@ L'applicazione offre una procedura di recupero che richiede l’inserimento dell
     
     R1D X & Funzionale \newline Desiderabile & L'utente definisce i valori degli attributi del \glossaryItem{DSL} tramite editor. & UC-E2.0.2 \newline UC-E2.7.2\\ \hline
     
-    R1D X & Funzionale \newline Desiderabile & L'utente deve aggiungere o rimuovere gli attributi del \glossaryItem{DSL} trammite l'editor. & UC-E2.3.1 \newline UC-E2.6.2 \newline UC-E2.7.1 \newline UC-E2.9.2\\ \hline
+    R1D X & Funzionale \newline Desiderabile & L'utente deve aggiungere o rimuovere gli attributi del \glossaryItem{DSL} tramite l'editor. & UC-E2.3.1 \newline UC-E2.6.2 \newline UC-E2.7.1 \newline UC-E2.9.2\\ \hline
     
     R1D X & Funzionale \newline Desiderabile & L'utente deve aggiungere o rimuovere una struttura del \glossaryItem{DSL} tramite editor. & UC-E2.D.1 \newline UC-E2.0.4\\ \hline
     
     R1D X & Funzionale \newline Desiderabile & La \glossaryItem{Collection} deve avere una rappresentazione grafica visibile sul browser. & Capitolato \newline UC-E2 \newline UC-E2.1\\ \hline
     
-    R1D X & Funzionale \newline Desiderabile & Una funzione in JavaScript deve avere una rappresentazione grafica visibile sul browser. & UC-E2\\ \hline
+    R1D X & Funzionale \newline Desiderabile & Una funzione in \glossaryItem{JavaScript} deve avere una rappresentazione grafica visibile sul browser. & UC-E2\\ \hline
     
-    R1D X & Funzionale \newline Desiderabile & L'utente pu\`o scrivere la funzione JavaScript direttamente nell'editor. & UC-E2.2 \newline UC-E2.2.1\\ \hline
+    R1D X & Funzionale \newline Desiderabile & L'utente pu\`o scrivere la funzione \glossaryItem{JavaScript} direttamente nell'editor. & UC-E2.2 \newline UC-E2.2.1\\ \hline
 
     R1D X & Funzionale \newline Opzionale & L'utente attraverso l'interfaccia grafica deve essere in grado di salvare i metodi creati. & UC-E2.2.2\\ \hline
     
-    R1D X & Funzionale \newline Opzionale & L'utente pu\`o importare nel \glossaryItem{DSL} corrente una funzione JavaScript precedentemente creata. & UC-E2.2.2 \newline UC-E2.2.3\\ \hline
+    R1D X & Funzionale \newline Opzionale & L'utente pu\`o importare nel \glossaryItem{DSL} corrente una funzione \glossaryItem{JavaScript} precedentemente creata. & UC-E2.2.2 \newline UC-E2.2.3\\ \hline
     
     R1D X & Funzionale \newline Desiderabile & L'utente attravero l'interfaccia grafica visualizza l'insieme dei metodi a cui pu\`o accedere. & UC-E2.0.6\\ \hline
     
@@ -160,7 +160,7 @@ L'applicazione offre una procedura di recupero che richiede l’inserimento dell
     
     R1D X & Funzionale \newline Desiderabile & Importare una \glossaryItem{Action} definita dall'amministratore nel \glossaryItem{DSL} corrente. & Capitolato \newline UC-E2 \newline UC-E2.1 \newline UC-E2.6 \newline UC-E2.9\\ \hline
     
-    R1D X & Funzionale \newline Desiderabile & Impostare assiociazioni tra \glossaryItem{DSL} Element obbligatorie non modificabili. & Capitolato \newline UC-E2.11.2\\ \hline
+    R1D X & Funzionale \newline Desiderabile & Impostare associazioni tra \glossaryItem{DSL} Element obbligatorie non modificabili. & Capitolato \newline UC-E2.11.2\\ \hline
     
     R1D X & Funzionale \newline Desiderabile & Selezionare la funzionalit\`a della \glossaryItem{Action}. & Capitolato \newline UC-E2.11 \newline UC-E.11.2\\ \hline
     
@@ -195,7 +195,7 @@ L'applicazione offre una procedura di recupero che richiede l’inserimento dell
     & \cellcolor[gray]{0.9} \textbf{Descrizione} & \cellcolor[gray]{0.9} \textbf{Fonti} \\ \hline
     R4O X & Vincolo \newline Obbligatorio & Il codice sorgente deve essere reso pubblico e posto sotto il controllo di versione usando github o bitbucket & Capitolato \\ \hline
     R4O X & Vincolo \newline Obbligatorio & Lo \textit{stack tecnologico} da usare deve includere: \newline
-- \glossaryItem{Node.js} per il backend. \newline 
+- \glossaryItem{Node.js} per il \glossaryItem{back end}. \newline 
 - \glossaryItem{MongoDB} (versione >= 3.x) per il database dell'applicazione. 
 & Capitolato \\ \hline
     R4O X & Vincolo \newline Obbligatorio &  Obbligo di effettuare il \glossaryItem{deployment} su Heroku.
