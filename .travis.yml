@@ -39,7 +39,6 @@ after_success:
     - mkdir -p build/
     - cd build/
     - cp -f $HOME/build/BugBusterSWE/documentation/RR/NormeDiProgetto/main.pdf .
-    - cp -f $HOME/build/BugBusterSWE/documentation/RR/AnalisiDeiRequisiti/main.pdf .
     - mv main.pdf NormeDiProgetto_lastest.pdf
     - cp -f $HOME/build/BugBusterSWE/documentation/RR/StudioDiFattibilita/main.pdf .
     - mv main.pdf StudioDiFattibilita_lastest.pdf
