@@ -704,3 +704,47 @@ description = {insieme di attività che rende un software pronto per essere util
 name = heroku,
 description = {\textit{platform as a service} su cloud in grado di supportare diversi linguaggi di programmazione.}
 }
+
+\newglossaryentry{collection}{
+name = Collection,
+description = {Elemento singolo del DSL, specifica 5 concetti principali:
+\begin{itemize}
+\item Identificare la specifica collezzione;
+\item Il sotto insieme di documenti che l'utente pu\`o vedere;
+\item Il sotto insieme di attributi che l'utente pu\`o vedere quando visualizza la lista dei documenti;
+\item Il sotto insieme di attributi che l'utente pu\`o vedere quando visualizza uno specifico documento;
+\item Le \textit{Action} applicate all'intera collezzione.
+\end{itemize}
+}
+}
+
+\newglossaryentry{index}{
+name = index,
+description = {Attributo della \glossaryItem{Collection}} che specifica come la index-page sar\`a configurata.}
+}
+
+\newglossaryentry{column}{
+name = column,
+description = {Attributo di \glossaryItem{Index} che specifica la configurazione di una colonna della tabella nella index-page.}
+}
+
+\newglossaryentry{row}{
+name = row,
+description = {Attributo di \glossaryItem{Document} che specifica la configurazione di una riga della tabella nella show-page.}
+}
+
+
+\newglossaryentry{cell}{
+name = cell,
+description = {Elemento singolo del DSL che rappresenta un singolo elemento.}
+}
+
+\newglossaryentry{dashrow}{
+aname = dashrow,
+description = {Attributo della \glossaryItem{Dashboard}, specifica la configurazione di una riga del layout a griglia nella dashboard-page.}
+}
+
+\newglossaryentry{action}{
+name = action,
+description = {Elemento singolo del DSL specifica quale azione, lato server, l'utente pu\`o compiere su una \glossaryItem{Collection} o un \glossaryItem{Document}.}
+}
