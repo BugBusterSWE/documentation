@@ -1,0 +1,42 @@
+<html>
+<head>
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+  <script type="text/javascript">
+    google.load("visualization", '1.0', {packages:['corechart']});
+    google.setOnLoadCallback(drawChart);
+    function drawChart() {
+
+       // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+        ['Amministratore', 1640],
+        ['Analista', 250],
+        ['Progettista', 6072],
+        ['Programmatore', 2190],
+        ['Responsabile', 360],
+        ['Verificatore', 3135]
+      ]);
+
+        // Set chart options
+        var options = {'width':800,
+                       'height':400};
+
+
+      var chart_div = document.getElementById('chart_div');
+      var chart = new google.visualization.PieChart(chart_div);
+
+      // Wait for the chart to finish drawing before calling the getImageURI() method.
+      google.visualization.events.addListener(chart, 'ready', function () {
+        chart_div.innerHTML = '<img src="' + chart.getImageURI() + '">';
+        console.log(chart_div.innerHTML);
+      });
+
+      chart.draw(data, options);
+
+  }
+  </script>
+
+<div id='chart_div'></div>

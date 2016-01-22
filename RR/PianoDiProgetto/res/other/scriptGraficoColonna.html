@@ -1,0 +1,51 @@
+<html>
+<head>
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+  <script type="text/javascript">
+    google.load("visualization", '1', {packages:['corechart']});
+    google.setOnLoadCallback(drawChart);
+    function drawChart() {
+
+      var data = google.visualization.arrayToDataTable([
+        ['Ruoli','Amministratore', 'Analista', 'Progettista','Programmatore', 'Responsabile','Verificatore'],
+        ['Andrea Mantovani', 15, 0, 0, 0, 10, 0],
+        ['Davide Polonio', 18, 0, 4, 0, 0, 0],
+        ['Davide Rigoni', 0, 14, 0, 0, 5, 9],
+        ['Emanuele Carraro', 0, 12, 0, 0, 0, 9],
+        ['Giovanni Mazzocchin', 0, 12, 0, 0, 0, 9],
+        ['Luca Bianco', 0, 12, 0, 0, 0, 9],
+        ['Matteo di Pirro', 0, 0, 4, 0, 18, 0]
+      ]);
+
+      var options = {
+        width: 800,
+        height: 400,
+        legend: { position: 'top', maxLines: 3 },
+        bar: { groupWidth: '75%' },
+        isStacked: true,
+        hAxis: {
+          title: 'Componenti'
+        },
+        vAxis: {
+          title: 'Ore'
+        }
+      };
+
+
+
+      var chart_div = document.getElementById('chart_div');
+      var chart = new google.visualization.ColumnChart(chart_div);
+
+      // Wait for the chart to finish drawing before calling the getImageURI() method.
+      google.visualization.events.addListener(chart, 'ready', function () {
+        chart_div.innerHTML = '<img src="' + chart.getImageURI() + '">';
+        console.log(chart_div.innerHTML);
+      });
+
+      chart.draw(data, options);
+
+  }
+  </script>
+
+<div id='chart_div'></div>
