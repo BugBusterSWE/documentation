@@ -1,0 +1,179 @@
+\begin{document}
+
+\begin{frame}
+
+\begin{center}
+  \usebeamerfont*{title} \usebeamercolor[fg]{title} \huge Analisi dei requisiti
+\end{center}
+
+\end{frame}
+
+\section{Analisi dei requisiti}
+\begin{frame}
+  \frametitle{Scopo del progetto}
+
+  \begin{center}
+    Convertire MaaP in un servizio ed ampliare le funzionalità offerte agli utenti.
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Cos'è MaaP?}
+
+  MaaP è un applicazione web destinata alle aziende, che permette di creare delle interfaccie HTML per la visualizzazione di dati aziendali.
+
+  \includegraphics[width=0.3\textwidth]{/res/img/HomeMaaP.png}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Requisiti Principali}
+
+  \begin{itemize}
+  \item un utente deve poter iscrivere la propria azienda
+  \item il proprietario dell'azienda può invitare dei collaboratori
+  \item un utente può collegare la sua base di dati al servizio
+  \item tramite un editor deve essere possibile creare delle viste per i propri dati
+  \item deve essere accessibile la visualizzazione dei propri dati tramite le viste create
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Utenti del sistema}
+
+  \begin{itemize}
+  \item Super-Admin: proprietario del servizio
+  \item Owner: proprietario di una Company
+  \item Admin: amministratore di una Company
+  \item Utente Base: utente registrato, dipendente di una Company
+  \item Guest: utente temporaneo di una Company
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Utenti del sistema}
+  Il Super-Admin deve poter:
+  \begin{itemize}
+  \item creare delle nuove Companies
+  \item gestire le Companies esistenti
+  \item gestire gli utenti esistenti
+  \item aggiungere nuovi Super-Admin
+  \end{itemize}
+
+  immagine casi d'uso super admin
+\end{frame}
+
+\begin{frame}
+  \frametitle{Utenti del sistema}
+  Owner, Admin, Utente base possono:
+  \begin{itemize}
+  \item creare nuove viste utilizzando l'editor
+  \item visualizzare e disporre le viste nella propria dashboard utente
+  \end{itemize}
+
+  immagine casi d'uso principali
+\end{frame}
+
+\begin{frame}
+  \frametitle{Utenti del sistema}
+  Inoltre:
+  \begin{itemize}
+  \item L'Owner può concedere e revocare privilegi di admin
+  \item l'Admin e l'Owner possono gestire gli utenti della Company
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{L'editor}
+
+  \begin{itemize}
+  \item Permette di creare intuitivamente le viste per gli utenti
+  \item Deve permettere di esportare i dati in formati Json e CSV
+  \item deve dare la possibilità di modifica agevole delle viste
+  \end{itemize}
+
+  immagine casi uso editor
+\end{frame}
+
+\section{Piano di Progetto}
+\begin{frame}
+  \usebeamerfont*{title} \usebeamercolor[fg]{title} \huge Piano di Progetto
+\end{frame}
+
+\begin{frame}
+  \frametitle{Modello di ciclo di vita scelto}
+  Il modello di ciclo di vita scelto è quello \textbf{incrementale} perchè:
+  \begin{itemize}
+  \item Permette di monitorare l'evoluzione del progetto
+  \item si ottiene una base verificata alla fine di ogni processo
+  \item Permette l'alternanza tra le attività
+  \end{itemize}
+
+  immagine ciclo di vita
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Rischi individuati}
+  Per una migliore organizzazione sono stati suddivisi per tipologie:
+  \begin{itemize}
+  \item Tecnologici
+  \item Derivanti dalle persone
+  \item Organizzativi
+  \item Derivanti dal software
+  \item Derivanti dai requisiti
+  \item Derivanti da stime errate
+\end{frame}
+  
+\begin{frame}
+    \frametitle{Rischi individuati - Derivanti dalle persone}
+
+    Sono i rischi con probabilità maggiore. In particolare sono stati individuati rischi riguardanti:
+    \begin{itemize}
+    \item La disponibilità di tempo dei membri del gruppo
+    \item La possibilità di conflitti tra elementi del gruppo
+    \item Le lacune portate dalla poca conoscenza delle tecnologie applicate
+    \end{itemize}
+
+    immagine focus group
+\end{frame}
+
+\begin{frame}
+  \frametitle{Rischi individuati - Rischi sul software}
+  Rischi che derivano dal software utilizzato per sviluppare il progetto.
+  Il rischio di indisposizione delle piattaforme Teamwork e GitHub su cui si appoggia il progetto, seppur la probabilità di verificarsi sia remota, porterebbe disagi notevoli per il progetto.
+
+  immagine logo teamwork
+
+  immagine logo github
+\end{frame}
+
+\begin{frame}
+  \frametitle{rischi individuati - Derivanti dai requisiti
+    Punto di rischio con maggior impatto e probabilità per il progetto.
+    I rischi sono dovuti a:
+    \begin{itemize}
+    \item Comprensione errata dei requisiti
+    \item Cambiamento di alcuni dei requisiti individuati
+    \end{itemize}    
+\end{frame}
+
+\begin{frame}
+  \frametitle{Pianificazione del progetto}
+  Seguirà la seguente ripartizione delle ore
+  immagine ripartizione ore
+\end{frame}
+
+\begin{frame}
+  \frametitle{Preventivo calcolato}
+  Per la realizzazione dell'intero progetto si è preventivato quanto segue:
+
+  immagine tabella preventivo
+
+  immagine grafico costi progetto
+\end{frame}
+
+
