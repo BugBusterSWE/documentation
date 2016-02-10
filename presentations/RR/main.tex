@@ -7,16 +7,24 @@
 
 
 \title{Presentazione progetto}
-\author{BugBusterSWE}
+\author[BugBuster]{\includegraphics[width=0.4\textwidth]{logo.png}}
 \date{16-02-2016}
 \institute{Progetto MaaS}
 
+\graphicspath{{res/img/}}
+
+\addtobeamertemplate{navigation symbols}{}{%
+    \usebeamerfont{footline}%
+    \usebeamercolor[fg]{footline}%
+    \hspace{1em}%
+    \insertframenumber/\inserttotalframenumber
+}
+
+\setbeamercolor{footline}{fg=red}
+\setbeamerfont{footline}{series=\bfseries}
+
 \begin{document}
 \graphicspath{ {res/img/} }
-
-\begin{frame}
-  \titlepage
-\end{frame}
 
 %\begin{frame}
 %  \tableofcontents
