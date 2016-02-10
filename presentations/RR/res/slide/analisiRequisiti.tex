@@ -20,6 +20,8 @@
 
   MaaP è un applicazione web destinata alle aziende, che permette di creare delle interfacce HTML per la visualizzazione di dati aziendali.
 
+   \includegraphics[width=0.6\columnwidth]{res/img/HomeMaap.png}
+  
 \end{frame}
 
 \begin{frame}
@@ -51,25 +53,35 @@
 \begin{frame}
   \frametitle{Utenti del sistema}
   Il Super-Admin deve poter:
-  \begin{itemize}
-  \item creare delle nuove Companies
-  \item gestire le Companies esistenti
-  \item gestire gli utenti esistenti
-  \item aggiungere nuovi Super-Admin
-  \end{itemize}
-
-  immagine casi d'uso super admin
+  \begin{columns}
+    \begin{column}{0.5\textwidth}   
+    \begin{itemize}
+    \item creare delle nuove Companies
+    \item gestire le Companies esistenti
+    \item gestire gli utenti esistenti
+    \item aggiungere nuovi Super-Admin
+    \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+    \includegraphics[width=0.8\columnwidth]{res/img/SuperAdmin.png}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}
   \frametitle{Utenti del sistema}
   Owner, Admin, Utente base possono:
-  \begin{itemize}
-  \item creare nuove viste utilizzando l'editor
-  \item visualizzare e disporre le viste nella propria dashboard utente
-  \end{itemize}
-
-  immagine casi d'uso principali
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+       \begin{itemize}
+       \item creare nuove viste utilizzando l'editor
+       \item visualizzare e disporre le viste nella propria dashboard utente
+       \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+    \includegraphics[width=0.8\columnwidth]{res/img/UCUtenti.png}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}
@@ -84,14 +96,22 @@
 
 \begin{frame}
   \frametitle{L'editor}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+      \item Permette di creare intuitivamente le viste per gli utenti
+      \item Deve permettere di esportare i dati in formati Json e CSV
+      \item deve dare la possibilità di modifica agevole delle viste
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+       \includegraphics[width=0.8\columnwidth]{res/img/Editor.png}
+    \end{column}
+  \end{columns}
+  
+  
 
-  \begin{itemize}
-  \item Permette di creare intuitivamente le viste per gli utenti
-  \item Deve permettere di esportare i dati in formati Json e CSV
-  \item deve dare la possibilità di modifica agevole delle viste
-  \end{itemize}
-
-  immagine casi uso editor
+  
 \end{frame}
 
 \section{Piano di Progetto}
@@ -101,14 +121,21 @@
 
 \begin{frame}
   \frametitle{Modello di ciclo di vita scelto}
-  Il modello di ciclo di vita scelto è quello \textbf{incrementale} perchè:
-  \begin{itemize}
-  \item Permette di monitorare l'evoluzione del progetto
-  \item si ottiene una base verificata alla fine di ogni processo
-  \item Permette l'alternanza tra le attività
-  \end{itemize}
 
-  immagine ciclo di vita
+  \begin{columns}
+    \begin{column}{0.6\textwidth}
+      
+      Il modello di ciclo di vita scelto è quello \textbf{incrementale} perchè:
+      \begin{itemize}
+      \item Permette di monitorare l'evoluzione del progetto
+      \item si ottiene una base verificata alla fine di ogni processo
+      \item Permette l'alternanza tra le attività
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.4\textwidth}
+      \includegraphics[width=0.8\columnwidth]{res/img/Incrementale.png}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 
@@ -129,23 +156,32 @@
     \frametitle{Rischi individuati - Derivanti dalle persone}
 
     Sono i rischi con probabilità maggiore. In particolare sono stati individuati rischi riguardanti:
-    \begin{itemize}
-    \item La disponibilità di tempo dei membri del gruppo
-    \item La possibilità di conflitti tra elementi del gruppo
-    \item Le lacune portate dalla poca conoscenza delle tecnologie applicate
-    \end{itemize}
-
-    immagine focus group
+    \begin{columns}
+      \begin{column}{0.5\textwidth}
+        \begin{itemize}
+        \item La disponibilità di tempo dei membri del gruppo
+        \item La possibilità di conflitti tra elementi del gruppo
+        \item Le lacune portate dalla poca conoscenza delle tecnologie applicate
+        \end{itemize}
+      \end{column}
+      \begin{column}{0.5\textwidth}
+        \includegraphics[width=0.8\columnwidth]{res/img/focus-group.png}
+      \end{column}
+    \end{columns}
 \end{frame}
 
 \begin{frame}
   \frametitle{Rischi individuati - Rischi sul software}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
   Rischi che derivano dal software utilizzato per sviluppare il progetto.
   Il rischio di indisposizione delle piattaforme Teamwork e GitHub su cui si appoggia il progetto, seppur la probabilità di verificarsi sia remota, porterebbe disagi notevoli per il progetto.
-
-  immagine logo teamwork
-
-  immagine logo github
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \includegraphics[width=0.6\columnwidth]{res/img/github.png}
+      \includegraphics[width=0.6\columnwidth]{res/img/teamwork.png}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}
@@ -161,16 +197,17 @@
 \begin{frame}
   \frametitle{Pianificazione del progetto}
   Seguirà la seguente ripartizione delle ore
-  immagine ripartizione ore
+  \includegraphics[width=0.5\textwidth]{res/img/RipartizioneOre.png}
+  \includegraphics[width=0.5\textwidth]{res/img/RipOreGrafico.png}
+
 \end{frame}
 
 \begin{frame}
   \frametitle{Preventivo calcolato}
   Per la realizzazione dell'intero progetto si è preventivato quanto segue:
 
-  immagine tabella preventivo
-
-  immagine grafico costi progetto
+  \includegraphics[width=0.5\textwidth]{res/img/TabCosti.png}
+  \includegraphics[width=0.5\textwidth]{res/img/CostoRipartizione.png}
 \end{frame}
 
 
