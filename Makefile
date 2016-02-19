@@ -4,7 +4,6 @@
 include common/make/flags.inc
 
 FOLDERS= internal official presentations
-ERR = $(error ****Error in $$i!****)
 
 
 all: $(FOLDERS)
