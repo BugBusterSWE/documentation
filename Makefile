@@ -4,12 +4,14 @@
 include common/make/flags.inc
 
 FOLDERS= internal official presentations
+ERR = $(error ****Error in $$i!****)
 
 
 all: $(FOLDERS)
 	echo "All documents are build successfully"
 
 $(FOLDERS):
+	set -e; \
 	for i in $(sort $(dir $(wildcard $@/*/))); do \
 		echo ""; \
 		echo ""; \
