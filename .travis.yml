@@ -1,5 +1,7 @@
 language:
-- ruby
+- generic
+
+dist: trusty
 
 sudo: required
 
