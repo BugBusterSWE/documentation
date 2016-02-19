@@ -6,14 +6,15 @@ dist: trusty
 sudo: required
 
 install:
-- sudo apt-get update -y 
-- sudo apt-get install texlive-latex-extra -y 
-- sudo apt-get install texlive-luatex -y
-- sudo apt-get install cm-super -y 
-- sudo apt-get install texlive-bibtex-extra -y 
-- sudo apt-get install latexmk -y 
-- sudo apt-get install tex4ht -y 
-- sudo apt-get install texlive-fonts-recommended  -y 
+- sudo apt-get update
+- sudo apt-get install texlive-latex-extra
+- sudo apt-get install texlive-luatex
+- sudo apt-get install cm-super
+- sudo apt-get install texlive-bibtex-extra
+- sudo apt-get install latexmk
+- sudo apt-get install tex4ht
+- sudo apt-get install texlive-fonts-recommended
+- sudo apt-get install texlive-lang-italian
 
 script:
 - make -B
