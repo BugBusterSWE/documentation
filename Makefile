@@ -7,7 +7,7 @@ FOLDERS= internal official presentations
 
 
 all: $(FOLDERS)
-	echo "All documents are build successfully"
+	echo "All documents were build successfully"
 
 $(FOLDERS):
 	set -e; \
@@ -15,7 +15,7 @@ $(FOLDERS):
 		echo ""; \
 		echo ""; \
 		echo "###################################################"; \
-		echo "Documents: $$i"; \
+		echo "Document: $$i"; \
 		bak=$(shell pwd); \
 		cd $$i; \
 		if [ "$$i" != "official/Glossario/" ]; then \
