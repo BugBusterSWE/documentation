@@ -1,2 +1,2 @@
 CC=latexmk
-CCFLAGS=-silent -pdf
+CCFLAGS=-silent -pdflatex='pdflatex -interaction=nonstopmode' -pdf
