@@ -2,11 +2,11 @@
 
 function compile(){
 
-    rm main.gl* main.ist
-    pdflatex \\nonstopmode\\input main.tex
+    rm main.gl* main.ist glossary.log
+    pdflatex \\nonstopmode\\input main.tex >> glossary.log
     
-    makeglossaries main
-    pdflatex \\nonstopmode\\input main.tex
+    makeglossaries main >> glossary.log
+    pdflatex \\nonstopmode\\input main.tex >> glossary.log
 
 }
 
