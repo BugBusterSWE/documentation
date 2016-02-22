@@ -3,33 +3,39 @@
 
 include common/make/flags.inc
 
-FOLDERS= internal official presentations
+FOLDERS= internal official presentations verbal
 
-PATH_ZIP= out/
-RELEASE_NAME= release
+PATH_ZIP= RP
+GROUP_NAME= BugBusters
 
 
 all: $(FOLDERS)
 	echo "All documents were built successfully"
 
-zip: $(FOLDERS)
-	mkdir $(PATH_ZIP)
-	mkdir $(PATH_ZIP)Interni/
-	mkdir $(PATH_ZIP)Esterni/
+zip:
+	mkdir $(PATH_ZIP)/
+	mkdir $(PATH_ZIP)/Interni/
+	mkdir $(PATH_ZIP)/Esterni/
 	set -e; \
 	for i in $(wildcard official/*/*.pdf); do \
 		pathFile=`dirname $$i`; \
 		nameFile=`basename \`dirname $$i\``; \
 		if [ "$$pathFile" == "official/NormeDiProgetto" ]; then \
-			cp $$i $(PATH_ZIP)Interni/$$nameFile.pdf; \
+			cp $$i $(PATH_ZIP)/Interni/$$nameFile.pdf; \
 		else \
-			cp $$i $(PATH_ZIP)Esterni/$$nameFile.pdf; \
+			cp $$i $(PATH_ZIP)/Esterni/$$nameFile.pdf; \
 		fi; \
 	done; \
-	$(ZIP) $(ZIPFLAGS) $(RELEASE_NAME).zip $(PATH_ZIP)*
+	mkdir $(PATH_ZIP)/Interni/Verbali
+	for i in $(wildcard verbal/*/*.pdf); do \
+		pathFile=`dirname $$i`; \
+		nameFile=`basename \`dirname $$i\``; \
+		cp $$i $(PATH_ZIP)/Interni/Verbali/$$nameFile.pdf; \
+	done; \
+	$(ZIP) $(ZIPFLAGS) $(PATH_ZIP)-$(GROUP_NAME).zip $(PATH_ZIP)/*
 
 clean:
-	rm -rf $(PATH_ZIP) $(RELEASE_NAME)*
+	rm -rf $(PATH_ZIP)/ $(PATH_ZIP)-$(GROUP_NAME).zip
 	echo "pdf builds are automatically cleaned when another make is called"
 
 $(FOLDERS):
