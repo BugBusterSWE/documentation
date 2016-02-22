@@ -19,6 +19,10 @@ install:
 script:
 - make -B
 
+after_failure:
+- cat {internal,official,presentations,verbal}/*/main.log
+- cat official/Glossario/glossary.log
+
 notifications:
   slack:
     secure: dYIgo/Kqia2bjg4V5X8MCF/kpPu1pivZVNwB+EmwyiwqQBJD7YWAP/IVsTSPBhqJ0rNxW6Q5Mlhk89ukjg6fXU+z0dtsBB6Su94Cm9qlnRjKXW44xG8GmhqGzDYrg1tAnBGGhP3xfOu3hP3Cw/GZConRG2SMgza2Bl7sDLtv3tpLlYU3dEYPrZEAddNnkBUhE/r00xZHEf0bUZ+AMqw4snjWxpx7lvR7ibCJWct9EZ60oTtC/3m0lrOK4Bek4sFuXtB1/QZUS4NbPImnrtxkILdOWxKo969eDRN22bjldc4xBfQjJofvog1HTKCFw8Pw636gxX+WDxVLzQTlASOg+7qVEVgtgA/jUfA+PExK7CS9JmQomcaMH7WUWc2lni5rIlosxAsCUXA2wdsC1WnIVlNzWeEnycvDo32tbsT/xAVH8R5DWGvVeyDr414SjQHybcz79z2j67T0fGUFcqiQxQzKcrCEDBPc36S6Lv9pAQW+50J5AkaNk7vAzk3yl8wB9wl0UjI1DfN9YfE1G/H903Y4v8xUTpo6qQAS0vbO+nV6rXpSUMOk5fWCdiIK4jLVEUgnoEqDQGX+FKsO3RcN9gKPZi/yQ9sKIIjib3unlxHiORDDkPD7C6RTCKdLtQhVmhFPMdlQjyoQC4yVkcmx+9WqDZmr6vL6zzI9PaLLd6Y=
