@@ -7,14 +7,14 @@ sudo: required
 
 install:
 - sudo apt-get update
-- sudo apt-get install texlive-latex-extra
-- sudo apt-get install texlive-luatex
-- sudo apt-get install cm-super
-- sudo apt-get install texlive-bibtex-extra
-- sudo apt-get install latexmk
-- sudo apt-get install tex4ht
-- sudo apt-get install texlive-fonts-recommended
-- sudo apt-get install texlive-lang-italian
+- sudo apt-get install texlive-latex-extra -qq
+- sudo apt-get install texlive-luatex -qq
+- sudo apt-get install cm-super -qq
+- sudo apt-get install texlive-bibtex-extra -qq
+- sudo apt-get install latexmk -qq
+- sudo apt-get install tex4ht -qq
+- sudo apt-get install texlive-fonts-recommended -qq
+- sudo apt-get install texlive-lang-italian -qq
 
 script:
 - make -B
