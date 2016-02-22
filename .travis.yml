@@ -24,7 +24,7 @@ after_failure:
 - cat official/Glossario/glossary.log
 
 before_deploy:
-- make -B zip
+- make zip
 - git fetch --tags
 
 deploy:
