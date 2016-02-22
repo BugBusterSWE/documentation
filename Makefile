@@ -24,7 +24,7 @@ zip: $(FOLDERS)
 
 clean:
 	rm -rf $(PATH_ZIP) $(RELEASE_NAME)*
-	echo "pdf builds are automatically cleaned when new make is called"
+	echo "pdf builds are automatically cleaned when another make is called"
 
 $(FOLDERS):
 	set -e; \
