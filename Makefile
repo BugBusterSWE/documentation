@@ -14,11 +14,17 @@ all: $(FOLDERS)
 
 zip: $(FOLDERS)
 	mkdir $(PATH_ZIP)
+	mkdir $(PATH_ZIP)Interni/
+	mkdir $(PATH_ZIP)Esterni/
 	set -e; \
 	for i in $(wildcard official/*/*.pdf); do \
 		pathFile=`dirname $$i`; \
 		nameFile=`basename \`dirname $$i\``; \
-		cp $$i $(PATH_ZIP)$$nameFile.pdf; \
+		if [ "$$pathFile" == "official/NormeDiProgetto" ]; then \
+			cp $$i $(PATH_ZIP)Interni/$$nameFile.pdf; \
+		else \
+			cp $$i $(PATH_ZIP)Esterni/$$nameFile.pdf; \
+		fi; \
 	done; \
 	$(ZIP) $(ZIPFLAGS) $(RELEASE_NAME).zip $(PATH_ZIP)*
 
