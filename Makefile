@@ -32,10 +32,10 @@ zip:
 		nameFile=`basename \`dirname $$i\``; \
 		cp $$i $(PATH_ZIP)/Interni/Verbali/$$nameFile.pdf; \
 	done; \
-	$(ZIP) $(ZIPFLAGS) $(PATH_ZIP)-$(GROUP_NAME).zip $(PATH_ZIP)/*
+	$(ZIP) $(ZIPFLAGS) $(GROUP_NAME).zip $(PATH_ZIP)/*
 
 clean:
-	rm -rf $(PATH_ZIP)/ $(PATH_ZIP)-$(GROUP_NAME).zip
+	rm -rf $(PATH_ZIP)/ $(GROUP_NAME).zip
 	echo "pdf builds are automatically cleaned when another make is called"
 
 $(FOLDERS):
