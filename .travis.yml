@@ -1,65 +1,42 @@
 language:
-- ruby
+- generic
+
+dist: trusty
+
 sudo: required
-branches:
-  only:
-  - master
+
 install:
-- sudo add-apt-repository ppa:texlive-backports/ppa -y
-- sudo apt-get update -y -q
-- sudo apt-get install texlive-latex-extra -y -q
-- sudo apt-get install texlive-luatex -y -q
-- sudo apt-get install texlive-fonts-extra -y -q
-- sudo apt-get install cm-super -y -q
-- sudo apt-get install texlive-bibtex-extra -y -q
-- sudo apt-get install latexmk -y -q
-- sudo apt-get install tex4ht -y -q
-- sudo apt-get install texlive-fonts-recommended  -y -q
-- wget http://tug.org/fonts/getnonfreefonts/install-getnonfreefonts
-- sudo texlua install-getnonfreefonts
-- sudo getnonfreefonts-sys garamond
+- sudo apt-get update
+- sudo apt-get install texlive-latex-extra -qq
+- sudo apt-get install texlive-luatex -qq
+- sudo apt-get install cm-super -qq
+- sudo apt-get install texlive-bibtex-extra -qq
+- sudo apt-get install latexmk -qq
+- sudo apt-get install tex4ht -qq
+- sudo apt-get install texlive-fonts-recommended -qq
+- sudo apt-get install texlive-lang-italian -qq
+
 script:
-- cd RR/NormeDiProgetto/ && latexmk -pdflatex='pdflatex -interaction=nonstopmode'
-  -pdf && cd -
-- cd RR/StudioDiFattibilita/ && latexmk -pdflatex='pdflatex -interaction=nonstopmode'
-  -pdf && cd -
-- cd RR/PianoDiQualifica/ && latexmk -pdflatex='pdflatex -interaction=nonstopmode'
-  -pdf && cd -
-- cd RR/LetteraDiPresentazione/ && latexmk -pdflatex='pdflatex -interaction=nonstopmode'
-  -pdf && cd -
-- cd RR/PianoDiProgetto/ && latexmk -pdflatex='pdflatex -interaction=nonstopmode'
-  -pdf && cd -
-- cd RR/AnalisiDeiRequisiti/ && latexmk -pdflatex='pdflatex -interaction=nonstopmode'
-  -pdf && cd -
-- cd RR/Glossario/ && ./build.sh; cd -
-after_success:
-- git config --global user.email ${GIT_EMAIL}
-- git config --global user.name ${GIT_NAME}
-- git clone --branch=gh-pages https://${GH_TOKEN}@github.com/bugbusterswe/documentation
-  travis-build
-- cd travis-build/
-- mkdir -p build/
-- cd build/
-- cp -f $HOME/build/BugBusterSWE/documentation/RR/NormeDiProgetto/main.pdf .
-- mv main.pdf NormeDiProgetto_lastest.pdf
-- cp -f $HOME/build/BugBusterSWE/documentation/RR/StudioDiFattibilita/main.pdf .
-- mv main.pdf StudioDiFattibilita_lastest.pdf
-- cp -f $HOME/build/BugBusterSWE/documentation/RR/PianoDiQualifica/main.pdf .
-- mv main.pdf PianoDiQualifica_lastest.pdf
-- cp -f $HOME/build/BugBusterSWE/documentation/RR/LetteraDiPresentazione/main.pdf
-  .
-- mv main.pdf LetteraDiPresentazione_lastest.pdf
-- cp -f $HOME/build/BugBusterSWE/documentation/RR/PianoDiProgetto/main.pdf .
-- mv main.pdf PianoDiProgetto_lastest.pdf
-- cp -f $HOME/build/BugBusterSWE/documentation/RR/Glossario/main.pdf .
-- mv main.pdf Glossario_lastest.pdf
-- cp -f $HOME/build/BugBusterSWE/documentation/RR/AnalisiDeiRequisiti/main.pdf .
-- mv main.pdf AnalisiDeiRequisiti_lastest.pdf
-- git add NormeDiProgetto_lastest.pdf StudioDiFattibilita_lastest.pdf PianoDiQualifica_lastest.pdf
-  LetteraDiPresentazione_lastest.pdf PianoDiProgetto_lastest.pdf Glossario_lastest.pdf
-  AnalisiDeiRequisiti_lastest.pdf
-- git commit -m "Travis CI autocommit from travis build ${TRAVIS_BUILD_NUMBER}"
-- git push -f origin gh-pages
+- make -B
+
+after_failure:
+- cat {internal,official,presentations,verbal}/*/main.log
+- cat official/Glossario/glossary.log
+
+before_deploy:
+- make zip
+- git fetch --tags
+
+deploy:
+  provider: releases
+  api_key:
+    secure: FGxXdO2MHefuxxst4W9n9KW5lDJZY244as0wHPVIUsaWTksxTIDM96Rv7PmOqmoV+65Q0qorZ8JnArZSeil1ncR69lK3n/bdb0r8e719DFyc1jXlIJRy1btx0oAsBXbHWA+PEDmPoIdQO9ANWS0r7H8XX0mrraHhNLo82UVo94k2um6W3YZA7s504eEiyyp1EGW0bzVAWSEXwmNifDQYXy/qZxyhRV6Gvt+uQscsz3CXb59Wd1OjfSkCa96aVIoDP+spTBNsKWMV7agFrhjUczxhtVBWJyCuDiM3DYTYXWeZGeYHS/eK/p8/fOvdS0hbNydF8g7MjLo4g6WWxhPEZLNAiKFlnvljClTu8KQKwpItPwTqe+RYISmBYaUGZ5MeBIujmdbrMAT2ZXKBHjTJWKYMTVUegmySEa6BUm1LMJaEHef9O7d0b++9RxfbQzGIaR84zltmeYFGt6odH/v/Np7FycbBt0HIFEdGnNt0G0p9dJt/5WSyUdOyZ64KT5O0ZFjS/IV/dxOm2NBwfZt6RKM+wyByZrsy5uKotLNpKF66JXE7wvPFkJ4nQqjk8V4ZAVziJOszpw4IRXa3N6cVD7Fj4uwW1/wFJGQDaMX8QEccea1OPqgzsaDcTjZWfS4wp39pycO6P1F8vhlSKQ01y8cbA7qCcNtYvasRNW15mdc=
+  file: BugBusters.zip
+  skip_cleanup: true
+  on:
+    repo: BugBusterSWE/documentation
+    tags: true
+
 notifications:
   slack:
     secure: dYIgo/Kqia2bjg4V5X8MCF/kpPu1pivZVNwB+EmwyiwqQBJD7YWAP/IVsTSPBhqJ0rNxW6Q5Mlhk89ukjg6fXU+z0dtsBB6Su94Cm9qlnRjKXW44xG8GmhqGzDYrg1tAnBGGhP3xfOu3hP3Cw/GZConRG2SMgza2Bl7sDLtv3tpLlYU3dEYPrZEAddNnkBUhE/r00xZHEf0bUZ+AMqw4snjWxpx7lvR7ibCJWct9EZ60oTtC/3m0lrOK4Bek4sFuXtB1/QZUS4NbPImnrtxkILdOWxKo969eDRN22bjldc4xBfQjJofvog1HTKCFw8Pw636gxX+WDxVLzQTlASOg+7qVEVgtgA/jUfA+PExK7CS9JmQomcaMH7WUWc2lni5rIlosxAsCUXA2wdsC1WnIVlNzWeEnycvDo32tbsT/xAVH8R5DWGvVeyDr414SjQHybcz79z2j67T0fGUFcqiQxQzKcrCEDBPc36S6Lv9pAQW+50J5AkaNk7vAzk3yl8wB9wl0UjI1DfN9YfE1G/H903Y4v8xUTpo6qQAS0vbO+nV6rXpSUMOk5fWCdiIK4jLVEUgnoEqDQGX+FKsO3RcN9gKPZi/yQ9sKIIjib3unlxHiORDDkPD7C6RTCKdLtQhVmhFPMdlQjyoQC4yVkcmx+9WqDZmr6vL6zzI9PaLLd6Y=
