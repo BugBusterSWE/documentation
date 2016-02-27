@@ -1,13 +1,14 @@
 \section{Descrizione generale}
 \subsection{Contesto d'utilizzo}
-Il \glossaryItem{progetto} \glossaryItem{MaaS} mira a fornire un servizio online per le aziende per la visualizzazione dei propri dati aziendali attraverso un'interfaccia grafica. In particolare il \glossaryItem{progetto} mira a creare un ambiente di sviluppo online per la modellazione di queste interfacce, in modo semplice e veloce per gli sviluppatori.
-Tale scopo è parzialmente raggiunto dall'applicazione \glossaryItem{MaaP}: è un framework che offre gli strumenti necessari agli sviluppatori per creare tali interfacce. Quest'applicativo per\`o richiede l'installazione del framework necessario in un server per l'azienda che ne vuole usufruire, operazione onerosa e che richiede conoscenze informatiche molto spesso assenti nelle aziende. \glossaryItem{MaaS} cerca di colmare questo punto critico mirando a creare un servizio: una piattaforma raggiungibile online che non necessita dei passaggi di installazione per l'utente, ma solo di un passaggio di registrazione per creare un proprio spazio.
-Oltre a questo \glossaryItem{MaaS} punta ad estendere le funzionalità di \glossaryItem{MaaP}, aggiungendo un editor per la creazione delle viste che agevola l'utente nel processo di creazione e modifica delle proprie interfacce.
-
+%review the contents of this section
+Il \glossaryItem{progetto} \glossaryItem{MaaS} mira a fornire un servizio online per le aziende per la visualizzazione dei propri dati aziendali attraverso un'interfaccia grafica. In particolare il \glossaryItem{progetto} intende creare un ambiente di sviluppo online per la modellazione di queste interfacce, in modo semplice e veloce per gli sviluppatori.
+Tale scopo è parzialmente raggiunto dall'applicazione \glossaryItem{MaaP}, la quale è un \glossaryItem{framework} che offre gli strumenti necessari agli sviluppatori per creare tali interfacce. Quest'applicativo tuttavia richiede l'installazione del framework necessario in un server per l'azienda che ne vuole usufruire, operazione onerosa che richiede conoscenze informatiche molto spesso assenti nelle aziende. \glossaryItem{MaaS} cerca di colmare questa lacuna tramite un servizio: una piattaforma raggiungibile online che non necessita dei passaggi di installazione per l'utente, ma solo di un passaggio di registrazione per creare un proprio spazio.
 
 \subsection{Funzione di Prodotto}
-\glossaryItem{MaaS} deve fornire all'utente una piattaforma su cui effettuare la registrazione per la propria \glossaryItem{Company}. Effettuato questo passaggio un \glossaryItem{Owner} pu\`o invitare i propri collaboratori al servizio ed aggiungere gli accessi al proprio database \glossaryItem{MongoDB} per poter creare le viste.
-Ciascun utente ha la possibilit\`a di creare le interfacce attraverso un editor che genera una richiesta in linguaggio \glossaryItem{DSL} che il sistema può interpretare per generare le viste.
+%review the contents of this section
+\glossaryItem{MaaS} dovrà fornire all'utente una piattaforma su cui effettuare la registrazione per la propria \glossaryItem{Company}. Effettuato questo passaggio, un \glossaryItem{Owner} pu\`o invitare i propri collaboratori al servizio ed aggiungere gli accessi al proprio database \glossaryItem{MongoDB} per poter creare le viste.
+Oltre a questo, \glossaryItem{MaaS} punta ad estendere le funzionalità di \glossaryItem{MaaP} tramite un editor per la creazione delle viste, strumento in grado di agevolare l'utente nella gestione delle proprie interfacce.
+
 
 \subsection{Entit\`a}
 Le entit\`a (e le relazioni esistenti tra di loro) definite nel modello \glossaryItem{SaaS} di \glossaryItem{MaaS} vengono esposte di seguito. La loro descrizione \`e stata utile nell'identificazione delle varie tipologie di attori per la trattazione dei casi d'uso.
@@ -26,10 +27,10 @@ Le entit\`a (e le relazioni esistenti tra di loro) definite nel modello \glossar
 			\item[\glossaryItem{Member}] Pu\`o eseguire, leggere e scrivere una specifica \glossaryItem{DSL} a cui ha accesso e crearne una nuova.
 			\item[\glossaryItem{Admin}] Pu\`o eseguire qualsiasi operazione sul \glossaryItem{DSL} appartenente alla relativa \glossaryItem{Company}. Pu\`o invitare altri utenti, aggiungere/togliere/modificare ruoli e aggiungere/togliere/modificare permessi in lettura/scrittura al \glossaryItem{DSL}.
 			\item[\glossaryItem{Owner}] Pu\`o eseguire le stesse funzioni dell'\glossaryItem{Admin}, non pu\`o essere eliminato e pu\`o impersonare altri utenti all-interno della \glossaryItem{Company}
-		\end{description}
-        %%%%problemi di formattazione
-	\item[\glossaryItem{Super-Admin}] \hfill \\\\
+                         %%%%%ancora problemi di formattazione?
+                        \item[\glossaryItem{Super-Admin}] \hfill \\\\
 	Il \glossaryItem{Super-Admin} non appartiene a nessuna \glossaryItem{Company}. Questo ruolo \`e utile per gli amministratori di sistema, che hanno il compito di fornire supporto agli utenti.
+		\end{description}
 \end{description}
 
 \newpage
