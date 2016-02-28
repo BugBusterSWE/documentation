@@ -1,6 +1,6 @@
 \section{Utente Autenticato}
 
-Di seguito vengono elencati i casi d'uso per l'utente autenticato.
+Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'utente autenticato.
 \subsection{Casi d'Uso}
 
 \subsubsection{UC-U8}
@@ -103,7 +103,7 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         
         \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina di modifica del profilo. \\ 
         
-        \textbf{Postcondizioni} & Il sistema registra un nuovo indirizzo email per il profilo dell'attore. \\ 
+        \textbf{Postcondizioni} & Il sistema registra un nuovo indirizzo email per il profilo dell'utente autenticato. \\ 
         \textbf{Scenario principale} & 1. L'utente autenticato può modificare il proprio indirizzo email. \\
         \textbf{Estensioni} & 1. L'utente visualizza un messaggio di errore durante la modifica dell'email dovuto all'inserimento di un indirizzo email già presente. (UC-U13.6.2) \\
       \end{longtable}
@@ -144,7 +144,7 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
 3. L'utente autenticato re-inserisce la nuova password. (UC-U9.2.3) \\
         \textbf{Estensioni} & 1. L'utente autenticato visualizza un messaggio di errore dovuto all'inserimento di una password errata. (UC-U9.2.4)
         
-2. L'attore visualizza un messaggio di errore causato dalla non corrispondenza tra le password inserite. (UC-U9.2.5) \\
+2. L'utente autenticato visualizza un messaggio di errore causato dalla non corrispondenza tra le password inserite. (UC-U9.2.5) \\
       \end{longtable}
       \egroup
     \end{center}
@@ -304,7 +304,7 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
         \begin{figure}[H]
           \begin{center}
             \includegraphics[width=12cm]{res/img/UCUtenti/UCUtenteA/UC-U11-Operazioni DSL/UC-U11.png}
-          \caption{UC-U11 - Operazioni DSL}
+          \caption{UC-U11 - Operazioni sulle specifiche DSL}
           \end{center} 
         \end{figure}
         
@@ -315,22 +315,22 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
           \begin{longtable}{  p{3.5cm} | p{8cm} } 
             
             \hline
-            \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U11 - Operazioni DSL}} \\ 
+            \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U11 - Operazioni sulle specifiche DSL}} \\ 
             \hline
             
-            \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \glossaryItem{Owner} \\ 
-            \textbf{Scopo e Descrizione} & L’utente visualizza la pagina per apportare modifiche sulle DSL. Può decidere di: eseguire, modificare, creare e leggere una specifica DSL.\\ 
+            \textbf{Attori Primari} & Utente Autenticato, \glossaryItem{Guest}, \glossaryItem{Member}, Admin, \glossaryItem{Owner} \\ 
+            \textbf{Scopo e Descrizione} & L’utente visualizza la pagina per apportare modifiche sulle specifiche DSL. Può decidere di: eseguire, modificare, creare e leggere una specifica DSL.\\ 
             
             \textbf{Precondizioni}  & L’applicazione MaaS è funzionante e pronta all'uso. Gli utenti possono accedere alla propria pagina \glossaryItem{Dashboard}. \\ 
             
             \textbf{Postcondizioni} & Le (eventuali) modifiche sono state apportate. \\ 
-            \textbf{Scenario principale} & 1. L'Ospite, il Membro, l'Admin e l'\glossaryItem{Owner} possono eseguire una specifica DSL (UC-U11.1)  
+            \textbf{Scenario principale} & 1. \glossaryItem{Guest}, \glossaryItem{Member}, l'Admin e l'\glossaryItem{Owner} possono eseguire una specifica DSL (UC-U11.1)  
             
-            2. Il Membro, l'Admin e l'\textit{Owner} possono modificare una specifica DSL (UC-U11.2)
+            2. \glossaryItem{Member}, l'Admin e l'\textit{Owner} possono modificare una specifica DSL (UC-U11.2)
             
-            3. Il Membro, l'Admin e l'\glossaryItem{Owner} possono creare una specifica DSL (UC-U11.3)
+            3. \glossaryItem{Member}, l'Admin e l'\glossaryItem{Owner} possono creare una specifica DSL (UC-U11.3)
             
-            4. Il Membro, l'Admin e l'\textit{Owner} possono leggere una specifica DSL (UC-U11.4)\\
+            4. \glossaryItem{Member}, l'Admin e l'\textit{Owner} possono leggere una specifica DSL (UC-U11.4)\\
             \textbf{Estensioni} & 1. L'utente visualizza un messaggio di errore in quanto non ha i permessi per operare sulla specifica DSL (UC-U12)  \\
           \end{longtable}
           \egroup
@@ -346,8 +346,8 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
                     \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U11.1 - Esecuzione specifica DSL}} \\ 
                     \hline
                     
-                    \textbf{Attori Primari} & Utente Autenticato, Ospite, Membro, Admin, \textit{Owner}  \\ 
-                    \textbf{Scopo e Descrizione} & L'Utente Autenticato, Ospite, Membro, Admin, \textit{Owner} eseguono una specifica DSL\\ 
+                    \textbf{Attori Primari} & Utente Autenticato, \glossaryItem{Guest}, \glossaryItem{Member}, Admin, \textit{Owner}  \\ 
+                    \textbf{Scopo e Descrizione} & L'Utente Autenticato, \glossaryItem{Guest}, \glossaryItem{Member}, Admin, \textit{Owner} eseguono una specifica DSL\\ 
                     
                     \textbf{Precondizioni}  & L’applicazione è funzionante e pronta all'uso. Gli utenti possono accedere alla propria pagina \glossaryItem{Dashboard}.\\ 
                     
@@ -368,12 +368,12 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
                     \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U11.2 - Modifica specifica DSL}} \\ 
                     \hline
                     
-                    \textbf{Attori Primari} & Membro, Admin, \textit{Owner}  \\ 
-                    \textbf{Scopo e Descrizione} & Il Membro, Admin, \textit{Owner} modificano una specifica DSL tramite l'editor\\ 
+                    \textbf{Attori Primari} & \glossaryItem{Member}, Admin, \textit{Owner}  \\ 
+                    \textbf{Scopo e Descrizione} & \glossaryItem{Member}, Admin, \textit{Owner} modificano una specifica DSL tramite l'editor\\ 
                     
                     \textbf{Precondizioni}  & L’applicazione è funzionante e pronta all'uso. Gli utenti possono accedere alla propria \glossaryItem{Dashboard}. \\ 
                     
-                    \textbf{Postcondizioni} & L'utente modifica la DSL \\ 
+                    \textbf{Postcondizioni} & L'utente modifica la specifica DSL \\ 
                     \textbf{Estensioni} & 1. L'utente visualizza un messaggio di errore in quanto non ha i permessi per operare sulla specifica DSL (UC-U12)  \\
                   \end{longtable}
                   \egroup
@@ -389,12 +389,12 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
                     \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U11.3 - Creazione specifica DSL}} \\ 
                     \hline
                     
-                    \textbf{Attori Primari} & Membro, Admin, \textit{Owner}  \\ 
-                    \textbf{Scopo e Descrizione} & Il Membro, Admin, \textit{Owner} creano una specifica DSL tramite l'editor\\ 
+                    \textbf{Attori Primari} & \glossaryItem{Member}, Admin, \textit{Owner}  \\ 
+                    \textbf{Scopo e Descrizione} & \glossaryItem{Member}, Admin, \textit{Owner} creano una specifica DSL tramite l'editor\\ 
                     
                     \textbf{Precondizioni}  & L’applicazione è funzionante e pronta all'uso. Gli utenti possono accedere alla propria pagina \glossaryItem{Dashboard}.\\ 
                     
-                    \textbf{Postcondizioni} & L'utente aggiunge la DSL a MaaS \\ 
+                    \textbf{Postcondizioni} & L'utente aggiunge la specifica DSL a MaaS \\ 
                     \textbf{Estensioni} & 1. L'utente visualizza un messaggio di errore in quanto non ha i permessi per operare sulla specifica DSL (UC-U12)  \\
                   \end{longtable}
                   \egroup
@@ -410,12 +410,12 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
                     \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U11.4 - Lettura specifica DSL}} \\ 
                     \hline
                     
-                    \textbf{Attori Primari} & Membro, Admin, \textit{Owner}  \\ 
-                    \textbf{Scopo e Descrizione} & Il Membro, Admin, \textit{Owner} leggono una specifica DSL\\ 
+                    \textbf{Attori Primari} & \glossaryItem{Member}, Admin, \textit{Owner}  \\ 
+                    \textbf{Scopo e Descrizione} & \glossaryItem{Member}, Admin, \textit{Owner} leggono una specifica DSL\\ 
                     
                     \textbf{Precondizioni}  & L’applicazione è funzionante e pronta all'uso. Gli utenti possono accedere alla propria pagina \glossaryItem{Dashboard}.\\ 
                     
-                    \textbf{Postcondizioni} & L'utente legge la DSL \\ 
+                    \textbf{Postcondizioni} & L'utente legge la specifica DSL \\ 
                     \textbf{Estensioni} & 1. L'utente visualizza un messaggio di errore in quanto non ha i permessi per operare sulla specifica DSL (UC-U12)  \\
                   \end{longtable}
                   \egroup
@@ -435,9 +435,9 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
             \hline
             
             \textbf{Attori Primari} & Utente autenticato \\ 
-            \textbf{Scopo e Descrizione} & L’utente autenticato visualizza un messaggio di errore nel tentativo di eseguire un'operazione sul DSL.\\ 
+            \textbf{Scopo e Descrizione} & L’utente autenticato visualizza un messaggio di errore nel tentativo di eseguire un'operazione su una specifica DSL.\\ 
             
-            \textbf{Precondizioni}  & L'utente autenticato ha eseguito un'operazione sul DSL di cui non dispone i permessi. \\ 
+            \textbf{Precondizioni}  & L'utente autenticato ha eseguito un'operazione su una specifica DSL di cui non dispone i permessi. \\ 
             
             \textbf{Postcondizioni} & L'utente autenticato ha visualizzato il messaggio di errore. \\ 
           \end{longtable}
@@ -465,7 +465,7 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
             \textbf{Attori Primari} & Admin, \glossaryItem{Owner} \\ 
             \textbf{Scopo e Descrizione} & L'Admin e l'\glossaryItem{Owner} visualizzano la pagina per apportare modifiche sugli utenti. Possono decidere di: operare su una specifica DSL accedendo all'editor oppure inserire, rimuovere, invitare un nuovo utente.\\ 
             
-            \textbf{Precondizioni}  & L'Admin e l'\glossaryItem{Owner} dispongono dei permessi. \\ 
+            \textbf{Precondizioni}  & L'Admin dispone dei permessi per modificare i permessi in lettura/scrittura a una specifica DSL. L' \glossaryItem{Owner} dispone dei permessi per invitare/rimuovere/inserire nuovi utenti alla \glossaryItem{Company} di appartenenza.\\
             
             \textbf{Postcondizioni} & Le (eventuali) modifiche sono state apportate. \\ 
             \textbf{Scenario principale} & 1. L'Admin e l'\glossaryItem{Owner} possono eseguire operazioni su una specifica DSL (UC-U13.1)  
@@ -492,7 +492,7 @@ Di seguito vengono elencati i casi d'uso per l'utente autenticato.
                     \textbf{Attori Primari} & Amministratore, \glossaryItem{Owner} \\ 
                     \textbf{Scopo e Descrizione} & L'amministratore o l'\glossaryItem{Owner} decidono di operare su una specifica DSL\\ 
                     
-                    \textbf{Precondizioni}  & La DSL selezionata è già stata creata in precedenza. \\ 
+                    \textbf{Precondizioni}  & La specifica DSL selezionata è già stata creata in precedenza. \\ 
                     
                     \textbf{Postcondizioni} & L'operazione sulla specifica DSL è apportata. \\ 
                   \end{longtable}
