@@ -23,7 +23,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'utente autenticato
         \hline
         
         \textbf{Attori Primari} & Utente autenticato \\ 
-        \textbf{Scopo e Descrizione} & L’utente autenticato può: modificare il proprio profilo, effettuare delle operazioni nella pagina \glossaryItem{Dashboard}, effettuare delle operazioni di creazione/modifica/esecuzione del DSL (a seconda dei suoi permessi) e gestire altri utenti (quest'ultima funzionalità è riservata ad un ruolo superiore o uguale all'admin). \\ 
+        \textbf{Scopo e Descrizione} & L’utente autenticato può: modificare il proprio profilo, effettuare delle operazioni nella pagina \glossaryItem{Dashboard}, effettuare delle operazioni di creazione/modifica/esecuzione delle specifiche DSL (a seconda dei suoi permessi) e gestire altri utenti (quest'ultima funzionalità è riservata ad un ruolo superiore o uguale all'admin). \\ 
         
         \textbf{Precondizioni}  & L’applicazione è funzionante e pronta all'uso. L'utente autenticato ha visualizzato la
         pagina \glossaryItem{Dashboard}. \\ 
@@ -33,14 +33,14 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'utente autenticato
         
 2. L'utente effettua delle operazioni nella pagina \glossaryItem{Dashboard}. (UC-U15)
 
-3. L'utente effettua delle operazioni di creazione/modifica/esecuzione del DSL (a seconda dei suoi permessi). (UC-U11)
+3. L'utente effettua delle operazioni di creazione/modifica/esecuzione delle specifiche DSL (a seconda dei suoi permessi). (UC-U11)
 
 4. L'utente gestisce altri utenti (quest'ultima funzionalità è riservata ad un ruolo superiore o uguale all'admin). (UC-U13)
 
 5. L'utente effettua il logout. (UC-U17) \\
         \textbf{Estensioni} & 1. L'utente autenticato visualizza un messaggio di errore nella procedura di modifica del profilo dovuto all'inserimento di un indirizzo email già presente (UC-U13.6.2)
         
-2. L'utente autenticato visualizza un messaggio di errore durante le operazioni effettuate sul DSL dovuto alla violazione dei permessi. (UC-U12)
+2. L'utente autenticato visualizza un messaggio di errore durante le operazioni effettuate sulle specifiche DSL dovuto alla violazione dei permessi. (UC-U12)
 
 3. L'utente autenticato visualizza un messaggio di errore durante le operazioni sugli utenti dovute alla violazione dei permessi. (UC-u14) \\
       \end{longtable}
@@ -351,7 +351,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'utente autenticato
                     
                     \textbf{Precondizioni}  & L’applicazione è funzionante e pronta all'uso. Gli utenti possono accedere alla propria pagina \glossaryItem{Dashboard}.\\ 
                     
-                    \textbf{Postcondizioni} & L'utente visualizza il risultato della DSL \\ 
+                    \textbf{Postcondizioni} & L'utente visualizza il risultato della specifica DSL \\ 
                     \textbf{Scenario principale} & Nessuno\\
                     \textbf{Estensioni} & 1. L'utente visualizza un messaggio di errore in quanto non ha i permessi per operare sulla specifica DSL (UC-U12)  \\
                   \end{longtable}
@@ -515,7 +515,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'utente autenticato
                     \textbf{Attori Primari} & Amministratore, \textit{Owner} \\ 
                     \textbf{Scopo e Descrizione} & L'amministratore o l'\textit{Owner} decidono di modificare il permesso di una specifica DSL\\ 
                     
-                    \textbf{Precondizioni}  & La DSL selezionata è già stata creata in precedenza. \\ 
+                    \textbf{Precondizioni}  & La specifica DSL selezionata è già stata creata in precedenza. \\ 
                     
                     \textbf{Postcondizioni} & La modifica sui permessi di una specifica DSL è apportata. \\ 
                   \end{longtable}
@@ -538,7 +538,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'utente autenticato
                     \textbf{Attori Primari} & Amministratore, \textit{Owner} \\ 
                     \textbf{Scopo e Descrizione} & L'amministratore o l'\textit{Owner} decidono di cancellare un permesso su una specifica DSL\\ 
                     
-                    \textbf{Precondizioni}  & La DSL selezionata è già stata creata in precedenza. \\ 
+                    \textbf{Precondizioni}  & La specifica DSL selezionata è già stata creata in precedenza. \\ 
                     
                     \textbf{Postcondizioni} & La cancellazione del permesso sulla specifica DSL è apportata. \\ 
                   \end{longtable}
@@ -786,9 +786,9 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'utente autenticato
         \hline
         
         \textbf{Attori Primari} & Utente autenticato \\ 
-        \textbf{Scopo e Descrizione} & L'utente autenticato sceglie di visualizzare un element dalla \glossaryItem{Dashboard} (che può essere una \glossaryItem{Cell}, un \glossaryItem{Document} o una \glossaryItem{Collection}). \\ 
+        \textbf{Scopo e Descrizione} & L'utente autenticato può visualizzare un element dalla \glossaryItem{Dashboard} (che può essere una \glossaryItem{Cell}, un \glossaryItem{Document} o una \glossaryItem{Collection}). \\ 
         
-        \textbf{Precondizioni}  & L'utente autenticato ha visualizzato un element della \glossaryItem{Dashboard}. \\ 
+        \textbf{Precondizioni}  & L'utente autenticato ha visualizzato la pagina \glossaryItem{Dashboard}. \\ 
         
         \textbf{Postcondizioni} & L'utente autenticato viene reindirizzato alla pagina di visione dell'element selezionato. \\ 
       \end{longtable}
