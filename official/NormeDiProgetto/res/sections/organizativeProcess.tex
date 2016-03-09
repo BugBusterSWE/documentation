@@ -1,31 +1,31 @@
 \section{Processi Organizzativi}
 
-\subsection{\glossaryItem{Processo} di pianificazione}
+%nei processi primari: come si fa lo studio di fattibililtà?
+
+\subsection{\glossaryItem{Processo} di gestione}
 
 \subsubsection{Scopo}
 
-Lo scopo di questo \glossaryItem{processo} è la realizzazione e la comunicazione del piano di \glossaryItem{progetto} ai membri del gruppo. Tutto ciò aiuta nella determinazione dell'ambito della gestione del \glossaryItem{progetto} e delle attività tecniche, identifica gli output del \glossaryItem{progetto} e ne stabilisce un calendario.
-
+Lo scopo di questo \glossaryItem{processo} è la realizzazione e la comunicazione del \PianoDiProgetto ai membri del gruppo. Tutto ciò aiuta nella determinazione dell'ambito della gestione del \glossaryItem{progetto} e delle attività tecniche, identifica gli output del \glossaryItem{processo} e ne stabilisce un calendario.
 
 \subsubsection{Risultati osservabili}
 
 Questo \glossaryItem{processo} produce:
 \begin{itemize}
 
-\item L'identificazione dell'ambito del \glossaryItem{progetto};
 \item L'analisi di fattibilità degli obiettivi prefissati;
 \item Una stima esatta dei task necessari per completare il lavoro;
 \item Un piano per l'esecuzione del lavoro programmato.
 
 \end{itemize}
 
-\subsubsection{Descrizione}
+\subsubsection{Attività di pianificazione}
 
 \paragraph*{Soglia oraria giornaliera}È stato deciso di porre la soglia oraria ai seguenti orari: la mattina dalle ore 8:30 alle ore 11:30, il pomeriggio dalle ore 14 alle 18. Le ore di lavoro al di fuori di questa fascia oraria saranno considerate come lavoro straordinario.
 
-\paragraph*{Assegnazione dei task}Il responsabile si occuperà di assegnare i task in base alla disponibilità dei membri del gruppo e alla rotazione dei ruoli
+\paragraph*{Assegnazione dei task}Il responsabile si occuperà di assegnare i task in base alla disponibilità dei membri del gruppo e alla rotazione dei ruoli.
 
-\subsubsection{Rotazione dei ruoli}
+\paragraph*{Rotazione dei ruoli}
 
 Durante lo sviluppo del \glossaryItem{progetto} vi sono diversi ruoli che devono essere ricoperti dai membri del gruppo BugBuster. Il \textit{Piano di progetto} si occupa di assegnare le attività principali e specifiche per ogni ruolo. Il \textit{Reponsabile} di progetto ha l'onere di far rispettare i ruoli assegnati durante l'attività e il \textit{Verificatore} deve essere in grado di individuare eventuali incongruenze e di segnalarle opportunamente.
 \paragraph*{Incongruenze tra ruoli e risoluzioni}
@@ -80,6 +80,58 @@ Il resposabile nell'azione di assegnazione dei ticket dovr\`a indicare il ruolo 
 \item[Verificatore] \hfill \\ Il \textit{Verificatore} organizza ed attua le attivit\`a di \glossaryItem{verifica} e controlla che le attivit\`a siano conformi alle norme definite. Redige nel \textit{Piano di Qualifica} la parte che documenta le attivit\`a svolte e i risultati ottenuti, confrontandoli con le metriche del \PianoDiQualifica. Le ore assegnate al verificatore devono corrispondere almeno al 30\% delle ore totali suddivise tra i ruoli.
   
 \end{description}
+
+
+%come organizziamo i task
+%come organizziamo le attività
+
+\subsection{\glossaryItem{Processo} di infrastruttura}
+
+\subsubsection{Attività di organizzazione dell'infrastruttura}
+
+\paragraph*{Sistema di versionamento e suo utilizzo} Il gruppo ha stabilito di utilizzare per tutti i file che richiedono versionamento di il \glossaryItem{CVS} \glossaryItem{Git}, tramite il servizio \glossaryItem{GitHub}.
+
+È stato stabilito che ogni commit deve appartenere a un \glossaryItem{task}. I \glossaryItem{task}, assegnati dal \textit{responsabile} ai vari membri del gruppo corrispondono a \glossaryItem{issue} su \glossaryItem{GitHub}. All'apertura della \glossaryItem{issue} corrisponde alla creazione di un branch, il cui nome sarà conforme alla seguente nomenclatura: \textbf{issue\#\textit{numero issue}}. L'assegnatario del task, durante il suo svolgimento, viene coadiuvato da un sistema di \glossaryItem{Continuos Integration}, al termine dello svolgimento di tale task l'assegnatario esegue una \glossaryItem{Pull Request}, seguita da un controllo di contenuto da parte di un verificatore umano.
+
+\paragraph*{Sistema di ticketing} I task, come già accennato, vengono assegnati tramite la piattaforma \glossaryItem{TeamWork}. All'assegnazione di un ticket su questa piattaforma corrisponde all'apertura di una \glossaryItem{issue} su \glossaryItem{GitHub} e ad una notifica tramite il sistema di messaggistica \glossaryItem{Slack}.
+
+\paragraph*{Sistema di \glossaryItem{CI}}Il sistema di \glossaryItem{CI} controlla che il contenuto di ogni repository sia conforme alle \NormeDiProgetto. L'integrazione con \glossaryItem{GitHub} permette per ogni \glossaryItem{task} la verifica di ciascun commit. Attualmente, i sistemi di \glossaryItem{CI} utilizzati sono \glossaryItem{Travis} e \glossaryItem{Jenkins}.
+
+\paragraph*{Sistema di Dashboard}Il responsabile utilizza una \glossaryItem{dashboard} creata con i seguenti strumenti:
+\begin{itemize}
+
+\item \glossaryItem{TeamWork} per l'assegnazione e la gestione dei \glossaryItem{task}
+\item \glossaryItem{Chronos}, software sviluppato internamente al gruppo in grado di fornire al \textit{responsabile} una visione globale dell'andamento dei processi
+\item \glossaryItem{Mephisto} progetto derivante dal \textit{fork} di \glossaryItem{Tracy}, software di tracciamento dei requisiti sviluppato da un gruppo di questo corso. Tale software è stato accuratamente modificato e riadattato alle nostre necessità.
+\end{itemize}
+
+\subsection{\glossaryItem{Processo} di miglioramento}
+
+Come specificato ed approfondito nel \PianoDiQualifica, il gruppo ha stabilito di adottare il ciclo di Deming (\glossaryItem{PDCA}).
+%da togliere?
+
+\subsection{\glossaryItem{Processo} di formazione}
+
+Viene considerato fondamentale lo studio della teoria del \textit{Software Engineering} dalle fonti proposte durante il corso.
+Inoltre, il \textit{team} ha stabilito che ogni membro del gruppo debba impegnarsi autonomamente nell'apprendimento delle tecnologie richieste dal progetto.
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{\glossaryItem{Processo} di pianificazione}
+
+\subsubsection{Scopo}
+
+
+
+\subsubsection{Descrizione}
+
 
 \subsubsection{Revisioni di \glossaryItem{progetto}}
 
