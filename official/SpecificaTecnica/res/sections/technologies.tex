@@ -1,0 +1,96 @@
+\section{Tecnologie utilizzate}
+MaaS è stato progettato utilizzando diverse tecnologie, alcune delle quali espressamente richieste dal proponente. Di seguito vengono elencate e descritte. Per ognuna di esse, inoltre, verranno presentanti vantaggi e svantaggi, al fine di fornire una più completa motivazione della scelta.
+\begin{itemize}
+\item \textbf{Node.js}, piattaforma per il back-end;
+\item \textbf{React}, framework JavaScript per la realizzazione dele front-end;
+\item \textbf{MongoDB}, database di tipo NoSQL per la parte di recupero e salvataggio dei dati;
+\item \textbf{Mongoose}, libreria per interfacciarsi con il driver di MongoDB;
+\item \textbf{HTML5}, linguaggio di markup per la creazione di pagine web;
+\item \textbf{CSS3}, linguaggio di formattazione dei documenti HTML;
+\item \textbf{Loopback}, framework Node.js per la crezione dinamica di API REST.
+\end{itemize}
+\subsection{Node.js}
+L'utilizzo di Node.js è stato richiesto dal proponente. Si tratta di un sistema run-time cross-platform che utilizza il motore JavaScript V8 di Google Chrome e permette di realizzare facilemte applicazioni di rete scalabili e veloci. Grazie al suo modello event-driven, con chiamate di I/O non bloccanti risulta essere leggero ed efficiente.
+\subsubsection{Vantaggi}
+\begin{itemize}
+\item \textbf{Approccio asincrono}: permette di accedere alle risorse del sistema operativo in modalità event-driven e non tramite il classico processo orientato a processi e thread cocorrenti utilizzato dai classici server web. Ciò garantisce una maggiore efficienza dal punto di vista delle prestazioni, dato che durante le attese possono essere eseguire altre operazioni in modo asincrono.
+\item \textbf{Architettura modulare}: è molto facile organizzare il lavoro in librerie, importare e combinare i moduli.
+\end{itemize}
+\subsubsection{Svantaggi}
+\begin{itemize}
+\item \textbf{Orientato all'I/O}: non è pensato per applicazioni che sfruttano in modo intensivo la CPU. Questo, tuttavia, non è il caso di MaaS.
+\end{itemize}
+\subsection{React}
+L'utilizzo di React è stato richiesto dal proponente. È una libreria JavaScript usata per creare interfacce utente,e rappresenta la V del design pattern architetturale MVC. React risolve il problema di creare applicazioni di grandi dimensioni con dati che cambiano nel tempo.
+\subsubsection{Vantaggi}
+\begin{itemize}
+\item \textbf{Semplice}: basta esprimere come l'applicazione dovrebbe apparire in ciascun momento, e React automaticamente gestirà tutti gli aggiornamenti dell'interfaccia utente.
+\item \textbf{Dichiarativo}: quando i dati cambiano, React effettua un refresh concettuale della pagina e aggiorna solo i dati che sono cambiati.
+\item \textbf{Facilità di debugging}: attraverso una specifica estensione di Google Chrome.
+\end{itemize}
+\subsubsection{Svantaggi}
+\begin{itemize}
+\item \textbf{Verboso}: richiede di scrivere più codice rispetto alla semplice coppia HTML e JavaScript.
+\item{Non è un framework completo}: non esiste un modello di gestione delle librerie all'interno di React, cosa che invece non è vera per altri framework simili, come Ember o AngularJS.
+\end{itemize}
+\subsection{MongoDB}
+L'utilizzo di MongoDB è stato richiesto dal proponente. Si tratta di un database NoSQL open source scalabile e altamente performante di tipo document-oriented e schemaless, nel quale i dati sono archiviati sotto forma di documenti in stile JSON, con schemi dinamici e una struttura semplice e potente.
+\subsubsection{Vantaggi}
+\begin{itemize}
+\item \textbf{Alte performance}: non ci sono join che rallentano operazioni di lettura o scrittura. 
+\item \textbf{Affidabilità}: è presente un meccanismo di replicazione su server.
+\item \textbf{Schemaless}: non esistono schemi per i dati. Pertanto è più flessibile.
+\item \textbf{Potenza espressiva}: permette di esprimre query complesse in un linguaggio non SQL.
+\item \textbf{Map-Reduce}: permette di processare parallelamente i dati.
+\item \textbf{Flessibilità}: per i tipi di dato.
+\end{itemize}
+\subsubsection{Svantaggi}
+\begin{itemize}
+\item \textbf{Map-Reduce}: ancora non performante.
+\item \textbf{Nessun supporto per le transazioni}: sono supportate alcune operazioni atomiche, ma a livello di documento.
+\item \textbf{Nessun join}: va simulato via codice attraverso query multiple.
+\item \textbf{Utilizzo di memoria}: maggiore rispetto ai database SQL perché memorizza i nomi delle chiavi in ogni documento. 
+\item \textbf{Problemi di concorrenza}: per le operazioni di scrittura viene creato un lock sull'intero database. Questo lock blocca anche le operazioni di lettura.
+\end{itemize}
+\subsection{Mongoose}
+Mongoose è una libreria per interfacciarsi a MongoDB che permette di definire degli schemi per modellare i dati del database. Inoltre fornisce strumenti utili per la validazioni dei dati, per la definizione di queries e per il cast dei tipi predefiniti.
+\subsubsection{Vantaggi}
+\begin{itemize}
+\item \textbf{Diffusione}: è la libreria più diffusa per interfacciarsi con MongoDB.
+\item \textbf{Funzionalità aggiuntive}: permette di definire strumenti per la validazione dei dati e per il cast dei tipi.
+\end{itemize}
+\subsubsection{Svantaggi}
+\begin{itemize}
+\item \textbf{Schema-based}: è basato sulla creazione di schemi per i documenti, e questo va contro uno dei principali vantaggi di MongoDB.
+\end{itemize}
+\subsection{HTML5}
+È un linguaggio di markup per la strutturazione delle pagine web, pubblicato come W3C Recommendation da ottoble 2014.
+\subsubsection{Vantaggi}
+\begin{itemize}
+\item \textbf{Raccomandazione W3C}.
+\item \textbf{Creazione di pagine interattive}: soprattutto se usato insieme a CSS.
+\end{itemize}
+\subsubsection{Svantaggi}
+\begin{itemize}
+\item \textbf{Supporto}: non tutti i browser lo supportano allo stesso modo, e non tutte le caratteristiche definite sono ancora completamente supportate.
+\end{itemize}
+\subsection{CSS3}
+È un linguaggio utilizzato per definire la formattazione di documenti HTML e XHTML. Le regole per la composizione di un foglio di stile CSS sono definite dal W3C a partire dal 1996. Inoltre permette di separare i contenuti delle pagine HTML dalla loro formattazione, assicurando una maggiore manutenibilità e riutilizzo.
+\subsubsection{Vantaggi}
+\begin{itemize}
+\item \textbf{Separazione tra contenuto e presentazione}.
+\item \textbf{Raccomandazione W3C}.
+\end{itemize}
+\subsection{Loopback}
+L'uso di Loopback è stato consigliato dal proponente. È un framework Node.js altamente estensibile ed open-source che permette, tra le altre cose, di creare API REST dinamiche e accedere a dati MongoDB.
+\subsubsection{Vantaggi}
+\begin{itemize}
+\item \textbf{Velocità di sviluppo}: la creazione di API REST è molto veloce.
+\item \textbf{Configurabilità}: pienamente configurabile secondo i bisogni dell'applicazione.
+\item \textbf{Documentazione}: esaustiva e completa.
+\item \textbf{Pronto all'uso}: ci sono molti moduli disponibili all'uso.
+\end{itemize}
+\subsubsection{Svantaggi}
+\begin{itemize}
+\item \textbf{Apprendimento}: può risultare difficile perché ci sono molte parti già definite da imparare.
+\end{itemize}
