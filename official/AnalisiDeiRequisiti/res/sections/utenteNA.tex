@@ -1,4 +1,9 @@
 \section{Utente Non Autenticato}
+%1)who is he? add a reference/description to this actor in the general description's list of roles
+%2) È corretto
+   %dal punto di vista della sicurezza che un utente non ancora identificato
+   %nell’applicazione possa creare contenuti (Company)?
+%3) Give a more expressive name to paragraphs
 
 Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'utente non autenticato.
 
@@ -189,6 +194,8 @@ L'utente non autenticato ha visualizzato la pagina per la creazione dell'account
     
     %Tabella 
     \begin{center}
+      %1) L'esito dice che il processo di registrazione non è chiaro
+      %2) È corretto che l’utente debba inserire unicamente la password e debba farlo una volta sola?
       \bgroup
       \def\arraystretch{1.8}     
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
@@ -257,6 +264,7 @@ L'utente non autenticato ha visualizzato la pagina per la creazione dell'account
         
         \textbf{Precondizioni}  & L'utente non autenticato è in possesso di un account valido. \\ 
         
+
         \textbf{Postcondizioni} & Il campo testo \`e stato compilato con il contenuto richiesto. \\
          \textbf{Scenario principale} & 1. L'utente non autenticato inserisce il proprio indirizzo email.
       \end{longtable}
@@ -281,6 +289,7 @@ L'utente non autenticato ha visualizzato la pagina per la creazione dell'account
         \textbf{Precondizioni}  & L'utente non autenticato è in possesso di un account valido. \\ 
         
         \textbf{Postcondizioni} & Il campo testo \`e stato compilato con il contenuto richiesto. \\
+
          \textbf{Scenario principale} & 1. L'utente non autenticato inserisce la password associata al proprio account.
       \end{longtable}
       \egroup
@@ -329,6 +338,7 @@ L'utente non autenticato ha visualizzato la pagina per la creazione dell'account
         \hline
         
         \textbf{Attori Primari} & Utente non autenticato \\ 
+
         \textbf{Scopo e Descrizione} & L'utente non autenticato effettua la \glossaryItem{procedura} per il recupero della password, inserendo il proprio indirizzo email e il codice segreto che gli verrà inviato dal sistema. \\ 
         
         \textbf{Precondizioni}  & L'utente possiede un account all'interno dell'applicazione. \\ 

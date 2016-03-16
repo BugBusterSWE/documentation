@@ -69,7 +69,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'utente autenticato
         
         \textbf{Attori Primari} & Utente autenticato \\ 
         \textbf{Scopo e Descrizione} & L'utente autenticato visualizza la pagina per apportare modifiche al profilo personale. Può decidere di: modificare l'indirizzo email, la password, o rimuovere il profilo. \\ 
-        
+        %1) The professor says: the 'email' field is one of the system's identifier element, thus it shouldn't be modified
         \textbf{Precondizioni}  & L’applicazione è funzionante e pronta all'uso. L'utente autenticato ha visualizzato la
         pagina \glossaryItem{Dashboard}. \\ 
         
@@ -289,7 +289,8 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'utente autenticato
         \hline
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U9.4 - Rimozione \glossaryItem{Company}}} \\ 
         \hline
-        
+        %1) Revise the location of this use case in the whole document
+        %2) This is a destructive operation, you must provide a better thought workflow
         \textbf{Attori Primari} & \glossaryItem{Owner} \\ 
         \textbf{Scopo e Descrizione} & L'\glossaryItem{Owner} decide di rimuovere la \glossaryItem{Company} con tutte le sue informazioni e i suoi utenti. \\ 
         
@@ -309,6 +310,8 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'utente autenticato
         \end{figure}
         
         %Tabella 
+        %1) The professor says: insert only the actors which take part in one (at least) of the diagram's use cases
+        %2) The term 'DSL' is not used properly
         \begin{center}
           \bgroup
           \def\arraystretch{1.8}     
@@ -464,10 +467,10 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'utente autenticato
             
             \textbf{Attori Primari} & Admin, \glossaryItem{Owner} \\ 
             \textbf{Scopo e Descrizione} & L'Admin e l'\glossaryItem{Owner} visualizzano la pagina per apportare modifiche sugli utenti. Possono decidere di: operare su una specifica DSL accedendo all'editor oppure inserire, rimuovere, invitare un nuovo utente.\\ 
-            
+           
             \textbf{Precondizioni}  & L'Admin dispone dei permessi per modificare i permessi in lettura/scrittura a una specifica DSL. L' \glossaryItem{Owner} dispone dei permessi per invitare/rimuovere/inserire nuovi utenti alla \glossaryItem{Company} di appartenenza.\\
-            
-            \textbf{Postcondizioni} & Le (eventuali) modifiche sono state apportate. \\ 
+
+              \textbf{Postcondizioni} & Le (eventuali) modifiche sono state apportate. \\ 
             \textbf{Scenario principale} & 1. L'Admin e l'\glossaryItem{Owner} possono eseguire operazioni su una specifica DSL (UC-U13.1)  
             
             2. L'\glossaryItem{Owner} può invitare un nuovo utente (UC-U13.4)
@@ -773,8 +776,8 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'utente autenticato
       \egroup
     \end{center}
     
-\subsubsection{Visualizzazione element \glossaryItem{Dashboard}}
 
+\subsubsection{Visualizzazione element \glossaryItem{Dashboard}}
     %Tabella 
     \begin{center}
       \bgroup
@@ -1202,8 +1205,8 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'utente autenticato
       \egroup
      \end{center}
       
-\subsubsection{Export di una \glossaryItem{Collection}}
 
+\subsubsection{Export di una \glossaryItem{Collection}}
     %Tabella 
     \begin{center}
       \bgroup
