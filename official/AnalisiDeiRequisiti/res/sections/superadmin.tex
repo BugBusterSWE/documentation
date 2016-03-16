@@ -80,16 +80,79 @@ Di seguito vengono elencati i casi d'uso per il \glossaryItem{Super-Admin}.
     \end{center}
 
 %%DA FARE
-%TODO: aggiungere UC-S1.0 "Inserimento nome della Company"
-%TODO: aggiungere UC-S1.1 "Inserimento email dell'Owner
-%TODO: aggiungere UC-S1.2 "Inserimento della password dell'Owner""
+    \subsubsection{UC-S1.0} 
+    
+    %Tabella 
+    \begin{center}
+      \bgroup
+      \def\arraystretch{1.8}     
+      \begin{longtable}{  p{3.5cm} | p{8cm} } 
+        
+        \hline
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-S1.0 - Inserimento del nome della \glossaryItem{Company} }} \\ 
+        \hline
+        
+        \textbf{Attori Primari} & \glossaryItem{Super-Admin}\\  
+        \textbf{Scopo e descrizione} & L'\glossaryItem{Attore} L'applicazione dispone un campo testo su cui l'attore può scrivere il nome della \glossaryItem{Company} \\
+      
+        \textbf{Precondizioni}  & L'applicazione dispone un campo testo graficamente. \\ 
+        
+        \textbf{Postcondizioni} & L'utente ha compilato il campo testo relativo al nome della \glossaryItem{Company} \\ 
+     \end{longtable}
+      \egroup
+    \end{center}
+
+
+\subsubsection{UC-S1.1} 
+    
+    %Tabella 
+    \begin{center}
+      \bgroup
+      \def\arraystretch{1.8}     
+      \begin{longtable}{  p{3.5cm} | p{8cm} } 
+        
+        \hline
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-S1.0 - Inserimento della email dell'\glossaryItem{Owner} }} \\ 
+        \hline
+        
+        \textbf{Attori Primari} & \glossaryItem{Super-Admin}\\  
+        \textbf{Scopo e descrizione} & L'\glossaryItem{Attore} L'attore può inserire l'indirizzo email dell'\glossaryItem{Owner} nel campo del form disposto dall'applicazione \\
+      
+        \textbf{Precondizioni}  & L'applicazione dispone un campo testo graficamente. \\ 
+        
+        \textbf{Postcondizioni} & L'utente ha compilato il campo testo relativo all'email dell'\glossaryItem{Owner} \\ 
+     \end{longtable}
+      \egroup
+    \end{center}
+
+    \subsubsection{UC-S1.2} 
+    
+    %Tabella 
+    \begin{center}
+      \bgroup
+      \def\arraystretch{1.8}     
+      \begin{longtable}{  p{3.5cm} | p{8cm} } 
+        
+        \hline
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-S1.0 - Inserimento della password dell'\glossaryItem{Owner} }} \\ 
+        \hline
+        
+        \textbf{Attori Primari} & \glossaryItem{Super-Admin}\\  
+        \textbf{Scopo e descrizione} & L'\glossaryItem{Attore} L'applicazione dispone un campo testo offuscato su cui l'attore può scrivere la password dell'\glossaryItem{Owner} \\
+      
+        \textbf{Precondizioni}  & L'applicazione visualizza un campo testo offuscato. \\ 
+        
+        \textbf{Postcondizioni} & L'utente ha compilato il campo testo relativo alla password dell'\glossaryItem{Owner} \\ 
+     \end{longtable}
+      \egroup
+    \end{center}
 
 
 
 
 
 
-\subsubsection{UC-S2}
+    \subsubsection{UC-S2}
     \begin{figure}[H]
       \begin{center}
         \includegraphics[width=12cm]{res/img/UCSuperadmin/UC-S2.png}
@@ -292,13 +355,56 @@ Di seguito vengono elencati i casi d'uso per il \glossaryItem{Super-Admin}.
 %      \egroup
 %    \end{center}
 
+    
 
-%TODO: aggiungere UC-S2.5 "Dati della modifica non validi"
+\subsubsection{UC-S4} 
+    
+    %Tabella 
+    \begin{center}
+      \bgroup
+      \def\arraystretch{1.8}     
+      \begin{longtable}{  p{3.5cm} | p{8cm} } 
+        
+        \hline
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-S4 - Fallisce la creazione di una Company }} \\ 
+        \hline
+        
+        \textbf{Attori Primari} & \glossaryItem{Super-Admin}\\  
+        \textbf{Scopo e descrizione} & L'\glossaryItem{Attore} ha inserito dei dati errati per la creazione della Company e il sistema comunica l'errore. \\
+      
+        \textbf{Precondizioni}  & L'applicazione ha ricevuto in input dei dati per la creazione di una Company che non sono validi. \\ 
+        
+        \textbf{Postcondizioni} & Il sistema fa visualizzare all'utente un messaggio di errore che comunica l'entità dell'input errato. \\ 
+         \textbf{Scenario principale} & 1. L'utente visualizza l'errore. \\
+        
+     \end{longtable}
+      \egroup
+    \end{center}
 
 
-%TODO: aggiungere UC-S4 "Fallisce la creazione di una Company"
-%TODO: aggiungere UC-S5 "Fallisce la modifica della Company"
-
+    \subsubsection{UC-S5} 
+    
+    %Tabella 
+    \begin{center}
+      \bgroup
+      \def\arraystretch{1.8}     
+      \begin{longtable}{  p{3.5cm} | p{8cm} } 
+        
+        \hline
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-S4 - Fallisce la modifica di una Company }} \\ 
+        \hline
+        
+        \textbf{Attori Primari} & \glossaryItem{Super-Admin}\\  
+        \textbf{Scopo e descrizione} & L'\glossaryItem{Attore} ha inserito dei dati errati per la modifica della Company e il sistema comunica l'errore. \\
+      
+        \textbf{Precondizioni}  & L'applicazione ha ricevuto in input dei dati per la modifica di una Company che non sono validi. \\ 
+        
+        \textbf{Postcondizioni} & Il sistema fa visualizzare all'utente un messaggio di errore che comunica l'entità dell'input errato. \\ 
+         \textbf{Scenario principale} & 1. L'utente visualizza l'errore. \\
+        
+     \end{longtable}
+      \egroup
+    \end{center}
 
 
 \subsubsection{UC-S6}
@@ -372,7 +478,8 @@ vedere in un elenco quelli già presenti e vederne le informazioni in dettaglio 
       \egroup
     \end{center}
 
-%TODO: Aggiungere UC-S6-1 "Visualizazione profilo di un SuperAdmin"
+    %TODO: Aggiungere UC-S6-1 "Visualizazione profilo di un SuperAdmin"
+    
 
 
 
