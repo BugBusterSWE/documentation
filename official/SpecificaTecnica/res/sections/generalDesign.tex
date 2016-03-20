@@ -1,9 +1,54 @@
+\newpage
 \section{Descrizione architettura}
 \subsection{Metodo e formalismo di specifica}
 Le scelte progettuali di MaaS sono state frtemente influenzate dallo stack tecnologico usato. \\
 MaaS è basato su Node.js, e conseguentemente è scritto in JavaScript; questo linguaggio lascia molta libertà al programmatore nella scelta della tecnica da utilizzare per implemetare pattern come l'incapsulamento e l'ereditarietà. Al contrario di altri linguaggi orientati agli oggetti, come C++ o Java, non è presente un costrutto esplicito per definire classi, né un controllo statico dei tipi utilizzati. Per questo il team ha scelto, soprattutto per la codifica dell'editor visuale, di utilizzare il linguaggio TypeScript, che aggiunge, come già detto, la possibilità di definire classi ed interfacce. \\
-La progettazione è stata influenzata pesantemente anche dal framework back end scelto, e consigliato dal proponente: LoopBack. Questo framework fornisce, di base, molte delle caratteristiche richieste per MaaS, come il salvataggio dei dati su MongoDB, la gestione di autenticazione e autorizzazioni degli utenti e la registrazione al sistema. LoopBack è basato su Node.js, e la sua progettazione è difficilmente rappresentabile in un diagramma delle classi: molto spesso, ad esempio, un parametro di una funzione è una funzione stessa. Questo a portato alla definizione, nel diagramma che spiega l'architettura del back end, di interfacce fittizie per indicare i parametri funzione (applicazione del design pattern Strategy). \\
-La progettazione della parte back end ha quindi seguito un approccio top-down: inizialmente sono stati definiti i componenti principali del sistema a partire dalle classi presenti in LoopBack, le relazioni tra essi e infine l'interfaccia REST da esporre al client. \\
+La progettazione è stata influenzata pesantemente anche dal framework back end scelto, e consigliato dal proponente: LoopBack. Questo framework fornisce, di base, molte delle caratteristiche richieste per MaaS, come il salvataggio dei dati su MongoDB, la gestione di autenticazione degli utenti e la registrazione al sistema. LoopBack è basato su Node.js, e la sua progettazione è difficilmente rappresentabile in un diagramma delle classi: molto spesso, ad esempio, un parametro di una funzione è una funzione stessa. Questo a portato alla definizione, nel diagramma che spiega l'architettura del back end, di interfacce fittizie per indicare i parametri funzione (applicazione del design pattern Strategy). \\
+La progettazione della parte back end ha quindi seguito un approccio top-down: inizialmente sono stati definiti i componenti principali del sistema a partire dalle classi presenti in LoopBack, le relazioni tra essi e infine l'interfaccia REST (\textbf{RE}presentational \textbf{S}tate \textbf{T}ransfer) da esporre al client. \\
 I diagrammi delle classi permettono di mostrare l'architettura generale del sistema, ma in un mondo orientato alle funzioni non sono sufficienti per descrivere l'intero sistema. Per questo, vengono mostrati anche diagrammi di sequenza e attività, che permettono di definire le interazioni tra le componenti, senza preoccuparsi della loro classificazione. In questo modo è possibile esprimere alcuni meccanismi tipici di un'applicazione REST like, come il modo in cui agiscono i middleware di LoopBack. 
 %todo frontend!!!!!!!!!
 I diagrammi di deployment, dei package, delle classi, di sequenza e di attività presentati utilizzano la specifica UML (\textbf{U}nified \textbf{M}odeling \textbf{L}anguage) 2.0.
+\subsection{Architettura generale}
+L'architettura del progetto si divide in una componente Client, rappresentata dal browser degli utenti che interagiscono con il front end, e in una componente WebServer, nella quale risiede il back end. Il database MongoDB verrà posto su un altro server, possibilmente quello su cui risiede il front end. \\
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{res/sections/GeneralArchitecture.png}
+\caption{Diagramma di deployment per l'architettura}
+\end{figure}
+\subsection{Interfaccia REST like}
+Il back end si basa su uno stile REST like ed utilizza LoopBack per implementarlo. Dal login al logout l'interfaccia di accesso ai dati può considerarsi a tutti gli effetti REST, ovvero con le seguenti caratteristiche:
+\begin{itemize}
+\item stato dell'applicazione e funzionalità divisi in risorse web;
+\item ogni risorsa è unica e indirizzabile attraverso un URI (\textbf{U}niform \textbf{R}esource \textbf{I}dentifier);
+\item tutte le risorse sono condivise come interfaccia uniforme per il trasferimento di stato tra client e risorse. Questo trasferimento consiste in:
+\begin{itemize}
+\item un insieme vincolato di operazioni ben definite;
+\item un insieme vincolato di contenuti, opzionalmente supportato da codice a richiesta;
+\item un protocollo:
+\begin{itemize}
+\item client-server;
+\item privo di stato;
+\item memorizzabile in cache;
+\item a livelli.
+\end{itemize}
+\end{itemize}
+\end{itemize}
+REST utilizza il concetto di risorsa (aggregato di dati con un nome, l'URI, e una rappresentazione interna), sulla quale è possibile invocare operazioni CRUD (\textbf{C}reate, \textbf{R}ead, \textbf{U}pdate, \textbf{D}elete) con la seguente corrispondenza:
+\begin{table}[H]
+\centering
+\label{CRUD}
+\begin{tabular}{| >{\centering}p{3cm} | >{\centering}p{5cm} | >{\centering}p{6cm} |}
+\hline
+\textbf{Risorsa} & \textbf{URI della collection} \newline es. http://maas.com/users & \textbf{URI della risorsa} \newline es. http://maas.com/users/10 \tabularnewline \hline
+\textbf{GET} & Fornisce informazioni sui membri della collection. & Fornisce una rappresentazione dell'elemento della collection indicato. \tabularnewline \hline
+\textbf{PUT} & Non usata. & Sostituisce una rappresentazione dell'elemento della collection indicato. Se non esiste lo crea.  \tabularnewline \hline
+\textbf{POST} & Crea un nuovo elemento della collection. La URI del nuovo elemento è generata automaticamente. & Non usato. \tabularnewline \hline
+\textbf{DELETE} & Non usata. & Cancella l'elemento della collection indicato. \tabularnewline \hline
+\end{tabular}
+\caption{Tabella delle operazioni CRUD}
+\end{table}
+Per la rappresentazione dei dati si è scelto di utilizzare JSON (\textbf{J}ava\textbf{S}cript \textbf{O}bject \textbf{N}otation) perché si integra molto bene con i framework utilizzati e con il linguaggio JavaScript. Questo non è vero per XML (e\textbf{X}tensible \textbf{M}arkup \textbf{L}anguage) o CSV (\textbf{C}omma \textbf{S}eparated \textbf{V}alues), che richiederebbero librerie specifiche. Inoltre JSON è molto meno verboso e molto più flessibile di XML, e si adatta molto bene al dominio dell'applicazione.
+\subsubsection{Backend}
+%todo
+\subsubsection{Frontend}
+%todo
