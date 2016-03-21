@@ -3,9 +3,16 @@
 \subsection{Metodo e formalismo di specifica}
 Le scelte progettuali di MaaS sono state frtemente influenzate dallo stack tecnologico usato. \\
 MaaS è basato su Node.js, e conseguentemente è scritto in JavaScript; questo linguaggio lascia molta libertà al programmatore nella scelta della tecnica da utilizzare per implemetare pattern come l'incapsulamento e l'ereditarietà. Al contrario di altri linguaggi orientati agli oggetti, come C++ o Java, non è presente un costrutto esplicito per definire classi, né un controllo statico dei tipi utilizzati. Per questo il team ha scelto, soprattutto per la codifica dell'editor visuale, di utilizzare il linguaggio TypeScript, che aggiunge, come già detto, la possibilità di definire classi ed interfacce. \\
-La progettazione è stata influenzata pesantemente anche dal framework back end scelto, e consigliato dal proponente: LoopBack. Questo framework fornisce, di base, molte delle caratteristiche richieste per MaaS, come il salvataggio dei dati su MongoDB, la gestione di autenticazione degli utenti e la registrazione al sistema. LoopBack è basato su Node.js, e la sua progettazione è difficilmente rappresentabile in un diagramma delle classi: molto spesso, ad esempio, un parametro di una funzione è una funzione stessa. Questo a portato alla definizione, nel diagramma che spiega l'architettura del back end, di interfacce fittizie per indicare i parametri funzione (applicazione del design pattern Strategy). \\
-La progettazione della parte back end ha quindi seguito un approccio top-down: inizialmente sono stati definiti i componenti principali del sistema a partire dalle classi presenti in LoopBack, le relazioni tra essi e infine l'interfaccia REST (\textbf{RE}presentational \textbf{S}tate \textbf{T}ransfer) da esporre al client. \\
-I diagrammi delle classi permettono di mostrare l'architettura generale del sistema, ma in un mondo orientato alle funzioni non sono sufficienti per descrivere l'intero sistema. Per questo, vengono mostrati anche diagrammi di sequenza e attività, che permettono di definire le interazioni tra le componenti, senza preoccuparsi della loro classificazione. In questo modo è possibile esprimere alcuni meccanismi tipici di un'applicazione REST like, come il modo in cui agiscono i middleware di LoopBack. 
+La progettazione è stata influenzata pesantemente anche dal framework back end scelto: Expressjs. Questo framework è basato su Node.js e permette di estenderlo attraverso moduli specifici secondo i bisogni dell'applicazione. Il concetto centrale è quello delle funzioni middleware, ovvero funzioni che hanno accesso all'oggetto richiesto dal client (req), all'oggetto di risposta del server (res) e alla successiva funzione middleware nel ciclo di risposta dell'applicazione (next()). Tipicamente le funzioni middleware possono eseguire le seguenti operazioni:
+\begin{itemize}
+\item Eseguire codice generico.
+\item Cambiare gli oggetti req e res.
+\item Terminare il ciclo di risposta dell'applicazione.
+\item Richiamare il successivo middleware nello stack (next()).
+\end{itemize}
+Per soddisfare le richieste del proponente, Expressjs verrà integrato con moduli per gestire il login (con base su MongoDB) e per inviare email agli utenti. \\
+La progettazione della parte back end ha seguito un approccio top-down: inizialmente sono stati definiti i componenti principali del sistema, le relazioni tra essi ed infine l'interfaccia REST (\textbf{RE}presentational \textbf{S}tate \textbf{T}ransfer) da esporre al client. \\
+I diagrammi delle classi permettono di mostrare l'architettura generale del sistema, ma in un mondo orientato alle funzioni non sono sufficienti per descrivere l'intero sistema. Per questo, vengono mostrati anche diagrammi di sequenza e attività, che permettono di definire le interazioni tra le componenti, senza preoccuparsi della loro classificazione. In questo modo è possibile esprimere alcuni meccanismi tipici di un'applicazione REST like, come il modo in cui agiscono i middleware. 
 %todo frontend!!!!!!!!!
 I diagrammi di deployment, dei package, delle classi, di sequenza e di attività presentati utilizzano la specifica UML (\textbf{U}nified \textbf{M}odeling \textbf{L}anguage) 2.0.
 \subsection{Architettura generale}
@@ -16,7 +23,7 @@ L'architettura del progetto si divide in una componente Client, rappresentata da
 \caption{Diagramma di deployment per l'architettura}
 \end{figure}
 \subsection{Interfaccia REST like}
-Il back end si basa su uno stile REST like ed utilizza LoopBack per implementarlo. Dal login al logout l'interfaccia di accesso ai dati può considerarsi a tutti gli effetti REST, ovvero con le seguenti caratteristiche:
+Il back end si basa su uno stile REST like. Dal login al logout l'interfaccia di accesso ai dati può considerarsi a tutti gli effetti REST, ovvero con le seguenti caratteristiche:
 \begin{itemize}
 \item stato dell'applicazione e funzionalità divisi in risorse web;
 \item ogni risorsa è unica e indirizzabile attraverso un URI (\textbf{U}niform \textbf{R}esource \textbf{I}dentifier);
