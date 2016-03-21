@@ -4,10 +4,11 @@ MaaS \`e stato progettato utilizzando diverse tecnologie, alcune delle quali esp
 \item \textbf{Node.js}, piattaforma per il back end;
 \item \textbf{Reactjs}, framework JavaScript per la realizzazione dele front end;
 \item \textbf{MongoDB}, database di tipo NoSQL per la parte di recupero e salvataggio dei dati;
+\item \textbf{Mongoose}, libreria per interfacciarsi con il driver di MongoDB;
 \item \textbf{HTML5}, linguaggio di markup per la creazione di pagine web;
 \item \textbf{CSS3}, linguaggio di formattazione dei documenti HTML;
 \item \textbf{Materialize}, framework front-end per la creazione di interfacce basate sul material design;
-\item \textbf{LoopBack}, framework Node.js per la crezione dinamica di API REST;
+\item \textbf{Expressjs}, framework Node.js flessibile e leggero che fornisce una serie di funzioni avanzate per le applicazioni web;
 \item \textbf{TypeScript}, super-set di JavaScript sviluppato da Microsoft e basato su ECMAScript 6.
 \end{itemize}
 \subsection{Node.js}
@@ -52,6 +53,17 @@ L'utilizzo di MongoDB \`e stato richiesto dal proponente. Si tratta di un databa
 \item \textbf{Utilizzo di memoria}: maggiore rispetto ai database SQL; infatti memorizza i nomi delle chiavi in ogni documento. 
 \item \textbf{Problemi di concorrenza}: per le operazioni di scrittura viene creato un lock sull'intero database. Questo lock blocca anche le operazioni di lettura.
 \end{itemize}
+\subsection{Mongoose}
+Mongoose \`e una libreria per interfacciarsi a MongoDB che permette di definire degli schemi per modellare i dati del database. Inoltre fornisce strumenti utili per la validazioni dei dati, per la definizione di queries e per il cast dei tipi predefiniti.
+\subsubsection{Vantaggi}
+\begin{itemize}
+\item \textbf{Diffusione}: \`e la libreria pi\`u diffusa per interfacciarsi con MongoDB.
+\item \textbf{Funzionalit\`a aggiuntive}: permette di definire strumenti per la validazione dei dati e per il cast dei tipi.
+\end{itemize}
+\subsubsection{Svantaggi}
+\begin{itemize}
+\item \textbf{Schema-based}: \`e basato sulla creazione di schemi per i documenti, e questo va contro uno dei principali vantaggi di MongoDB.
+\end{itemize}
 \subsection{HTML5}
 \`E un linguaggio di markup per la strutturazione delle pagine web, pubblicato come W3C Recommendation da ottoble 2014. L'uso di HTML5 rispetto a XHTML \`e stato deciso all'unanimit\`a dal gruppo (vedi decisione \textit{RI-1403-2}) e approvato dal proponente.
 \subsubsection{Vantaggi}
@@ -81,18 +93,18 @@ Creato e progettato da Google, il material design è un linguaggio di progettazi
 \begin{itemize}
 \item \textbf{Flexbox}: non usa il modello Flexbox, uno dei nuovi layut introdotti da CSS3.
 \end{itemize}
-\subsection{LoopBack}
-L'uso di LoopBack \`e stato consigliato dal proponente. \`E un framework Node.js altamente estensibile ed open source che permette, tra le altre cose, di creare API REST (\textbf{RE}presentational \textbf{S}tate \textbf{T}ransfer) dinamiche e accedere a dati MongoDB.
+\subsection{Expressjs}
+È un framework minimale per creare applicazioni web con Node.js. Richiede moduli Node.js di terze parti per applicazioni che prevedono l’interazione con le basi di dati, ed è stati utilizzato per sviluppare, attraverso le funzionalità utili e robuste offerte, l’application server. Expressjs non oscura le funzionalità di base fornite da Node.js: questo permette di utilizzare moduli specifici a seconda dei bisogni dell'appliccazione.
+supportare specifiche funzionalità.
 \subsubsection{Vantaggi}
 \begin{itemize}
-\item \textbf{Velocit\`a di sviluppo}: la creazione di API REST \`e molto veloce.
-\item \textbf{Configurabilit\`a}: pienamente configurabile secondo i bisogni dell'applicazione.
+\item \textbf{Minimale}: si basa su Node.js e permette di estenderlo a seconda dei bisogni dell'applicazione.
 \item \textbf{Documentazione}: esaustiva e completa.
-\item \textbf{Pronto all'uso}: ci sono molti moduli disponibili all'uso.
+\item \textbf{Apprendimento}: facile da imparare.
 \end{itemize}
 \subsubsection{Svantaggi}
 \begin{itemize}
-\item \textbf{Apprendimento}: pu\`o risultare difficile visto che ci sono molte parti gi\`a definite da imparare.
+\item \textbf{Integrazione}: richiede di integrare moduli diversi per comporre l'applicazione finale. Altri framework permettono di definire API REST in modo semplice, ma vincolano maggiormente nelle scelte progettuali.
 \end{itemize}
 \subsection{TypeScript}
 Aggiunge a JavaScript tipi statici (opzionale) e meccanismi propri della progrmmazione orientata agli oggetti quali classi, interfacce ed ereditariet\`a. Attraverso un processo di compilazione viene prodotto codice JavaScript leggibile e conforme agli standard di codifica. 
@@ -106,5 +118,5 @@ Aggiunge a JavaScript tipi statici (opzionale) e meccanismi propri della progrmm
 \begin{itemize}
 \item \textbf{Perdita di flessibilit\`a}, con l'introduzione di tipi statici.
 \item \textbf{Compilazione}, per eseguire l'applicazione \`e necessaria la compilazione dei file TypeScript.
-\item \textbf{Supporto}, molti framework (come LoopBack) supportano file JavaScript, ma ancora non file TypeScript.
+\item \textbf{Supporto}, molti framework supportano file JavaScript, ma ancora non file TypeScript.
 \end{itemize}
