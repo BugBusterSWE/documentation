@@ -2,17 +2,17 @@
 MaaS \`e stato progettato utilizzando diverse tecnologie, alcune delle quali espressamente richieste dal proponente. Di seguito vengono elencate e descritte. Per ognuna di esse, inoltre, verranno presentanti vantaggi e svantaggi, al fine di fornire una pi\`u completa motivazione della scelta.
 \begin{itemize}
 \item \textbf{Node.js}, piattaforma per il back end;
+\item \textbf{Expressjs}, framework Node.js flessibile e leggero che fornisce una serie di funzioni avanzate per le applicazioni web;
 \item \textbf{Reactjs}, framework JavaScript per la realizzazione dele front end;
 \item \textbf{MongoDB}, database di tipo NoSQL per la parte di recupero e salvataggio dei dati;
 \item \textbf{Mongoose}, libreria per interfacciarsi con il driver di MongoDB;
 \item \textbf{HTML5}, linguaggio di markup per la creazione di pagine web;
 \item \textbf{CSS3}, linguaggio di formattazione dei documenti HTML;
 \item \textbf{Materialize}, framework front-end per la creazione di interfacce basate sul material design;
-\item \textbf{Expressjs}, framework Node.js flessibile e leggero che fornisce una serie di funzioni avanzate per le applicazioni web;
 \item \textbf{TypeScript}, super-set di JavaScript sviluppato da Microsoft e basato su ECMAScript 6.
 \end{itemize}
 \subsection{Node.js}
-L'utilizzo di Node.js \`e stato richiesto dal proponente. Si tratta di un sistema run-time cross-platform che utilizza il motore JavaScript V8 di Google Chrome e permette di realizzare facilmente applicazioni di rete scalabili e veloci. Grazie al suo modello event-driven, con chiamate di I/O non bloccanti risulta essere leggero ed efficiente.
+L'utilizzo di Node.js \`e stato richiesto dal proponente. Si tratta di un sistema run-time cross-platform che utilizza il motore JavaScript V8 di Google Chrome e permette di realizzare facilmente applicazioni di rete scalabili e veloci. Grazie al suo modello event-driven, con chiamate di I/O non bloccanti risulta essere leggero ed efficiente. Per l'invio di email verrà usato \textbf{Nodemailer}, un modulo che permette di inviare facilmente e-mail con Node.js, tramite protocollo SMTP. Nodemailer supporta anche i caratteri unicode.
 \subsubsection{Vantaggi}
 \begin{itemize}
 \item \textbf{Approccio asincrono}: permette di accedere alle risorse del sistema operativo in modalit\`a event-driven e non tramite il classico processo orientato a processi e thread concorrenti utilizzato dai classici server web. Ci\`o garantisce una maggiore efficienza dal punto di vista delle prestazioni, dato che durante le attese possono essere eseguire altre operazioni in modo asincrono.
@@ -21,6 +21,25 @@ L'utilizzo di Node.js \`e stato richiesto dal proponente. Si tratta di un sistem
 \subsubsection{Svantaggi}
 \begin{itemize}
 \item \textbf{Orientato all'I/O}: non \`e pensato per applicazioni che sfruttano in modo intensivo la CPU. Questo, tuttavia, non \`e il caso di MaaS.
+\end{itemize}
+\subsection{Expressjs}
+È un framework minimale per creare applicazioni web con Node.js. Richiede moduli Node.js di terze parti per applicazioni che prevedono l’interazione con le basi di dati, ed è stati utilizzato per sviluppare, attraverso le funzionalità utili e robuste offerte, l’application server. Expressjs non oscura le funzionalità di base fornite da Node.js: questo permette di utilizzare moduli specifici a seconda dei bisogni dell'appliccazione.
+supportare specifiche funzionalità. \\
+In particolare, verranno usati i seguenti moduli:
+\begin{itemize}
+\item \textbf{Passport}: middleware di autenticazione per Node.js estremamente flessibile e modulare. Può essere facilmente inserito in qualsiasi applicazione web basata su
+Expressjs.
+\item \textbf{Passport-local}: modulo che permette di autenticare un utente con Passport usando un username e una password.
+\end{itemize}
+\subsubsection{Vantaggi}
+\begin{itemize}
+\item \textbf{Minimale}: si basa su Node.js e permette di estenderlo a seconda dei bisogni dell'applicazione.
+\item \textbf{Documentazione}: esaustiva e completa.
+\item \textbf{Apprendimento}: facile da imparare.
+\end{itemize}
+\subsubsection{Svantaggi}
+\begin{itemize}
+\item \textbf{Integrazione}: richiede di integrare moduli diversi per comporre l'applicazione finale. Altri framework permettono di definire API REST in modo semplice, ma vincolano maggiormente nelle scelte progettuali.
 \end{itemize}
 \subsection{Reactjs}
 L'utilizzo di Reactjs \`e stato richiesto dal proponente. \`E una libreria JavaScript usata per creare interfacce utente, e rappresenta la V del design pattern architetturale MVC. React risolve il problema di creare applicazioni di grandi dimensioni con dati che cambiano nel tempo.
@@ -54,7 +73,8 @@ L'utilizzo di MongoDB \`e stato richiesto dal proponente. Si tratta di un databa
 \item \textbf{Problemi di concorrenza}: per le operazioni di scrittura viene creato un lock sull'intero database. Questo lock blocca anche le operazioni di lettura.
 \end{itemize}
 \subsection{Mongoose}
-Mongoose \`e una libreria per interfacciarsi a MongoDB che permette di definire degli schemi per modellare i dati del database. Inoltre fornisce strumenti utili per la validazioni dei dati, per la definizione di queries e per il cast dei tipi predefiniti.
+Mongoose \`e una libreria per interfacciarsi a MongoDB che permette di definire degli schemi per modellare i dati del database. Inoltre fornisce strumenti utili per la validazioni dei dati, per la definizione di queries e per il cast dei tipi predefiniti. \\
+Insieme a Mongoose viene utilizzato anche \textbf{passport-local-mongoose}, un plugin che semplifica la costruzione di un sistema di autenticazione con Passport.
 \subsubsection{Vantaggi}
 \begin{itemize}
 \item \textbf{Diffusione}: \`e la libreria pi\`u diffusa per interfacciarsi con MongoDB.
@@ -92,19 +112,6 @@ Creato e progettato da Google, il material design è un linguaggio di progettazi
 \subsubsection{Svantaggi}
 \begin{itemize}
 \item \textbf{Flexbox}: non usa il modello Flexbox, uno dei nuovi layut introdotti da CSS3.
-\end{itemize}
-\subsection{Expressjs}
-È un framework minimale per creare applicazioni web con Node.js. Richiede moduli Node.js di terze parti per applicazioni che prevedono l’interazione con le basi di dati, ed è stati utilizzato per sviluppare, attraverso le funzionalità utili e robuste offerte, l’application server. Expressjs non oscura le funzionalità di base fornite da Node.js: questo permette di utilizzare moduli specifici a seconda dei bisogni dell'appliccazione.
-supportare specifiche funzionalità.
-\subsubsection{Vantaggi}
-\begin{itemize}
-\item \textbf{Minimale}: si basa su Node.js e permette di estenderlo a seconda dei bisogni dell'applicazione.
-\item \textbf{Documentazione}: esaustiva e completa.
-\item \textbf{Apprendimento}: facile da imparare.
-\end{itemize}
-\subsubsection{Svantaggi}
-\begin{itemize}
-\item \textbf{Integrazione}: richiede di integrare moduli diversi per comporre l'applicazione finale. Altri framework permettono di definire API REST in modo semplice, ma vincolano maggiormente nelle scelte progettuali.
 \end{itemize}
 \subsection{TypeScript}
 Aggiunge a JavaScript tipi statici (opzionale) e meccanismi propri della progrmmazione orientata agli oggetti quali classi, interfacce ed ereditariet\`a. Attraverso un processo di compilazione viene prodotto codice JavaScript leggibile e conforme agli standard di codifica. 
