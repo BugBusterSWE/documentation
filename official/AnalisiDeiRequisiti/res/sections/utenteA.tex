@@ -282,12 +282,12 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'utente autenticato
 \subsubsection{Procedura rimozione \glossaryItem{Company}}
 
 %future code for UML
-    %\begin{figure}[H]
-    %  \begin{center}
-    %    \includegraphics[width=12cm]{res/img/UCUtenti/UCUtenteA/UC-U9.4-Procedura Rimozione/UC-U9.4.png}
-    %  \caption{UC-U9.2 - Procedura Rimozione}
-    %  \end{center} 
-    %\end{figure}
+    \begin{figure}[H]
+      \begin{center}
+        \includegraphics[width=12cm]{res/img/UCUtenti/UCUtenteA/UC-U9.4-Procedura di rimozione Company/UC-U9.4.png}
+      \caption{UC-U9.4 - Procedura Rimozione}
+      \end{center} 
+    \end{figure}
     
 
     %Tabella 
@@ -300,11 +300,18 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'utente autenticato
         \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U9.4 - Procedura rimozione \glossaryItem{Company}}} \\ 
         \hline
         \textbf{Attori Primari} & \glossaryItem{Owner} \\ 
-        \textbf{Scopo e Descrizione} & L'\glossaryItem{Owner} decide di rimuovere la \glossaryItem{Company} con tutte le sue informazioni e i suoi utenti e verranno avvisati opportunamente per evitare rimozioni involontarie. \\ 
+        \textbf{Scopo e Descrizione} & L'\glossaryItem{Owner} decide di rimuovere la \glossaryItem{Company} con tutte le sue informazioni e i suoi utenti. \\ 
         
         \textbf{Precondizioni}  & L'\glossaryItem{Owner} inizia la procedura di cancellazione della \glossaryItem{Company} da MaaS. \\ 
         
-        \textbf{Postcondizioni} & L'\glossaryItem{Owner} ha superato la procedura di controllo per la cancellazione . \\ 
+        \textbf{Postcondizioni} & L'\glossaryItem{Owner} ha superato la procedura di controllo per la cancellazione . \\
+
+        \textbf{Scenario principale} & 1. L'utente autenticato inserisce il nome della \glossaryItem{Company} corrente. (UC-U9.4.2)
+
+
+        %TODO
+        \textbf{Estensioni} & 1. L'utente autenticato visualizza un messaggio di errore dovuto all'inserimento del nome della \glossaryItem{Company} errata. (UC-U9.2.1)
+        
       \end{longtable}
       \egroup
     \end{center}
