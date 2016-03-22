@@ -4,15 +4,15 @@ MaaS \`e stato progettato utilizzando diverse tecnologie, alcune delle quali esp
 \item \textbf{Node.js}, piattaforma per il back end;
 \item \textbf{ExpressJS}, framework Node.js flessibile e leggero che fornisce una serie di funzioni avanzate per le applicazioni web;
 \item \textbf{Reactjs}, framework JavaScript per la realizzazione dele front end;
-\item \textbf{MongoDB}, database di tipo NoSQL per la parte di recupero e salvataggio dei dati;
+\item \textbf{MongoDB}, database di tipo NoSQL (\textbf{NO}t \textbf{O}nly \textbf{SQL}) per la parte di recupero e salvataggio dei dati;
 \item \textbf{Mongoose}, libreria per interfacciarsi con il driver di MongoDB;
-\item \textbf{HTML5}, linguaggio di markup per la creazione di pagine web;
-\item \textbf{CSS3}, linguaggio di formattazione dei documenti HTML;
-\item \textbf{Materialize}, framework front-end per la creazione di interfacce basate sul material design;
-\item \textbf{TypeScript}, super-set di JavaScript sviluppato da Microsoft e basato su ECMAScript 6.
+\item \textbf{HTML5} (\textbf{H}yper\textbf{T}ext \textbf{M}arkup \textbf{L}anguage), linguaggio di markup per la creazione di pagine web;
+\item \textbf{CSS3} (\textbf{C}ascading \textbf{S}tyle \textbf{S}heets), linguaggio di formattazione dei documenti HTML;
+\item \textbf{Materialize}, framework front end per la creazione di interfacce basate sul material design;
+\item \textbf{TypeScript}, super-set di JavaScript sviluppato da Microsoft e basato su ECMAScript 6 (\textbf{E}uropean \textbf{C}omputer \textbf{M}anufacturers \textbf{A}ssociation).
 \end{itemize}
 \subsection{Node.js}
-L'utilizzo di Node.js \`e stato richiesto dal proponente. Si tratta di un sistema run-time cross-platform che utilizza il motore JavaScript V8 di Google Chrome e permette di realizzare facilmente applicazioni di rete scalabili e veloci. Grazie al suo modello event-driven, con chiamate di I/O non bloccanti risulta essere leggero ed efficiente. Per l'invio di email verrà usato \textbf{Nodemailer}, un modulo che permette di inviare facilmente e-mail con Node.js, tramite protocollo SMTP. Nodemailer supporta anche i caratteri unicode.
+L'utilizzo di Node.js \`e stato richiesto dal proponente. Si tratta di un sistema run-time cross-platform che utilizza il motore JavaScript V8 di Google Chrome e permette di realizzare facilmente applicazioni di rete scalabili e veloci. Grazie al suo modello event-driven, con chiamate di I/O non bloccanti risulta essere leggero ed efficiente. Per l'invio di email verrà usato \textbf{Nodemailer}, un modulo che permette di inviare facilmente e-mail con Node.js, tramite protocollo SMTP (\textbf{S}imple \textbf{M}ail \textbf{T}ransfer \textbf{P}rotocol). Nodemailer supporta anche i caratteri unicode.
 \subsubsection{Vantaggi}
 \begin{itemize}
 \item \textbf{Approccio asincrono}: permette di accedere alle risorse del sistema operativo in modalit\`a event-driven e non tramite il classico processo orientato a processi e thread concorrenti utilizzato dai classici server web. Ci\`o garantisce una maggiore efficienza dal punto di vista delle prestazioni, dato che durante le attese possono essere eseguire altre operazioni in modo asincrono.
@@ -20,7 +20,7 @@ L'utilizzo di Node.js \`e stato richiesto dal proponente. Si tratta di un sistem
 \end{itemize}
 \subsubsection{Svantaggi}
 \begin{itemize}
-\item \textbf{Orientato all'I/O}: non \`e pensato per applicazioni che sfruttano in modo intensivo la CPU. Questo, tuttavia, non \`e il caso di MaaS.
+\item \textbf{Orientato all'I/O}: non \`e pensato per applicazioni che sfruttano in modo intensivo la CPU (\textbf{C}entral \textbf{P}rocessing \textbf{U}nit). Questo, tuttavia, non \`e il caso di MaaS.
 \end{itemize}
 \subsection{ExpressJS}
 È un framework minimale per creare applicazioni web con Node.js. Richiede moduli Node.js di terze parti per applicazioni che prevedono l’interazione con le basi di dati, ed è stati utilizzato per sviluppare, attraverso le funzionalità utili e robuste offerte, l’application server. ExpressJS non oscura le funzionalità di base fornite da Node.js: questo permette di utilizzare moduli specifici a seconda dei bisogni dell'appliccazione.
@@ -39,10 +39,10 @@ ExpressJS.
 \end{itemize}
 \subsubsection{Svantaggi}
 \begin{itemize}
-\item \textbf{Integrazione}: richiede di integrare moduli diversi per comporre l'applicazione finale. Altri framework permettono di definire API REST in modo semplice, ma vincolano maggiormente nelle scelte progettuali.
+\item \textbf{Integrazione}: richiede di integrare moduli diversi per comporre l'applicazione finale. Altri framework permettono di definire API (\textbf{A}pplication \textbf{P}rogramming \textbf{I}nterface) REST (\textbf{RE}presentational \textbf{S}tate \textbf{T}ransfer) in modo semplice, ma vincolano maggiormente nelle scelte progettuali.
 \end{itemize}
 \subsection{Reactjs}
-L'utilizzo di Reactjs \`e stato richiesto dal proponente. \`E una libreria JavaScript usata per creare interfacce utente, e rappresenta la V del design pattern architetturale MVC. React risolve il problema di creare applicazioni di grandi dimensioni con dati che cambiano nel tempo.
+L'utilizzo di Reactjs \`e stato richiesto dal proponente. \`E una libreria JavaScript usata per creare interfacce utente, e rappresenta la V del design pattern architetturale MVC (\textbf{M}odel \textbf{V}iew \textbf{C}ontroller). React risolve il problema di creare applicazioni di grandi dimensioni con dati che cambiano nel tempo.
 Reactjs \`e stato preferito ad Angularjs, sconsigliato dal proponente in quanto considerata una tecnologia giunta al crepuscolo.
 \subsubsection{Vantaggi}
 \begin{itemize}
@@ -56,13 +56,13 @@ Reactjs \`e stato preferito ad Angularjs, sconsigliato dal proponente in quanto 
 \item{Non \`e un framework completo}: non esiste un modello di gestione delle librerie all'interno di Reactjs, cosa che invece non \`e vera per altri framework simili, come Emberjs o Angularjs.
 \end{itemize}
 \subsection{MongoDB}
-L'utilizzo di MongoDB \`e stato richiesto dal proponente. Si tratta di un database NoSQL open source scalabile e altamente performante di tipo document-oriented e schemaless, nel quale i dati sono archiviati sotto forma di documenti in stile JSON, con schemi dinamici e una struttura semplice e potente.
+L'utilizzo di MongoDB \`e stato richiesto dal proponente. Si tratta di un database NoSQL open source scalabile e altamente performante di tipo document-oriented e schemaless, nel quale i dati sono archiviati sotto forma di documenti in stile JSON (\textbf{J}ava\textbf{S}cript \textbf{O}bject \textbf{N}otation), con schemi dinamici e una struttura semplice e potente.
 \subsubsection{Vantaggi}
 \begin{itemize}
 \item \textbf{Alte performance}: non ci sono join che rallentano operazioni di lettura o scrittura. 
 \item \textbf{Affidabilit\`a}: \`e presente un meccanismo di replicazione su server.
 \item \textbf{Schemaless}: non esistono schemi per i dati. Pertanto \`e pi\`u flessibile.
-\item \textbf{Potenza espressiva}: permette di esprimre query complesse in un linguaggio non SQL.
+\item \textbf{Potenza espressiva}: permette di esprimre query complesse in un linguaggio non SQL (\textbf{S}tructured \textbf{Q}uery \textbf{L}anguage).
 \item \textbf{Flessibilit\`a}: per i tipi di dato.
 \end{itemize}
 \subsubsection{Svantaggi}
@@ -88,7 +88,7 @@ Insieme a Mongoose viene utilizzato anche \textbf{passport-local-mongoose}, un p
 \`E un linguaggio di markup per la strutturazione delle pagine web, pubblicato come W3C Recommendation da ottoble 2014. L'uso di HTML5 rispetto a XHTML \`e stato deciso all'unanimit\`a dal gruppo (vedi decisione \textit{RI-1403-2}) e approvato dal proponente.
 \subsubsection{Vantaggi}
 \begin{itemize}
-\item \textbf{Raccomandazione W3C}.
+\item \textbf{Raccomandazione W3C} (\textbf{W}orld \textbf{W}ide \textbf{W}eb \textbf{C}onsortium).
 \item \textbf{Creazione di pagine interattive}: soprattutto se usato insieme a CSS.
 \end{itemize}
 \subsubsection{Svantaggi}
