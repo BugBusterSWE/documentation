@@ -1,4 +1,4 @@
-\section{Backend}
+\section{Back end}
 \subsection{Descrizione generale}
 \subsubsection{Comunicazione tra client e server}
 Per la creazione del back end di MaaS si è deciso di utilizzare Node.js e, in particolare, il framework ExpressJS, che permette la creazione semplificata di webserver al fine di creare un set di API. Il lato back end sarà quindi costituito da un insieme di API protette da strati diversi di sicurezza. \\
@@ -31,3 +31,92 @@ I ruoli utente ammessi nell'applicazione sono:
 \item \textbf{ADMIN};
 \item \textbf{OWNER}.
 \end{itemize}
+\subsection{Package e classi}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{res/sections/package.png}
+\caption{Diagramma dei package per il backend}
+\end{figure}
+\subsubsection{MaaS}
+\paragraph{Descrizione}
+Questo è il package principale dell'applicazione, e comprende tutta la parte di back end.
+\paragraph{Package contenuti}
+\begin{itemize}
+\item Middleware;
+\item Models;
+\item Modules;
+\item Route.
+\end{itemize}
+
+\subsubsection{Middleware}
+\paragraph{Descrizione}
+In questo package sono contenute le classi che costituiscono gli handler della catena di chiamate a cui viene passata la responsabilità di gestire una richiesta.
+\paragraph{Classi contenute}
+%todo
+
+\subsubsection{Models}
+%todo immagine interazioni tra i modelli
+\paragraph{Descrizione}
+In questo package sono definiti i modelli di dato che rappresentano il core business dell'applicazione:
+\begin{itemize}
+\item User;
+\item Company;
+\item DSL;
+\item Database;
+\end{itemize}
+\paragraph{Package contenuti}
+\begin{itemize}
+\item UserModel;
+\item CompanyModel;
+\item DSLModel;
+\item DatabaseModel;
+\end{itemize}
+
+\subsubsection{Modules}
+%todo diagramma delle classi
+\paragraph{Descrizione}
+In questo package sono contenute tutte le utility utilizzate dall'applicazione.
+\paragraph{Classi contenute}
+\subparagraph{PermissionChecker}
+\begin{description}
+\item[Descrizione] \hfill \\
+Questa classe si occupa di controllare che un utente abbia il permesso di eseguire un'operazione su una specifica DSL.
+\item[Utilizzo] \hfill \\
+Viene utilizzata per capire se consentire o meno l'accesso in esecuzione o scrittura ad una specifica DSL.
+\end{description}
+\subparagraph{DSLChecker}
+\begin{description}
+\item[Descrizione] \hfill \\
+%todo
+\item[Utilizzo] \hfill \\
+%todo
+\end{description}
+
+\subsubsection{Route}
+\paragraph{Descrizione}
+In questo package sono presenti tutti i moduli contenenti le varie Routes. In ExpressJS, il routing ha il compito di determinare come l'applicazione risponde ad una richiesta del client verso un particolare endpoint. L'endpoint è semplicemente una coppia formata da un URI e da un metodo di richiesta (GET, POST, PUT o DELETE). Ogni route può avere una o più funzioni associate che bengono eseguite quando la route è invocata.
+\paragraph{Classi contenute}
+%todo
+
+\subsubsection{UserModel}
+%todo immagine UserModel
+\paragraph{Descrizione}
+In questo package sono contenute le classi che modellano gli utenti.
+\paragraph{Classi contenute}
+\subparagraph{User}
+\begin{description}
+\item[Descrizione] \hfill \\
+Questa classe modella il concetto di utente, 
+\item[Utilizzo] \hfill \\
+\end{description}
+\subsubsection{CompanyModel}
+\paragraph{Descrizione}
+\paragraph{Classi contenute}
+
+\subsubsection{DSLModel}
+\paragraph{Descrizione}
+\paragraph{Classi contenute}
+
+\subsubsection{DBModel}
+\paragraph{Descrizione}
+\paragraph{Classi contenute}
