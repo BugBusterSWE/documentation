@@ -11,7 +11,7 @@ La progettazione è stata influenzata pesantemente anche dal framework back end 
 \item Richiamare il successivo middleware nello stack (next()).
 \end{itemize}
 Per soddisfare le richieste del proponente, ExpressJS verrà integrato con moduli per gestire il login (con base su MongoDB) e per inviare email agli utenti. \\
-La progettazione della parte back end ha seguito un approccio top-down: inizialmente sono stati definiti i componenti principali del sistema, le relazioni tra essi ed infine l'interfaccia REST (\textbf{RE}presentational \textbf{S}tate \textbf{T}ransfer) da esporre al client. \\
+La progettazione della parte back end ha seguito un approccio top-down: inizialmente sono stati definiti i componenti principali del sistema, le relazioni tra essi ed infine l'interfaccia REST da esporre al client. \\
 I diagrammi delle classi permettono di mostrare l'architettura generale del sistema, ma in un mondo orientato alle funzioni non sono sufficienti per descrivere l'intero sistema. Per questo, vengono mostrati anche diagrammi di sequenza e attività, che permettono di definire le interazioni tra le componenti, senza preoccuparsi della loro classificazione. In questo modo è possibile esprimere alcuni meccanismi tipici di un'applicazione REST like, come il modo in cui agiscono i middleware. 
 %todo frontend!!!!!!!!!
 I diagrammi di deployment, dei package, delle classi, di sequenza e di attività presentati utilizzano la specifica UML (\textbf{U}nified \textbf{M}odeling \textbf{L}anguage) 2.0.
@@ -54,7 +54,7 @@ REST utilizza il concetto di risorsa (aggregato di dati con un nome, l'URI, e un
 \end{tabular}
 \caption{Tabella delle operazioni CRUD}
 \end{table}
-Per la rappresentazione dei dati si è scelto di utilizzare JSON (\textbf{J}ava\textbf{S}cript \textbf{O}bject \textbf{N}otation) perché si integra molto bene con i framework utilizzati e con il linguaggio JavaScript. Questo non è vero per XML (e\textbf{X}tensible \textbf{M}arkup \textbf{L}anguage) o CSV (\textbf{C}omma \textbf{S}eparated \textbf{V}alues), che richiederebbero librerie specifiche. Inoltre JSON è molto meno verboso e molto più flessibile di XML, e si adatta molto bene al dominio dell'applicazione.
+Per la rappresentazione dei dati si è scelto di utilizzare JSON perché si integra molto bene con i framework utilizzati e con il linguaggio JavaScript. Questo non è vero per XML (e\textbf{X}tensible \textbf{M}arkup \textbf{L}anguage) o CSV (\textbf{C}omma \textbf{S}eparated \textbf{V}alues), che richiederebbero librerie specifiche. Inoltre JSON è molto meno verboso e molto più flessibile di XML, e si adatta molto bene al dominio dell'applicazione.
 \subsubsection{Backend}
 %todo
 \subsubsection{Frontend}
