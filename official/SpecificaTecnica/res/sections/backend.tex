@@ -1,0 +1,33 @@
+\section{Backend}
+\subsection{Descrizione generale}
+\subsubsection{Comunicazione tra client e server}
+Per la creazione del back end di MaaS si è deciso di utilizzare Node.js e, in particolare, il framework ExpressJS, che permette la creazione semplificata di webserver al fine di creare un set di API. Il lato back end sarà quindi costituito da un insieme di API protette da strati diversi di sicurezza. \\
+Ciascuna API del webserver fornirà una risposta in formato JSON per permettere l'utilizzo delle informazioni, secondo il seguente formato: \\
+\begin{verbatim}
+{
+    "data":         [Dati restituiti dal webserver],
+    "structure":    [Informazioni sui dati contenuti in 'data', utili al fine di
+                     generare il codice HTML per mostrarli]
+}
+\end{verbatim}
+Allo stesso modo fornirà anche gli eventuali messaggi di errore generati nel corpo dei metodi del server. Tali messaggi di errore saranno così composti: 
+\begin{verbatim}
+{
+    "code":     [Codice definito nel protocollo HTTP, che identifica univocamente
+                 la tipologia del problema]
+    "message":  [Messaggio che definisce in dettaglio la tipologia dell'errore]
+    {"data"}:   [Opzionale, trasporta i dati in cui si è verificato l'errore]
+}
+\end{verbatim}
+I codici di errore saranno del tipo 4xx (client error, la richiesta è sintatticamente scorretta o non può essere soddisfatta) o 5xx (server error, il server ha fallito nel soddisfare una richiesta apparentemente valida).
+\subsubsection{Sicurezza}
+Gli accessi alle API avranno 2 livelli di sicurezza. \\
+Il primo livello è rappresentato dall'autenticazione: un utente non autenticato riceverà un errore se richiede una API protetta. Verrà implementato con l'utilizzo di Passport, un middleware per ExpressJS che permette l'autenticazione di utenti nel sistema. In particolare verrà utilizzata la strategia passport-local per l'accesso al server, cioè le credenziali dell'utente risiederanno nel database locale. \\
+Il secondo livello è definito in base al ruolo di appartenenza di un utente. Si occuperà di controllare i permessi assegnati ad un utente autenticato e di verificare la possibilità che possa o meno interagire con la risorsa richiesta. \\
+I ruoli utente ammessi nell'applicazione sono: 
+\begin{itemize}
+\item \textbf{GUEST};
+\item \textbf{MEMBER};
+\item \textbf{ADMIN};
+\item \textbf{OWNER}.
+\end{itemize}
