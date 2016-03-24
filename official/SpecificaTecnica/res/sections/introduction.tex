@@ -1,20 +1,20 @@
 \section{Introduzione}
 \subsection{Scopo del documento}
-Il presente documento ha lo scopo di definire la progettazione ad alto livello del prodotto MaaS. A tale scopo viene definita l'architettura generale del sistema. Viene inoltre esplicitato il tracciamento tra le componenti software individuate e i requisiti presenti nel documento \AnalisiDeiRequisiti. 
+Il presente documento ha lo scopo di definire la progettazione ad alto livello del prodotto \glossaryItem{MaaS}. A tale scopo viene definita l'architettura generale del sistema. Viene inoltre esplicitato il \glossaryItem{tracciamento} tra le componenti software individuate e i requisiti presenti nel documento \AnalisiDeiRequisiti. 
 
 \subsection{Scopo del prodotto}
-L'obiettivo che si pone \glossaryItem{MaaS} (\textbf{M}ongoDB \textbf{a}s an \textbf{a}dmin \textbf{S}ervice) è quello di rendere il già funzionante \glossaryItem{MaaP} (\textbf{M}ongoDB \textbf{a}s an \textbf{a}dmin \textbf{P}latform) un servizio, ovvero quello di renderlo disponibile a tutti, senza richiederne l'installazione. \glossaryItem{MaaS} si propone di essere un'estensione di \glossaryItem{MaaP} anche dal punto di vista delle funzionalità offerte all'utente finale. Sarà in grado di supportare i ruoli basilari di una company, permettendo ad utenti diversi di eseguire operazioni diverse. \\
-\glossaryItem{MaaS} verrà realizzato utilizzando principalmente Node.js e MongoDB.
+L'obiettivo che si pone \glossaryItem{MaaS} (\textbf{M}ongoDB \textbf{a}s an \textbf{a}dmin \textbf{S}ervice) è quello di rendere il già funzionante \glossaryItem{MaaP} (\textbf{M}ongoDB \textbf{a}s an \textbf{a}dmin \textbf{P}latform) un servizio, ovvero quello di renderlo disponibile a tutti, senza richiederne l'installazione. \glossaryItem{MaaS} si propone di essere un'estensione di \glossaryItem{MaaP} anche dal punto di vista delle funzionalità offerte all'utente finale. Sarà in grado di supportare i ruoli basilari di una \glossaryItem{company}, permettendo ad utenti diversi di eseguire operazioni diverse. \\
+\glossaryItem{MaaS} verrà realizzato utilizzando principalmente \glossaryItem{Node.js} e \glossaryItem{MongoDB}.
 
 \subsection{Glossario}
 Ogni occorrenza di acronimi, dei termini tecnici o di dominio è evidenziata con il corsivo e marcata con la lettera G in pedice. Nel documento \Glossario sono riportati i significati corrispondenti.
 
 \subsection{Riferimenti}
-Di seguito sono elencati i riferimenti sui quali si basa il presente documento e che sono stati utilizzati dal team BugBusters per lo studio delle tecnologie coinvolte.
+Di seguito sono elencati i riferimenti sui quali si basa il presente documento e che sono stati utilizzati dal \glossaryItem{team} BugBusters per lo studio delle tecnologie coinvolte.
 
 \subsubsection{Normativi}
 \begin{itemize}
-\item \textbf{Norme di progetto}: \NormeDiProgetto;
+\item \textbf{Norme di \glossaryItem{progetto}}: \NormeDiProgetto;
 \item \textbf{Capitolato d'appalto C4}: RedBabel, \glossaryItem{MaaS} 
 \item \textbf{Analisi dei Requisiti}: \AnalisiDeiRequisiti;
 \end{itemize}
@@ -22,7 +22,7 @@ Di seguito sono elencati i riferimenti sui quali si basa il presente documento e
 \begin{itemize}
 \item \textbf{Software Engineering 9th - I. Sommerville (Pearson, 2011)};
 \item \textbf{Slides del corso di Ingegneria del Software mod. A}: Diagrammi delle classi \url{http://www.math.unipd.it/~tullio/IS-1/2015/Dispense/E03.pdf};
-\item \textbf{Slides del corso di Ingegneria del Software mod. A}: Diagrammi dei package \url{http://www.math.unipd.it/~tullio/IS-1/2015/Dispense/E04.pdf};
+\item \textbf{Slides del corso di Ingegneria del Software mod. A}: Diagrammi dei \glossaryItem{package}\url{http://www.math.unipd.it/~tullio/IS-1/2015/Dispense/E04.pdf};
 \item \textbf{Slides del corso di Ingegneria del Software mod. A}: Diagrammi di sequenza \url{http://www.math.unipd.it/~tullio/IS-1/2015/Dispense/E05.pdf};
 \item \textbf{Slides del corso di Ingegneria del Software mod. A}: Diagrammi di attività \url{http://www.math.unipd.it/~tullio/IS-1/2015/Dispense/E06.pdf};
 \item \textbf{Slides del corso di Ingegneria del Software mod. A}: Design pattern strutturali: Decorator, Proxy, Facade, Adapter \url{http://www.math.unipd.it/~tullio/IS-1/2015/Dispense/E07.pdf}
@@ -31,7 +31,7 @@ Di seguito sono elencati i riferimenti sui quali si basa il presente documento e
 \item \textbf{UML Distilled - Martin Fowler (Pearson, Addison Wesley, 2004)};
 \item \textbf{Learning UML 2.0 - Kim Hamilton, Russell Miles (O’Reilly, 2006)};
 \item \textbf{Design Patterns - E. Gamma, R. Helm, R. Johnson, J. Vlissides (Pearson Education, Addison-Wesley, 1995};
-\item \textbf{Node.js}, \url{https://nodejs.org/dist/latest-v5.x/docs/api/};
+\item \textbf{\glossaryItem{Node.js}}, \url{https://nodejs.org/dist/latest-v5.x/docs/api/};
 \item \textbf{Reactjs}, \url{https://facebook.github.io/react/docs/getting-started.html};
 \item \textbf{MongoDB}, \url{https://docs.mongodb.org/manual/};
 \item \textbf{HTML5}, \url{http://www.w3schools.com/html/html5\_intro.asp};
@@ -41,5 +41,5 @@ Di seguito sono elencati i riferimenti sui quali si basa il presente documento e
 \item \textbf{PassportJS}, \url{http://passportjs.org/docs};
 \item \textbf{TypeScript}, \url{http://www.typescriptlang.org/Handbook};
 \item \textbf{Flux}, \url{https://github.com/facebook/flux};
-\item \textbf{API REST}, \url{https://github.com/tfredrich/RestApiTutorial.com/raw/master/media/RESTful\%20Best\%20Practices-v1\_2.pdf}.
+\item \textbf{API \glossaryItem{REST}}, \url{https://github.com/tfredrich/RestApiTutorial.com/raw/master/media/RESTful\%20Best\%20Practices-v1\_2.pdf}.
 \end{itemize}
