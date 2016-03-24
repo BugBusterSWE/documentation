@@ -302,20 +302,41 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'utente autenticato
         \textbf{Attori Primari} & \glossaryItem{Owner} \\ 
         \textbf{Scopo e Descrizione} & L'\glossaryItem{Owner} decide di rimuovere la \glossaryItem{Company} con tutte le sue informazioni e i suoi utenti. \\ 
         
-        \textbf{Precondizioni}  & L'\glossaryItem{Owner} inizia la procedura di cancellazione della \glossaryItem{Company} da MaaS. \\ 
+        \textbf{Precondizioni}  & L'\glossaryItem{Owner} inizia la procedura di cancellazione della \glossaryItem{Company} da \glossaryItem{MaaS}. \\ 
         
-        \textbf{Postcondizioni} & L'\glossaryItem{Owner} ha superato la procedura di controllo per la cancellazione . \\
+        \textbf{Postcondizioni} & L'\glossaryItem{Owner} ha rimosso la \glossaryItem{Company} da \glossaryItem{MaaS}. \\
 
         \textbf{Scenario principale} & 1. L'utente autenticato inserisce il nome della \glossaryItem{Company} corrente. (UC-U9.4.2) \\
 
-
-        %TODO
-        \textbf{Estensioni} & 1. L'utente autenticato visualizza un messaggio di errore dovuto all'inserimento del nome della \glossaryItem{Company} errata. (UC-U9.2.1)
+        \textbf{Estensioni} & 1. L'utente autenticato visualizza un messaggio di errore dovuto all'inserimento del nome della \glossaryItem{Company} errata. (UC-U9.4.1)
         
       \end{longtable}
       \egroup
     \end{center}
 
+
+\subsubsection{Visualizzazione messaggio d'errore}
+
+    %Tabella 
+    \begin{center}
+      \bgroup
+      \def\arraystretch{1.8}     
+      \begin{longtable}{  p{3.5cm} | p{8cm} } 
+        
+        \hline
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U9.4.1 - Visualizzazione messaggio d'errore}} \\ 
+        \hline
+        
+        \textbf{Attori Primari} & \glossaryItem{Owner} \\ 
+        \textbf{Scopo e Descrizione} & L'\glossaryItem{Owner} riceve un messaggio d'errore dopo aver inserito il nome errato della \glossaryItem{Company}. \\ 
+        
+        \textbf{Precondizioni}  & L'\glossayItem{Owner} non inserisce correttamente il nome della \glossaryItem{Company}. \\ 
+        
+        \textbf{Postcondizioni} & L'\glossayItem{Owner} ha visualizzato il messaggio di errore. \\ 
+      \end{longtable}
+      \egroup
+    \end{center}
+    
     
 \subsubsection{Rimozione \glossaryItem{Company}}
 
@@ -326,19 +347,21 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'utente autenticato
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U9.4.1 - Rimozione \glossaryItem{Company}}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U9.4.2 - Rimozione \glossaryItem{Company}}} \\ 
         \hline
         %1) Revise the location of this use case in the whole document
         %2) This is a destructive operation, you must provide a better thought workflow
         \textbf{Attori Primari} & \glossaryItem{Owner} \\ 
-        \textbf{Scopo e Descrizione} & L'\glossaryItem{Owner} decide di rimuovere la \glossaryItem{Company} con tutte le sue informazioni e i suoi utenti. \\ 
+        \textbf{Scopo e Descrizione} & L'\glossaryItem{Owner} decide di rimuovere la \glossaryItem{Company} con tutte le sue informazioni e i suoi utenti e si appresta a inserire il nome della \glossaryItem{Company}. \\ 
         
         \textbf{Precondizioni}  & L'\glossaryItem{Owner} ha acconsentito alla continuazione della procedura. \\ 
         
-        \textbf{Postcondizioni} & L'\glossaryItem{Owner} visualizza un messaggio di avvenuta cancellazione e tutti i dati e gli utenti collegati alla \glossaryItem{Company} vengono cancellati dal sistema. \\ 
+        \textbf{Postcondizioni} & L'\glossaryItem{Owner} visualizza un messaggio di avvenuto inserimento dei dati. \\ 
       \end{longtable}
       \egroup
     \end{center}
+
+    
 \subsubsection{Operazioni sulle specifiche DSL}
 
         \begin{figure}[H]
