@@ -3,7 +3,8 @@ MaaS \`e stato progettato utilizzando diverse tecnologie, alcune delle quali esp
 \begin{itemize}
 \item \textbf{Node.js}, piattaforma per il back end;
 \item \textbf{ExpressJS}, framework Node.js flessibile e leggero che fornisce una serie di funzioni avanzate per le applicazioni web;
-\item \textbf{Reactjs}, framework JavaScript per la realizzazione dele front end;
+\item \textbf{Reactjs}, framework JavaScript per la realizzazione del front end;
+\item \texbf{Flux}, framework JavaScript per la gestione dei dati di applicazioni che usano Reactjs;
 \item \textbf{MongoDB}, database di tipo NoSQL (\textbf{NO}t \textbf{O}nly \textbf{SQL}) per la parte di recupero e salvataggio dei dati;
 \item \textbf{Mongoose}, libreria per interfacciarsi con il driver di MongoDB;
 \item \textbf{HTML5} (\textbf{H}yper\textbf{T}ext \textbf{M}arkup \textbf{L}anguage), linguaggio di markup per la creazione di pagine web;
@@ -54,6 +55,17 @@ Reactjs \`e stato preferito ad Angularjs, sconsigliato dal proponente in quanto 
 \begin{itemize}
 \item \textbf{Verboso}: richiede di scrivere pi\`u codice rispetto alla semplice coppia HTML e JavaScript.
 \item{Non \`e un framework completo}: non esiste un modello di gestione delle librerie all'interno di Reactjs, cosa che invece non \`e vera per altri framework simili, come Emberjs o Angularjs.
+\end{itemize}
+\subsection{Flux}
+Flux è l'architettura che Facebook usa per creare applicazioni web client-side. È un complemento a React e usa un flusso di dati unidirezionale. Le applicazioni Flux hanno tre parti principali: il dispathcer, i componenti di memorizzazione e le viste (Reactjs).
+\subsubsection{Vantaggi}
+\begin{itemize}
+\item \textbf{Integrazione}: si integra perfettamente con Reactjs.
+\item \textbf{Flusso di dati unidirezionale}: i dati provengono attraverso un'unica interfaccia ben definita.
+\end{itemize}
+\subsubsection{Svantaggi}
+\begin{itemize}
+\item \textbf{Apprendimento}: può essere difficile da imparare bene, soprattutto considerandolo in coppia con Reactjs.
 \end{itemize}
 \subsection{MongoDB}
 L'utilizzo di MongoDB \`e stato richiesto dal proponente. Si tratta di un database NoSQL open source scalabile e altamente performante di tipo document-oriented e schemaless, nel quale i dati sono archiviati sotto forma di documenti in stile JSON (\textbf{J}ava\textbf{S}cript \textbf{O}bject \textbf{N}otation), con schemi dinamici e una struttura semplice e potente.
