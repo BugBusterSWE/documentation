@@ -383,19 +383,20 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'utente autenticato
             \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U11 - Operazioni sulle specifiche DSL}} \\ 
             \hline
             
-            \textbf{Attori Primari} & Utente Autenticato, \glossaryItem{Guest}, \glossaryItem{Member}, Admin, \glossaryItem{Owner} \\ 
-            \textbf{Scopo e Descrizione} & L’utente visualizza la pagina per apportare modifiche sulle specifiche DSL. Può decidere di: eseguire, modificare, creare e leggere una specifica DSL.\\ 
+            \textbf{Attori Primari} & Utente Autenticato, Ospite e Membro \\ 
+            \textbf{Scopo e Descrizione} & L’utente visualizza la pagina per apportare modifiche sulle DSL. Può decidere di: eseguire, modificare, creare e leggere una specifica DSL.\\
             
             \textbf{Precondizioni}  & L’applicazione MaaS è funzionante e pronta all'uso. Gli utenti possono accedere alla propria pagina \glossaryItem{Dashboard}. \\ 
             
             \textbf{Postcondizioni} & Le (eventuali) modifiche sono state apportate. \\ 
-            \textbf{Scenario principale} & 1. \glossaryItem{Guest}, \glossaryItem{Member}, l'Admin e l'\glossaryItem{Owner} possono eseguire una specifica DSL (UC-U11.1)  
+            \textbf{Scenario principale} & 1. L'Ospite e il Membro possono eseguire una specifica DSL (UC-U11.1)  
             
-            2. \glossaryItem{Member}, l'Admin e l'\glossaryItem{Owner} possono modificare una specifica DSL (UC-U11.2)
+            2. Il Membro pu\'o modificare una specifica DSL (UC-U11.2)
             
-            3. \glossaryItem{Member}, l'Admin e l'\glossaryItem{Owner} possono creare una specifica DSL (UC-U11.3)
+            3. Il Membro pu\'o creare una specifica DSL (UC-U11.3)
             
-            4. \glossaryItem{Member}, l'Admin e l'\glossaryItem{Owner} possono leggere una specifica DSL (UC-U11.4)\\
+            4. Il Membro pu\'o leggere una specifica DSL (UC-U11.4)\\
+
             \textbf{Estensioni} & 1. L'utente visualizza un messaggio di errore in quanto non ha i permessi per operare sulla specifica DSL (UC-U12)  \\
           \end{longtable}
           \egroup
@@ -411,8 +412,8 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'utente autenticato
                     \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U11.1 - Esecuzione specifica DSL}} \\ 
                     \hline
                     
-                    \textbf{Attori Primari} & Utente Autenticato, \glossaryItem{Guest}, \glossaryItem{Member}, Admin, \glossaryItem{Owner}  \\ 
-                    \textbf{Scopo e Descrizione} & L'Utente Autenticato, \glossaryItem{Guest}, \glossaryItem{Member}, Admin, \glossaryItem{Owner} eseguono una specifica DSL\\ 
+                    \textbf{Attori Primari} & Utente Autenticato, Ospite e Membro \\ 
+                    \textbf{Scopo e Descrizione} & L'Utente Autenticato, Ospite e Membro eseguono una specifica DSL\\ 
                     
                     \textbf{Precondizioni}  & L’applicazione è funzionante e pronta all'uso. Gli utenti possono accedere alla propria pagina \glossaryItem{Dashboard}.\\ 
                     
@@ -432,9 +433,10 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'utente autenticato
                     \hline
                     \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U11.2 - Modifica specifica DSL}} \\ 
                     \hline
-                    
-                    \textbf{Attori Primari} & \glossaryItem{Member}, Admin, \glossaryItem{Owner}  \\ 
-                    \textbf{Scopo e Descrizione} & \glossaryItem{Member}, Admin, \glossaryItem{Owner} modificano una specifica DSL tramite l'editor\\ 
+
+                    \textbf{Attori Primari} & Membro  \\ 
+                    \textbf{Scopo e Descrizione} & Il Membro modifica una specifica DSL tramite l'editor\\ 
+
                     
                     \textbf{Precondizioni}  & L’applicazione è funzionante e pronta all'uso. Gli utenti possono accedere alla propria \glossaryItem{Dashboard}. \\ 
                     
@@ -454,8 +456,9 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'utente autenticato
                     \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U11.3 - Creazione specifica DSL}} \\ 
                     \hline
                     
-                    \textbf{Attori Primari} & \glossaryItem{Member}, Admin, \glossaryItem{Owner}  \\ 
-                    \textbf{Scopo e Descrizione} & \glossaryItem{Member}, Admin, \glossaryItem{Owner} creano una specifica DSL tramite l'editor\\ 
+
+                    \textbf{Attori Primari} & Membro  \\ 
+                    \textbf{Scopo e Descrizione} & Il Membro crea una specifica DSL tramite l'editor\\ 
                     
                     \textbf{Precondizioni}  & L’applicazione è funzionante e pronta all'uso. Gli utenti possono accedere alla propria pagina \glossaryItem{Dashboard}.\\ 
                     
@@ -475,8 +478,8 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'utente autenticato
                     \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U11.4 - Lettura specifica DSL}} \\ 
                     \hline
                     
-                    \textbf{Attori Primari} & \glossaryItem{Member}, Admin, \glossaryItem{Owner}  \\ 
-                    \textbf{Scopo e Descrizione} & \glossaryItem{Member}, Admin, \glossaryItem{Owner} leggono una specifica DSL\\ 
+                    \textbf{Attori Primari} & Membro  \\ 
+                    \textbf{Scopo e Descrizione} & Il Membro legge una specifica DSL\\ 
                     
                     \textbf{Precondizioni}  & L’applicazione è funzionante e pronta all'uso. Gli utenti possono accedere alla propria pagina \glossaryItem{Dashboard}.\\ 
                     
