@@ -1,6 +1,69 @@
 \newpage
 \section{Descrizione architettura}
 \subsection{Metodo e formalismo di specifica}
+
+Per esporre l'architettura dell'applicazione si procederà con approccio top-down, partendo cioè da una visione generale delle componenti che distinguono il sistema, per poi analizzare in dettaglio la conformazione di tali componenti.
+Per descrivere in maniera formale l'architettura verranno impiegati lo standard UML 2.0 per i diagrammi dei package e delle classi e lo standard UML 2.4 per i diagrammi di attività e sequenza.
+
+Moduli - Classi
+Package - Folder
+%% MATCH tra formalismo UML e caratteristiche di node
+
+%% COLORI DIVERSI PER COMPONENTI DIVERSE
+Gialli nostri
+Verdi Sistema
+Rossi da MaaP
+
+\subsection{Conformazione generale dell'architettura}
+L'architettura generale di MaaS si può dividere in 3 macrocomponenti:
+\begin{itemize}
+\item \textbf{Server REST} 
+\item \textbf{Client} 
+\item \textbf{Editor}
+\end{itemize}
+Le tre macrocomponenti verranno descritte nel dettaglio in seguito su questo documento.
+
+\subsection{Backend - Il Server REST}
+\subsubsection{Descrizione generale}
+La componente che si occupa dell'interazione con il database e di fornire i corretti contenuti al client che li richiede è un server REST.
+Le scelte progettuali si basano fortemente sulle tecnologie scelte per lo sviluppo, in particolare sul framework ExpressJS che verrà impiegato per l'implementazione effettiva del server. In particolare vengono identificate due tipologie di componenti principali:
+\begin{itemize}
+\item I models: sono moduli che contengono la business-logic dell'applicazione
+\item Le Routes: sono moduli che associano gli endpoint del server ad un'azione sui models.
+%% Da sistemare
+\end{itemize}
+
+%% IMMAGINE DEI PACKAGE?
+
+\subsubsection{Descrizione delle componenti} %% NOME CORRETTO?
+
+\paragraph*{Models}
+
+I models sono le componenti del server che contengono la business logic dell'applicazione e che vengono utilizzati per interagire con il database.
+Essi dovranno seguire il module design pattern del linguaggio Javascript. %% ALTRO?
+In particolare i models individuati sono:
+\begin{itemize}
+\item \textbf{User}: identifica i dati relativi all'utente del sistema
+\item Company: rappresenta l'entità company nel server
+\item DSL: identifica (le specifiche DSL) create dagli utenti
+\item Database: è la rappresentazione di una connessione ad un database da cui estrarre i dati per una Company
+\end{itemize}
+
+\paragraph*{Modules}
+
+Queste componenti sono di supporto ai modelli o definiscono Middlewares per l'implementazione di livelli di sicurezza.
+I moduli individuati nella progettazione sono:
+\begin{itemize}
+\item LevelChecker      
+\item DSLChecker        
+\item EMAIL             %% quello definito da steakholders
+
+\paragraph*{Routes}
+
+Definisce le routes per ogni modello. Viene introdotto un modulo per ogni modello presente nell'applicazione.
+%% POI?
+
+
 Le scelte progettuali di MaaS sono state frtemente influenzate dallo stack tecnologico usato. \\
 MaaS è basato su Node.js, e conseguentemente è scritto in JavaScript; questo linguaggio lascia molta libertà al programmatore nella scelta della tecnica da utilizzare per implemetare pattern come l'incapsulamento e l'ereditarietà. Al contrario di altri linguaggi orientati agli oggetti, come C++ o Java, non è presente un costrutto esplicito per definire classi, né un controllo statico dei tipi utilizzati. Per questo il team ha scelto, soprattutto per la codifica dell'editor visuale, di utilizzare il linguaggio TypeScript, che aggiunge, come già detto, la possibilità di definire classi ed interfacce. \\
 La progettazione è stata influenzata pesantemente anche dal framework back end scelto: ExpressJS. Questo framework è basato su Node.js e permette di estenderlo attraverso moduli specifici secondo i bisogni dell'applicazione. Il concetto centrale è quello delle funzioni middleware, ovvero funzioni che hanno accesso all'oggetto richiesto dal client (req), all'oggetto di risposta del server (res) e alla successiva funzione middleware nel ciclo di risposta dell'applicazione (next()). Tipicamente le funzioni middleware possono eseguire le seguenti operazioni:
