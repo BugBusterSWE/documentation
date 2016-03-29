@@ -2,16 +2,21 @@
 \section{Descrizione architettura}
 \subsection{Metodo e formalismo di specifica}
 
-Per esporre l'architettura dell'applicazione si procederà con approccio top-down, partendo cioè da una visione generale delle componenti che distinguono il sistema, per poi analizzare in dettaglio la conformazione di tali componenti.
+Per esporre l'architettura dell'applicazione si procederà con approccio top-down, partendo cioè da una visione generale delle componenti che distinguono il sistema, per poi analizzare in dettaglio la conformazione di tali componenti. 
+
 Per descrivere in maniera formale l'architettura verranno impiegati lo standard UML 2.0 per i diagrammi dei package e delle classi e lo standard UML 2.4 per i diagrammi di attività e sequenza.
 
-La scelta di utilizzare Javascript come linguaggio su cui basare il progetto ha reso necessaria l'introduzione di alcune convenzioni per quanto riguarda i diagrammi UML utilizzati, in particolare quello dei package e delle classi.
-Poichè Javascript non implementa il costrutto class, tale formalismo verrà riferito ai moduli (che implementano il Module pattern di Javascript).
-Viene fatto uso inoltre di un codice colori per distinguere i vari moduli dell'applicazione. In particolare:
+Laddove nella progettazione è stata necessaria l'introduzione di convenzioni per determinati elementi, queste verranno giustificate e presentate in dettaglio nella parte introduttiva della descrizione della componente stessa.
+
+
+%La scelta di utilizzare Javascript come linguaggio su cui basare il progetto ha reso necessaria l'introduzione di alcune convenzioni per quanto riguarda i diagrammi UML utilizzati, in particolare quello dei package e delle classi.
+%Poichè Javascript non implementa il costrutto class, tale formalismo verrà riferito ai moduli (che implementano il Module pattern di Javascript).
+
+Viene fatto uso inoltre di un codice colori per distinguere la provvenienza dei moduli dell'applicazione. In particolare:
 
 \begin{itemize}
-\item verranno evidenziati in colore \textbf{giallo} i moduli da implementare per la creazione dell'applicazione;
-\item in colore \textbf{verde} vengono proposti i moduli importati dal Core delle tecnologie utilizzate e i moduli di terze parti;
+\item verranno evidenziati in colore \textbf{giallo} i moduli da implementare;
+\item in colore \textbf{verde} vengono proposti i moduli/librerie importati dal Core delle tecnologie utilizzate e da terze parti;
 \item in colore \textbf{rosso} vengono evidenziati i moduli riutilizzati da MaaP.
 \end{itemize}
 
@@ -22,131 +27,15 @@ L'architettura generale di MaaS si può dividere in 3 macrocomponenti:
 \item \textbf{Client} 
 \item \textbf{Editor}
 \end{itemize}
-Anche se lo stack di tecnologie utilizzate non offre un'implementazione pura del pattern architetturale MVC, l'architettura dell'applicazione si basa fortemente su tale pattern. 
-Vengono identificate in particolare nel server i ruoli di Model e di Controller che verranno implementati tramite concetto di Models e di Routes, i primi responsabili 
-Anche se lo stack di tecnologie utilizzate non offre una implementazione pura del pattern MVC, al fine di rendere l'applicazione più scalabile, il progetto finale si baserà fortemente su questo pattern. In particolare viene evidenziato che le parte Model e Controller del pattern verranno implementate nel Server REST con i concetti di Model e di Routes. La parte View viene invece affibiata al Client. 
-L'editor verrà sviluppato come un modulo a parte ed importato nel Client. %% Da sistemare sta frase
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{res/sections/GeneralArchitecture.png}
+\caption{Diagramma di deployment per l'architettura}
+\end{figure}
+
+L'architettura proposta segue il Design Pattern MVC. In particolare i ruoli di Model e Controller verranno implementati a livello di server, mentre il ruolo di View viene affidato al frontend.
+L'intrefaccia tra le due componenti verrà gestita grazie ad un set di API disposto dal server REST: in questo modo si garantisce una totale indipendenza tra frontend e backend e concede a sviluppi futuri anche in altre piattaforme (ad esempio in app mobile) senza dover creare dei sistemi di integrazione ad-hoc.
 
 Le tre macrocomponenti verranno descritte nel dettaglio in seguito su questo documento.
 
-\subsection{Backend - Il Server REST}
-\subsubsection{Descrizione generale}
-La componente che si occupa dell'interazione con il database e di fornire i corretti contenuti al client che li richiede è un server REST.
-Le scelte progettuali si basano fortemente sulle tecnologie scelte per lo sviluppo, in particolare sul framework ExpressJS che verrà impiegato per l'implementazione effettiva del server. Come già accennato in precedenza, il server deve ricoprire i ruoli di Model e Controller del pattern MVC.
-Il Model dell'applicazione viene identificato nel package Models: in questo package sono contenuti tutti i moduli conteneti la business logic dell'applicazione.
-Per quanto riguarda la parte Controller, tale funzione viene identificata nel package Routes.
-
-Questi due package introdotti costituiscono il core del lato backend dell'applicazione. A supporto viene presentato il package Lib che conterrà tutti i moduli utili all'applicazione per il corretto funzionamento.
-
-
-
-%%In particolare vengono identificate due tipologie di componenti principali:
-%%\begin{itemize}
-%%\item I models: sono moduli che contengono la business-logic dell'applicazione
-%%\item Le Routes: sono moduli che associano gli endpoint del server ad un'azione sui models.
-%% Da sistemare
-%%\end{itemize}
-
-%% IMMAGINE DEI PACKAGE?
-
-\subsection{Descrizione dei package del server} %% NOME CORRETTO?
-\subsubsection{Models}
-\paragraph*{Descrizione} 
-I models sono le componenti del server che contengono la business logic dell'applicazione e che vengono utilizzati per interagire con il database.
-Ciascun Model di questo package viene implementato seguento il Module pattern di Javascript. %% ALTRO?
-In particolare i Model individuati sono:
-\begin{itemize}
-\item \textbf{User}: identifica i dati relativi all'utente del sistema
-\item \textbf{Company}: rappresenta l'entità company nel server
-\item \textbf{DSL}: identifica (le specifiche DSL) create dagli utenti
-\item \textbf{Database}: è la rappresentazione di una connessione ad un database da cui estrarre i dati per una Company
-\end{itemize}
-
-\subsubsection{User}
-\paragraph*{Descrizione e utilizzo}
-Il modulo User rappresenta l'utente nell'applicazione. Esso ha il compito di modellare i dati riguardati gli utenti e di fornire i metodi per poterli recuperare dal server. Viene implementato secondo Module pattern di Javascript.
-%% NECESSITA DI ESSERE AMPLIATO
-
-\subsubsection{Company}
-%% NECESSITA DI ESSERE AMPLIATO
-
-\subsubsection{Database}
-%% NECESSITA DI ESSERE AMPLIATO
-
-\subsubsection{DSL}
-%% NECESSITA DI ESSERE AMPLIATO
-
-
-\paragraph*{Modules}
-
-Queste componenti sono di supporto ai modelli o definiscono Middlewares per l'implementazione di livelli di sicurezza.
-I moduli individuati nella progettazione sono:
-\begin{itemize}
-\item LevelChecker      
-\item DSLChecker        
-\item EMAIL             %% quello definito da steakholders
-
-\paragraph*{Routes}
-
-Definisce le routes per ogni modello. Viene introdotto un modulo per ogni modello presente nell'applicazione.
-%% POI?
-
-
-%%Le scelte progettuali di MaaS sono state frtemente influenzate dallo stack tecnologico usato. \\
-%%MaaS è basato su Node.js, e conseguentemente è scritto in JavaScript; questo linguaggio lascia molta libertà al programmatore nella scelta della tecnica da utilizzare per implemetare pattern come l'incapsulamento e l'ereditarietà. Al contrario di altri linguaggi orientati agli oggetti, come C++ o Java, non è presente un costrutto esplicito per definire classi, né un controllo statico dei tipi utilizzati. Per questo il team ha scelto, soprattutto per la codifica dell'editor visuale, di utilizzare il linguaggio TypeScript, che aggiunge, come già detto, la possibilità di definire classi ed interfacce. \\
-%%La progettazione è stata influenzata pesantemente anche dal framework back end scelto: ExpressJS. Questo framework è basato su Node.js e permette di estenderlo attraverso moduli specifici secondo i bisogni dell'applicazione. Il concetto centrale è quello delle funzioni middleware, ovvero funzioni che hanno accesso all'oggetto richiesto dal client (req), all'oggetto di risposta del server (res) e alla successiva funzione middleware nel ciclo di risposta dell'applicazione (next()). Tipicamente le funzioni middleware possono eseguire le seguenti operazioni:
-%\begin{itemize}
-%\item Eseguire codice generico.
-%\item Cambiare gli oggetti req e res.
-%\item Terminare il ciclo di risposta dell'applicazione.
-%\item Richiamare il successivo middleware nello stack (next()).
-%\end{itemize}
-%Per soddisfare le richieste del proponente, ExpressJS verrà integrato con moduli per gestire il login (con base su MongoDB) e per inviare email agli utenti. \\
-%La progettazione della parte back end ha seguito un approccio top-down: inizialmente sono stati definiti i componenti principali del sistema, le relazioni tra essi ed infine l'interfaccia REST da esporre al client. \\
-%I diagrammi delle classi permettono di mostrare l'architettura generale del sistema, ma in un mondo orientato alle funzioni non sono sufficienti per descrivere l'intero sistema. Per questo, vengono mostrati anche diagrammi di sequenza e attività, che permettono di definire le interazioni tra le componenti, senza preoccuparsi della loro classificazione. In questo modo è possibile esprimere alcuni meccanismi tipici di un'applicazione REST like, come il modo in cui agiscono i middleware. 
-%todo frontend!!!!!!!!!
-%I diagrammi di deployment, dei package, delle classi, di sequenza e di attività presentati utilizzano la specifica UML (\textbf{U}nified \textbf{M}odeling \textbf{L}anguage) 2.0.
-%\subsection{Architettura generale}
-%L'architettura del progetto si divide in una componente Client, rappresentata dal browser degli utenti che interagiscono con il front end, e in una componente WebServer, nella quale risiede il back end. Il database MongoDB verrà posto su un altro server, possibilmente quello su cui risiede il front end. \\
-%\begin{figure}[h]
-%\centering
-%\includegraphics[width=0.8\textwidth]{res/sections/GeneralArchitecture.png}
-%\caption{Diagramma di deployment per l'architettura}
-%\end{figure}
-%\subsection{Interfaccia REST like}
-%Il back end si basa su uno stile REST like. Dal login al logout l'interfaccia di accesso ai dati può considerarsi a tutti gli effetti REST, ovvero con le seguenti caratteristiche:
-%\begin{itemize}
-%\item stato dell'applicazione e funzionalità divisi in risorse web;
-%\item ogni risorsa è unica e indirizzabile attraverso un URI (\textbf{U}niform \textbf{R}esource \textbf{I}dentifier);
-%\item tutte le risorse sono condivise come interfaccia uniforme per il trasferimento di stato tra client e risorse. Questo trasferimento consiste in:
-%\begin{itemize}
-%\item un insieme vincolato di operazioni ben definite;
-%\item un insieme vincolato di contenuti, opzionalmente supportato da codice a richiesta;
-%\item un protocollo:
-%\begin{itemize}
-%\item client-server;
-%\item privo di stato;
-%\item memorizzabile in cache;
-%\item a livelli.
-%\end{itemize}
-%\end{itemize}
-%\end{itemize}
-%REST utilizza il concetto di risorsa (aggregato di dati con un nome, l'URI, e una rappresentazione interna), sulla quale è possibile invocare operazioni CRUD (\textbf{C}reate, \textbf{R}ead, \textbf{U}pdate, \textbf{D}elete) con la seguente corrispondenza:
-%\begin{table}[H]
-%\centering
-%\label{CRUD}
-%\begin{tabular}{| >{\centering}p{3cm} | >{\centering}p{5cm} | >{\centering}p{6cm} |}
-%\hline
-%\textbf{Risorsa} & \textbf{URI della collection} \newline es. http://maas.com/users & \textbf{URI della risorsa} \newline es. http://maas.com/users/10 \tabularnewline \hline
-%\textbf{GET} & Fornisce informazioni sui membri della collection. & Fornisce una rappresentazione dell'elemento della collection indicato. \tabularnewline \hline
-%\textbf{PUT} & Non usata. & Sostituisce una rappresentazione dell'elemento della collection indicato. Se non esiste lo crea.  \tabularnewline \hline
-%\textbf{POST} & Crea un nuovo elemento della collection. La URI del nuovo elemento è generata automaticamente. & Non usato. \tabularnewline \hline
-%\textbf{DELETE} & Non usata. & Cancella l'elemento della collection indicato. \tabularnewline \hline
-%\end{tabular}
-%\caption{Tabella delle operazioni CRUD}
-%\end{table}
-%Per la rappresentazione dei dati si è scelto di utilizzare JSON perché si integra molto bene con i framework utilizzati e con il linguaggio JavaScript. Questo non è vero per XML (e\textbf{X}tensible \textbf{M}arkup \textbf{L}anguage) o CSV (\textbf{C}omma \textbf{S}eparated \textbf{V}alues), che richiederebbero librerie specifiche. Inoltre JSON è molto meno verboso e molto più flessibile di XML, e si adatta molto bene al dominio dell'applicazione.
-%\subsubsection{Backend}
-%todo
-%\subsubsection{Frontend}
-%todo
