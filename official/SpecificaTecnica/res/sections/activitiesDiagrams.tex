@@ -61,7 +61,176 @@ L'utente non autenticato deve inserire, in una casella di testo, il codice segre
 \end{figure}
 L'utente non autenticato che crea una company viene registrato come suo owner. È pertanto necessario fornire, durante la procedura di creazione, l'indirizzo email e la password dell'utente, oltre che il nome della company stessa.
 \subsection{Utente autenticato}
-%todo
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=12cm]{res/sections/backend/activities/principaliConAuth.png}
+\caption{Attività principali per un utente autenticato}
+\end{center}
+\end{figure}
+Dopo aver effettuato il login un utente può:
+\begin{itemize}
+\item visualizzare i propri dati (profilo e/o credenziali di accesso), modificarli o rimuoversi da MaaS;
+\item eseguire operazioni che coinvolgono specifiche DSL;
+\item eseguire operazioni sulla sua dashboard;
+\item gestire i permessi degli altri utenti (solo per admin e owner);
+\item gestire gli utenti della company(solo per admin e owner);
+\item effettuare il logout.
+\end{itemize}
+\subsubsection{Modifica dei dati utente}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=12cm]{res/sections/backend/activities/modificaDati.png}
+\caption{Modifica dei dati utente}
+\end{center}
+\end{figure}
+L'utente autenticato, dopo aver visualizzato la pagina con i suoi dati personali, può decidere di modificare il proprio profilo o le proprie credenziali di accesso.
+\subsubsection{Modifica del profilo utente}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=12cm]{res/sections/backend/activities/modificaProfilo.png}
+\caption{Modifica del profilo utente}
+\end{center}
+\end{figure}
+L'utente autenticato può modificare il proprio profilo inserendo nome, cognome e data di nascita. Per effettuare la modifica deve inviare la richiesta attraverso un pulsante presente nella pagina.
+\subsubsection{Modifica delle credenziali utente}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=12cm]{res/sections/backend/activities/modificaCredenziali.png}
+\caption{Modifica delle credenziali utente}
+\end{center}
+\end{figure}
+L'utente autenticato, dopo aver visualizzato la pagina con i suoi dati personali, può decidere di modificare le proprie credenziali di accesso inseremdo email e passowrd. Nel caso in cui le credenziali non siano valide (ad esempio, in caso di inserimento di un indirizzo email già presente) verrà visualizzato un messaggio di errore nel momento di invio della richiesta di modifica.
+\subsubsection{Rimozione dell'utente}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=12cm]{res/sections/backend/activities/rimuoviProfilo.png}
+\caption{Rimozione dell'utente}
+\end{center}
+\end{figure}
+L'utente autenticato, dopo aver visualizzato la pagina con i suoi dati personali, può decidere di cancellarsi da MaaS. Viene proposta una richiesta di conferma per evitare eliminazioni accidentali. Se la richiesta viene confermata, l'utente è rimosso da MaaS.
+\subsubsection{Operazioni su specifiche DSL}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=12cm]{res/sections/backend/activities/operazioniDSL.png}
+\caption{Operazioni su specifiche DSL}
+\end{center}
+\end{figure}
+Un utente autenticato può decidere di effettuare varie operazioni sulle specifiche DSL alle quali ha accesso; in particolare:
+\begin{itemize}
+\item eseguire una specifica DSL, e visualizzare il risultato in forma tabellare;
+\item modificare una specifica DSL;
+\item creare una specifica DSL;
+\item leggere il codice della specifica DSL.
+\end{itemize}
+Le ultime tre operazioni coinvolgono l'editor fornito da MaaS.
+\subsubsection{Operazioni sulla dashboard}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=12cm]{res/sections/backend/activities/operazioniDashboard.png}
+\caption{Operazioni sulla dashboard}
+\end{center}
+\end{figure}
+Un utente autenticato può decidere di effettuare varie operazioni sulla propria dashboard; in particolare:
+\begin{itemize}
+\item visualizzare gli elementi;
+\item rimuovere degli elementi;
+\item modificare degli elementi.
+\end{itemize}
+La rimozione degli elementi viene effettuata dopo una richiesta di conferma.
+\paragraph{Visualizzazione elementi della dashboard} \mbox{} \\
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=12cm]{res/sections/backend/activities/visualizzazioneElementDashboard.png}
+\caption{Visualizzazione elementi della dashboard}
+\end{center}
+\end{figure}
+La dashboard si compone di cell, document e collection. Un utente può decidere di visualizzare questi elementi.
+\paragraph{Modifica elementi della dashboard} \mbox{} \\
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=12cm]{res/sections/backend/activities/modificaElementDashboard.png}
+\caption{Modifica elementi della dashboard}
+\end{center}
+\end{figure}
+La dashboard si compone di cell, document e collection. Un utente può decidere di modificare uno di questi tre elementi.
+\subparagraph{Modifica cell} \mbox{} \\
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=12cm]{res/sections/backend/activities/modificaCell.png}
+\caption{Modifica cell}
+\end{center}
+\end{figure}
+Durante la modifica di una cell, l'utente autenticato può fare una delle seguenti tre operazioni:
+\begin{itemize}
+\item aggiungere un valore;
+\item modificare un valore;
+\item ordinare il risultato di una query.
+\end{itemize}
+\subparagraph{Gestione document} \mbox{} \\
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=12cm]{res/sections/backend/activities/modificaDocument.png}
+\caption{Modifica document}
+\end{center}
+\end{figure}
+Durante la gestione di un document, l'utente autenticato può fare una delle seguenti quattro operazioni:
+\begin{itemize}
+\item modificarlo;
+\item rimuoverlo;
+\item inviarlo per email;
+\item esportarlo e salvarlo in locale.
+\end{itemize}
+\subparagraph{Gestione collection} \mbox{} \\
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=12cm]{res/sections/backend/activities/modificaCollection.png}
+\caption{Modifica collection}
+\end{center}
+\end{figure}
+Durante la gestione di una collection, l'utente autenticato può fare una delle seguenti cinque operazioni:
+\begin{itemize}
+\item modificarla;
+\item rimuoverla;
+\item ordinare i dati contenuti;
+\item inviarla per email;
+\item esportarla e salvarla in locale.
+\end{itemize}
+\subsubsection{Operazioni sui permessi degli utenti}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=12cm]{res/sections/backend/activities/operazioniSuUtenti.png}
+\caption{Operazioni sui permessi degli utenti}
+\end{center}
+\end{figure}
+Un utente autenticato, admin o owner, può modificare, o rimuovere, i permessi di un utente della stessa company.
+\subsubsection{Operazioni sugli utenti}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=12cm]{res/sections/backend/activities/operazioniSuUtenti.png}
+\caption{Operazioni sugli utenti}
+\end{center}
+\end{figure}
+Un utente autenticato, admin o owner, può gestire gli utenti della company che gestisce. In particolare può:
+\begin{itemize}
+\item invitare un utente;
+\item rimuovere un utente;
+\item inserire un utente.
+\end{itemize}
+\paragraph{Invito utente} \mbox{} \\
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=12cm]{res/sections/backend/activities/invitoUtente.png}
+\caption{Invito utente}
+\end{center}
+\end{figure}
+Un utente autenticato, owner o admin, può invitare un nuovo utente nella propria company inserendo un indirizzo email ed inviando la richiesta tramite un pulsante presente nella pagina.
+\paragraph{Inserimento utente} \mbox{} \\
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=12cm]{res/sections/backend/activities/inserimentoUtente.png}
+\end{center}
+\end{figure}
+Un utente autenticato, owner o admin, può inserire manualmente un nuovo utente nella company senza prima invitarlo. Per farlo deve fornire indirizzo email e password del nuovo utente.
 \subsection{Editor}
 %todo
 \subsection{Super Admin}
