@@ -1,5 +1,227 @@
 \section{Back end}
+\subsection{Formalismo utilizzato}
+L'utilizzo del framework ExpressJS come base per il server ha evidenziato la necessità di regolamentare alcune convenzioni utilizzate. Queste convenzioni riguardano il formalismo utilizzato per la rappresentazione in quanto concetti come moduli, middlewares e first-class function non hanno una corrispondenza nei diagrammi UML.
+I moduli verranno rappresentati come classi.
+%% DA FINIRE
+
 \subsection{Descrizione generale}
+L'implementazione scelta per il backend dell'applicazione è un server con architettura REST. Ciò implica che:
+\begin{itemize}
+\item l'applicazione renda disponibili le sue funzioni in veste di risorse web;
+\item ogni risorsa resa disponibile è indirizzabile univocamente utilizzando un indirizzo URL;
+\item l'interfaccia delle risorse deve essere uniforme e deve garantire un insieme ben definito di operazioni e una gestione priva di stato delle operazioni.
+\end{itemize}
+
+Tale architettura permette l'indipendenza completa tra backend e frontend, permettendo così a espansioni su altre piattaforme senza dover modificare il backend dell'applicazione.
+
+L'architettura del backend segue il patter MVC per quanto concerne i ruoli di Model e Controller. 
+Il ruolo di Controller tuttavia verrà implementato da uno stack di middleware come suggerito dal framework ExpressJS.
+
+IMMAGINE DEI PACKAGE DEL BACKEND
+
+\subsection{Descrizione dei package}
+\subsubsection{Models}
+\paragraph*{Descrizione}
+Package che racchiude i moduli contenenti la business logic dell'applicazione. Ciascuno di qeusti moduli implementa un modello Mongoose e definisce i metodi con cui interagirvi (aggiungere, rimuovere e modificare i contenuti).
+
+\paragraph*{Package contenuti}
+\begin{itemize}
+\item UserModel
+\item DSLModel
+\item CompanyModel
+\item DatabaseModel
+\end{itemize}
+
+IMMAGINE DEL PACKAGE
+
+\subsubsection{UserModel}
+\paragraph*{Descrizione}
+
+Racchiude la business logic legata agli utenti. Viene implementato tramite Module pattern di Javascript. 
+
+\paragraph*{Utilizzo}
+Il modello viene utilizzato sia per la rappresentazione di un utente nell'applicazione, sia per l'autenticazione nel sistema.
+
+\paragraph*{Relazioni con altri moduli}
+\begin{itemize}
+\item Mongoose
+\item Mongoose-validator
+\item Authenticator
+\end{itemize}
+
+\subsubsection{CompanyModel}
+\paragraph*{Descrizione}
+
+Racchiude la business logic legata alle Company. Viene implementato tramite Module pattern di Javascript. 
+
+\paragraph*{Utilizzo}
+Il modello rappresenta una Company nel sistema.
+
+\paragraph*{Relazioni con altri moduli}
+\begin{itemize}
+\item Mongoose
+\item Mongoose-validator
+\end{itemize}
+
+\subsubsection{DatabaseModel}
+\paragraph*{Descrizione}
+
+Racchiude la business logic legata al collegamento con i database delle Company. Viene implementato tramite Module pattern di Javascript. 
+
+\paragraph*{Utilizzo}
+Il modello rappresenta la connessione ad un database aziendale di una company. Contiene i dati per effettuare l'accesso al database e il riferimento alle collections definite su tale database, permettendo così all'utente di poter definire per ciascuna collection la possibilità di interagirvi da parte di tutti i membri della propria Company o solo degli admin.
+
+\paragraph*{Relazioni con altri moduli}
+\begin{itemize}
+\item Mongoose
+\item Mongoose-validator
+\end{itemize}
+
+\subsubsection{DSLModel}
+\paragraph*{Descrizione}
+
+Racchiude la business logic legata alle specifiche DSL. Viene implementato tramite Module pattern di Javascript. 
+
+\paragraph*{Utilizzo}
+Il modello viene utilizzato per la rappresentazione delle specifiche DSL. Contiene i dati di tali specifiche e le funzioni per poter estrarre i dati richiesti da una specifica DSL.
+
+\paragraph*{Relazioni con altri moduli}
+\begin{itemize}
+\item Mongoose
+\item Mongoose-validator
+\item DSLChecker
+\item DatabaseModel
+\end{itemize}
+
+\subsubsection{Routes}
+\paragraph*{Descrizione}
+Il package Routes contiene l'implementazione dei Router definiti da ExpressJS. Il package è costituito da una serie di moduli che implementano gli endpoint per le API.
+I moduli vengono suddivisi in base al modello che utilizzano. Ciascuna route definita inoltre ha il compito di richiamare i middleware necessari.
+La definizione delle API seguirà la descrizione riportata nella sezione apposita di questo documento.
+
+\paragraph*{Moduli contenuti}
+\begin{itemize}
+\item UserRouter
+\item CompanyRouter
+\item DSLRouter
+\item DatabaseRouter
+\item RouterFacade
+\end{itemize}
+
+\subsubsection{UserRouter}
+\paragraph*{Descrizione}
+Questo modulo contiene la definizione degli endpoint riguardanti gli utenti. 
+
+\paragraph*{Relazione con altri moduli}
+\begin{itemize}
+\item Authenticator
+\item UserModel
+\end{itemize}
+
+\subsubsection{CompanyRouter}
+\paragraph*{Descrizione}
+Questo modulo contiene la definizione degli endpoint riguardanti le company.
+
+\paragraph*{Relazione con altri moduli}
+\begin{itemize}
+\item Authenticator
+\item CompanyModel
+\end{itemize}
+
+\subsubsection{DSLRouter}
+\paragraph*{Descrizione}
+Questo modulo contiene la definizione degli endpoint riguardanti le specifiche DSL.
+
+\paragraph*{Relazione con altri moduli}
+\begin{itemize}
+\item Authenticator
+\item DSLModel
+\end{itemize}
+
+\subsubsection{DatabaseRouter}
+\paragraph*{Descrizione}
+Questo modulo contiene la definizione degli endpoint riguardanti le connessioni ai database aziendali.
+
+\paragraph*{Relazione con altri moduli}
+\begin{itemize}
+\item Authenticator
+\item DatabaseModel
+\end{itemize}
+
+\subsubsection{RouterFacade}
+\paragraph*{Descrizione}
+Oggetto che implementa il Facade Design Pattern. Tale oggetto incorpora tutti gli endpoint definiti dagli altri router.
+
+\paragraph*{Relazione con altri moduli}
+\begin{itemize}
+\item Authenticator
+\item UserRouter
+\item CompanyRouter
+\item DSLRouter
+\item DatabaseRouter
+\end{itemize}
+
+\subsubsection{Config}
+\paragraph*{Descrizione}
+Questo package contiene la classe Configurator che, in base alla variabile d'ambiente NODE_ENV, restituisce l'oggetto contenente tutte le informazioni utili alla configurazione del server.
+
+\paragraph*{Moduli contenuti}
+\begin{itemize}
+\item Configurator
+\item DevConfiguration
+\item TestConfiguration
+\item ProdConfiguration
+\end{itemize}
+
+\subsubsection{Lib}
+\paragraph*{Descrizione}
+Questo package contiene tutti i moduli di supporto al sistema e i middlewares generici per ExpressJS.
+
+\paragraph*{Moduli contenuti}
+\begin{itemize}
+\item LevelChecker
+\item AuthenticationChecker
+\item DSL checker
+\end{itemize}
+
+\subsubsection{LevelChecker}
+\paragraph*{Descrizione}
+Middleware che si occupa di verificare se l'utente che effettua una richiesta al server ha i livelli minimi di accesso per poterla eseguire.
+
+\paragraph*{Utilizzo}
+Viene utilizzato nelle routes in cui deve essere garantito un livello utente minimo di accesso per portare a termine la richiesta.
+
+\paragraph*{Relazione con altri moduli}
+\begin{itemize}
+\item Router
+\end{itemize}
+
+\subsubsection{AuthenticationChecker}
+\paragraph*{Descrizione}
+Modulo che definisce due middleware: uno per effettuare il login, l'altro per l'autenticazione di una richiesta.
+
+\paragraph*{Utilizzo}
+Questo modulo viene utilizzato per definire l'endpoint per effettuare il login all'applicazione e offre il middleware che permette di autenticare le richieste. Tale middleware si occuperà di estrarre il token dalle richieste, verificarne la correttezza e aggiungere l'utente verificato nella richiesta per i prossimi middleware.
+
+
+\begin{itemize}
+\item Router
+\end{itemize}
+
+\subsubsection{DSL Checker}
+\paragraph*{Descrizione}
+Modulo che verifica la correttezza sintattica e di contenuto di una specifica DSL.
+
+\paragraph*{Utilizzo}
+Questo modulo viene richiamato in DSLModel per verificare che la specifica DSL che viene salvata o modificata sia valida per l'esecuzione.
+
+\paragraph*{Relazione con altri moduli}
+\begin{itemize}
+\item DSLModel
+\end{itemize}
+
+% ======================================================================================
+
 \subsubsection{Comunicazione tra client e server}
 Per la creazione del back end di MaaS si è deciso di utilizzare Node.js e, in particolare, il framework ExpressJS, che permette la creazione semplificata di server REST. Il lato back end sarà quindi costituito da un insieme di API protette da strati diversi di sicurezza. \\
 Ciascuna API del webserver fornirà una risposta in formato JSON per permettere la fruizione delle informazioni. Fornirà nello stesso formato anche gli eventuali messaggi di errore generati nel corpo dei metodi del server. Tali messaggi di errore saranno così composti: 
