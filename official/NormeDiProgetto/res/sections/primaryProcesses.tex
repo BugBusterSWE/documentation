@@ -1,12 +1,31 @@
 %\href{nome}{url}
 \section{Processi primari}
-	\subsection{\glossaryItem{Processo} di sviluppo}
-        \subsubsection{Scopo del \glossaryItem{processo}}
+
+	\subsection{Processo di fornitura}	
+	\subsubsection{Oggetto del processo}
+	L'oggetto del presente \glossaryItem{Processo} è la stesura dello \StudioDiFattibilita, compito
+	di cui si occupa un \textit{Analista}.
+	\subsubsection{Struttura dello \textit{Studio di Fattibilit\'a v\VersioneSF{}}}
+		\begin{itemize}
+			\item Capitolato scelto;
+				\begin{enumerate}
+					\item Descrizione
+					\item Valutazione sul dominio del \glossaryItem{progetto}
+					\item Motivazioni della scelta
+				\end{enumerate}	
+			\item Valutazioni sugli altri capitolati, con rispettivi aspetti positivi e negativi.
+		\end{itemize}
+
+
+	\subsection{Processo di sviluppo}
+        \subsubsection{Scopo del processo}
         Lo scopo del presente \glossaryItem{processo} \`e la realizzazione di un elemento di sistema implementato come prodotto
         software. Il \glossaryItem{processo} in esame produce un software che soddisfa i requisiti architetturali, sottoposto
         in seguito alle attivit\`a di \glossaryItem{verifica} e \glossaryItem{validazione}.
-        \subsubsection{Risultati principali del \glossaryItem{processo}}
-        Sono stati previsti i seguenti risultati positivi derivanti da una corretta implementazione del \glossaryItem{processo di sviluppo}:
+        
+        \subsubsection{Risultati principali del processo}
+        Sono stati previsti i seguenti risultati positivi derivanti da una corretta implementazione del \textit{\glossaryItem{processo} di sviluppo}:
+
         \begin{itemize}
           \item Requisiti software ben delineati;
           \item Gli elementi tecnologici e di progettazione sono identificati;
@@ -14,7 +33,7 @@
             riducendo cos\`i i rischi provenienti dalla libert\`a dei \glossaryItem{programmatori}.
         \end{itemize}
         
-		\paragraph*{Attività di Analisi dei Requisiti}
+		\paragraph*{1. Attività di Analisi dei Requisiti}
 			\paragraph*{Scopo}
 				Gli analisti del gruppo dovranno ricavare i requisiti utili per il \glossaryItem{progetto}
 				dal capitolato e dagli incontri con il proponente, avendo come obiettivo la
@@ -87,7 +106,7 @@
 				Si \`e scelto inoltre di adottare l'editor \glossaryItem{UML} \textit{Astah}.   %riferimento per astah
 			
 			
-		\paragraph*{Attività di Progettazione}
+		\paragraph*{2. Attività di Progettazione}
 			\paragraph*{Scopo}
 		     %Costruzione a priori perseguendo la correttezza per costruzione
 		     %invece che inseguendo la correttezza per correzione     <<  slide PROGETTAZIONE
@@ -127,7 +146,7 @@
 		        \end{itemize}
 			 
 		
-		\paragraph*{Attività di Codifica}
+		\paragraph*{3. Attività di Codifica}
                 %citare https://github.com/RisingStack/node-style-guide/blob/master/README.md
                 \paragraph*{Scopo}
                 La presente attivit\`a ha come scopo la traduzione in codice sorgente dei risultati ottenuti in sede
@@ -143,10 +162,27 @@
                      %<<< slide 30/30 di ANALISI_STATICA
 		  \item L’\glossaryItem{efficacia} dei metodi di analisi statica \`e strettamente correlata alla qualit\`a di strutturazione del codice.
                 \end{itemize}
-                
+
+		\paragraph*{\textit{10 regole d'oro}}
+		Perseguendo l'obiettivo della semplificazione dell'analisi (sia statica sia dinamica),
+           	i programmatori del gruppo cercheranno di essere quanto più conformi possibile alle 10 regole
+           	espresse nel documento \textit{The Power of 10: Rules for Developing Safety-Critical Code}, che riportiamo di seguito per comodità:
+                	\begin{enumerate}
+                        	\item \textit{Usare costrutti di controllo di flusso i più semplici possibile}
+                        	\item \textit{Usare iterazioni con limite superiore statico}
+                        	\item \textit{Non usare allocazione dinamica di memoria dopo l'inizializzazione}
+                        	\item \textit{Limitare la lunghezza di ogni singolo sottoprogramma a 60 linee}
+                        	\item \textit{Controllare che tutti i parametri in ingresso e in uscita siano validi}
+                        	\item \textit{Limitare al massimo la compilazione condizionale}
+                        	\item \textit{Puntare ad un uso intensivo di asserzioni(almeno 2 per sottoprogramma)}
+                        	\item \textit{Puntare al massimo livello architetturale di \textit{data hiding}}
+                        	\item \textit{Limitare al massimo l'uso dei puntatori e il livello di dereferenziazione}
+                        	\item \textit{Il codice va compilato da subito usando il compilatore nel modo più restrittivo}
+			\end{enumerate}
+
                 \paragraph*{Strumenti}
                 Il gruppo ha stabilito di utilizzare i seguenti editor:
                 \begin{itemize}
-                  \item \textbf{Emacs} per la stesura del codice \LaTeX;    %https://www.gnu.org/software/emacs/
-                  \item \textbf{WebStorm} per il codice \glossaryItem{Javascript}.      %https://www.jetbrains.com/webstorm/
+                  \item \textbf{Emacs}(\url{https://www.gnu.org/software/emacs/}) per la stesura del codice \LaTeX; 
+                  \item \textbf{WebStorm}(\url{%https://www.jetbrains.com/webstorm/}) per il codice \glossaryItem{Javascript}.      
                 \end{itemize}
