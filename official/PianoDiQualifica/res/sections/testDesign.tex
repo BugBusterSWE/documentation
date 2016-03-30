@@ -1,19 +1,20 @@
+\newpage
 \section{Pianificazione dei test}
 
-	Si vuole adottare una strategia di verifica del software tramite test opportunamente predeterminati e che garantiscano almeno un test per ogni requisito. I test sono l’applicazione delle tecniche di verifica dinamica introdotte nelle \NormeDiProgetto; tali attività, oltre a richiedere l’esecuzione del programma, devono poter essere ripetibili, ossia tramite delle specifiche su come riprodurre i test vogliamo che il loro output sia deterministico. È importante che i test di unità vengano svolti in parallelo, dando precedenza alle unità che producono risultati utili alla com- prensione del loro funzionamento integrato, l’ambiente di testing deve soddisfare tale obiettivo. L’attività di test deve produrre un log G che specifica quando e chi ha eseguito il test e con quali input; l’insorgenza di failure G deve essere tracciata e catalogata.
+	Si vuole adottare una strategia di verifica del software tramite test opportunamente predeterminati e che garantiscano almeno un test per ogni requisito. I test sono l’applicazione delle tecniche di analisi dinamica introdotte nelle \NormeDiProgetto; tali attività, oltre a richiedere l’esecuzione del programma, devono poter essere ripetibili, ossia tramite delle specifiche su come riprodurre i test vogliamo che il loro output sia deterministico. È importante che i test di unità vengano svolti in parallelo, dando precedenza alle unità che producono risultati utili alla comprensione del loro funzionamento integrato. L’ambiente di testing deve soddisfare tale obiettivo. L’attività di test deve produrre un log che specifica quando e chi ha eseguito il test e con quali input; l’insorgenza di failure deve essere tracciata e catalogata.
 
 \subsection{Livelli di testing}
-	Il testing del software viene suddiviso in livelli differenti e si concretizzano in un esecuzione bottom-up che avanza sequenzialmente alle attività di codifica e di validazione. I test che si andranno ad applicare sono di cinque tipi, riservando la specifica delle ultime due tipologie alla prossima revisione:
+	Il testing del software viene suddiviso in livelli differenti, che si concretizzano in un'esecuzione bottom-up che avanza sequenzialmente alle attività di codifica e di validazione. I test da effettuare sul prodotto sono di cinque tipi, ma gli ultimi due saranno specificati nella prossima revisione:
 
 \begin{enumerate}
-	\item Test di Validazione (TV): viene verificato che il prodotto soddisfi quanto richiesto dal proponente G individuando delle macro azioni da eseguire sul sistema che un normale utente svolge comunemente;
-	\item Test di Sistema (TS): sono test relativi al comportamento dell’intero sistema ossia viene verificato che la sua architettura generale funziona complessivamente bene;
-	\item Test di Integrazione (TI): vengono verificate le componenti del sistema contenute nella Specifica Tecnica v3.0.0 , ossia viene verificato che i package G siano funzionanti e in grado di funzionare nel loro insieme;
+	\item Test di Validazione (TV): viene verificato che il prodotto soddisfi quanto richiesto dal proponente individuando delle macro azioni che un utente svolge comunemente sul sistema;
+	\item Test di Sistema (TS): sono test relativi al comportamento dell’intero sistema. Viene verificato che l'architettura generale funzioni complessivamente bene;
+	\item Test di Integrazione (TI): vengono verificate le componenti del sistema contenute nella \SpecificaTecnica, ossia viene verificato che i package siano funzionanti e in grado di funzionare nel loro insieme;
 	\item Test di Unità (TU): viene testata ogni unità, ossia la più piccola parte di lavoro assegnabile ad un programmatore. In questo progetto una unità dovrebbe corrispondere ad una function o a un method;
-	\item Test di Regressione (TR): possono essere test di tutte le tipologie succitate che devono mostrare il funzionamento del prodotto a seguito di una modifica.
+	\item Test di Regressione (TR): possono essere test di tutte le tipologie succitate, e devono mostrare il funzionamento del prodotto a seguito di una modifica.
 \end{enumerate}
 
-	La figura 2 illustra come i test elencati vengono distribuiti durante in ciclo di vita del prodotto.
+	La seguente figura illustra come i test elencati vengono distribuiti durante in ciclo di vita del prodotto.
 
 	\begin{figure}[H]
 		\centering
