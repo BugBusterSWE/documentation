@@ -1,34 +1,12 @@
+\newpage
 \section{Visione generale della strategia di verifica}
 La volontà del \glossaryItem{team} è quella di automatizzare il più possibile il lavoro di \glossaryItem{verifica}. Saranno quindi utilizzati dei \glossaryItem{tool}s adeguatamente configurati, con lo scopo di avere un riscontro affidabile e quantitativo che permetta di assicurare il grado di \glossaryItem{qualità} voluto. 
 
-\subsection{Definizione degli obiettivi}
-\subsubsection{Qualità di processo}
-Molto spesso prodotti scadenti derivano da processi scadenti. Per questo motivo, e per le seguenti ragioni, assicurare la \glossaryItem{qualità} dei processi è un obiettivo primario per il \glossaryItem{team} BugBusters:
-\begin{itemize}
-	\item aiuta ad ottimizzare l'uso di risorse;
-	\item permette di contenere i costi;
-	\item migliora la stima dei rischi e degli impegni.
-\end{itemize}
-Un \glossaryItem{processo} dovrebbe essere in grado di migliorare costantemente le proprie performance, che devono quindi essere costantemente misurabili e misurate. Inoltre, le attività di ciascun \glossaryItem{processo} e i costi associati devono essere in linea con quanto indicato nel \PianoDiProgetto. \\
-Si è dunque deciso di perseguire la \glossaryItem{qualità} servendosi dei seguenti modelli: 
-\begin{itemize}
-	\item \glossaryItem{SPICE}\footnote{Si veda appendice \ref{AppQualitaProcessi} per approfondimenti} (\textbf{S}oftware \textbf{P}rocess \textbf{I}mprovement and \textbf{C}apability d\textbf{E}termination): definito nello standard ISO/IEC 15504, per poter valutare in modo oggettivo i processi dal punto di vista della maturità;
-	\item \glossaryItem{PDCA}\footnote{Si veda appendice \ref{AppPDCA} per approfondimenti} (\textbf{P}lan \textbf{D}o \textbf{C}hek \textbf{A}ct): per il controllo delle attività di \glossaryItem{processo} ripetibili e misurabili e per la manutenibilità dei processi stessi incrementandone la \glossaryItem{qualità}.
-\end{itemize}
-
-\subsubsection{Qualità di prodotto}
+\subsection{Qualit\'a di prodotto}
+\subsubsection{Obiettivi}
 Lo standard ISO/IEC 9126\footnote{Si veda appendice \ref{AppQualitaProdotto} per approfondimenti} classifica la \glossaryItem{qualità} del software e definisce delle metriche per la sua misurazione. Il \glossaryItem{team} BugBusters ha scelto di utilizzare queste metriche, al fine di assicurare la \glossaryItem{qualità} del prodotto finale.
 
-\subsection{Procedure di controllo}
-\subsubsection{Qualità di processo}
-La pianificazione delle attività volte al miglioramento continuo dei processi sono descritte nel \PianoDiProgetto. Le linee guida per la gestione della \glossaryItem{qualità} del \glossaryItem{processo}, invece, seguono il modello PDCA e descrivono come devono essere attuate le procedure di controllo:
-\begin{itemize}
-	\item la pianificazione deve essere dettagliata, e le attività pianificate devono essere monitorate;
-	\item le risorse necessarie per conseguire gli obiettivi devono essere definite;
-	\item il miglioramento della \glossaryItem{qualità} del \glossaryItem{processo} deve essere verificato attraverso l'utilizzo di apposite metriche, che verranno descritte in seguito.
-\end{itemize}
-
-\subsubsection{Qualità di prodotto}
+\subsubsection{Procedure}
 Il controllo per la \glossaryItem{qualità} del prodotto definisce i seguenti processi:
 \begin{itemize}
 	\item \textbf{SQA} (\textbf{S}oftware \textbf{Q}uality \textbf{A}ssurance): si occupa di assicurare che i processi siano implementati secondo quanto pianificato e che siano forniti sistemi di misurazione dei processi;
@@ -36,28 +14,97 @@ Il controllo per la \glossaryItem{qualità} del prodotto definisce i seguenti pr
 	\item \textbf{\glossaryItem{validazione}}: si occupa di accertare che i prodotti realizzati siano conformi alle attese.
 \end{itemize}
 
-\subsection{Strategia}
-Nel \PianoDiProgetto vengono fissate delle scadenze che devono necessariamente essere rispettate: è dunque necessario definire un'efficace strategia di qualifica. I controlli saranno effettuati in maniera automatica secondo quanto previsto nelle \NormeDiProgetto. 
+\subsubsection{Metriche}\label{MetricheSoftware}
+\paragraph{Software}\mbox{}\\
+Di seguito vengono indicate le metriche riguardanti il software che il \glossaryItem{team} BugBusters ha deciso di adottare.
 
-\subsection{Responsabilità}
-La responsabilità della \glossaryItem{verifica} viene affidata al \textit{Responsabile} e ai \textit{Verificatori} secondo quanto previsto nel \PianoDiProgetto.
+\textbf{Dimensioni del prodotto software}\\
 
-\subsection{Risorse}
-Vengono consumati due tipi di risorse:
+Rappresenta le dimensioni del prodotto software; generalmente \`e misurata in termini di migliaia di linee di codice (\glossaryItem{KLOC}s, Thousands \textbf{L}ine \textbf{O}f \textbf{C}ode), ma da alcuni anni è stata introdotto una nuova misura, legata al numero di funzionalità offerte, e quindi dal valore che il prodotto ha per l'utente. Questa seconda misurazione è espressa come numero di punti funzione (\glossaryItem{FP}s, \textbf{F}unction \textbf{P}oints). \\
+\begin{center}
+	\textit{Dimensioni del prodotto software} = \textit{\glossaryItem{KLOC}s} \\
+	\textit{Dimensioni del prodotto software} = \textit{\glossaryItem{FP}s} 
+\end{center}
+
+\textbf{Complessità ciclomatica}\\
+
+Permette di misurare la complessità del flusso di controllo di una componente (procedura, metodo, classe o modulo) calcolando tutti i possibili cammini indipendenti del grafo del flusso di controllo. Tale grafo è composto dai seguenti elementi:
 \begin{itemize}
-	\item \textbf{umane}: in particolare il \textit{Responsabile} e il \textit{Verificatore}; le ore impiegate vengono contabilizzate e messe a calendario secondo quanto previsto dal \PianoDiProgetto e dalle \href{http://www.math.unipd.it/~tullio/IS-1/2015/Dispense/PD01.pdf}{regole} del \glossaryItem{progetto} didattico. Ai fini della qualifica, tuttavia, si può tralasciare l'aspetto economico, in quanto esso non rientra nel dominio del presente documento;
-		\item \textbf{tecnologiche}: i \glossaryItem{tool} utilizzati per il controllo della \glossaryItem{qualità}. Le operazioni effettuate  consumeranno unità di calcolo considerate a costo nullo, in quanto le elaborazioni verranno effettuate su macchine per le quali non è richiesto nessun contributo e per un tempo non degno di nota.
+	\item i nodi corrispondono a gruppi indivisibili di comandi;
+	\item gli archi collegano due nodi se e solo se il secondo gruppo di istruzioni può essere eseguito immediatamente dopo il primo.
+\end{itemize}
+Si vuole utilizzare tale metrica per limitare la complessità durante la fase di sviluppo e per determinare il numero di casi di test necessari per la \glossaryItem{verifica}, in quanto permette di dare un limite superiore al numero di test necessari per raggiungere la massima copertura della componente analizzata \footnote{Stein, C., G. Cox and L. Etzkorn, 2005. Exploring the Relationship between Cohesion and Complexity. J. Comput. Sci., 1: 137-144.}.
+\begin{center}
+	\textit{Complessità ciclomatica v(G)} = \textit{e} - \textit{n} + 2 * \textit{p}
+\end{center}
+Dove:
+\begin{itemize}
+	\item \textbf{e} è il numero di archi del grafo \textit{G};
+	\item \textbf{n} è il numero di nodi del grafo \textit{G};
+	\item \textbf{p} è il numero di componenti connesse del grafo \textit{G}.
+\end{itemize}
+\textbf{Range utilizzati}:
+\begin{itemize}
+	\item Range di accettazione : [0 - 15]
+	\item Range ottimale: [0 - 10]
 \end{itemize}
 
-\subsection{Misure e Metriche}\label{MisureMetriche}
-Di seguito sono elencate le metriche utilizzate per valutare i processi in modo quantitativo. Vengono inoltre riportati i range utilizzati, secondo la seguente classificazione:
-\begin{itemize}
-	\item \textbf{di accettazione}: il valore ha raggiunto la soglia minima dell'accettazione;
-	\item \textbf{ottimale}: il valore ha raggiunto le massime aspettative del \glossaryItem{team}. L'obiettivo è quello che tutti i valori siano all'interno di questo range.
-\end{itemize}
-I valori che non rientrano in questi due range sono considerati non accettabili.
+\textbf{Number of methods}\\
 
-\subsubsection{Metriche per la documentazione}\label{MetricheDoc}
+Rappresenta la media di occorrenze di metodi per \glossaryItem{package}: un \glossaryItem{package}, infatti, non dovrebbe contenere un numero eccessivo di metodi. Valori troppo elevati indicano la necessità di una migliore decomposizione del \glossaryItem{package}. \\
+
+\textbf{Range utilizzati}:
+
+\begin{itemize}
+	\item Range di accettazione : [3 - 10]
+	\item Range ottimale: [0 - 7]
+\end{itemize}
+
+
+\textbf{Bugs per linee di codice}\\
+
+Rappresenta il numero di \glossaryItem{bug} trovati in un insieme di linee di codice: con la crescita del prodotto è utile misurare il rapporto tra i difetti trovati e la dimensione del prodotto (in termini di \glossaryItem{KLOC}s), tenendo conto del fatto che un incremento del sorgente comporta un aumento della possibilità di inserimento di un errore. \\
+
+\textbf{Range utilizzati}:
+
+\begin{itemize}
+	\item Range di accettazione : [0 - 60]
+	\item Range ottimale: [0 - 20]
+\end{itemize}
+Misurati sull'intera dimensione in \glossaryItem{KLOC}s del prodotto.\\
+
+\textbf{Variabili non utilizzate e/o non definite}\\
+
+Rappresenta il numero di variabili che vengono definite, ma non utilizzate, o viceversa. Questo viene considerato \glossaryItem{pollution}, e pertanto considerato inaccettabile. La misurazione avviene mediante un'analisi dell'\textbf{\glossaryItem{AST}} (\textbf{A}bstract \textbf{S}yntax \textbf{T}ree). \\
+
+\textbf{Range utilizzati}:
+\begin{itemize}
+	\item Range di accettazione : [0 - 0]
+	\item Range ottimale: [0 - 0]
+\end{itemize}
+
+
+\textbf{Numero di parametri per metodo}\\
+
+Rappresenta il numero di parametri formali di un metodo. Un metodo con troppi parametri formali risulta complesso e poco mantenibile; pertanto è necessario che tale numero sia contenuto. \\
+
+\textbf{Range utilizzati}:
+\begin{itemize}
+	\item Range di accettazione : [0 - 6]
+	\item Range ottimale: [0 - 4]
+\end{itemize}
+
+\textbf{Numero di funzioni d'interfaccia per \glossaryItem{package}}\\
+
+Rappresenta il numero di funzioni che il \glossaryItem{package} mette a disposizione dei suoi utenti. \\
+
+\textbf{Range utilizzati}:
+\begin{itemize}
+	\item Range di accettazione : [0 - 20]
+	\item Range ottimale: [1 - 10]
+\end{itemize}
+
+\paragraph{Documentazione}\mbox{}\\
 \hypertarget{metriche_documenti}{}
 La \glossaryItem{qualità} di un documento dipende fortemente dai suoi contenuti e dalla sua leggibilità. Tuttavia, a causa della scarsa esperienza dei membri del \glossaryItem{team}, valutarla risulta molto difficile. Si è pertanto scelto di affidarsi a parametri oggettivi e facilmente misurabili attraverso dei \glossaryItem{tool} automatici.\\
 
@@ -87,7 +134,32 @@ In generale risulta che testi con indice:
 \end{itemize}
 Questi valori sono stati fissati tenendo conto delle soglie di cui sopra, e soprattutto del fatto che la documentazione del presente \glossaryItem{progetto} è destinata a persone sufficientemente preparate, competenti ed istruite.
 
-\subsubsection{Metriche per i processi}\label{MetricheProc}
+
+
+\subsection{Qualit\'a di processo}
+\subsubsection{Obiettivi}
+Molto spesso prodotti scadenti derivano da processi scadenti. Per questo motivo, e per le seguenti ragioni, assicurare la \glossaryItem{qualità} dei processi è un obiettivo primario per il \glossaryItem{team} BugBusters:
+\begin{itemize}
+	\item aiuta ad ottimizzare l'uso di risorse;
+	\item permette di contenere i costi;
+	\item migliora la stima dei rischi e degli impegni.
+\end{itemize}
+Un \glossaryItem{processo} dovrebbe essere in grado di migliorare costantemente le proprie performance, che devono quindi essere costantemente misurabili e misurate. Inoltre, le attività di ciascun \glossaryItem{processo} e i costi associati devono essere in linea con quanto indicato nel \PianoDiProgetto. \\
+Si è dunque deciso di perseguire la \glossaryItem{qualità} servendosi dei seguenti modelli: 
+\begin{itemize}
+	\item \glossaryItem{SPICE}\footnote{Si veda appendice \ref{AppQualitaProcessi} per approfondimenti} (\textbf{S}oftware \textbf{P}rocess \textbf{I}mprovement and \textbf{C}apability d\textbf{E}termination): definito nello standard ISO/IEC 15504, per poter valutare in modo oggettivo i processi dal punto di vista della maturità;
+	\item \glossaryItem{PDCA}\footnote{Si veda appendice \ref{AppPDCA} per approfondimenti} (\textbf{P}lan \textbf{D}o \textbf{C}hek \textbf{A}ct): per il controllo delle attività di \glossaryItem{processo} ripetibili e misurabili e per la manutenibilità dei processi stessi incrementandone la \glossaryItem{qualità}.
+\end{itemize}
+
+\subsubsection{Procedure}
+La pianificazione delle attività volte al miglioramento continuo dei processi sono descritte nel \PianoDiProgetto. Le linee guida per la gestione della \glossaryItem{qualità} del \glossaryItem{processo}, invece, seguono il modello PDCA e descrivono come devono essere attuate le procedure di controllo:
+\begin{itemize}
+	\item la pianificazione deve essere dettagliata, e le attività pianificate devono essere monitorate;
+	\item le risorse necessarie per conseguire gli obiettivi devono essere definite;
+	\item il miglioramento della \glossaryItem{qualità} del \glossaryItem{processo} deve essere verificato attraverso l'utilizzo di apposite metriche, che verranno descritte in seguito.
+\end{itemize}
+
+\subsubsection{Metriche}\label{MetricheProc}
 \hypertarget{metriche_processi}{}
 Le seguenti metriche rappresentano un indicatore volto a monitorare i tempi e i costi associati al \glossaryItem{progetto}. Sono metriche di tipo \glossaryItem{consuntivo} che danno un riscontro immediato sullo stato attuale: gli indici verranno valutati dal \textit{Responsabile} e, se necessario, verranno presi provvedimenti per sistemare la situazione.\\
 
@@ -190,88 +262,23 @@ Rappresenta il livello di copertura che i test eseguiti forniscono rispetto alle
 	\item Range ottimale: [80 - 100]
 \end{itemize}
 
-\subsubsection{Metriche per il prodotto software}\label{MetricheSoftware}
-Di seguito vengono indicate le metriche riguardanti il software che il \glossaryItem{team} BugBusters ha deciso di adottare.
 
-\textbf{Dimensioni del prodotto software}\\
 
-Rappresenta le dimensioni del prodotto software; generalmente \`e misurata in termini di migliaia di linee di codice (\glossaryItem{KLOC}s, Thousands \textbf{L}ine \textbf{O}f \textbf{C}ode), ma da alcuni anni è stata introdotto una nuova misura, legata al numero di funzionalità offerte, e quindi dal valore che il prodotto ha per l'utente. Questa seconda misurazione è espressa come numero di punti funzione (\glossaryItem{FP}s, \textbf{F}unction \textbf{P}oints). \\
-\begin{center}
-	\textit{Dimensioni del prodotto software} = \textit{\glossaryItem{KLOC}s} \\
-	\textit{Dimensioni del prodotto software} = \textit{\glossaryItem{FP}s} 
-\end{center}
 
-\textbf{Complessità ciclomatica}\\
 
-Permette di misurare la complessità del flusso di controllo di una componente (procedura, metodo, classe o modulo) calcolando tutti i possibili cammini indipendenti del grafo del flusso di controllo. Tale grafo è composto dai seguenti elementi:
+
+
+
+
+\subsection{Strategia}
+Nel \PianoDiProgetto vengono fissate delle scadenze che devono necessariamente essere rispettate: è dunque necessario definire un'efficace strategia di qualifica. I controlli saranno effettuati in maniera automatica secondo quanto previsto nelle \NormeDiProgetto. 
+
+\subsection{Responsabilità}
+La responsabilità della \glossaryItem{verifica} viene affidata al \textit{Responsabile} e ai \textit{Verificatori} secondo quanto previsto nel \PianoDiProgetto.
+
+\subsection{Risorse}
+Vengono consumati due tipi di risorse:
 \begin{itemize}
-	\item i nodi corrispondono a gruppi indivisibili di comandi;
-	\item gli archi collegano due nodi se e solo se il secondo gruppo di istruzioni può essere eseguito immediatamente dopo il primo.
-\end{itemize}
-Si vuole utilizzare tale metrica per limitare la complessità durante la fase di sviluppo e per determinare il numero di casi di test necessari per la \glossaryItem{verifica}, in quanto permette di dare un limite superiore al numero di test necessari per raggiungere la massima copertura della componente analizzata \footnote{Stein, C., G. Cox and L. Etzkorn, 2005. Exploring the Relationship between Cohesion and Complexity. J. Comput. Sci., 1: 137-144.}.
-\begin{center}
-	\textit{Complessità ciclomatica v(G)} = \textit{e} - \textit{n} + 2 * \textit{p}
-\end{center}
-Dove:
-\begin{itemize}
-	\item \textbf{e} è il numero di archi del grafo \textit{G};
-	\item \textbf{n} è il numero di nodi del grafo \textit{G};
-	\item \textbf{p} è il numero di componenti connesse del grafo \textit{G}.
-\end{itemize}
-\textbf{Range utilizzati}:
-\begin{itemize}
-	\item Range di accettazione : [0 - 15]
-	\item Range ottimale: [0 - 10]
-\end{itemize}
-
-\textbf{Number of methods}\\
-
-Rappresenta la media di occorrenze di metodi per \glossaryItem{package}: un \glossaryItem{package}, infatti, non dovrebbe contenere un numero eccessivo di metodi. Valori troppo elevati indicano la necessità di una migliore decomposizione del \glossaryItem{package}. \\
-
-\textbf{Range utilizzati}:
-\begin{itemize}
-	\item Range di accettazione : [3 - 10]
-	\item Range ottimale: [0 - 7]
-\end{itemize}
-
-\textbf{Bugs per linee di codice}\\
-
-Rappresenta il numero di \glossaryItem{bug} trovati in un insieme di linee di codice: con la crescita del prodotto è utile misurare il rapporto tra i difetti trovati e la dimensione del prodotto (in termini di \glossaryItem{KLOC}s), tenendo conto del fatto che un incremento del sorgente comporta un aumento della possibilità di inserimento di un errore. \\
-
-\textbf{Range utilizzati}:
-\begin{itemize}
-	\item Range di accettazione : [0 - 60]
-	\item Range ottimale: [0 - 20]
-\end{itemize}
-Misurati sull'intera dimensione in \glossaryItem{KLOC}s del prodotto.\\
-
-\textbf{Variabili non utilizzate e/o non definite}\\
-
-Rappresenta il numero di variabili che vengono definite, ma non utilizzate, o viceversa. Questo viene considerato \glossaryItem{pollution}, e pertanto considerato inaccettabile. La misurazione avviene mediante un'analisi dell'\textbf{\glossaryItem{AST}} (\textbf{A}bstract \textbf{S}yntax \textbf{T}ree). \\
-
-\textbf{Range utilizzati}:
-\begin{itemize}
-	\item Range di accettazione : [0 - 0]
-	\item Range ottimale: [0 - 0]
-\end{itemize}
-
-
-\textbf{Numero di parametri per metodo}\\
-
-Rappresenta il numero di parametri formali di un metodo. Un metodo con troppi parametri formali risulta complesso e poco mantenibile; pertanto è necessario che tale numero sia contenuto. \\
-
-\textbf{Range utilizzati}:
-\begin{itemize}
-	\item Range di accettazione : [0 - 6]
-	\item Range ottimale: [0 - 4]
-\end{itemize}
-
-\textbf{Numero di funzioni d'interfaccia per \glossaryItem{package}}\\
-
-Rappresenta il numero di funzioni che il \glossaryItem{package} mette a disposizione dei suoi utenti. \\
-
-\textbf{Range utilizzati}:
-\begin{itemize}
-	\item Range di accettazione : [0 - 20]
-	\item Range ottimale: [1 - 10]
+	\item \textbf{umane}: in particolare il \textit{Responsabile} e il \textit{Verificatore}; le ore impiegate vengono contabilizzate e messe a calendario secondo quanto previsto dal \PianoDiProgetto e dalle \href{http://www.math.unipd.it/~tullio/IS-1/2015/Dispense/PD01.pdf}{regole} del \glossaryItem{progetto} didattico. Ai fini della qualifica, tuttavia, si può tralasciare l'aspetto economico, in quanto esso non rientra nel dominio del presente documento;
+		\item \textbf{tecnologiche}: i \glossaryItem{tool} utilizzati per il controllo della \glossaryItem{qualità}. Le operazioni effettuate  consumeranno unità di calcolo considerate a costo nullo, in quanto le elaborazioni verranno effettuate su macchine per le quali non è richiesto nessun contributo e per un tempo non degno di nota.
 \end{itemize}
