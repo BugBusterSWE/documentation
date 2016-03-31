@@ -5,13 +5,15 @@ Nella progettazione di MaaS sono stati utilizzati i seguenti design patterns:
 \item \textbf{Builder};
 \item \textbf{Facade};
 \item \textbf{Singleton};
-\item \textbf{Chain of Responsability}.
+\item \textbf{Chain of Responsability};
+\item \textbf{Model-View-Controller}.
 \end{itemize}
 Verrà presentata una descrizione questi design pattern, dividendoli in base al loro tipo, ovvero:
 \begin{itemize}
 \item \textbf{Creazionali}: Builder e Singleton.
 \item \textbf{Strutturali}: Facade.
 \item \textbf{Comportamentali}: Chain of responsability.
+\item \textbf{Architetturali}: Model-View-Controller.
 \end{itemize}
 \subsection{Creazionali}
 \subsubsection{Builder}
@@ -30,10 +32,10 @@ A differenza dei design pattern Abstract Factory e Factory Method, il cui scopo 
 \item Richiede la crezione di un oggetto separato (ConcreteBuilder) per ogni tipo di oggetto da costruire (Product).
 \end{itemize}
 \paragraph{Struttura}
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{res/sections/backend/builder.png}
-\caption{Diagramma di deployment per l'architettura}
+\caption{Design pattern Builder}
 \end{figure}
 \subsubsection{Singleton}
 \paragraph{Descrizione} \mbox{} \\
@@ -51,10 +53,10 @@ Lo scopo del design pattern creazionale denominato Singleton è assicurare l’e
 \item Viola il Single Responsability Principle: controlla sia la propria creazione che il proprio ciclo di vita.
 \end{itemize}
 \paragraph{Struttura} \mbox{} \\
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{res/sections/backend/singleton.png}
-\caption{Diagramma di deployment per l'architettura}
+\caption{Design pattern Singleton}
 \end{figure}
 \subsection{Strutturali}
 \subsubsection{Facade}
@@ -74,13 +76,23 @@ Questo design pattern fornisce un'interfaccia unificata per un insieme di interf
 \end{itemize}
 \paragraph{Svantaggi} \mbox{} \\
 \begin{itemize}
-\item Non aggiunge funzionalità, semplifica solamente le interfacce.
+\item Non aggiunge funzionalità, semplifica solamente le interfacce;
+\item Non nasconde completamente le componenti di un sottosistema;
+\item È un Single point of failure, ovvero se non funziona la classe Facade il problema si tramanda al resto.
 \end{itemize}
 \paragraph{Struttura} \mbox{} \\
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{res/sections/backend/facade.png}
-\caption{Diagramma di deployment per l'architettura}
+\caption{Design pattern Facade}
+\end{figure}
+\paragraph{Contestualizzazione}\mbox{} \\
+Il design pattern Facade è utilizzato nel backend per fornire un'interfaccia semplice per il sottosistema complesso del package Routes. Un modulo, FacadeRouter, fornisce l'interfaccia, ed evita a MaaSServer di dover interagire con i singoli moduli rappresentanti le diverse Routes. \\
+Di seguito è riportato il diagramma delle classi che realizza il design pattern Facade nel backend.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{res/sections/backend/facadeRoutes.png}
+\caption{Design pattern Facade nel backend}
 \end{figure}
 \subsection{Comportamentali}
 \subsubsection{Chain of responsability}
@@ -97,8 +109,43 @@ Le richieste vengono dette implicite poiché il sender non ha alcuna conoscenza 
 \item Non c’è garanzia che la request venga gestita: questo può avvenire quando la catena non è stata costruita in modo rigoroso.
 \end{itemize}
 \paragraph{Struttura} \mbox{} \\
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{res/sections/backend/chainOfResponsability.png}
-\caption{Diagramma di deployment per l'architettura}
+\caption{Design pattern Chain of responsability}
 \end{figure}
+\subsection{Architetturali}
+\subsubsection{Model-View-Controller}
+\paragraph{Descrizione} \mbox{} \\
+Il pattern è basato sulla separazione dei compiti fra i componenti software che interpretano tre ruoli principali:
+\begin{itemize}
+\item il \textbf{Model} fornisce i metodi per accedere ai dati utili all'applicazione;
+\item il \textbf{View} visualizza i dati contenuti nel model e si occupa dell'interazione con utenti e agenti;
+\item il \textbf{Controller} riceve i comandi dell'utente (in genere attraverso il view) e li attua modificando lo stato degli altri due componenti.
+\end{itemize}
+Questo schema, fra l'altro, implica anche la tradizionale separazione fra la logica applicativa (in questo contesto spesso chiamata business logic), a carico del controller e del model, e l'interfaccia utente a carico del view. \\
+Quasi sempre la relazione fra view e model è descrivibile anche come istanza del pattern Observer. A volte, quando è necessario cambiare il comportamento standard dell'applicazione a seconda delle circostanze, il controller implementa anche il pattern Strategy.
+\paragraph{Vantaggi} \mbox{} \\
+\begin{itemize}
+\item Riuso dei componenti dei model: miglior manutenzione e test;
+\item Supporto più semplice per nuovi tipi di client: basta creare una nuova view e un nuovo controller.
+\end{itemize}
+\paragraph{Svantaggi} \mbox{} \\
+\begin{itemize}
+\item Maggiore complessità di progettazione: c'è bisogno di molte più classi per garantire la separazione.
+\end{itemize}
+\paragraph{Struttura} \mbox{} \\
+Il seguente diagramma, non UML, mostra la struttura generale del design pattern MVC.
+\begin{figure}[H]
+\centering
+\includegraphics[height=5cm]{res/sections/backend/mvc.png}
+\caption{Design pattern Model-View-Controller}
+\end{figure}
+\paragraph{Contestualizzazione} \mbox{} \\
+In MaaS, i componenti che realizzano il design pattern MVC sono i seguenti:
+\begin{itemize}
+\item Package Models -> Model;
+\item Package Routes -> Controller;
+\item Viste di Reactjs -> View.
+\end{itemize}
+L'utente interagisce con le viste create tramite il framework Reactjs. I dati vengono richiesti al server attraverso le API REST messe a disposizione. Le richieste vengono gestite con le routes di ExpressJS, e i moduli del package Models vengono utilizzati per accedere ai dati memorizzati dall'applicazione.
