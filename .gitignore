@@ -130,3 +130,6 @@ sympy-plots-for-*.tex/
 #Emacs
 *.*~
 *.glsdefs
+
+# Astah
+*.bak.png
