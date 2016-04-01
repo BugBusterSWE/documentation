@@ -1,0 +1,162 @@
+\section{Tracciamento dei requisiti}
+\subsection{Corrispondenze requisiti - componenti}
+\begin{center}
+  \bgroup
+  \def\arraystretch{1.8}
+  \begin{longtable}{ | l | p{8cm} |}
+    \hline
+    \cellcolor[gray]{0.9} \textbf{Requisito} & \cellcolor[gray]{0.9} \textbf{Componente} \\ \hline
+    
+    R1O 1 & MaaSSapplication::Models::CompanyModel \newline  \\ \hline
+    
+    R1O 1.1 & MaaSSapplication::Models::CompanyModel \newline  \\ \hline
+    
+    R1O 1.2 & MaaSSapplication::Models::UserModel \newline  \\ \hline
+    
+    R1O 1.3 & MaaSSapplication::Models::UserModel \newline  \\ \hline
+    
+    R1O 2 & MaaSSapplication::Models::UserModel \newline  \\ \hline
+
+	R1O 2.1 & MaaSSapplication::Models::UserModel \newline  \\ \hline
+	
+	R1O 3 & MaaSSapplication::Lib::AuthenticationChecker TODO  \newline  \\ \hline
+	
+	R1O 3.1 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Lib::LevelChecker TODO  \newline  \\ \hline
+	
+	R1O 3.2 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Lib::LevelChecker TODO  \newline  \\ \hline
+	
+	R1O 3.3 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Lib::LevelChecker TODO  \newline  \\ \hline
+	
+	R1O 3.4 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Lib::LevelChecker TODO  \newline  \\ \hline
+	
+	R1O 3.5 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Lib::LevelChecker \newline MaaSSapplication::Models::DSLModel  \newline  \\ \hline
+	
+	R1O 3.6 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Lib::LevelChecker \newline MaaSSapplication::Models::UserModel  \newline  \\ \hline
+	
+	R1O 4 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Models::DSLModel  \newline  \\ \hline
+	
+	R1O 4.1 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Models::DSLModel  \newline  \\ \hline
+	
+	R1O 4.2 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Models::DSLModel  \newline  \\ \hline
+	
+	R1O 4.2.1 & MaaSSapplication::Lib::AuthenticationChecker \newline  MaaSSapplication::Models::DSLModel  \newline  \\ \hline
+	
+	R1O 4.2.2 & MaaSSapplication::Lib::AuthenticationChecker \newline  MaaSSapplication::Models::DSLModel  \newline  \\ \hline
+	
+	R1O 4.2.3 & MaaSSapplication::Lib::AuthenticationChecker \newline  MaaSSapplication::Models::DSLModel  \newline  \\ \hline
+	
+	R1O 4.2.4 & MaaSSapplication::Lib::AuthenticationChecker \newline  MaaSSapplication::Models::DSLModel  \newline  \\ \hline
+	
+	R1O 4.2.5 & MaaSSapplication::Lib::AuthenticationChecker \newline  MaaSSapplication::Models::DSLModel  \newline  \\ \hline
+	
+	R1O 4.2.6 & MaaSSapplication::Lib::AuthenticationChecker \newline  TODO, per caso è MaaSSapplication::Routes::DSLRoutes???  \newline  \\ \hline
+	
+	%<< super-admin use cases
+	R1O 5 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Lib::LevelChecker \newline  MaaSSapplication::Models::CompanyModel  \newline  \\ \hline
+	
+	R1O 5.1 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Lib::LevelChecker \newline MaaSSapplication::Models::CompanyModel  \newline  \\ \hline
+	
+	R1O 5.2 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Lib::LevelChecker \newline  MaaSSapplication::Models::CompanyModel  \newline  \\ \hline
+	
+	R1O 6 & MaaSSapplication::Models::UserModel \newline  \\ \hline
+	
+	R1O 7 &MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Lib::LevelChecker \newline  MaaSSapplication::Models::UserModel  \newline  \\ \hline
+	
+	R1O 7.1 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Lib::LevelChecker \newline  MaaSSapplication::Models::UserModel  \newline  \\ \hline
+	
+	R1O 7.2 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Lib::LevelChecker \newline  MaaSSapplication::Models::UserModel  \newline  \\ \hline
+	
+	R1O 7.3 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Lib::LevelChecker \newline  MaaSSapplication::Models::UserModel  \newline  \\ \hline
+
+	R1O 8 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Lib::LevelChecker \newline   MaaSSapplication::Models::UserModel \newline  \\ \hline
+	
+	R1O 9 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Lib::LevelChecker \newline   MaaSSapplication::Models::UserModel \newline  \\ \hline
+	
+    R1O 10 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Lib::LevelChecker \newline   MaaSSapplication::Models::DSLModel \newline  \\ \hline
+    
+    R1O 11 & MaaSSapplication::Models::UserModel \newline  \\ \hline
+	
+	R1O 12 & MaaSSapplication::Models::UserModel  \newline  \\ \hline
+	
+	R1O 13 & MaaSSapplication::Lib::AuthenticationChecker \newline  MaaSSapplication::Models::UserModel \newline  \\ \hline
+	
+	R1O 13.1 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Models::UserModel  \newline  \\ \hline
+	
+	R1O 13.2 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Models::UserModel  \newline  \\ \hline
+	
+	R1O 13.3 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Models::UserModel  \\ \hline
+
+	%<< end
+
+    R1D 14 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Lib::LevelChecker \newline  MaaSSapplication::Models::DSLModel \newline \\ \hline
+    
+    R1D 15 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Lib::LevelChecker \newline   TODO \newline \\ \hline
+    
+    R1D 15.1 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Lib::LevelChecker \newline  TODO \newline \\ \hline
+    
+    R1D 15.2 & MaaSSapplication::Lib::AuthenticationChecker \newline  MaaSSapplication::Models::DSLModel \\ \hline
+    
+    R1D 16 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Lib::LevelChecker \newline  TODO \\ \hline
+
+    R1D 16.1 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Lib::LevelChecker \newline  TODO \\ \hline
+    
+    R1D 16.2 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Lib::LevelChecker \newline  TODO \\ \hline
+
+    R1D 16.3 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Lib::LevelChecker \newline  TODO \\ \hline
+
+    R1D 16.4 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Lib::LevelChecker \newline  TODO \\ \hline
+
+    R1D 16.5 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Lib::LevelChecker \newline  TODO \\ \hline
+    
+    R1D 16.6 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Lib::LevelChecker \newline  TODO \\ \hline
+    
+    R1D 16.7 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Lib::LevelChecker \newline  TODO \\ \hline
+    
+    R1D 16.8 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Lib::LevelChecker \newline  TODO \\ \hline
+
+    R1D 16.9 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Lib::LevelChecker \newline  TODO \\ \hline
+    
+    R1D 16.10 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Lib::LevelChecker \newline  TODO \\ \hline
+    
+    R1D 16.11 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Lib::LevelChecker \newline  TODO \\ \hline
+    
+    R1D 17 & MaaSSapplication::Lib::AuthenticationChecker \newline TODO \\ \hline
+    
+    R3D 14.1 & MaaSSapplication::Models::DSLModel \\ \hline
+    
+    R1D 18 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Lib::LevelChecker \newline  TODO \\ \hline
+    
+    R1D 19 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Lib::LevelChecker \newline  MaaSSapplication::Models::DSLModel, MaaSSapplication::Lib::DSLChecker \newline\\ \hline
+    
+    R1D 20 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Lib::LevelChecker \newline  TODO \\ \hline
+    
+    R1D 21 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Lib::LevelChecker \newline  TODO \\ \hline
+    
+    R1D 22 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Lib::LevelChecker \newline  TODO \\ \hline
+    
+    R1D 23 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Lib::LevelChecker \newline  TODO \\ \hline
+    
+    R1D 24 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Lib::LevelChecker \newline  TODO \\ \hline
+    
+    R1D 25 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Lib::LevelChecker \newline  TODO \\ \hline
+
+    R1D 26 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Lib::LevelChecker \newline  TODO \\ \hline
+    
+    R1D 27 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Lib::LevelChecker \newline  TODO \\ \hline
+    
+    R1D 28 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Lib::LevelChecker \newline  TODO \\ \hline
+    
+    R1D 29 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Lib::LevelChecker \newline  TODO \\ \hline
+    
+    R1D 30 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Lib::LevelChecker \newline  TODO \\ \hline
+
+    R1D 31 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Lib::LevelChecker \newline  TODO \\ \hline
+    
+    R1D 32 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Lib::LevelChecker \newline  TODO \\ \hline
+        
+    R1D 33 & MaaSSapplication::Lib::AuthenticationChecker \newline MaaSSapplication::Lib::LevelChecker \newline  MaaSSapplication::Models::DSLModel \newline MaaSSapplication::Routes::DSLRouter \\ \hline
+        
+    \caption{Collegamento requisiti - componenti}
+  \end{longtable}
+  \egroup
+\end{center} 
