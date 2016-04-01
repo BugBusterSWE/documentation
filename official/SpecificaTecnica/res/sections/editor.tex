@@ -85,6 +85,12 @@
         Di seguito, se la classe è visibile all'esterno del rispettivo package non viene scritto nulla, se non lo è verrà specificato.
         \subsection{Package DSLCreator::Dashboard}
                 \subsubsection{DSLCreator::Dashboard::Dashboard}
+                \begin{figure}[H]
+                  \centering
+                  \includegraphics[width=0.7\textwidth]{res/img/Dashboard.png}
+                  \caption{Modello dell'editor}
+                  \label{fig:diagram_model}
+                \end{figure}
                     \begin{itemize}
                         \item \textbf{Descrizione} \hfill \\
                             Questa interfaccia rappresenta un Dashboard Element, ossia il ``cruscotto'' che un utente di MaaS può definire (e che verrà visualizzato in forma tabellare nell'applicazione).
@@ -141,6 +147,12 @@
 
         \subsection{Package DSLCreator::DashRow}
                 \subsubsection{DSLCreator::DashRow::DashRow}
+                \begin{figure}[H]
+                  \centering
+                  \includegraphics[width=0.7\textwidth]{res/img/DashRow.png}
+                  \caption{Modello dell'editor}
+                  \label{fig:diagram_model}
+                \end{figure}
                     \begin{itemize}
                         \item \textbf{Descrizione} \hfill \\
                             Questa interfaccia rappresenta un DashRow Element, una riga della Dashboard.
@@ -197,6 +209,12 @@
 
 \subsection{Package DSLCreator::Collection}
  \subsubsection{DSLCreator::Collection::Collection}
+ \begin{figure}[H]
+   \centering
+   \includegraphics[width=0.7\textwidth]{res/img/Collection.png}
+   \caption{Modello dell'editor}
+   \label{fig:diagram_model}
+ \end{figure}
                     \begin{itemize}
                         \item \textbf{Descrizione} \hfill \\
                             Questa interfaccia rappresenta un Collection Element, ossia una ``collezione'' che può essere inserita in una riga della Dashboard, definita dall'utente di MaaS e che verrà visualizzata in forma tabellare nell'applicazione.
@@ -253,6 +271,12 @@
 \subsection{Package DSLCreator::Document}
 
  \subsubsection{DSLCreator::Document::Document}
+                \begin{figure}[H]
+                  \centering
+                  \includegraphics[width=0.7\textwidth]{res/img/Document.png}
+                  \caption{Modello dell'editor}
+                  \label{fig:diagram_model}
+                \end{figure}
                     \begin{itemize}
                         \item \textbf{Descrizione} \hfill \\
                             Questa interfaccia rappresenta un Document Element. L'utente può definire un Document e le sue proprietà. Può essere inserito in una riga della Dashboard dell'utente.
@@ -308,6 +332,12 @@
 
 \subsection{Package DSLCreator::Cell}
  \subsubsection{DSLCreator::Cell::Cell}
+                 \begin{figure}[H]
+                  \centering
+                  \includegraphics[width=0.7\textwidth]{res/img/Cell.png}
+                  \caption{Modello dell'editor}
+                  \label{fig:diagram_model}
+                \end{figure}
                     \begin{itemize}
                         \item \textbf{Descrizione} \hfill \\
                             Questa interfaccia rappresenta un Cell Element. L'utente può definire il tipo e assegnare un valore che la cell dovrà contenere.
@@ -365,6 +395,12 @@
 
 \subsection{Package DSLCreator::Index}
  \subsubsection{DSLCreator::Index::Index}
+                \begin{figure}[H]
+                  \centering
+                  \includegraphics[width=0.7\textwidth]{res/img/Index.png}
+                  \caption{Modello dell'editor}
+                  \label{fig:diagram_model}
+                \end{figure}
                     \begin{itemize}
                         \item \textbf{Descrizione} \hfill \\
                             Questa interfaccia rappresenta un Index Element. Specifica come viene configurata una Collection dall'utente. Ad esempio, l'utente può specificare in quale ordine devono essere visualizzati gli elementi nelle righe della Collection e definirne un massimo numero per pagina.
@@ -433,6 +469,12 @@
 
 \subsection{Package DSLCreator::Row}
  \subsubsection{DSLCreator::Row::Row}
+                 \begin{figure}[H]
+                  \centering
+                  \includegraphics[width=0.7\textwidth]{res/img/Row.png}
+                  \caption{Modello dell'editor}
+                  \label{fig:diagram_model}
+                \end{figure}
                     \begin{itemize}
                         \item \textbf{Descrizione} \hfill \\
                           Questa interfaccia rappresenta un Row Element. Specifica come viene configurata una riga di un Document dall'utente.
@@ -490,6 +532,12 @@
 
 \subsection{Package DSLCreator::Column}
  \subsubsection{DSLCreator::Column::Column}
+                 \begin{figure}[H]
+                  \centering
+                  \includegraphics[width=0.7\textwidth]{res/img/Column.png}
+                  \caption{Modello dell'editor}
+                  \label{fig:diagram_model}
+                \end{figure}
                     \begin{itemize}
                         \item \textbf{Descrizione} \hfill \\
                           Questa interfaccia rappresenta un Column Element. Specifica come viene configurata una colonna di una Collection dall'utente. Ad esempio, l'utente può rendere una colonna ordinabile oppure no.
@@ -545,6 +593,12 @@
 
 \subsection{Package DSLCreator::Action}
  \subsubsection{DSLCreator::Action::Action}
+                 \begin{figure}[H]
+                  \centering
+                  \includegraphics[width=0.7\textwidth]{res/img/Action.png}
+                  \caption{Modello dell'editor}
+                  \label{fig:diagram_model}
+                \end{figure}
                     \begin{itemize}
                         \item \textbf{Descrizione} \hfill \\
                           Questa interfaccia rappresenta un Action Element. Specifica quale azione l'utente può agganciare ad un Document o ad una Collection. Ad esempio, l'utente può specificare che tipo di azione desidera (export o send mail) e, nel caso la applichi ad una Collection, quale insieme avrà in input (tutta la collection o solamente quello correntemente visualizzato).
@@ -626,6 +680,12 @@
 
 \subsection{Package DSLCreator::Input}
  \subsubsection{DSLCreator::Input::Input}
+                 \begin{figure}[H]
+                  \centering
+                  \includegraphics[width=0.7\textwidth]{res/img/Input.png}
+                  \caption{Modello dell'editor}
+                  \label{fig:diagram_model}
+                \end{figure}
                     \begin{itemize}
                         \item \textbf{Descrizione} \hfill \\
                           Questa interfaccia rappresenta un Input Element.
@@ -682,6 +742,12 @@
 
 \subsection{Package DSLCreator::Function}
  \subsubsection{DSLCreator::Function::Function}
+                 \begin{figure}[H]
+                  \centering
+                  \includegraphics[width=0.7\textwidth]{res/img/Function.png}
+                  \caption{Modello dell'editor}
+                  \label{fig:diagram_model}
+                \end{figure}
                     \begin{itemize}
                         \item \textbf{Descrizione} \hfill \\
                           Questa interfaccia rappresenta un Function Element. 

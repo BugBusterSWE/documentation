@@ -2,7 +2,7 @@
 \subsection{Diagrammi della classi}
 L'interprete è la componente di MaaS che si occupa della conversione da DSL Structure in DSL. Questa decisione è stata presa per poter avere una rappresentazione semplice da manipolare attraverso l'editor e facile da ricondurre nel formato testuale.
 
-La progettazione ha seguito un approccio bottom-up, con la creazione delle componenti per il funzionamento, incluse in un package e inserito un Facade per semplificarne l'uso. I patter usati sono Facade, Singleton e Chain of Responsability.
+La progettazione ha seguito un approccio bottom-up, a partire dalla creazione delle componenti per il funzionamento, includendole in un package e inserendo un Facade per semplificarne l'uso. Sono stati usati i pattern Facade, Singleton e Chain of Responsability.
 \subsection{Package DSLInterpreter}
 \begin{figure}[H]
   \centering
@@ -11,15 +11,15 @@ La progettazione ha seguito un approccio bottom-up, con la creazione delle compo
   \label{fig:diagram_interpreter}
 \end{figure}
 \subsubsection{Descrizione}
-In questo package vengono inserite tutte le classi che contribuiscono alla traduzione dal DSL Structure prodotto dall'editor all'equivalente DSL.
-La classe DSLInterpreter implementa il Chain of Responsability dove detiene una lista di tutti gli interpreti da invocare man mano che vengono applicate le traduzioni. Il risultato di ogni interprete verrà contatenato e come risultato si otterrà il DSL richiesto.
-Il FacadeInterpreter implementa il patter Facade per offrire un interfaccia semplice per attuare la traduzione rendendo nascoste i componenti per applicarla.
+In questo package vengono inserite tutte le classi che contribuiscono alla traduzione dal DSL Structure prodotto dall'editor all'equivalente specifica DSL.
+La classe DSLInterpreter implementa il Chain of Responsability e detiene una lista di tutti gli interpreti da invocare man mano che vengono applicate le traduzioni. Il risultato di ogni interprete verrà contatenato e come risultato si otterrà la specifica DSL richiesta.
+Il FacadeInterpreter implementa il pattern Facade per offrire un interfaccia semplice per attuare la traduzione rendendo nascoste i componenti per applicarla.
 \subsubsection{DSLInterpreter::FacadeInterpreter}
 \begin{itemize}
 \item \textbf{Descrizione} \hfill \\
   Rappresenta l'implementazione del pattern Facade.
 \item \textbf{Utilizzo} \hfill \\
-  Permette di interfacciarsi al modulo richiedendo eslusivamente la traduzione da DSL Structure a DSL. Questo oltre a semplificare al client la gestione della traduzione, nasconde l'implementazione rendendo il modulo maggiormente mantenibile.
+  Permette di interfacciarsi al modulo richiedendo eslusivamente la traduzione da DSL Structure a specifica DSL. Questo oltre a semplificare al client la gestione della traduzione, nasconde l'implementazione rendendo il modulo maggiormente manutenibile.
 \item \textbf{Relazioni con altre classi} \hfill
   \begin{itemize}
   \item DSLInterpreter::StoreDSL
@@ -31,7 +31,7 @@ Il FacadeInterpreter implementa il patter Facade per offrire un interfaccia semp
 \item \textbf{Descrizione} \hfill \\
   Mantiene il riferimento del DSL Structure da tradurre.
 \item \textbf{Utilizzo} \hfill \\
-  Viene usata dalle implementazioni di \texttt{DSLInterpreter::DSLInterpreter} per ottenere l'oggetto riferito su un attributo della struttura da tradurre. Questi casi si riscontrano nella definizione di un componente del DSL in cui sono innestati altri componenti ( es. DSL Collection con DSL Index e DSL Document ).
+  Viene usata dalle implementazioni di \texttt{DSLInterpreter::DSLInterpreter} per ottenere l'oggetto riferito su un attributo della struttura da tradurre. Questi casi si riscontrano nella definizione di un componente del DSL in cui sono innestati altri componenti ( es. Collection con Index e Document ).
 
   Ciò permette di non violare il Single Responsability Principle, in quanto i vari interpreti conoscono solo una singola struttura da tradurre e non detengono un possibile accesso all'intera DSL Structure.
 \item \textbf{Relazione con altre classi} \hfill
@@ -49,7 +49,7 @@ Il FacadeInterpreter implementa il patter Facade per offrire un interfaccia semp
 \subsubsection{DSLInterpreter::DSLInterpreter}
 \begin{itemize}
 \item \textbf{Descrizione} \hfill \\
-  Classe astratta nel quale viene richiesta l'implementazione della traduzione di un Object a DSL. Da qui verranno derivati gli interpreti per ogni DSL Element.
+  Classe astratta nel quale viene richiesta l'implementazione della traduzione di un oggetto a DSL. Da qui verranno derivati gli interpreti per ogni DSL Element.
 \item \textbf{Utilizzo} \hfill \\
   Implementa il Chain of Responsability, mantenendo la lista degli interpreti da eseguire. In più detiene la sequenza di passi per portare a compimento la traduzione.
 \item \textbf{Relazione con altre classi} \hfill
@@ -73,7 +73,7 @@ Il FacadeInterpreter implementa il patter Facade per offrire un interfaccia semp
 \subsubsection{DSLInterpreter::ActionInterpreter}
 \begin{itemize}
 \item \textbf{Descrizione} \hfill \\
-Implementa la traduzione di un oggetto che rispetti le caratteristiche di un Action Element.
+Implementa la traduzione di un oggetto che abbia le caratteristiche di un Action Element.
 \item \textbf{Utilizzo} \hfill \\
 Usato da \texttt{DSLInterpreter::CollectionInterpreter} e \texttt{DSLInterpreter::DocumentInterpreter} per tradurre un attributo di tipo Action Element associato.
 \item \textbf{Relazone con altre classi}
@@ -87,7 +87,7 @@ Usato da \texttt{DSLInterpreter::CollectionInterpreter} e \texttt{DSLInterpreter
 \subsubsection{DSLInterpreter::CellInterpreter}
 \begin{itemize}
 \item \textbf{Descrizione} \hfill \\
-Implementa la traduzione di un oggetto che rispetti le caratteristiche di un Cell Element.
+Implementa la traduzione di un oggetto che abbia le caratteristiche di un Cell Element.
 \item \textbf{Utilizzo} \hfill \\
 Usato da \texttt{DSLInterpreter::FacadeInterpreter} nel caso un Cell Element fosse l'elemento radice del DSL Structure, altrimenti viene creato da \texttt{DSLInterpreter::DashRowInterpreter} quando un Cell Element compone una riga della Dashboard Element.
 \item \textbf{Relazione con altre classi}
@@ -103,7 +103,7 @@ Usato da \texttt{DSLInterpreter::FacadeInterpreter} nel caso un Cell Element fos
 \subsubsection{DSLInterpreter::RowInterpreter}
 \begin{itemize}
 \item \textbf{Descrizione} \hfill \\
-Implementa la traduzione di un oggetto che rispetti le caratteristiche di un Row Element.
+Implementa la traduzione di un oggetto che abbia le caratteristiche di un Row Element.
 \item \textbf{Utilizzo} \hfill \\
 Usato da \texttt{DSLInterpreter::DocumentInterpreter} per tradurre un attributo Row Element associato.
 \item \textbf{Relazione con altre classi}  
@@ -116,7 +116,7 @@ Usato da \texttt{DSLInterpreter::DocumentInterpreter} per tradurre un attributo 
 \subsubsection{DSLInterpreter::ColumnInterpreter}
 \begin{itemize}
 \item \textbf{Descrizione} \hfill \\
-Implementa la traduzione di un oggeto che rispetti le caratteristiche di un Column Element.
+Implementa la traduzione di un oggeto che abbia le caratteristiche di un Column Element.
 \item \textbf{Utilizzo} \hfill \\
 Usato da \texttt{DSLInterpreter::IndexInterpreter} per tradurre un attributo di tipo Column Element associato.
 \item \textbf{Relazione con altre classi}
@@ -129,7 +129,7 @@ Usato da \texttt{DSLInterpreter::IndexInterpreter} per tradurre un attributo di 
 \subsubsection{DSLInterpreter::DashboardInterpreter}
 \begin{itemize}
 \item \textbf{Descrizione} \hfill \\
-Implementa la traduzione di un oggetto che rispetti le caratteristiche di un Dashboard Element.
+Implementa la traduzione di un oggetto che abbia le caratteristiche di un Dashboard Element.
 \item \textbf{Utilizzo} \hfill \\
 Usato da \texttt{DSLInterpreter::FacadeInterpreter} nel caso un Dashboard Element fosse l'elemento radice del DSL Structure. 
 \item \textbf{Relazione con altre classi}
@@ -144,7 +144,7 @@ Usato da \texttt{DSLInterpreter::FacadeInterpreter} nel caso un Dashboard Elemen
 \subsubsection{DSLInterpreter::CollectionInterpreter}
 \begin{itemize}
 \item \textbf{Descrizione} \hfill \\
-Implemenata la traduzione di un oggetto che rispetti le caratteristiche di un Collection Element.
+Implemenata la traduzione di un oggetto che abbia le caratteristiche di un Collection Element.
 \item \textbf{Utilizzo} \hfill \\
 Usato da \texttt{DSLInterpreter::FacadeInterpreter} nel caso un Collection Element fosse l'elemento radice del DSL Structure, altrimenti viene creato da \texttt{DSLInterpreter::DashRowInterpreter} quando un Collection Element compone una riga della Dashboard Element.
 \item \textbf{Relazione con altre classi}
@@ -161,9 +161,9 @@ Usato da \texttt{DSLInterpreter::FacadeInterpreter} nel caso un Collection Eleme
 \subsubsection{DSLInterpreter::DashRowInterpreter}
 \begin{itemize}
 \item \textbf{Descrizione} \hfill \\
-Implementa la traduzione di un oggeto che rispetti le caratteristiche di un DashRow Element.
+Implementa la traduzione di un oggeto che abbia le caratteristiche di un DashRow Element.
 \item \textbf{Utilizzo} \hfill \\
-Usato da \texttt{DSLInterpreter::DashboardInterpreter} per tradurre un attributo di tipo DashRow Element assiociato.
+Usato da \texttt{DSLInterpreter::DashboardInterpreter} per tradurre un attributo di tipo DashRow Element associato.
 \item \textbf{Relazione con altre classi}
 \begin{itemize}
 \item DSLInterpreter::DSLInterpreter
@@ -178,7 +178,7 @@ Usato da \texttt{DSLInterpreter::DashboardInterpreter} per tradurre un attributo
 \subsubsection{DSLInterpreter::DocumentInterpreter}
 \begin{itemize}
 \item \textbf{Descrizione} \hfill \\
-  Implementa la traduzione di un oggetto che rispetti le caratteristiche di una Document Element.
+  Implementa la traduzione di un oggetto che abbia le caratteristiche di un Document Element.
 \item \textbf{Utilizzo} \hfill \\
 Usato da \texttt{DSLInterpreter::FacadeInterpreter} nel caso un Document Element fosse l'elemento radice del DSL Structure, altrimenti viene creato da \texttt{DSLInterpreter::DashRowInterpreter} quando un Document Element compone una riga della Dashboard Element.
 \item \textbf{Relazione con altre classi}
@@ -195,7 +195,7 @@ Usato da \texttt{DSLInterpreter::FacadeInterpreter} nel caso un Document Element
 \subsubsection{DSLInterpreter::FunctionInterpreter}
 \begin{itemize}
 \item \textbf{Descrizione} \hfill \\
-  Implementa la traduzione di un oggetto che rispetti le caratteristiche di un Function Element.
+  Implementa la traduzione di un oggetto che abbia le caratteristiche di un Function Element.
 \item \textbf{Utilizzo} \hfill \\
   Usato dal \texttt{DSLInterpreter::FacadeInterpreter} per tradurre i Function Element dichiarati nella DSL Structure.
 \item \textbf{Relazione con altre classi}
@@ -208,7 +208,7 @@ Usato da \texttt{DSLInterpreter::FacadeInterpreter} nel caso un Document Element
 \subsubsection{DSLInterpreter::IndexInterpreter}
 \begin{itemize}
 \item \textbf{Descrizione} \hfill \\
-  Implementa la traduzione di un oggetto che rispetti le caratteristiche di un Index Element.
+  Implementa la traduzione di un oggetto che abbia le caratteristiche di un Index Element.
 \item \textbf{Utilizzo} \hfill \\
   Usato da \texttt{DSLInterpreter::CollectionInterpreter} per tradurre un attributo di tipo Index Element associato.
 \item \textbf{Relazione con altre classi}
@@ -223,9 +223,9 @@ Usato da \texttt{DSLInterpreter::FacadeInterpreter} nel caso un Document Element
 \subsubsection{DSLInterpreter::InputInterpreter}
 \begin{itemize}
 \item \textbf{Descrizione} \hfill \\
-  Implementa la traduzione di un oggetto che rispetti le caratteristiche di un Input Element.
+  Implementa la traduzione di un oggetto che abbia le caratteristiche di un Input Element.
 \item \textbf{Utilizzo} \hfill \\
-  Usato da \texttt{DSLInterpreter::IndexInterpreter}, \texttt{DSLInterpreter::CellInterpreter} e da se stesso ( data la struttura ricorsiva ) per tradurre un attributo di tipo Input Element assiociato.
+  Usato da \texttt{DSLInterpreter::IndexInterpreter}, \texttt{DSLInterpreter::CellInterpreter} e da se stesso (data la struttura ricorsiva) per tradurre un attributo di tipo Input Element associato.
 \item \textbf{Relazione con altre classi}
   \begin{itemize}
   \item DSLInterpreter::DSLInterpreter
