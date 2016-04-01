@@ -64,3 +64,95 @@ Il FacadeEditorInterpreter implementa il patter Facade per offrire un interfacci
   \end{itemize}
 \end{itemize}
 
+\subsubsection{DSLInterpreter::ActionInterpreter}
+\begin{itemize}
+\item \textbf{Descrizione}
+Implementa la traduzione di un oggetto che rispetti le caratteristiche di un Action Element.
+\item \textbf{Utilizzo}
+Usato da \texttt{DSLInterpreter::CollectionInterpreter} e \texttt{DSLInterpreter::DocumentInterpreter} per tradurre un Action associato.
+\item \textbf{Relazone con altre classi}
+\begin{itemize}
+\item DSLInterpreter::DSLInterpreter
+\item DSLInterpreter::CollectionInterpreter
+\item DSLInterpreter::DocumentInterpreter
+\end{itemize}
+\end{itemize}
+
+\subsubsection{DSLInterpreter::CellInterpreter}
+\begin{itemize}
+\item \textbf{Descrizione}
+Implementa la traduzione di un oggetto che rispetti le caratteristiche di un Cell Element.
+\item \textbf{Utilizzo}
+Usato da \texttt{DSLInterpreter::FacadeInterpreter} nel caso un Cell Element \'e l'elemento radice del DSL Structure, altrimenti viene creato da \texttt{DSLInterpreter::DashRowInterpreter} quando una Cell compone una riga della Dashboard Element.
+\item \textbf{Relazione con altre classi}
+\begin{itemize}
+\item DSLInterpreter::FacadeInterpreter
+\item DSLInterpreter::DSLInterpreter
+\item DSLInterpreter::DashRowInterpreter
+\end{itemize}
+\end{itemize}
+
+\subsubsection{DSLInterpreter::RowInterpreter}
+\begin{itemize}
+\item \textbf{Descrizione}
+Implementa la traduzione di un oggetto che rispetti le caratteristiche di un Row Element.
+\item \textbf{Utilizzo}
+Usato da \texttt{DSLInterpreter::DocumentInterpreter} per tradurre una Row associata.
+\item \textbf{Relazione con altre classi}  
+\begin{itemize}
+\item DSLInterpreter::DSLInterpreter
+\item DSLInterpreter::DocumentInterpreter
+\end{itemize}
+\end{itemize}
+
+\subsubsection{DSLInterpreter::ColumnInterpreter}
+\begin{itemize}
+\item \textbf{Descrizione}
+Implementa la traduzione di un oggeto che rispetti le caratteristiche di un Column Element.
+\item \textbf{Utilizzo}
+Usato da \texttt{DSLInterpreter::IndexInterpreter} per tradurre un Column associato.
+\item \textbf{Relazione con altre classi}
+\begin{itemize}
+\item DSLInterpreter::DSLInterpreter
+\item DSLInterpreter::IndexInterpreter
+\end{itemize}
+\end{itemize}
+
+\subsubsection{DSLInterpreter::DashboardInterpreter}
+\begin{itemize}
+\item \textbf{Descrizione}
+Implementa la traduzione di un oggetto che rispetti le caratteristiche di un Dashboard Element.
+\item \textbf{Utilizzo}
+Usato da \texttt{DSLInterpreter::FacadeInterpreter} nel caso un Dashboard Element \'e l'elemento radice del DSL Structure. 
+\item \textbf{Relazione con altre classi}
+\begin{itemize}
+\item DSLInterpreter::DSLInterpreter
+\item DSLInterpreter::FacadeInterpreter
+\end{itemize}
+\end{itemize}
+
+\subsubsection{DSLInterpreter::CollectonInterpreter}
+\begin{itemize}
+\item \textbf{Descrizione}
+Implemenata la traduzione di un oggetto che rispetti le caratteristiche di un Collection Element.
+\item \textbf{Utilizzo}
+Usato da \texttt{DSLInterpreter::IndexInterpreter} per tradurre una Index associata.
+\item \textbf{Relazione con altre classi}
+\begin{itemize}
+\item DSLInterpreter::DSLInterpreter
+\item DSLInterpreter::IndedInterpreter
+\end{itemize}
+\end{itemize}
+
+\subsubsection{DSLInterpreter::DashRowInterpreter}
+\begin{itemize}
+\item \textbf{Descrizione}
+Implementa la traduzione di un oggeto che rispetti le caratteristiche di un DashRow Element.
+\item \textbf{Utilizzo}
+Usato da \texttt{DSLInterpreter::Dashboarda}
+\item \textbf{Relazione con altre classi}
+\begin{itemize}
+\item DSLInterpreter::DSLInterpreter
+\item DSLInterpreter::DashboardInterpreter 
+\end{itemize}
+\end{itemize}
