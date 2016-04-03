@@ -1,0 +1,48 @@
+\section{Frontend}
+\subsection{Formalismo utilizzato}
+%% DA FARE
+
+\subsection{Descrizione generale}
+
+Il frontend della nostra applicazione andrà a costituire il ruolo di View nel pattern MVC. In particolare tale componente dell'applicazione è costituita da un sottosistema che implementa l'architettura Flux proposta da Facebook. Tale architettura si basa sul creare un sistema che abbia un data-flow unidirezionale al fine di semplificare la struttura dell'applicazione stessa,di considerare le viste come uno snapshot di un dato lasso di tempo dei dati.
+Nella progettazione secondo l'architettura Flux si è seguito in particolare il principio che nessuna classe modifichi direttamente lo stato di un'altra ma che creino semplicemente delle Action per comunicare il cambiamento.
+
+IMMAGINE ARCHITETTURA FLUX FACEBOOK
+
+In una architettura Flux vengono distinti 4 componenti fondamentali:
+
+\begin{itemize}
+\item Action: Rappresenta un messaggio tra le componenti
+\item Dispatcher: funge da hub centrale per le action e si occupa di distribuirle al giusto store
+\item Store: contengono la logica applicativa del frontend e lo stato dei dati dall'ultimo update. Si occupano di fornire i dati alle viste, quando queste li richiedono
+\item View: Sono la parte visiva dell'applicazione e, nel nostro caso, saranno costituite da classi di React.
+\end{itemize}
+
+Dall'architettura sopra descritta sono stati individuati i seguenti package per il lato frontend di MaaS:
+
+IMMAGINE ARCHITETTURA FRONTEND MAAS
+
+\section{Descrizione dei package del frontend}
+\subsection{WebAPIs}
+
+IMMAGINE PACKAGE WEBAPIS
+
+\paragraph*{Descrizione del package}
+Il seguente package contiene tutte le classi che contengono i metodi per interagire con le API esposte dal server. 
+\paragraph*{Classi contenute}
+\begin{itemize}
+\item UserAPIs
+\item CompanyAPIs
+\item DSLAPIs
+\item DatabaseAPIs
+\item WebAPIFacade
+\end{itemize}
+
+\subsection{UserAPIs}
+\paragraph*{Descrizione della classe}
+Classe che espone tutti i metodi per interagire con le API del server che riguardano gli utenti.
+
+\paragraph*{Utilizzo}
+Viene utilizzata sia per il login che per gestire le operazioni CRUD per le informazioni riguardanti gli utenti.
+
+\paragraph*{Classi }
