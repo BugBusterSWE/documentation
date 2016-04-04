@@ -33,7 +33,7 @@ Dove:
 \begin{center}
   \bgroup
   \def\arraystretch{1.8}
-  \begin{longtable}{ | l | p{2cm} | p{4.7cm} | p{2cm} |}
+  \begin{longtable}{ | l | p{2cm} | p{4.7cm} | p{2.5cm} |}
     \hline
     \cellcolor[gray]{0.9} \textbf{Requisito} & \cellcolor[gray]{0.9} \textbf{Tipologia} 
     & \cellcolor[gray]{0.9} \textbf{Descrizione} & \cellcolor[gray]{0.9} \textbf{Fonti} \\ \hline
@@ -189,7 +189,48 @@ Dove:
     R1D 32 & Funzionale \newline Desiderabile & Impostare associazioni tra \glossaryItem{DSL Element} obbligatorie non modificabili. & Capitolato \newline UC-E2.11.2\\ \hline
         
     R1D 33 & Funzionale \newline Desiderabile & La \glossaryItem{DSL} creata dall'editor deve essere inviata al server \glossaryItem{MaaS}. & Capitolato \newline UC-E3\\ \hline
+    
+    R1O 34 & Funzionale \newline Obbligatorio & L'admin deve poter aggiungere un nuovo database alla propria Company & Capitolato \newline UC-U18.3 \newline Riunione con il proponente \\ \hline
+  	
+   	R1O 34.1 & Funzionale \newline Obbligatorio & L'admin deve poter inserire il nome del database in fase di creazione di un database & Capitolato \newline UC-U18.3.1 \newline Riunione con il proponente \\ \hline
+   	
+   	R1O 34.2 & Funzionale \newline Obbligatorio & L'admin deve poter inserire l'host del database in fase di creazione di un database & Capitolato \newline UC-U18.3.2 \newline Riunione con il proponente \\ \hline
+   	
+   	R1O 34.3 & Funzionale \newline Obbligatorio & L'admin deve poter inserire la porta del database in fase di creazione di un database & Capitolato \newline UC-U18.3.3 \newline Riunione con il proponente \\ \hline
+  	
+    R1O 34.4 & Funzionale \newline Obbligatorio & L'admin deve poter aggiungere delle collections in fase di creazione di un database & Capitolato \newline UC-U18.3.4 \newline Riunione con il proponente \\ \hline
+    
+    R1O 34.5 & Funzionale \newline Obbligatorio & L'admin deve poter il nome della collection in fase di creazione di un database & Capitolato \newline UC-U18.3.4 \newline Riunione con il proponente \\ \hline
+    
+    R1D 34.6 & Funzionale \newline Desiderabile & L'admin deve poter decidere se la collection è visibile dai members in fase di creazione di un database & Capitolato \newline UC-U18.3.4 \newline Riunione con il proponente \\ \hline
+    
+    R1O 35 & Funzionale \newline Obbligatorio & L'admin deve poter rimuovere un database della Company & Capitolato \newline UC-U18.2 \newline Riunione con il proponente \\ \hline
+    
+    R1D 36 & Funzionale \newline Obbligatorio & L'admin deve poter modificare un database della Company & Capitolato \newline UC-U18.1 \newline Riunione con il proponente \\ \hline
         
+    R1O 36.1 & Funzionale \newline Obbligatorio & L'admin deve poter modificare il nome del database in fase di modifica di un database & Capitolato \newline UC-U18.1.1 \newline Riunione con il proponente \\ \hline
+	      	
+   	R1O 36.2 & Funzionale \newline Obbligatorio & L'admin deve poter modificare l'host del database in fase di modifica di un database & Capitolato \newline UC-U18.1.2 \newline Riunione con il proponente \\ \hline
+   	
+   	R1O 36.3 & Funzionale \newline Obbligatorio & L'admin deve poter modificare la porta del database in fase di modifica di un database & Capitolato \newline UC-U18.1.3 \newline Riunione con il proponente \\ \hline
+	    	
+	R1O 36.4 & Funzionale \newline Obbligatorio & L'admin deve poter aggiungere delle collections in fase di moodifica di un database & Capitolato \newline UC-U18.1.4 \newline Riunione con il proponente \\ \hline
+	
+	R1O 36.5 & Funzionale \newline Obbligatorio & L'admin deve poter il nome della collection in fase di modifica di un database & Capitolato \newline UC-U18.1.4 \newline Riunione con il proponente \\ \hline
+	
+	R1D 36.6 & Funzionale \newline Desiderabile & L'admin deve poter decidere se la collection è visibile dai members in fase di modifica di un database & Capitolato \newline UC-U18.1.4 \newline Riunione con il proponente \\ \hline
+	
+	R1O 36.7 & Funzionale \newline Obbligatorio & L'admin deve poter rimuovere una collection in fase di modifica di una database & Capitolato \newline UC-U18.1.5.1 \newline Riunione con il proponente \\ \hline
+	
+	R1O 36.8 & Funzionale \newline Obbligatorio & L'admin deve poter modificare una collection in fase di modifica di un database & Capitolato \newline UC-U18.1.5.2 \newline Riunione con il proponente \\ \hline
+	
+	R1O 36.9 & Funzionale \newline Obbligatorio & L'admin deve poter modificare il nome della collection in fase di modifica di un database & Capitolato \newline UC-U18.1.5.2.1 \newline Riunione con il proponente \\ \hline
+	
+	R1D 36.10 & Funzionale \newline Desiderabile & L'admin deve poter modificare il livello di accesso di una collection in fase di modifica di un database & Capitolato \newline UC-U18.1.5.2.2 \newline Riunione con il proponente \\ \hline
+	
+	R1O 37 & Funzionale \newline Obbligatorio & L'utente deve poter visualizzare i database ai quali ha accesso & Capitolato \newline UC-U18.4 \\ \hline
+	
+	R1O 38 & Funzionale \newline Obbligatorio & L'utente deve poter visualizzare le collections alle quali ha accesso & Capitolato \newline UC-U18.6 \newline Riunione con il proponente \\ \hline
     \caption{Requisiti funzionali}
   \end{longtable}
   \egroup
