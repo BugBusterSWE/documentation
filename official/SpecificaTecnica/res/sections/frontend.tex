@@ -140,7 +140,7 @@ Classe che si occupa di creare e lanciare le action relative agli utenti.
 \paragraph*{Utilizzo}
 Viene utilizzata per creare le action relative agli utenti: la classe fornisce i metodi per utilizzare le webAPIs contenute in UserAPIs e restituisce le action che poi verrano reindirizzate a UserStore.
 
-\paragarph*{Relazione con altre classi}
+\paragraph*{Relazione con altre classi}
 \begin{itemize}
 \item Dispatcher
 \item (Stores::UserStore)
@@ -155,7 +155,7 @@ Classe che si occupa dell'interazione dell'applicazione con CompanyAPIs e di lan
 \paragraph*{Utilizzo}
 La classe viene utilizzata per creare le action relative alle Company: sfrutta i metodi dichiarati in CompanyAPIs per interagire con il server e lancia le action contenenti i dati ricevuti dalle API richieste.
 
-\paragarph*{Relazione con altre classi}
+\paragraph*{Relazione con altre classi}
 \begin{itemize}
 \item Dispatcher
 \item (Stores::CompanyStore)
@@ -169,19 +169,19 @@ Classe che si occupa di creare action riguardanti le specifiche DSL.
 \paragraph*{Utilizzo}
 Tale classe viene utilizzata per sfruttare i metodi dichiarati in DSLAPIs per la richiesta delle API esposte dal server relative alle specifiche DSL. Dopo aver sfruttato l'API richiesta, la classe crea un'action contenente i risultati ottenuti.
 
-\paragarph*{Relazione con altre classi}
+\paragraph*{Relazione con altre classi}
 \begin{itemize}
 \item Dispatcher
 \item (Stores::DSLStore)
 \item DSLPage
 \end{itemize}
 
-\subsubsectin{DatabaseActionCreator}
+\subsubsection{DatabaseActionCreator}
 \paragraph*{Descrizione della classe}
 Classe che si occupa di lanciare action riguardanti le connessioni ai Database di una Company.
 \paragraph*{Utilizzo}
 La classe viene utilizzata per richiamare i metodi definiti in DatabaseAPIs e creare le action contenenti le risposte dai metodi chiamati.
-\paragarph*{Relazione con altre classi}
+\paragraph*{Relazione con altre classi}
 \begin{itemize}
 \item Dispatcher
 \item (Store::DatabaseStore)
@@ -227,7 +227,7 @@ Il package in questione contiene le classi che implementano il concetto di Store
 Classe che contiene i dati relativi alla sessione corrente.
 \paragraph*{Utilizzo}
 Classe che viene utilizzata dall'applicazione per contenere e fornire i dati relativi alla sessione corrente. Si occupa di gestire le action relative alla sessione e di conservarne i dati.
-\paragarph*{Relazione con altre classi}
+\paragraph*{Relazione con altre classi}
 \begin{itemize}
 \item Router
 \item Pages
@@ -238,7 +238,7 @@ Classe che viene utilizzata dall'applicazione per contenere e fornire i dati rel
 Classe che si occupa di contenere i dati relativi agli User.
 \paragraph*{Utilizzo}
 Questa classe viene utilizzata per mantenere i dati riguardanti gli utenti e di fornirli alle pagine che li richiedono.
-\paragarph*{Relazione con altre classi}
+\paragraph*{Relazione con altre classi}
 \begin{itemize}
 \item Pages
 \item Dispatcher
@@ -249,29 +249,29 @@ Questa classe viene utilizzata per mantenere i dati riguardanti gli utenti e di 
 Classe che si occupa di contenere i dati relativi alle connessioni ai database definiti per le Company.
 \paragraph*{Utilizzo}
 Questa classe viene utilizzata per contenere i dati riguardanti le connessioni dei database definiti per le company. Si occupa di ricevere dal dispatcher le action relative a questi dati e di mantenere i dati riferiti.
-\paragarph*{Relazione con altre classi}
+\paragraph*{Relazione con altre classi}
 \begin{itemize}
 \item Pages
 \item Dispatcher
 \end{itemize}
 
-\subsubsectin{CompanyStore}
+\subsubsection{CompanyStore}
 \paragraph*{Descrizione della classe}
 Classe che si occupa di contenere i dati relativi alle Company.
 \paragraph*{Utilizzo}
 Questa classe viene utilizzata per ricevere le action relative alle Company al fine di mantenere i dati relativi ad esse. Inoltre fornisce i metodi per fornire tali dati alle pagine che li richiedono
-\paragarph*{Relazione con altre classi}
+\paragraph*{Relazione con altre classi}
 \begin{itemize}
 \item Dispatcher
 \item Pages
 \end{itemize}
 
-\subsubsectin{DSLStore}
+\subsubsection{DSLStore}
 \paragraph*{Descrizione della classe}
 Classe che si occupa di contenere i dati delle specifiche DSL
 \paragraph*{Utilizzo}
 Questa classe fornisce i metodi per ricevere le Action relative alle specifiche DSL e per mantenere i dati relativi ad esse. Fornisce inoltre i metodi per disporre quei dati per le pagine che li richiedono.
-\paragarph*{Relazione con altre classi}
+\paragraph*{Relazione con altre classi}
 \begin{itemize}
 \item Dispatcher
 \item Pages
