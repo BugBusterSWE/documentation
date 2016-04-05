@@ -14,10 +14,10 @@ In seguito vengono descritte le interazioni dell'utente con MaaS utilizzando i d
 \end{figure}
 Un utente non autenticato, una volta visualizzata la pagina di MaaS, può:
 \begin{itemize}
-\item registrarsi, a seguito di un invito di un owner di una company;
+\item registrarsi, a seguito di un invito di un Owner di una Company;
 \item effettuare il login;
 \item eseguire la procedura di recupero password;
-\item creare una nuova Company. L'utente verrà registrato come owner della company appena creata.
+\item creare una nuova Company. L'utente verrà registrato come Owner della Company appena creata.
 \end{itemize}
 \subsubsection{Registrazione}
 \begin{figure}[H]
@@ -34,7 +34,7 @@ L'utente si trova nella pagina di registrazione a MaaS. Indirizzo email e passwo
 \caption{Login}
 \end{center}
 \end{figure}
-L'utente non autenticato deve inserire, in due caselle di testo, le proprie credenziali di accesso, username e password, per poter accedere a MaaS. Se le credenziali risultano valide l'utente veràà reindirizzato alla pagina contenente la propria dashboard, altrimenti verrà mostrato un messaggio di errore.
+L'utente non autenticato deve inserire, in due caselle di testo, le proprie credenziali di accesso, username e password, per poter accedere a MaaS. Se le credenziali risultano valide l'utente verrà reindirizzato alla pagina contenente la propria dashboard, altrimenti verrà mostrato un messaggio di errore.
 \subsubsection{Recupero password}
 \begin{figure}[H]
 \begin{center}
@@ -55,10 +55,10 @@ L'utente non autenticato deve inserire, in una casella di testo, il codice segre
 \begin{figure}[H]
 \begin{center}
 \includegraphics[height=12cm]{res/sections/backend/activities/creazioneCompany.png}
-\caption{Creazione company}
+\caption{Creazione Company}
 \end{center}
 \end{figure}
-L'utente non autenticato che crea una company viene registrato come suo owner. È pertanto necessario fornire, durante la procedura di creazione, l'indirizzo email e la password dell'utente, oltre che il nome della company stessa.
+L'utente non autenticato che crea una Company viene registrato come suo Owner. È pertanto necessario fornire, durante la procedura di creazione, l'indirizzo email e la password dell'utente, oltre che il nome della Company stessa.
 \newpage
 \subsection{Utente autenticato}
 \begin{figure}[H]
@@ -71,10 +71,10 @@ Dopo aver effettuato il login un utente può:
 \begin{itemize}
 \item visualizzare le proprie credenziali di accesso, modificarle o rimuoversi da MaaS;
 \item eseguire operazioni che coinvolgono specifiche DSL;
-\item eseguire operazioni sulla sua dashboard;
-\item gestire i permessi degli altri utenti (solo per admin e owner);
-\item gestire gli utenti della company(solo per admin e owner);
-\item visualizzare e gestire (quest'ultima solo per admin e owner) i database della company;
+\item eseguire operazioni sulla sua Dashboard;
+\item gestire i permessi degli altri utenti (solo per Admin e Owner);
+\item gestire gli utenti della Company (solo per Admin e Owner);
+\item visualizzare e gestire (quest'ultima solo per Admin e Owner) i database della Company;
 \item effettuare il logout.
 \end{itemize}
 \subsubsection{Modifica delle credenziali utente}
@@ -100,7 +100,7 @@ L'utente autenticato, dopo aver visualizzato la pagina con i suoi dati personali
 \caption{Operazioni su specifiche DSL}
 \end{center}
 \end{figure}
-Un utente autenticato può decidere di effettuare varie operazioni sulle specifiche DSL alle quali ha accesso; in particolare:
+Un utente autenticato può decidere di effettuare varie operazioni sulle specifiche DSL alle quali ha accesso, in particolare:
 \begin{itemize}
 \item eseguire una specifica DSL, e visualizzare il risultato in forma tabellare;
 \item modificare una specifica DSL;
@@ -115,7 +115,7 @@ Le ultime tre operazioni coinvolgono l'editor fornito da MaaS.
 \caption{Operazioni sulla dashboard}
 \end{center}
 \end{figure}
-Un utente autenticato può decidere di effettuare varie operazioni sulla propria dashboard; in particolare:
+Un utente autenticato può decidere di effettuare varie operazioni sulla propria Dashboard, in particolare:
 \begin{itemize}
 \item visualizzare gli elementi;
 \item rimuovere degli elementi;
@@ -126,53 +126,53 @@ La rimozione degli elementi viene effettuata dopo una richiesta di conferma.
 \begin{figure}[H]
 \begin{center}
 \includegraphics[height=12cm]{res/sections/backend/activities/visualizzazioneElementDashboard.png}
-\caption{Visualizzazione elementi della dashboard}
+\caption{Visualizzazione elementi della Dashboard}
 \end{center}
 \end{figure}
-La dashboard si compone di cell, document e collection. Un utente può decidere di visualizzare questi elementi.
-\paragraph{Modifica elementi della dashboard} \mbox{} \\
+La dashboard si compone di Cell, Document e Collection. Un utente può decidere di visualizzare questi elementi.
+\paragraph{Modifica elementi della Dashboard} \mbox{} \\
 \begin{figure}[H]
 \begin{center}
 \includegraphics[height=12cm]{res/sections/backend/activities/modificaElementDashboard.png}
-\caption{Modifica elementi della dashboard}
+\caption{Modifica elementi della Dashboard}
 \end{center}
 \end{figure}
-La dashboard si compone di cell, document e collection. Un utente può decidere di modificare uno di questi tre elementi.
-\subparagraph{Modifica cell} \mbox{} \\
+La dashboard si compone di Cell, Document e Collection. Un utente può decidere di modificare uno di questi tre elementi.
+\subparagraph{Modifica Cell} \mbox{} \\
 \begin{figure}[H]
 \begin{center}
 \includegraphics[height=12cm]{res/sections/backend/activities/modificaCell.png}
-\caption{Modifica cell}
+\caption{Modifica Cell}
 \end{center}
 \end{figure}
-Durante la modifica di una cell, l'utente autenticato può fare una delle seguenti tre operazioni:
+Durante la modifica di una Cell, l'utente autenticato può fare una delle seguenti tre operazioni:
 \begin{itemize}
 \item aggiungere un valore;
 \item modificare un valore;
 \item ordinare il risultato di una query.
 \end{itemize}
-\subparagraph{Gestione document} \mbox{} \\
+\subparagraph{Gestione Document} \mbox{} \\
 \begin{figure}[H]
 \begin{center}
 \includegraphics[height=12cm]{res/sections/backend/activities/modificaDocument.png}
-\caption{Modifica document}
+\caption{Modifica Document}
 \end{center}
 \end{figure}
-Durante la gestione di un document, l'utente autenticato può fare una delle seguenti quattro operazioni:
+Durante la gestione di un Document, l'utente autenticato può fare una delle seguenti quattro operazioni:
 \begin{itemize}
 \item modificarlo;
 \item rimuoverlo;
 \item inviarlo per email;
 \item esportarlo e salvarlo in locale.
 \end{itemize}
-\subparagraph{Gestione collection} \mbox{} \\
+\subparagraph{Gestione Collection} \mbox{} \\
 \begin{figure}[H]
 \begin{center}
 \includegraphics[width=16cm]{res/sections/backend/activities/gestioneCollection.png}
-\caption{Gestione collection}
+\caption{Gestione Collection}
 \end{center}
 \end{figure}
-Durante la gestione di una collection, l'utente autenticato può fare una delle seguenti cinque operazioni:
+Durante la gestione di una Collection, l'utente autenticato può fare una delle seguenti cinque operazioni:
 \begin{itemize}
 \item modificarla;
 \item rimuoverla;
@@ -187,7 +187,7 @@ Durante la gestione di una collection, l'utente autenticato può fare una delle 
 \caption{Operazioni sui permessi degli utenti}
 \end{center}
 \end{figure}
-Un utente autenticato, admin o owner, può modificare, o rimuovere, i permessi di un utente della stessa company.
+Un utente autenticato, Admin o Owner, può modificare, o rimuovere, i permessi di un utente della stessa Company.
 \subsubsection{Operazioni sugli utenti}
 \begin{figure}[H]
 \begin{center}
@@ -195,7 +195,7 @@ Un utente autenticato, admin o owner, può modificare, o rimuovere, i permessi d
 \caption{Operazioni sugli utenti}
 \end{center}
 \end{figure}
-Un utente autenticato, admin o owner, può gestire gli utenti della company che gestisce. In particolare può:
+Un utente autenticato, Admin o Owner, può gestire gli utenti della Company che gestisce. In particolare può:
 \begin{itemize}
 \item invitare un utente;
 \item rimuovere un utente;
@@ -208,14 +208,14 @@ Un utente autenticato, admin o owner, può gestire gli utenti della company che 
 \caption{Invito utente}
 \end{center}
 \end{figure}
-Un utente autenticato, owner o admin, può invitare un nuovo utente nella propria company inserendo un indirizzo email ed inviando la richiesta tramite un pulsante presente nella pagina.
+Un utente autenticato, Owner o Admin, può invitare un nuovo utente nella propria Company inserendo un indirizzo email ed inviando la richiesta tramite un pulsante presente nella pagina.
 \paragraph{Inserimento utente} \mbox{} \\
 \begin{figure}[H]
 \begin{center}
 \includegraphics[height=12cm]{res/sections/backend/activities/inserimentoUtente.png}
 \end{center}
 \end{figure}
-Un utente autenticato, owner o admin, può inserire manualmente un nuovo utente nella company senza prima invitarlo. Per farlo deve fornire indirizzo email e password del nuovo utente.
+Un utente autenticato, Owner o Admin, può inserire manualmente un nuovo utente nella Company senza prima invitarlo. Per farlo deve fornire indirizzo email e password del nuovo utente.
 \subsubsection{Operazioni sui database}
 \begin{figure}[H]
 \begin{center}
@@ -223,9 +223,9 @@ Un utente autenticato, owner o admin, può inserire manualmente un nuovo utente 
 \caption{Operazioni sui database della company}
 \end{center}
 \end{figure}
-Un utente autenticato può visualizzare i database della company, e le collection di quel database, ai quali ha accesso. Gli admin e gli owner, invece, possono gestire i database registrati presso la company:
+Un utente autenticato può visualizzare i database della Company, e le Collection di quel database, ai quali ha accesso. Gli Admin e gli Owner, invece, possono gestire i database registrati presso la Company:
 \begin{itemize}
-\item modificando i dati di accesso e aggiungendo restrizioni sulle collections visibili ai member;
+\item modificando i dati di accesso e aggiungendo restrizioni sulle Collections visibili ai Member;
 \item aggiungendo un database;
 \item rimuovendo un database.
 \end{itemize} 
@@ -235,14 +235,14 @@ Un utente autenticato può visualizzare i database della company, e le collectio
 \includegraphics[height=12cm]{res/sections/backend/activities/modificaDatabase.png}
 \end{center}
 \end{figure}
-Un admin o un owner può modificare un database della propria company. In particolare deve fornire:
+Un Admin o un Owner può modificare un database della propria Company. In particolare deve fornire:
 \begin{itemize}
 \item nome;
 \item host;
 \item porta di accesso;
 \end{itemize}
-Inoltre può aggiungere, rimuovere o modificare restrizioni sulle collections di quel database.
-\subparagraph{Aggiunta collection} \mbox{} \\
+Inoltre può aggiungere, rimuovere o modificare restrizioni sulle Collections di quel database.
+\subparagraph{Aggiunta Collection} \mbox{} \\
 \begin{figure}[H]
 \begin{center}
 \includegraphics[height=12cm]{res/sections/backend/activities/aggiuntaDatiCollection.png}
