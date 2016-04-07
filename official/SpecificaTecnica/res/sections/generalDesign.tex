@@ -1,7 +1,7 @@
 \newpage
 \section{Descrizione architettura}
 \subsection{Metodo e formalismo di specifica}
-Le scelte progettuali di MaaS sono state frtemente influenzate dallo stack tecnologico usato. \\
+Le scelte progettuali di MaaS sono state fortemente influenzate dallo stack tecnologico usato. \\
 MaaS è basato su Node.js, e conseguentemente è scritto in JavaScript; questo linguaggio lascia molta libertà al programmatore nella scelta della tecnica da utilizzare per implemetare pattern come l'incapsulamento e l'ereditarietà. Al contrario di altri linguaggi orientati agli oggetti, come C++ o Java, non è presente un costrutto esplicito per definire classi, né un controllo statico dei tipi utilizzati. Per questo il team ha scelto, soprattutto per la codifica dell'editor visuale, di utilizzare il linguaggio TypeScript, che aggiunge, come già detto, la possibilità di definire classi ed interfacce. \\
 La progettazione è stata influenzata pesantemente anche dal framework back end scelto: ExpressJS. Questo framework è basato su Node.js e permette di estenderlo attraverso moduli specifici secondo i bisogni dell'applicazione. Il concetto centrale è quello delle funzioni middleware, ovvero funzioni che hanno accesso all'oggetto richiesto dal client (req), all'oggetto di risposta del server (res) e alla successiva funzione middleware nel ciclo di risposta dell'applicazione (next()). Tipicamente le funzioni middleware possono eseguire le seguenti operazioni:
 \begin{itemize}
@@ -13,7 +13,6 @@ La progettazione è stata influenzata pesantemente anche dal framework back end 
 Per soddisfare le richieste del proponente, ExpressJS verrà integrato con moduli per gestire il login (con base su MongoDB) e per inviare email agli utenti. \\
 La progettazione della parte back end ha seguito un approccio top-down: inizialmente sono stati definiti i componenti principali del sistema, le relazioni tra essi ed infine l'interfaccia REST da esporre al client. \\
 I diagrammi delle classi permettono di mostrare l'architettura generale del sistema, ma in un mondo orientato alle funzioni non sono sufficienti per descrivere l'intero sistema. Per questo, vengono mostrati anche diagrammi di sequenza e attività, che permettono di definire le interazioni tra le componenti, senza preoccuparsi della loro classificazione. In questo modo è possibile esprimere alcuni meccanismi tipici di un'applicazione REST like, come il modo in cui agiscono i middleware. 
-%todo frontend!!!!!!!!!
 I diagrammi di deployment, dei package, delle classi, di sequenza e di attività presentati utilizzano la specifica UML (\textbf{U}nified \textbf{M}odeling \textbf{L}anguage) 2.0.
 \subsection{Architettura generale}
 L'architettura del progetto si divide in una componente Client, rappresentata dal browser degli utenti che interagiscono con il front end, e in una componente WebServer, nella quale risiede il back end. Il database MongoDB verrà posto su un altro server, possibilmente quello su cui risiede il front end. \\
@@ -55,7 +54,3 @@ REST utilizza il concetto di risorsa (aggregato di dati con un nome, l'URI, e un
 \caption{Tabella delle operazioni CRUD}
 \end{table}
 Per la rappresentazione dei dati si è scelto di utilizzare JSON perché si integra molto bene con i framework utilizzati e con il linguaggio JavaScript. Questo non è vero per XML (e\textbf{X}tensible \textbf{M}arkup \textbf{L}anguage) o CSV (\textbf{C}omma \textbf{S}eparated \textbf{V}alues), che richiederebbero librerie specifiche. Inoltre JSON è molto meno verboso e molto più flessibile di XML, e si adatta molto bene al dominio dell'applicazione.
-\subsubsection{Backend}
-%todo
-\subsubsection{Frontend}
-%todo
