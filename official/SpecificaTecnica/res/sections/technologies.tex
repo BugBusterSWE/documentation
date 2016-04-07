@@ -1,0 +1,143 @@
+\section{Tecnologie utilizzate}
+MaaS \`e stato progettato utilizzando diverse tecnologie, alcune delle quali espressamente richieste dal proponente. Di seguito vengono elencate e descritte. Per ognuna di esse, inoltre, verranno presentanti vantaggi e svantaggi, al fine di fornire una pi\`u completa motivazione della scelta.
+\begin{itemize}
+\item \textbf{Node.js}, piattaforma per il back end;
+\item \textbf{ExpressJS}, framework Node.js flessibile e leggero che fornisce una serie di funzioni avanzate per le applicazioni web;
+\item \textbf{Reactjs}, framework JavaScript per la realizzazione del front end;
+\item \textbf{Flux}, architettura presentata da Facebook per la costituzione di frontend in JavaScript con lo scopo di creare un flusso unidirezionale di dati;
+\item \textbf{MongoDB}, database di tipo NoSQL (\textbf{NO}t \textbf{O}nly \textbf{SQL}) per la parte di recupero e salvataggio dei dati;
+\item \textbf{Mongoose}, libreria per interfacciarsi con il driver di MongoDB;
+\item \textbf{HTML5} (\textbf{H}yper\textbf{T}ext \textbf{M}arkup \textbf{L}anguage), linguaggio di markup per la creazione di pagine web;
+\item \textbf{CSS3} (\textbf{C}ascading \textbf{S}tyle \textbf{S}heets), linguaggio di formattazione dei documenti HTML;
+\item \textbf{Materialize}, framework front end per la creazione di interfacce basate sul material design;
+\item \textbf{TypeScript}, super-set di JavaScript sviluppato da Microsoft e basato su ECMAScript 6 (\textbf{E}uropean \textbf{C}omputer \textbf{M}anufacturers \textbf{A}ssociation).
+\end{itemize}
+
+\subsection{Node.js}
+L'utilizzo di Node.js \`e stato richiesto dal proponente. Si tratta di un sistema run-time cross-platform che utilizza il motore JavaScript V8 utilizzato anche in Google Chrome e permette di realizzare facilmente applicazioni di rete scalabili e veloci. Grazie al suo modello event-driven, con chiamate di I/O non bloccanti risulta essere leggero ed efficiente. Per l'invio di email verrà usato \textbf{Nodemailer}, un modulo che permette di inviare facilmente e-mail con Node.js, tramite protocollo SMTP (\textbf{S}imple \textbf{M}ail \textbf{T}ransfer \textbf{P}rotocol). Nodemailer supporta anche la codifica unicode.
+\subsubsection{Vantaggi}
+\begin{itemize}
+\item \textbf{Approccio asincrono}: permette di accedere alle risorse del sistema operativo in modalit\`a event-driven e non tramite il classico processo orientato a processi e thread concorrenti utilizzato dai classici server web. Ci\`o garantisce una maggiore efficienza dal punto di vista delle prestazioni, dato che durante le attese possono essere eseguire altre operazioni in modo asincrono.
+\item \textbf{Architettura modulare}: \`e molto facile organizzare il lavoro in librerie, importare e combinare i moduli.
+\end{itemize}
+\subsubsection{Svantaggi}
+\begin{itemize}
+\item \textbf{Orientato all'I/O}: non \`e pensato per applicazioni che sfruttano in modo intensivo la CPU (\textbf{C}entral \textbf{P}rocessing \textbf{U}nit). Questo, tuttavia, non \`e il caso di MaaS.
+\end{itemize}
+
+\subsection{ExpressJS}
+È un framework minimale per creare applicazioni web con Node.js. Fornisce una struttura base per un server web a cui successivamente possono essere aggiunti dei moduli di terze parti per arricchirne le funzionalità. ExpressJS non oscura le funzionalità di base fornite da Node.js: questo permette di utilizzare moduli specifici a seconda dei bisogni dell'appliccazione.
+\subsubsection{Vantaggi}
+\begin{itemize}
+\item \textbf{Minimale}: si basa su Node.js e permette di estenderlo a seconda dei bisogni dell'applicazione.
+\item \textbf{Documentazione}: esaustiva e completa.
+\item \textbf{Apprendimento}: facile da imparare.
+\end{itemize}
+\subsubsection{Svantaggi}
+\begin{itemize}
+\item \textbf{Integrazione}: richiede di integrare moduli diversi per comporre l'applicazione finale. Altri framework permettono di definire API (\textbf{A}pplication \textbf{P}rogramming \textbf{I}nterface) REST (\textbf{RE}presentational \textbf{S}tate \textbf{T}ransfer) in modo semplice, ma vincolano maggiormente nelle scelte progettuali.
+\end{itemize}
+
+\subsection{Reactjs}
+L'utilizzo di Reactjs \`e stato richiesto dal proponente. \`E una libreria JavaScript usata per creare interfacce utente, e rappresenta la V del design pattern architetturale MVC (\textbf{M}odel \textbf{V}iew \textbf{C}ontroller). React risolve il problema di creare applicazioni di grandi dimensioni con dati che cambiano nel tempo.
+Reactjs \`e stato preferito ad Angularjs, sconsigliato dal proponente in quanto considerata una tecnologia giunta al crepuscolo.
+\subsubsection{Vantaggi}
+\begin{itemize}
+\item \textbf{Semplice}: basta esprimere come l'applicazione dovrebbe apparire in ciascun momento e React automaticamente gestir\`a tutti gli aggiornamenti dell'interfaccia utente.
+\item \textbf{Dichiarativo}: quando i dati cambiano, Reactjs effettua un refresh concettuale della pagina e aggiorna solo i dati che sono cambiati.
+\item \textbf{Facilit\`a di debugging}: attraverso una specifica estensione di Google Chrome (React Developer Tools).
+\end{itemize}
+\subsubsection{Svantaggi}
+\begin{itemize}
+\item \textbf{Verboso}: richiede di scrivere pi\`u codice rispetto alla semplice coppia HTML e JavaScript.
+\item \textbf{Non \`e un framework completo}: non esiste un modello di gestione delle librerie all'interno di Reactjs, cosa di cui altri framework simili, come Emberjs o Angularjs, sono provvisti.
+\end{itemize}
+\subsection{Flux}
+Flux è l'architettura che Facebook usa per creare applicazioni web client-side. È un complemento a React e usa un flusso di dati unidirezionale. Le applicazioni Flux hanno quattro componenti principali: 
+\begin{itemize}
+\item il dispathcer 
+\item le action che fungono da messaggi unidirezionali tra le varie componenti
+\item gli store che sono le componenti di memorizzazione
+\item le viste (Reactjs).
+\end{itemize}
+\subsubsection{Vantaggi}
+\begin{itemize}
+\item \textbf{Integrazione}: si integra perfettamente con Reactjs.
+\item \textbf{Flusso di dati unidirezionale}: i dati provengono attraverso un'unica interfaccia ben definita.
+\end{itemize}
+\subsubsection{Svantaggi}
+\begin{itemize}
+\item \textbf{Apprendimento}: può essere difficile da imparare bene, soprattutto considerandolo in coppia con Reactjs.
+\end{itemize}
+\subsection{MongoDB}
+L'utilizzo di MongoDB \`e stato richiesto dal proponente. Si tratta di un database NoSQL open source scalabile e altamente performante di tipo document-oriented e schemaless, nel quale i dati sono archiviati sotto forma di documenti in stile JSON (\textbf{J}ava\textbf{S}cript \textbf{O}bject \textbf{N}otation), con schemi dinamici e una struttura semplice e potente.
+\subsubsection{Vantaggi}
+\begin{itemize}
+\item \textbf{Alte performance}: non ci sono join che rallentano operazioni di lettura o scrittura. 
+\item \textbf{Affidabilit\`a}: \`e presente un meccanismo di replicazione su server.
+\item \textbf{Schemaless}: non esistono schemi per i dati. Pertanto \`e pi\`u flessibile.
+\item \textbf{Potenza espressiva}: permette di esprimre query complesse in un linguaggio non SQL (\textbf{S}tructured \textbf{Q}uery \textbf{L}anguage).
+\item \textbf{Flessibilit\`a}: per i tipi di dato.
+\end{itemize}
+\subsubsection{Svantaggi}
+\begin{itemize}
+\item \textbf{Nessun supporto per le transazioni}: sono supportate alcune operazioni atomiche, ma a livello di documento.
+\item \textbf{Nessun join}: va simulato via codice attraverso query multiple.
+\item \textbf{Utilizzo di memoria}: maggiore rispetto ai database SQL; infatti memorizza i nomi delle chiavi in ogni documento. 
+\item \textbf{Problemi di concorrenza}: per le operazioni di scrittura viene creato un lock sull'intero database. Questo lock blocca anche le operazioni di lettura.
+\end{itemize}
+\subsection{Mongoose}
+Mongoose \`e una libreria per interfacciarsi a MongoDB che permette di definire degli schemi per modellare i dati del database. Inoltre fornisce strumenti utili per la validazioni dei dati, per la definizione di queries e per il cast dei tipi predefiniti. \\
+\subsubsection{Vantaggi}
+\begin{itemize}
+\item \textbf{Diffusione}: \`e la libreria pi\`u diffusa per interfacciarsi con MongoDB.
+\item \textbf{Funzionalit\`a aggiuntive}: permette di definire strumenti per la validazione dei dati e per il cast dei tipi.
+\end{itemize}
+\subsubsection{Svantaggi}
+\begin{itemize}
+\item \textbf{Schema-based}: \`e basato sulla creazione di una forte schematizzazione per i documenti, e questo limità l'estrema flessibilità di MongoDB.
+\end{itemize}
+\subsection{HTML5}
+\`E un linguaggio di markup per la strutturazione delle pagine web, pubblicato come W3C Recommendation da ottoble 2014. L'uso di HTML5 rispetto a XHTML (e\textbf{X}tensible \textbf{H}yper\textbf{T}ext \textbf{M}arkup \textbf{L}anguage) \`e stato deciso all'unanimit\`a dal gruppo (vedi decisione \textit{RI-1403-2}) e approvato dal proponente.
+\subsubsection{Vantaggi}
+\begin{itemize}
+\item \textbf{Raccomandazione W3C} (\textbf{W}orld \textbf{W}ide \textbf{W}eb \textbf{C}onsortium).
+\item \textbf{Creazione di pagine interattive}: soprattutto se usato insieme a CSS.
+\end{itemize}
+\subsubsection{Svantaggi}
+\begin{itemize}
+\item \textbf{Supporto}: non tutti i browser lo supportano allo stesso modo, e non tutte le caratteristiche definite sono ancora completamente supportate.
+\end{itemize}
+\subsection{CSS3}
+\`E un linguaggio utilizzato per definire la formattazione di documenti HTML e XHTML. Le regole per la composizione di un foglio di stile CSS sono definite dal W3C a partire dal 1996. Inoltre permette di separare i contenuti delle pagine HTML dalla loro formattazione, assicurando una maggiore manutenibilit\`a e riutilizzo.
+\subsubsection{Vantaggi}
+\begin{itemize}
+\item \textbf{Separazione tra contenuto e presentazione}.
+\item \textbf{Raccomandazione W3C}.
+\end{itemize}
+\subsection{Materialize}
+Creato e progettato da Google, il material design è un linguaggio di progettazione di interfacce con l'obiettivo di unificare l'esperienza utente attraverso le diverse piattaforme.
+\subsubsection{Vantaggi}
+\begin{itemize}
+\item \textbf{Open Source};
+\item \textbf{Completo}: permette una vasta selezione di componenti grafici.
+\end{itemize}
+\subsubsection{Svantaggi}
+\begin{itemize}
+\item \textbf{Flexbox}: non usa il modello Flexbox, uno dei nuovi layut introdotti da CSS3.
+\end{itemize}
+\subsection{TypeScript}
+Aggiunge a JavaScript tipi statici (opzionale) e meccanismi propri della progrmmazione orientata agli oggetti quali classi, interfacce ed ereditariet\`a. Attraverso un processo di compilazione viene prodotto codice JavaScript leggibile e conforme agli standard di codifica. 
+\subsubsection{Vantaggi}
+\begin{itemize}
+\item \textbf{Fail Fast Principle}, gli errori di battitura e di tipo vengono scoperti a tempo di compilazione e non a runtime.
+\item \textbf{Supporto ai moduli}.
+\item \textbf{Supporto alla programmazione orientata agli oggetti}.
+\item \textbf{Controllo di tipo:} TypeScript fornisce anche un meccanismo di controllo di tipo a livello di compilazione.
+\end{itemize}
+\subsubsection{Svantaggi}
+\begin{itemize}
+\item \textbf{Perdita di flessibilit\`a}, con l'introduzione di tipi statici.
+\item \textbf{Compilazione}, per eseguire l'applicazione \`e necessaria la compilazione dei file TypeScript.
+\item \textbf{Supporto}, molti framework supportano file JavaScript, ma ancora non file TypeScript.
+\end{itemize}
