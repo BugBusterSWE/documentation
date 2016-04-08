@@ -38,7 +38,7 @@
       \caption{Controllo validità collegamento tra due DSL Element}
       \label{fig:diagram_model}
     \end{figure}
-L'utente si trova nella pagina dell'editor ed ha effettuato un collegamento tra due DSL Element. In questa sottoattività viene controllata la validità del collegamento, data una coppia (sorgente, destinazione). Questa coppia può essere la combinazione dei tipi \textit{Valore V} o \textit{Riferimento R} (\textit{VV, VR, RV, RR}). Se la coppia è del tipo \textit{VV} o \textit{RR} o l'utente ha cliccato su una sorgente valida ma successivamente in un'area dell'editor non valida, allora il collegamento fallisce. Altrimenti, occorre valutare il tipo della destinazione e della sorgente e confrontarli. Se i tipi sono compatibili ( uguali o non confrontabili, ad esempio nel caso del collegamento di un input ad un Function Element ), allora il collegamento ha successo, altrimenti no. 
+L'utente si trova nella pagina dell'editor ed ha effettuato un collegamento tra due DSL Element. In questa sotto-attività viene controllata la validità del collegamento, data una coppia (sorgente, destinazione). Questa coppia può essere la combinazione dei tipi \textit{Valore V} o \textit{Riferimento R} (\textit{VV, VR, RV, RR}). Se la coppia è del tipo \textit{VV} o \textit{RR} o l'utente ha cliccato su una sorgente valida ma successivamente in un'area dell'editor non valida, allora il collegamento fallisce. Altrimenti, occorre valutare il tipo della destinazione e della sorgente e confrontarli. Se i tipi sono compatibili (uguali o non confrontabili, ad esempio nel caso del collegamento di un input ad un Function Element), allora il collegamento ha successo, altrimenti no. 
     \subsection{Compilazione campi DSL Element}
     \begin{figure}[H]
       \centering
@@ -46,7 +46,7 @@ L'utente si trova nella pagina dell'editor ed ha effettuato un collegamento tra 
       \caption{Compilazione campi DSL Element}
       \label{fig:diagram_model}
     \end{figure}
-    L'utente si trova nella pagina dell'editor e desidera impostare un valore per un attributo di un DSL Element. Seleziona il DSL Element e il campo dell'attributo scelti. Se l'attributo è opzionale allora l'utente può ``attivarlo'' facendo pressione sull'icona di sblocco, altrimenti se è obbligatorio procede senza fare nulla. Per impostare un valore, si hanno tre casi: se si tratta di un attributo di tipo stringa o intero, l'utente può digitare il valore testuale desiderato; se si tratta di un tipo booleano, può attivare un check box, infine se si tratta di un tipo enumerazione, può selezionare una voce dal menù a tendina corrispondente al tipo.
+    L'utente si trova nella pagina dell'editor e desidera impostare un valore per un attributo di un DSL Element. Per farlo seleziona il DSL Element e il campo dell'attributo scelto, se l'attributo è opzionale allora l'utente può ``attivarlo'' facendo pressione sull'icona di sblocco, altrimenti se è obbligatorio procede senza fare nulla. Per impostare un valore, si hanno tre casi: se si tratta di un attributo di tipo stringa o intero, l'utente può digitare il valore testuale desiderato; se si tratta di un tipo booleano, può attivare un check box; infine se si tratta di un tipo enumerazione, può selezionare una voce dal menù a tendina corrispondente al tipo.
     \subsection{Gestione spostamento DSL Element sull'editor}
     \begin{figure}[H]
       \centering
@@ -54,4 +54,4 @@ L'utente si trova nella pagina dell'editor ed ha effettuato un collegamento tra 
       \caption{Gestione spostamento DSL Element sull'editor}
       \label{fig:diagram_model}
     \end{figure}
-    L'utente si trova nella pagina dell'editor e desidera spostare un DSL Element. Il sistema, avendo a disposizione l'id associato, recupera il DSL Element e mantiene aggiornata la corrispondente PView.
+    L'utente si trova nella pagina dell'editor e desidera spostare un DSL Element. Il sistema, avendo a disposizione l'id associato, recupera il DSL Element e mantiene aggiornata la corrispondente \texttt{DSLCreator::PView}.
