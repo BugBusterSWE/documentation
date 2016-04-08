@@ -1,11 +1,9 @@
 \section{Frontend}
-\subsection{Formalismo utilizzato}
-%% DA FARE
 
 \subsection{Descrizione generale}
 
-Il frontend della nostra applicazione andrà a costituire il ruolo di View nel pattern MVC. In particolare tale componente dell'applicazione è costituita da un sottosistema che implementa l'architettura Flux proposta da Facebook. Tale architettura si basa sul creare un sistema che abbia un data-flow unidirezionale al fine di semplificare la struttura dell'applicazione stessa,di considerare le viste come uno snapshot di un dato lasso di tempo dei dati.
-Nella progettazione secondo l'architettura Flux si è seguito in particolare il principio che nessuna classe modifichi direttamente lo stato di un'altra ma che creino semplicemente delle Action per comunicare il cambiamento.
+Il frontend dell'applicazione andrà a costituire il ruolo di View nel pattern MVC. In particolare tale componente dell'applicazione è costituita da un sottosistema che implementa l'architettura Flux proposta da Facebook. Tale architettura si basa sul creare un sistema che abbia un data-flow unidirezionale al fine di semplificare le interazioni tra le varie componenti e di assicurare che tra el componenti non esistano dipendenze circolari.
+Nella progettazione secondo l'architettura Flux si è seguito in particolare il principio che nessuna classe modifichi direttamente lo stato di un'altra ma che vengano create dalle componenti che richiedono un'interazione delle Action per comunicare con le altre parti del sistema.
 
 \begin{figure}[h]
 \centering
@@ -15,10 +13,10 @@ Nella progettazione secondo l'architettura Flux si è seguito in particolare il 
 In una architettura Flux vengono distinti 4 componenti fondamentali:
 
 \begin{itemize}
-\item Action: Rappresenta un messaggio tra le componenti
-\item Dispatcher: funge da hub centrale per le action e si occupa di distribuirle al giusto store
-\item Store: contengono la logica applicativa del frontend e lo stato dei dati dall'ultimo update. Si occupano di fornire i dati alle viste, quando queste li richiedono
-\item View: Sono la parte visiva dell'applicazione e, nel nostro caso, saranno costituite da classi di React.
+\item \textbf{Action}: Rappresenta un messaggio tra le componenti del sistema;
+\item \textbf{Dispatcher}: funge da hub centrale per le action e si occupa di distribuirle al giusto store;
+\item \textbf{Store}: contengono la logica applicativa del frontend e lo stato dei dati dall'ultimo update. Si occupano di fornire i dati alle viste, quando queste li richiedono;
+\item \textbf{View}: Sono la parte visiva dell'applicazione e, nel nostro caso, saranno costituite da componenti definite con React.
 \end{itemize}
 
 Dall'architettura sopra descritta sono stati individuati i seguenti package per il lato frontend di MaaS:
@@ -42,11 +40,11 @@ Dall'architettura sopra descritta sono stati individuati i seguenti package per 
 Il seguente package contiene tutte le classi che contengono i metodi per interagire con le API esposte dal server. 
 \paragraph*{Classi contenute}
 \begin{itemize}
-\item UserAPIs
-\item CompanyAPIs
-\item DSLAPIs
-\item DatabaseAPIs
-\item WebAPIFacade
+\item \textbf{UserAPIs};
+\item \textbf{CompanyAPIs};
+\item \textbf{DSLAPIs};
+\item \textbf{DatabaseAPIs};
+\item \textbf{WebAPIFacade}.
 \end{itemize}
 
 \subsubsection{UserAPIs}
@@ -87,7 +85,7 @@ Viene utilizzata per lanciare le operazioni CRUD associate alle API esposte dal 
 
 \subsubsection{DatabaseAPIs}
 \paragraph*{Descrizione della classe}
-Classe per interagire con le API esposte dal server che riguardano i Database delle company.
+Classe per interagire con le API esposte dal server che riguardano i Database delle Company.
 
 \paragraph*{Utilizzo}
 Viene utilizzata questa classe per lanciare le operazioni CRUD esposte dalle API del backend.
@@ -97,27 +95,35 @@ Viene utilizzata questa classe per lanciare le operazioni CRUD esposte dalle API
 \item ActionCreators::DatabaseAPIs
 \end{itemize}
 
-%% FACADE?
+\subsubsection{WebAPIFacade}
+\paragraph*{Descrizione della classe}
+Classe che implementa il design pattern Facade al fine di creare un'interfaccia semplificata per il resto delle componenti per interagire con le API esposte dal backend.
+\paragraph*{Utilizzo}
+Questa classe viene utilizzata come interfaccia per il frontend per comunicare con le API esposte dal backend.
+\paragraph*{Relazione con altre classi}
+\begin{itemize}
+\item webAPIs
+\item actionCreators
+\end{itemize} 
 
 \subsection{ActionCreators}
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.8\textwidth]{res/sections/imgs/actioncreator-diagram.jpg}
-\caption{Diagramma dei package del frontend}
+\caption{Diagramma delle classi contenute in ActionCreators}
 \end{figure}
-
 
 \paragraph*{Descrizione del package}
 Questo package contiene tutte le classi che si prestano come factory di Action. Le classi in questione mettono in relazione le webAPIs con il resto dell'applicazione, cioè vengono utilizzate per la richiesta delle funzionalità delle webAPIs per poi lanciare le Action relative alle risposte ricevute.
 
 \paragraph*{Classi contenute}
 \begin{itemize}
-\item SessionActionCreator
-\item UserActionCreator
-\item CompanyActionCreator
-\item DSLActionCreator
-\item DatabaseActionCreator
+\item \textbf{SessionActionCreator};
+\item \textbf{UserActionCreator};
+\item \textbf{CompanyActionCreator};
+\item \textbf{DSLActionCreator};
+\item \textbf{DatabaseActionCreator}.
 \end{itemize}
 
 \subsubsection{SessionActionCreator}
@@ -130,72 +136,71 @@ Viene utilizzata per richiedere il login di un utente e per emanare le action re
 \paragraph*{Relazione con altre classi}
 \begin{itemize}
 \item Dispatcher
-\item (Stores::SessionStore)
-\item Pages::LoginPage
+\item Pages
+\item webAPIs::WebAPIFacade
+\item Stores::SessionStore
 \end{itemize}
 
 \subsubsection{UserActionCreator}
 \paragraph*{Descrizione della classe}
-Classe che si occupa di creare e lanciare le action relative agli utenti.
+Classe che si occupa di creare e lanciare le action relative agli utenti. Viene implementata tramite Design Pattern Factory.
 \paragraph*{Utilizzo}
-Viene utilizzata per creare le action relative agli utenti: la classe fornisce i metodi per utilizzare le webAPIs contenute in UserAPIs e restituisce le action che poi verrano reindirizzate a UserStore.
+Viene utilizzata per creare le action relative agli utenti: la classe fornisce i metodi per utilizzare le webAPIs contenute relative all'utente e restituisce le action che poi verrano reindirizzate a UserStore.
 
 \paragraph*{Relazione con altre classi}
 \begin{itemize}
 \item Dispatcher
-\item (Stores::UserStore)
-\item Pages::ProfilePage
-\item Pages::ModifyProfilePage
- %% ...
+\item Pages
+\item webAPIs::WebAPIFacade
+\item Stores::UserStore
 \end{itemize}
 
 \subsubsection{CompanyActionCreator}
 \paragraph*{Descrizione della classe}
-Classe che si occupa dell'interazione dell'applicazione con CompanyAPIs e di lanciare Action relative alle risposte ottenute da essa.
+Classe che si occupa dell'interazione dell'applicazione con CompanyAPIs e di lanciare Action relative alle risposte ottenute da essa. Viene implementata tramite Design Pattern Factory.
 \paragraph*{Utilizzo}
-La classe viene utilizzata per creare le action relative alle Company: sfrutta i metodi dichiarati in CompanyAPIs per interagire con il server e lancia le action contenenti i dati ricevuti dalle API richieste.
+La classe viene utilizzata per creare le action relative alle Company: sfrutta le webAPIs dichiarate per interagire con il server e lancia le action contenenti i dati ricevuti dalle API richieste.
 
 \paragraph*{Relazione con altre classi}
 \begin{itemize}
 \item Dispatcher
-\item (Stores::CompanyStore)
-\item Pages::CompanyPage
-%% ...
+\item Pages
+\item Stores::CompanyStore
+\item webAPIs::WebAPIFacade
 \end{itemize}
 
 \subsubsection{DSLActionCreator}
 \paragraph*{Descrizione della classe}
 Classe che si occupa di creare action riguardanti le specifiche DSL.
 \paragraph*{Utilizzo}
-Tale classe viene utilizzata per sfruttare i metodi dichiarati in DSLAPIs per la richiesta delle API esposte dal server relative alle specifiche DSL. Dopo aver sfruttato l'API richiesta, la classe crea un'action contenente i risultati ottenuti.
+Tale classe viene utilizzata per sfruttare i metodi dichiarati dalle webAPIs per la richiesta delle API esposte dal server relative alle specifiche DSL. Dopo aver sfruttato l'API richiesta, la classe crea un'action contenente i risultati ottenuti.
 
 \paragraph*{Relazione con altre classi}
 \begin{itemize}
 \item Dispatcher
-\item (Stores::DSLStore)
-\item DSLPage
+\item Stores::DSLStore
+\item Pages
+\item webAPIs::WebAPIFacade
 \end{itemize}
 
 \subsubsection{DatabaseActionCreator}
 \paragraph*{Descrizione della classe}
 Classe che si occupa di lanciare action riguardanti le connessioni ai Database di una Company.
 \paragraph*{Utilizzo}
-La classe viene utilizzata per richiamare i metodi definiti in DatabaseAPIs e creare le action contenenti le risposte dai metodi chiamati.
+La classe viene utilizzata per richiamare i metodi definiti dalle webAPIs relativi ai Database delle Company e creare le action contenenti le risposte dai metodi chiamati.
 \paragraph*{Relazione con altre classi}
 \begin{itemize}
 \item Dispatcher
-\item (Store::DatabaseStore)
-\item Pages::DatabaseCollectionPage
-\item Pages::SingelDatabasePage
-\item Pages::CreateDatabasePage
-\item Pages::ModifyDatabasePage
+\item Pages
+\item Store::DatabaseStore
+\item webAPIs::WebAPIFacade
 \end{itemize}
 
 \subsection{Dispatcher}
 \paragraph*{Descizione della classe}
 Classe raffigurante il dispatcher descritto nell'architettura Flux.
 \paragraph*{Utilizzo}
-Il dispatcher viene utilizzato come hub centrale delle action circolanti per l'applicazione. Con esso viene definito il punto di destinazione delle action prodotte dai creators.
+Il dispatcher viene utilizzato come hub centrale delle action circolanti per l'applicazione. Esso deve fornire le informazioni per instradare le action create dagli ActionCreators verso il giusto Store di destinazione
 \paragraph*{Relazione con altre classi}
 \begin{itemize}
 \item Stores
@@ -208,18 +213,18 @@ Il dispatcher viene utilizzato come hub centrale delle action circolanti per l'a
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.8\textwidth]{res/sections/imgs/stores-diagram.jpg}
-\caption{Diagramma di deployment per l'architettura}
+\caption{Diagramma delle classi per il package Stores}
 \end{figure}
 
 \paragraph*{Descrizione del package}
 Il package in questione contiene le classi che implementano il concetto di Store presentato nell'architettura Flux. Ciascuno Store contiene dei dati omogenei tra loro e si occupa di fornirli alle pagine che ne necessitano.
 \paragraph*{Classi contenute}
 \begin{itemize}
-\item SessionStore
-\item UserStore
-\item DatabaseStore
-\item CompanyStore
-\item DSLStore
+\item \textbf{SessionStore};
+\item \textbf{UserStore};
+\item \textbf{DatabaseStore};
+\item \textbf{CompanyStore};
+\item \textbf{DSLStore}.
 \end{itemize}
 
 \subsubsection{SessionStore}
@@ -288,7 +293,7 @@ Viene utilizzata per inizializzare il frontend e per fornire le configurazioni n
 \paragraph*{Descrizione della classe}
 Questa classe è necessaria all'applicazione per determinare quale pagina mostrare.
 \paragraph*{Utilizzo}
-Viene istanziata in nell'applicazione principale e determina le associazioni tra pagine e URL per identificarle.
+Viene istanziata nell'applicazione principale e determina le associazioni tra pagine e gli indirizzi URL per identificarle.
 
 \subsection{Pages}
 \paragraph*{Descrizione del package}
