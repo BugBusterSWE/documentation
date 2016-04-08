@@ -16,11 +16,11 @@ L'implementazione scelta per il backend dell'applicazione è un server con archi
 Tale architettura permette l'indipendenza completa tra backend e frontend, permettendo così a espansioni su altre piattaforme senza dover modificare il backend dell'applicazione.
 
 L'architettura del backend segue il design patter MVC (\textbf{M}odel \textbf{V}iew \textbf{C}ontroller) per quanto concerne i ruoli di Model e Controller. 
-Il ruolo di Controller tuttavia verrà implementato da uno stack di middleware come suggerito dal framework ExpressJS.
-La parte Vire, invece, è rappresentata dalle viste di Reactjs.
+Il ruolo di Controller tuttavia, non essendo implementato nativamente in Express, verrà implementato da uno stack di middleware come suggerito dal framework.
+La parte View, invece, è rapprestata dal frontend, costituito da componenti definiti con React e disposti secondo l'architettura Flux.
 
 \subsection{Descrizione dei package}
-Il seguente diagramma mostra l'architettura generale del back end.
+Il seguente diagramma mostra l'architettura generale del backend.
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{res/sections/backend/generale.png}
@@ -50,7 +50,7 @@ Package che racchiude tutta l'applicazione MaaS.
 \caption{Diagramma dei package completo dei componenti per ciascun package}
 \end{figure}
 
-\subsubsection{Package Models}
+\subsection{Package Models}
 \paragraph*{Descrizione}
 Package che racchiude i moduli contenenti la business logic dell'applicazione. Ciascuno di questi moduli implementa un modello Mongoose e definisce i metodi con cui interagirvi (aggiungere, rimuovere e modificare i contenuti). \\
 Rappresenta la parte M (Model) del design pattern MVC.
@@ -74,7 +74,7 @@ Rappresenta la parte M (Model) del design pattern MVC.
 \caption{Diagramma delle classi del package Models}
 \end{figure}
 
-\paragraph{UserModel}
+\subsubsection{UserModel}
 \paragraph*{Descrizione}
 
 Racchiude la business logic legata agli utenti. Viene implementato tramite Module pattern di Javascript. 
@@ -86,12 +86,11 @@ Il modello viene utilizzato sia per la rappresentazione di un utente nell'applic
 \begin{itemize}
 \item Mongoose
 \item Mongoose-validator
-\item AuthenticationChecker
+\item Lib::AuthenticationChecker
 \end{itemize}
 
-\paragraph{CompanyModel}
+\subsubsection{CompanyModel}
 \paragraph*{Descrizione}
-
 Racchiude la business logic legata alle Company. Viene implementato tramite Module pattern di Javascript. 
 
 \paragraph*{Utilizzo}
