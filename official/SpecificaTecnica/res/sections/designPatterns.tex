@@ -1,36 +1,36 @@
 \newpage
-\section{\textit{Design patterns} utilizzati}
-Nella progettazione di MaaS sono stati utilizzati i seguenti \textit{design patterns}:
+\section{Design pattern utilizzati}
+Nella progettazione di MaaS sono stati utilizzati i seguenti \textit{design pattern}:
 \begin{itemize}
 \item \textbf{Builder};
 \item \textbf{Facade};
 \item \textbf{Singleton};
-\item \textbf{Chain of Responsability};
+\item \textbf{Chain of Responsibility};
 \item \textbf{Model-View-Controller}.
 \end{itemize}
-Verrà presentata una descrizione questi design pattern, dividendoli in base al loro tipo, ovvero:
+Verrà presentata una descrizione di questi \textit{design pattern}, dividendoli in base al loro tipo, ovvero:
 \begin{itemize}
-\item \textbf{Creazionali}: Builder e Singleton.
-\item \textbf{Strutturali}: Facade.
-\item \textbf{Comportamentali}: Chain of responsability.
+\item \textbf{Creazionali}: Builder e Singleton;
+\item \textbf{Strutturali}: Facade;
+\item \textbf{Comportamentali}: Chain of responsibility;
 \item \textbf{Architetturali}: Model-View-Controller.
 \end{itemize}
-Durante la descrizione dell'architettura sono stati evidenziati i punti di applicazione dei singoli design pattern. In questa sezione vengono riportati solamente i componenti che li realizzano nel concreto o, ove risultasse più chiaro, il diagramma delle classi vero e proprio.
+Nella descrizione dell'architettura sono stati evidenziati i punti di applicazione dei singoli \textit{design pattern}. In questa sezione vengono riportati solamente i componenti che li realizzano nel concreto o, ove risultasse più chiaro, il diagramma delle classi vero e proprio.
 \subsection{Creazionali}
 \subsubsection{Builder}
 \paragraph{Descrizione} \mbox{} \\
-Il design pattern Builder separa la costruzione di un oggetto complesso dalla sua rappresentazione cosicché il processo di costruzione stesso possa creare diverse rappresentazioni. L'algoritmo per la creazione di un oggetto complesso è indipendente dalle varie parti che costituiscono l'oggetto e da come vengono assemblate. \\
-Ciò ha l'effetto immediato di rendere più semplice la classe, permettendo a una classe builder separata di focalizzarsi sulla corretta costruzione di un'istanza e lasciando che la classe originale si concentri sul funzionamento degli oggetti. Questo è particolarmente utile quando si vuole assicurare che un oggetto sia valido prima di istanziarlo, e non si vuole che la logica di controllo appaia nei costruttori degli oggetti. Un builder permette anche di costruire un oggetto passo-passo, cosa che si può verificare quando si fa il parsing di un testo o si ottengono i parametri da un'interfaccia interattiva. \\
-A differenza dei design pattern Abstract Factory e Factory Method, il cui scopo è permettere il polimorfismo, l'intenzione del Builder è quella di ridurre il cosiddetto effetto telescoping nei costruttori, che porta ad un grande numero di parametri richiesti in fase di costruzione dell'oggetto.
+Il \textit{design pattern} Builder separa la costruzione di un oggetto complesso dalla sua rappresentazione cosicché il processo di costruzione stesso possa creare diverse rappresentazioni. L'algoritmo per la creazione di un oggetto complesso è indipendente dalle varie parti che costituiscono l'oggetto e da come vengono assemblate. \\
+Ciò ha l'effetto immediato di rendere più semplice la classe, permettendo a una classe \textit{Builder} separata di focalizzarsi sulla corretta costruzione di un'istanza e lasciando che la classe originale si concentri sul funzionamento degli oggetti. Questo è particolarmente utile quando si vuole assicurare che un oggetto sia valido prima di istanziarlo, e non si vuole che la logica di controllo appaia nei costruttori degli oggetti. Un builder permette anche di costruire un oggetto passo-passo, cosa che si può verificare quando si fa il parsing di un testo o si ottengono i parametri da un'interfaccia interattiva. \\
+A differenza dei \textit{design pattern} \textit{Abstract Factory} e \textit{Factory Method}, il cui scopo è permettere il polimorfismo, l'intenzione del \textit{Builder} è quella di ridurre il cosiddetto \textit{effetto telescoping} nei costruttori, che porta ad un grande numero di parametri richiesti in fase di costruzione dell'oggetto.
 \paragraph{Vantaggi} \mbox{} \\
 \begin{itemize}
-\item Permette di variare la rappresentazione interna di un oggetto.
-\item Incapsula il codice della costruzione.
-\item Fornisce maggiore controllo sui passi di costruzione dell'oggeto.
+\item Permette di variare la rappresentazione interna di un oggetto;
+\item Incapsula il codice della costruzione;
+\item Fornisce maggiore controllo sui passi di costruzione dell'oggetto;
 \end{itemize}
 \paragraph{Svantaggi} \mbox{} \\
 \begin{itemize}
-\item Richiede la crezione di un oggetto separato (ConcreteBuilder) per ogni tipo di oggetto da costruire (Product).
+\item Richiede la creazione di un oggetto separato (\textit{ConcreteBuilder}) per ogni tipo di oggetto da costruire (\textit{Product}).
 \end{itemize}
 \paragraph{Struttura}
 \begin{figure}[H]
