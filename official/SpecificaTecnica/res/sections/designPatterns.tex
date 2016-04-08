@@ -114,29 +114,29 @@ Questo pattern viene utilizzato anche nel frontend, nel package \texttt{DSLCreat
 \subsection{Comportamentali}
 \subsubsection{Chain of responsibility}
 \paragraph{Descrizione} \mbox{} \\
-Il \textit{Chain of Responsibility} permette di separare i sender dai receiver delle richieste. La richiesta attraversa una catena di oggetti per essere intercettata solo quando raggiunge il proprio gestore. Viene utilizzato quando non è possibile determinare staticamente il receiver oppure l’insieme di oggetti gestori cambia dinamicamente a runtime. \\
-Le richieste vengono dette implicite poiché il sender non ha alcuna conoscenza sull’identità del ricevente. Per permettere alla richiesta di attraversare la catena e per rimanere implicita, ogni receiver condivide un interfaccia comune per gestire le richieste ed accedere al proprio successore. La gerarchia che vorrà inviare richieste dovrà avere una superclasse che dichiara un metodo handler generico.
+Il \textit{Chain of Responsibility} permette di separare i \textit{sender} dai \textit{receiver} delle richieste. La richiesta attraversa una catena di oggetti per essere intercettata solo quando raggiunge il proprio gestore. Viene utilizzato quando non è possibile determinare staticamente il \textit{receiver} oppure l’insieme di oggetti gestori cambia dinamicamente a \textit{runtime}. \\
+Le richieste vengono dette implicite poiché il \textit{sender} non ha alcuna conoscenza sull’identità del ricevente. Per permettere alla richiesta di attraversare la catena e per rimanere implicita, ogni \textit{receiver} condivide un interfaccia comune per gestire le richieste ed accedere al proprio successore. La gerarchia che vorrà inviare richieste dovrà avere una superclasse che dichiara un metodo \textit{handler} generico.
 \paragraph{Vantaggi} \mbox{} \\
 \begin{itemize}
-\item Porta ad un accoppiamento debole tra i componenti.
+\item Porta ad un accoppiamento debole tra i componenti;
 \item Aggiunge flessibilità nell’assegnamento delle responsabilità degli oggetti.
 \end{itemize}
 \paragraph{Svantaggi} \mbox{} \\
 \begin{itemize}
-\item Non c’è garanzia che la request venga gestita: questo può avvenire quando la catena non è stata costruita in modo rigoroso.
+\item Non c’è garanzia che la \textit{request} venga gestita: questo può avvenire quando la catena non è stata costruita in modo rigoroso.
 \end{itemize}
 \paragraph{Struttura} \mbox{} \\
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{res/sections/backend/chainOfResponsability.png}
-\caption{Design pattern Chain of responsability}
+\caption{Design pattern Chain of responsibility}
 \end{figure}
 \paragraph{Contestualizzazione}\mbox{} \\
-La classe \texttt{DSLInterpreter::DSLInterpreter} implementa il Chain of Responsability e detiene una lista di tutti gli interpreti (i receiver) da invocare man mano che vengono applicate le traduzioni (le richieste dei sender). Il risultato di ogni interprete verrà contatenato e come risultato si otterrà la specifica DSL richiesta.
+La classe \texttt{DSLInterpreter::DSLInterpreter} implementa il \textit{Chain of Responsibility} e detiene una lista di tutti gli interpreti (i \textit{receiver}) da invocare man mano che vengono applicate le traduzioni (le richieste dei \textit{sender}). Il risultato di ogni interprete verrà concatenato e come risultato si otterrà la specifica DSL richiesta.
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{res/sections/frontend/chainOfResponsability.png}
-\caption{Design pattern Chain of responsability nel front-end}
+\caption{Design pattern Chain of responsability nel frontend}
 \end{figure}
 \subsection{Architetturali}
 \subsubsection{Model-View-Controller}
@@ -144,15 +144,15 @@ La classe \texttt{DSLInterpreter::DSLInterpreter} implementa il Chain of Respons
 Il pattern è basato sulla separazione dei compiti fra i componenti software che interpretano tre ruoli principali:
 \begin{itemize}
 \item il \textbf{Model} fornisce i metodi per accedere ai dati utili all'applicazione;
-\item il \textbf{View} visualizza i dati contenuti nel model e si occupa dell'interazione con utenti e agenti;
-\item il \textbf{Controller} riceve i comandi dell'utente (in genere attraverso il view) e li attua modificando lo stato degli altri due componenti.
+\item il \textbf{View} visualizza i dati contenuti nel \textbf{Model} e si occupa dell'interazione con utenti e agenti;
+\item il \textbf{Controller} riceve i comandi dell'utente (in genere attraverso il \textbf{View}) e li attua modificando lo stato degli altri due componenti.
 \end{itemize}
-Questo schema, fra l'altro, implica anche la tradizionale separazione fra la logica applicativa (in questo contesto spesso chiamata business logic), a carico del controller e del model, e l'interfaccia utente a carico del view. \\
-Quasi sempre la relazione fra view e model è descrivibile anche come istanza del pattern Observer. A volte, quando è necessario cambiare il comportamento standard dell'applicazione a seconda delle circostanze, il controller implementa anche il pattern Strategy.
+Questo schema, fra l'altro, implica anche la tradizionale separazione fra la logica applicativa (in questo contesto spesso chiamata \textit{business logic}), a carico del \textbf{Controller} e del \textbf{Model}, e l'interfaccia utente a carico del \textbf{View}. \\
+Quasi sempre la relazione fra \textbf{View} e \textbf{Model} è descrivibile anche come istanza del pattern \textit{Observer}. A volte, quando è necessario cambiare il comportamento standard dell'applicazione a seconda delle circostanze, il \textbf{Controller} implementa anche il pattern \textit{Strategy}.
 \paragraph{Vantaggi} \mbox{} \\
 \begin{itemize}
 \item Riuso dei componenti dei model: miglior manutenzione e test;
-\item Supporto più semplice per nuovi tipi di client: basta creare una nuova view e un nuovo controller.
+\item Supporto più semplice per nuovi tipi di client: basta creare un nuovo \textbf{View} e un nuovo \textbf{Controller}.
 \end{itemize}
 \paragraph{Svantaggi} \mbox{} \\
 \begin{itemize}
@@ -168,8 +168,8 @@ Il seguente diagramma, non UML, mostra la struttura generale del design pattern 
 \paragraph{Contestualizzazione} \mbox{} \\
 In MaaS, i componenti che realizzano il design pattern MVC sono i seguenti:
 \begin{itemize}
-\item Package Models -> Model;
-\item Package Routes -> Controller;
-\item Viste di Reactjs -> View.
+\item Package \texttt{Models} -> \textbf{Model};
+\item Package \texttt{Routes} -> \textbf{Controller};
+\item Viste di \texttt{React.js} -> \textbf{View}.
 \end{itemize}
-L'utente interagisce con le viste create tramite il framework Reactjs. I dati vengono richiesti al server attraverso le API REST messe a disposizione. Le richieste vengono gestite con le routes di ExpressJS, e i moduli del package Models vengono utilizzati per accedere ai dati memorizzati dall'applicazione.
+L'utente interagisce con le viste create tramite il framework React.js. I dati vengono richiesti al server attraverso le API REST messe a disposizione. Le richieste vengono gestite con le routes di ExpressJS, e i moduli del package Models vengono utilizzati per accedere ai dati memorizzati dall'applicazione.
