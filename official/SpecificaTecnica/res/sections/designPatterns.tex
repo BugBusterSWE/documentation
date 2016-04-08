@@ -131,6 +131,13 @@ Le richieste vengono dette implicite poiché il sender non ha alcuna conoscenza 
 \includegraphics[width=0.8\textwidth]{res/sections/backend/chainOfResponsability.png}
 \caption{Design pattern Chain of responsability}
 \end{figure}
+\paragraph{Contestualizzazione}\mbox{} \\
+La classe \texttt{DSLInterpreter::DSLInterpreter} implementa il Chain of Responsability e detiene una lista di tutti gli interpreti (i receiver) da invocare man mano che vengono applicate le traduzioni (le richieste dei sender). Il risultato di ogni interprete verrà contatenato e come risultato si otterrà la specifica DSL richiesta.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{res/sections/frontend/chainOfResponsability.png}
+\caption{Design pattern Chain of responsability nel front-end}
+\end{figure}
 \subsection{Architetturali}
 \subsubsection{Model-View-Controller}
 \paragraph{Descrizione} \mbox{} \\
