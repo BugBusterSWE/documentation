@@ -28,7 +28,7 @@ L'architettura generale di MaaS si può dividere in 3 macrocomponenti:
 \includegraphics[width=0.8\textwidth]{res/sections/GeneralArchitecture.png}
 \caption{Diagramma di deployment per l'architettura}
 \end{figure}
-L'architettura proposta segue il Design Pattern MVC. In particolare i ruoli di Model e Controller verranno implementati a livello di server, mentre il ruolo di View viene affidato al frontend. L'intrefaccia tra le due componenti verrà gestita grazie ad un set di API disposto dal server REST: in questo modo si garantisce una totale indipendenza tra frontend e backend e concede a sviluppi futuri anche in altre piattaforme (ad esempio in app mobile) senza dover creare dei sistemi di integrazione ad-hoc. \\
+L'architettura proposta segue il Design Pattern MVC. In particolare i ruoli di Model e Controller verranno implementati a livello di server, mentre il ruolo di View viene affidato al frontend. L'interfaccia tra le due componenti verrà gestita grazie ad un set di API disposto dal server REST: in questo modo si garantisce una totale indipendenza tra frontend e backend e concede a sviluppi futuri anche in altre piattaforme (ad esempio in app mobile) senza dover creare dei sistemi di integrazione ad-hoc. \\
 Le tre macrocomponenti verranno descritte nel dettaglio in seguito su questo documento.
 \subsection{Interfaccia REST like}
 Il back end si basa su uno stile REST like. Dal login al logout l'interfaccia di accesso ai dati può considerarsi a tutti gli effetti REST, ovvero con le seguenti caratteristiche:
