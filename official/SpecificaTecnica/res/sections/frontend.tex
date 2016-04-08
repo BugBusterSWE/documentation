@@ -2,20 +2,20 @@
 
 \subsection{Descrizione generale}
 
-Il frontend dell'applicazione andrà a costituire il ruolo di View nel pattern MVC. In particolare tale componente dell'applicazione è costituita da un sottosistema che implementa l'architettura Flux proposta da Facebook. Tale architettura si basa sul creare un sistema che abbia un data-flow unidirezionale al fine di semplificare le interazioni tra le varie componenti e di assicurare che tra el componenti non esistano dipendenze circolari.
-Nella progettazione secondo l'architettura Flux si è seguito in particolare il principio che nessuna classe modifichi direttamente lo stato di un'altra ma che vengano create dalle componenti che richiedono un'interazione delle Action per comunicare con le altre parti del sistema.
+Il frontend dell'applicazione andrà a costituire il ruolo di \textit{View} nel pattern MVC. In particolare tale componente dell'applicazione è costituita da un sottosistema che implementa l'architettura \textit{Flux} proposta da \textit{Facebook}. Tale architettura si basa sul creare un sistema che abbia un \textit{data-flow} unidirezionale al fine di semplificare le interazioni tra le varie componenti e di assicurare che tra le componenti non esistano dipendenze circolari.
+Nella progettazione secondo l'architettura \textit{Flux} si è seguito in particolare il principio che nessuna classe modifichi direttamente lo stato di un'altra ma che vengano create delle componenti che richiedono un'interazione delle \textit{Action} per comunicare con le altre parti del sistema.
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.8\textwidth]{res/sections/imgs/flux.jpg}
 \caption{Diagramma dell'architettura Flux di Facebook}
 \end{figure}
-In una architettura Flux vengono distinti 4 componenti fondamentali:
+In un'architettura \textit{Flux} vengono distinti 4 componenti fondamentali:
 
 \begin{itemize}
 \item \textbf{Action}: Rappresenta un messaggio tra le componenti del sistema;
-\item \textbf{Dispatcher}: funge da hub centrale per le action e si occupa di distribuirle al giusto store;
-\item \textbf{Store}: contengono la logica applicativa del frontend e lo stato dei dati dall'ultimo update. Si occupano di fornire i dati alle viste, quando queste li richiedono;
+\item \textbf{Dispatcher}: funge da \textit{hub} centrale per le \textit{action} e si occupa di distribuirle al giusto \textit{store};
+\item \textbf{Store}: contengono la logica applicativa del frontend e lo stato dei dati dall'ultimo \textit{update}. Si occupano di fornire i dati alle viste, quando queste li richiedono;
 \item \textbf{View}: Sono la parte visiva dell'applicazione e, nel nostro caso, saranno costituite da componenti definite con React.
 \end{itemize}
 
@@ -52,7 +52,7 @@ Il seguente package contiene tutte le classi che contengono i metodi per interag
 Classe che espone tutti i metodi per interagire con le API del server che riguardano gli utenti.
 
 \paragraph*{Utilizzo}
-Viene utilizzata sia per il login che per gestire le operazioni CRUD per le informazioni riguardanti gli utenti.
+Viene utilizzata sia per il login sia per gestire le operazioni CRUD per le informazioni riguardanti gli utenti.
 
 \paragraph*{Relazione con altre classi}
 \begin{itemize}
@@ -85,7 +85,7 @@ Viene utilizzata per lanciare le operazioni CRUD associate alle API esposte dal 
 
 \subsubsection{DatabaseAPIs}
 \paragraph*{Descrizione della classe}
-Classe per interagire con le API esposte dal server che riguardano i Database delle Company.
+Classe per interagire con le API esposte dal server che riguardano i database delle Company.
 
 \paragraph*{Utilizzo}
 Viene utilizzata questa classe per lanciare le operazioni CRUD esposte dalle API del backend.
@@ -97,13 +97,13 @@ Viene utilizzata questa classe per lanciare le operazioni CRUD esposte dalle API
 
 \subsubsection{WebAPIFacade}
 \paragraph*{Descrizione della classe}
-Classe che implementa il design pattern Facade al fine di creare un'interfaccia semplificata per il resto delle componenti per interagire con le API esposte dal backend.
+Classe che implementa il \textit{design pattern} \textit{Facade} al fine di creare un'interfaccia semplificata per il resto delle componenti per interagire con le API esposte dal backend.
 \paragraph*{Utilizzo}
 Questa classe viene utilizzata come interfaccia per il frontend per comunicare con le API esposte dal backend.
 \paragraph*{Relazione con altre classi}
 \begin{itemize}
-\item webAPIs
-\item actionCreators
+\item webAPIs;
+\item actionCreators.
 \end{itemize} 
 
 \subsection{ActionCreators}
