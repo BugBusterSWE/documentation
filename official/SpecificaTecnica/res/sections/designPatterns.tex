@@ -47,18 +47,18 @@ Questo pattern è utilizzato nell'editor nel package \texttt{DSLCreator} per la 
 \end{figure}
 \subsubsection{Singleton}
 \paragraph{Descrizione} \mbox{} \\
-Lo scopo del design pattern creazionale denominato Singleton è assicurare l’esistenza di un'unica istanza di una classe e fornire un punto di accesso globale ad essa. Questo pattern è nato per rispondere alla necessità di non avere più istanze della stessa classe, anche nei linguaggi in cui non è possibile usare una variabile globale, pur dando la possibilità alla classe di tener traccia di quella sua istanza. Il Singleton è quindi applicabile ogniqualvolta debba esistere una sola istanza di una certa classe in tutta l’applicazione, prestando però attenzione al fatto che l’istanza sia estendibile tramite ereditarietà.
+Lo scopo del \textit{design pattern} creazionale denominato \textit{Singleton} è assicurare l’esistenza di un'unica istanza di una classe e fornire un punto di accesso globale ad essa. Questo pattern è nato per rispondere alla necessità di non avere più istanze della stessa classe, anche nei linguaggi in cui non è possibile usare una variabile globale, pur dando la possibilità alla classe di tener traccia di quella sua istanza. Il \textit{Singleton} è quindi applicabile ogniqualvolta debba esistere una sola istanza di una certa classe in tutta l’applicazione, prestando però attenzione al fatto che l’istanza sia estendibile tramite ereditarietà.
 \paragraph{Vantaggi} \mbox{} \\
 \begin{itemize}
-\item Controllo completo di come e quando i client accedono all’interfaccia della classe.
-\item Evita l’utilizzo ingiustificato di variabili globali.
-\item Consente di ridefinire le operazioni definite nel Singleton.
+\item Controllo completo di come e quando i client accedono all’interfaccia della classe;
+\item Evita l’utilizzo ingiustificato di variabili globali;
+\item Consente di ridefinire le operazioni definite nel \textit{Singleton};
 \item Permette di porre un limite massimo al numero di istanze di una certa classe.
 \end{itemize}
 \paragraph{Svantaggi} \mbox{} \\
 \begin{itemize}
-\item Può essere usato male e solo per modellare una variabile globale.
-\item Viola il Single Responsability Principle: controlla sia la propria creazione che il proprio ciclo di vita.
+\item Può essere usato male e solo per modellare una variabile globale;
+\item Viola il \textit{Single Responsibility Principle}: controlla sia la propria creazione sia il proprio ciclo di vita.
 \end{itemize}
 \paragraph{Struttura} \mbox{} \\
 \begin{figure}[H]
@@ -77,7 +77,7 @@ Questo pattern viene utilizzato nell'editor nel package \texttt{DSLCreator}, per
 \subsection{Strutturali}
 \subsubsection{Facade}
 \paragraph{Descrizione} \mbox{} \\
-Questo design pattern fornisce un'interfaccia unificata per un insieme di interfacce presenti in un sottosistema. Facade definisce un'interfaccia di alto livello che rende il sottosistema più semplice da utilizzare. Suddividere un sistema in sottosistemi aiuta a ridurne la complessità. Il suo scopo è rendere una libreria più facile da usare, capire, testare e leggere, riducendo al contempo le dipendenze da codice esterno per le operazioni interne. Di solito si usa quando:
+Questo \textit{design pattern} fornisce un'interfaccia unificata per un insieme di interfacce presenti in un sottosistema. Facade definisce un'interfaccia di alto livello che rende il sottosistema più semplice da utilizzare. Suddividere un sistema in sottosistemi aiuta a ridurne la complessità. Il suo scopo è rendere una libreria più facile da usare, capire, testare e leggere, riducendo al contempo le dipendenze da codice esterno per le operazioni interne. Di solito si usa quando:
 \begin{itemize}
 \item un'interfaccia semplice deve accedere ad un sistema complesso;
 \item l'astrazione e l'implementazione sono molto accoppiate;
@@ -86,15 +86,15 @@ Questo design pattern fornisce un'interfaccia unificata per un insieme di interf
 \end{itemize}
 \paragraph{Vantaggi} \mbox{} \\
 \begin{itemize}
-\item Disaccoppia il sottosistema dai client e dagli altri sottosistemi, promuovendo quindi la portabilità e l'indipendenza di sottosistemi.
-\item Permette di organizzare i sottosistemi in una struttura a livelli.
+\item Disaccoppia il sottosistema dai client e dagli altri sottosistemi, promuovendo quindi la portabilità e l'indipendenza di sottosistemi;
+\item Permette di organizzare i sottosistemi in una struttura a livelli;
 \item Fornisce una vista semplice di base su un sottosistema che si rivela essere sufficiente per la maggior parte dei client.
 \end{itemize}
 \paragraph{Svantaggi} \mbox{} \\
 \begin{itemize}
 \item Non aggiunge funzionalità, semplifica solamente le interfacce;
 \item Non nasconde completamente le componenti di un sottosistema;
-\item È un Single point of failure, ovvero se non funziona la classe Facade il problema si tramanda al resto.
+\item È un \textit{Single point of failure}, ovvero se non funziona la classe Facade il problema si diffonde sul resto.
 \end{itemize}
 \paragraph{Struttura} \mbox{} \\
 \begin{figure}[H]
@@ -103,18 +103,18 @@ Questo design pattern fornisce un'interfaccia unificata per un insieme di interf
 \caption{Design pattern Facade}
 \end{figure}
 \paragraph{Contestualizzazione}\mbox{} \\
-Il design pattern Facade è utilizzato nel backend per fornire un'interfaccia semplice per il sottosistema complesso del package Routes. Un modulo, FacadeRouter, fornisce l'interfaccia, ed evita a MaaSServer di dover interagire con i singoli moduli rappresentanti le diverse Routes. \\
-Di seguito è riportato il diagramma delle classi che realizza il design pattern Facade nel backend.
+Il \textit{design pattern} \textit{Facade} è utilizzato nel backend per fornire un'interfaccia semplice per il sottosistema complesso del package \texttt{Routes}. Un modulo, FacadeRouter, fornisce l'interfaccia, ed evita a MaaSServer di dover interagire con i singoli moduli rappresentanti le diverse \textit{Routes}. \\
+Di seguito è riportato il diagramma delle classi che realizza il \textit{design pattern} \textit{Facade} nel backend.
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{res/sections/backend/facadeRoutes.png}
 \caption{Design pattern Facade nel backend}
 \end{figure}
-Questo pattern viene utilizzato anche nel frontend, nel package \texttt{DSLCreator}. La classe \texttt{DSLCreator::FacadeEditorCreator} è la classe che espone le funzionalità di creazione di un DSL Element. Al suo interno utilizza la classe \texttt{DSLCreator::Builder} ed usa il Builder Pattern. Tale classe è un Singleton. (vedi figura \ref{fig:singleton_editor})
+Questo pattern viene utilizzato anche nel frontend, nel package \texttt{DSLCreator}. La classe \texttt{DSLCreator::FacadeEditorCreator} è la classe che espone le funzionalità di creazione di un DSL Element. Al suo interno utilizza la classe \texttt{DSLCreator::Builder} ed usa il \textit{Builder Pattern}. Tale classe è un \textit{Singleton}. (vedi figura \ref{fig:singleton_editor})
 \subsection{Comportamentali}
-\subsubsection{Chain of responsability}
+\subsubsection{Chain of responsibility}
 \paragraph{Descrizione} \mbox{} \\
-Il Chain of Responsibility permette di separare i sender dai receiver delle richieste. La richiesta attraversa una catena di oggetti per essere intercettata solo quando raggiunge il proprio gestore. Viene utilizzato quando non è possibile determinare staticamente il receiver oppure l’insieme di oggetti gestori cambia dinamicamente a runtime. \\
+Il \textit{Chain of Responsibility} permette di separare i sender dai receiver delle richieste. La richiesta attraversa una catena di oggetti per essere intercettata solo quando raggiunge il proprio gestore. Viene utilizzato quando non è possibile determinare staticamente il receiver oppure l’insieme di oggetti gestori cambia dinamicamente a runtime. \\
 Le richieste vengono dette implicite poiché il sender non ha alcuna conoscenza sull’identità del ricevente. Per permettere alla richiesta di attraversare la catena e per rimanere implicita, ogni receiver condivide un interfaccia comune per gestire le richieste ed accedere al proprio successore. La gerarchia che vorrà inviare richieste dovrà avere una superclasse che dichiara un metodo handler generico.
 \paragraph{Vantaggi} \mbox{} \\
 \begin{itemize}
