@@ -1,0 +1,41 @@
+\newpage
+%introduction
+%write here
+\subsection{Test di Integrazione}
+Questa tipologia di test è utile alla verifica del corretto funzionamento delle componenti definite in sede di \SpecificaTecnica.
+Verrà utilizzata la seguente notazione:
+	\begin{center}
+		TI-\textit{IDComponente}
+	\end{center}
+dove \textit{IdComponente} corrisponde al codice identificativo (crescente) del componente preso in esame
+dal test.
+
+I \textit{Verificatori} hanno stabilito di definire i test di integrazione attraverso un approccio  \textit{top-down}. 
+
+%DIAGRAMMA?
+
+L'approccio \textit{top-down} obbliga a stendere i test di integrazione partendo dai moduli
+di livello più alto, i quali dunque vengono integrati per primi;
+in questo modo le componenti di livello più basso dovranno quindi essere simulate tramite degli
+stub. Grazie all'integrazione incrementale delle componenti del sistema, è immediato determinare
+la componente che crea problemi, e le funzioni di livello superiore sono sottoposte a test precedentemente.
+
+\begin{figure}[H]
+      \begin{center}
+        \includegraphics[width=12cm]{res/sections/DiagrammaBackend}
+      \caption{Struttura ad alto livello del \textit{backend}}
+      \end{center}
+\end{figure}
+
+\begin{figure}[H]
+
+        \centering
+        \includegraphics[width=12cm]{res/sections/DiagrammaFrontend}
+        \caption{Struttura ad alto livello del \textit{frontend}}
+\end{figure}
+
+%table of integrationTest
+\input{res/sections/integrationTest/header}
+\input{res/sections/integrationTest/part1}
+\input{res/sections/integrationTest/part2}
+\input{res/sections/integrationTest/footer}
