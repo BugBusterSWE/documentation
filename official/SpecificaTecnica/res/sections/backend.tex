@@ -1,6 +1,6 @@
 \section{Backend}
-\subsection{Formalismo utilizzato}
-L'utilizzo del framework ExpressJS come base per il server ha evidenziato la necessità di regolamentare alcune convenzioni utilizzate. Queste convenzioni riguardano il formalismo utilizzato per la rappresentazione in quanto concetti come moduli, middlewares e first-class function non hanno una corrispondenza diretta nei diagrammi UML.
+%\subsection{Formalismo utilizzato}
+%L'utilizzo del framework ExpressJS come base per il server ha evidenziato la necessità di regolamentare alcune convenzioni utilizzate. Queste convenzioni riguardano il formalismo utilizzato per la rappresentazione in quanto concetti come moduli, middlewares e first-class function non hanno una corrispondenza diretta nei diagrammi UML.
 %I moduli verranno rappresentati come classi.
 
 %% DA FINIRE E DEFINIRE CON MATTEO
@@ -13,11 +13,11 @@ L'implementazione scelta per il backend dell'applicazione è un server con archi
 \item l'interfaccia delle risorse deve essere uniforme e deve garantire un insieme ben definito di operazioni e una gestione priva di stato delle operazioni.
 \end{itemize}
 
-Tale architettura permette l'indipendenza completa tra backend e frontend, permettendo così a espansioni su altre piattaforme senza dover modificare il backend dell'applicazione.
+Tale architettura permette l'indipendenza completa tra backend e frontend, permettendo così espansioni su altre piattaforme senza dover modificare il backend dell'applicazione.
 
-L'architettura del backend segue il design patter MVC (\textbf{M}odel \textbf{V}iew \textbf{C}ontroller) per quanto concerne i ruoli di Model e Controller. 
-Il ruolo di Controller tuttavia, non essendo implementato nativamente in Express, verrà implementato da uno stack di middleware come suggerito dal framework.
-La parte View, invece, è rapprestata dal frontend, costituito da componenti definiti con React e disposti secondo l'architettura Flux.
+L'architettura del server segue il design patter MVC (\textbf{M}odel \textbf{V}iew \textbf{C}ontroller) per quanto concerne i ruoli di Model e Controller. 
+Il ruolo di Controller tuttavia, non essendo implementato nativamente in dal framework Express, verrà implementato da uno stack di middleware come suggerito dalla documentazione del framework stesso.
+La parte View, invece, è rapprestata dal frontend, costituito da componenti definiti con React e che interagiscono secondo l'architettura Flux.
 
 \subsection{Descrizione dei package}
 Il seguente diagramma mostra l'architettura generale del backend.
@@ -39,7 +39,7 @@ Package che racchiude tutta l'applicazione MaaS.
 \item Lib
 \end{itemize}
 
-\paragraph*{Moduli contenuti}
+\paragraph*{Classi contenute}
 \begin{itemize}
 \item MaaSServer
 \end{itemize}
@@ -52,10 +52,11 @@ Package che racchiude tutta l'applicazione MaaS.
 
 \subsection{Package Models}
 \paragraph*{Descrizione}
-Package che racchiude i moduli contenenti la business logic dell'applicazione. Ciascuno di questi moduli implementa un modello Mongoose e definisce i metodi con cui interagirvi (aggiungere, rimuovere e modificare i contenuti). \\
-Rappresenta la parte M (Model) del design pattern MVC.
+Package che racchiude le classi che rappresentano la business logic dell'applicazione. Ciascuna di queste classi implementa l'interafaccia Model dichiarata all'interno del package.
+Ciascuna classe deve implementare un modello definito da MongooseJS e deve definire i metodi con cui interagire con i dati che la classe stessa rappresenta. \\
+Queste classi rappresentano la parte M (Model) del design pattern MVC.
 
-\paragraph*{Moduli contenuti}
+\paragraph*{Classi contenute}
 \begin{itemize}
 \item UserModel
 \item DSLModel
@@ -74,64 +75,6 @@ Rappresenta la parte M (Model) del design pattern MVC.
 \caption{Diagramma delle classi del package Models}
 \end{figure}
 
-\subsubsection{UserModel}
-\paragraph*{Descrizione}
-
-Racchiude la business logic legata agli utenti. Viene implementato tramite Module pattern di Javascript. 
-
-\paragraph*{Utilizzo}
-Il modello viene utilizzato sia per la rappresentazione di un utente nell'applicazione, sia per l'autenticazione nel sistema.
-
-\paragraph*{Relazioni con altri moduli}
-\begin{itemize}
-\item Mongoose
-\item Mongoose-validator
-\item Lib::AuthenticationChecker
-\end{itemize}
-
-\subsubsection{CompanyModel}
-\paragraph*{Descrizione}
-Racchiude la business logic legata alle Company. Viene implementato tramite Module pattern di Javascript. 
-
-\paragraph*{Utilizzo}
-Il modello rappresenta una Company nel sistema.
-
-\paragraph*{Relazioni con altri moduli}
-\begin{itemize}
-\item Mongoose
-\item Mongoose-validator
-\end{itemize}
-
-\paragraph{DatabaseModel}
-\paragraph*{Descrizione}
-
-Racchiude la business logic legata al collegamento con i database delle Company. Viene implementato tramite Module pattern di Javascript. 
-
-\paragraph*{Utilizzo}
-Il modello rappresenta la connessione ad un database aziendale di una company. Contiene i dati per effettuare l'accesso al database e il riferimento alle collections definite su tale database, permettendo così all'utente di poter definire per ciascuna collection la possibilità di interagirvi da parte di tutti i membri della propria Company o solo degli admin.
-
-\paragraph*{Relazioni con altri moduli}
-\begin{itemize}
-\item Mongoose
-\item Mongoose-validator
-\end{itemize}
-
-\paragraph{DSLModel}
-\paragraph*{Descrizione}
-
-Racchiude la business logic legata alle specifiche DSL. Viene implementato tramite Module pattern di Javascript. 
-
-\paragraph*{Utilizzo}
-Il modello viene utilizzato per la rappresentazione delle specifiche DSL. Contiene i dati di tali specifiche e le funzioni per poter estrarre i dati richiesti da una specifica DSL.
-
-\paragraph*{Relazioni con altri moduli}
-\begin{itemize}
-\item Mongoose
-\item Mongoose-validator
-\item DSLChecker
-\item DatabaseModel
-\end{itemize}
-
 \paragraph{Model}
 \paragraph*{Descrizione}
 Interfaccia comune a tutti i modelli usati da MaaS.
@@ -148,12 +91,73 @@ Viene utilizzata come base per UserModel, CompanyModel, DSLModel e DatabaseModel
 \item DatabaseModel
 \end{itemize}
 
+\subsubsection{UserModel}
+\paragraph*{Descrizione}
+Classe che racchiude la business logic legata agli utenti. Implementa modello e schema definiti da MongooseJS.
+
+\paragraph*{Utilizzo}
+Il modello viene utilizzato sia per la rappresentazione di un utente nell'applicazione, sia per l'autenticazione nel sistema.
+
+\paragraph*{Relazioni con altre classi}
+\begin{itemize}
+\item Mongoose
+\item Mongoose-validator
+\item Lib::AuthenticationChecker
+\item Router::UserRouter
+\end{itemize}
+
+\subsubsection{CompanyModel}
+\paragraph*{Descrizione}
+Racchiude la business logic legata alle Company. Implementa modello e schema definiti da MongooseJS.
+
+\paragraph*{Utilizzo}
+Il modello rappresenta una Company nel sistema.
+
+\paragraph*{Relazioni con altri moduli}
+\begin{itemize}
+\item Mongoose
+\item Mongoose-validator
+\item Router::CompanyRouter
+\end{itemize}
+
+\paragraph{DatabaseModel}
+\paragraph*{Descrizione}
+
+Racchiude la business logic legata al collegamento con i database delle Company. Implementa modello e schema definiti da MongooseJS.
+
+\paragraph*{Utilizzo}
+Il modello rappresenta la connessione ad un database aziendale di una company. Contiene i dati per effettuare l'accesso al database e il riferimento alle collections definite su tale database, permettendo così all'utente di poter definire per ciascuna collection la possibilità di interagirvi da parte di tutti i membri della propria Company o solo degli admin.
+
+\paragraph*{Relazioni con altri moduli}
+\begin{itemize}
+\item Mongoose
+\item Mongoose-validator
+\item Router::DatabaseRouter
+\end{itemize}
+
+\paragraph{DSLModel}
+\paragraph*{Descrizione}
+
+Racchiude la business logic legata alle specifiche DSL. Implementa modello e schema definiti da MongooseJS.
+
+\paragraph*{Utilizzo}
+Il modello viene utilizzato per la rappresentazione delle specifiche DSL. Contiene i dati di tali specifiche e le funzioni per poter estrarre i dati richiesti da una specifica DSL.
+
+\paragraph*{Relazioni con altri moduli}
+\begin{itemize}
+\item Mongoose
+\item Mongoose-validator
+\item Lib::DSLChecker
+\item Router::DSLRouter
+\end{itemize}
+
+
 \subsubsection{Package Routes}
 \paragraph*{Descrizione}
-Il package Routes contiene l'implementazione dei Router definiti da ExpressJS. Il package è costituito da una serie di moduli che implementano gli endpoint per le API.
-I moduli vengono suddivisi in base al modello che utilizzano. Ciascuna route definita inoltre ha il compito di richiamare i middleware necessari.
-La definizione delle API seguirà la descrizione riportata nella sezione apposita di questo documento.\\
-Reppresenta la parte C (Controller) del design pattern MVC.
+Il package Routes contiene le classi che  implementano il router definito da ExpressJS, definendo le varie API esposte dal server
+I moduli vengono suddivisi in base al modello che utilizzano. 
+Ciascuna classe inoltre ha il compito di definire i middleware da anteporre alla definizione delle API.\\
+Le classi ricoprono il ruolo di Controller del design pattern MVC.
 
 \paragraph*{Moduli contenuti}
 \begin{itemize}
@@ -164,11 +168,6 @@ Reppresenta la parte C (Controller) del design pattern MVC.
 \item RouterFacade
 \end{itemize}
 
-\paragraph*{Interfacce contenute}
-\begin{itemize}
-\item Router
-\end{itemize}
-
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{res/sections/backend/routes.png}
@@ -177,12 +176,12 @@ Reppresenta la parte C (Controller) del design pattern MVC.
 
 \paragraph{UserRouter}
 \paragraph*{Descrizione}
-Questo modulo contiene la definizione degli endpoint riguardanti gli utenti. 
+Questa classe contiene la definizione degli endpoint riguardanti gli utenti. 
 
 \paragraph*{Relazione con altri moduli}
 \begin{itemize}
-\item AuthenticationChecker
-\item UserModel
+\item Lib::AuthenticationChecker
+\item Model::UserModel
 \end{itemize}
 
 \paragraph{CompanyRouter}
@@ -191,53 +190,38 @@ Questo modulo contiene la definizione degli endpoint riguardanti le company.
 
 \paragraph*{Relazione con altri moduli}
 \begin{itemize}
-\item AuthenticationChecker
-\item CompanyModel
+\item Lib::AuthenticationChecker
+\item Model::CompanyModel
 \end{itemize}
 
 \paragraph{DSLRouter}
 \paragraph*{Descrizione}
-Questo modulo contiene la definizione degli endpoint riguardanti le specifiche DSL.
+Questo modulo contiene la definizione delle API riguardanti le specifiche DSL.
 
 \paragraph*{Relazione con altri moduli}
 \begin{itemize}
-\item AuthenticationChecker
-\item DSLModel
+\item Lib::AuthenticationChecker
+\item Lib::LevelChecker
+\item Model::DSLModel
 \end{itemize}
 
 \paragraph{DatabaseRouter}
 \paragraph*{Descrizione}
-Questo modulo contiene la definizione degli endpoint riguardanti le connessioni ai database aziendali.
+Questo modulo contiene la definizione delle API riguardanti le connessioni ai database aziendali.
 
 \paragraph*{Relazione con altri moduli}
 \begin{itemize}
-\item AuthenticationChecker
-\item DatabaseModel
+\item Lib::AuthenticationChecker
+\item Lib::LevelChecker
+\item Model::DatabaseModel
 \end{itemize}
 
 \paragraph{RouterFacade}
 \paragraph*{Descrizione}
-Oggetto che implementa il Facade Design Pattern. Tale oggetto incorpora tutti gli endpoint definiti dagli altri router.
+Oggetto che implementa il Facade Design Pattern. Tale oggetto incorpora tutte le API definite nelle classi Router.
 
 \paragraph*{Relazione con altri moduli}
 \begin{itemize}
-\item AuthenticationChecker
-\item UserRouter
-\item CompanyRouter
-\item DSLRouter
-\item DatabaseRouter
-\end{itemize}
-
-\paragraph{Router}
-\paragraph*{Descrizione}
-Interfaccia comune ai router usati da MaaS.
-
-\paragraph*{Utilizzo}
-Viene utilizzata come base per UserRouter, CompanyRouter, DSLRouter e DatabaseRouter.
-
-\paragraph*{Relazione con altri moduli}
-\begin{itemize}
-\item BodyParser
 \item UserRouter
 \item CompanyRouter
 \item DSLRouter
@@ -246,7 +230,8 @@ Viene utilizzata come base per UserRouter, CompanyRouter, DSLRouter e DatabaseRo
 
 \subsubsection{Package Config}
 \paragraph*{Descrizione}
-Questo package contiene la classe Configuration che, in base alla variabile d'ambiente NODE\_ENV, restituisce l'oggetto contenente tutte le informazioni utili alla configurazione del server.
+Questo package contiene le classi Configuration che contengono tutte le informazioni per inizializzare correttmente l'applicazione. 
+Sarà poi l'applicazione a dover recuperare la corretta configurazione in base alla variabilie d'ambiente NODE\_ENV.
 
 \paragraph*{Moduli contenuti}
 \begin{itemize}
@@ -311,10 +296,6 @@ Questo package contiene tutti i moduli di supporto al sistema e i middlewares ge
 \item DSLChecker
 \end{itemize}
 
-\paragraph{Interfacce contenute}
-\begin{itemize}
-\item Middleware
-\end{itemize}
 
 \begin{figure}[H]
 \centering
@@ -358,49 +339,28 @@ Questo modulo viene richiamato in DSLModel per verificare che la specifica DSL c
 \item DSLModel
 \end{itemize}
 
-\paragraph{Middleware}
+\subsubsection{MaaSServer}
 \paragraph*{Descrizione}
-Interfaccia comune ai middlware usati da MaaS.
+Classe principale dell'applicazione.
 
 \paragraph*{Utilizzo}
-Viene utilizzata come base per AuthenticationChecker e per LevelChecker.
-
-\paragraph*{Relazione con altri moduli}
-\begin{itemize}
-\item BodyParser
-\item AuthenticationChecker
-\item LevelChecker
-\end{itemize}
-
-\subsubsection{Modulo MaaSServer}
-\paragraph*{Descrizione}
-Modulo principale dell'applicazione.
-
-\paragraph*{Utilizzo}
-Viene ....
-
+Viene utilizzata questa classe per inizializzare l'applicazione. Questa classe ha la responsabilità di caricare gli altri moduli del backend correttamente e di inizializzare il webserver che li utilizza.
 \paragraph*{Relazione con altri moduli}
 \begin{itemize}
 \item Config
-\item RouterFacade
+\item Router::RouterFacade
 \item BodyParser
-\item Routes
 \item ExpressJS
 \end{itemize}
 
-\paragraph*{Relazione con altri package}
-\begin{itemize}
-\item Lib
-\item ExpressJS
-\end{itemize}
 
 \subsubsection{Moduli integrati}
 \paragraph{BodyParser}
 \paragraph*{Descrizione}
-?????????????????
+Modulo di terze parti per la corretta lettura delle informazioni contenute nel body delle richieste HTTP.
 
 \paragraph*{Utilizzo}
-??????????????????
+Il modulo in questione viene utilizzato come middleware per ExpressJS e si occupa della corretta lettura delle informazioni contenute nel body di una richiesta HTTP. Nel nostro caso verrà impiegato per la lettura dei dati del body in formato JSON.
 
 \paragraph{NodeMailer}
 \paragraph*{Descrizione}
@@ -419,7 +379,7 @@ Permette di inviare delle email.
 
 \paragraph{ExpressJS}
 \paragraph*{Descrizione}
-Framework per la creazione e la gestione di API REST.
+Framework per la creazione e la gestione di webserver per l'esposizione di API RESTful.
 
 \paragraph*{Utilizzo}
 Utilizzato come base per la struttura del server.
