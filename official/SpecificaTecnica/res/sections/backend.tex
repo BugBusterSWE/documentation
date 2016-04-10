@@ -15,8 +15,8 @@ L'implementazione scelta per il backend dell'applicazione è un server con archi
 
 Tale architettura permette l'indipendenza completa tra backend e frontend, permettendo così espansioni su altre piattaforme senza dover modificare il backend dell'applicazione.
 
-L'architettura del server segue il design patter MVC (\textbf{M}odel \textbf{V}iew \textbf{C}ontroller) per quanto concerne i ruoli di Model e Controller. 
-Il ruolo di Controller tuttavia, non essendo implementato nativamente in dal framework Express, verrà implementato da uno stack di middleware come suggerito dalla documentazione del framework stesso.
+L'architettura del server segue il design pattern MVC (\textbf{M}odel \textbf{V}iew \textbf{C}ontroller) per quanto concerne i ruoli di Model e Controller. 
+Il ruolo di Controller tuttavia, non essendo implementato nativamente dal framework Express, verrà implementato da uno stack di middleware come suggerito dalla documentazione del framework stesso.
 La parte View, invece, è rapprestata dal frontend, costituito da componenti definiti con React e che interagiscono secondo l'architettura Flux.
 
 \subsection{Descrizione dei package}
@@ -154,7 +154,7 @@ Il modello viene utilizzato per la rappresentazione delle specifiche DSL. Contie
 
 \subsubsection{Package Routes}
 \paragraph*{Descrizione}
-Il package Routes contiene le classi che  implementano il router definito da ExpressJS, definendo le varie API esposte dal server
+Il package Routes contiene le classi che  implementano il router definito da ExpressJS, definendo le varie API esposte dal server.
 I moduli vengono suddivisi in base al modello che utilizzano. 
 Ciascuna classe inoltre ha il compito di definire i middleware da anteporre alla definizione delle API.\\
 Le classi ricoprono il ruolo di Controller del design pattern MVC.
@@ -230,7 +230,7 @@ Oggetto che implementa il Facade Design Pattern. Tale oggetto incorpora tutte le
 
 \subsubsection{Package Config}
 \paragraph*{Descrizione}
-Questo package contiene le classi Configuration che contengono tutte le informazioni per inizializzare correttmente l'applicazione. 
+Questo package contiene le classi Configuration che contengono tutte le informazioni per inizializzare correttamente l'applicazione. 
 Sarà poi l'applicazione a dover recuperare la corretta configurazione in base alla variabilie d'ambiente NODE\_ENV.
 
 \paragraph*{Moduli contenuti}
