@@ -1,6 +1,6 @@
 \section{Backend}
 \subsection{Descrizione generale}
-L'implementazione scelta per il backend dell'applicazione è un server con architettura REST. Ciò implica che:
+L'implementazione scelta per il backend dell'applicazione è un server con architettura \glossaryItem{REST}. Ciò implica che:
 \begin{itemize}
 \item l'applicazione renda disponibili le sue funzioni in veste di risorse web;
 \item ogni risorsa resa disponibile è indirizzabile univocamente utilizzando un indirizzo URL;
@@ -10,7 +10,7 @@ L'implementazione scelta per il backend dell'applicazione è un server con archi
 Tale architettura permette l'indipendenza completa tra backend e frontend, permettendo così espansioni su altre piattaforme senza dover modificare il backend dell'applicazione.
 
 L'architettura del server segue il design pattern MVC (\textbf{M}odel \textbf{V}iew \textbf{C}ontroller) per quanto concerne i ruoli di Model e Controller. 
-Il ruolo di Controller tuttavia, non essendo implementato nativamente dal framework Express, verrà implementato da uno stack di middleware come suggerito dalla documentazione del framework stesso.
+Il ruolo di Controller tuttavia, non essendo implementato nativamente dal \glossaryItem{framework} Express, verrà implementato da uno stack di \glossaryItem{middleware} come suggerito dalla documentazione del \glossaryItem{framework} stesso.
 La parte View, invece, è rapprestata dal frontend, costituito da componenti definiti con React e che interagiscono secondo l'architettura Flux.
 
 \subsection{Descrizione dei package}
@@ -18,12 +18,12 @@ Il seguente diagramma mostra l'architettura generale del backend.
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{res/sections/backend/generale.png}
-\caption{Diagramma dei package}
+\caption{Diagramma dei \glossaryItem{package}}
 \end{figure}
 
 \subsubsection{Package MaaSApplication}
 \paragraph*{Descrizione}
-Package che racchiude tutta l'applicazione MaaS.
+Package che racchiude tutta l'applicazione \glossaryItem{MaaS}.
 
 \paragraph*{Package contenuti}
 \begin{itemize}
@@ -41,12 +41,12 @@ Package che racchiude tutta l'applicazione MaaS.
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{res/sections/backend/collegamenti.png}
-\caption{Diagramma dei package completo dei componenti per ciascun package}
+\caption{Diagramma dei \glossaryItem{package} completo dei componenti per ciascun \glossaryItem{package}}
 \end{figure}
 
 \subsection{Package Models}
 \paragraph*{Descrizione}
-Package che racchiude le classi che rappresentano la \textit{business logic} dell'applicazione. Ciascuna di queste classi implementa l'interafaccia Model dichiarata all'interno del package.
+Package che racchiude le classi che rappresentano la \textit{business logic} dell'applicazione. Ciascuna di queste classi implementa l'interafaccia Model dichiarata all'interno del \glossaryItem{package}.
 Ciascuna classe deve implementare un modello definito da MongooseJS e deve definire i metodi con cui interagire con i dati che la classe stessa rappresenta. \\
 Queste classi rappresentano la parte \textbf{M} (Model) del design pattern MVC.
 
@@ -66,17 +66,17 @@ Queste classi rappresentano la parte \textbf{M} (Model) del design pattern MVC.
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{res/sections/backend/models.png}
-\caption{Diagramma delle classi del package Models}
+\caption{Diagramma delle classi del \glossaryItem{package} Models}
 \end{figure}
 
 \paragraph{Model}
 \paragraph*{Descrizione}
-Interfaccia comune a tutti i modelli usati da MaaS.
+Interfaccia comune a tutti i modelli usati da \glossaryItem{MaaS}.
 
 \paragraph*{Utilizzo}
 Viene utilizzata come base per UserModel, CompanyModel, DSLModel e DatabaseModel.
 
-\paragraph*{Relazione con altri moduli}
+\paragraph*{Relazione con altri \glossaryItem{moduli}}
 \begin{itemize}
 \item Mongoose
 \item UserModel
@@ -102,12 +102,12 @@ Il modello viene utilizzato sia per la rappresentazione di un utente nell'applic
 
 \subsubsection{CompanyModel}
 \paragraph*{Descrizione}
-Racchiude la business logic legata alle Company. Implementa modello e schema definiti da MongooseJS.
+Racchiude la business logic legata alle \glossaryItem{Company}. Implementa modello e schema definiti da MongooseJS.
 
 \paragraph*{Utilizzo}
-Il modello rappresenta una Company nel sistema.
+Il modello rappresenta una \glossaryItem{Company} nel sistema.
 
-\paragraph*{Relazioni con altri moduli}
+\paragraph*{Relazioni con altri \glossaryItem{moduli}}
 \begin{itemize}
 \item Mongoose
 \item Mongoose-validator
@@ -117,12 +117,12 @@ Il modello rappresenta una Company nel sistema.
 \paragraph{DatabaseModel}
 \paragraph*{Descrizione}
 
-Racchiude la business logic legata al collegamento con i database delle Company. Implementa modello e schema definiti da MongooseJS.
+Racchiude la business logic legata al collegamento con i database delle \glossaryItem{Company}. Implementa modello e schema definiti da MongooseJS.
 
 \paragraph*{Utilizzo}
-Il modello rappresenta la connessione ad un database aziendale di una Company. Contiene i dati per effettuare l'accesso al database e il riferimento alle collections definite su tale database, permettendo così all'utente di poter definire per ciascuna Collection la possibilità di interagirvi da parte di tutti i membri della propria Company o solo degli Admin.
+Il modello rappresenta la connessione ad un database aziendale di una \glossaryItem{Company}. Contiene i dati per effettuare l'accesso al database e il riferimento alle collections definite su tale database, permettendo così all'utente di poter definire per ciascuna \glossaryItem{Collection} la possibilità di interagirvi da parte di tutti i membri della propria \glossaryItem{Company} o solo degli Admin.
 
-\paragraph*{Relazioni con altri moduli}
+\paragraph*{Relazioni con altri \glossaryItem{moduli}}
 \begin{itemize}
 \item Mongoose
 \item Mongoose-validator
@@ -132,12 +132,12 @@ Il modello rappresenta la connessione ad un database aziendale di una Company. C
 \paragraph{DSLModel}
 \paragraph*{Descrizione}
 
-Racchiude la \textit{business logic} legata alle specifiche DSL. Implementa modello e schema definiti da MongooseJS.
+Racchiude la \textit{business logic} legata alle specifiche \glossaryItem{DSL}. Implementa modello e schema definiti da MongooseJS.
 
 \paragraph*{Utilizzo}
-Il modello viene utilizzato per la rappresentazione delle specifiche DSL. Contiene i dati di tali specifiche e le funzioni per poter estrarre i dati richiesti da una specifica DSL.
+Il modello viene utilizzato per la rappresentazione delle specifiche \glossaryItem{DSL}. Contiene i dati di tali specifiche e le funzioni per poter estrarre i dati richiesti da una specifica \glossaryItem{DSL}.
 
-\paragraph*{Relazioni con altri moduli}
+\paragraph*{Relazioni con altri \glossaryItem{moduli}}
 \begin{itemize}
 \item Mongoose
 \item Mongoose-validator
@@ -148,9 +148,9 @@ Il modello viene utilizzato per la rappresentazione delle specifiche DSL. Contie
 
 \subsubsection{Package Routes}
 \paragraph*{Descrizione}
-Il package Routes contiene le classi che implementano il router definito da ExpressJS, definendo le varie API esposte dal server.
-I moduli vengono suddivisi in base al modello che utilizzano. 
-Ciascuna classe inoltre ha il compito di definire i middleware da anteporre alla definizione delle API.\\
+Il \glossaryItem{package} Routes contiene le classi che implementano il router definito da ExpressJS, definendo le varie \glossaryItem{API} esposte dal server.
+I \glossaryItem{moduli} vengono suddivisi in base al modello che utilizzano. 
+Ciascuna classe inoltre ha il compito di definire i \glossaryItem{middleware} da anteporre alla definizione delle \glossaryItem{API}.\\
 Le classi ricoprono il ruolo di Controller del design pattern MVC.
 
 \paragraph*{Moduli contenuti}
@@ -165,14 +165,14 @@ Le classi ricoprono il ruolo di Controller del design pattern MVC.
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{res/sections/backend/routes.png}
-\caption{Diagramma delle classi del package Routes}
+\caption{Diagramma delle classi del \glossaryItem{package} Routes}
 \end{figure}
 
 \paragraph{UserRouter}
 \paragraph*{Descrizione}
 Questa classe contiene la definizione degli endpoint riguardanti gli utenti. 
 
-\paragraph*{Relazione con altri moduli}
+\paragraph*{Relazione con altri \glossaryItem{moduli}}
 \begin{itemize}
 \item Lib::AuthenticationChecker
 \item Model::UserModel
@@ -180,9 +180,9 @@ Questa classe contiene la definizione degli endpoint riguardanti gli utenti.
 
 \paragraph{CompanyRouter}
 \paragraph*{Descrizione}
-Questo modulo contiene la definizione degli endpoint riguardanti le Company.
+Questo \glossaryItem{modulo} contiene la definizione degli endpoint riguardanti le \glossaryItem{Company}.
 
-\paragraph*{Relazione con altri moduli}
+\paragraph*{Relazione con altri \glossaryItem{moduli}}
 \begin{itemize}
 \item Lib::AuthenticationChecker
 \item Model::CompanyModel
@@ -190,9 +190,9 @@ Questo modulo contiene la definizione degli endpoint riguardanti le Company.
 
 \paragraph{DSLRouter}
 \paragraph*{Descrizione}
-Questo modulo contiene la definizione delle API riguardanti le specifiche DSL.
+Questo \glossaryItem{modulo} contiene la definizione delle \glossaryItem{API} riguardanti le specifiche \glossaryItem{DSL}.
 
-\paragraph*{Relazione con altri moduli}
+\paragraph*{Relazione con altri \glossaryItem{moduli}}
 \begin{itemize}
 \item Lib::AuthenticationChecker
 \item Lib::LevelChecker
@@ -201,9 +201,9 @@ Questo modulo contiene la definizione delle API riguardanti le specifiche DSL.
 
 \paragraph{DatabaseRouter}
 \paragraph*{Descrizione}
-Questo modulo contiene la definizione delle API riguardanti le connessioni ai database aziendali.
+Questo \glossaryItem{modulo} contiene la definizione delle \glossaryItem{API} riguardanti le connessioni ai database aziendali.
 
-\paragraph*{Relazione con altri moduli}
+\paragraph*{Relazione con altri \glossaryItem{moduli}}
 \begin{itemize}
 \item Lib::AuthenticationChecker
 \item Lib::LevelChecker
@@ -212,9 +212,9 @@ Questo modulo contiene la definizione delle API riguardanti le connessioni ai da
 
 \paragraph{RouterFacade}
 \paragraph*{Descrizione}
-Oggetto che implementa il Facade Design Pattern. Tale oggetto incorpora tutte le API definite nelle classi Router.
+Oggetto che implementa il Facade \glossaryItem{Design Pattern}. Tale oggetto incorpora tutte le \glossaryItem{API} definite nelle classi Router.
 
-\paragraph*{Relazione con altri moduli}
+\paragraph*{Relazione con altri \glossaryItem{moduli}}
 \begin{itemize}
 \item UserRouter
 \item CompanyRouter
@@ -224,12 +224,12 @@ Oggetto che implementa il Facade Design Pattern. Tale oggetto incorpora tutte le
 
 \subsubsection{Package Config}
 \paragraph*{Descrizione}
-Questo package contiene le classi Configuration che contengono tutte le informazioni per inizializzare correttamente l'applicazione. 
+Questo \glossaryItem{package} contiene le classi \glossaryItem{Configuration} che contengono tutte le informazioni per inizializzare correttamente l'applicazione. 
 Sarà poi l'applicazione a dover recuperare la corretta configurazione in base alla variabilie d'ambiente NODE\_ENV.
 
 \paragraph*{Moduli contenuti}
 \begin{itemize}
-\item Configuration
+\item \glossaryItem{Configuration}
 \item DevConfiguration
 \item TestConfiguration
 \item ProdConfiguration
@@ -237,13 +237,13 @@ Sarà poi l'applicazione a dover recuperare la corretta configurazione in base a
 
 \paragraph*{Interfacce contenute}
 \begin{itemize}
-\item Configuration
+\item \glossaryItem{Configuration}
 \end{itemize}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{res/sections/backend/config.png}
-\caption{Diagramma delle classi del package Config}
+\caption{Diagramma delle classi del \glossaryItem{package} Config}
 \end{figure}
 
 \paragraph{DevConfiguration}
@@ -251,37 +251,37 @@ Sarà poi l'applicazione a dover recuperare la corretta configurazione in base a
 Configurazione usata durante lo sviluppo.
 
 \paragraph*{Utilizzo}
-Viene utilizzata per configurare l'ambiente di lavoro durante lo sviluppo di MaaS.
+Viene utilizzata per configurare l'ambiente di lavoro durante lo sviluppo di \glossaryItem{MaaS}.
 
 \paragraph{TestConfiguration}
 \paragraph*{Descrizione}
 Configurazione usata durante il test.
 
 \paragraph*{Utilizzo}
-Viene utilizzata per configurare l'ambiente di lavoro durante la fase di test di MaaS.
+Viene utilizzata per configurare l'ambiente di lavoro durante la \glossaryItem{fase} di test di \glossaryItem{MaaS}.
 
 \paragraph{ProdConfiguration}
 \paragraph*{Descrizione}
 Configurazione usata per il rilascio.
 
 \paragraph*{Utilizzo}
-Viene utilizzata per configurare l'ambiente di lavoro per la consegna di MaaS.
+Viene utilizzata per configurare l'ambiente di lavoro per la consegna di \glossaryItem{MaaS}.
 
 \paragraph{Configuration}
 \paragraph*{Descrizione}
-Interfaccia comune alle configurazioni usate da MaaS.
+Interfaccia comune alle configurazioni usate da \glossaryItem{MaaS}.
 
 \paragraph*{Utilizzo}
 Viene utilizzata come base per DevConfiguration, TestConfiguration e ProdConfiguration.
 
-\paragraph*{Relazione con altri moduli}
+\paragraph*{Relazione con altri \glossaryItem{moduli}}
 \begin{itemize}
 \item MaaSServer
 \end{itemize}
 
 \subsubsection{Package Lib}
 \paragraph*{Descrizione}
-Questo package contiene tutti i moduli di supporto al sistema e i middlewares generici per ExpressJS.
+Questo \glossaryItem{package} contiene tutti i \glossaryItem{moduli} di supporto al sistema e i \glossaryItem{middlewares} generici per ExpressJS.
 
 \paragraph*{Moduli contenuti}
 \begin{itemize}
@@ -294,7 +294,7 @@ Questo package contiene tutti i moduli di supporto al sistema e i middlewares ge
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{res/sections/backend/lib.png}
-\caption{Diagramma delle classi del package Lib}
+\caption{Diagramma delle classi del \glossaryItem{package} Lib}
 \end{figure}
 
 \paragraph{LevelChecker}
@@ -304,31 +304,31 @@ Middleware che si occupa di verificare se l'utente che effettua una richiesta al
 \paragraph*{Utilizzo}
 Viene utilizzato nelle \textit{routes} in cui deve essere garantito un livello utente minimo di accesso per portare a termine la richiesta.
 
-\paragraph*{Relazione con altri moduli}
+\paragraph*{Relazione con altri \glossaryItem{moduli}}
 \begin{itemize}
 \item Router
 \end{itemize}
 
 \paragraph{AuthenticationChecker}
 \paragraph*{Descrizione}
-Modulo che definisce due middleware: uno per effettuare il login, l'altro per l'autenticazione di una richiesta.
+Modulo che definisce due \glossaryItem{middleware}: uno per effettuare il login, l'altro per l'autenticazione di una richiesta.
 
 \paragraph*{Utilizzo}
-Questo modulo viene utilizzato per definire l'\textit{endpoint} per effettuare il login all'applicazione e offre il middleware che permette di autenticare le richieste. Tale middleware si occuperà di estrarre il \textit{token} dalle richieste, verificarne la correttezza e aggiungere l'utente verificato nella richiesta per i prossimi middleware.
+Questo \glossaryItem{modulo} viene utilizzato per definire l'\textit{endpoint} per effettuare il login all'applicazione e offre il \glossaryItem{middleware} che permette di autenticare le richieste. Tale \glossaryItem{middleware} si occuperà di estrarre il \textit{token} dalle richieste, verificarne la correttezza e aggiungere l'utente verificato nella richiesta per i prossimi \glossaryItem{middleware}.
 
-\paragraph*{Relazione con altri moduli}
+\paragraph*{Relazione con altri \glossaryItem{moduli}}
 \begin{itemize}
 \item Router
 \end{itemize}
 
 \paragraph{DSLChecker}
 \paragraph*{Descrizione}
-Modulo che verifica la correttezza sintattica e di contenuto di una specifica DSL.
+Modulo che \glossaryItem{verifica} la correttezza sintattica e di contenuto di una specifica \glossaryItem{DSL}.
 
 \paragraph*{Utilizzo}
-Questo modulo viene richiamato in DSLModel per verificare che la specifica DSL che viene salvata o modificata sia valida per l'esecuzione.
+Questo \glossaryItem{modulo} viene richiamato in DSLModel per verificare che la specifica \glossaryItem{DSL} che viene salvata o modificata sia valida per l'esecuzione.
 
-\paragraph*{Relazione con altri moduli}
+\paragraph*{Relazione con altri \glossaryItem{moduli}}
 \begin{itemize}
 \item DSLModel
 \end{itemize}
@@ -338,8 +338,8 @@ Questo modulo viene richiamato in DSLModel per verificare che la specifica DSL c
 Classe principale dell'applicazione.
 
 \paragraph*{Utilizzo}
-Viene utilizzata questa classe per inizializzare l'applicazione. Questa classe ha la responsabilità di caricare gli altri moduli del backend correttamente e di inizializzare il webserver che li utilizza.
-\paragraph*{Relazione con altri moduli}
+Viene utilizzata questa classe per inizializzare l'applicazione. Questa classe ha la responsabilità di caricare gli altri \glossaryItem{moduli} del backend correttamente e di inizializzare il webserver che li utilizza.
+\paragraph*{Relazione con altri \glossaryItem{moduli}}
 \begin{itemize}
 \item Config
 \item Router::RouterFacade
@@ -351,47 +351,47 @@ Viene utilizzata questa classe per inizializzare l'applicazione. Questa classe h
 \subsubsection{Moduli integrati}
 \paragraph{BodyParser}
 \paragraph*{Descrizione}
-Modulo di terze parti per la corretta lettura delle informazioni contenute nel \textit{body} delle richieste HTTP.
+Modulo di terze parti per la corretta lettura delle informazioni contenute nel \textit{body} delle richieste \glossaryItem{HTTP}.
 
 \paragraph*{Utilizzo}
-Il modulo in questione viene utilizzato come middleware per ExpressJS e si occupa della corretta lettura delle informazioni contenute nel \textit{body} di una richiesta HTTP. Nel nostro caso verrà impiegato per la lettura dei dati del body in formato JSON.
+Il \glossaryItem{modulo} in questione viene utilizzato come \glossaryItem{middleware} per ExpressJS e si occupa della corretta lettura delle informazioni contenute nel \textit{body} di una richiesta \glossaryItem{HTTP}. Nel nostro caso verrà impiegato per la lettura dei dati del body in formato \glossaryItem{JSON}.
 
 \paragraph{NodeMailer}
 \paragraph*{Descrizione}
 Permette di inviare delle email.
 
 \paragraph*{Utilizzo}
-È usato per inviare email agli utenti di MaaS.
+È usato per inviare email agli utenti di \glossaryItem{MaaS}.
 
 \subsubsection{Framework integrati}
 \paragraph{SweetJS}
 \paragraph*{Descrizione}
-Tool che permettere la definizione di una serie di macro allo scopo di modellare una grammatica regolare traducibile in procedure JavaScript.
+Tool che permettere la definizione di una serie di macro allo scopo di modellare una grammatica regolare traducibile in \glossaryItem{procedure} \glossaryItem{JavaScript}.
 
 \paragraph*{Utilizzo}
-Come usato in MaaP, definisce la sintassi del DSL. In MaaS il set di macro verrà esteso per soddisfare i nuovi requisiti.
+Come usato in \glossaryItem{MaaP}, definisce la sintassi del \glossaryItem{DSL}. In \glossaryItem{MaaS} il set di macro verrà esteso per soddisfare i nuovi requisiti.
 
 \paragraph{ExpressJS}
 \paragraph*{Descrizione}
-Framework per la creazione e la gestione di webserver per l'esposizione di API RESTful.
+Framework per la creazione e la gestione di webserver per l'esposizione di \glossaryItem{API} RESTful.
 
 \paragraph*{Utilizzo}
 Utilizzato come base per la struttura del server.
 
 \paragraph{Mongoose}
 \paragraph*{Descrizione}
-Framework per interfacciarsi con MongoDB.
+Framework per interfacciarsi con \glossaryItem{MongoDB}.
 
 \paragraph*{Utilizzo}
-Utilizzato per la gestione dei dati su database MongoDB.
+Utilizzato per la gestione dei dati su database \glossaryItem{MongoDB}.
 
 \subsection{API REST}
 \subsubsection{Comunicazione tra client e server}
-Per la creazione del backend di MaaS si è deciso di utilizzare Node.js e, in particolare, il framework ExpressJS, che permette la creazione semplificata di server REST. Il lato backend sarà quindi costituito da un insieme di API protette da strati diversi di sicurezza. \\
-Ciascuna API del webserver fornirà una risposta in formato JSON per permettere la fruizione delle informazioni. Fornirà nello stesso formato anche gli eventuali messaggi di errore generati nel corpo dei metodi del server. Tali messaggi di errore saranno così composti: 
+Per la creazione del backend di \glossaryItem{MaaS} si è deciso di utilizzare \glossaryItem{Node.js} e, in particolare, il \glossaryItem{framework} ExpressJS, che permette la creazione semplificata di server \glossaryItem{REST}. Il lato backend sarà quindi costituito da un insieme di \glossaryItem{API} protette da strati diversi di sicurezza. \\
+Ciascuna \glossaryItem{API} del webserver fornirà una risposta in formato \glossaryItem{JSON} per permettere la fruizione delle informazioni. Fornirà nello stesso formato anche gli eventuali messaggi di errore generati nel corpo dei metodi del server. Tali messaggi di errore saranno così composti: 
 \begin{verbatim}
 {
-    "code":     [Codice definito nel protocollo HTTP, che identifica univocamente
+    "code":     [Codice definito nel protocollo \glossaryItem{HTTP}, che identifica univocamente
                  la tipologia del problema]
     "message":  [Messaggio che definisce in dettaglio la tipologia dell'errore]
     ["data":   [Opzionale, trasporta i dati in cui si è verificato l'errore]]
@@ -399,8 +399,8 @@ Ciascuna API del webserver fornirà una risposta in formato JSON per permettere 
 \end{verbatim}
 I codici di errore saranno del tipo 4xx (client error, la richiesta è sintatticamente scorretta o non può essere soddisfatta) o 5xx (server error, il server ha fallito nel soddisfare una richiesta apparentemente valida).
 \subsubsection{Sicurezza}
-Gli accessi alle API avranno 2 livelli di sicurezza. \\
-Il primo livello è rappresentato dall'autenticazione: un utente non autenticato riceverà un errore se richiede una API protetta. Verrà implementato con l'utilizzo di PassportJS, un middleware per ExpressJS che permette l'autenticazione di utenti nel sistema. In particolare verrà utilizzata la strategia passport-local per l'accesso al server, cioè le credenziali dell'utente risiederanno nel database locale. \\
+Gli accessi alle \glossaryItem{API} avranno 2 livelli di sicurezza. \\
+Il primo livello è rappresentato dall'autenticazione: un utente non autenticato riceverà un errore se richiede una \glossaryItem{API} protetta. Verrà implementato con l'utilizzo di PassportJS, un \glossaryItem{middleware} per ExpressJS che permette l'autenticazione di utenti nel sistema. In particolare verrà utilizzata la strategia passport-local per l'accesso al server, cioè le credenziali dell'utente risiederanno nel database locale. \\
 Il secondo livello è definito in base al ruolo di appartenenza di un utente. Si occuperà di controllare i permessi assegnati ad un utente autenticato e di verificare la possibilità che possa o meno interagire con la risorsa richiesta. \\
 I ruoli utente ammessi nell'applicazione sono: 
 \begin{itemize}
@@ -410,12 +410,12 @@ I ruoli utente ammessi nell'applicazione sono:
 \item \textbf{Owner};
 \item \textbf{Super Admin}.
 \end{itemize}
-Per il ruolo di Super Admin è abilititato un set di API per la gestione dell'intera applicazione. Tali API non sono accessibili agli utenti con altri ruoli.
+Per il ruolo di Super Admin è abilititato un set di \glossaryItem{API} per la gestione dell'intera applicazione. Tali \glossaryItem{API} non sono accessibili agli utenti con altri ruoli.
 \newpage
 \subsubsection{Scenari di accesso negato}
-Di seguito verranno rappresentati scenari corrispondenti ad una negazione di accesso per ruolo non conforme alle attese o per errore nel login.
+Di seguito verranno rappresentati \glossaryItem{scenari} corrispondenti ad una negazione di accesso per ruolo non conforme alle attese o per errore nel login.
 \paragraph{Errore di autenticazione}  \mbox{} \\
-\textbf{Descrizione:} L'utente non autenticato cerca di accedere a MaaS, ma la procedura di login rileva un errore nelle credenziali inserite.
+\textbf{Descrizione:} L'utente non autenticato cerca di accedere a \glossaryItem{MaaS}, ma la \glossaryItem{procedura} di login rileva un errore nelle credenziali inserite.
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{res/sections/backend/sequence/autenticazioneFallita.png}
@@ -443,15 +443,15 @@ Di seguito verranno rappresentati scenari corrispondenti ad una negazione di acc
 \caption{Livello minimo OWNER}
 \end{figure}
 \paragraph{Livello minimo: SUPERADMIN}  \mbox{} \\
-\textbf{Descrizione:} Tentativo di accesso ad una risorsa accedibile solo da un SUPERADMIN da parte di un generico utente di MaaS.
+\textbf{Descrizione:} Tentativo di accesso ad una risorsa accedibile solo da un SUPERADMIN da parte di un generico utente di \glossaryItem{MaaS}.
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{res/sections/backend/sequence/requireSuperAdminFallita.png}
 \caption{Livello minimo SUPERADMIN}
 \end{figure}
 \newpage
-\subsection{API REST}
-Di seguito sono descritte le API REST esposte dal server di MaaS. Si suppone che l'utente che richiede l'accesso alla risorsa descritta abbia i permessi necessari (ovvero che sia autenticato e che il suo ruolo sia conforme a quanto indicato). Qualora questo non fosse vero si ricadrebbe in uno degli scenari esposti precedentemente.
+\subsection{Descrizione API}
+Di seguito sono descritte le \glossaryItem{API} \glossaryItem{REST} esposte dal server di \glossaryItem{MaaS}. Si suppone che l'utente che richiede l'accesso alla risorsa descritta abbia i permessi necessari (ovvero che sia autenticato e che il suo ruolo sia conforme a quanto indicato). Qualora questo non fosse vero si ricadrebbe in uno degli \glossaryItem{scenari} esposti precedentemente.
 \subsubsection{Senza autenticazione}
 \paragraph{Login}\mbox{}\\
 \textbf{Tipologia:} POST \\
@@ -468,7 +468,7 @@ Di seguito sono descritte le API REST esposte dal server di MaaS. Si suppone che
 \paragraph{Registrazione}\mbox{}\\
 \textbf{Tipologia:} POST \\
 \textbf{API:} /api/register/:unique\_code \\
-\textbf{Descrizione:} Metodo per la creazione di un utente invitato da una Company. Necessita di una richiesta con \textit{body} contenete le informazioni per la creazione completa di un utente \\
+\textbf{Descrizione:} Metodo per la creazione di un utente invitato da una \glossaryItem{Company}. Necessita di una richiesta con \textit{body} contenete le informazioni per la creazione completa di un utente \\
 \textbf{Scenario:} 
 \begin{figure}[H]
 \centering
@@ -480,12 +480,12 @@ Di seguito sono descritte le API REST esposte dal server di MaaS. Si suppone che
 \paragraph{Creazione Company}\mbox{}\\
 \textbf{Tipologia:} POST \\
 \textbf{API:} /api/companies \\
-\textbf{Descrizione:} Necessita di una richiesta con \textit{body} contenente le informazioni relative alla company e alla creazione del profilo del suo Owner. \\
+\textbf{Descrizione:} Necessita di una richiesta con \textit{body} contenente le informazioni relative alla \glossaryItem{company} e alla creazione del profilo del suo \glossaryItem{Owner}. \\
 \textbf{Scenario:} 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{res/sections/backend/sequence/(POST)company.png}
-\caption{Scenario della creazione company}
+\caption{Scenario della creazione \glossaryItem{company}}
 \end{figure}
 
 \newpage
@@ -500,7 +500,7 @@ Di seguito sono descritte le API REST esposte dal server di MaaS. Si suppone che
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{res/sections/backend/sequence/(POST)user.png}
-\caption{Scenario dell'inserimento utente in una Company}
+\caption{Scenario dell'inserimento utente in una \glossaryItem{Company}}
 \end{figure}
 
 \newpage
@@ -526,7 +526,7 @@ Di seguito sono descritte le API REST esposte dal server di MaaS. Si suppone che
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{res/sections/backend/sequence/(DELETE)user.png}
-\caption{Scenario della cancellazione utente da una company}
+\caption{Scenario della cancellazione utente da una \glossaryItem{company}}
 \end{figure}
 
 \newpage
@@ -535,25 +535,25 @@ Di seguito sono descritte le API REST esposte dal server di MaaS. Si suppone che
 \textbf{Tipologia:} GET \\
 \textbf{API:} /api/companies/:company\_id/ \\
 \textbf{Livello di accesso minimo:} GUEST \\
-\textbf{Descrizione:} Ritorna le informazioni generali di una Company \\
+\textbf{Descrizione:} Ritorna le informazioni generali di una \glossaryItem{Company} \\
 \textbf{Scenario:} 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{res/sections/backend/sequence/(GET)company.png}
-\caption{Scenario di ottenimento dei dati di una company}
+\caption{Scenario di ottenimento dei dati di una \glossaryItem{company}}
 \end{figure}
 
 \newpage
-\paragraph{Aggiornamento dei dati di una company}\mbox{}\\
+\paragraph{Aggiornamento dei dati di una Company}\mbox{}\\
 \textbf{Tipologia:} PUT \\
 \textbf{API:} /api/companies/:company\_id/ \\
 \textbf{Livello di accesso minimo:} ADMIN \\
-\textbf{Descrizione:} Necessita di una richiesta con \textit{body} contenente le modifiche da apportare ai dati della Company. \\
+\textbf{Descrizione:} Necessita di una richiesta con \textit{body} contenente le modifiche da apportare ai dati della \glossaryItem{Company}. \\
 \textbf{Scenario:} 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{res/sections/backend/sequence/(PUT)company.png}
-\caption{Scenario dell'aggiornamento dei dati di una Company}
+\caption{Scenario dell'aggiornamento dei dati di una \glossaryItem{Company}}
 \end{figure}
 
 \newpage
@@ -566,7 +566,7 @@ Di seguito sono descritte le API REST esposte dal server di MaaS. Si suppone che
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{res/sections/backend/sequence/(DELETE)company.png}
-\caption{Scenario della cancellazione di una Company}
+\caption{Scenario della cancellazione di una \glossaryItem{Company}}
 \end{figure}
 
 \newpage
@@ -575,12 +575,12 @@ Di seguito sono descritte le API REST esposte dal server di MaaS. Si suppone che
 \textbf{Tipologia:} GET \\
 \textbf{API:} /api/companies/:company\_id/DSLs \\
 \textbf{Livello di accesso minimo:} GUEST \\
-\textbf{Descrizione:} Ritorna un array contenente le specifiche DSL alle quali l'utente ha accesso in formato JSON. \\
+\textbf{Descrizione:} Ritorna un array contenente le specifiche \glossaryItem{DSL} alle quali l'utente ha accesso in formato \glossaryItem{JSON}. \\
 \textbf{Scenario:} 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{res/sections/backend/sequence/(GET)dsl.png}
-\caption{Scenario dell'elenco delle specifiche DSL}
+\caption{Scenario dell'elenco delle specifiche \glossaryItem{DSL}}
 \end{figure}
 
 \newpage
@@ -588,12 +588,12 @@ Di seguito sono descritte le API REST esposte dal server di MaaS. Si suppone che
 \textbf{Tipologia:} GET \\
 \textbf{API:} /api/companies/:company\_id/DSLs/:dsl\_id \\
 \textbf{Livello di accesso minimo:} MEMBER \\
-\textbf{Descrizione:} Ritorna il codice della specifica DSL richiesta in formato JSON. \\
+\textbf{Descrizione:} Ritorna il codice della specifica \glossaryItem{DSL} richiesta in formato \glossaryItem{JSON}. \\
 \textbf{Scenario:} 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{res/sections/backend/sequence/(GET)dslByID.png}
-\caption{Scenario della lettura del codice di una specifica DSL}
+\caption{Scenario della lettura del codice di una specifica \glossaryItem{DSL}}
 \end{figure}
 
 \newpage
@@ -601,12 +601,12 @@ Di seguito sono descritte le API REST esposte dal server di MaaS. Si suppone che
 \textbf{Tipologia:} POST \\
 \textbf{API:} /api/companies/:company\_id/DSLs \\
 \textbf{Livello di accesso minimo:} MEMBER \\
-\textbf{Descrizione:} Necessita di una richiesta con \textit{body} contenente i dati necessari alla creazione della specifica DSL. \\
+\textbf{Descrizione:} Necessita di una richiesta con \textit{body} contenente i dati necessari alla creazione della specifica \glossaryItem{DSL}. \\
 \textbf{Scenario:} 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{res/sections/backend/sequence/(POST)dsl.png}
-\caption{Scenario della creazione di una specifica DSL}
+\caption{Scenario della creazione di una specifica \glossaryItem{DSL}}
 \end{figure}
 
 \newpage
@@ -614,12 +614,12 @@ Di seguito sono descritte le API REST esposte dal server di MaaS. Si suppone che
 \textbf{Tipologia:} PUT \\
 \textbf{API:} /api/companies/:company\_id/DSLs/:dsl\_id \\
 \textbf{Livello di accesso minimo:} MEMBER \\
-\textbf{Descrizione:} Necessita di una richiesta con body contenente i dati necessari alla modifica della specifica DSL identificata da dsl\_id. \\
+\textbf{Descrizione:} Necessita di una richiesta con body contenente i dati necessari alla modifica della specifica \glossaryItem{DSL} identificata da dsl\_id. \\
 \textbf{Scenario:}
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{res/sections/backend/sequence/(PUT)dsl.png}
-\caption{Scenario dell'aggiornamento del codice di una specifica DSL}
+\caption{Scenario dell'aggiornamento del codice di una specifica \glossaryItem{DSL}}
 \end{figure}
 
 \newpage
@@ -627,12 +627,12 @@ Di seguito sono descritte le API REST esposte dal server di MaaS. Si suppone che
 \textbf{Tipologia:} DELETE \\
 \textbf{API:} /api/companies/:company\_id/DSLs/:dsl\_id \\
 \textbf{Livello di accesso minimo:} MEMBER \\
-\textbf{Descrizione:} Ritorna un messaggio in formato JSON di avvenuta cancellazione. \\
+\textbf{Descrizione:} Ritorna un messaggio in formato \glossaryItem{JSON} di avvenuta cancellazione. \\
 \textbf{Scenario:} 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{res/sections/backend/sequence/(DELETE)dsl.png}
-\caption{Scenario della cancellazione di una specifica DSL}
+\caption{Scenario della cancellazione di una specifica \glossaryItem{DSL}}
 \end{figure}
 
 \newpage
@@ -640,12 +640,12 @@ Di seguito sono descritte le API REST esposte dal server di MaaS. Si suppone che
 \textbf{Tipologia:} GET \\
 \textbf{API:} /api/companies/:company\_id/users/:user\_id/dashboard \\
 \textbf{Livello di accesso minimo:} GUEST \\
-\textbf{Descrizione:} Ritorna la Dashboard di un utente definita da una DSL. \\
+\textbf{Descrizione:} Ritorna la \glossaryItem{Dashboard} di un utente definita da una \glossaryItem{DSL}. \\
 \textbf{Scenario:}  
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{res/sections/backend/sequence/(GET)dashboard.png}
-\caption{Scenario dell'ottenimento della Dashboard di un utente}
+\caption{Scenario dell'ottenimento della \glossaryItem{Dashboard} di un utente}
 \end{figure}
 
 \newpage
@@ -653,12 +653,12 @@ Di seguito sono descritte le API REST esposte dal server di MaaS. Si suppone che
 \textbf{Tipologia:} GET \\
 \textbf{API:} /api/companies/:company\_id/DSLs/:dsl\_id/execute \\
 \textbf{Livello di accesso minimo:} GUEST \\
-\textbf{Descrizione:} Ritorna un JSON contenente i dati richiesti dalla specifica DSL e la struttura su cui inserire i dati. \\
+\textbf{Descrizione:} Ritorna un \glossaryItem{JSON} contenente i dati richiesti dalla specifica \glossaryItem{DSL} e la struttura su cui inserire i dati. \\
 \textbf{Scenario:} 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{res/sections/backend/sequence/(GET)dslByIDex.png}
-\caption{Scenario dell'esecuzione di una specifica DSL}
+\caption{Scenario dell'esecuzione di una specifica \glossaryItem{DSL}}
 \end{figure}
 
 \newpage
@@ -672,7 +672,7 @@ Di seguito sono descritte le API REST esposte dal server di MaaS. Si suppone che
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{res/sections/backend/sequence/(GET)database.png}
-\caption{Scenario dell'elenco dei database propri della Company}
+\caption{Scenario dell'elenco dei database propri della \glossaryItem{Company}}
 \end{figure}
 
 \newpage
@@ -698,7 +698,7 @@ Di seguito sono descritte le API REST esposte dal server di MaaS. Si suppone che
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{res/sections/backend/sequence/(POST)database.png}
-\caption{Scenario della creazione di una specifica DSL}
+\caption{Scenario della creazione di una specifica \glossaryItem{DSL}}
 \end{figure}
 
 \newpage
@@ -719,7 +719,7 @@ Di seguito sono descritte le API REST esposte dal server di MaaS. Si suppone che
 \textbf{Tipologia:} DELETE \\
 \textbf{API:} /api/companies/:company\_id/databases/:database\_id \\
 \textbf{Livello di accesso minimo:} ADMIN \\
-\textbf{Descrizione:} Elimina il database selezionato e tutte le specifiche DSL che lo utilizzano. \\
+\textbf{Descrizione:} Elimina il database selezionato e tutte le specifiche \glossaryItem{DSL} che lo utilizzano. \\
 \textbf{Scenario:} 
 \begin{figure}[H]
 \centering
@@ -732,7 +732,7 @@ Di seguito sono descritte le API REST esposte dal server di MaaS. Si suppone che
 \textbf{Tipologia:} GET \\
 \textbf{API:} /api/companies/:company\_id/databases/:database\_id/collections \\
 \textbf{Livello di accesso minimo:} MEMBER \\
-\textbf{Descrizione:} Ritorna un array di Collection relative ad un database a cui l'utente ha accesso. \\
+\textbf{Descrizione:} Ritorna un array di \glossaryItem{Collection} relative ad un database a cui l'utente ha accesso. \\
 \textbf{Scenario:} 
 \begin{figure}[H]
 \centering
@@ -745,12 +745,12 @@ Di seguito sono descritte le API REST esposte dal server di MaaS. Si suppone che
 \paragraph{Ottenimento informazioni delle Company}\mbox{}\\
 \textbf{Tipologia:} GET \\
 \textbf{API:} /api/admin/companies \\
-\textbf{Descrizione:} Restituisce un array di JSON contenenti le informazioni relative alle Company presenti nell'applicazione. \\
+\textbf{Descrizione:} Restituisce un array di \glossaryItem{JSON} contenenti le informazioni relative alle \glossaryItem{Company} presenti nell'applicazione. \\
 \textbf{Scenario:} 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{res/sections/backend/sequence/(GET)companySA.png}
-\caption{Scenario dell'ottenimento informazioni delle Company}
+\caption{Scenario dell'ottenimento informazioni delle \glossaryItem{Company}}
 \end{figure}
 
 \newpage
@@ -769,7 +769,7 @@ Di seguito sono descritte le API REST esposte dal server di MaaS. Si suppone che
 \paragraph{Aggiunta di un utente}\mbox{}\\
 \textbf{Tipologia:} POST \\
 \textbf{API:} /api/admin/companies/:company\_id/users \\
-\textbf{Descrizione:} Necessita di una richiesta con \textit{body} contenente le informazioni relative all'utente da creare per la Company individuata da company\_id. \\
+\textbf{Descrizione:} Necessita di una richiesta con \textit{body} contenente le informazioni relative all'utente da creare per la \glossaryItem{Company} individuata da \glossaryItem{company}\_id. \\
 \textbf{Scenario:} 
 \begin{figure}[H]
 \centering
