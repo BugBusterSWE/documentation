@@ -410,13 +410,13 @@ Il primo livello è rappresentato dall'autenticazione: un utente non autenticato
 Il secondo livello è definito in base al ruolo di appartenenza di un utente. Si occuperà di controllare i permessi assegnati ad un utente autenticato e di verificare la possibilità che possa o meno interagire con la risorsa richiesta. \\
 I ruoli utente ammessi nell'applicazione sono: 
 \begin{itemize}
-\item \textbf{GUEST};
-\item \textbf{MEMBER};
-\item \textbf{ADMIN};
-\item \textbf{OWNER};
-\item \textbf{SUPERADMIN}.
+\item \textbf{Guest};
+\item \textbf{Member};
+\item \textbf{Admin};
+\item \textbf{Owner};
+\item \textbf{Super Admin}.
 \end{itemize}
-Per il ruolo di SUPERADMIN è abilititato un set di API per la gestione dell'intera applicazione. Tali API non sono accessibili agli utenti con altri ruoli.
+Per il ruolo di Super Admin è abilititato un set di API per la gestione dell'intera applicazione. Tali API non sono accessibili agli utenti con altri ruoli.
 \newpage
 \subsubsection{Scenari di accesso negato}
 Di seguito verranno rappresentati scenari corrispondenti ad una negazione di accesso per ruolo non conforme alle attese o per errore nel login.
