@@ -2,27 +2,27 @@
 \section{Descrizione architettura}
 \subsection{Metodo e formalismo di specifica}
 Le scelte progettuali di MaaS sono state fortemente influenzate dallo stack tecnologico usato. \\
-L'intera applicazione è stata progettata per essere scritta con un unico linguaggio: Typescript. Questo linguaggio è un superset di Javascript che viene compilato in normale Javascript. La scelta è ricaduta su Typescript perchè rende più leggibile ed intuitivo il codice prodotto, oltre a permettere i controlli statici che in Javascript non sono presenti.
+L'intera applicazione è stata progettata per essere scritta con un unico linguaggio: TypeScript. Questo linguaggio è un \textit{superset} di JavaScript che viene compilato in normale JavaScript. La scelta è ricaduta su TypeScript perchè rende più leggibile ed intuitivo il codice prodotto, oltre a permettere i controlli statici che in JavaScript non sono presenti.
 La progettazione del backend è stata influenzata pesantemente anche dal framework scelto: ExpressJS. Questo framework è basato su Node.js e permette di creare velocemente ed intuitivamente dei webserver per l'esposizione di API REST. \\
 Per esporre l'architettura dell'applicazione si procederà con approccio top-down, partendo cioè da una visione generale delle componenti che distinguono il sistema, per poi analizzare in dettaglio la conformazione di tali componenti. Per descrivere in maniera formale l'architettura verranno impiegati lo standard UML 2.0 per i diagrammi dei package e delle classi e lo standard UML 2.4 per i diagrammi di attività e sequenza. \\
 
 Viene fatto uso inoltre di un codice a colori per distinguere la provenienza dei moduli dell'applicazione. In particolare:
 \begin{itemize}
 \item in colore \textbf{giallo} i moduli da implementare;
-\item in colore \textbf{verde} vengono proposti i moduli/librerie importati dal Core delle tecnologie utilizzate e da terze parti;
+\item in colore \textbf{verde} vengono proposti i moduli/librerie importati dal \textit{Core} delle tecnologie utilizzate e da terze parti.
 \end{itemize}
 
 I diagrammi delle classi che permettono di mostrare l'architettura generale del sistema vengono affiancati anche dai diagrammi di sequenza e attività, che permettono di definire le interazioni tra le componenti, senza preoccuparsi della loro classificazione. In questo modo è possibile esprimere alcuni meccanismi tipici di un'applicazione REST-like, come il modo in cui agiscono i middleware. 
 
 \subsection{Architettura generale}
-L'architettura del progetto si divide in una componente Client, rappresentata da un'applicazione frontend accessibile da un browser e in una componente WebServer, nella quale risiede il backend. 
+L'architettura del progetto si divide in una componente Client, rappresentata da un'applicazione frontend accessibile da un browser, e in una componente WebServer, nella quale risiede il backend. 
 
 \subsection{Conformazione generale dell'architettura}
 L'architettura generale di MaaS si può dividere in 3 macrocomponenti:
 \begin{itemize}
-\item \textbf{Server REST} 
-\item \textbf{Client} 
-\item \textbf{Editor}
+\item \textbf{Server REST}; 
+\item \textbf{Client}; 
+\item \textbf{Editor}.
 \end{itemize}
 \begin{figure}[h]
 \centering
