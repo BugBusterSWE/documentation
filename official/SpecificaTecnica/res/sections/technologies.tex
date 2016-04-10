@@ -39,8 +39,19 @@ L'utilizzo di Node.js \`e stato richiesto dal proponente. Si tratta di un sistem
 \end{itemize}
 
 \subsection{Reactjs}
-L'utilizzo di Reactjs \`e stato richiesto dal proponente. \`E una libreria JavaScript usata per creare interfacce utente, e rappresenta la V del design pattern architetturale MVC (\textbf{M}odel \textbf{V}iew \textbf{C}ontroller). React risolve il problema di creare applicazioni di grandi dimensioni con dati che cambiano nel tempo.
-Reactjs \`e stato preferito ad Angularjs, sconsigliato dal proponente in quanto considerata una tecnologia giunta al crepuscolo.
+Uno dei requisiti opzionali espressi nel capitolato consiste nell'usare React/Flux anziché Angular per implementare un frontend per MaaS basato su componenti riusabili.\\
+React è una libreria JavaScript usata da Facebook e Instangram per creare interfacce utente ed è considerata la View del pattern MVC.\\
+Il problema che React vuole risolvere è quello di costruire applicazioni facilmente scalabili e con dati che continuano a variare velocemente nel tempo.\\ 
+L'architettura logica che usa React viene riassunta dalla seguente figura:
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.8\textwidth]{res/sections/imgs/react.png}
+  \caption{Architettura logica di React}
+  \label{fig:salvataggio}
+\end{figure}
+\textbf{Spiegazione}: lo stato dell'applicazione viene aggiornato da eventi a partire dal Server o dal browser. Questi eventi vengono indirizzati ai componenti React, scritti in JavaScript, i quali hanno il compito di descrivere la business logic dell'applicazione. React genera una rappresentazione virtuale del DOM che utilizza per stabilire quali operazioni eseguire con precisioni sul DOM vero e proprio; infine renderizza sul browser. L'uso di una rappresentazione virtuale del DOM rende React molto veloce poiché ad ogni cambiamento aggiorna solo le componenti interessate.\\
+Disegnare la View di un'applicazione con React consiste quindi nel costruire componenti e a pensare a come incapsularli tra loro. Questo modo di lavorare produrrà codice che soddisferà il principio ``Separation of Concerns'', ne faciliterà il riuso, il testing e, in generale, sarà più facile da manutenere.
+Una componente React dovrebbe idealmente occuparsi di un solo compito, seguendo il principio ``Single Responsability''.\\
 \subsubsection{Vantaggi}
 \begin{itemize}
 \item \textbf{Semplice}: basta esprimere come l'applicazione dovrebbe apparire in ciascun momento e React automaticamente gestir\`a tutti gli aggiornamenti dell'interfaccia utente.
