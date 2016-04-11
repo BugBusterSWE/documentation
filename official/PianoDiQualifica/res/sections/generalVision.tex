@@ -7,10 +7,10 @@ La volontà del \glossaryItem{team} è quella di automatizzare il più possibile
 Lo standard ISO/IEC 9126\footnote{Si veda appendice \ref{AppQualitaProdotto} per approfondimenti} classifica la \glossaryItem{qualità} del software e definisce delle metriche per la sua misurazione. Il \glossaryItem{team} BugBusters ha scelto di utilizzare queste metriche, al fine di assicurare la \glossaryItem{qualità} del prodotto finale.
 
 \subsubsection{Procedure}
-Il controllo per la \glossaryItem{qualità} del prodotto definisce i seguenti processi:
+Il controllo per la \glossaryItem{qualità} del prodotto definisce i seguenti \glossaryItem{processi}:
 \begin{itemize}
-	\item \textbf{SQA} (\textbf{S}oftware \textbf{Q}uality \textbf{A}ssurance): si occupa di assicurare che i processi siano implementati secondo quanto pianificato e che siano forniti sistemi di misurazione dei processi;
-	\item \textbf{\glossaryItem{verifica}}: si occupa di accertare che l'esecuzione dei processi non abbia introdotto degli errori, e accerta il rispetto delle regole, delle convenzioni e delle procedure;
+	\item \textbf{SQA} (\textbf{S}oftware \textbf{Q}uality \textbf{A}ssurance): si occupa di assicurare che i \glossaryItem{processi} siano implementati secondo quanto pianificato e che siano forniti sistemi di misurazione dei \glossaryItem{processi};
+	\item \textbf{\glossaryItem{verifica}}: si occupa di accertare che l'esecuzione dei \glossaryItem{processi} non abbia introdotto degli errori, e accerta il rispetto delle regole, delle convenzioni e delle \glossaryItem{procedure};
 	\item \textbf{\glossaryItem{validazione}}: si occupa di accertare che i prodotti realizzati siano conformi alle attese.
 \end{itemize}
 
@@ -28,12 +28,12 @@ Rappresenta le dimensioni del prodotto software; generalmente \`e misurata in te
 
 \textbf{Complessità ciclomatica}\\
 
-Permette di misurare la complessità del flusso di controllo di una componente (procedura, metodo, classe o modulo) calcolando tutti i possibili cammini indipendenti del grafo del flusso di controllo. Tale grafo è composto dai seguenti elementi:
+Permette di misurare la complessità del flusso di controllo di una componente (procedura, metodo, classe o \glossaryItem{modulo}) calcolando tutti i possibili cammini indipendenti del grafo del flusso di controllo. Tale grafo è composto dai seguenti elementi:
 \begin{itemize}
 	\item i nodi corrispondono a gruppi indivisibili di comandi;
 	\item gli archi collegano due nodi se e solo se il secondo gruppo di istruzioni può essere eseguito immediatamente dopo il primo.
 \end{itemize}
-Si vuole utilizzare tale metrica per limitare la complessità durante la fase di sviluppo e per determinare il numero di casi di test necessari per la \glossaryItem{verifica}, in quanto permette di dare un limite superiore al numero di test necessari per raggiungere la massima copertura della componente analizzata \footnote{Stein, C., G. Cox and L. Etzkorn, 2005. Exploring the Relationship between Cohesion and Complexity. J. Comput. Sci., 1: 137-144.}.
+Si vuole utilizzare tale metrica per limitare la complessità durante la \glossaryItem{fase} di sviluppo e per determinare il numero di \glossaryItem{casi} di test necessari per la \glossaryItem{verifica}, in quanto permette di dare un limite superiore al numero di test necessari per raggiungere la massima copertura della componente analizzata \footnote{Stein, C., G. Cox and L. Etzkorn, 2005. Exploring the Relationship between Cohesion and Complexity. J. Comput. Sci., 1: 137-144.}.
 \begin{center}
 	\textit{Complessità ciclomatica v(G)} = \textit{e} - \textit{n} + 2 * \textit{p}
 \end{center}
@@ -63,7 +63,7 @@ Rappresenta la media di occorrenze di metodi per \glossaryItem{package}: un \glo
 
 \textbf{Bugs per linee di codice}\\
 
-Rappresenta il numero di \glossaryItem{bug} trovati in un insieme di linee di codice: con la crescita del prodotto è utile misurare il rapporto tra i difetti trovati e la dimensione del prodotto (in termini di \glossaryItem{KLOC}s), tenendo conto del fatto che un incremento del sorgente comporta un aumento della possibilità di inserimento di un errore. \\
+Rappresenta il numero di \glossaryItem{bug} trovati in un insieme di linee di codice: con la crescita del prodotto è utile misurare il rapporto tra i difetti trovati e la dimensione del prodotto (in termini di \glossaryItem{KLOC}s), tenendo conto del fatto che un \glossaryItem{incremento} del sorgente comporta un aumento della possibilità di inserimento di un errore. \\
 
 \textbf{Range utilizzati}:
 
@@ -138,21 +138,21 @@ Questi valori sono stati fissati tenendo conto delle soglie di cui sopra, e sopr
 
 \subsection{Qualit\'a di processo}
 \subsubsection{Obiettivi}
-Molto spesso prodotti scadenti derivano da processi scadenti. Per questo motivo, e per le seguenti ragioni, assicurare la \glossaryItem{qualità} dei processi è un obiettivo primario per il \glossaryItem{team} BugBusters:
+Molto spesso prodotti scadenti derivano da \glossaryItem{processi} scadenti. Per questo motivo, e per le seguenti ragioni, assicurare la \glossaryItem{qualità} dei \glossaryItem{processi} è un obiettivo primario per il \glossaryItem{team} BugBusters:
 \begin{itemize}
 	\item aiuta ad ottimizzare l'uso di risorse;
 	\item permette di contenere i costi;
-	\item migliora la stima dei rischi e degli impegni.
+	\item migliora la stima dei \glossaryItem{rischi} e degli impegni.
 \end{itemize}
 Un \glossaryItem{processo} dovrebbe essere in grado di migliorare costantemente le proprie performance, che devono quindi essere costantemente misurabili e misurate. Inoltre, le attività di ciascun \glossaryItem{processo} e i costi associati devono essere in linea con quanto indicato nel \PianoDiProgetto. \\
 Si è dunque deciso di perseguire la \glossaryItem{qualità} servendosi dei seguenti modelli: 
 \begin{itemize}
-	\item \glossaryItem{SPICE}\footnote{Si veda appendice \ref{AppQualitaProcessi} per approfondimenti} (\textbf{S}oftware \textbf{P}rocess \textbf{I}mprovement and \textbf{C}apability d\textbf{E}termination): definito nello standard ISO/IEC 15504, per poter valutare in modo oggettivo i processi dal punto di vista della maturità;
-	\item \glossaryItem{PDCA}\footnote{Si veda appendice \ref{AppPDCA} per approfondimenti} (\textbf{P}lan \textbf{D}o \textbf{C}hek \textbf{A}ct): per il controllo delle attività di \glossaryItem{processo} ripetibili e misurabili e per la manutenibilità dei processi stessi incrementandone la \glossaryItem{qualità}.
+	\item \glossaryItem{SPICE}\footnote{Si veda appendice \ref{AppQualitaProcessi} per approfondimenti} (\textbf{S}oftware \textbf{P}rocess \textbf{I}mprovement and \textbf{C}apability d\textbf{E}termination): definito nello standard ISO/IEC 15504, per poter valutare in modo oggettivo i \glossaryItem{processi} dal punto di vista della maturità;
+	\item \glossaryItem{PDCA}\footnote{Si veda appendice \ref{AppPDCA} per approfondimenti} (\textbf{P}lan \textbf{D}o \textbf{C}hek \textbf{A}ct): per il controllo delle attività di \glossaryItem{processo} ripetibili e misurabili e per la manutenibilità dei \glossaryItem{processi} stessi incrementandone la \glossaryItem{qualità}.
 \end{itemize}
 
 \subsubsection{Procedure}
-La pianificazione delle attività volte al miglioramento continuo dei processi sono descritte nel \PianoDiProgetto. Le linee guida per la gestione della \glossaryItem{qualità} del \glossaryItem{processo}, invece, seguono il modello PDCA e descrivono come devono essere attuate le procedure di controllo:
+La pianificazione delle attività volte al miglioramento continuo dei \glossaryItem{processi} sono descritte nel \PianoDiProgetto. Le linee guida per la gestione della \glossaryItem{qualità} del \glossaryItem{processo}, invece, seguono il modello \glossaryItem{PDCA} e descrivono come devono essere attuate le \glossaryItem{procedure} di controllo:
 \begin{itemize}
 	\item la pianificazione deve essere dettagliata, e le attività pianificate devono essere monitorate;
 	\item le risorse necessarie per conseguire gli obiettivi devono essere definite;
@@ -175,7 +175,7 @@ Dove:
 	\item \textbf{EV}: indica il valore delle attivit\`a realizzate alla data corrente;
 	\item \textbf{PV}: indica il costo pianificato per realizzare le attività di \glossaryItem{progetto} alla data corrente.
 \end{itemize}
-\`E un indicatore di efficacia soprattutto nei confronti del cliente. Se \begin{math}{SV > 0}\end{math} significa che il \glossaryItem{progetto} sta procedendo con maggior velocit\`a rispetto a quanto pianificato, viceversa se negativo. Alla fine del \glossaryItem{progetto} questo indice assumer\`a il valore 0, perch\`e in quel momento tutte le attivit\`a saranno state realizzate.\\
+\`E un indicatore di \glossaryItem{efficacia} soprattutto nei confronti del cliente. Se \begin{math}{SV > 0}\end{math} significa che il \glossaryItem{progetto} sta procedendo con maggior velocit\`a rispetto a quanto pianificato, viceversa se negativo. Alla fine del \glossaryItem{progetto} questo indice assumer\`a il valore 0, perch\`e in quel momento tutte le attivit\`a saranno state realizzate.\\
 
 \textbf{Budget Variance}\\
 
@@ -193,14 +193,14 @@ il proprio budget con minor velocità di quanto pianificato, viceversa se negati
 
 \textbf{Produttività}\\
 
-Rappresenta la produttività media delle risorse impiegate nelle diverse fasi del \glossaryItem{progetto}. Questa metrica può dunque riferirsi al \glossaryItem{progetto} in senso generale, oppure ad una specifica fase.\\ \`E utilizzata per valutare lo sforzo richiesto per lo sviluppo del \glossaryItem{progetto}, a fronte delle sue dimensioni.
+Rappresenta la produttività media delle risorse impiegate nelle diverse \glossaryItem{fasi} del \glossaryItem{progetto}. Questa metrica può dunque riferirsi al \glossaryItem{progetto} in senso generale, oppure ad una specifica \glossaryItem{fase}.\\ \`E utilizzata per valutare lo sforzo richiesto per lo sviluppo del \glossaryItem{progetto}, a fronte delle sue dimensioni.
 \begin{center}
 \begin{math}
 	\textit{Produttività} = \frac	{\textit{Quantità di output ottenuto}}
 									{\textit{Quantità di input utilizzato}}
 \end{math}
 \end{center}
-Per quanto detto, i parametri "input" e "output" assumono valori diversi in base ai processi, e alle relative attività, cui la formula viene applicata:
+Per quanto detto, i parametri "input" e "output" assumono valori diversi in base ai \glossaryItem{processi}, e alle relative attività, cui la formula viene applicata:
 \begin{itemize}
 	\item \textbf{documentazione}:
 	\begin{center} 
@@ -220,7 +220,7 @@ Per quanto detto, i parametri "input" e "output" assumono valori diversi in base
 	\begin{center} 
 		\begin{math}
 			\dfrac	{\textit{ore necessarie alle attivit\`a di \glossaryItem{verifica}}}
-					{\textit{numero di anomalie rilevate}}
+					{\textit{numero di \glossaryItem{anomalie} rilevate}}
 		\end{math}
 	\end{center}		
 	\item \textbf{\glossaryItem{validazione}}: 
