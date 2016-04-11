@@ -1,0 +1,368 @@
+\section{Diagrammi di attività}
+In seguito vengono descritte le interazioni dell'utente con \glossaryItem{MaaS} utilizzando i \glossaryItem{diagrammi} di attività, secondo la seguente struttura:
+\begin{itemize}
+\item \textbf{Utente non autenticato};
+\item \textbf{Utente autenticato};
+\item \textbf{Super Admin}.
+\end{itemize}
+\subsection{Utente non autenticato}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=12cm]{res/sections/backend/activities/principaliSenzaAuth.png}
+\caption{Attività principali per un utente non autenticato}
+\end{center}
+\end{figure}
+Un utente non autenticato, una volta visualizzata la pagina di \glossaryItem{MaaS}, può:
+\begin{itemize}
+\item registrarsi, a seguito di un invito di un \glossaryItem{Owner} di una \glossaryItem{Company};
+\item effettuare il login;
+\item eseguire la \glossaryItem{procedura} di recupero password;
+\item creare una nuova \glossaryItem{Company}. L'utente verrà registrato come \glossaryItem{Owner} della \glossaryItem{Company} appena creata.
+\end{itemize}
+\subsubsection{Registrazione}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=12cm]{res/sections/backend/activities/registrazione.png}
+\caption{Registrazione a \glossaryItem{MaaS}}
+\end{center}
+\end{figure}
+L'utente si trova nella pagina di registrazione a \glossaryItem{MaaS}. Indirizzo email e password sono già stati impostati, e potranno essere modificati dopo il completamento della \glossaryItem{procedura} di registrazione; viene richiesto l'inserimento di tre campi base per il profilo di un utente: nome, cognome e data di nascita.
+\subsubsection{Login}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=12cm]{res/sections/backend/activities/registrazione.png}
+\caption{Login}
+\end{center}
+\end{figure}
+L'utente non autenticato deve inserire, in due caselle di testo, le proprie credenziali di accesso, username e password, per poter accedere a \glossaryItem{MaaS}. Se le credenziali risultano valide l'utente veràà reindirizzato alla pagina contenente la propria \glossaryItem{Dashboard}, altrimenti verrà mostrato un messaggio di errore.
+\subsubsection{Recupero password}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=12cm]{res/sections/backend/activities/recuperoPassword.png}
+\caption{Recupero password}
+\end{center}
+\end{figure}
+L'utente non autenticato deve inserire, in una casella di testo, l'indirizzo email al quale sarà inviato il codice segreto da utilizzare nella \glossaryItem{procedura} di reset della password.
+\subsubsection{Reset password}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=12cm]{res/sections/backend/activities/resetPassword.png}
+\caption{Reset password}
+\end{center}
+\end{figure}
+L'utente non autenticato deve inserire, in una casella di testo, il codice segreto che ha ricevuto tramite email necessario a eseguire il reset della password. Se il codice è verificato, l'utente non autenticato potrà inserire una nuova password, che verrà memorizzata al posto della vecchia.
+\subsubsection{Creazione Company}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=12cm]{res/sections/backend/activities/creazioneCompany.png}
+\caption{Creazione \glossaryItem{Company}}
+\end{center}
+\end{figure}
+L'utente non autenticato che crea una \glossaryItem{Company} viene registrato come suo \glossaryItem{Owner}. È pertanto necessario fornire, durante la \glossaryItem{procedura} di creazione, l'indirizzo email e la password dell'utente, oltre che il nome della \glossaryItem{Company} stessa.
+\newpage
+\subsection{Utente autenticato}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=15cm]{res/sections/backend/activities/principaliConAuth.png}
+\caption{Attività principali per un utente autenticato}
+\end{center}
+\end{figure}
+Dopo aver effettuato il login un utente può:
+\begin{itemize}
+\item visualizzare le proprie credenziali di accesso, modificarle o rimuoversi da \glossaryItem{MaaS};
+\item eseguire operazioni che coinvolgono specifiche \glossaryItem{DSL};
+\item eseguire operazioni sulla sua \glossaryItem{Dashboard};
+\item gestire i permessi degli altri utenti (solo per Admin e \glossaryItem{Owner});
+\item gestire gli utenti della \glossaryItem{Company} (solo per Admin e \glossaryItem{Owner});
+\item visualizzare e gestire (quest'ultima solo per Admin e \glossaryItem{Owner}) i database della \glossaryItem{Company};
+\item effettuare il logout.
+\end{itemize}
+\subsubsection{Modifica delle credenziali utente}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=12cm]{res/sections/backend/activities/modificaCredenziali.png}
+\caption{Modifica delle credenziali utente}
+\end{center}
+\end{figure}
+L'utente autenticato, dopo aver visualizzato la pagina con i suoi dati personali, può decidere di modificare le proprie credenziali di accesso inserendo email e passowrd. Nel caso in cui le credenziali non siano valide (ad esempio, in caso di inserimento di un indirizzo email già presente) verrà visualizzato un messaggio di errore nel momento di invio della richiesta di modifica.
+\subsubsection{Rimozione dell'utente}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=12cm]{res/sections/backend/activities/rimuoviProfilo.png}
+\caption{Rimozione dell'utente}
+\end{center}
+\end{figure}
+L'utente autenticato, dopo aver visualizzato la pagina con i suoi dati personali, può decidere di cancellarsi da \glossaryItem{MaaS}. Viene proposta una richiesta di conferma per evitare eliminazioni accidentali. Se la richiesta viene confermata, l'utente è rimosso da \glossaryItem{MaaS}.
+\subsubsection{Operazioni su specifiche DSL}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=12cm]{res/sections/backend/activities/operazioniDSL.png}
+\caption{Operazioni su specifiche \glossaryItem{DSL}}
+\end{center}
+\end{figure}
+Un utente autenticato può decidere di effettuare varie operazioni sulle specifiche \glossaryItem{DSL} alle quali ha accesso, in particolare:
+\begin{itemize}
+\item eseguire una specifica \glossaryItem{DSL} e visualizzare il risultato in forma tabellare;
+\item modificare una specifica \glossaryItem{DSL};
+\item creare una specifica \glossaryItem{DSL};
+\item leggere il codice della specifica \glossaryItem{DSL}.
+\end{itemize}
+Le ultime tre operazioni coinvolgono l'editor fornito da \glossaryItem{MaaS}.
+\subsubsection{Operazioni sulla Dashboard}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=12cm]{res/sections/backend/activities/operazioniDashboard.png}
+\caption{Operazioni sulla \glossaryItem{Dashboard}}
+\end{center}
+\end{figure}
+Un utente autenticato può decidere di effettuare varie operazioni sulla propria \glossaryItem{Dashboard}, in particolare:
+\begin{itemize}
+\item visualizzare gli elementi;
+\item rimuovere degli elementi;
+\item modificare degli elementi.
+\end{itemize}
+La rimozione degli elementi viene effettuata dopo una richiesta di conferma.
+\newpage
+\paragraph{Visualizzazione elementi della Dashboard} \mbox{} \\
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=12cm]{res/sections/backend/activities/visualizzazioneElementDashboard.png}
+\caption{Visualizzazione elementi della \glossaryItem{Dashboard}}
+\end{center}
+\end{figure}
+\newpage
+La \glossaryItem{dashboard} si compone di \glossaryItem{Cell}, \glossaryItem{Document} e \glossaryItem{Collection}. Un utente può decidere di visualizzare questi elementi.
+\paragraph{Modifica elementi della Dashboard} \mbox{} \\
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=12cm]{res/sections/backend/activities/modificaElementDashboard.png}
+\caption{Modifica elementi della \glossaryItem{Dashboard}}
+\end{center}
+\end{figure}
+\newpage
+La \glossaryItem{Dashboard} si compone di \glossaryItem{Cell}, \glossaryItem{Document} e \glossaryItem{Collection}. Un utente può decidere di modificare uno di questi tre elementi.
+\subparagraph{Modifica \glossaryItem{Cell}} \mbox{} \\
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=12cm]{res/sections/backend/activities/modificaCell.png}
+\caption{Modifica \glossaryItem{Cell}}
+\end{center}
+\end{figure}
+Durante la modifica di una \glossaryItem{Cell}, l'utente autenticato può fare una delle seguenti tre operazioni:
+\begin{itemize}
+\item aggiungere un valore;
+\item modificare un valore;
+\item ordinare il risultato di una query.
+\end{itemize}
+\newpage
+\subparagraph{Gestione \glossaryItem{Document}} \mbox{} \\
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=12cm]{res/sections/backend/activities/modificaDocument.png}
+\caption{Modifica \glossaryItem{Document}}
+\end{center}
+\end{figure}
+Durante la gestione di un \glossaryItem{Document}, l'utente autenticato può fare una delle seguenti quattro operazioni:
+\begin{itemize}
+\item modificarlo;
+\item rimuoverlo;
+\item inviarlo per email;
+\item esportarlo e salvarlo in locale.
+\end{itemize}
+\newpage
+\subparagraph{Gestione \glossaryItem{Collection}} \mbox{} \\
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=16cm]{res/sections/backend/activities/gestioneCollection.png}
+\caption{Gestione \glossaryItem{Collection}}
+\end{center}
+\end{figure}
+Durante la gestione di una \glossaryItem{Collection}, l'utente autenticato può fare una delle seguenti cinque operazioni:
+\begin{itemize}
+\item modificarla;
+\item rimuoverla;
+\item ordinare i dati contenuti;
+\item inviarla per email;
+\item esportarla e salvarla in locale.
+\end{itemize}
+\subsubsection{Operazioni sui permessi degli utenti}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=12cm]{res/sections/backend/activities/operazioniSuUtenti.png}
+\caption{Operazioni sui permessi degli utenti}
+\end{center}
+\end{figure}
+Un utente autenticato, Admin o \glossaryItem{Owner}, può modificare, o rimuovere, i permessi di un utente della stessa \glossaryItem{Company}.
+\subsubsection{Operazioni sugli utenti}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=12cm]{res/sections/backend/activities/gestioneUtenti.png}
+\caption{Operazioni sugli utenti}
+\end{center}
+\end{figure}
+Un utente autenticato, Admin o \glossaryItem{Owner}, può gestire gli utenti della \glossaryItem{Company} che gestisce. In particolare può:
+\begin{itemize}
+\item invitare un utente;
+\item rimuovere un utente;
+\item inserire un utente.
+\end{itemize}
+\newpage
+\paragraph{Invito utente} \mbox{} \\
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=12cm]{res/sections/backend/activities/invitoUtente.png}
+\caption{Invito utente}
+\end{center}
+\end{figure}
+Un utente autenticato, \glossaryItem{Owner} o Admin, può invitare un nuovo utente nella propria \glossaryItem{Company} inserendo un indirizzo email ed inviando la richiesta tramite un pulsante presente nella pagina.
+\newpage
+\paragraph{Inserimento utente} \mbox{} \\
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=12cm]{res/sections/backend/activities/inserimentoUtente.png}
+\end{center}
+\end{figure}
+Un utente autenticato, \glossaryItem{Owner} o Admin, può inserire manualmente un nuovo utente nella \glossaryItem{Company} senza prima invitarlo. Per farlo deve fornire indirizzo email e password del nuovo utente.
+\subsubsection{Operazioni sui database}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=12cm]{res/sections/backend/activities/gestioneDatabase.png}
+\caption{Operazioni sui database della \glossaryItem{Company}}
+\end{center}
+\end{figure}
+Un utente autenticato può visualizzare i database della \glossaryItem{Company}, e le \glossaryItem{Collection} di quel database, ai quali ha accesso. Gli Admin e gli \glossaryItem{Owner}, invece, possono gestire i database registrati presso la \glossaryItem{Company}:
+\begin{itemize}
+\item modificando i dati di accesso e aggiungendo restrizioni sulle Collections visibili ai Member;
+\item aggiungendo un database;
+\item rimuovendo un database.
+\end{itemize} 
+\newpage
+\paragraph{Modifica database} \mbox{} \\
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=15cm]{res/sections/backend/activities/modificaDatabase.png}
+\end{center}
+\end{figure}
+Un Admin o un \glossaryItem{Owner} può modificare un database della propria \glossaryItem{Company}. In particolare deve fornire:
+\begin{itemize}
+\item nome;
+\item host;
+\item porta di accesso;
+\item username e password per la lettura dei dati dal database.
+\end{itemize}
+Inoltre può aggiungere, rimuovere o modificare restrizioni sulle Collections di quel database.
+\newpage
+\subparagraph{Aggiunta \glossaryItem{Collection}} \mbox{} \\
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=12cm]{res/sections/backend/activities/aggiuntaDatiCollection.png}
+\end{center}
+\end{figure}
+Un Admin o un \glossaryItem{Owner} può decidere se rendere una nuova \glossaryItem{Collection} visibile ai Members della \glossaryItem{Company} completando il form di aggiunta di una \glossaryItem{Collection}.
+\newpage
+\subparagraph{Gestione \glossaryItem{Collection}} \mbox{} \\
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=12cm]{res/sections/backend/activities/gestioneCollectionAdmin.png}
+\end{center}
+\end{figure}
+Un Admin o un \glossaryItem{Owner} può modificare le regole di accesso e rimuovere le \glossaryItem{Collection} esistenti.
+\newpage
+\subparagraph{Modifica \glossaryItem{Collection}} \mbox{} \\
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=12cm]{res/sections/backend/activities/modificaDatiCollection.png}
+\end{center}
+\end{figure}
+Un Admin o un \glossaryItem{Owner} può decidere se rendere una \glossaryItem{Collection} già esistente visibile ai Members della \glossaryItem{Company} completando il form di modifica di una \glossaryItem{Collection}.
+\newpage
+\paragraph{Aggiunta database} \mbox{} \\
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=12cm]{res/sections/backend/activities/aggiuntaDatabase.png}
+\end{center}
+\end{figure}
+Un Admin o un \glossaryItem{Owner} può aggiungere un database nella propria \glossaryItem{Company}. In particolare deve fornire:
+\begin{itemize}
+\item nome;
+\item host;
+\item porta di accesso;
+\item username e password per la lettura del database.
+\end{itemize}
+\subsection{Super Admin}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=12cm]{res/sections/backend/activities/principaliSuperAdmin.png}
+\caption{Attività principali per il Super Admin}
+\end{center}
+\end{figure}
+Dopo aver effettuato il login, il Super Admin può:
+\begin{itemize}
+\item creare una \glossaryItem{Company};
+\item visualizzare l'elenco delle \glossaryItem{Company} registrate a \glossaryItem{MaaS};
+\item aggiungere un altro Super Admin;
+\item visualizzare i dettagli sugli altri Super Admin.
+\end{itemize}
+\subsubsection{Creazione Company}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=12cm]{res/sections/backend/activities/creazioneCompanySA.png}
+\caption{Creazione \glossaryItem{Company}}
+\end{center}
+\end{figure}
+Il Super Admin che crea una \glossaryItem{Company} deve fornire i dati dell'utente che verrà registrato come \glossaryItem{Owner}. È pertanto necessario fornire, durante la \glossaryItem{procedura} di creazione, l'indirizzo email e la password del nuovo utente, oltre che il nome della \glossaryItem{Company} stessa.
+\subsubsection{Visualizzazione elenco Companies}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=12cm]{res/sections/backend/activities/creazioneCompanySA.png}
+\caption{Visualizzazione elenco Companies}
+\end{center}
+\end{figure}
+Il Super Admin può visualizzare tutte le \glossaryItem{Company} presenti in \glossaryItem{MaaS}, ed eseguire varie operazioni su di esse:
+\begin{itemize}
+\item modificare i dati della \glossaryItem{Company};
+\item aggiungere un utente;
+\item visualizzarne gli utenti.
+\end{itemize}
+\newpage
+\paragraph{Modifica Company} \mbox{} \\
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=12cm]{res/sections/backend/activities/modificaCompanySA.png}
+\caption{Modifica dei dati di una \glossaryItem{Company}}
+\end{center}
+\end{figure}
+Il Super Admin può modificare il nome di una \glossaryItem{Company} inserendo il nuovo nome in una casella di testo ed inviando la richiesta di aggiornamento tramite un pulsante presente sulla pagina.
+\newpage
+\paragraph{Aggiunta utente} \mbox{} \\
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=12cm]{res/sections/backend/activities/aggiuntaUtenteSA.png}
+\caption{Aggiunta di un utente alla \glossaryItem{Company}}
+\end{center}
+\end{figure}
+Il Super Admin può aggiungere un utente alla \glossaryItem{Company} selezionata inserendone indirizzo email, password e ruolo. 
+\paragraph{Visualizzazione utenti della Company} \mbox{} \\
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=12cm]{res/sections/backend/activities/operazioniUtentiSA.png}
+\caption{Visualizzazione utenti della \glossaryItem{Company}}
+\end{center}
+\end{figure}
+Una volta visualizato l'elenco degli utenti iscritti alla \glossaryItem{Company}, il Super Admin può modificare il ruolo di un utente o di rimuoverlo. Nel secondo caso è richiesta una conferma, per evitare eliminazioni accidentali.
+\subsubsection{Aggiunta di un Super Admin}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=12cm]{res/sections/backend/activities/aggiuntaSuperAdmin.png}
+\caption{Aggiunta Super Admin}
+\end{center}
+\end{figure}
+Il Super Admin può inserire un altro Super Admin all'intero di \glossaryItem{MaaS}, per farlo è necessario fornirne indirizzo email e password, ed inviare i dati attraverso un apposito pulsante.
+\subsubsection{Visualizzazione dettagli di un Super Admin}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=12cm]{res/sections/backend/activities/visualizzazioneDettagliSuperAdminSA.png}
+\caption{Visualizzazione altri Super Admins}
+\end{center}
+\end{figure}
+Il Super Admin può visualizzare i dettagli sugli altri Super Admin a partire dalla pagina di elenco dei Super Admin presenti in \glossaryItem{MaaS}. Per fare questo è sufficiente fare click sul Super Admin del quale si vogliono visualizzare i dettagli.
