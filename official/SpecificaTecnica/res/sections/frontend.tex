@@ -19,25 +19,24 @@ In un'architettura \textit{Flux} vengono distinti 4 componenti fondamentali:
 \item \textbf{View}: Sono la parte visiva dell'applicazione e, nel nostro caso, saranno costituite da componenti definite con React.
 \end{itemize}
 
-Dall'architettura sopra descritta sono stati individuati i seguenti package per il lato frontend di MaaS:
+Dall'architettura sopra descritta sono stati individuati i seguenti \glossaryItem{package} per il lato frontend di \glossaryItem{MaaS}:
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.8\textwidth]{res/sections/imgs/packages-diagram.jpg}
-\caption{Diagramma dei package del frontend}
+\caption{Diagramma dei \glossaryItem{package} del frontend}
 \end{figure}
 
-\section{Descrizione dei package del frontend}
 \subsection{WebAPIs}
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.8\textwidth]{res/sections/imgs/webapi-diagram.jpg}
-\caption{Diagramma dei package del frontend}
+\caption{Diagramma dei \glossaryItem{package} del frontend}
 \end{figure}
 
-\paragraph*{Descrizione del package}
-Il seguente package contiene tutte le classi che contengono i metodi per interagire con le API esposte dal server. 
+\paragraph*{Descrizione del \glossaryItem{package}}
+Il seguente \glossaryItem{package} contiene tutte le classi che contengono i metodi per interagire con le \glossaryItem{API} esposte dal server. 
 \paragraph*{Classi contenute}
 \begin{itemize}
 \item \textbf{UserAPIs};
@@ -49,7 +48,7 @@ Il seguente package contiene tutte le classi che contengono i metodi per interag
 
 \subsubsection{UserAPIs}
 \paragraph*{Descrizione della classe}
-Classe che espone tutti i metodi per interagire con le API del server che riguardano gli utenti.
+Classe che espone tutti i metodi per interagire con le \glossaryItem{API} del server che riguardano gli utenti.
 
 \paragraph*{Utilizzo}
 Viene utilizzata sia per il login sia per gestire le operazioni CRUD per le informazioni riguardanti gli utenti.
@@ -61,10 +60,10 @@ Viene utilizzata sia per il login sia per gestire le operazioni CRUD per le info
 
 \subsubsection{CompanyAPIs}
 \paragraph*{Descrizione della classe}
-Classe che espone i metodi per interagire con le API esposte dal server che riguardano le Company.
+Classe che espone i metodi per interagire con le \glossaryItem{API} esposte dal server che riguardano le \glossaryItem{Company}.
 
 \paragraph*{Utilizzo}
-Contiene le operazioni CRUD per interagire con le informazioni riguardanti le company utilizzando le API esposte dal backend.
+Contiene le operazioni CRUD per interagire con le informazioni riguardanti le \glossaryItem{company} utilizzando le \glossaryItem{API} esposte dal backend.
 
 \paragraph*{Relazione con altre classi}
 \begin{itemize}
@@ -73,10 +72,10 @@ Contiene le operazioni CRUD per interagire con le informazioni riguardanti le co
 
 \subsubsection{DSLAPIs}
 \paragraph*{Descrizione della classe}
-Classe che espone i metodi per interagire con le API esposte dal server che riguardano le specifiche DSL.
+Classe che espone i metodi per interagire con le \glossaryItem{API} esposte dal server che riguardano le specifiche \glossaryItem{DSL}.
 
 \paragraph*{Utilizzo}
-Viene utilizzata per lanciare le operazioni CRUD associate alle API esposte dal backend.
+Viene utilizzata per lanciare le operazioni CRUD associate alle \glossaryItem{API} esposte dal backend.
 
 \paragraph*{Relazione con altre classi}
 \begin{itemize}
@@ -85,10 +84,10 @@ Viene utilizzata per lanciare le operazioni CRUD associate alle API esposte dal 
 
 \subsubsection{DatabaseAPIs}
 \paragraph*{Descrizione della classe}
-Classe per interagire con le API esposte dal server che riguardano i database delle Company.
+Classe per interagire con le \glossaryItem{API} esposte dal server che riguardano i database delle \glossaryItem{Company}.
 
 \paragraph*{Utilizzo}
-Viene utilizzata questa classe per lanciare le operazioni CRUD esposte dalle API del backend.
+Viene utilizzata questa classe per lanciare le operazioni CRUD esposte dalle \glossaryItem{API} del backend.
 
 \paragraph*{Relazione con altre classi}
 \begin{itemize}
@@ -97,9 +96,9 @@ Viene utilizzata questa classe per lanciare le operazioni CRUD esposte dalle API
 
 \subsubsection{WebAPIFacade}
 \paragraph*{Descrizione della classe}
-Classe che implementa il \textit{design pattern} \textit{Facade} al fine di creare un'interfaccia semplificata per il resto delle componenti per interagire con le API esposte dal backend.
+Classe che implementa il \textit{design pattern} \textit{Facade} al fine di creare un'interfaccia semplificata per il resto delle componenti per interagire con le \glossaryItem{API} esposte dal backend.
 \paragraph*{Utilizzo}
-Questa classe viene utilizzata come interfaccia per il frontend per comunicare con le API esposte dal backend.
+Questa classe viene utilizzata come interfaccia per il frontend per comunicare con le \glossaryItem{API} esposte dal backend.
 \paragraph*{Relazione con altre classi}
 \begin{itemize}
 \item webAPIs;
@@ -114,8 +113,8 @@ Questa classe viene utilizzata come interfaccia per il frontend per comunicare c
 \caption{Diagramma delle classi contenute in ActionCreators}
 \end{figure}
 
-\paragraph*{Descrizione del package}
-Questo package contiene tutte le classi che si prestano come factory di Action. Le classi in questione mettono in relazione le webAPIs con il resto dell'applicazione, cioè vengono utilizzate per la richiesta delle funzionalità delle webAPIs per poi lanciare le Action relative alle risposte ricevute.
+\paragraph*{Descrizione del \glossaryItem{package}}
+Questo \glossaryItem{package} contiene tutte le classi che si prestano come factory di \glossaryItem{Action}. Le classi in questione mettono in relazione le webAPIs con il resto dell'applicazione, cioè vengono utilizzate per la richiesta delle funzionalità delle webAPIs per poi lanciare le \glossaryItem{Action} relative alle risposte ricevute.
 
 \paragraph*{Classi contenute}
 \begin{itemize}
@@ -145,7 +144,7 @@ Viene utilizzata per richiedere il login di un utente e per emanare le \textit{a
 \paragraph*{Descrizione della classe}
 Classe che si occupa di creare e lanciare le \textit{action} relative agli utenti. Viene implementata tramite il \textit{design pattern} \textit{Factory}.
 \paragraph*{Utilizzo}
-Viene utilizzata per creare le \textit{action} relative agli utenti: la classe fornisce i metodi per utilizzare le \textit{webAPIs} contenute relative all'utente e restituisce le action che poi verrano reindirizzate a UserStore.
+Viene utilizzata per creare le \textit{action} relative agli utenti: la classe fornisce i metodi per utilizzare le \textit{webAPIs} contenute relative all'utente e restituisce le \glossaryItem{action} che poi verrano reindirizzate a UserStore.
 
 \paragraph*{Relazione con altre classi}
 \begin{itemize}
@@ -159,7 +158,7 @@ Viene utilizzata per creare le \textit{action} relative agli utenti: la classe f
 \paragraph*{Descrizione della classe}
 Classe che si occupa dell'interazione dell'applicazione con CompanyAPIs e di lanciare \textit{Action} relative alle risposte ottenute da essa. Viene implementata tramite \textit{design pattern} \textit{Factory}.
 \paragraph*{Utilizzo}
-La classe viene utilizzata per creare le \textit{action} relative alle Company: sfrutta le \textit{webAPIs} dichiarate per interagire con il server e lancia le \textit{action} contenenti i dati ricevuti dalle API richieste.
+La classe viene utilizzata per creare le \textit{action} relative alle \glossaryItem{Company}: sfrutta le \textit{webAPIs} dichiarate per interagire con il server e lancia le \textit{action} contenenti i dati ricevuti dalle \glossaryItem{API} richieste.
 
 \paragraph*{Relazione con altre classi}
 \begin{itemize}
@@ -171,9 +170,9 @@ La classe viene utilizzata per creare le \textit{action} relative alle Company: 
 
 \subsubsection{DSLActionCreator}
 \paragraph*{Descrizione della classe}
-Classe che si occupa di creare \textit{action} riguardanti le specifiche DSL.
+Classe che si occupa di creare \textit{action} riguardanti le specifiche \glossaryItem{DSL}.
 \paragraph*{Utilizzo}
-Tale classe viene utilizzata per sfruttare i metodi dichiarati dalle webAPIs per la richiesta delle API esposte dal server relative alle specifiche DSL. Dopo aver sfruttato l'API richiesta, la classe crea un'\textit{action} contenente i risultati ottenuti.
+Tale classe viene utilizzata per sfruttare i metodi dichiarati dalle webAPIs per la richiesta delle \glossaryItem{API} esposte dal server relative alle specifiche \glossaryItem{DSL}. Dopo aver sfruttato l'API richiesta, la classe crea un'\textit{action} contenente i risultati ottenuti.
 
 \paragraph*{Relazione con altre classi}
 \begin{itemize}
@@ -185,9 +184,9 @@ Tale classe viene utilizzata per sfruttare i metodi dichiarati dalle webAPIs per
 
 \subsubsection{DatabaseActionCreator}
 \paragraph*{Descrizione della classe}
-Classe che si occupa di lanciare \textit{action} riguardanti le connessioni ai database di una Company.
+Classe che si occupa di lanciare \textit{action} riguardanti le connessioni ai database di una \glossaryItem{Company}.
 \paragraph*{Utilizzo}
-La classe viene utilizzata per richiamare i metodi definiti dalle \textit{webAPIs} relativi ai database delle Company e creare le action contenenti le risposte dai metodi chiamati.
+La classe viene utilizzata per richiamare i metodi definiti dalle \textit{webAPIs} relativi ai database delle \glossaryItem{Company} e creare le \glossaryItem{action} contenenti le risposte dai metodi chiamati.
 \paragraph*{Relazione con altre classi}
 \begin{itemize}
 \item Dispatcher;
@@ -213,11 +212,11 @@ Il dispatcher viene utilizzato come \textit{hub} centrale delle \textit{action} 
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.8\textwidth]{res/sections/imgs/stores-diagram.jpg}
-\caption{Diagramma delle classi per il package Stores}
+\caption{Diagramma delle classi per il \glossaryItem{package} Stores}
 \end{figure}
 
-\paragraph*{Descrizione del package}
-Il package in questione contiene le classi che implementano il concetto di Store presentato nell'architettura Flux. Ciascuno Store contiene dei dati omogenei tra loro e si occupa di fornirli alle pagine che ne necessitano.
+\paragraph*{Descrizione del \glossaryItem{package}}
+Il \glossaryItem{package} in questione contiene le classi che implementano il concetto di Store presentato nell'architettura Flux. Ciascuno Store contiene dei dati omogenei tra loro e si occupa di fornirli alle pagine che ne necessitano.
 \paragraph*{Classi contenute}
 \begin{itemize}
 \item \textbf{SessionStore};
@@ -251,9 +250,9 @@ Questa classe viene utilizzata per mantenere i dati riguardanti gli utenti e di 
 
 \subsubsection{DatabaseStore}
 \paragraph*{Descrizione della classe}
-Classe che si occupa di contenere i dati relativi alle connessioni ai database definiti per le Company.
+Classe che si occupa di contenere i dati relativi alle connessioni ai database definiti per le \glossaryItem{Company}.
 \paragraph*{Utilizzo}
-Questa classe viene utilizzata per contenere i dati riguardanti le connessioni dei database definiti per le Company. Si occupa di ricevere dal dispatcher le \textit{action} relative a questi dati e di mantenere i dati riferiti.
+Questa classe viene utilizzata per contenere i dati riguardanti le connessioni dei database definiti per le \glossaryItem{Company}. Si occupa di ricevere dal dispatcher le \textit{action} relative a questi dati e di mantenere i dati riferiti.
 \paragraph*{Relazione con altre classi}
 \begin{itemize}
 \item Pages;
@@ -262,9 +261,9 @@ Questa classe viene utilizzata per contenere i dati riguardanti le connessioni d
 
 \subsubsection{CompanyStore}
 \paragraph*{Descrizione della classe}
-Classe che si occupa di contenere i dati relativi alle Company.
+Classe che si occupa di contenere i dati relativi alle \glossaryItem{Company}.
 \paragraph*{Utilizzo}
-Questa classe viene utilizzata per ricevere le \textit{action} relative alle Company al fine di mantenere i dati relativi ad esse. Inoltre fornisce i metodi per fornire tali dati alle pagine che li richiedono
+Questa classe viene utilizzata per ricevere le \textit{action} relative alle \glossaryItem{Company} al fine di mantenere i dati relativi ad esse. Inoltre fornisce i metodi per fornire tali dati alle pagine che li richiedono
 \paragraph*{Relazione con altre classi}
 \begin{itemize}
 \item Dispatcher;
@@ -273,9 +272,9 @@ Questa classe viene utilizzata per ricevere le \textit{action} relative alle Com
 
 \subsubsection{DSLStore}
 \paragraph*{Descrizione della classe}
-Classe che si occupa di contenere i dati delle specifiche DSL
+Classe che si occupa di contenere i dati delle specifiche \glossaryItem{DSL}
 \paragraph*{Utilizzo}
-Questa classe fornisce i metodi per ricevere le Action relative alle specifiche DSL e per mantenere i dati relativi ad esse. Fornisce inoltre i metodi per disporre quei dati per le pagine che li richiedono.
+Questa classe fornisce i metodi per ricevere le \glossaryItem{Action} relative alle specifiche \glossaryItem{DSL} e per mantenere i dati relativi ad esse. Fornisce inoltre i metodi per disporre quei dati per le pagine che li richiedono.
 \paragraph*{Relazione con altre classi}
 \begin{itemize}
 \item Dispatcher;
@@ -296,5 +295,5 @@ Questa classe è necessaria all'applicazione per determinare quale pagina mostra
 Viene istanziata nell'applicazione principale e determina le associazioni tra pagine e gli indirizzi URL per identificarle.
 
 \subsection{Pages}
-\paragraph*{Descrizione del package}
-Questo package contiene tutte le pagine richiamate da Router. Ciascuna classe rappresenta una pagina definita come componente React e fornisce i metodi alla pagina per recuperare i dati da mostrare dagli store e i metodi per richiamare gli ActionCreators per la creazione di nuove Action.
+\paragraph*{Descrizione del \glossaryItem{package}}
+Questo \glossaryItem{package} contiene tutte le pagine richiamate da Router. Ciascuna classe rappresenta una pagina definita come componente React e fornisce i metodi alla pagina per recuperare i dati da mostrare dagli store e i metodi per richiamare gli ActionCreators per la creazione di nuove \glossaryItem{Action}.
