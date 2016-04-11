@@ -1,0 +1,34 @@
+\newpage
+\section{Pianificazione dei test}
+
+	Si vuole adottare una strategia di \glossaryItem{verifica} del software tramite test opportunamente predeterminati e che garantiscano almeno un test per ogni requisito. I test sono l’applicazione delle tecniche di analisi dinamica introdotte nelle \NormeDiProgetto; tali attività, oltre a richiedere l’esecuzione del programma, devono poter essere ripetibili, ossia tramite delle specifiche su come riprodurre i test vogliamo che il loro output sia deterministico. È importante che i test di unità vengano svolti in parallelo, dando precedenza alle unità che producono risultati utili alla comprensione del loro funzionamento integrato. L’ambiente di testing deve soddisfare tale obiettivo. L’attività di test deve produrre un log che specifica quando e chi ha eseguito il test e con quali input; l’insorgenza di failure deve essere tracciata e catalogata.
+
+\subsection{Livelli di testing}
+	Il testing del software viene suddiviso in livelli differenti, che si concretizzano in un'esecuzione bottom-up che avanza sequenzialmente alle attività di codifica e di \glossaryItem{validazione}. I test da effettuare sul prodotto sono di cinque tipi, ma gli ultimi due saranno specificati nella prossima revisione:
+
+\begin{enumerate}
+	\item Test di \glossaryItem{Validazione} (TV): viene verificato che il prodotto soddisfi quanto richiesto dal proponente individuando delle macro azioni che un utente svolge comunemente sul sistema;
+	\item Test di Sistema (TS): sono test relativi al comportamento dell’intero sistema. Viene verificato che l'architettura generale funzioni complessivamente bene;
+	\item Test di Integrazione (TI): vengono verificate le componenti del sistema contenute nella \SpecificaTecnica, ossia viene verificato che i \glossaryItem{package} siano funzionanti e in grado di funzionare nel loro insieme;
+	\item Test di Unità (TU): viene testata ogni unità, ossia la più piccola parte di lavoro assegnabile ad un \glossaryItem{programmatore}. In questo \glossaryItem{progetto} una unità dovrebbe corrispondere ad una function o a un method;
+	\item Test di Regressione (TR): possono essere test di tutte le tipologie succitate, e devono mostrare il funzionamento del prodotto a seguito di una modifica.
+\end{enumerate}
+
+	La seguente figura illustra come i test elencati vengono distribuiti durante in ciclo di vita del prodotto.
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.5]{res/sections/V-model}
+		\caption{V-model per il testing software}
+	\end{figure}
+	
+
+\subsection{Test di Sistema}
+	Vengono qui descritti i test di sistema che andranno a verificare il funzionamento complessivo delle componenti. Nella seguente tabella, lo stato di ogni test è definito da N.E per non eseguito.
+
+	%table of testsTable
+	\input{res/sections/testsTable/header}
+	\input{res/sections/testsTable/part1}
+	\input{res/sections/testsTable/part2}
+	\input{res/sections/testsTable/part3}
+	\input{res/sections/testsTable/footer}
