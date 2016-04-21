@@ -55,7 +55,12 @@
 % il nome del comando \glossary è già usato da LaTeX
 \newcommand{\glossaryItem}[1]{\textit{#1\ped{\ped{G}}}}
 
-
+% Serve a dare la giusta formattazione per indicare il tipo di verbale in cui e' stata presa una decisione
+% Uso: \verbalRI{data}{punto}
+% RI = Riunione Interna
+\newcommand{\verbalRI}[2]{\textit{RI-#1-#2}}
+% RE = Riunione Esterna
+\newcommand{\verbalRE}[2]{\textit{RE-#1-#2}}
 
 % Serve a dare la giusta formattazione al codice inline
 \newcommand{\code}[1]{\flextt{\texttt{#1}}}
