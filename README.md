@@ -17,4 +17,4 @@ PianoDiProgetto: [![Build Status](https://travis-ci.org/BugBusterSWE/documentati
 PianoDiQualifica: [![Build Status](https://travis-ci.org/BugBusterSWE/documentation.svg?branch=PianoDiQualifica)](https://travis-ci.org/BugBusterSWE/documentation)
 
 
-Documentation about MaaS project
+Documentation about MaaS project by Lupin III
