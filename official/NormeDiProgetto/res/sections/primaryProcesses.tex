@@ -104,6 +104,7 @@
 				noto a tutti i membri del gruppo in quanto trattato durante il corso
 				di \textit{Ingegneria del Software}.
 				Si \`e scelto inoltre di adottare l'editor \glossaryItem{UML} \textit{Astah}.   %riferimento per astah
+                                Per mantenere la tracciabilità dei casi d'uso si è deciso di addotare l'utilizzo di \textit{Tracy} come base di dati.
 			
 			
 		\paragraph*{2. Attività di Progettazione}
@@ -116,12 +117,15 @@
 		        in \glossaryItem{fase} di codifica.
                         I documenti elaborati in questa \glossaryItem{fase} sono:
                         \begin{itemize}
-                        \item \glossaryItem{Specifica Tecnica}, nel quale vengono individuate le componenti macroscopiche del sistema,
-                          divisione utile per garantire che il lavoro successivo proceda in modo parallelo e soddisfi i principi di ortogonalit\'a;
-                        \item \glossaryItem{Definizione di Prodotto}, documento che fornisce ai \glossaryItem{programmatori} tutte le direttive. necessarie per la codifica
+                        \item \glossaryItem{Specifica Tecnica}, documento proposto in sede di \textit{Revisione di Progettazione minima}, nel quale vengono individuate 
+			 le componenti macroscopiche del sistema, suddivisione utile per garantire che il lavoro successivo proceda in modo parallelo e soddisfi i principi di ortogonalità;
+                        \item \glossaryItem{Definizione di Prodotto}, documento che fornisce ai \glossaryItem{programmatori} tutte le direttive necessarie per la codifica;
+					    esso descrive in dettaglio la progettazione del sistema, integrando quanto scritto nella Specifica Tecnica. Il documento specifica i diagrammi UML e le
+					    definizioni delle classi. Viene proposto in sede di \textit{Revisione di Progettazione massima} oppure in sede di \textit{Revisione di Qualifica}.
                         \end{itemize}
 		    %si useranno Design patterns
-		        Per la progettazione a livello di sistema si utilizzeranno \glossaryItem{design pattern} architetturali globalmente affermati.
+		        Per la progettazione del prodotto sarà opportuno utilizzare \glossaryItem{design pattern} globalmente affermati.
+			I membri del gruppo hanno acquisito conoscenze approfondite di tali design pattern durante il corso di \textit{Ingegneria del Software}.
                  
                         %diagrammi \glossaryItem{UML} prodotti
                         \paragraph*{Diagrammi prodotti}
@@ -134,7 +138,10 @@
                         \end{itemize}
                         I tipi di \glossaryItem{diagrammi} sopra elencati andranno a far parte dei due documenti menzionati sopra.
 		
-		 
+			\paragraph*{Tracciamento dei componenti}
+			Ogni requisito deve essere riferito al componente che lo soddisfa. Tramite questa operazione è possibile garantire che ogni requisito venga
+			soddisfatto, inoltre questo aiuta nella misurazione del progresso dell'attività di progettazione.		
+			
 		 %parlare degli STRUMENTI utilizzati
 		        \paragraph*{Strumenti}
 		        Come per l'attivit\`a precedente e per gli stessi motivi, i membri del gruppo hanno stabilito l'utilizzo del linguaggio \glossaryItem{UML} 2.0 per i seguenti
@@ -144,6 +151,7 @@
 			\item \glossaryItem{Diagrammi} delle \textit{classi};	
 			\item \glossaryItem{Diagrammi} di \textit{attivit\`a}.
 		        \end{itemize}
+                        Anche in questo caso per mantenere una tracciabilità viene utilizzato \textit{Tracy} come base di dati per poter mantenere tutti i diagrammi prodotti e la loro descrizione.
 			 
 		
 		\paragraph*{3. Attività di Codifica}
