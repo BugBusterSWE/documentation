@@ -1,0 +1,807 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glossary>
+    <term>
+        <word>Design Pattern</word>
+        <definition>Concetto che può essere definito come "una soluzione progettuale generale ad un problema ricorrente". Si tratta di una descrizione o modello logico da applicare per la risoluzione di un problema che può presentarsi in diverse situazioni durante le fasi di progettazione e sviluppo del software, ancor prima della definizione dell'algoritmo risolutivo.</definition>
+    </term>
+    <term>
+        <word>Front end</word>
+        <definition>Parte visibile all'utente e con cui egli può interagire; nella sua accezione più generale, è responsabile dell'acquisizione dei dati di ingresso e della loro elaborazione con modalità conformi a specifiche predefinite e invarianti, tali da renderli utilizzabili dal back end.</definition>
+    </term>
+    <term>
+        <word>Cross-platform</word>
+		<definition>Che funziona su più di una piattaforma.</definition>
+    </term>
+    <term>
+		<word>Google Chrome</word>
+		<definition>Browser sviluppato da Google.</definition>
+    </term>
+    <term>
+		<word>Event-driven</word>
+		<definition>Il flusso di esecuzione non è sequenziale, ma basato sul verificarsi di eventi esterni.</definition>
+    </term>
+    <term>
+		<word>I/O</word>
+		<definition>Input/Output.</definition>
+    </term>
+    <term>
+		<word>Thread</word>
+		<definition>Componente di un processo, che viene eseguita concorrentemente ad altri thread.</definition>
+    </term>
+    <term>
+		<word>Modulo</word>
+		<plural>Moduli</plural>
+		<definition>Componente di un sistema.</definition>
+    </term>
+    <term>
+		<word>Scalabile</word>
+		<plural>Scalabili</plural>
+		<definition>Un sistema è scalabile quando è in grado di ''crescere'' o ''decrescere'' (aumentare o diminuire di scala) in funzione delle necessità e delle disponibilità.</definition>
+    </term>
+    <term>
+		<word>Document oriented</word>
+		<definition>Database che non memorizza i dati in tabelle con campi uniformi per ogni record come nei database relazionali, ma ogni record è memorizzato come un documento che possiede determinate caratteristiche. Qualsiasi numero di campi con qualsiasi lunghezza può essere aggiunto al documento.</definition>
+    </term>
+    <term>
+		<word>Schemaless</word>
+		<definition>Senza uno schema fisso per i dati.</definition>
+    </term>
+    <term>
+		<word>Join</word>
+		<definition>Clausola del linguaggio SQL che serve a combinare (unire) le tuple di due o più relazioni di un database tramite l'operazione di congiunzione (od unione).</definition>
+    </term>
+    <term>
+		<word>REST</word>
+		<extended>REpresentational State Transfer</extended>
+		<definition>Insieme di principi di architetture di rete, i quali delineano come le risorse sono definite e indirizzate. In particolare prevede che lo stato dell'applicazione e le funzionalità siano divisi in risorse web, che ogni risorsa sia unica e indirizzabile usando sintassi universale per uso nei link ipertestuali e che tutte le risorse siano condivise come interfaccia uniforme per il trasferimento di stato tra client e risorse (attraverso un insieme vincolato di operazioni ben definite e un protocollo stateless).</definition>
+    </term>
+    <term>
+		<word>Sistematico</word>
+		<plural>Sistematici</plural>
+		<definition>Colui che sa fare quella cosa - darsi delle regole -
+		approcciarsi al problema con metodo. Ciò contribuisce all'efficienza e all'efficacia.</definition>
+    </term>
+    <term>
+		<word>Stakeholder</word>
+		<definition>Dall'inglese, portatore d'interesse. È l'insieme di persone coinvolte a vario titolo nel ciclo di vita del software, con influenza sul prodotto.</definition>
+    </term>
+    <term>
+		<word>Processo</word>
+		<plural>Processi</plural>
+		<definition>Detto in inglese \textit{Way of working}. Esso è
+		rappresentabile come un automa a stati, dove ogni stato rappresenta uno
+		stadio del ciclo di vita del processo stesso. È un insieme di attività interconnesse, che trasforma uno o più input in output consumando risorse. [SWEBok 8-1]</definition>
+    </term>
+    <term>
+		<word>Procedura</word>
+		<plural>Procedure</plural>
+		<definition>Insieme ordinato di passi o, alternativamente, controlli del lavoro per eseguire il task.</definition>
+    </term>
+    <term>
+		<word>Sink</word>
+		<plural>Sinks</plural>
+		<definition>Dall'inglese ''Punto di fine'', scarico da cui non è più possibile uscire (ovvero uno stato finale).</definition>
+    </term>
+    <term>
+		<word>Source</word>
+		<plural>Sources</plural>
+		<definition>Dall'inglese, stato che ammette solo archi in uscita.</definition>
+    </term>
+    <term>
+		<word>Ciclo di vita del software</word>
+		<definition>Insieme degli stati che il prodotto assume dal concepimento al ritiro.</definition>
+    </term>
+    <term>
+		<word>Efficacia</word>
+		<definition>Rapporto tra l'output attuale e quello attesso, prodotto dal processo, attività o compito [SWEBok-v3 8.4.1].</definition>
+    </term>
+    <term>
+		<word>Efficienza</word>
+		<definition>Rapporto tra le risorse consumate e quelle attese o desiderate nel compiere un processo, attività o compito. [SWEBok-v3 8.4.1]</definition>
+    </term>
+    <term>
+		<word>Best practice</word>
+		<definition>Prassi (modo di fare) che per esperienza e per studio abbia mostrato di garantire i migliori risultati in circostanze note e specifiche.</definition>
+    </term>
+    <term>
+		<word></word>
+		<plural></plural>
+		<definition></definition>
+    </term>
+    <term>
+		<word>Iterazione</word>
+		<plural>Iterazioni</plural>
+		<definition>Procedere per iterazioni significa operare raffinamenti o
+		rivisitazioni. Essa è associabile a un'operazione, ad un qualcosa
+		fatto prima. Questa operazione è potenzialmente distruttiva e ha
+		caratteristiche potenzialmente dannose, perché non sa garantire come finirà ed è una ripetizione di una cosa già fatta in precedenza.</definition>
+    </term>
+    <term>
+		<word>Incremento</word>
+		<plural>Incrementi</plural>
+		<definition>Avvicinamento alla meta che si compie in due modi:
+		aggiungendo	o togliendo. Procedere per incrementi significa aggiungere ad un impianto base. Un incremento non può mai tornare sui suoi passi, ed è preferibile rispetto all'iterazione, perché pianifica i passi; ciò significa che si arriverà a una fine.</definition>
+    </term>
+    <term>
+		<word>Prototipo</word>
+		<plural>Prototipi</plural>
+		<definition>Bozza, serve per capire se si sta andando nella direzione giusta o no. Esistono due tipi di prototipi: usa e getta, da usare solamente se il beneficio è molto maggiore del costo per produrla, altrimenti, se si presta ad essere la soluzione, anche se può essere una base per una iterazione.</definition>
+    </term>
+    <term>
+		<word>Riuso</word>
+		<plural>Riusi</plural>
+		<definition>Ci sono due tipi di riuso: opportunistico (in stile
+		copia-incolla e a basso costo ma scarso impatto), oppure consapevole e finalizzato ad uno scopo preciso. Fare software è fondalmentalmente riuso. È quindi una delle attività più importanti nell'Ingegneria del Software, e assume una connotazione positiva.</definition>
+    </term>
+    <term>
+		<word>Disciplinato</word>
+		<plural>Disciplinati</plural>
+		<definition>Saper prevedere i costi. Avere una quantità credibile, seguendo le regole. Essere disciplinati significa inoltre rispettare un ordine preciso negli stadi del ciclo di vita del software.</definition>
+    </term>
+    <term>
+		<word>Controllo dei processi</word>
+		<definition>Luogo in cui si pongono delle regole per essere sempre efficaci e disciplinati.</definition>
+    </term>
+    <term>
+		<word>Trigger</word>
+		<definition>Evento che causa il cambiamento di arco nel ciclo di
+		sviluppo del software. Attività in grado di modificare lo stato
+		dell'automa.</definition>
+    </term>
+    <term>
+		<word>Fase</word>
+		<plural>Fasi</plural>
+		<definition>Durata temporale entro uno stato del ciclo di vita o in una transizione tra essi.</definition>
+    </term>
+    <term>
+		<word>Pre condizione</word>
+		<plural>Pre condizioni</plural>
+		<definition>Nel modello a cascata, la pre-condizione è ciò che viene verificato prima di entrare in un certo stato.</definition>
+    </term>
+    <term>
+		<word>Post condizione</word>
+		<plural>Post condizioni</plural>
+		<definition>Nel modello a cascata, è ciò che dev'essere vero dopo lo svolgimento delle attività.</definition>
+    </term>
+    <term>
+		<word>Meta modello</word>
+		<definition>Insieme di regole, vincoli e teorie utilizzate per la modellazione di una classe di problemi con astrazione dal mondo reale.</definition>
+    </term>
+    <term>
+		<word>Caso d'uso</word>
+		<plural>Casi d'uso</plural>
+		<definition>Tecnica per individuare i requisiti funzionali. Queste tecniche devono essere comprensibili anche al committente. Il caso d'uso descrive l'insieme di funzionalità del sistema come percepite dagli utenti.</definition>
+    </term>
+    <term>
+		<word>Scenario</word>
+		<plural>Scenari</plural>
+		<definition>Rappresenta una sequenza di passi che descrivono le interazioni tra gli utenti e il sistema.</definition>
+    </term>
+    <term>
+		<word>Attore</word>
+		<plural>Attori</plural>
+		<definition>Elemento esterno al sistema che interagisce con esso.</definition>
+    </term>
+    <term>
+		<word>Progetto</word>
+		<plural>Progetti</plural>
+		<definition>Insieme di tre elementi importanti: \begin{enumerate}
+\item Sequenza ordinata di compiti da svolgere;
+\item I compiti da svolgere sono pianificati da inizio a fine;
+\item I vincoli di cui si tiene conto quando si pianifica nascono dalla disponibilità di tempo e di strumenti per il progetto.
+\end{enumerate}</definition>
+    </term>
+    <term>
+		<word>Rischio</word>
+		<plural>Rischi</plural>
+		<definition>Evento potenzialemente dannoso che potrebbe verificarsi in corso d'opera.</definition>
+    </term>
+    <term>
+		<word>Slack</word>
+		<definition>Margine tra inizio e fine di un'attività.</definition>
+    </term>
+    <term>
+		<word>Processo primario</word>
+		<definition>I processi primari includono processi sofware per: \begin{itemize}
+\item Sviluppo;
+\item Operazioni o funzioni;
+\item Mantenimento del software;
+\end{itemize}
+[SWEBok-v3 8-2.1.3]</definition>
+    </term>
+    <term>
+		<word>Processo di supporto</word>
+		<definition>I processi di supporto sono applicati discontinuamente o continuamente durante il ciclo di vita del software, a supporto dei processi primari; questi includono:\begin{itemize}
+\item Gestione configurazione;
+\item Controllo della qualit\`a;
+\item Verifica e validazione.
+\end{itemize}
+[SWEBok-v3 8-2.1.3]</definition>
+    </term>
+    <term>
+		<word>Processo organizzativo</word>
+		<definition>I processi organizzativi provvedono al supporto all'Ingegneria del Software. Includono: \begin{itemize}
+\item Formazione;
+\item Analisi di misura del processo;
+\item Gestione dell'infrastruttura;
+\item Portfolio e riuso;
+\item Organizzazione del miglioramento dei processi;
+\item Gestione del modello del ciclo di vita del software.
+\end{itemize}
+[SWEBok-v3 8-2.1.3]</definition>
+    </term>
+    <term>
+		<word>SDLC</word>
+		<extended>\textbf{S}oftware \textbf{D}evelopment \textbf{L}ife \textbf{C}ycle</extended>
+		<definition>Un ciclo di vita dello sviluppo software include i processi usati per specificare e trasformare requisiti software in un prodotto software finito. [SWEBok-v3 8-2]</definition>
+    </term>
+    <term>
+		<word>SPLC</word>
+		<extended>\textbf{S}oftware \textbf{P}roduct \textbf{L}ife \textbf{C}ycle</extended>
+		<definition>Un ciclo di vita del prodotto software include un SDLC oltre ad altri processi software addizionali che provvedono a: \begin{itemize}
+\item Distribuzione;
+\item Mantenimento;
+\item Supporto;
+\item Evoluzione;
+\item Ritiro.
+\end{itemize}
+e tutti gli altri processi compresi tra l'inizio ed il ritiro, includendo
+processi di gestione per il controllo della configurazione e della qualità applicati durante il ciclo di vita del prodotto software. [SWEBok-v3 8-2]</definition>
+    </term>
+    <term>
+		<word>Cammino critico</word>
+		<definition>Sequenza di attività-progetto che ha lo slack più piccolo.</definition>
+    </term>
+    <term>
+		<word>Configuration</word>
+		<definition>Insieme delle funzionalità e delle caratteristiche di
+		hardware o software così come indicate nella documentazione o raggiunte in un prodotto. [SWEBok 6-6]</definition>
+    </term>
+    <term>
+		<word>Configuration item</word>
+		<definition>Qualsiasi cosa associata ad un progetto software
+		(progettazione, codice, dati di test, documentazione) che sia stato	messo sotto un controllo di configurazione. Spesso un configuration item ha diverse versioni, e ha un nome univoco. [Software Engineering, I. Sommerville]</definition>
+    </term>
+    <term>
+		<word>Software configuration item</word>
+		<definition>Entità software che è stata stabilita come configuration item.[SWEBok 6-6]</definition>
+    </term>
+    <term>
+		<word>SCM</word>
+		<extended>\textbf{S}oftware \textbf{C}onfiguration \textbf{M}anagement</extended>
+		<definition>Processo di supporto al ciclo di vita del software che migliora la gestione di progetto, le attività di sviluppo e manutenzione, l'attività di garanzia di qualità, così come gli utenti e i clienti del prodotto finale.[SWEBok 6-1]</definition>
+    </term>
+    <term>
+		<word>Milestone</word>
+		<definition>Le milestone servono per fissare dei punti di avanzamento significativi rispetto agli obiettivi stabiliti e al tempo a disposizione. Un progettista assegna milestone che hanno una distanza tale per cui arrivarci significa raggiungere un punto importante: infatti, ogni milestone corrisponde ad una specifica configurazione del sistema. Ogni milestone ha un proprio nome se associata e una configurazione detta \textit{baseline}.</definition>
+    </term>
+    <term>
+		<word>Baseline</word>
+		<definition>Versione approvata di un configuration item che è stata	formalmente progettata e definita in un momento specifico del ciclo di vita del configuration item. [SWEBok 6-7]</definition>
+    </term>
+    <term>
+		<word>Versione</word>
+		<plural>Versioni</plural>
+		<definition>Istanza di un configuration item che differisce, in
+		qualche modo, dalle altre istanze di quell'item. Le versioni hanno
+		sempre un identificatore unico, che spesso è composto dal nome del
+		configuration item più un numero di versione. [Software Engineering, I. Sommerville]</definition>
+    </term>
+    <term>
+		<word>Controllo di configurazione</word>
+		<definition>Processo che garantisce che le versioni di un sistema e	componenti siano registrati e mantenuti in modo da poter gestire i cambiamenti e poter identificare e memorizzare tutte le versioni dei componenti durante il tempo di vita del sistema. [Software Engineering, I. Sommerville]</definition>
+    </term>
+    <term>
+		<word>Codeline</word>
+		<definition>Insieme di versioni di un componente software e dei
+		configuration item dai quali dipende. In altre parole è una sequenza di	versioni di codice sorgente nella quale le versioni successive derivano	dalle precedenti. [Software Engineering, I. Sommerville]</definition>
+    </term>
+    <term>
+		<word>Mainline</word>
+		<definition>Sequenza di baseline che rappresenta le differenti versioni di un sistema. [Software Engineering, I. Sommerville]</definition>
+    </term>
+    <term>
+		<word>Release</word>
+		<definition>Versione di un sistema rilasciata ai consumatori. [Software Engineering, I. Sommerville]</definition>
+    </term>
+    <term>
+		<word>Workspace</word>
+		<definition>Area di lavoro privata dove il software può essere
+		modificato senza influenze da parte degli altri sviluppatori che stanno modificando lo stesso software. [Software Engineering, I. Sommerville]</definition>
+    </term>
+    <term>
+		<word>Branching</word>
+		<definition>Creazione di una nuova codeline a partire da una esistente. Le due codeline possono essere sviluppate in modo indipendente. [Software Engineering, I. Sommerville]</definition>
+    </term>
+    <term>
+		<word>Merging</word>
+		<definition>Creazione di una nuova versione di un componente ottenuta unendo versioni separate in codeline differenti. Queste codeline possono essere state create da una precedente ramificazione (branch). [Software Engineering, I. Sommerville]</definition>
+    </term>
+    <term>
+		<word>System building</word>
+		<definition>Creazione di una nuova versione eseguibile del sistema attraverso la compilazione e il \textit{linking} di versioni appropriate dei componenti e delle librerie che compongono il sistema. [Software Engineering, I. Sommerville]</definition>
+    </term>
+    <term>
+		<word>Stima qualitativa</word>
+		<definition>Stima basata sul giudizio di esperti. [SWEBok - 8.3.2]</definition>
+    </term>
+    <term>
+		<word>Stima quantitativa</word>
+		<definition>Valutazione della stima assegnata attraverso un punteggio sulla	base delle analisi di risultati che indicano il raggiungimento dell'obiettivo e l'esito di un processo definito. [SWEBok - 8.3.2]</definition> 
+    </term>
+    <term>
+		<word>Classificazione a fasi</word>
+		<definition>La classifcazione di un processo software è stabilita
+		assegnando la stessa valutazione di maturità a tutti i processi all'interno di un specifico livello. [SWEBok - 8.3.4]</definition>
+    </term>
+    <term>
+		<word>Classificazione continua</word>
+		<definition>La classificazione avviene assegnando una valutazione ad ogni processo d'interesse. [SWEBok - 8.3.4]</definition>
+    </term>
+    <term>
+		<word>Produttivita</word>
+		<definition>Rapporto tra l'output prodotto e le risorse consumate [SWEBok-v3 8.4.1], ovvero \[\frac{efficacia}{efficienza}\]</definition>
+    </term>
+    <term>
+		<word>Tracciamento</word>
+		<definition>Procedimento tramite il quale per ogni baseline si sa ciò che si è fatto e perché; inoltre  si conosce la qualità del lavoro svolto.</definition>
+    </term>
+    <term>
+		<word>Framework</word>
+		<definition>Insieme di regole che costruiscono una soluzione coerente.</definition>
+    </term>
+    <term>
+		<word>JavaScript</word>
+		<definition>Linguaggio di scripting usato prevalentemente nella programmazione web lato client.</definition>
+    </term>
+    <term>
+		<word>MongoDB</word>
+		<definition>DBMS (\textbf{D}ata \textbf{B}ase \textbf{M}anagement
+		\textbf{S}ystem) di tipo NoSQL (\textbf{N}t \textbf{O}nly \textbf{SQL}) tra i più diffusi.</definition>
+    </term>
+    <term>
+		<word>NoSQL</word>
+		<extended>Not Only SQL</extended>
+		<definition>Nome di un tipo di DBMS che non prevede soltanto l'utilizzo
+		del modello relazionale utilizzato dai sistemi classici di tipo SQL.</definition>
+    </term>
+    <term>
+		<word>Nodejs</word>
+		<definition>Framework per la creazione di applicazioni distribuite. Utilizza JavaScript come linguaggio di scripting e gestisce le attese I/O in modo asincrono.</definition>
+    </term>
+    <term>
+		<word>Angularjs</word>
+		<definition>Framework open-source per lo sviluppo di applicazioni web. Fornisce una piattaforma per l'implementazione del pattern MVC (Model-View-Controller) lato client.</definition>
+    </term>
+    <term>
+		<word>Back end</word>
+		<definition>Termine inglese che indica la parte di un sistema software che si occupa della memorizzazione e del recupero dei dati.</definition>
+    </term>
+    <term>
+		<word>DSL</word>
+		<extended>Domain Specific Language</extended>
+		<definition>Linguaggio per computer specializzato per uno specifico dominio di applicazione.</definition>
+    </term>
+    <term>
+		<word>Reactjs</word>
+		<definition>React è una libreria JavaScript per la creazione di interfacce utente realizzata da Facebook. Tale libreria ha lo scopo di implementare la parte visiva dei dati nel pattern Model-View-Controller. I suoi punti di forza sono la semplicità del suo utilizzo e la modularità dei suoi componenti.</definition>
+    </term>
+    <term>
+		<word></word>
+		<plural></plural>
+		<definition></definition>
+    </term>
+    <term>
+		<word>Qualità</word>
+		<definition>Insieme di caratteristiche di un'entità che ne determinano la capacità di soddisfare esigenze espresse o implicite.</definition>
+    </term>
+    <term>
+		<word>Team</word>
+		<definition>Insieme di persone.</definition>
+    </term>
+    <term>
+		<word>Verifica</word>
+		<plural>Verifiche</plural>
+		<definition>Attività volta alla ricerca di consistenza, correttezza e completezza.</definition>
+    </term>
+    <term>
+		<word>Validazione</word>
+		<plural>Validazioni</plural>
+		<definition>Controllo effettuato sul software, per controllare se tutti i requisiti previsti sono stati coperti.</definition>
+    </term>
+    <term>
+		<word>Codice sorgente</word>
+		<definition>Testo di un programma scritto in un linguaggio di programmazione da parte di un programmatore in fase di programmazione.</definition>
+    </term>
+    <term>
+		<word>Programmatore</word>
+		<plural>Programmatori</plural>
+		<definition>Persona che codifica un algoritmo in uno specifico linguaggio di programmazione.</definition>
+    </term>
+    <term>
+		<word>Programmazione</word>
+		<definition>Insieme delle attività e tecniche che una o più persone specializzate, i programmatori, svolgono per creare un software scrivendo il relativo codice sorgente in un certo linguaggio di programmazione.</definition>
+    </term>
+    <term>
+		<word>Linguaggio di programmazione</word>
+		<definition>Insieme di regole usato per scrivere il codice sorgente di un software.</definition>
+    </term>
+    <term>
+		<word>By correction</word>
+		<definition>Ottenere la correttezza di un software procedendo per correzioni, ovvero applicando un metodo iterativo. Si tratta di un metodo errato in quanto fa perdere molto tempo e non garantisce a priori la correttezza finale.</definition>
+    </term>
+    <term>
+		<word>Funzione aziendale</word>
+		<definition>Insieme di attività svolte all'interno dell'azienda.</definition>
+    </term>
+    <term>
+		<word>Committente</word>
+		<plural>Committenti</plural>
+		<definition>Figura che commissiona un lavoro.</definition>
+    </term>
+    <term>
+		<word>MaaS</word>
+		<extended>MongoDB as an admin Service.</extended>
+		<definition>Prodotto sviluppato dal team.</definition>
+    </term>
+    <term>
+		<word>MaaP</word>
+		<extended>Mongodb as an admin Platform</extended>
+		<definition>Prodotto sul quale si basa MaaS.</definition>
+    </term>
+    <term>
+		<word>Anomalia</word>
+		<plural>Anomalie</plural>
+		<definition>Presenza di elementi non riconducibili al modello prototipo di una classificazione o al normale svolgimento di determinate funzioni.</definition>
+    </term>
+    <term>
+		<word>Overhead</word>
+		<definition>Risorse accessorie, richieste in sovrappiù rispetto a quelle strettamente necessarie per ottenere un determinato scopo in seguito all'introduzione di un metodo o di un processo più evoluto o più generale.</definition>
+    </term>
+    <term>
+		<word>Responsività</word>
+		<definition>Velocità di risposta.</definition>
+    </term>
+    <term>
+		<word>Proattivo</word>
+		<definition>Chi opera con il supporto di metodologie e strumenti utili a percepire anticipatamente i problemi, le tendenze o i cambiamenti futuri, al fine di pianificare le azioni opportune in tempo.</definition>
+    </term>
+    <term>
+		<word>Tool</word>
+		<plural>Tools</plural>
+		<definition>Applicazione che svolge un determinato compito di utilità.</definition>
+    </term>
+    <term>
+		<word>SPICE</word>
+		<extended>Software Process Improvement and Capability Determination</extended>
+		<definition>Insieme di documenti di standard tecnici che fornisce informazioni generali sui concetti di valutazione dei processi e dei suoi usi nei due contesti di miglioramento dei processi e valutazione della maturità dei processi.</definition>
+    </term>
+    <term>
+		<word>PDCA</word>
+		<extended>Plan Do Check Act</extended>
+		<definition>Metodo iterativo a quattro stadi usato per il controllo e il continuo miglioramento dei processi e dei prodotti.</definition>
+    </term>
+    <term>
+		<word>Gulpease</word>
+		<definition>Indice di leggibilità di un testo tarato sulla lingua italiana. Rispetto ad altri ha il vantaggio di utilizzare la lunghezza delle parole in lettere anziché in sillabe, semplificandone il calcolo automatico.</definition>
+    </term>
+    <term>
+		<word>Consuntivo</word>
+		<plural>Consuntivi</plural>
+		<definition>Rendiconto  dei risultati di un dato periodo di attività.</definition>
+    </term>
+    <term>
+		<word>KLOC</word>
+		<extended>Kilo Lines Of Code</extended>
+		<definition>Unità di misura utilizzata per esprimere la dimensione di un prodotto software in base alle migliaia di linee di codice che contiene.</definition>
+    </term>
+    <term>
+		<word>FP</word>
+		<extended>Function Point</extended>
+		<definition>Unità di misura utilizzata per esprimere la dimensione delle funzionalità fornite da un prodotto software.</definition>
+    </term>
+    <term>
+		<word>Package</word>
+		<plural>Packages</plural>
+		<definition>In alcuni linguaggi orientati agli oggetti, tra cui Java, è un meccanismo che permette di organizzare un insieme di classi tra loro correlate che concorrono allo stesso fine.</definition>
+    </term>
+    <term>
+		<word>Bug</word>
+		<plural>Bugs</plural>
+		<definition>Errore nel codice di un software.</definition>
+    </term>
+    <term>
+		<word>Pollution</word>
+		<definition>Termine che indica l'insieme di tutti i file che non devono entrare nel repository.</definition>
+    </term>
+    <term>
+		<word>Repository</word>
+		<definition>Ambiente di un sistema informativo, in cui vengono gestiti i metadati, attraverso tabelle relazionali.</definition>
+    </term>
+    <term>
+		<word>AST</word>
+		<extended>Abstract Syntax Tree</extended>
+		<definition>Rappresentazione ad albero della struttura sintattica astratta del codice sorgente. Ogni nodo dell'albero denota un costrutto nel codice.</definition>
+    </term>
+    <term>
+		<word>Linguaggio di markup</word>
+		<definition>Insieme di regole che descrivono meccanismi di rappresentazione del testo. Fornisce la possibilità di formattare un testo per mezzo di marcatori, cioè espressioni codificate fornite dalle convenzioni del linguaggio.</definition>
+    </term>
+    <term>
+		<word>PNG</word>
+		<extended>Portable Network Graphics</extended>
+		<definition>Formato di file per la memorizzazione di immagini.</definition>
+    </term>
+    <term>
+		<word>Dashboard</word>
+		<definition>Pagina web rappresentante lo stato corrente di
+		un'applicazione con interfaccia semplice e immediata.</definition>
+    </term>
+    <term>
+		<word>Owner</word>
+		<definition>Proprietario di una Company.</definition>
+    </term>
+    <term>
+		<word>Company</word>
+		<definition>Termine derivante dal capitolato per indicare un'azienda.</definition>
+    </term>
+    <term>
+		<word>Cell</word>
+		<definition>Elemento dell'applicazione citato nel capitolato. Esso
+		raffigura un singolo valore estratto da una query nel database della Company.</definition>
+    </term>
+    <term>
+		<word>Document</word>
+		<definition>Elemento dell'applicazione citato nel capitolato. Corrisponde ad una collection show di una Company.</definition>
+    </term>
+    <term>
+		<word>CSV</word>
+		<extended>Comma Separated Values</extended>
+		<definition>Formato di file di testo utilizzato nell'esportazione di dati tabellari.</definition>
+    </term>
+    <term>
+		<word>Software as a service</word>
+		<definition>È un modello di distribuzione del software applicativo
+		dove un produttore di software sviluppa, opera (direttamente o tramite terze parti) e gestisce un'applicazione web che mette a disposizione dei propri clienti via Internet.</definition>
+    </term>
+    <term>
+		<word>Task</word>
+		<definition>Compito assegnato ad un singolo individuo.</definition>
+    </term>
+    <term>
+		<word>Terminale</word>
+		<plural>Terminali</plural>
+		<definition>Dispositivo hardware elettronico o elettromeccanico che viene usato per inserire dati in input ad un computer o di un sistema di elaborazione e riceverli in output per la loro visualizzazione.</definition>
+    </term>
+    <term>
+		<word>DSL Element</word>
+		<definition>Rappresentazione grafica sulla sessione dell'editor dell'applicazione MaaS.</definition>
+    </term>
+    <term>
+		<word>Collection Element</word>
+		<definition>Rappresentazione grafica nell'editor di una struttura Collection definita nel DSL.</definition>
+    </term>
+    <term>
+		<word>Function Element</word>
+		<definition>Rappresentazione grafica nell'editor di una funzione JavaScript.</definition>
+    </term>
+    <term>
+		<word>Index Element</word>
+		<definition>Rappresentazione grafica nell'editor della struttura Index definita nel DSL.</definition>
+    </term>
+    <term>
+		<word>Column Element</word>
+		<definition>Rappresentazione grafica nell'editor della struttura Column definita nel DSL.</definition>
+    </term>
+    <term>
+		<word>Row Element</word>
+		<definition>Rappresentazione grafica nell'editor della struttura Row definita nel DSL.</definition>
+    </term>
+    <term>
+		<word>Document Element</word>
+		<definition>Rappresentazione grafica nell'editor della struttura Document definita nel DSL.</definition>
+    </term>
+    <term>
+		<word>Input Element</word>
+		<definition>Rappresentazione grafica nell'editor della struttura Input definita nel DSL.</definition>
+    </term>
+    <term>
+		<word>Cell Element</word>
+		<definition>Rapprensetazione grafica nell'editor della struttura Cell definita nel DSL.</definition>
+    </term>
+    <term>
+		<word>Dashboard Element</word>
+		<definition>Rappresentazione grafica nell'editor della struttura Dashboard definita nel DSL.</definition>
+    </term>
+    <term>
+		<word>DashRow Element</word>
+		<definition>Rappresentazione grafica nell'editor della struttura DashRow definita nel DSL.</definition>
+    </term>
+    <term>
+		<word>Action Element</word>
+		<definition>Rappresentazione grafica nell'edito della struttura Action Element definita nel DSL.</definition>
+    </term>
+    <term>
+		<word>Deployment</word>
+		<definition>Insieme di attività che rende un software pronto per essere utilizzato.</definition>
+    </term>
+    <term>
+		<word>Heroku</word>
+		<definition>Platform as a Service su cloud in grado di supportare diversi linguaggi di programmazione.</definition>
+    </term>
+    <term>
+		<word>Collection</word>
+		<definition>Elemento singolo del DSL, specifica 5 concetti principali:
+\begin{itemize}
+\item Identificare la specifica collezzione;
+\item Il sotto insieme di documenti che l'utente può vedere;
+\item Il sotto insieme di attributi che l'utente può vedere quando visualizza la lista dei documenti;
+\item Il sotto insieme di attributi che l'utente può vedere quando visualizza uno specifico documento;
+\item Le Action applicate all'intera collezione.
+\end{itemize}</definition>
+    </term>
+    <term>
+		<word>Index</word>
+		<definition>Attributo della Collection che specifica come la index-page	sarà configurata.</definition>
+    </term>
+    <term>
+		<word>Column</word>
+		<definition>Attributo di Index che specifica la configurazione di una colonna della tabella nella index-page.</definition>
+    </term>
+    <term>
+		<word>Row</word>
+		<definition>Attributo di Document che specifica la configurazione di una riga della tabella nella show-page.</definition>
+    </term>
+    <term>
+		<word>Cell</word>
+		<definition>Elemento singolo del DSL che rappresenta un singolo elemento.</definition>
+    </term>
+    <term>
+		<word>Dashrow</word>
+		<definition>Attributo della Dashboard, specifica la configurazione di una riga del layout a griglia nella dashboard-page.</definition>
+    </term>
+    <term>
+		<word>Action</word>
+		<definition>Elemento singolo del DSL specifica quale azione, lato server, l'utente può compiere su una Collection o un Document.</definition>
+    </term>
+	<term>
+		<word>JSON</word>
+		<extended>JavaScript Object Notation</extended>
+		<definition>Formato adatto all'interscambio di dati fra applicazioni client-server. La semplicità di JSON ne ha decretato un rapido utilizzo specialmente nella programmazione in AJAX (Asynchronous JavaScript and XML). Il suo uso tramite JavaScript è particolarmente semplice e questo fatto lo ha reso velocemente molto popolare.</definition>
+	</term>
+	<term>
+		<word>CSV</word>
+		<extended>Comma-separated values</extended>
+		<definition>Formato di file basato su file di testo utilizzato per l'importazione ed esportazione (ad esempio da fogli elettronici o database) di una tabella di dati. Non esiste uno standard formale che lo definisca, ma solo alcune prassi più o meno consolidate.</definition>
+	</term>
+	<term>
+		<word>XML</word>
+		<extended>eXtensible Markup Language</extended>
+		<definition>Metalinguaggio per la definizione di linguaggi di markup, ovvero un linguaggio marcatore basato su un meccanismo sintattico che consente di definire e controllare il significato degli elementi contenuti in un documento o in un testo.</definition>
+	</term>
+	<term>
+		<word>URI</word>
+		<extended>Uniform Resource Identifier</extended>
+		<definition>Stringa che identifica univocamente una risorsa generica che può essere un indirizzo Web, un documento, un'immagine, un file, un servizio, un indirizzo di posta elettronica, ecc.</definition>
+	</term>
+	<term>
+		<word>CSS</word>
+		<extended>Cascading Style Sheets</extended>
+		<definition>Linguaggio usato per definire la formattazione di documenti HTML, XHTML e XML ad esempio i siti web e relative pagine web. Le regole per comporre il CSS sono contenute in un insieme di direttive (Recommendations) emanate a partire dal 1996 dal W3C. L'introduzione del CSS si è resa necessaria per separare i contenuti delle pagine HTML dalla loro formattazione e permettere una programmazione più chiara e facile da utilizzare, sia per gli autori delle pagine stesse sia per gli utenti, garantendo contemporaneamente anche il riutilizzo di codice ed una sua più facile manutenzione.</definition>
+	</term>
+	<term>
+		<word>W3C</word>
+		<extended>World Wide Web Consortium</extended>
+		<definition>Organizzazione non governativa internazionale che ha come scopo quello di sviluppare tutte le potenzialità del World Wide Web. Al fine di riuscire nel proprio intento, la principale attività svolta dal W3C consiste nello stabilire standard tecnici per il World Wide Web inerenti sia i linguaggi di markup che i protocolli di comunicazione.</definition>
+	</term>
+	<term>
+		<word>HTML</word>
+		<extended>HyperText Markup Language</extended>
+		<definition>Linguaggio di markup solitamente usato per la formattazione e impaginazione di documenti ipertestuali disponibili nel World Wide Web sotto forma di pagine web.</definition>
+	</term>
+	<term>
+		<word>API</word>
+		<extended>Application Programming Interface</extended>
+		<definition>nsieme di procedure disponibili al programmatore, di solito raggruppate a formare un set di strumenti specifici per l'espletamento di un determinato compito all'interno di un certo programma.</definition>
+	</term>
+	<term>
+		<word>SQL</word>
+		<extended>Structured Query Language</extended>
+		<definition>Linguaggio standardizzato per database basati sul modello relazionale progettato per:
+		\begin{itemize}
+		\item creare e modificare schemi di database (DDL - Data Definition Language);
+		\item inserire, modificare e gestire dati memorizzati (DML - Data Manipulation Language);
+		\item interrogare i dati memorizzati (DQL - Data Query Language);
+		\item creare e gestire strumenti di controllo ed accesso ai dati (DCL - Data Control Language).
+		\end{itemize}</definition>
+	</term>
+    <term>
+		<word>SMTP</word>
+		<extended>Simple Mail Transfer Protocol</extended>
+		<definition>Protocollo standard per la trasmissione via internet di e-mail.</definition>
+	</term>
+	<term>
+		<word>UML</word>
+		<extended>Unified Modeling Language</extended>
+		<definition>Linguaggio di modellizzazione e specifica basato sul paradigma orientato agli oggetti.</definition>
+	</term>
+	<term>
+		<word>ECMA</word>
+		<extended>European Computer Manufacturers Association</extended>
+		<definition>Associazione fondata nel 1961 e dedicata alla standardizzazione nel settore informatico e dei sistemi di comunicazione. Dal 1994 viene chiamata Ecma International. Si occupa di molti standard, tra i quali:
+		\begin{itemize}
+		\item specifiche di JSON;
+		\item specifiche linguaggio ECMAScript;
+		\item specifiche lingiaggi C# e C++.
+		\end{itemize}</definition>
+	</term>
+	<term>
+		<word>HTTP</word>
+		<extended>HyperText Transfer Protocol</extended>
+		<definition>Protocollo a livello applicativo usato come principale sistema per la trasmissione d'informazioni sul web ovvero in un'architettura tipica client-server. Le specifiche del protocollo sono gestite dal World Wide Web Consortium (W3C).</definition>
+	</term>
+	<term>
+		<word>XHTML</word>
+		<extended>eXtensible HyperText Markup Language</extended>
+		<definition>Linguaggio di marcatura che associa alcune proprietà dell'XML con le caratteristiche dell'HTML: un file XHTML è un pagina HTML scritta in conformità con lo standard XML.</definition>
+	</term>
+	<term>
+		<word>Diagramma delle classi</word>
+		<plural>Diagrammi delle classi</plural>
+		<definition>Consentono di descrivere tipi di entità, con le loro caratteristiche e le eventuali relazioni fra questi tipi. Gli strumenti concettuali utilizzati sono il concetto di classe del paradigma object-oriented.</definition>
+	</term>
+    <term>
+		<word>Diagramma di attività</word>
+		<plural>Diagrammi di attività</plural>
+		<definition>Sono usati per descrivere il comportamento dinamico di un sistema, e possono essere usati per modellare i workflow oppure per
+descrivere i dettagli di un metodo complesso.</definition>
+    </term>
+	<term>
+		<word>Diagramma di sequenza</word>
+		<plural>Diagrammi di sequenza</plural>
+		<definition>Diagramma previsto dall'UML utilizzato per descrivere uno scenario. Uno scenario è una determinata sequenza di azioni in cui tutte le scelte sono state già effettuate; in pratica nel diagramma non compaiono scelte, né flussi alternativi.</definition>
+	</term>
+	<term>
+		<word>Diagramma di deployment</word>
+		<plural>Diagrammi di deployment</plural>
+		<definition>Diagramma di tipo statico previsto dall'UML per descrivere un sistema in termini di risorse hardware, dette nodi, e di relazioni fra di esse.</definition>
+	</term>
+    <term>
+		<word>Diagramma dei package</word>
+		<plural>Diagrammi dei package</plural>
+		<definition>Documenta le dipendenze fra le classi.</definition>
+    </term>
+	<term>
+		<word>Unicode</word>
+		<definition>Sistema di codifica che assegna un numero univoco ad ogni carattere usato per la scrittura di testi, in maniera indipendente dalla lingua, dalla piattaforma informatica e dal programma utilizzato. È stato compilato e viene aggiornato e pubblicizzato dall'Unicode Consortium, un consorzio internazionale di aziende interessate alla interoperabilità nel trattamento informatico dei testi in lingue diverse.</definition>
+    </term>
+	<term>
+		<word>Top-down</word>
+		<definition>Metodo di progettazione nel quale si formula inizialmente una visione generale del sistema ovvero se ne descrive la finalità principale senza scendere nel dettaglio delle sue parti. Ogni parte del sistema è successivamente rifinita aggiungendo maggiori dettagli della progettazione. Ogni nuova parte così ottenuta può quindi essere nuovamente rifinita, specificando ulteriori dettagli, finché la specifica completa è sufficientemente dettagliata da validare il modello.</definition>
+    </term>
+	<term>
+		<word>Design Pattern</word>
+		<definition>Concetto che può essere definito come &quot;una soluzione progettuale generale ad un problema ricorrente&quot;. Si tratta di una descrizione o modello logico da applicare per la risoluzione di un problema che può presentarsi in diverse situazioni durante le fasi di progettazione e sviluppo del software, ancor prima della definizione dell'algoritmo risolutivo.</definition>
+    </term>
+    <term>
+		<word>Index Page</word>
+		<definition>Pagina che visualizza una Collection.</definition>
+    </term>
+    <term>
+		<word>Show</word>
+		<definition>Struttura che definisce le proprietà di un Document Element.</definition>
+    </term>
+	<term>
+		<word>DSL Structure</word>
+		<definition>Definizione in formato JSON dell'insieme dei DSL Element presenti in un dato momento nell'editor, comprendendo lo stato del modello e lo stato della vista.</definition>
+    </term>
+	<term>
+		<word>Middleware</word>
+		<plural>Middlewares</plural>
+		<definition>Funzione o piccolo applicativo che funge tra intermediario tra due componenti software.</definition>
+    </term>
+    <term>
+		<word>Web server</word>
+		<definition>Applicazione software in grado di gestire richieste HTTP o HTTPS provvenienti dai client.</definition>
+    </term>
+</glossary>
