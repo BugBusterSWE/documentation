@@ -204,8 +204,8 @@ Questa classe contiene la definizione degli endpoint riguardanti gli utenti.
 
 \paragraph*{Relazione con altri \glossaryItem{moduli}}
 \begin{itemize}
-\item Lib::AuthenticationChecker;
-\item Model::UserModel.
+\item Lib::AuthenticationChecker, per il controllo dell'avvenuta autenticazione dell'utente;
+\item Model::UserModel, per il soddisfacimento delle richieste verso il modello di dati degli utenti.
 \end{itemize}
 
 \paragraph{CompanyRouter}
@@ -235,9 +235,9 @@ Questo \glossaryItem{modulo} contiene la definizione delle \glossaryItem{API} ri
 
 \paragraph*{Relazione con altri \glossaryItem{moduli}}
 \begin{itemize}
-\item Lib::AuthenticationChecker, per il controllo dell'avvenuta autenticazione dell'utente
-\item Lib::LevelChecker, per il controllo del ruolo dell'utente autenticato
-\item Model::DatabaseModel, per il soddisfacimento delle richieste verso il modello di dati dei database
+\item Lib::AuthenticationChecker, per il controllo dell'avvenuta autenticazione dell'utente;
+\item Lib::LevelChecker, per il controllo del ruolo dell'utente autenticato;
+\item Model::DatabaseModel, per il soddisfacimento delle richieste verso il modello di dati dei database.
 \end{itemize}
 
 \paragraph{RouterFacade}
@@ -307,7 +307,7 @@ Viene utilizzata come base per DevConfiguration, TestConfiguration e ProdConfigu
 
 \paragraph*{Relazione con altri \glossaryItem{moduli}}
 \begin{itemize}
-\item MaaSServer, per la scelta della configurazione dell'applicazione
+\item MaaSServer, per la scelta della configurazione dell'applicazione.
 \end{itemize}
 
 \subsubsection{Package Lib}
@@ -372,10 +372,10 @@ Classe principale dell'applicazione.
 Viene utilizzata questa classe per inizializzare l'applicazione. Questa classe ha la responsabilità di caricare gli altri \glossaryItem{moduli} del backend correttamente e di inizializzare il webserver che li utilizza.
 \paragraph*{Relazione con altri \glossaryItem{moduli}}
 \begin{itemize}
-\item Config, per la scelta della configurazione dell'applicazione
-\item Router::RouterFacade, per la gestione delle API esposte dal server
-\item BodyParser, per il parsing del corpo della richiesta
-\item ExpressJS, per la creazione ed esposizione delle API REST
+\item Config, per la scelta della configurazione dell'applicazione;
+\item Router::RouterFacade, per la gestione delle API esposte dal server;
+\item BodyParser, per il parsing del corpo della richiesta;
+\item ExpressJS, per la creazione ed esposizione delle API REST.
 \end{itemize}
 
 \subsection{API REST}
@@ -501,7 +501,7 @@ Di seguito sono descritte le \glossaryItem{API} \glossaryItem{REST} esposte dal 
 \textbf{Tipologia:} PUT \\
 \textbf{API:} /api/companies/:company\_id/users/:user\_id/credentials \\
 \textbf{Livello di accesso minimo:} GUEST \\
-\textbf{Descrizione:} Necessita di una richiesta con \textit{body} contenente le nuove credenziali di accesso dell'utente, in particolare indirizzo email e nuova password. Ovviamente un utente ha il permesso di cambiare solo le proprie credenziali, ed essendo l'indirizzo email unico prima dell'aggiornamento viene fatto un controllo per assicurare il rispetto di questo vincolo. Nel caso in cui l'indirizzo emailsia già esistente, viene restituito un errore. \\
+\textbf{Descrizione:} Necessita di una richiesta con \textit{body} contenente le nuove credenziali di accesso dell'utente, in particolare indirizzo email e nuova password. Ovviamente un utente ha il permesso di cambiare solo le proprie credenziali, ed essendo l'indirizzo email unico prima dell'aggiornamento viene fatto un controllo per assicurare il rispetto di questo vincolo. Nel caso in cui l'indirizzo email sia già esistente, viene restituito un errore. \\
 \textbf{Scenario:} 
 \begin{figure}[H]
 \centering
@@ -528,7 +528,7 @@ Di seguito sono descritte le \glossaryItem{API} \glossaryItem{REST} esposte dal 
 \textbf{Tipologia:} GET \\
 \textbf{API:} /api/companies/:company\_id/ \\
 \textbf{Livello di accesso minimo:} GUEST \\
-\textbf{Descrizione:} Ritorna le informazioni generali della \glossaryItem{Company} corrispondente all'ID :company\_id. Se la Company non esiste viene ritornato un messagio di errore, altrimenti vengono ritornati il nome della Company e l'indirizzo email del suo Owner. \\
+\textbf{Descrizione:} Ritorna le informazioni generali della \glossaryItem{Company} corrispondente all'ID :company\_id. Se la Company non esiste viene ritornato un messaggio di errore, altrimenti vengono ritornati il nome della Company e l'indirizzo email del suo Owner. \\
 \textbf{Scenario:} 
 \begin{figure}[H]
 \centering
@@ -541,7 +541,7 @@ Di seguito sono descritte le \glossaryItem{API} \glossaryItem{REST} esposte dal 
 \textbf{Tipologia:} PUT \\
 \textbf{API:} /api/companies/:company\_id/ \\
 \textbf{Livello di accesso minimo:} ADMIN \\
-\textbf{Descrizione:} Necessita di una richiesta con \textit{body} contenente le modifiche da apportare ai dati della \glossaryItem{Company} corrispondente all'ID :company\_id. Se la Company non esiste viene ritornato un messagio di errore. \\
+\textbf{Descrizione:} Necessita di una richiesta con \textit{body} contenente le modifiche da apportare ai dati della \glossaryItem{Company} corrispondente all'ID :company\_id. Se la Company non esiste viene ritornato un messaggio di errore. \\
 \textbf{Scenario:} 
 \begin{figure}[H]
 \centering
@@ -554,7 +554,7 @@ Di seguito sono descritte le \glossaryItem{API} \glossaryItem{REST} esposte dal 
 \textbf{Tipologia:} DELETE \\
 \textbf{API:} /api/companies/:company\_id/ \\
 \textbf{Livello di accesso minimo:} OWNER \\
-\textbf{Descrizione:} Rimuove la Company corrispondente all'ID :company\_id. Se la Company non esiste viene ritornato un messagio di errore, altrimenti viene restituita una conferma di cancellazione. La cancellazione della Company comporta anche la cancellazione di tutti gli utenti associati ad essa. \\
+\textbf{Descrizione:} Rimuove la Company corrispondente all'ID :company\_id. Se la Company non esiste viene ritornato un messaggio di errore, altrimenti viene restituita una conferma di cancellazione. La cancellazione della Company comporta anche la cancellazione di tutti gli utenti associati ad essa. \\
 \textbf{Scenario:} 
 \begin{figure}[H]
 \centering
@@ -594,7 +594,7 @@ Di seguito sono descritte le \glossaryItem{API} \glossaryItem{REST} esposte dal 
 \textbf{Tipologia:} POST \\
 \textbf{API:} /api/companies/:company\_id/DSLs \\
 \textbf{Livello di accesso minimo:} MEMBER \\
-\textbf{Descrizione:} Necessita di una richiesta con \textit{body} contenente i dati necessari alla creazione della specifica \glossaryItem{DSL}. La specifica DSL viene validata, in modo da assicurare che non acceda a Collection non accedibili dagli utenti Member e che sia sintatticamente corretta. Se questi controlli vengono superati con successo la specifica DSL viene salvata e associata alla Company, con la restituzione di un messaggio di conferma, altrimenti viene ritornato un messagio di errore. \\
+\textbf{Descrizione:} Necessita di una richiesta con \textit{body} contenente i dati necessari alla creazione della specifica \glossaryItem{DSL}. La specifica DSL viene validata, in modo da assicurare che non acceda a Collection non accedibili dagli utenti Member e che sia sintatticamente corretta. Se questi controlli vengono superati con successo la specifica DSL viene salvata e associata alla Company, con la restituzione di un messaggio di conferma, altrimenti viene ritornato un messaggio di errore. \\
 \textbf{Scenario:} 
 \begin{figure}[H]
 \centering
@@ -607,7 +607,7 @@ Di seguito sono descritte le \glossaryItem{API} \glossaryItem{REST} esposte dal 
 \textbf{Tipologia:} PUT \\
 \textbf{API:} /api/companies/:company\_id/DSLs/:dsl\_id \\
 \textbf{Livello di accesso minimo:} MEMBER \\
-\textbf{Descrizione:} Necessita di una richiesta con body contenente i dati necessari alla modifica della specifica \glossaryItem{DSL} identificata da dsl\_id. Tutti i controlli descritti per la creazione della specifica DSL vengono ripetuti, in modo da assicurare che la modifica non abbia introdotto errori. Anche in questo caso, se i controlli vengono superati con successo la specifica DSL viene salvata, con la restituzione di un messaggio di conferma, altrimenti viene ritornato un messagio di errore. \\
+\textbf{Descrizione:} Necessita di una richiesta con body contenente i dati necessari alla modifica della specifica \glossaryItem{DSL} identificata da dsl\_id. Tutti i controlli descritti per la creazione della specifica DSL vengono ripetuti, in modo da assicurare che la modifica non abbia introdotto errori. Anche in questo caso, se i controlli vengono superati con successo la specifica DSL viene salvata, con la restituzione di un messaggio di conferma, altrimenti viene ritornato un messaggio di errore. \\
 \textbf{Scenario:}
 \begin{figure}[H]
 \centering
@@ -633,7 +633,7 @@ Di seguito sono descritte le \glossaryItem{API} \glossaryItem{REST} esposte dal 
 \textbf{Tipologia:} GET \\
 \textbf{API:} /api/companies/:company\_id/users/:user\_id/dashboard \\
 \textbf{Livello di accesso minimo:} GUEST \\
-\textbf{Descrizione:} Ritorna la \glossaryItem{Dashboard} di un utente definita da una specifica \glossaryItem{DSL}. Ovviamente potrebbe non esistere una specifica DSL che descrive la Dashboard di un utente: in questo caso viene restituita la Dashboard di default contente le specifiche DSL accedibili dall'utente. \\
+\textbf{Descrizione:} Ritorna la \glossaryItem{Dashboard} di un utente definita da una specifica \glossaryItem{DSL}. Ovviamente potrebbe non esistere una specifica DSL che descrive la Dashboard di un utente: in questo caso viene restituita la Dashboard di default contenente le specifiche DSL accedibili dall'utente. \\
 \textbf{Scenario:}  
 \begin{figure}[H]
 \centering
@@ -686,7 +686,7 @@ Di seguito sono descritte le \glossaryItem{API} \glossaryItem{REST} esposte dal 
 \textbf{Tipologia:} POST \\
 \textbf{API:} /api/companies/:company\_id/databases \\
 \textbf{Livello di accesso minimo:} ADMIN \\
-\textbf{Descrizione:} Necessita di una richiesta con \textit{body} contenete i dati relativi alla connessione del nuovo database, in particolare le credenziali dell'utente appositamente creato per la lettura dei dati, il nome del database, l'host e la porta. A seguito della richiesta viene ritornato un messaggio di conferma o di errore, dipendentemente dall'esito. \\
+\textbf{Descrizione:} Necessita di una richiesta con \textit{body} contenente i dati relativi alla connessione del nuovo database, in particolare le credenziali dell'utente appositamente creato per la lettura dei dati, il nome del database, l'host e la porta. A seguito della richiesta viene ritornato un messaggio di conferma o di errore, dipendentemente dall'esito. \\
 \textbf{Scenario:}
 \begin{figure}[H]
 \centering
@@ -699,7 +699,7 @@ Di seguito sono descritte le \glossaryItem{API} \glossaryItem{REST} esposte dal 
 \textbf{Tipologia:} PUT \\
 \textbf{API:} /api/companies/:company\_id/databases/:database\_id \\
 \textbf{Livello di accesso minimo:} ADMIN \\
-\textbf{Descrizione:} Necessita di una richiesta con \textit{body} contenete i dati relativi alla connessione del database da modificare, in particolare le credenziali dell'utente appositamente creato per la lettura dei dati, il nome del database, l'host e la porta. A seguito della richiesta viene ritornato un messaggio di conferma o di errore, dipendentemente dall'esito. A differenza del procedimento di creazione, tuttavia, la richiesta di modifica viene usata anche per aggiungere, o rimuovere, le Collections del database. Le informazioni richieste per una Collection sono il nome e la conferma di accessibilità da parte di utenti Member. \\
+\textbf{Descrizione:} Necessita di una richiesta con \textit{body} contenente i dati relativi alla connessione del database da modificare, in particolare le credenziali dell'utente appositamente creato per la lettura dei dati, il nome del database, l'host e la porta. A seguito della richiesta viene ritornato un messaggio di conferma o di errore, dipendentemente dall'esito. A differenza del procedimento di creazione, tuttavia, la richiesta di modifica viene usata anche per aggiungere, o rimuovere, le Collections del database. Le informazioni richieste per una Collection sono il nome e la conferma di accessibilità da parte di utenti Member. \\
 \textbf{Scenario:}
 \begin{figure}[H]
 \centering
@@ -712,7 +712,7 @@ Di seguito sono descritte le \glossaryItem{API} \glossaryItem{REST} esposte dal 
 \textbf{Tipologia:} DELETE \\
 \textbf{API:} /api/companies/:company\_id/databases/:database\_id \\
 \textbf{Livello di accesso minimo:} ADMIN \\
-\textbf{Descrizione:} Elimina il database selezionato, tutte le specifiche \glossaryItem{DSL} che lo utilizzano e le Collections ad esso collegate. Lesecuzione di questa richiesta comporta un pericoloso effetto domino che può portare a distruggere i dati di una Company. \\
+\textbf{Descrizione:} Elimina il database selezionato, tutte le specifiche \glossaryItem{DSL} che lo utilizzano e le Collections ad esso collegate. L'esecuzione di questa richiesta comporta un pericoloso effetto domino che può portare a distruggere i dati di una Company. \\
 \textbf{Scenario:} 
 \begin{figure}[H]
 \centering
