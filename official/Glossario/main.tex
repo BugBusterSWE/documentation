@@ -3,27 +3,17 @@
 %\input{../../common/style/layout.tex}
 \input{res/local}
 
-
-\usepackage{tracklang}
-\usepackage[toc,nonumberlist,nopostdot]{glossaries}
-
 \title{\textbf{Glossario}}
 \author{BugBusters}
 
-\date{18 Aprile 2016}
-
-\makeglossaries
+\date{23 Maggio 2016}
 
 
 \begin{document}
 
-\include{res/glossary}
-
 \makeFrontPage
 
 \include{res/versions}
-
-\glsaddall %stampa tutto il glossario, necessario?
-\printglossary[title=Glossario,toctitle=Glossario dei termini,style=indexgroup,style=altlistgroup]
+\include{res/glossary}
 
 \end{document}
