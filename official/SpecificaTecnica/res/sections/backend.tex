@@ -109,11 +109,11 @@ Viene utilizzata come base per UserModel, CompanyModel, DSLModel e DatabaseModel
 
 \paragraph*{Relazione con altri \glossaryItem{moduli}}
 \begin{itemize}
-\item Mongoose, per l'interazione con il database MondoDB dell'applicazione MaaS
-\item UserModel, per estensione
-\item CompanyModel, per estensione
-\item DSLModel, per estensione
-\item DatabaseModel, per estensione
+\item Mongoose, per l'interazione con il database MondoDB dell'applicazione MaaS;
+\item UserModel, per estensione;
+\item CompanyModel, per estensione;
+\item DSLModel, per estensione;
+\item DatabaseModel, per estensione.
 \end{itemize}
 
 \subsubsection{UserModel}
@@ -125,10 +125,10 @@ Il modello viene utilizzato sia per la rappresentazione di un utente nell'applic
 
 \paragraph*{Relazioni con altri moduli}
 \begin{itemize}
-\item Mongoose, per l'interazione con il database MondoDB dell'applicazione MaaS
-\item Mongoose-validator, per la validazione degli schemi e dei dati memorizzati
-\item Lib::AuthenticationChecker, per il controllo dell'avvenuta autenticazione dell'utente
-\item Router::UserRouter, per la gestione delle richieste dirette verso il modello degli utenti
+\item Mongoose, per l'interazione con il database MondoDB dell'applicazione MaaS;
+\item Mongoose-validator, per la validazione degli schemi e dei dati memorizzati;
+\item Lib::AuthenticationChecker, per il controllo dell'avvenuta autenticazione dell'utente;
+\item Router::UserRouter, per la gestione delle richieste dirette verso il modello degli utenti.
 \end{itemize}
 
 \subsubsection{CompanyModel}
@@ -140,9 +140,9 @@ Il modello rappresenta una \glossaryItem{Company} nel sistema.
 
 \paragraph*{Relazioni con altri \glossaryItem{moduli}}
 \begin{itemize}
-\item Mongoose, per l'interazione con il database MondoDB dell'applicazione MaaS
-\item Mongoose-validator, per la validazione degli schemi e dei dati memorizzati
-\item Router::CompanyRouter, per la gestione delle richieste dirette verso il modello delle Company
+\item Mongoose, per l'interazione con il database MondoDB dell'applicazione MaaS;
+\item Mongoose-validator, per la validazione degli schemi e dei dati memorizzati;
+\item Router::CompanyRouter, per la gestione delle richieste dirette verso il modello delle Company;
 \end{itemize}
 
 \paragraph{DatabaseModel}
@@ -155,9 +155,9 @@ Il modello rappresenta la connessione ad un database aziendale di una \glossaryI
 
 \paragraph*{Relazioni con altri \glossaryItem{moduli}}
 \begin{itemize}
-\item Mongoose, per l'interazione con il database MondoDB dell'applicazione MaaS
-\item Mongoose-validator, per la validazione degli schemi e dei dati memorizzati
-\item Router::DatabaseRouter, per la gestione delle richieste dirette verso il modello dei database
+\item Mongoose, per l'interazione con il database MondoDB dell'applicazione MaaS;
+\item Mongoose-validator, per la validazione degli schemi e dei dati memorizzati;
+\item Router::DatabaseRouter, per la gestione delle richieste dirette verso il modello dei database.
 \end{itemize}
 
 \paragraph{DSLModel}
@@ -170,10 +170,10 @@ Il modello viene utilizzato per la rappresentazione delle specifiche \glossaryIt
 
 \paragraph*{Relazioni con altri \glossaryItem{moduli}}
 \begin{itemize}
-\item Mongoose, per l'interazione con il database MondoDB dell'applicazione MaaS
-\item Mongoose-validator, per la validazione degli schemi e dei dati memorizzati
-\item Lib::DSLChecker, per il controllo di validità (sintattica e per la verifica dei permessi di accesso alle Collections di un database) della specifica DSL
-\item Router::DSLRouter, per la gestione delle richieste dirette verso il modello delle specifiche DSL
+\item Mongoose, per l'interazione con il database MondoDB dell'applicazione MaaS;
+\item Mongoose-validator, per la validazione degli schemi e dei dati memorizzati;
+\item Lib::DSLChecker, per il controllo di validità (sintattica e per la verifica dei permessi di accesso alle Collections di un database) della specifica DSL;
+\item Router::DSLRouter, per la gestione delle richieste dirette verso il modello delle specifiche DSL.
 \end{itemize}
 
 
@@ -185,11 +185,11 @@ Ciascuna classe inoltre ha il compito di definire i \glossaryItem{middleware} da
 
 \paragraph*{Moduli contenuti}
 \begin{itemize}
-\item UserRouter
-\item CompanyRouter
-\item DSLRouter
-\item DatabaseRouter
-\item RouterFacade
+\item UserRouter;
+\item CompanyRouter;
+\item DSLRouter;
+\item DatabaseRouter;
+\item RouterFacade.
 \end{itemize}
 
 \begin{figure}[H]
@@ -204,8 +204,8 @@ Questa classe contiene la definizione degli endpoint riguardanti gli utenti.
 
 \paragraph*{Relazione con altri \glossaryItem{moduli}}
 \begin{itemize}
-\item Lib::AuthenticationChecker
-\item Model::UserModel
+\item Lib::AuthenticationChecker;
+\item Model::UserModel.
 \end{itemize}
 
 \paragraph{CompanyRouter}
@@ -214,8 +214,8 @@ Questo \glossaryItem{modulo} contiene la definizione degli endpoint riguardanti 
 
 \paragraph*{Relazione con altri \glossaryItem{moduli}}
 \begin{itemize}
-\item Lib::AuthenticationChecker, per il controllo dell'avvenuta autenticazione dell'utente
-\item Model::CompanyModel, per il soddisfacimento delle richieste verso il modello di dati delle Company
+\item Lib::AuthenticationChecker, per il controllo dell'avvenuta autenticazione dell'utente;
+\item Model::CompanyModel, per il soddisfacimento delle richieste verso il modello di dati delle Company.
 \end{itemize}
 
 \paragraph{DSLRouter}
@@ -224,9 +224,9 @@ Questo \glossaryItem{modulo} contiene la definizione delle \glossaryItem{API} ri
 
 \paragraph*{Relazione con altri \glossaryItem{moduli}}
 \begin{itemize}
-\item Lib::AuthenticationChecker, per il controllo dell'avvenuta autenticazione dell'utente
-\item Lib::LevelChecker, per il controllo del ruolo dell'utente autenticato
-\item Model::DSLModel, per il soddisfacimento delle richieste verso il modello di dati delle specifiche DSL
+\item Lib::AuthenticationChecker, per il controllo dell'avvenuta autenticazione dell'utente;
+\item Lib::LevelChecker, per il controllo del ruolo dell'utente autenticato;
+\item Model::DSLModel, per il soddisfacimento delle richieste verso il modello di dati delle specifiche DSL.
 \end{itemize}
 
 \paragraph{DatabaseRouter}
