@@ -5,7 +5,7 @@ include common/make/flags.inc
 
 FOLDERS= internal official presentations verbal
 
-PATH_ZIP= RP
+PATH_ZIP= RQ
 GROUP_NAME= BugBusters
 
 
