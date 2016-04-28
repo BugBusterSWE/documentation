@@ -203,7 +203,7 @@ Il \glossaryItem{processo} di \glossaryItem{verifica} deve raggiungere questi ob
 \end{itemize}
 
 \subsubsection{1. Attivit\`a di verifica}
-A seguito viene descritto il \glossaryItem{processo} di \glossaryItem{verifica} per la documentazione affinchè i Verificatori possano garantire che al termine del loro lavoro, la documentazione prodotta sia conforme alla struttura decisa dal \glossaryItem{Team} e che sia corretta rispetto alle regole decise dal Gruppo e dal punto di vista sintattico per il linguaggio deciso per il documento.
+A seguito viene descritto il \glossaryItem{processo} di \glossaryItem{verifica} per la documentazione e per la codifica affinchè i Verificatori possano garantire che al termine del loro lavoro, la documentazione e il codice prodotto sia conforme alla struttura decisa dal \glossaryItem{Team} e che sia corretta rispetto alle regole decise dal Gruppo e dal punto di vista sintattico per il linguaggio deciso per il documento.
 
 \paragraph*{Procedura di \glossaryItem{verifica} dei documenti}
 \begin{itemize}
@@ -218,6 +218,34 @@ nell'architettura proposta nel documento di \SpecificaTecnica.
 Nel caso in cui un requisito non sia soddisfatto, il \textit{Verificatore} deve comunicarlo ai \textit{Progettisti}, i quali
 si faranno carico della revisione mirata dell'architettura. 
 
+\end{itemize}
 
+\paragraph*{Procedura di verifica del codice}
+\begin{itemize}
+
+\item \textbf{Controlli statici}: Vengono eseguiti controlli di tipo statico sul codice tramite l'utilizzo del \textit{linter} \textit{TsLint}, che permette di trovare eventuali errori di forma o logici prima della compilazione
+
+\item \textbf{Controlli dinamici}: Dopo una compilazione avvenuta con successo e dopo aver passato con successo i test di tipo statico vengono eseguiti i test di tipo dinamico tramite il programma \textit{mocha}, che si occupa di eseguire i test di unità e sengalare eventuali test falliti. È possibile generare un report di tipo \textit{xUnit}: in questa maniera per ogni volta che vengono eseguiti i test si può avere una storia e quindi una tracciabilità dell'andamento dei test. I test saranno scritti in Typescript e per ogni test devono seguire la seguente struttura:
+\begin{verbatim}
+describe("NomeDellaClasse", () => {
+    let subject : TipoDelSoggetto;
+
+    beforeEach(function () : void {
+        // Questa funzione permette di eseguire un'azione
+        // prima di ogni test
+    });
+
+    //Un test
+    describe("nomeTest", () => {
+        it("CosaVieneVerificato", () => {
+
+            // Codice per la verifica
+
+            // Asserzione
+            Chai.expect(UnValore).to.equal(UnAltro);
+        });
+    });
+  
+\end{verbatim}
 
 \end{itemize}
