@@ -47,8 +47,7 @@ $(FOLDERS):
 		echo "Document: $$i"; \
 		bak=$(shell pwd); \
 		cd $$i; \
-		echo "Checking \"$$i\""; \
-		if [ "$$i" == "official/Glossario/" ]; then \
+		if [[ "$$i" == "official/Glossario/" ]]; then \
 			echo "****This is the glossary, calling \"build.sh\" script****"; \
 			bash build.sh; \
 		fi; \
