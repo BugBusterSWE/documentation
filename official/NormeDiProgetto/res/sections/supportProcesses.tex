@@ -84,9 +84,26 @@ Tale \glossaryItem{processo} deve garanire:
   basso a sinistra della pagina corrente, riportate con il loro numero e la loro descrizione.
 	
 
+\paragraph*{Elementi grafici}
+\begin{itemize}
+	\item \textbf{Tabelle} \\
+		Ciascuna tabella deve essere centrata orizzontalmente e deve contenere sotto di essa la propria
+		didascalia (per semplificarne il tracciamento), nella quale deve comparire il numero della tabella corrente (incrementale in tutto
+		il documento) e una breve descrizione del suo contenuto;
+	\item \textbf{Immagini} \\
+		Ciascuna immagine deve essere centrata orizzontalmente ed avere una larghezza fissa. Inoltre deve
+		essere nettamente separata dai paragrafi che la seguono e la precedono, in modo da definire una
+		chiara separazione tra testo e grafica e migliorare conseguentemente l'usabilità del documento. Essa dev’essere
+		accompagnata da una didascalia analoga a quella descritta per le tabelle. Tutti i diagrammi
+		UML vengono inseriti nel documento sotto forma di immagine.
+	        Le immagini presenti nei documenti devono essere nel formato SVG.
+		In questo modo si ottiene una qualità superiore dell'immagine, anche nel caso di ridimensionamento. 
+		Qualora le immagini non possano essere salvate in formato vettoriale, si preferisce il formato PNG.
+
+\end{itemize}
+
 \paragraph*{Norme tipografiche}
-In questa sezione vengono trattate le convenzioni riguardanti tipografia, ortografia e stile per il testo dei documenti. \\
-\textbf{Punteggiatura} \\
+In questa sezione vengono trattate le convenzioni riguardanti tipografia, ortografia e stile per il testo dei documenti. 
 \begin{itemize}
 \item \textbf{Parentesi}: il testo racchiuso tra parentesi non deve presentare spazi adiacenti al carattere di parentesi e non deve terminare con un simbolo di punteggiatura;
 \item \textbf{Punteggiatura}: un carattere di punteggiatura non deve essere mai preceduto da uno spazio;
@@ -94,7 +111,7 @@ In questa sezione vengono trattate le convenzioni riguardanti tipografia, ortogr
   \item \textbf{Elenchi puntati}: devono terminare con punto e virgola, ad eccezione dell'ultimo che deve terminare con un punto.
 \end{itemize}
 
-\textbf{Stile di testo} \\
+\textbf{Stile di testo} 
 \begin{itemize}
 \item \textbf{Corsivo}  nei seguenti \glossaryItem{casi}:
   \begin{itemize}
@@ -121,7 +138,7 @@ In questa sezione vengono trattate le convenzioni riguardanti tipografia, ortogr
 I termini presenti nel glossario possono essere utilizzati durante la stesura dei documenti riportandoli con la sintassi \glossaryItem{nome elemento}.
 
 
-\textbf{Formati} \\
+\textbf{Formati} 
 \begin{itemize}
 \item \textbf{Indirizzi email}: deve essere utilizzato il comando \LaTeX \textit{url};
 \item \textbf{Date}: le date presenti nei documenti devono seguire la notazione standard dettata da ISO 8601:
@@ -140,26 +157,21 @@ I termini presenti nel glossario possono essere utilizzati durante la stesura de
   \begin{itemize}
   \item \textbf{AdR} = Analisi dei Requisiti;
   \item \textbf{PdP} = Piano di \glossaryItem{Progetto};
-  \item \textbf{NdP} = Norme di \glossaryItem{Progetto}
-  \item \textbf{SF} = Studio di Fattibilità
-  \item \textbf{PdQ} = Piano di Qualifica
-  \item \textbf{ST} = Specifica Tecnica
+  \item \textbf{NdP} = Norme di \glossaryItem{Progetto};
+  \item \textbf{SF} = Studio di Fattibilità;
+  \item \textbf{PdQ} = Piano di Qualifica;
+  \item \textbf{ST} = Specifica Tecnica;
   \item \textbf{MU} = Manuale Utente;
   \item \textbf{DdP} = Definizione di prodotto;
   \item \textbf{RR} = Revisione dei Requisiti;
-  \item \textbf{RP} = Revisione di Progettazione
+  \item \textbf{RP} = Revisione di Progettazione;
   \item \textbf{RQ} = Revisione di Qualifica;
-  \item \textbf{RA} = Revisione di Accettazione;
+  \item \textbf{RA} = Revisione di Accettazione.
   \end{itemize}
 \item \textbf{Riferimenti a documenti}: qualora ci si riferisca ad un documento è necessario specificarne il nome completo e la \glossaryItem{versione} di riferimento.
 \end{itemize}
 
-\paragraph*{Componenti grafiche}
-\textbf{Tabelle}  \\
-Per ciascuna tabella presente nei documenti deve essere fornita una didascalia in cui viene riportato un numero identificativo per garantirne la tracciabilità all'interno del documento. \\
 
-\textbf{Immagini} \\
-Le immagini presenti nei documenti devono essere nel formato \glossaryItem{PNG}. \\
 
 %Le immagini presenti nei documenti devono essere nel formato \textit{SVG}. %glossario
 %In questo modo si ottiene una qualità superiore dell'immagine, anche nel caso di ridimensionamento. Qualora le immagini non possano essere salvate in formato vettoriale, si preferisce il formato \textit{JPEG}.
@@ -202,7 +214,7 @@ Il \glossaryItem{processo} di \glossaryItem{verifica} deve raggiungere questi ob
 \end{itemize}
 
 \subsubsection{1. Attivit\`a di verifica}
-A seguito viene descritto il \glossaryItem{processo} di \glossaryItem{verifica} per la documentazione affinchè i Verificatori possano garantire che al termine del loro lavoro, la documentazione prodotta sia conforme alla struttura decisa dal \glossaryItem{Team} e che sia corretta rispetto alle regole decise dal Gruppo e dal punto di vista sintattico per il linguaggio deciso per il documento.
+A seguito viene descritto il \glossaryItem{processo} di \glossaryItem{verifica} per la documentazione e per la codifica affinchè i Verificatori possano garantire che al termine del loro lavoro, la documentazione e il codice prodotto sia conforme alla struttura decisa dal \glossaryItem{Team} e che sia corretta rispetto alle regole decise dal Gruppo e dal punto di vista sintattico per il linguaggio deciso per il documento.
 
 \paragraph*{Procedura di \glossaryItem{verifica} dei documenti}
 \begin{itemize}
@@ -217,6 +229,34 @@ nell'architettura proposta nel documento di \SpecificaTecnica.
 Nel caso in cui un requisito non sia soddisfatto, il \textit{Verificatore} deve comunicarlo ai \textit{Progettisti}, i quali
 si faranno carico della revisione mirata dell'architettura. 
 
+\end{itemize}
 
+\paragraph*{Procedura di verifica del codice}
+\begin{itemize}
+
+\item \textbf{Controlli statici}: Vengono eseguiti controlli di tipo statico sul codice tramite l'utilizzo del \textit{linter} \textit{TsLint}, che permette di trovare eventuali errori di forma o logici prima della compilazione.
+
+\item \textbf{Controlli dinamici}: Dopo una compilazione avvenuta con successo e dopo aver passato con successo i test di tipo statico vengono eseguiti i test di tipo dinamico tramite il programma \textit{mocha}, che si occupa di eseguire i test di unità e segnalare eventuali test falliti. È possibile generare un report di tipo \textit{xUnit}, che consente di avere un storico dell'esecuzione dei test e di tracciare il loro andamento. I test saranno scritti in TypeScript utilizzando la seguente struttura:
+\begin{verbatim}
+describe("NomeDellaClasse", () => {
+    let subject : TipoDelSoggetto;
+
+    beforeEach(function () : void {
+        // Questa funzione permette di eseguire un'azione
+        // prima di ogni test
+    });
+
+    //Un test
+    describe("nomeTest", () => {
+        it("CosaVieneVerificato", () => {
+
+            // Codice per la verifica
+
+            // Asserzione
+            Chai.expect(UnValore).to.equal(UnAltro);
+        });
+    });
+  
+\end{verbatim}
 
 \end{itemize}
