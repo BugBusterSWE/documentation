@@ -112,7 +112,7 @@ Di seguito vengono elencati i \glossaryItem{casi} d'uso per il \glossaryItem{Sup
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-S1.0 - Inserimento della email dell'\glossaryItem{Owner} }} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-S1.1 - Inserimento della email dell'\glossaryItem{Owner} }} \\ 
         \hline
         
         \textbf{Attori Primari} & \glossaryItem{Super-Admin}\\  
@@ -134,7 +134,7 @@ Di seguito vengono elencati i \glossaryItem{casi} d'uso per il \glossaryItem{Sup
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-S1.0 - Inserimento della password dell'\glossaryItem{Owner} }} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-S1.2 - Inserimento della password dell'\glossaryItem{Owner} }} \\ 
         \hline
         
         \textbf{Attori Primari} & \glossaryItem{Super-Admin}\\  
@@ -382,57 +382,6 @@ Di seguito vengono elencati i \glossaryItem{casi} d'uso per il \glossaryItem{Sup
 %    \end{center}
 
     
-
-\subsubsection{UC-S4} 
-    
-    %Tabella 
-    \begin{center}
-      \bgroup
-      \def\arraystretch{1.8}     
-      \begin{longtable}{  p{3.5cm} | p{8cm} } 
-        
-        \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-S4 - Fallisce la creazione di una \glossaryItem{Company}}} \\ 
-        \hline
-        
-        \textbf{Attori Primari} & \glossaryItem{Super-Admin}\\  
-        \textbf{Scopo e descrizione} & Il'\glossaryItem{Super-Admin} ha inserito dei dati errati per la creazione della \glossaryItem{Company}, quindi il sistema comunica l'errore. \\
-      
-        \textbf{Precondizioni}  & L'applicazione ha ricevuto in input dei dati non validi per la creazione di una \glossaryItem{Company}. \\ 
-        
-        \textbf{Postcondizioni} & Il sistema mostra al \glossaryItem{Super-Admin} un messaggio di errore che comunica l'entità dell'input errato. \\ 
-         \textbf{Scenario principale} & 1. Il \glossaryItem{Super-Admin} visualizza l'errore. \\
-        
-     \end{longtable}
-      \egroup
-    \end{center}
-
-
-    \subsubsection{Fallisce la modifica di una Company} 
-    
-    %Tabella 
-    \begin{center}
-      \bgroup
-      \def\arraystretch{1.8}     
-      \begin{longtable}{  p{3.5cm} | p{8cm} } 
-        
-        \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-S4 - Fallisce la modifica di una \glossaryItem{Company}}} \\ 
-        \hline
-        
-        \textbf{Attori Primari} & \glossaryItem{Super-Admin}\\  
-        \textbf{Scopo e descrizione} & Il \glossaryItem{Super-Admin} ha inserito dei dati errati per la modifica della \glossaryItem{Company} e il sistema comunica l'errore. \\
-      
-        \textbf{Precondizioni}  & L'applicazione ha ricevuto in input dei dati non validi per la modifica di una \glossaryItem{Company}. \\ 
-        
-        \textbf{Postcondizioni} & Il sistema mostra al \glossaryItem{Super-Admin} un messaggio di errore che comunica l'entità dell'input errato. \\ 
-         \textbf{Scenario principale} & 1. Il \glossaryItem{Super-Admin} visualizza l'errore. \\
-        
-     \end{longtable}
-      \egroup
-    \end{center}
-
-
 \subsubsection{Gestione degli altri Super-Admin}
     \begin{figure}[H]
       \begin{center}
@@ -496,17 +445,108 @@ vedere in un elenco quelli già presenti e vederne le informazioni in dettaglio 
          
          2. Il \glossaryItem{Super-Admin} aggiunge una password nell'apposito campo.\\
         
-         \textbf{Estensioni} & 1. Il \glossaryItem{Super-Admin} esce dalla pagina;  
-         
-         2. L'email inserita \`e gi\`a presente nel database e il nuovo \glossaryItem{Super-Admin} non pu\`o essere creato.\\ 
      
      \end{longtable}
       \egroup
     \end{center}
 
+    \subsubsection{Inserimento indirizzo email di un nuovo Super-Admin}   
+        
+        %Tabella 
+        \begin{center}
+          \bgroup
+          \def\arraystretch{1.8}     
+          \begin{longtable}{  p{3.5cm} | p{8cm} } 
+            
+            \hline
+            \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-S3.0.0 - Inserimento indirizzo email}} \\ 
+            \hline
+            
+            \textbf{Attori Primari} & \glossaryItem{Super-Admin} \\ 
+            \textbf{Scopo e Descrizione} & Il \glossaryItem{Super-Admin} inserisce l'indirizzo email del nuovo \glossaryItem{Super-Admin} durante la \glossaryItem{procedura} di creazione di un nuovo \glossaryItem{Super-Admin}. \\ 
+            
+            \textbf{Precondizioni}  & Il \glossaryItem{Super-Admin} ha visualizzato la pagina per la creazione di un nuovo \glossaryItem{Super-Admin}.  \\ 
+            
+            \textbf{Postcondizioni} & Il campo testo è stato compilato con il contenuto richiesto. \\
+             \textbf{Scenario principale} & 1. Il \glossaryItem{Super-Admin} inserisce l'indirizzo email durante la \glossaryItem{procedura} di creazione di un nuovo \glossaryItem{Super-Admin}.\\ 
+          \end{longtable}
+          \egroup
+        \end{center} 
+        
+    \subsubsection{Inserimento password di un nuovo Super-Admin} 
+        
+        %Tabella 
+        \begin{center}
+          \bgroup
+          \def\arraystretch{1.8}     
+          \begin{longtable}{  p{3.5cm} | p{8cm} } 
+            
+            \hline
+            \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-S3.0.1 - Inserimento password}} \\ 
+            \hline
+            
+            \textbf{Attori Primari} & \glossaryItem{Super-Admin} \\ 
+            \textbf{Scopo e Descrizione} & Il \glossaryItem{Super-Admin} inserisce la password associata all'account del nuovo \glossaryItem{Super-Admin}. \\ 
+            
+            \textbf{Precondizioni}  & Il \glossaryItem{Super-Admin} ha visualizzato la pagina per la creazione di un nuovo \glossaryItem{Super-Admin}. \\ 
+            
+            \textbf{Postcondizioni} & Il \glossaryItem{Super-Admin} ha inserito una password associata all'account del nuovo \glossaryItem{Super-Admin}. \\ 
+            \textbf{Scenario principale} & 1. Il \glossaryItem{Super-Admin} inserisce una password associata all'account del nuovo \glossaryItem{Super-Admin}.\\
+          \end{longtable}
+          \egroup
+        \end{center}
+
+
+%##################################################################
+
+\subsubsection{Fallisce la creazione di una Company} 
     
+    %Tabella 
+    \begin{center}
+      \bgroup
+      \def\arraystretch{1.8}     
+      \begin{longtable}{  p{3.5cm} | p{8cm} } 
+        
+        \hline
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-S4 - Fallisce la creazione di una \glossaryItem{Company}}} \\ 
+        \hline
+        
+        \textbf{Attori Primari} & \glossaryItem{Super-Admin}\\  
+        \textbf{Scopo e descrizione} & Il \glossaryItem{Super-Admin} ha inserito dei dati errati per la creazione della \glossaryItem{Company}, quindi il sistema comunica l'errore. \\
+      
+        \textbf{Precondizioni}  & L'applicazione ha ricevuto in input dei dati non validi per la creazione di una \glossaryItem{Company}. \\ 
+        
+        \textbf{Postcondizioni} & Il sistema mostra al \glossaryItem{Super-Admin} un messaggio di errore che comunica l'entità dell'input errato. \\ 
+         \textbf{Scenario principale} & 1. Il \glossaryItem{Super-Admin} visualizza l'errore. \\
+        
+     \end{longtable}
+      \egroup
+    \end{center}
 
 
+    \subsubsection{Fallisce la modifica di una Company} 
+    
+    %Tabella 
+    \begin{center}
+      \bgroup
+      \def\arraystretch{1.8}     
+      \begin{longtable}{  p{3.5cm} | p{8cm} } 
+        
+        \hline
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-S5 - Fallisce la modifica di una \glossaryItem{Company}}} \\ 
+        \hline
+        
+        \textbf{Attori Primari} & \glossaryItem{Super-Admin}\\  
+        \textbf{Scopo e descrizione} & Il \glossaryItem{Super-Admin} ha inserito dei dati errati per la modifica della \glossaryItem{Company} e il sistema comunica l'errore. \\
+      
+        \textbf{Precondizioni}  & L'applicazione ha ricevuto in input dei dati non validi per la modifica di una \glossaryItem{Company}. \\ 
+        
+        \textbf{Postcondizioni} & Il sistema mostra al \glossaryItem{Super-Admin} un messaggio di errore che comunica l'entità dell'input errato. \\ 
+         \textbf{Scenario principale} & 1. Il \glossaryItem{Super-Admin} visualizza l'errore. \\
+        
+     \end{longtable}
+      \egroup
+    \end{center}
 
 
 
