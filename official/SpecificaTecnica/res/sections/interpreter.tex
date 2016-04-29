@@ -22,8 +22,8 @@ Il FacadeInterpreter implementa il pattern \textit{Facade} per offrire un'interf
   Permette di interfacciarsi al \glossaryItem{modulo} richiedendo eslusivamente la traduzione da \glossaryItem{DSL} Structure a specifica \glossaryItem{DSL}. Questo oltre a semplificare al \textit{client} la gestione della traduzione, nasconde l'implementazione rendendo il \glossaryItem{modulo} maggiormente manutenibile.
 \item \textbf{Relazioni con altre classi} \hfill
   \begin{itemize}
-  \item DSLInterpreter::StoreDSL
-  \item DSLInterpreter::IDSLInterpreter
+  \item DSLInterpreter::StoreDSL - Invocata per salvare la definizione della DSL Structure
+  \item DSLInterpreter::IDSLInterpreter - Riferimento all'interpretere da eseguire. Si determina il tipo del DSL Element, ne si crea un'istanza e si invoca il metodo di traduzione
   \end{itemize}
 \end{itemize}
 \subsubsection{DSLInterpreter::StoreDSL}
@@ -36,14 +36,8 @@ Il FacadeInterpreter implementa il pattern \textit{Facade} per offrire un'interf
   Ciò permette di non violare il \textit{Single Responsability Principle}, in quanto i vari interpreti conoscono solo una singola struttura da tradurre e non detengono un possibile accesso all'intera \glossaryItem{DSL} Structure.
 \item \textbf{Relazione con altre classi} \hfill
   \begin{itemize}
-  \item DSLInterpreter::DSLFacadeInterpreter
-  \item DSLInterpreter::DSLInterpreter
-  \item DSLInterpreter::DashboardInterpreter
-  \item DSLInterpreter::CollectionInterpreter
-  \item DSLInterpreter::DashRowInterpreter
-  \item DSLInterpreter::DocumentInterpreter
-  \item DSLInterpreter::IndexInterpreter
-  \item DSLInterpreter::InputInterpreter
+  \item DSLInterpreter::DSLFacadeInterpreter - Invoca il metodo per salvare la DSL Structure
+  \item DSLInterpreter::DSLInterpreter - 
   \end{itemize}
 \end{itemize}
 \subsubsection{DSLInterpreter::DSLInterpreter}
