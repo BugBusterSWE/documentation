@@ -15,6 +15,7 @@ install:
 - sudo apt-get install tex4ht -qq
 - sudo apt-get install texlive-fonts-recommended -qq
 - sudo apt-get install texlive-lang-italian -qq
+- sudo apt-get install perl libxml-libxml-perl libxml-libxslt-perl libfile-chdir-perl libautodie-perl -qq
 
 script:
 - make -B

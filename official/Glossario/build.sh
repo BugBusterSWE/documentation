@@ -10,4 +10,10 @@ function compile(){
 
 }
 
-compile
+function build_xml(){
+
+    perl ../../tools/xml-glossary/glossaryLaTeX/createLaTeX.pl res/glossary.xml res/alphabeticalOrder.xsl
+}
+
+#compile
+build_xml
