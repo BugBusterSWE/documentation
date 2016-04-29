@@ -1,0 +1,3 @@
+[submodule "tools/xml-glossary"]
+	path = tools/xml-glossary
+	url = https://github.com/Polpetta/xml-glossary.git
