@@ -10,4 +10,9 @@ function compile(){
 
 }
 
+function build_xml(){
+
+    perl ../../tools/xml-glossary/glossaryLaTeX/createLaTeX.pl res/glossary.xml
+}
+
 compile
