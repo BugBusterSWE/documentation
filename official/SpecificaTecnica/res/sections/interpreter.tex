@@ -37,7 +37,7 @@ Il FacadeInterpreter implementa il pattern \textit{Facade} per offrire un'interf
 \item \textbf{Relazione con altre classi} \hfill
   \begin{itemize}
   \item DSLInterpreter::DSLFacadeInterpreter - Invoca il metodo per salvare la DSL Structure
-  \item DSLInterpreter::DSLInterpreter - 
+  \item DSLInterpreter::DSLInterpreter - Accesso alla DSL Structure salvata da DSLInterpreter::DSLFacadeInterpreter
   \end{itemize}
 \end{itemize}
 \subsubsection{DSLInterpreter::DSLInterpreter}
@@ -48,19 +48,19 @@ Il FacadeInterpreter implementa il pattern \textit{Facade} per offrire un'interf
   Implementa il \textit{Chain of Responsability}, mantenendo la lista degli interpreti da eseguire. In più detiene la sequenza di passi per portare a compimento la traduzione.
 \item \textbf{Relazione con altre classi} \hfill
   \begin{itemize}
-  \item DSLInterpreter::FacadeInterpreter
-  \item DSLInterpreter::StoreDSL
-  \item DSLInterpreter::ActionInterpreter
-  \item DSLInterpreter::CellInterpreter
-  \item DSLInterpreter::RowInterpreter
-  \item DSLInterpreter::ColumnInterpreter
-  \item DSLInterpreter::DashboardInterpreter
-  \item DSLInterpreter::CollectionInterpreter
-  \item DSLInterpreter::DashRowInterpreter
-  \item DSLInterpreter::DocumentInterpreter
-  \item DSLInterpreter::FunctionInterpreter
-  \item DSLInterpreter::IndexInterpreter
-  \item DSLInterpreter::InputInterpreter
+  \item DSLInterpreter::FacadeInterpreter - Istanza l'interprete concreto ed invoca il metodo di traduzione
+  \item DSLInterpreter::StoreDSL - Ogni classe che implementa DSLInterpreter usa il metodo fornito da DSLInterpreter::StoreDSL per ottenere la DSL Structure
+  \item DSLInterpreter::ActionInterpreter - Implementa DSLInterpreter::DSLInterpreter per la traduzione di un Action Element
+  \item DSLInterpreter::CellInterpreter - Implementa DSLInterpreter::DSLInterpreter per la traduzione di un Cell Element
+  \item DSLInterpreter::RowInterpreter - Implementa DSLInterpreter::DSLInterpreter per la traduzione di un Row Element
+  \item DSLInterpreter::ColumnInterpreter - Implementa DSLInterpreter::DSLInterpreter per la traduzione di un Column Element
+  \item DSLInterpreter::DashboardInterpreter - Implementa DSLInterpreter::DSLInterpreter per la traduzione di un Dashboard Element
+  \item DSLInterpreter::CollectionInterpreter - Implementa DSLInterpreter::DSLInterpreter per la traduzione di un Collection Element
+  \item DSLInterpreter::DashRowInterpreter - Implementa DSLInterpreter::DSLInterpreter per la traduzione di un DashRow Element
+  \item DSLInterpreter::DocumentInterpreter - Implementa DSLInterpreter::DSLInterpreter per la traduzione di un Document Element
+  \item DSLInterpreter::FunctionInterpreter - Implementa DSLInterpreter::DSLInterpreter per la traduzione di un Function Element
+  \item DSLInterpreter::IndexInterpreter - Implementa DSLInterpreter::DSLInterpreter per la traduzione di un Index Element
+  \item DSLInterpreter::InputInterpreter - Implementa DSLInterpreter::DSLInterpreter per la traduzione di un Input Element
   \end{itemize}
 \end{itemize}
 
@@ -72,9 +72,9 @@ Implementa la traduzione di un oggetto che abbia le caratteristiche di un \gloss
 Usato da \texttt{DSLInterpreter::CollectionInterpreter} e \texttt{DSLInterpreter::Document-}\\\texttt{Interpreter} per tradurre un attributo di tipo \glossaryItem{Action} Element associato.
 \item \textbf{Relazone con altre classi}
 \begin{itemize}
-\item DSLInterpreter::DSLInterpreter
-\item DSLInterpreter::CollectionInterpreter
-\item DSLInterpreter::DocumentInterpreter
+\item DSLInterpreter::DSLInterpreter - Classe base
+\item DSLInterpreter::CollectionInterpreter - Istanza un DSLInterpreter::ActionInterpreter qual'ora il Collection Element possegga un riferimento ad un Action Element
+\item DSLInterpreter::DocumentInterpreter - Istanza un DSLInterpreter::ActionInterpreter qual'ora il Document Element possegga un riferimento ad un Action Element
 \end{itemize}
 \end{itemize}
 
@@ -86,11 +86,11 @@ Implementa la traduzione di un oggetto che abbia le caratteristiche di un \gloss
 Usato da \texttt{DSLInterpreter::FacadeInterpreter} nel caso un \glossaryItem{Cell} Element fosse l'elemento radice del \glossaryItem{DSL} Structure, altrimenti viene creato da \\\texttt{DSLInterpreter::DashRowInterpreter} quando un \glossaryItem{Cell} Element compone una riga della \glossaryItem{Dashboard} Element.
 \item \textbf{Relazione con altre classi}
 \begin{itemize}
-\item DSLInterpreter::FacadeInterpreter
-\item DSLInterpreter::DSLInterpreter
-\item DSLInterpreter::StoreDSL
-\item DSLInterpreter::DashRowInterpreter
-\item DSLInterpreter::InputInterpreter
+\item DSLInterpreter::FacadeInterpreter - Istanza un DSLInterpreter::CellInterpreter nel caso in cui il riferimento dell'attributo \textit{root} della DSL Structure sia di tipo Cell Element 
+\item DSLInterpreter::DSLInterpreter - Classe base
+\item DSLInterpreter::StoreDSL - Garantisce l'accesso alla DSL Structure
+\item DSLInterpreter::DashRowInterpreter - Istanza un DSLInterpreter::CellInterpreter qual'ora il DashRow Element possegga un riferimento ad un Cell Element
+\item DSLInterpreter::InputInterpreter - Istanza un DSLInterpreter::CellInterpreter qual'ora l'Input Element possegga un riferimento ad un Cell Element
 \end{itemize}
 \end{itemize}
 
@@ -102,8 +102,8 @@ Implementa la traduzione di un oggetto che abbia le caratteristiche di un \gloss
 Usato da \texttt{DSLInterpreter::DocumentInterpreter} per tradurre un attributo \glossaryItem{Row} Element associato.
 \item \textbf{Relazione con altre classi}  
 \begin{itemize}
-\item DSLInterpreter::DSLInterpreter
-\item DSLInterpreter::DocumentInterpreter
+\item DSLInterpreter::DSLInterpreter - Classe base
+\item DSLInterpreter::DocumentInterpreter - Istanza un DSLInterpreter::RowInterpreter qual'ora il Document Element possegga un riferimento ad un Row Element
 \end{itemize}
 \end{itemize}
 
@@ -115,8 +115,8 @@ Implementa la traduzione di un oggeto che abbia le caratteristiche di un \glossa
 Usato da \texttt{DSLInterpreter::IndexInterpreter} per tradurre un attributo di tipo \glossaryItem{Column} Element associato.
 \item \textbf{Relazione con altre classi}
 \begin{itemize}
-\item DSLInterpreter::DSLInterpreter
-\item DSLInterpreter::IndexInterpreter
+\item DSLInterpreter::DSLInterpreter - Classe base
+\item DSLInterpreter::IndexInterpreter - Istanza un DSLInterpreter::ColumnInterpreter qual'ora l'Index Element possegga un riferimento ad un Column Element
 \end{itemize}
 \end{itemize}
 
@@ -128,10 +128,10 @@ Implementa la traduzione di un oggetto che abbia le caratteristiche di un \gloss
 Usato da \texttt{DSLInterpreter::FacadeInterpreter} nel caso un \glossaryItem{Dashboard} Element fosse l'elemento radice del \glossaryItem{DSL} Structure. 
 \item \textbf{Relazione con altre classi}
 \begin{itemize}
-\item DSLInterpreter::DSLInterpreter
-\item DSLInterpreter::FacadeInterpreter
-\item DSLInterpreter::StoreDSL
-\item DSLInterpreter::DashRowInterpreter
+\item DSLInterpreter::DSLInterpreter - Classe base
+\item DSLInterpreter::FacadeInterpreter - Istanza un DSLInterpreter::DashboardInterpreter nel caso in cui il riferimento dell'attributo \textit{root} della DSL Structure sia di tipo Dashboard Element 
+\item DSLInterpreter::StoreDSL - Garantisce l'accesso alla DSL Structure
+\item DSLInterpreter::DashRowInterpreter - Qual'ora Dashboard Element contenesse un riferimento ad un DashRow Element, il DSLInterpreter::DashboardInterpreter istanzia un DSLInterpreter::DashRowInterpreter per tradurlo
 \end{itemize}
 \end{itemize}
 
@@ -143,12 +143,12 @@ Implemenata la traduzione di un oggetto che abbia le caratteristiche di un \glos
   Usato da \texttt{DSLInterpreter::FacadeInterpreter} \newline nel caso un \glossaryItem{Collection} Element fosse l'elemento radice del \glossaryItem{DSL} Structure, altrimenti viene creato da \texttt{DSLInterpreter::DashRowInterpreter} \newline quando un \glossaryItem{Collection} Element compone una riga della \glossaryItem{Dashboard} Element.
 \item \textbf{Relazione con altre classi}
 \begin{itemize}
-\item DSLInterpreter::DSLInterpreter
-\item DSLInterpreter::FacadeInterpreter
-\item DSLInterpreter::StoreDSL
-\item DSLInterpreter::IndexInterpreter
-\item DSLInterpreter::DocumentInterpreter
-\item DSLInterpreter::ActionInterpreter
+\item DSLInterpreter::DSLInterpreter - Classe base
+\item DSLInterpreter::FacadeInterpreter - Istanza un DSLInterpreter::CollectionInterpreter nel caso in cui il riferimento dell'attributo \textit{root} della DSL Structure sia di tipo Collection Element 
+\item DSLInterpreter::StoreDSL - Garantisce l'accesso alla DSL Structure
+\item DSLInterpreter::IndexInterpreter - Qual'ora Collection Element contenesse un riferimento ad un Index Element, il DSLInterpreter::CollectionInterpreter istanzia un DSLInterpreter::IndexInterpreter per tradurlo
+\item DSLInterpreter::DocumentInterpreter - Qual'ora Collection Element contenesse un riferimento ad un Document Element, il DSLInterpreter::CollectionInterpreter istanzia un DSLInterpreter::DocumentInterpreter per tradurlo
+\item DSLInterpreter::ActionInterpreter - Qual'ora Collection Element contenesse un riferimento ad un Action Element, il DSLInterpreter::CollectionInterpreter istanzia un DSLInterpreter::ActionInterpreter per tradurlo
 \end{itemize}
 \end{itemize}
 
@@ -160,12 +160,12 @@ Implementa la traduzione di un oggeto che abbia le caratteristiche di un \glossa
 Usato da \texttt{DSLInterpreter::DashboardInterpreter} per tradurre un attributo di tipo \glossaryItem{DashRow Element} associato.
 \item \textbf{Relazione con altre classi}
 \begin{itemize}
-\item DSLInterpreter::DSLInterpreter
-\item DSLInterpreter::StoreDSL
-\item DSLInterpreter::DashboardInterpreter
-\item DSLInterpreter::CellInterpreter
-\item DSLInterpreter::CollectionInterpreter
-\item DSLInterpreter::DocumentInterpreter
+\item DSLInterpreter::DSLInterpreter - Classe base
+\item DSLInterpreter::StoreDSL - Garantisce l'accesso alla DSL Structure
+\item DSLInterpreter::DashboardInterpreter - Istanza un DSLInterpreter::DashRowInterpreter qual'ora il Dashboard Element possegga un riferimento ad un DashRow Element
+\item DSLInterpreter::CellInterpreter - Qual'ora DashRow Element contenesse un riferimento ad un Action Element, il DSLInterpreter::DashRowInterpreter istanzia un DSLInterpreter::CellInterpreter per tradurlo
+\item DSLInterpreter::CollectionInterpreter - Qual'ora DashRow Element contenesse un riferimento ad un Collection Element, il DSLInterpreter::DashRowInterpreter istanzia un DSLInterpreter::CollectionInterpreter per tradurlo
+\item DSLInterpreter::DocumentInterpreter - Qual'ora DashRow Element contenesse un riferimento ad un Document Element, il DSLInterpreter::DashRowInterpreter istanzia un DSLInterpreter::DocumentInterpreter per tradurlo
 \end{itemize}
 \end{itemize}
 
@@ -177,12 +177,12 @@ Usato da \texttt{DSLInterpreter::DashboardInterpreter} per tradurre un attributo
 Usato da \texttt{DSLInterpreter::FacadeInterpreter} nel caso un \glossaryItem{Document} Element fosse l'elemento radice del \glossaryItem{DSL} Structure, altrimenti viene creato da \\\texttt{DSLInterpreter::DashRowInterpreter} quando un \glossaryItem{Document} Element compone una riga della \glossaryItem{Dashboard} Element.
 \item \textbf{Relazione con altre classi}
   \begin{itemize}
-  \item DSLInterpreter::DSLInterpreter
-  \item DSLInterpreter::FacadeInterpreter
-  \item DSLInterpreter::StoreDSL
-  \item DSLInterpreter::CollectionInterpreter
-  \item DSLInterpreter::RowInterpreter
-  \item DSLInterpreter::ActionInterpreter
+  \item DSLInterpreter::DSLInterpreter - Classe base
+  \item DSLInterpreter::FacadeInterpreter - Istanza un DSLInterpreter::DocumentInterpreter nel caso in cui il riferimento dell'attributo \textit{root} della DSL Structure sia di tipo Document Element
+  \item DSLInterpreter::StoreDSL - Garantisce l'accesso alla DSL Structure
+  \item DSLInterpreter::CollectionInterpreter - Istanza un DSLInterpreter::DocumentInterpreter qual'ora il Collection Element possegga un riferimento ad un Document Element
+  \item DSLInterpreter::RowInterpreter - Qual'ora Document Element contenesse un riferimento ad un Row Element, il DSLInterpreter::DocumentInterpreter istanzia un DSLInterpreter::RowInterpreter per tradurlo
+  \item DSLInterpreter::ActionInterpreter - Qual'ora Document Element contenesse un riferimento ad un Action Element, il DSLInterpreter::DocumentInterpreter istanzia un DSLInterpreter::ActionInterpreter per tradurlo
   \end{itemize}
 \end{itemize}
 
@@ -194,8 +194,8 @@ Usato da \texttt{DSLInterpreter::FacadeInterpreter} nel caso un \glossaryItem{Do
   Usato dal \texttt{DSLInterpreter::FacadeInterpreter} per tradurre i \glossaryItem{Function Element} dichiarati nella \glossaryItem{DSL} Structure.
 \item \textbf{Relazione con altre classi}
   \begin{itemize}
-  \item DSLInterpreter::DSLInterpreter
-  \item DSLInterpreter::FacadeInterpreter
+  \item DSLInterpreter::DSLInterpreter - Classe base
+  \item DSLInterpreter::FacadeInterpreter - Istanza un DSLInterpreter::FunctionInterpreter nel caso fossero definite dei Function Element nella DSL Structure
   \end{itemize}
 \end{itemize}
 
@@ -207,10 +207,10 @@ Usato da \texttt{DSLInterpreter::FacadeInterpreter} nel caso un \glossaryItem{Do
   Usato da \texttt{DSLInterpreter::CollectionInterpreter} per tradurre un attributo di tipo \glossaryItem{Index} Element associato.
 \item \textbf{Relazione con altre classi}
   \begin{itemize}
-  \item DSLInterpreter::DSLInterpreter
-  \item DSLInterpreter::StoreDSL
-  \item DSLInterpreter::CollectionInterpreter
-  \item DSLInterpreter::ColumnInterpreter
+  \item DSLInterpreter::DSLInterpreter - Classe base
+  \item DSLInterpreter::StoreDSL - Garantisce l'accesso alla DSL Structure
+  \item DSLInterpreter::CollectionInterpreter - Istanza un DSLInterpreter::IndexInterpreter qual'ora il Collection Element possegga un riferimento ad un Index Element
+  \item DSLInterpreter::ColumnInterpreter - Qual'ora Index Element contenesse un riferimento ad un Column Element, il DSLInterpreter::IndexInterpreter istanzia un DSLInterpreter::ColumnInterpreter per tradurlo
   \end{itemize}
 \end{itemize}
 
@@ -222,10 +222,10 @@ Usato da \texttt{DSLInterpreter::FacadeInterpreter} nel caso un \glossaryItem{Do
   Usato da \texttt{DSLInterpreter::IndexInterpreter}, \texttt{DSLInterpreter::CellInterpreter} e da se stesso (data la struttura ricorsiva) per tradurre un attributo di tipo \glossaryItem{Input Element} associato.
 \item \textbf{Relazione con altre classi}
   \begin{itemize}
-  \item DSLInterpreter::DSLInterpreter
-  \item DSLInterpreter::StoreDSL
-  \item DSLInterpreter::CellInterpreter
-  \item DSLInterpreter::CollectionInterpreter
-  \item DSLInterpreter::InputInterpreter
+  \item DSLInterpreter::DSLInterpreter - Classe base
+  \item DSLInterpreter::StoreDSL - Garantisce l'accesso alla DSL Structure
+  \item DSLInterpreter::CellInterpreter - Istanza un DSLInterpreter::InputInterpreter qual'ora il Cell Element possegga un riferimento ad un Input Element
+  \item DSLInterpreter::CollectionInterpreter - Istanza un DSLInterpreter::InputInterpreter qual'ora il Collection Element possegga un riferimento ad un Input Element
+  \item DSLInterpreter::InputInterpreter - Qual'ora Input Element contenesse un riferimento ad un Input Element, il DSLInterpreter::InputInterpreter istanzia un DSLInterpreter::InputInterpreter per tradurlo. Essendo l'Input Element una struttura ricorsiva, ciò ne garantisce la corretta traduzione
   \end{itemize}
 \end{itemize}
