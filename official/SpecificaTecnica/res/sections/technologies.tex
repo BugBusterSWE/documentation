@@ -9,7 +9,7 @@ MaaS \`e stato progettato utilizzando diverse tecnologie, alcune delle quali esp
 \item \textbf{Mongoose}, libreria per interfacciarsi con il driver di \glossaryItem{MongoDB};
 \item \textbf{HTML5} (\textbf{H}yper\textbf{T}ext \textbf{M}arkup \textbf{L}anguage), \glossaryItem{linguaggio di markup} per la creazione di pagine web;
 \item \textbf{CSS3} (\textbf{C}ascading \textbf{S}tyle \textbf{S}heets), linguaggio di formattazione dei documenti \glossaryItem{HTML};
-\item \textbf{Materialize}, \glossaryItem{framework} \glossaryItem{front end} per la creazione di interfacce basate sul material design;
+\item \textbf{Materialize}, \glossaryItem{framework} \glossaryItem{front end} per la creazione di interfacce basate sul Material design;
 \item \textbf{TypeScript}, super-set di \glossaryItem{JavaScript} sviluppato da Microsoft e basato su ECMAScript 6 (\textbf{E}uropean \textbf{C}omputer \textbf{M}anufacturers \textbf{A}ssociation).
 \end{itemize}
 
@@ -20,13 +20,9 @@ L'utilizzo di \glossaryItem{Node.js} \`e stato richiesto dal proponente. Si trat
 \item \textbf{Approccio asincrono}: permette di accedere alle risorse del sistema operativo in modalit\`a \glossaryItem{event-driven} e non tramite il classico \glossaryItem{processo} orientato a \glossaryItem{processi} e \glossaryItem{thread} concorrenti utilizzato dai classici server web. Ci\`o garantisce una maggiore \glossaryItem{efficienza} dal punto di vista delle prestazioni, dato che durante le attese possono essere eseguire altre operazioni in modo asincrono.
 \item \textbf{Architettura modulare}: \`e molto facile organizzare il lavoro in librerie, importare e combinare i \glossaryItem{moduli}.
 \end{itemize}
-\subsubsection{Svantaggi}
-\begin{itemize}
-\item \textbf{Orientato all'I/O}: non \`e pensato per applicazioni che sfruttano in modo intensivo la CPU (\textbf{C}entral \textbf{P}rocessing \textbf{U}nit). Questo, tuttavia, non \`e il caso di \glossaryItem{MaaS}.
-\end{itemize}
 
 \subsection{ExpressJS}
-È un \glossaryItem{framework} minimale per creare applicazioni web con \glossaryItem{Node.js}. Fornisce una struttura base per un server web a cui successivamente possono essere aggiunti dei \glossaryItem{moduli} di terze parti per arricchirne le funzionalità. ExpressJS non oscura le funzionalità di base fornite da \glossaryItem{Node.js}: questo permette di utilizzare \glossaryItem{moduli} specifici a seconda dei bisogni dell'appliccazione.
+È un \glossaryItem{framework} minimale per creare applicazioni web con \glossaryItem{Node.js}. Fornisce una struttura base per un server web a cui successivamente possono essere aggiunti dei \glossaryItem{moduli} di terze parti per arricchirne le funzionalità. ExpressJS non oscura le funzionalità di base fornite da \glossaryItem{Node.js}: questo permette di utilizzare \glossaryItem{moduli} specifici a seconda dei bisogni dell'applicazione.
 \subsubsection{Vantaggi}
 \begin{itemize}
 \item \textbf{Minimale}: si basa su \glossaryItem{Node.js} e permette di estenderlo a seconda dei bisogni dell'applicazione.
@@ -40,7 +36,7 @@ L'utilizzo di \glossaryItem{Node.js} \`e stato richiesto dal proponente. Si trat
 
 \subsection{Reactjs}
 Uno dei requisiti opzionali espressi nel capitolato consiste nell'usare React/Flux anziché Angular per implementare un frontend per \glossaryItem{MaaS} basato su componenti riusabili.\\
-React è una libreria \glossaryItem{JavaScript} usata da Facebook e Instangram per creare interfacce utente ed è considerata la View del pattern MVC.\\
+React è una libreria \glossaryItem{JavaScript} usata da Facebook e Instagram per creare interfacce utente ed è considerata la View del pattern MVC.\\
 Il problema che React vuole risolvere è quello di costruire applicazioni facilmente \glossaryItem{scalabili} e con dati che continuano a variare velocemente nel tempo.\\ 
 L'architettura logica che usa React viene riassunta dalla seguente figura:
 \begin{figure}[H]
@@ -78,23 +74,21 @@ Flux è l'architettura che Facebook usa per creare applicazioni web client-side.
 \end{itemize}
 \subsubsection{Svantaggi}
 \begin{itemize}
-\item \textbf{Apprendimento}: può essere difficile da imparare bene, soprattutto considerandolo in coppia con \glossaryItem{Reactjs}.
+\item \textbf{Non completo}: non ci sono gestori dei modelli dei dati presenti nativamente, cosa che invece è presente in altri framework "concorrenti", come AngularJS o EmberJS.
 \end{itemize}
 \subsection{MongoDB}
-L'utilizzo di \glossaryItem{MongoDB} \`e stato richiesto dal proponente. Si tratta di un database \glossaryItem{NoSQL} open \glossaryItem{source} \glossaryItem{scalabile} e altamente performante di tipo \glossaryItem{document}-oriented e \glossaryItem{schemaless}, nel quale i dati sono archiviati sotto forma di documenti in stile \glossaryItem{JSON} (\textbf{J}ava\textbf{S}cript \textbf{O}bject \textbf{N}otation), con schemi dinamici e una struttura semplice e potente.
+L'utilizzo di \glossaryItem{MongoDB} \`e stato richiesto dal proponente. Si tratta di un database \glossaryItem{NoSQL} open \glossaryItem{source} \glossaryItem{scalabile} e altamente performante di tipo \glossaryItem{document-oriented} e \glossaryItem{schemaless}, nel quale i dati sono archiviati sotto forma di documenti in stile \glossaryItem{JSON} (\textbf{J}ava\textbf{S}cript \textbf{O}bject \textbf{N}otation), con schemi dinamici e una struttura semplice e potente.
 \subsubsection{Vantaggi}
 \begin{itemize}
 \item \textbf{Alte performance}: non ci sono \glossaryItem{join} che rallentano operazioni di lettura o scrittura. 
-\item \textbf{Affidabilit\`a}: \`e presente un meccanismo di replicazione su server.
-\item \textbf{Schemaless}: non esistono schemi per i dati. Pertanto \`e pi\`u flessibile.
-\item \textbf{Potenza espressiva}: permette di esprimre query complesse in un linguaggio non \glossaryItem{SQL} (\textbf{S}tructured \textbf{Q}uery \textbf{L}anguage).
-\item \textbf{Flessibilit\`a}: per i tipi di dato.
+\item \textbf{Affidabilità}: \`e presente un meccanismo di replicazione su server.
+\item \textbf{Potenza espressiva}: permette di esprimere query complesse in un linguaggio non \glossaryItem{SQL} (\textbf{S}tructured \textbf{Q}uery \textbf{L}anguage).
 \end{itemize}
 \subsubsection{Svantaggi}
 \begin{itemize}
+\item \textbf{Flessibilità}: per i tipi di dato. Sebbene questo possa essere visto come vantaggio, è opinione del team che un'eccessiva flessibilità possa portare più problemi che benefici: allo scopo di aggiungere rigidità è stato infatti scelto, come verrà descritto in seguito, di utilizzare TypeScript e non JavaScript.
 \item \textbf{Nessun supporto per le transazioni}: sono supportate alcune operazioni atomiche, ma a livello di documento.
 \item \textbf{Nessun \glossaryItem{join}}: va simulato via codice attraverso query multiple.
-\item \textbf{Utilizzo di memoria}: maggiore rispetto ai database \glossaryItem{SQL}; infatti memorizza i nomi delle chiavi in ogni documento. 
 \item \textbf{Problemi di concorrenza}: per le operazioni di scrittura viene creato un lock sull'intero database. Questo lock blocca anche le operazioni di lettura.
 \end{itemize}
 \subsection{Mongoose}
@@ -106,10 +100,10 @@ Mongoose \`e una libreria per interfacciarsi a \glossaryItem{MongoDB} che permet
 \end{itemize}
 \subsubsection{Svantaggi}
 \begin{itemize}
-\item \textbf{Schema-based}: \`e basato sulla creazione di una forte schematizzazione per i documenti, e questo limità l'estrema flessibilità di \glossaryItem{MongoDB}.
+\item \textbf{Schema-based}: \`e basato sulla creazione di una forte schematizzazione per i documenti, e questo limita l'estrema flessibilità di \glossaryItem{MongoDB}.
 \end{itemize}
 \subsection{HTML5}
-\`E un \glossaryItem{linguaggio di markup} per la strutturazione delle pagine web, pubblicato come \glossaryItem{W3C} Recommendation da ottoble 2014. L'uso di HTML5 rispetto a \glossaryItem{XHTML} (e\textbf{X}tensible \textbf{H}yper\textbf{T}ext \textbf{M}arkup \textbf{L}anguage) \`e stato deciso all'unanimit\`a dal gruppo (vedi decisione \textit{RI-1403-2}) e approvato dal proponente.
+\`E un \glossaryItem{linguaggio di markup} per la strutturazione delle pagine web, pubblicato come \glossaryItem{W3C} Recommendation da ottobre 2014. L'uso di HTML5 rispetto a \glossaryItem{XHTML} (e\textbf{X}tensible \textbf{H}yper\textbf{T}ext \textbf{M}arkup \textbf{L}anguage) \`e stato deciso all'unanimit\`a dal gruppo (vedi decisione \textit{RI-1403-2}) e approvato dal proponente.
 \subsubsection{Vantaggi}
 \begin{itemize}
 \item \textbf{Raccomandazione \glossaryItem{W3C}} (\textbf{W}orld \textbf{W}ide \textbf{W}eb \textbf{C}onsortium).
@@ -127,7 +121,7 @@ Mongoose \`e una libreria per interfacciarsi a \glossaryItem{MongoDB} che permet
 \item \textbf{Raccomandazione \glossaryItem{W3C}}.
 \end{itemize}
 \subsection{Materialize}
-Creato e progettato da Google, il material design è un linguaggio di progettazione di interfacce con l'obiettivo di unificare l'esperienza utente attraverso le diverse piattaforme.
+Creato e progettato da Google, il Material design è un linguaggio di progettazione di interfacce con l'obiettivo di unificare l'esperienza utente attraverso le diverse piattaforme.
 \subsubsection{Vantaggi}
 \begin{itemize}
 \item \textbf{Open \glossaryItem{Source}};
@@ -135,20 +129,19 @@ Creato e progettato da Google, il material design è un linguaggio di progettazi
 \end{itemize}
 \subsubsection{Svantaggi}
 \begin{itemize}
-\item \textbf{Flexbox}: non usa il modello Flexbox, uno dei nuovi layut introdotti da CSS3.
+\item \textbf{Flexbox}: non usa il modello Flexbox, uno dei nuovi layout introdotti da CSS3.
 \end{itemize}
 \subsection{TypeScript}
-Aggiunge a \glossaryItem{JavaScript} tipi statici (opzionale) e meccanismi propri della progrmmazione orientata agli oggetti quali classi, interfacce ed ereditariet\`a. Attraverso un \glossaryItem{processo} di compilazione viene prodotto codice \glossaryItem{JavaScript} leggibile e conforme agli standard di codifica. 
+Aggiunge a \glossaryItem{JavaScript} tipi statici (opzionale) e meccanismi propri della programmazione orientata agli oggetti quali classi, interfacce ed ereditariet\`a. Attraverso un \glossaryItem{processo} di compilazione viene prodotto codice \glossaryItem{JavaScript} leggibile e conforme agli standard di codifica. 
 \subsubsection{Vantaggi}
 \begin{itemize}
 \item \textbf{Fail Fast Principle}, gli errori di battitura e di tipo vengono scoperti a tempo di compilazione e non a runtime.
 \item \textbf{Supporto ai \glossaryItem{moduli}}.
 \item \textbf{Supporto alla \glossaryItem{programmazione} orientata agli oggetti}.
 \item \textbf{Controllo di tipo:} TypeScript fornisce anche un meccanismo di controllo di tipo a livello di compilazione.
+\item \textbf{Compilazione}, per eseguire l'applicazione \`e necessaria la compilazione dei file TypeScript.
 \end{itemize}
 \subsubsection{Svantaggi}
 \begin{itemize}
-\item \textbf{Perdita di flessibilit\`a}, con l'introduzione di tipi statici.
-\item \textbf{Compilazione}, per eseguire l'applicazione \`e necessaria la compilazione dei file TypeScript.
 \item \textbf{Supporto}, molti \glossaryItem{framework} supportano file \glossaryItem{JavaScript}, ma ancora non file TypeScript.
 \end{itemize}
