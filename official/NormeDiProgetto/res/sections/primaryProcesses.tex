@@ -164,25 +164,25 @@
                 Questo lint \`e configurabile tramite l'utilizzo di un file JSON, di cui sono state utilizzate le seguenti regole:
                 \begin{itemize}
 
-                \item \textit{member-access}: questa regola impone l'utilizzo di dichiarare esplicitamente la visibilit\`a dei membri di una classe;
-                \item \textit{member-ordening}: questa regola impone un ordinamento consistente dei membri delle classi, per fornire una lettura del codice pi\`u facile e maggiormente navigabile. In particolare, \`e stato deciso di scrivere prima le varibili e dopo i metodi, e per i medoti prima i metodi pubblici e dopo quelli privati;
-                \item \textit{no-any}: questa regola impedisce la dichiarazione di variabile di tipo \textit{any} nel codice Typescript, eliminando di fatto la non determinazione di tipo a \textit{static time};
+                \item \textit{member-access}: questa regola impone di dichiarare esplicitamente la visibilit\`a dei membri di una classe;
+                \item \textit{member-ordering}: questa regola impone un ordinamento consistente dei membri delle classi, per fornire una lettura del codice pi\`u facile e maggiormente navigabile. In particolare, \`e stato deciso di scrivere prima le varibili e dopo i metodi, e per i metodi, prima quelli pubblici e poi quelli privati;
+                \item \textit{no-any}: questa regola impedisce la dichiarazione di variabili di tipo \textit{any} nel codice Typescript, eliminando di fatto la non determinazione di tipo a \textit{static time};
                 \item \textit{no-internal-module}: questa regole impedisce l'uso di moduli interni, che portano confusione all'interno del codice. \`E invece imposto l'utilizzo della \textit{keyword} \textit{namespace};
                 \item \textit{no-var-requires}: questa regola impedisce l'utilizzo della \textit{keyword} Javascript \textit{require}, per favorire l'utilizzo della nuova \textit{keyword} \textit{import} introdotta da Typescript;
                 \item \textit{typedef}: questa regola impone di definire i tipi per metodi di ritorno, parametri, definizioni di variabili e di membri di classi;
                 \item \textit{typedef-whitespace}: questa regola impone di inserire degli spazi tra il tipo dichiarato e il suo nome, in maniera tale da aumentare la leggibilit\`a del codice;
-                \item \textit{curly}: questa regola impone l'utilizzo di parentesi grafe anche per \textit{statements} condizionali con istruzioni da una riga. Questo permette una maggiore leggibilit\`a del codice e contribuisce a manterlo ordinato e a prevenire errori;
-                \item \textit{no-bitwise}: questa regola disabilita l'utilizzo delle cosidette operazioni \textit{bitwise} all'interno di espressioni. Questo in quanto queste operazioni sono solitamente fonte di errore e degradano la leggibilit\`a del codice, rendendolo pi\`u confusionario. Per questo \`e stato deciso di eliminare il loro utilizzo;
+                \item \textit{curly}: questa regola impone l'utilizzo di parentesi graffe anche per \textit{statements} condizionali con istruzioni da una riga. Questo permette una maggiore leggibilit\`a del codice e contribuisce a manterlo ordinato e a prevenire errori;
+                \item \textit{no-bitwise}: questa regola disabilita l'utilizzo delle cosidette operazioni \textit{bitwise} all'interno di espressioni. Questo viene fatto poiché le operazioni bitwise sono spesso fonte di errore e degradano la leggibilit\`a e la manutenibilità del codice, rendendolo pi\`u confusionario.
                 \item \textit{no-conditional-assignment}: questa regola impedisce di poter assegnare valori a una variabile all'interno di espressioni condizionali (di tipo \textit{do-while}, \textit{if}, \textit{for} e \textit{while}). Queste operazioni sono molto spesso pericolose e sono fonte di errori;
-                \item \textit{no-duplicate-key}: questa regola impedisce la dichiarazioni di oggetti litterali con la stessa chiave;
-                \item \textit{no-duplicate-variable}: questa regola impedisce la dichiarazioni di variabile con lo stesso nome nello stesso \textit{scope}, evitando ridichiarazioni del compilatore e quindi evitando errori identificabili a tempo di esecuzione;
-                \item \textit{no-empty}: questa regola impedisce l'utilizzo di blocchi vuoti di codice, in quanto potrebbe indicare del codice mancante non implementato e potrebbe essere fonte di errore;
-                \item \textit{no-eval}: questa regola impedisce l'uso della funzione \textit{eval()} in Typescript, in quando \`e ritenuta pericolosa dal punto di vista della sicurezza e pu\`o permettere l'esecuzione arbitraria di codice passato come una stringa;
-                \item \textit{no-null-keyword}: questa regola impedisce l'uto della \textit{keyword} \textit{null} in favore dell'utilizzo della \textit{keyword} \textit{undefined}. Questo permette di uniformare il codice con l'utilizzo di una sola \textit{keyword};
-                \item \textit{no-string-literal}: questa regola impedisce l'accesso ad oggetti tramite stringe litterali, incoraggiando l'utilizzo delle propriet\`a di accesso di tipo fortemente tipate;
-                \item \textit{no-swith-case-fall-through}: questa regola impedisce l'utilizzo di \textit{switch} senza l'utilizzo della \textit{keyword} \textit{break} per ogni caso. In questa maniera vengono evitati errori in cui tutti i casi successivi a quello voluto vengano eseguiti involontariamente;
-                \item \textit{no-unreachable}: questa regola impedisce la codifica di codice non raggiungibile in nessun caso durante l'esecuzione. In questa maniera \`e pi\`u facile riconoscere eventuali errori logici al programmatore;
-                \item \textit{no-unused-expression}: questa regola impedisce la dichiarazione di oggetti senza un loro effettivo utilizzo. In questa maniera viene evitato che vengano dichiarati oggetti inutilizzati.
+                \item \textit{no-duplicate-key}: questa regola impedisce la dichiarazioni di \textit{object literals} con la stessa chiave;
+                \item \textit{no-duplicate-variable}: questa regola impedisce la dichiarazioni di variabile con lo stesso nome nello stesso \textit{scope}, evitando ridichiarazioni del compilatore e quindi evitando errori identificabili solamente a tempo di esecuzione;
+                \item \textit{no-empty}: questa regola impedisce l'utilizzo di blocchi vuoti di codice, in quanto potrebbero indicare del codice mancante, non implementato (e fonte d'errore);
+                \item \textit{no-eval}: questa regola impedisce l'uso della funzione \textit{eval()} in Typescript, in quanto \`e ritenuta pericolosa dal punto di vista della sicurezza e pu\`o permettere l'esecuzione arbitraria di codice passato come una stringa;
+                \item \textit{no-null-keyword}: questa regola impedisce l'uso della \textit{keyword} \textit{null} in favore dell'utilizzo della \textit{keyword} \textit{undefined}. Questo permette di uniformare il codice con l'utilizzo di una sola \textit{keyword};
+                \item \textit{no-string-literal}: questa regola impedisce l'accesso ad oggetti tramite \textit{string literals}, incoraggiando l'utilizzo delle propriet\`a di accesso di tipo fortemente tipate;
+                \item \textit{no-swith-case-fall-through}: questa regola impedisce l'utilizzo di \textit{switch} senza l'utilizzo della \textit{keyword} \textit{break} per ogni caso. In questa maniera si evitano errori in cui tutti i casi successivi a quello voluto vengono eseguiti involontariamente;
+                \item \textit{no-unreachable}: questa regola impedisce la scrittura di codice dopo gli \textit{statements: break, catch, throw, return}, che sarebbe non raggiungibile. In questa maniera \`e pi\`u facile riconoscere eventuali errori logici al programmatore;
+                \item \textit{no-unused-expression}: questa regola impedisce la dichiarazione di oggetti senza un loro effettivo utilizzo. 
                 \item \textit{no-use-before-declare}: questa regola impedisce l'utilizzo di variabili senza prima una loro dichiarazione. Questo tipo di codifica di solito porta a errori e all'inquinamento dello \textit{scope} globale, creando quindi confusione nel codice e una minore leggibilit\`a;
                 \item \textit{no-var-keyword}: questa regola disabilita la dichiarazione di variabili tramite la \textit{keyword} \textit{var}, ma impone l'utilizzo di \textit{let} per la dichiarazione di variabili, come consigliato da Typescript;
                 \item \textit{switch-default}: questa regola impone che quando uno \textit{switch} viene utilizzato sia sempre definito il caso \textit{default};
@@ -192,23 +192,22 @@
                 \item \textit{max-line-length}: questa regola impone la lunghezza massima di una riga a 80 colonne. Questo aiuta a mantenere uniformit\`a al codice e ne facilita di molto la lettura;
                 \item \textit{no-require-imports}: questa regola disabilita l'uso della \textit{keyword} \textit{require};
                 \item \textit{no-trailing-whitespace}: questa regola impone che nelle righe vuote non siano presenti spazi o tabulazioni;
-                \item \textit{trailing-comma}: questa regola impone nell'utilizzo di \textit{array} di oggetti litterali l'utilizzo della virgola;
-                \item \textit{align}: questa regola impone che sia presente un allignamento uniforme tra le varie istruzioni del codice, per facilitarne una migliore lettura;
-                \item \textit{class-name}: questa regola impone l'utilizzo della nomenclatura delle classi di tipo \textit{PascalCased};
+                \item \textit{trailing-comma}: questa regola impone l'utilizzo della virgola negli textit{array} e negli \textit{object literals};
+                \item \textit{align}: questa regola impone che sia presente un allineamento uniforme tra le varie istruzioni del codice, per facilitarne la lettura;
+                \item \textit{class-name}: questa regola impone che i nomi delle classi e delle interfacce seguano la notazione \textit{PascalCased};
                 \item \textit{comment-format}: questa regola impone un determinato stile per i commenti. Tutti i commenti devono iniziare con uno spazio e devono iniziare con la lettera maiuscola. Questa regola tenta di dare uniformit\`a a tutti i commenti presenti nel codice;
                 \item \textit{jsdoc-format}: questa regola impone lo stile \textit{JSDoc} per i commenti confacenti alla documentazione di una determinata classe o per un determinato metodo;
-                \item \textit{one-line}: questa regola impone che una singola istruzione sia presente su una riga e non venga mandata a capo. Questo per migliorare la lettura del codice;
+                \item \textit{one-line}: questa regola impone che una singola istruzione sia presente su una riga e non venga mandata a capo, per migliorare la lettura del codice;
                 \item \textit{quotemark}: questa regola impone l'utilizzo di doppi apici durante la stesura di tutto il codice;
                 \item \textit{semicolon}: questa regola impone l'utilizzo del punto e virgola alla fine di ogni istruzione in cui andrebbe posta. Questo permette di evitare errori in fase di codifica e di facilitare la lettura del codice;
-                \item \textit{variable-name}: questa regola impone la dichiarazioni di variabili seguendo lo stile \textit{camelCase}. Inoltre viene anche vietato di dare nomi a variabili corrispondenti a eventuali \textit{keywords};
+                \item \textit{variable-name}: questa regola impone che i nomi delle variabili seguano la notazione \textit{camelCase}. Inoltre viene anche vietato che i nomi delle variabili corrispondano a eventuali \textit{keywords};
                   \item \textit{whitespace}: questa regola impone l'inserimento di spazi in vari punti del codice, facilitando la lettura dello stesso e aiutando a mantenere uno stile uniforme.
                 \end{itemize}
 
                 
-                Questa scelta \`e strettamente correlata alla teoria sull'\textit{Analisi Statica}, in quanto da essa si evince che:
+                La scelta e l'utilizzo delle precedenti regole sono strettamente correlati alla teoria sull'\textit{Analisi Statica}, in quanto da essa si evince che:
                 \begin{itemize}
-		  \item L’adozione di \textit{standard} di codifica;
-                    deve essere coerente con la scelta dei metodi di \glossaryItem{verifica} adottati,         
+		  \item L’adozione di \textit{standard} di codifica deve essere coerente con la scelta dei metodi di \glossaryItem{verifica} adottati,         
                      %<<< slide 30/30 di ANALISI_STATICA
 		  \item L’\glossaryItem{efficacia} dei metodi di analisi statica \`e strettamente correlata alla qualit\`a di strutturazione del codice.
                 \end{itemize}
