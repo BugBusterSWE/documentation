@@ -243,6 +243,7 @@ Questo \glossaryItem{modulo} contiene la definizione delle \glossaryItem{API} ri
 \paragraph{RouterFacade}
 \paragraph*{Descrizione}
 Oggetto che implementa il Facade \glossaryItem{Design Pattern}. Tale oggetto incorpora tutte le \glossaryItem{API} definite nelle classi Router.
+La decisione di introdurre un oggetto che implementa il pattern Facade è dovuta al voler avere un unico oggetto che funga da interfaccia tra i router dichiarati e MaaSServer, aumentando così il disaccoppiamento tra le classi router e il core dell'applicazione.  
 
 \paragraph*{Relazione con altri \glossaryItem{moduli}}
 \begin{itemize}
