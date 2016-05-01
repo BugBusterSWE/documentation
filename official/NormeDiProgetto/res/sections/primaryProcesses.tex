@@ -3,19 +3,19 @@
 
 	\subsection{Processo di fornitura}	
 	\subsubsection{Oggetto del processo}
-	L'oggetto del presente \glossaryItem{Processo} è la stesura dello \StudioDiFattibilita, compito
-	di cui si occupa un \textit{Analista}.
-	\subsubsection{Struttura dello \textit{Studio di Fattibilit\'a v\VersioneSF{}}}
+	L'oggetto del presente \glossaryItem{processo} è la stesura dello \textit{Studio di Fattibilità}, compito
+	di cui si occupa un \textit{Analista}. Il \textit{Responsabile di Progetto} deve invece organizzare delle riunioni preventive, 
+	per permettere lo scambio di opinioni tra i membri del gruppo sui capitolati proposti.
+	\subsubsection{Struttura dello \textit{Studio di Fattibilità}}
 		\begin{itemize}
 			\item Capitolato scelto;
 				\begin{enumerate}
-					\item Descrizione
-					\item Valutazione sul dominio del \glossaryItem{progetto}
-					\item Motivazioni della scelta
+					\item Descrizione;
+					\item Valutazione sul dominio del \glossaryItem{progetto};
+					\item Motivazioni della scelta.
 				\end{enumerate}	
 			\item Valutazioni sugli altri capitolati, con rispettivi aspetti positivi e negativi.
 		\end{itemize}
-
 
 	\subsection{Processo di sviluppo}
         \subsubsection{Scopo del processo}
@@ -54,20 +54,22 @@
 				\end{itemize}
 			        %slide 40 di ING_REQUISITI: Cause di abbandono
 			        La stesura di un'Analisi dei Requisiti di qualit\`a \`e cruciale, infatti
-			        da un rapporto dello Standish Group del 1995 si nota come due delle cause primarie
+			        da un rapporto dello \textit{Standish Group} del 1995 si nota come due delle cause primarie
 			        di abbandono dei \glossaryItem{progetti} siano le seguenti:
 				\begin{itemize}
 				\item Requisiti incompleti;
 				\item Volatilità di specifiche e requisiti.
 				\end{itemize}
-			
+				Per analizzare e trovare i requisiti si utilizza la tecnica dei casi d’uso. Il tracciamento dei requisiti avviene 
+			        tramite il software \textit{Tracy}.
 			
 			%casi d'uso: si parte da 0 nella numerazione
 			\paragraph*{Struttura del documento}
 			Il documento prodotto dalla presente attivit\`a consister\`a in un elenco dei \glossaryItem{casi d'uso} individuati, 
                         ognuno avente la seguente forma:
 				\begin{itemize}
-				\item Codice identificativo: \textbf{UC-{X} x.y.z}
+				\item Codice identificativo: \textbf{UC-{X} x.y.z} (la numerazione \textbf{x.y.z} potrebbe non essere continua nel caso in cui vengano
+                                      rimossi alcuni dei casi d'uso numerati precedentemente.)
 						\begin{itemize}
 						\item \textbf{X}: rappresenta uno degli ambiti di riferimento individuati
 						nell'Analisi dei Requisiti, in particolare:
@@ -86,9 +88,29 @@
 				\item \glossaryItem{Scenario} principale;
                                 \item Estensioni.
 				\end{itemize}
+
 			Saranno altresì esposti i requisiti, associati alle rispettive fonti, nella forma seguente:
 				\begin{itemize}
-				\item Codice identificativo: \textbf{R{X}{Y} x.y.z}
+				\item Codice identificativo: \textbf{R{X}{Y} x.y.z}, dove:
+				      \begin{itemize}
+						\item \textbf{X} corrisponde alla tipologia del requisito e può assumere i seguenti valori:
+							\begin{itemize}
+								\item \textbf{1} = Funzionale;
+								\item \textbf{2} = Prestazionale;
+								\item \textbf{3} = Di Qualità;
+								\item \textbf{4} = Vincolo.
+							\end{itemize}
+						\item \textbf{Y} corrisponde alla priorità del requisito e può assumere i seguenti valori:
+							\begin{itemize}
+								\item \textbf{O} = Obbligatorio;
+								\item \textbf{D} = Desiderabile;
+								\item \textbf{F} = Facoltativo o Opzionale.
+							\end{itemize}
+						\item \textbf{Gerarchia}: identifica la relazione gerarchica che c’è tra i requisiti di uno stesso
+						tipo. Vi è dunque una struttura gerarchica per ogni tipologia di requisito.
+						La numerazione \textbf{x.y.z} potrebbe non essere continua nel caso in cui vengano
+						rimossi alcuni dei requisiti numerati precedentemente.
+				      \end{itemize}
 				\item Titolo;
 				\item Descrizione;
                 \item Fonti.
@@ -104,6 +126,7 @@
 				noto a tutti i membri del gruppo in quanto trattato durante il corso
 				di \textit{Ingegneria del Software}.
 				Si \`e scelto inoltre di adottare l'editor \glossaryItem{UML} \textit{Astah}.   %riferimento per astah
+                                Per mantenere la tracciabilità dei casi d'uso si è deciso di addotare l'utilizzo di \textit{Tracy} come base di dati.
 			
 			
 		\paragraph*{2. Attività di Progettazione}
@@ -150,6 +173,7 @@
 			\item \glossaryItem{Diagrammi} delle \textit{classi};	
 			\item \glossaryItem{Diagrammi} di \textit{attivit\`a}.
 		        \end{itemize}
+                        Anche in questo caso per mantenere una tracciabilità viene utilizzato \textit{Tracy} come base di dati per poter mantenere tutti i diagrammi prodotti e la loro descrizione.
 			 
 		
 		\paragraph*{3. Attività di Codifica}
