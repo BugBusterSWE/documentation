@@ -27,6 +27,8 @@ Dall'architettura sopra descritta sono stati individuati i seguenti \glossaryIte
 \caption{Diagramma dei \glossaryItem{package} del frontend}
 \end{figure}
 
+Come si può notare dal diagramma, è presente una dipendenza circolare tra le componenti del sistema. Tuttavia questa dipendenza non comporta problemi al funzionamento: il Dispatcher funge da cardine per questo sistema, registrando da una parte i tipi di Action che possono circolare nel sistema stesso e fornendo agli Store i metodi necessari per poter instradare correttamente le varie Action. L'utilizzo di questi oggetti per la comunicazione infatti rende possibile l'esistenza indipendente tra Store e ActionCreator.
+
 \subsection{WebAPIs}
 
 \begin{figure}[h]
