@@ -40,7 +40,7 @@
 				stesura del documento \textit{Analisi dei Requisiti}.
 			        %parlare di: IEEE 830-1998: Recommended Practice
 			        %for Software Requirements Specifications (slide 32 in ING_REQUISITI)
-			        Inotre la specifica dei requisiti dev'essere conforme ai principi dello standard \textit{IEEE 830-1998}, espressi in otto qualit\`a
+			        Inoltre la specifica dei requisiti dev'essere conforme ai principi dello standard \textit{IEEE 830-1998}, espressi in otto qualit\`a
 			        essenziali:
 				\begin{itemize}
 				\item Priva di ambiguit\`a (UNAMBIGOUS);
@@ -126,7 +126,7 @@
 				noto a tutti i membri del gruppo in quanto trattato durante il corso
 				di \textit{Ingegneria del Software}.
 				Si \`e scelto inoltre di adottare l'editor \glossaryItem{UML} \textit{Astah}.   %riferimento per astah
-                                Per mantenere la tracciabilità dei casi d'uso si è deciso di addotare l'utilizzo di \textit{Tracy} come base di dati.
+                                Per mantenere la tracciabilità dei casi d'uso si è deciso di adottare l'utilizzo di \textit{Tracy} come base di dati.
 			
 			
 		\paragraph*{2. Attività di Progettazione}
@@ -189,14 +189,14 @@
                 \begin{itemize}
 
                 \item \textit{member-access}: questa regola impone di dichiarare esplicitamente la visibilit\`a dei membri di una classe;
-                \item \textit{member-ordering}: questa regola impone un ordinamento consistente dei membri delle classi, per fornire una lettura del codice pi\`u facile e maggiormente navigabile. In particolare, \`e stato deciso di scrivere prima le varibili e dopo i metodi, e per i metodi, prima quelli pubblici e poi quelli privati;
+                \item \textit{member-ordering}: questa regola impone un ordinamento consistente dei membri delle classi, per fornire una lettura del codice pi\`u facile e maggiormente navigabile. In particolare, \`e stato deciso di scrivere prima le variabili e dopo i metodi, e per i metodi, prima quelli pubblici e poi quelli privati;
                 \item \textit{no-any}: questa regola impedisce la dichiarazione di variabili di tipo \textit{any} nel codice Typescript, eliminando di fatto la non determinazione di tipo a \textit{static time};
                 \item \textit{no-internal-module}: questa regole impedisce l'uso di moduli interni, che portano confusione all'interno del codice. \`E invece imposto l'utilizzo della \textit{keyword} \textit{namespace};
                 \item \textit{no-var-requires}: questa regola impedisce l'utilizzo della \textit{keyword} Javascript \textit{require}, per favorire l'utilizzo della nuova \textit{keyword} \textit{import} introdotta da Typescript;
                 \item \textit{typedef}: questa regola impone di definire i tipi per metodi di ritorno, parametri, definizioni di variabili e di membri di classi;
                 \item \textit{typedef-whitespace}: questa regola impone di inserire degli spazi tra il tipo dichiarato e il suo nome, in maniera tale da aumentare la leggibilit\`a del codice;
-                \item \textit{curly}: questa regola impone l'utilizzo di parentesi graffe anche per \textit{statements} condizionali con istruzioni da una riga. Questo permette una maggiore leggibilit\`a del codice e contribuisce a manterlo ordinato e a prevenire errori;
-                \item \textit{no-bitwise}: questa regola disabilita l'utilizzo delle cosidette operazioni \textit{bitwise} all'interno di espressioni. Questo viene fatto poiché le operazioni bitwise sono spesso fonte di errore e degradano la leggibilit\`a e la manutenibilità del codice, rendendolo pi\`u confusionario.
+                \item \textit{curly}: questa regola impone l'utilizzo di parentesi graffe anche per \textit{statements} condizionali con istruzioni da una riga. Questo permette una maggiore leggibilit\`a del codice e contribuisce a mantenerlo ordinato e a prevenire errori;
+                \item \textit{no-bitwise}: questa regola disabilita l'utilizzo delle cosiddette operazioni \textit{bitwise} all'interno di espressioni. Questo viene fatto poiché le operazioni bitwise sono spesso fonte di errore e degradano la leggibilit\`a e la manutenibilità del codice, rendendolo pi\`u confusionario.
                 \item \textit{no-conditional-assignment}: questa regola impedisce di poter assegnare valori a una variabile all'interno di espressioni condizionali (di tipo \textit{do-while}, \textit{if}, \textit{for} e \textit{while}). Queste operazioni sono molto spesso pericolose e sono fonte di errori;
                 \item \textit{no-duplicate-key}: questa regola impedisce la dichiarazioni di \textit{object literals} con la stessa chiave;
                 \item \textit{no-duplicate-variable}: questa regola impedisce la dichiarazioni di variabile con lo stesso nome nello stesso \textit{scope}, evitando ridichiarazioni del compilatore e quindi evitando errori identificabili solamente a tempo di esecuzione;
@@ -212,7 +212,7 @@
                 \item \textit{switch-default}: questa regola impone che quando uno \textit{switch} viene utilizzato sia sempre definito il caso \textit{default};
                 \item \textit{use-strict}: questa regola impone l'utilizzo della \textit{keyword} \textit{use-strict} definita nello standard ECMAScript 5;
                 \item \textit{eofline}: questa regola impone l'inserimento di una linea vuota alla fine del file, per seguire la convenzione UNIX;
-                \item \textit{ident}: questa regola impone l'identazione tramite spazi e non tramite tabulazioni;
+                \item \textit{ident}: questa regola impone l'indentazione tramite spazi e non tramite tabulazioni;
                 \item \textit{max-line-length}: questa regola impone la lunghezza massima di una riga a 80 colonne. Questo aiuta a mantenere uniformit\`a al codice e ne facilita di molto la lettura;
                 \item \textit{no-require-imports}: questa regola disabilita l'uso della \textit{keyword} \textit{require};
                 \item \textit{no-trailing-whitespace}: questa regola impone che nelle righe vuote non siano presenti spazi o tabulazioni;
