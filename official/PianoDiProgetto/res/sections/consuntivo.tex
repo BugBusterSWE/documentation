@@ -1,14 +1,82 @@
-\section{Consuntivo}
+\section{Consuntivo di periodo} %diventerà consuntivo a finire
 Verranno indicate di seguito le spese effettivamente sostenute, relative alle spese rendicontate, sia per ruolo che per persona.
 
-Sar\`a infine presentato un bilancio:
+Sar \`a infine presentato un bilancio:
 \begin{itemize}
 \item \textbf{positivo} se il preventivo supera il \glossaryItem{consuntivo};
 \item \textbf{negativo} se il \glossaryItem{consuntivo} supera il preventivo;
 \item \textbf{in pari} se \glossaryItem{consuntivo} e preventivo si equivalgono.
 \end{itemize}
 
+%-----------------------------------------------------------------------------------------------------
+%-------------------------------------- BILANCIO DELLE SPESE EFFETTIVE -------------------------------
+%-----------------------------------------------------------------------------------------------------
+\subsection{Bilancio delle spese effettive}
+\subsubsection{Consuntivo}
+Di seguito \`e riportato il consuntivo complessivo dei periodi di \textit{Analisi}, \textit{Analisi Miglioramenti}, \textit{Progettazione Architetturale} e \textit{Progettazione di Dettaglio e Codifica}.
 
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{ l c c }
+		\textbf{Ruolo} & \textbf{Ore} & \textbf{Costo} \\
+		\hline
+		Amministratore & 102(-10) & 2040(-200) \euro{} \\
+		Analista & 60(+3) & 1500(+75) \euro{} \\
+		Progettista & 272(-32) & 5984(-704) \euro{} \\
+		Programmatore & 141(+23) & 2115(+345) \euro{} \\
+		Responsabile & 39(-3) & 1170(-90) \euro{} \\
+		Verificatore & 175(+8) & 2625(+120) \euro{} \\
+		\hline
+		\textbf{Totale \glossaryItem{Consuntivo}} & 778 & 14980 \euro{} \\
+		\hline
+		\textbf{Totale Preventivo} & 789 & 15434 \euro{} \\
+		\hline
+		\textbf{Totale (Differenza)} & 11 & 454 \euro{} \\
+		\hline
+	\end{tabular}
+	\caption{Differenza preventivo/consuntivo delle spese effettive, con il periodo di \textit{Analisi}}
+\end{table}
+
+
+Poich\`e si ricorda che le ore del periodo di \textit{Analisi} sono a carico del fornitore, di seguito \`e riportato il consuntivo complessivo dei soli periodi di \textit{Analisi Miglioramenti}, \textit{Progettazione Architetturale} e \textit{Progettazione di Dettaglio e Codifica}.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{ l c c }
+		\textbf{Ruolo} & \textbf{Ore} & \textbf{Costo} \\
+		\hline
+		Amministratore & 69(+13) & 1380(-140) \euro{} \\
+		Analista & 10(+3) & 250(+75) \euro{} \\
+		Progettista & 264(-34) & 5808(-748) \euro{} \\
+		Programmatore & 141(+23) & 2115(+345) \euro{} \\
+		Responsabile & 6(+4) & 180(+120) \euro{} \\
+		Verificatore & 139 & 2085 \euro{} \\
+		\hline
+		\textbf{Totale \glossaryItem{Consuntivo}} & 618 & 11470 \euro{} \\
+		\hline
+		\textbf{Totale Preventivo} & 629 & 11818 \euro{} \\
+		\hline
+		\textbf{Totale (Differenza)} & 11 & 348 \euro{} \\
+		\hline
+	\end{tabular}
+	\caption{Differenza preventivo/consuntivo delle spese effettive, senza il periodo di \textit{Analisi}}
+\end{table}
+
+
+
+
+\subsubsection{Conclusione}
+In generale si \`e riscontrato che si sono presentate delle discrepanze tra i costi presenti nel consuntivo e quelli effettivi, portando il \textit{Bilancio delle spese effettive} al di sotto dei costi preventivati. 
+Per la maggior parte delle attivit\`a la differenza \`e piccola, mentre per quelle di \textit{progettazione} e \textit{programmazione} risulta essere pi\`u elevata delle altre.
+In particolare \`e stata sovrastimata l'attivit\`a di \textit{progettazione} e sottostimata quella di \textit{programmazione}.
+
+
+
+
+
+
+\newpage
 %-----------------------------------------------------------------------------------------------------
 %-------------------------------------- ANALISI ------------------------------------------------------
 %-----------------------------------------------------------------------------------------------------
@@ -41,8 +109,8 @@ Verranno indicate le ore di ruolo e le spese effettivamente sostenute durante il
 
 
 \subsubsection{Conclusione}
-Il \glossaryItem{team} ha impegnato otto ore in pi\`u per l'attivit\`a di \glossaryItem{verifica}, due ore in pi\`u per l'attivit\`a di progettazione, tre ore in meno per l'attivit\`a di amministrazione e sette ore in meno per l'attivit\`a di gestione di \glossaryItem{progetto}. Questo ha permesso un risparmio di 106,00 \euro{} portando il costo \glossaryItem{consuntivo} al di sotto di quello preventivato.
-
+Durante la pianificazione di questo periodo sono state sovrastimate le attivit\`a di \textit{amministrazione} e di \textit{gestione di progetto}, mentre sono state sottostimate quelle di \textit{progettazione} e di \textit{verifica}.
+Questo ha permesso di risparmiare 106,00 \euro{}, portando il costo \glossaryItem{consuntivo} al di sotto di quello preventivato.
 \newpage
 
 
@@ -78,7 +146,9 @@ Verranno indicate le ore di ruolo e le spese effettivamente sostenute durante il
 
 
 \subsubsection{Conclusione}
-Il \glossaryItem{team} ha impegnato 3 ore in meno per l'attivit\`a di \glossaryItem{verifica}, un'ora ora in meno per l'attivit\`a di progettazione e tre ore in più per l'attivit\`a di amministrazione di \glossaryItem{progetto}. Questo ha permesso di risparmiare un'ora e 7,00 \euro{}, portando il costo \glossaryItem{consuntivo} al di sotto di quello preventivato.
+Durante la pianificazione di questo periodo sono state sovrastimate le attivit\`a di \textit{progettazione} e di \textit{verifica}, mentre \`e stata sottostimata quella di \textit{amministrazione}.
+Questo ha permesso di risparmiare 1 ora e 7,00 \euro{}, portando il costo \glossaryItem{consuntivo} al di sotto di quello preventivato.
+
 
 \newpage
 
@@ -115,58 +185,40 @@ Verranno indicate le ore di ruolo e le spese effettivamente sostenute durante il
 
 
 \subsubsection{Conclusione}
-Il \glossaryItem{team} ha impegnato nove ore in meno per l'attivit\`a di progettazione, un'ora ora in più per l'attivit\`a di analisi, due ore in pi\'u per l'attivit\'a di gestione di \glossaryItem{progetto} e sei ore in pi\'u per l'attivit\'a di \glossaryItem{verifica}. Questo ha permesso di risparmiare 23,00 \euro{}, portando il costo \glossaryItem{consuntivo} al di sotto di quello preventivato.
+Durante la pianificazione di questo periodo \`e stata sovrastimata l'attivit\`a di \textit{progettazione}, mentre sono state sottostimate quelle di \textit{analisi},\textit{gestione di progetto} e di \textit{verifica}.
+Questo ha permesso di risparmiare 23,00 \euro{}, portando il costo \glossaryItem{consuntivo} al di sotto di quello preventivato.
 
 %-----------------------------------------------------------------------------------------------------
-%-------------------------------------- BILANCIO DELLE SPESE EFFETTIVE -------------------------------
+%-------------------------------------- PROGETTAZIONE DI DETTAGLIO E CODIFICA ------------------------
 %-----------------------------------------------------------------------------------------------------
-\subsection{Bilancio delle Spese Effettive}
-Di seguito è riportato il \textit{Bilancio delle Spese Effettive} complessivo dei periodi di \textit{Analisi}, \textit{Analisi Miglioramenti} e \textit{Progettazione Architetturale}.
+\subsection{Progettazione di Dettaglio e Codifica}
+\subsubsection{Consuntivo}
+Verranno indicate le ore di ruolo e le spese effettivamente sostenute durante il periodo di \textit{Progettazione di Dettaglio e Codifica}.
 
 \begin{table}[H]
 	\centering
 	\begin{tabular}{ l c c }
 		\textbf{Ruolo} & \textbf{Ore} & \textbf{Costo} \\
 		\hline
-		Amministratore & 52 & 1040 \euro{} \\
-		Analista & 57(+1) & 1425(+25) \euro{} \\
-		Progettista & 152(-8) & 3344(-176) \euro{} \\
-		Programmatore & 0 & 0 \euro{} \\
-		Responsabile & 36(-5) & 1080(-150) \euro{} \\
-		Verificatore & 121(+11) & 1815(+165) \euro{} \\
-		\hline
-		\textbf{Totale \glossaryItem{Consuntivo}} & 417 & 8568 \euro{} \\
-		\hline
-		\textbf{Totale Preventivo} & 418 & 8704 \euro{} \\
-		\hline
-		\textbf{Totale (Differenza)} & 1 & 136 \euro{} \\
-		\hline
-	\end{tabular}
-	\caption{Differenza preventivo/consuntivo delle spese effettive, con il periodo di \textit{Analisi}}
-\end{table}
-
-Poichè si ricorda che le ore del periodo di \textit{Analisi} sono a carico del fornitore, di seguito è riportato il \textit{Bilancio delle Spese Effettive} complessivo dei soli periodi di \textit{Analisi Miglioramenti} e \textit{Progettazione Architetturale}.
-
-\begin{table}[H]
-	\centering
-	\begin{tabular}{ l c c }
-		\textbf{Ruolo} & \textbf{Ore} & \textbf{Costo} \\
-		\hline
-		Amministratore & 19(+3) & 380(+60) \euro{} \\
-		Analista & 7(+1) & 175(+25) \euro{} \\
-		Progettista & 144(-10) & 3168(-220) \euro{} \\
-		Programmatore & 0 & 0 \euro{} \\
+		Amministratore & 50(-10) & 1000(-200) \euro{} \\
+		Analista & 3(+2) & 75(+50) \euro{} \\
+		Progettista & 120(-24) & 2640(-528) \euro{} \\ %(3*8*4)
+		Programmatore & 141(+23) & 2115(+345) \euro{} \\ %(5*8*4 + altre)
 		Responsabile & 3(+2) & 90(+60) \euro{} \\
-		Verificatore & 85(+3) & 1275(+45) \euro{} \\
+		Verificatore & 54(-3) & 810(-45) \euro{} \\
 		\hline
-		\textbf{Totale \glossaryItem{Consuntivo}} & 257 & 5058 \euro{} \\
+		\textbf{Totale \glossaryItem{Consuntivo}} & 361 & 6412 \euro{} \\
 		\hline
-		\textbf{Totale Preventivo} & 258 & 5088 \euro{} \\
+		\textbf{Totale Preventivo} & 371 & 6730 \euro{} \\
 		\hline
-		\textbf{Totale (Differenza)} & 1 & 30 \euro{} \\
+		\textbf{Totale (Differenza)} & 10 & 318 \euro{} \\
 		\hline
 	\end{tabular}
-	\caption{Differenza preventivo/consuntivo delle spese effettive, senza il periodo di \textit{Analisi}}
+	\caption{Ore rendicontate, differenza preventivo/consuntivo nel periodo di \textit{Progettazione di Dettaglio e Codifica}}
 \end{table}
 
-\newpage
+
+
+\subsubsection{Conclusione}
+Durante la pianificazione di questo periodo sono state sovrastimate le attivit\`a di \textit{amministrazione}, \textit{progettazione} e di \textit{verifica}, mentre sono state sottostimate quelle di \textit{analisi},\textit{programmazione} e di \textit{gestione di progetto}.
+Questo ha permesso di risparmiare 10 ore e 318,00 \euro{}, portando il costo \glossaryItem{consuntivo} al di sotto di quello preventivato.
