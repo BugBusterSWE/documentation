@@ -171,6 +171,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
         \textbf{Precondizioni}  & L'Utente Autenticato ha visualizzato la pagina di modifica del profilo. \\ 
         
         \textbf{Postcondizioni} & L'Utente Autenticato ha inserito la propria password. \\ 
+        \textbf{Scenario principale} & 1. L'Utente Autenticato inserisce la propria password. \\
       \end{longtable}
       \egroup
     \end{center}
@@ -192,6 +193,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
         \textbf{Precondizioni}  & L'Utente Autenticato ha visualizzato la pagina di modifica del profilo. \\ 
         
         \textbf{Postcondizioni} & L'Utente Autenticato ha inserito una nuova password. \\ 
+        \textbf{Scenario principale} & 1. L'Utente Autenticato inserisce una nuova password.  \\
       \end{longtable}
       \egroup
     \end{center}
@@ -214,6 +216,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
         \textbf{Precondizioni}  & L'Utente Autenticato ha precedentemente inserito la nuova password. (UC-U9.2.2) \\ 
         
         \textbf{Postcondizioni} & L'Utente Autenticato ha completato la \glossaryItem{procedura} di cambiamento della password. La nuova password inserita ha sostituito la password precedente. \\ 
+        \textbf{Scenario principale} & 1. L'Utente Autenticato inserisce di nuovo la password. \\
       \end{longtable}
       \egroup
     \end{center}
@@ -231,11 +234,12 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
         \hline
         
         \textbf{Attori Primari} & Utente autenticato \\ 
-        \textbf{Scopo e Descrizione} & L'Utente Autenticato visualizza un messaggio di errore durante \glossaryItem{procedura} di modifica del profilo dovuto all'inserimento di una password errata. \\ 
+        \textbf{Scopo e Descrizione} & L'Utente Autenticato visualizza un messaggio di errore durante la \glossaryItem{procedura} di modifica del profilo dovuto all'inserimento di una password errata. \\ 
         
         \textbf{Precondizioni}  & L'Utente Autenticato ha inserito una password errata nella \glossaryItem{procedura} di cambio della password. \\ 
         
         \textbf{Postcondizioni} & L'Utente Autenticato ha visualizzato il messaggio di errore. \\ 
+        \textbf{Scenario principale} & 1. L'Utente Autenticato visualizza un messaggio di errore durante la \glossaryItem{procedura} di modifica del profilo dovuto all'inserimento di una password errata.  \\
       \end{longtable}
       \egroup
     \end{center}
@@ -258,6 +262,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
         \textbf{Precondizioni}  & L'Utente Autenticato non ha reinserito correttamente la nuova password. \\ 
         
         \textbf{Postcondizioni} & L'Utente Autenticato ha visualizzato il messaggio di errore. \\ 
+        \textbf{Scenario principale} & 1. L'Utente Autenticato visualizza un messaggio di errore dovuto al reinserimento errato della nuova password (la nuova password è diversa da quella inserita la prima volta).  \\
       \end{longtable}
       \egroup
     \end{center}
@@ -278,7 +283,8 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
         
         \textbf{Precondizioni}  & L'Utente Autenticato ha acconsentito con la continuazione della \glossaryItem{procedura}. \\ 
         
-        \textbf{Postcondizioni} & L'Utente Autenticato visualizza un messaggio di avvenuta cancellazione e le sue credenziali vengono eliminate da \glossaryItem{MaaS}. \\ 
+        \textbf{Postcondizioni} & L'Utente Autenticato visualizza un messaggio di avvenuta cancellazione e le sue credenziali vengono eliminate da \glossaryItem{MaaS}. \\
+        \textbf{Scenario principale} & 1. L'Utente Autenticato rimuove il proprio profilo.  \\
       \end{longtable}
       \egroup
     \end{center}
@@ -337,6 +343,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
         \textbf{Precondizioni}  & L'\glossaryItem{Owner} non inserisce correttamente il nome della \glossaryItem{Company}. \\ 
         
         \textbf{Postcondizioni} & L'\glossaryItem{Owner} ha visualizzato il messaggio di errore. \\ 
+        \textbf{Scenario principale} & 1. L'\glossaryItem{Owner} visualizza il messaggio di errore dovuto all'inserimento di un nome errato della propria \glossaryItem{Company}.  \\
       \end{longtable}
       \egroup
     \end{center}
@@ -361,6 +368,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
         \textbf{Precondizioni}  & L'\glossaryItem{Owner} ha acconsentito alla continuazione della \glossaryItem{procedura}. \\ 
         
         \textbf{Postcondizioni} & L'\glossaryItem{Owner} visualizza un messaggio di avvenuto inserimento dei dati. \\ 
+        \textbf{Scenario principale} & 1. L'\glossaryItem{Owner} inserisce il nome della propria \glossaryItem{Company}. \\
       \end{longtable}
       \egroup
     \end{center}
@@ -422,7 +430,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
                     \textbf{Precondizioni}  & L’applicazione è funzionante e pronta all'uso. Gli utenti possono accedere alla propria pagina \glossaryItem{Dashboard}.\\ 
                     
                     \textbf{Postcondizioni} & L'utente visualizza il risultato della specifica \glossaryItem{DSL} \\ 
-                    \textbf{Scenario principale} & Nessuno\\
+                    \textbf{Scenario principale} & 1. L'utente Autenticato, Ospite e Membro eseguono una specifica \glossaryItem{DSL}.  \\
                     \textbf{Estensioni} & 1. L'utente visualizza un messaggio di errore in quanto non ha i permessi per operare sulla specifica \glossaryItem{DSL} (UC-U12)  \\
                   \end{longtable}
                   \egroup
@@ -445,6 +453,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
                     \textbf{Precondizioni}  & L’applicazione è funzionante e pronta all'uso. Gli utenti possono accedere alla propria \glossaryItem{Dashboard}. \\ 
                     
                     \textbf{Postcondizioni} & L'utente modifica la specifica \glossaryItem{DSL} \\ 
+                    \textbf{Scenario principale} & 1. Il Membro modifica una specifica \glossaryItem{DSL} tramite l'editor.  \\
                     \textbf{Estensioni} & 1. L'utente visualizza un messaggio di errore in quanto non ha i permessi per operare sulla specifica \glossaryItem{DSL} (UC-U12)  \\
                   \end{longtable}
                   \egroup
@@ -459,7 +468,6 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
                     \hline
                     \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U11.3 - Creazione specifica \glossaryItem{DSL}}} \\ 
                     \hline
-                    
 
                     \textbf{Attori Primari} & Membro  \\ 
                     \textbf{Scopo e Descrizione} & Il Membro crea una specifica \glossaryItem{DSL} tramite l'editor\\ 
@@ -467,6 +475,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
                     \textbf{Precondizioni}  & L’applicazione è funzionante e pronta all'uso. Gli utenti possono accedere alla propria pagina \glossaryItem{Dashboard}.\\ 
                     
                     \textbf{Postcondizioni} & L'utente aggiunge la specifica \glossaryItem{DSL} a \glossaryItem{MaaS} \\ 
+                    \textbf{Scenario principale} & 1. Il Membro crea una specifica \glossaryItem{DSL} tramite l'editor.  \\
                     \textbf{Estensioni} & 1. L'utente visualizza un messaggio di errore in quanto non ha i permessi per operare sulla specifica \glossaryItem{DSL} (UC-U12)  \\
                   \end{longtable}
                   \egroup
@@ -488,6 +497,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
                     \textbf{Precondizioni}  & L’applicazione è funzionante e pronta all'uso. Gli utenti possono accedere alla propria pagina \glossaryItem{Dashboard}.\\ 
                     
                     \textbf{Postcondizioni} & L'utente legge la specifica \glossaryItem{DSL} \\ 
+                    \textbf{Scenario principale} & 1. Il Membro legge una specifica \glossaryItem{DSL}.  \\
                     \textbf{Estensioni} & 1. L'utente visualizza un messaggio di errore in quanto non ha i permessi per operare sulla specifica \glossaryItem{DSL} (UC-U12)  \\
                   \end{longtable}
                   \egroup
@@ -512,6 +522,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
             \textbf{Precondizioni}  & L'Utente Autenticato ha eseguito un'operazione su una specifica \glossaryItem{DSL} per la quale non dispone dei permessi. \\ 
             
             \textbf{Postcondizioni} & L'Utente Autenticato ha visualizzato il messaggio di errore. \\ 
+            \textbf{Scenario principale} & 1.  L’Utente Autenticato visualizza un messaggio di errore nel tentativo di eseguire un'operazione su una specifica \glossaryItem{DSL}.  \\
           \end{longtable}
           \egroup
         \end{center}
@@ -567,6 +578,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
                     \textbf{Precondizioni}  & La specifica \glossaryItem{DSL} selezionata è già stata creata in precedenza. \\ 
                     
                     \textbf{Postcondizioni} & L'operazione sulla specifica \glossaryItem{DSL} è apportata. \\ 
+                    \textbf{Scenario principale} & 1. L'amministratore o l'\glossaryItem{Owner} effettuano un'operazione su una specifica \glossaryItem{DSL}.  \\
                   \end{longtable}
                   \egroup
                 \end{center}
@@ -590,6 +602,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
                     \textbf{Precondizioni}  & La specifica \glossaryItem{DSL} selezionata è già stata creata in precedenza. \\ 
                     
                     \textbf{Postcondizioni} & La modifica sui permessi di una specifica \glossaryItem{DSL} è apportata. \\ 
+                    \textbf{Scenario principale} & 1. L'amministratore o l'\glossaryItem{Owner} modificano un permesso di una specifica \glossaryItem{DSL}.  \\
                   \end{longtable}
                   \egroup
                 \end{center}
@@ -613,6 +626,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
                     \textbf{Precondizioni}  & La specifica \glossaryItem{DSL} selezionata è già stata creata in precedenza. \\ 
                     
                     \textbf{Postcondizioni} & La cancellazione del permesso sulla specifica \glossaryItem{DSL} è apportata. \\ 
+                    \textbf{Scenario principale} & 1. L'amministratore o l'\glossaryItem{Owner} decidono di cancellare un permesso su una specifica \glossaryItem{DSL}.  \\
                   \end{longtable}
                   \egroup
                 \end{center}
@@ -628,11 +642,12 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
                     \hline
                     
                     \textbf{Attori Primari} & \textit{Owner} \\ 
-                    \textbf{Scopo e Descrizione} & L'\textit{Owner} inserisce l'indirizzo email dell'utente che vuole invitare\\ 
+                    \textbf{Scopo e Descrizione} & L'\textit{Owner} inserisce l'indirizzo email dell'utente che vuole invitare. \\ 
                     
                     \textbf{Precondizioni}  & Nessuna. \\     %%TODO: non-sense
                     
                     \textbf{Postcondizioni} & L'utente è stato invitato. \\ 
+                    \textbf{Scenario principale} & 1. L'\glossaryItem{Owner} inserisce l'indirizzo email dell'utente che vuole invitare.  \\
                   \end{longtable}
                   \egroup
                 \end{center}
@@ -648,11 +663,12 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
                     \hline
                     
                     \textbf{Attori Primari} & \textit{Owner} \\ 
-                    \textbf{Scopo e Descrizione} & L'\textit{Owner} inserisce l'indirizzo email dell'utente che vuole rimuovere\\ 
+                    \textbf{Scopo e Descrizione} & L'\textit{Owner} inserisce l'indirizzo email dell'utente che vuole rimuovere. \\ 
                     
                     \textbf{Precondizioni}  & L'indirizzo email utente è presente in \glossaryItem{MaaS}. \\ 
                     
                     \textbf{Postcondizioni} & L'utente è stato rimosso. \\ 
+                    \textbf{Scenario principale} & 1. L'\textit{Owner} inserisce l'indirizzo email dell'utente che vuole rimuovere.  \\
                   \end{longtable}
                   \egroup
                 \end{center}
@@ -674,6 +690,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
                     \textbf{Precondizioni}  & Nessuna \\ 
                     
                     \textbf{Postcondizioni} & Un nuovo utente \`e stato aggiunto a \glossaryItem{MaaS}. \\ 
+                    \textbf{Scenario principale} & 1. L'\textit{Owner} inserisce un nuovo utente all'applicazione.  \\
                   \end{longtable}
                   \egroup
                 \end{center}
@@ -696,6 +713,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
         \textbf{Precondizioni}  & L'Utente Autenticato ha inserito un indirizzo email già presente nel sistema. \\ 
         
         \textbf{Postcondizioni} & L'Utente Autenticato ha visualizzato il messaggio di errore. \\ 
+        \textbf{Scenario principale} & 1. L'Utente Autenticato visualizza un messaggio di errore durante la \glossaryItem{procedura} di modifica del profilo causato dall'inserimento di un indirizzo email già presente nel sistema.  \\
       \end{longtable}
       \egroup
     \end{center}
@@ -719,6 +737,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
             \textbf{Precondizioni}  & L'Utente Autenticato ha eseguito un'operazione su un utente di cui non dispone i permessi. \\ 
             
             \textbf{Postcondizioni} & L'Utente Autenticato ha visualizzato il messaggio di errore. \\ 
+            \textbf{Scenario principale} & 1.  L’Utente Autenticato visualizza un messaggio di errore nel tentativo di eseguire un'operazione su un utente.  \\
           \end{longtable}
           \egroup
         \end{center}
@@ -775,6 +794,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
         \textbf{Precondizioni}  & L'applicazione mostra la \glossaryItem{Dashboard}. \\ 
         
         \textbf{Postcondizioni} & L'utente ha visualizzato la propria \glossaryItem{Dashboard}. \\ 
+        \textbf{Scenario principale} & 1. L'Utente Autenticato visualizza la \glossaryItem{Dashboard}. \\
       \end{longtable}
       \egroup
     \end{center}
@@ -797,6 +817,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
         \textbf{Precondizioni}  & L'utente si trova nella pagina \glossaryItem{Dashboard} e seleziona l'elemento che vuole eliminare. \\ 
         
         \textbf{Postcondizioni} & Il sistema ha rimosso l'elemento. \\ 
+        \textbf{Scenario principale} & 1. L'Utente Autenticato elimina degli elementi presenti nella sua \glossaryItem{Dashboard}. \\
       \end{longtable}
       \egroup
     \end{center}
@@ -826,48 +847,22 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
         \textbf{Precondizioni}  & L'Utente Autenticato ha visualizzato la pagina iniziale \glossaryItem{Dashboard}. \\ 
         
         \textbf{Postcondizioni} & L'applicazione ha eseguito le operazioni sulle righe della \glossaryItem{Dashboard} richieste dall'Utente Autenticato. \\ 
-        \textbf{Scenario principale} & 1. Visualizzazione element \glossaryItem{Dashboard} (UC-U16.1)
-        
-1.1 L'utente visualizza una \glossaryItem{Cell} (UC-U16.2)
+        \textbf{Scenario principale} & 1. L'utente visualizza una \glossaryItem{Cell} (UC-U16.2)
 
-1.2 L'utente visualizza un \glossaryItem{Document} (UC-U16.3)
+2. L'utente visualizza un \glossaryItem{Document} (UC-U16.3)
 
-1.3 L'utente visualizza una \glossaryItem{Collection} (UC-U16.4)
+3. L'utente visualizza una \glossaryItem{Collection} (UC-U16.4)
 
-2. L'utente desidera effettuare un'operazione su una riga
+4. L'utente desidera effettuare un'operazione su una riga
 
-2.1 L'utente effettua un'operazione su una \glossaryItem{Cell} (UC-U16.5)
+4.1 L'utente effettua un'operazione su una \glossaryItem{Cell} (UC-U16.5)
 
-2.2 L'utente effettua un'operazione su un \glossaryItem{Document} (UC-U16.6)
+4.2 L'utente effettua un'operazione su un \glossaryItem{Document} (UC-U16.6)
 
-2.3 L'utente effettua un'operazione su una \glossaryItem{Collection} (UC-U16.7) \\
+4.3 L'utente effettua un'operazione su una \glossaryItem{Collection} (UC-U16.7) \\
       \end{longtable}
       \egroup
     \end{center}
-    
-
-\subsubsection{Visualizzazione element Dashboard}
-    %Tabella 
-    \begin{center}
-      \bgroup
-      \def\arraystretch{1.8}     
-      \begin{longtable}{  p{3.5cm} | p{8cm} } 
-        
-        \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U16.1 - Visualizzazione element \glossaryItem{Dashboard}}} \\ 
-        \hline
-        
-        \textbf{Attori Primari} & Utente autenticato \\ 
-        \textbf{Scopo e Descrizione} & L'Utente Autenticato può visualizzare un element dalla \glossaryItem{Dashboard} (che può essere una \glossaryItem{Cell}, un \glossaryItem{Document} o una \glossaryItem{Collection}). \\ 
-        
-        \textbf{Precondizioni}  & L'Utente Autenticato ha visualizzato la pagina \glossaryItem{Dashboard}. \\ 
-        
-        \textbf{Postcondizioni} & L'Utente Autenticato viene reindirizzato alla pagina di visione dell'element selezionato. \\ 
-      \end{longtable}
-      \egroup
-    \end{center}
-
-\newpage
 
 \subsubsection{Visualizzazione Cell}
 
@@ -887,6 +882,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
         \textbf{Precondizioni}  & L'Utente Autenticato ha visualizzato la pagina \glossaryItem{Dashboard}. \\ 
         
         \textbf{Postcondizioni} & L'Utente Autenticato è stato reindirizzato nella pagina \glossaryItem{Cell} e ne ha visualizzato il contenuto. \\ 
+        \textbf{Scenario principale} & 1. L'Utente Autenticato visualizza una \glossaryItem{Cell} selezionata nella \glossaryItem{Dashboard}. \\
       \end{longtable}
       \egroup
     \end{center}
@@ -908,7 +904,8 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
         
         \textbf{Precondizioni}  & L'Utente Autenticato ha visualizzato la pagina \glossaryItem{Dashboard}. \\ 
         
-        \textbf{Postcondizioni} & L'Utente Autenticato è stato reindirizzato nella pagina \glossaryItem{Document} e ne ha visualizzato il contenuto. \\ 
+        \textbf{Postcondizioni} & L'Utente Autenticato è stato reindirizzato nella pagina \glossaryItem{Document} e ne ha visualizzato il contenuto. \\
+        \textbf{Scenario principale} & 1. L'Utente Autenticato visualizza un \glossaryItem{Document} selezionato nella \glossaryItem{Dashboard}. \\
       \end{longtable}
       \egroup
     \end{center}
@@ -931,6 +928,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
         \textbf{Precondizioni}  & L'Utente Autenticato ha visualizzato la pagina \glossaryItem{Dashboard}. \\ 
         
         \textbf{Postcondizioni} & L'Utente Autenticato è stato reindirizzato nella pagina \glossaryItem{Collection} e ne ha visualizzato il contenuto. \\ 
+        \textbf{Scenario principale} & 1. L'Utente Autenticato visualizza una \glossaryItem{Collection} selezionata nella \glossaryItem{Dashboard}. \\
       \end{longtable}
       \egroup
     \end{center}
@@ -988,6 +986,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
         \textbf{Precondizioni}  & L'Utente Autenticato ha visualizzato la pagina \glossaryItem{Cell}.  \\ 
         
         \textbf{Postcondizioni} & L'Utente Autenticato ha aggiunto un valore arbitrario nella \glossaryItem{Cell}. \\ 
+        \textbf{Scenario principale} & 1. L'Utente Autenticato aggiunge un valore arbitrario nella \glossaryItem{Cell}. \\
       \end{longtable}
       \egroup
     \end{center}
@@ -1010,6 +1009,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
         \textbf{Precondizioni}  & L'Utente Autenticato ha visualizzato la pagina \glossaryItem{Cell}. \\ 
         
         \textbf{Postcondizioni} & L'Utente Autenticato ha modificato il valore della \glossaryItem{Cell}. \\ 
+        \textbf{Scenario principale} & 1. L'Utente Autenticato modifica il valore della \glossaryItem{Cell}. \\
       \end{longtable}
       \egroup
     \end{center}
@@ -1031,6 +1031,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
         \textbf{Precondizioni}  & L'Utente Autenticato ha visualizzato la pagina \glossaryItem{Cell}. \\ 
         
         \textbf{Postcondizioni} & L'Utente Autenticato ha ordinato il valore della \glossaryItem{Cell}. \\ 
+        \textbf{Scenario principale} & 1. L'Utente Autenticato ordina il valore nella \glossaryItem{Cell}. \\
       \end{longtable}
       \egroup
     \end{center}
@@ -1090,7 +1091,8 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
         
         \textbf{Precondizioni}  & L'Utente Autenticato ha visualizzato una pagina \glossaryItem{Document} all'interno della quale desidera apportare delle modifiche. \\ 
         
-        \textbf{Postcondizioni} & L'applicazione \glossaryItem{MaaS} ha apportato le modifiche richieste dall'utente al \glossaryItem{Document} selezionato. \\ 
+        \textbf{Postcondizioni} & L'applicazione \glossaryItem{MaaS} ha apportato le modifiche richieste dall'utente al \glossaryItem{Document} selezionato. \\
+        \textbf{Scenario principale} & 1. L'Utente Autenticato modifica un \glossaryItem{Document}. \\
       \end{longtable}
       \egroup
     \end{center}
@@ -1113,6 +1115,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
         \textbf{Precondizioni}  & L'Utente Autenticato ha apportato delle modifiche a un \glossaryItem{Document}. \\ 
         
         \textbf{Postcondizioni} & Le modifiche apportate dall'Utente Autenticato al \glossaryItem{Document} selezionato sono state annullate. \\ 
+        \textbf{Scenario principale} & 1. L'Utente Autenticato annulla le modifiche precedentemente apportate a un \glossaryItem{Document}. \\
       \end{longtable}
       \egroup
     \end{center}
@@ -1135,6 +1138,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
         \textbf{Precondizioni}  & L'Utente Autenticato ha visualizzato la pagina \glossaryItem{Document} da rimuovere. \\ 
         
         \textbf{Postcondizioni} & La pagina \glossaryItem{Document} selezionata è stata rimossa. \\ 
+        \textbf{Scenario principale} & 1. L'Utente Autenticato rimuove un \glossaryItem{Document}. \\
       \end{longtable}
       \egroup
     \end{center}
@@ -1157,7 +1161,8 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
         
         \textbf{Precondizioni}  & L'Utente Autenticato ha visualizzato la pagina del \glossaryItem{Document} su cui effettuare le operazioni di `Export' o di `Send email'. \\ 
         
-        \textbf{Postcondizioni} & L'applicazione \glossaryItem{MaaS} ha eseguito la richiesta dell'utente. \\ 
+        \textbf{Postcondizioni} & L'applicazione \glossaryItem{MaaS} ha eseguito la richiesta dell'utente. \\
+        \textbf{Scenario principale} & 1. L'Utente Autenticato esporta il \textit{Document} in formato \textit{json} o \textit{csv}. \\
       \end{longtable}
       \egroup
     \end{center}
@@ -1180,15 +1185,13 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
         \textbf{Precondizioni}  & L'Utente Autenticato ha visualizzato la pagina \glossaryItem{Document} su cui effettuare l'operazione di `Send mail`. \\ 
         
         \textbf{Postcondizioni} & L'applicazione ha inviato la mail con il \glossaryItem{Document} al destinatario segnalato dall'utente. \\ 
+        \textbf{Scenario principale} & 1. L'Utente Autenticato invia una mail a un altro utente. \\
       \end{longtable}
       \egroup
     \end{center}
 
-
-    
 \subsubsection{Operazioni su Collection}
  
-
     \begin{figure}[H]
       \begin{center}
         \includegraphics[width=12cm]{res/img/UCUtenti/UCUtenteA/UC-U16.7-Operazioni_su_Collection/UC-U16.7.png}
@@ -1244,12 +1247,10 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
         \textbf{Precondizioni}  & L'Utente Autenticato ha visualizzato la pagina \glossaryItem{Collection}. \\ 
         
         \textbf{Postcondizioni} & L'applicazione ha ordinato i \glossaryItem{Document} secondo l'ordine indicato dall'utente. \\ 
+        \textbf{Scenario principale} & 1. L'Utente Autenticato ordina i \glossaryItem{Document} della \glossaryItem{Collection} in base a uno dei loro attributi. \\
       \end{longtable}
       \egroup
     \end{center}
-    
-      
-
     
 \subsubsection{Send mail da una Collection}
 
@@ -1268,7 +1269,8 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
         
         \textbf{Precondizioni}  & L'utente ha visualizzato la pagina \glossaryItem{Collection}. \\ 
         
-        \textbf{Postcondizioni} & L'applicazione ha inviato la mail con i Documents selezionati al destinatario indicato dall'utente. \\ 
+        \textbf{Postcondizioni} & L'applicazione ha inviato la mail con i Documents selezionati al destinatario indicato dall'utente. \\
+        \textbf{Scenario principale} & 1. L'Utente Autenticato invia una email contenente i Documents selezionati a un altro utente.  \\
       \end{longtable}
       \egroup
      \end{center}
@@ -1290,7 +1292,8 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
         
         \textbf{Precondizioni}  & L'Utente Autenticato ha selezionato i documenti da esportare e il formato di file con cui intende scaricarli. \\ 
         
-        \textbf{Postcondizioni} & L'applicazione ha eseguito creato il file con i dati selezionati scaricabile nel formato scelto dall'utente. \\ 
+        \textbf{Postcondizioni} & L'applicazione ha eseguito creato il file con i dati selezionati scaricabile nel formato scelto dall'utente. \\
+        \textbf{Scenario principale} & 1. L'Utente Autenticato esporta i Documents selezionati da una \glossaryItem{Collection} in formato json o csv.  \\
       \end{longtable}
       \egroup
     \end{center}
@@ -1314,6 +1317,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
             \textbf{Precondizioni}  & L'Utente Autenticato è loggato con le sue credenziali. \\ 
             
             \textbf{Postcondizioni} & L'Utente Autenticato visualizza un messaggio di avvenuto logout e viene disconnesso. \\ 
+            \textbf{Scenario principale} & 1. L'Utente Autenticato effettua il logout dall'applicazione. \\
           \end{longtable}
           \egroup
         \end{center}
@@ -1415,7 +1419,8 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
         
         \textbf{Precondizioni}  & L'Admin ha visualizzato la pagina di modifica del database. \\ 
         
-        \textbf{Postcondizioni} & L'Admin ha inserito il nuovo nome del database. \\ 
+        \textbf{Postcondizioni} & L'Admin ha inserito il nuovo nome del database. \\
+        \textbf{Scenario principale} & 1. L'Admin inserisce il nuovo nome del database. \\ 
       \end{longtable}
       \egroup
     \end{center}    
@@ -1438,6 +1443,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
         \textbf{Precondizioni}  & L'Admin ha visualizzato la pagina di modifica del database. \\ 
         
         \textbf{Postcondizioni} & L'Admin ha inserito il nuovo host del database. \\ 
+        \textbf{Scenario principale} & 1. L'Admin inserisce il nuovo host del database. \\ 
       \end{longtable}
       \egroup
     \end{center}
@@ -1460,6 +1466,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
         \textbf{Precondizioni}  & L'Admin ha visualizzato la pagina di modifica del database. \\ 
         
         \textbf{Postcondizioni} & L'Admin ha inserito la nuova porta del database. \\ 
+        \textbf{Scenario principale} & 1. L'Admin inserisce la nuova porta del database. \\ 
       \end{longtable}
       \egroup
     \end{center}
@@ -1515,6 +1522,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
         \textbf{Precondizioni}  & L'Admin ha visualizzato la pagina di inserimento della \glossaryItem{Collection}. \\ 
         
         \textbf{Postcondizioni} & L'Admin ha inserito il nuovo nome della \glossaryItem{Collection}. \\ 
+        \textbf{Scenario principale} & 1. L'Admin inserisce il nome della \glossaryItem{Collection}. \\ 
       \end{longtable}
       \egroup
     \end{center}
@@ -1537,6 +1545,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
         \textbf{Precondizioni}  & L'Admin ha visualizzato la pagina di inserimento della \glossaryItem{Collection}. \\ 
         
         \textbf{Postcondizioni} & L'Admin ha deciso se la \glossaryItem{Collection} sarà accessibile da Members. \\ 
+        \textbf{Scenario principale} & 1. L'Admin decide se la \glossaryItem{Collection} sarà accessibile da Members. \\ 
       \end{longtable}
       \egroup
     \end{center}
@@ -1592,6 +1601,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
         \textbf{Precondizioni}  & L'Admin ha visualizzato la pagina di modifica del database. \\ 
         
         \textbf{Postcondizioni} & L'Admin ha modificato lo username per l'accesso al database. \\ 
+        \textbf{Scenario principale} & 1. L'Admin modifica lo username per l'accesso al database. \\ 
       \end{longtable}
       \egroup
     \end{center}
@@ -1614,6 +1624,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
         \textbf{Precondizioni}  & L'Admin ha visualizzato la pagina di creazione del database. \\ 
         
         \textbf{Postcondizioni} & L'Admin ha modificato la password per l'accesso al database. \\ 
+        \textbf{Scenario principale} & 1. L'Admin modifica la password per l'accesso al database. \\ 
       \end{longtable}
       \egroup
     \end{center}
@@ -1636,6 +1647,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
         \textbf{Precondizioni}  & L'Admin ha visualizzato la pagina di gestione delle Collections. \\ 
         
         \textbf{Postcondizioni} & L'Admin ha rimosso la \glossaryItem{Collection}. \\ 
+        \textbf{Scenario principale} & 1. L'Admin rimuove una \glossaryItem{Collection}. \\
       \end{longtable}
       \egroup
     \end{center}
@@ -1665,8 +1677,8 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
         \textbf{Precondizioni}  & L’applicazione è funzionante e pronta all'uso. L'Admin ha visualizzato la
         pagina di modifica della \glossaryItem{Collection}. \\ 
         
-        \textbf{Postcondizioni} & L'applicazione hamodificato la \glossaryItem{Collection}. \\ 
-        \textbf{Scenario principale} & 1. L'Admin inserisce il nome della Colelction. (UC-U18.1.5.2.2.1)
+        \textbf{Postcondizioni} & L'applicazione ha modificato la \glossaryItem{Collection}. \\ 
+        \textbf{Scenario principale} & 1. L'Admin inserisce il nome della Collection. (UC-U18.1.5.2.2.1)
         
 2. L'Admin decide se la \glossaryItem{Collection} sarà accessibile ai Members. (UC-U18.1.5.2.2.2) \\
       \end{longtable}
@@ -1682,15 +1694,16 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U18.1.5.2.2.1 - Inserimento nome \glossaryItem{Collection}}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U18.1.5.2.2.1 - Modifica nome \glossaryItem{Collection}}} \\ 
         \hline
         
         \textbf{Attori Primari} & Admin \\ 
-        \textbf{Scopo e Descrizione} & L'Admin inserisce il nome della \glossaryItem{Collection}. \\ 
+        \textbf{Scopo e Descrizione} & L'Admin inserisce il nuovo nome della \glossaryItem{Collection}. \\ 
         
         \textbf{Precondizioni}  & L'Admin ha visualizzato la pagina di inserimento della \glossaryItem{Collection}. \\ 
         
         \textbf{Postcondizioni} & L'Admin ha inserito il nuovo nome della \glossaryItem{Collection}. \\ 
+        \textbf{Scenario principale} & 1. L'Admin inserisce il nuovo nome della \glossaryItem{Collection}. \\
       \end{longtable}
       \egroup
     \end{center}
@@ -1704,7 +1717,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U18.1.5.2.2.2 - Inserimento accessibilità per Members}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-U18.1.5.2.2.2 - Modifica accessibilità per Members}} \\ 
         \hline
         
         \textbf{Attori Primari} & Admin \\ 
@@ -1713,6 +1726,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
         \textbf{Precondizioni}  & L'Admin ha visualizzato la pagina di inserimento della \glossaryItem{Collection}. \\ 
         
         \textbf{Postcondizioni} & L'Admin ha deciso se la \glossaryItem{Collection} sarà accessibile da Members. \\ 
+        \textbf{Scenario principale} & 1. L'Admin decide se la \glossaryItem{Collection} sarà accessibile da Members. \\
       \end{longtable}
       \egroup
     \end{center}
@@ -1734,7 +1748,8 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
         
         \textbf{Precondizioni}  & L'Admin ha visualizzato la pagina di gestione dei database. \\ 
         
-        \textbf{Postcondizioni} & L'Admin ha rimosso il database. \\ 
+        \textbf{Postcondizioni} & L'Admin ha rimosso il database. \\
+        \textbf{Scenario principale} & 1. L'Admin rimuove un database. \\
       \end{longtable}
       \egroup
     \end{center}
@@ -1797,6 +1812,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
         \textbf{Precondizioni}  & L'Admin ha visualizzato la pagina di creazione del database. \\ 
         
         \textbf{Postcondizioni} & L'Admin ha inserito il nome del database. \\ 
+        \textbf{Scenario principale} & 1. L'Admin inserisce il nuovo nome del database. \\ 
       \end{longtable}
       \egroup
     \end{center}    
@@ -1819,6 +1835,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
         \textbf{Precondizioni}  & L'Admin ha visualizzato la pagina di creazione del database. \\ 
         
         \textbf{Postcondizioni} & L'Admin ha inserito l'host del database. \\ 
+        \textbf{Scenario principale} & 1. L'Admin inserisce il nuovo host del database. \\ 
       \end{longtable}
       \egroup
     \end{center}
@@ -1841,6 +1858,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
         \textbf{Precondizioni}  & L'Admin ha visualizzato la pagina di creazione del database. \\ 
         
         \textbf{Postcondizioni} & L'Admin ha inserito la porta del database. \\ 
+        \textbf{Scenario principale} & 1. L'Admin inserisce la nuova porta del database. \\ 
       \end{longtable}
       \egroup
     \end{center}
@@ -1863,6 +1881,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
         \textbf{Precondizioni}  & L'Admin ha visualizzato la pagina di creazione del database. \\ 
         
         \textbf{Postcondizioni} & L'Admin ha inserito lo username per l'accesso al database. \\ 
+        \textbf{Scenario principale} & 1. L'Admin inserisce lo username per l'accesso al database. \\ 
       \end{longtable}
       \egroup
     \end{center}
@@ -1884,7 +1903,8 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
         
         \textbf{Precondizioni}  & L'Admin ha visualizzato la pagina di creazione del database. \\ 
         
-        \textbf{Postcondizioni} & L'Admin ha inserito la password per l'accesso al database. \\ 
+        \textbf{Postcondizioni} & L'Admin ha inserito la password per l'accesso al database. \\
+        \textbf{Scenario principale} & 1. L'Admin inserisce la password per l'accesso al database. \\ 
       \end{longtable}
       \egroup
     \end{center}
@@ -1906,7 +1926,8 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
         
         \textbf{Precondizioni}  & L'Utente Autenticato ha visualizzato la pagina di gestione dei database. \\ 
         
-        \textbf{Postcondizioni} & L'Utente Autenticato ha visualizzato i database ai quali ha accesso. \\ 
+        \textbf{Postcondizioni} & L'Utente Autenticato ha visualizzato i database ai quali ha accesso. \\
+        \textbf{Scenario principale} & 1. L'Utente Autenticato visualizza i database ai quali ha accesso. \\
       \end{longtable}
       \egroup
     \end{center}
@@ -1929,6 +1950,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
         \textbf{Precondizioni}  & L'Admin ha visualizzato la pagina di gestione dei database. \\ 
         
         \textbf{Postcondizioni} & L'Admin ha visualizzato i dettagli di un database. \\ 
+        \textbf{Scenario principale} & 1. L'Admin visualizza i dettagli di un database. \\ 
       \end{longtable}
       \egroup
     \end{center}
@@ -1951,6 +1973,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
             \textbf{Precondizioni}  & L'Utente Autenticato ha visualizzato la pagina di gestione dei database. \\ 
             
             \textbf{Postcondizioni} & L'Utente Autenticato ha visualizzato le Collections di un database alle quali ha accesso. \\ 
+            \textbf{Scenario principale} & 1. L'Utente Autenticato visualizza le Collections di un database alle quali ha accesso.  \\
           \end{longtable}
           \egroup
         \end{center}
@@ -1973,6 +1996,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'Utente Autenticato
                     \textbf{Precondizioni}  & L'Utente Autenticato ha eseguito un'operazione sui database per la quale non dispone dei permessi. \\ 
                     
                     \textbf{Postcondizioni} & L'Utente Autenticato ha visualizzato il messaggio di errore. \\ 
+                    \textbf{Scenario principale} & 1. L’Utente Autenticato visualizza un messaggio di errore nel tentativo di gestire i database di cui non ha i permessi di accesso.  \\
                   \end{longtable}
                   \egroup
                 \end{center}

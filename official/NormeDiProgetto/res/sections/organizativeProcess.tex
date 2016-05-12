@@ -25,6 +25,15 @@ Questo \glossaryItem{processo} produce:
 
 \paragraph*{Assegnazione dei \glossaryItem{task}} Il responsabile si occuperà di assegnare i \glossaryItem{task} in base alla disponibilità dei membri del gruppo e alla rotazione dei ruoli.
 
+\paragraph*{Assegnazione verifica delle pull request} Le pull request create dall'assegnatario di un task per la verifica sono assegnate in automatico. L'assegnatario di un task, nel momento di creazione di una Pull Ruquest, dovrà lasciare vuoto il campo \textit{Assignee}. Il procedimento d'assegnazione dovrà valutare il verificatore in base ai seguenti criteri:
+\begin{itemize}
+\item Il verificatore della Pull Request deve essere diverso dall'assegnatario del task.
+\item Il verificatore è un membro del gruppo \textit{BugBusters} con il numero minore di Pull Request assegnate.
+\item In caso di riscontri multipli sarà selezionato il primo membro identificato come idoneo.
+\end{itemize}
+
+Il fine \`e di diminuire il tempo di verifica rimuovendo il tempo richiesto dal responsabile per l'assegnazione della Pull Request.
+
 \paragraph*{Rotazione dei ruoli}
 
 Durante lo sviluppo del \glossaryItem{progetto} vi sono diversi ruoli che devono essere ricoperti dai membri del gruppo. Il \textit{Piano di \glossaryItem{Progetto}} si occupa di assegnare le attività principali e specifiche per ogni ruolo. Il \textit{Responsabile} di \glossaryItem{progetto} ha l'onere di far rispettare i ruoli assegnati durante l'attività, mentre il \textit{Verificatore} deve essere in grado di individuare eventuali incongruenze e di segnalarle opportunamente.
@@ -107,6 +116,7 @@ dove:
 
 \paragraph*{Sistema di versionamento e suo utilizzo} Il gruppo ha stabilito di utilizzare per tutti i file che richiedono versionamento di il \glossaryItem{CVS} \glossaryItem{Git}, tramite il servizio \glossaryItem{GitHub}.
 
+<<<<<<< HEAD
 È stato stabilito che ogni commit debba appartenere a un \glossaryItem{task}. I \glossaryItem{task}, assegnati dal \textit{Responsabile} ai vari membri del gruppo corrispondono a \glossaryItem{issue} su \glossaryItem{GitHub}. All'apertura della \glossaryItem{issue} corrisponde alla creazione di un branch, il cui nome sarà conforme alla seguente nomenclatura: \textbf{issue\#\textit{numero issue}}. In caso di una attivit\`a, viene creata una issue su \glossaryItem{GitHub} che corrisponde ad un branch (creato dall'assegnatario dell'attivit\`a) con la seguente nomenclatura: \textbf{activity\#\textit{numeroissue}}. Da li, tutti i \glossaryItem{task} di quella attivit\`a deriveranno da quel branch. L'assegnatario del \glossaryItem{task}, durante il suo svolgimento, viene coadiuvato da un sistema di \glossaryItem{Continuous Integration}. Al termine dello svolgimento di tale \glossaryItem{task} l'assegnatario esegue una \glossaryItem{Pull Request}, seguita da un controllo di contenuto da parte di un verificatore umano. La Pull Request deve avere label e Milestone uguali a quelle del task corrispondente. In seguito il verificatore
 chiude il task. Al completamento di un task la issue ad esso corrispondente va chiusa. In caso di conflitto il verificatore operer\`a congiuntamente all'assegnatario della issue per risolvere problema.
 In questa maniera vengono inseriti dei \glossaryItem{Configuration Item} che sono stati verificati sia da sistemi di integrazione continua e sia da umani, coprendo rispettivamente la parte prettamente sintattica (scrittura di codice corretto) e la parte di contenuto (che una macchina non pu\`o controllare), comportando nel \glossaryItem{repository} l'inserimento di codice sempre corretto e verificato e generando \glossaryItem{baseline} sempre consistenti.
