@@ -56,7 +56,8 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'editor.
         
         \textbf{Precondizioni}  & L'applicazione fornisce la lista delle specifiche \glossaryItem{DSL} tra cui scegliere quella da importare. \\ 
         
-        \textbf{Postcondizioni} & L'applicazione ha caricato con successo la specifica \glossaryItem{DSL} richiesta dall'utente.
+        \textbf{Postcondizioni} & L'applicazione ha caricato con successo la specifica \glossaryItem{DSL} richiesta dall'utente. \\
+        \textbf{Scenario principale} & 1. L'utente importa una specifica \glossaryItem{DSL} esistente tra quelli personali o quelli della \glossaryItem{Company}. \\
       \end{longtable}
       \egroup
     \end{center} 
@@ -94,7 +95,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'editor.
         
 2. L'attore pu\`o compilare i campi informativi del \glossaryItem{DSL Element}. (UC-E2.0.2)
 
-3. L'utente pu\`o collegare un insieme di \glossaryItem{DSL elements} ad un attributo. (UC-E2.0.3)
+3. L'utente pu\`o collegare un \glossaryItem{DSL element} ad un attributo. (UC-E2.0.3)
 
 4. L'utente ha la possibilit\`a di rimuovere un \glossaryItem{DSL Element}. (UC-E2.0.4)
 
@@ -123,7 +124,8 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'editor.
         
         \textbf{Precondizioni}  & L'utente visualizza l'editor. \\ 
         
-        \textbf{Postcondizioni} & L'utente ha aggiunto con successo un \glossaryItem{DSL Element}.
+        \textbf{Postcondizioni} & L'utente ha aggiunto con successo un \glossaryItem{DSL Element}.\\
+        \textbf{Scenario principale} & 1. L'utente aggiunge un \glossaryItem{DSL Element}. \\ 
       \end{longtable}
       \egroup
     \end{center} 
@@ -145,12 +147,13 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'editor.
         
         \textbf{Precondizioni}  & L'utente visualizza un \glossaryItem{DSL Element}. \\ 
         
-        \textbf{Postcondizioni} & Le informazioni desiderate dall'utente sono state aggiunte nel \glossaryItem{DSL Element}.
+        \textbf{Postcondizioni} & Le informazioni desiderate dall'utente sono state aggiunte nel \glossaryItem{DSL Element}. \\
+        \textbf{Scenario principale} & 1. L'utente compila i campi informativi del \glossaryItem{DSL Element}. \\ 
       \end{longtable}
       \egroup
     \end{center}
     
-\subsubsection{Associare un insieme di DSL Elements ad un attributo}
+\subsubsection{Associare un DSL Element ad un attributo}
 
     %Tabella 
     \begin{center}
@@ -159,15 +162,16 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'editor.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.0.3 - Associare un insieme di \glossaryItem{DSL Elements} ad un attributo}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.0.3 - Associare \glossaryItem{DSL Element} ad un attributo}} \\ 
         \hline
         
         \textbf{Attori Primari} &  \glossaryItem{Member}, \glossaryItem{Admin}, \glossaryItem{Owner} \\ 
-        \textbf{Scopo e Descrizione} & L'utente ha la possibilit\`a di associare un insieme di \glossaryItem{DSL elements} ad un attributo. \\ 
+        \textbf{Scopo e Descrizione} & L'utente ha la possibilit\`a di associare un \glossaryItem{DSL element} ad un attributo. \\ 
         
-        \textbf{Precondizioni}  & L'utente seleziona un attributo e un insieme di \glossaryItem{DSL Elements} da associare. \\ 
+        \textbf{Precondizioni}  & L'utente seleziona un attributo e un \glossaryItem{DSL Element} da associare. \\ 
         
-        \textbf{Postcondizioni} & L'utente ha collegato con successo l'insieme di \glossaryItem{DSL Elements} all'attributo.
+        \textbf{Postcondizioni} & L'utente ha collegato con successo il \glossaryItem{DSL Element} all'attributo. \\
+        \textbf{Scenario principale} & 1. L'utente associa un \glossaryItem{DSL element} ad un attributo. \\
       \end{longtable}
       \egroup
     \end{center}
@@ -188,7 +192,8 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'editor.
         
         \textbf{Precondizioni}  & L'utente sta visualizzando l'editor e il \glossaryItem{DSL Element} che vuole eliminare \`e presente nell'interfaccia dell'editor. \\ 
         
-        \textbf{Postcondizioni} & L'utente ha eliminato con successo il \glossaryItem{DSL Element} selezionato.
+        \textbf{Postcondizioni} & L'utente ha eliminato con successo il \glossaryItem{DSL Element} selezionato.\\
+        \textbf{Scenario principale} & 1. L'utente rimuove un \glossaryItem{DSL Element} dall'editor. \\ 
       \end{longtable}
       \egroup
     \end{center}
@@ -209,7 +214,8 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'editor.
         
         \textbf{Precondizioni}  & L'utente visualizza il \glossaryItem{Function Element} e il \glossaryItem{DSL Element} a cui associarlo. \\ 
         
-        \textbf{Postcondizioni} & L'utente ha associato con successo la \glossaryItem{Function Element} ad un attributo del \glossaryItem{DSL Element}.
+        \textbf{Postcondizioni} & L'utente ha associato con successo la \glossaryItem{Function Element} ad un attributo del \glossaryItem{DSL Element}.\\
+        \textbf{Scenario principale} & 1. L'utente associa un \glossaryItem{Function Element} ad un attributo selezionabile di un \glossaryItem{DSL Element}. \\ 
       \end{longtable}
       \egroup
     \end{center}
@@ -232,7 +238,8 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'editor.
         
         \textbf{Precondizioni}  & L'utente sta visualizzando uno specifico \glossaryItem{DSL Element} con campi opzionali. \\ 
         
-        \textbf{Postcondizioni} & L'utente ha reso modificabili i campi opzionali del \glossaryItem{DSL Element}. Tali campi possono essere modificati come descritto su caso d'uso UC-E2.0.2.
+        \textbf{Postcondizioni} & L'utente ha reso modificabili i campi opzionali del \glossaryItem{DSL Element}. Tali campi possono essere modificati come descritto su caso d'uso UC-E2.0.2.\\
+        \textbf{Scenario principale} & 1. L'utente accede ai campi opzionali di un \glossaryItem{DSL Element} e vuole renderli modificabili. \\ 
       \end{longtable}
       \egroup
     \end{center}
@@ -290,7 +297,8 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'editor.
         
         \textbf{Precondizioni}  & Il \glossaryItem{Collection Element} a cui associare l'\glossaryItem{Index Element} \`e visualizzato nell'editor. \\ 
         
-        \textbf{Postcondizioni} & L'\glossaryItem{Index Element} \`e stato associato ad un \glossaryItem{Collection Element}.
+        \textbf{Postcondizioni} & L'\glossaryItem{Index Element} \`e stato associato ad un \glossaryItem{Collection Element}.\\
+        \textbf{Scenario principale} & 1. L'utente associa un \glossaryItem{Index Element} all'attributo \glossaryItem{Index} del \glossaryItem{Collection Element}. \\ 
       \end{longtable}
       \egroup
     \end{center}
@@ -314,7 +322,8 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'editor.
         
         \textbf{Precondizioni}  & Il \glossaryItem{Collection Element} a cui associare il \glossaryItem{Document Element} \`e visualizzato nell'editor.  \\ 
         
-        \textbf{Postcondizioni} & Il \glossaryItem{Document Element} \`e stato associato all'attributo \glossaryItem{Show} del \glossaryItem{Collection Element} desiderato.
+        \textbf{Postcondizioni} & Il \glossaryItem{Document Element} \`e stato associato all'attributo \glossaryItem{Show} del \glossaryItem{Collection Element} desiderato.\\
+        \textbf{Scenario principale} & 1. L'utente associa un \glossaryItem{Document Element} all'attributo \glossaryItem{Show} del \glossaryItem{Collection Element}. \\ 
       \end{longtable}
       \egroup
     \end{center}
@@ -369,10 +378,12 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'editor.
         
         \textbf{Precondizioni}  & L'utente sta visualizzando il form di compilazione di un \glossaryItem{Function Element}. \\ 
         
-        \textbf{Postcondizioni} & L'utente ha definito con successo una funzione per il \glossaryItem{Function Element}.
+        \textbf{Postcondizioni} & L'utente ha definito con successo una funzione per il \glossaryItem{Function Element}.\\
+        \textbf{Scenario principale} & 1. L'utente definisce all'interno di un \glossaryItem{Function Element} una funzione nella sintassi del \glossaryItem{DSL}. \\ 
       \end{longtable}
       \egroup
     \end{center}
+
 \subsubsection{Salvataggio di un Function Element}
 
     %Tabella 
@@ -390,7 +401,8 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'editor.
         
         \textbf{Precondizioni}  & L'utente ha inserito un \glossaryItem{Function Element} valido \\ 
         
-        \textbf{Postcondizioni} & Il \glossaryItem{Function Element} \`e stata salvato con successo nel sistema.
+        \textbf{Postcondizioni} & Il \glossaryItem{Function Element} \`e stata salvato con successo nel sistema.\\
+        \textbf{Scenario principale} & 1. L'utente salva il \glossaryItem{Function Element} creato. \\ 
       \end{longtable}
       \egroup
     \end{center}
@@ -414,6 +426,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'editor.
         \textbf{Precondizioni}  & Il sistema fornisce i \glossaryItem{Function Element} salvati nel sistema. \\ 
         
         \textbf{Postcondizioni} & L'utente ha caricato il \glossaryItem{Function Element} con successo. \\ 
+        \textbf{Scenario principale} & 1. L'utente importa un \glossaryItem{Function Element} precedentemente definito.\\
       \end{longtable}
       \egroup
     \end{center}
@@ -470,7 +483,8 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'editor.
         
         \textbf{Precondizioni}  &  L'utente \`e all'interno dell'editor e sta visualizzando un \glossaryItem{Index Element} da modificare. \\ 
         
-        \textbf{Postcondizioni} & Il sistema aggiunge un attributo \glossaryItem{Column} all'\glossaryItem{Index Element} modificato.
+        \textbf{Postcondizioni} & Il sistema aggiunge un attributo \glossaryItem{Column} all'\glossaryItem{Index Element} modificato.\\
+        \textbf{Scenario principale} & 1. L'utente rimuove o aggiunge dall'\glossaryItem{Index Element} un attributo \glossaryItem{Column}. \\
       \end{longtable}
       \egroup
     \end{center}
@@ -491,7 +505,8 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'editor.
         
         \textbf{Precondizioni}  & L'utente visualizza un \glossaryItem{Index Element} a cui associare il \glossaryItem{Column Element}. \\ 
         
-        \textbf{Postcondizioni} & Il sistema associa correttamente il \glossaryItem{Column Element} all' \glossaryItem{Index Element} indicato dall'utente.
+        \textbf{Postcondizioni} & Il sistema associa correttamente il \glossaryItem{Column Element} all' \glossaryItem{Index Element} indicato dall'utente.\\
+        \textbf{Scenario principale} & 1. L'utente associa un \glossaryItem{Column Element} ad un attributo \glossaryItem{Column} di un \glossaryItem{Index Element}. \\ 
       \end{longtable}
       \egroup
     \end{center}
@@ -514,7 +529,8 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'editor.
         
         \textbf{Precondizioni}  & L'editor \`e visualizzato dall'utente. \\ 
         
-        \textbf{Postcondizioni} & Il sistema compie le operazioni sul \glossaryItem{Column Element} indicato dall'utente.
+        \textbf{Postcondizioni} & Il sistema compie le operazioni sul \glossaryItem{Column Element} indicato dall'utente.\\
+        \textbf{Scenario principale} & 1. L'utente aggiunge, rimuove o modifica un \glossaryItem{Column Element} \\ 
       \end{longtable}
       \egroup
     \end{center}
@@ -532,11 +548,12 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'editor.
         \hline
         
         \textbf{Attori Primari} &  \glossaryItem{Member}, \glossaryItem{Admin}, \glossaryItem{Owner} \\ 
-        \textbf{Scopo e Descrizione} & L'utente ha la possibilit\`a di aggiungere, rimuovere o modificare un \glossaryItem{Row Element} \\ 
+        \textbf{Scopo e Descrizione} & L'utente ha la possibilit\`a di aggiungere, rimuovere o modificare un \glossaryItem{Row Element}. \\ 
         
         \textbf{Precondizioni}  & L'editor \`e visualizzato dall'utente. \\ 
         
-        \textbf{Postcondizioni} & Il sistema compie le operazioni sul \glossaryItem{Row Element} indicato dall'utente.
+        \textbf{Postcondizioni} & Il sistema compie le operazioni sul \glossaryItem{Row Element} indicato dall'utente.\\
+        \textbf{Scenario principale} & 1. L'utente aggiunge, rimuove o modifica un \glossaryItem{Row Element}. \\ 
       \end{longtable}
       \egroup
     \end{center}
@@ -589,11 +606,12 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'editor.
         \hline
         
         \textbf{Attori Primari} &  \glossaryItem{Member}, \glossaryItem{Admin}, \glossaryItem{Owner} \\ 
-        \textbf{Scopo e Descrizione} & Si d\`a la possibilit\`a di aggiungere un'\glossaryItem{associazione per riferimento} tra il \glossaryItem{Column Element} e l'attributo \glossaryItem{Populate} del \glossaryItem{Document Element}. \\ 
+        \textbf{Scopo e Descrizione} & Si d\`a la possibilit\`a di aggiungere un'associazione per riferimento tra il \glossaryItem{Column Element} e l'attributo \glossaryItem{Populate} del \glossaryItem{Document Element}. \\ 
         
         \textbf{Precondizioni}  & Il \glossaryItem{Document Element} esiste nella sessione corrente dell'editor. \\ 
         
-        \textbf{Postcondizioni} & Il sistema aggiunge un riferimento tra il \glossaryItem{Column Element} e il \glossaryItem{Document Element}.
+        \textbf{Postcondizioni} & Il sistema aggiunge un riferimento tra il \glossaryItem{Column Element} e il \glossaryItem{Document Element}.\\
+        \textbf{Scenario principale} & 1. L'utente aggiunge un'associazione per riferimento tra il \glossaryItem{Column Element} e l'attributo \glossaryItem{Populate} del \glossaryItem{Document Element}. \\ 
       \end{longtable}
       \egroup
     \end{center}
@@ -616,11 +634,13 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'editor.
         
         \textbf{Precondizioni}  & Il \glossaryItem{Document Element} su cui operare l'aggiunta/rimozione di un attributo \glossaryItem{Row} esiste nella sessione corrente dell'editor. \\ 
         
-        \textbf{Postcondizioni} & \`E stato manipolato (aggiunto o rimosso) un attributo \glossaryItem{Row} all'interno del \glossaryItem{Document Element}.
+        \textbf{Postcondizioni} & \`E stato manipolato (aggiunto o rimosso) un attributo \glossaryItem{Row} all'interno del \glossaryItem{Document Element}.\\
+        \textbf{Scenario principale} & 1. L'utente aggiunge o rimuove un attributo \glossaryItem{Row} da un \glossaryItem{Document Element}. \\
       \end{longtable}
       \egroup
     \end{center}
-\subsubsection{Associare un Row Element ad un attributo \glossaryItem{Row}}
+
+\subsubsection{Associare un Row Element ad un attributo Row}
 
     %Tabella 
     \begin{center}
@@ -637,11 +657,13 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'editor.
         
         \textbf{Precondizioni}  & Il \glossaryItem{Document Element} e il \glossaryItem{Row Element} decisi dall'utente esistono nella sessione corrente dell'editor. \\ 
         
-        \textbf{Postcondizioni} & Il sistema ha creato l'associazione tra il \glossaryItem{Row Element} e l'attributo \glossaryItem{Row} del \glossaryItem{Document Element} scelto.
+        \textbf{Postcondizioni} & Il sistema ha creato l'associazione tra il \glossaryItem{Row Element} e l'attributo \glossaryItem{Row} del \glossaryItem{Document Element} scelto.\\
+        \textbf{Scenario principale} & 1. L'utente associa un \glossaryItem{Row Element} ad un attributo \glossaryItem{Row} di uno specifico \glossaryItem{Document Element}.  \\ 
       \end{longtable}
       \egroup
     \end{center}
-\subsubsection{Associare un Action Element}
+
+\subsubsection{Associare un Action Element a un attributo Row}
 
     %Tabella 
     \begin{center}
@@ -650,7 +672,7 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'editor.
       \begin{longtable}{  p{3.5cm} | p{8cm} } 
         
         \hline
-        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.6.4 - Associare un \glossaryItem{Action Element}}} \\ 
+        \multicolumn{2}{ | c | }{ \cellcolor[gray]{0.9} \textbf{UC-E2.6.4 - Associare un \glossaryItem{Action Element} a un attributo \glossaryItem{Row}}} \\ 
         \hline
         
         \textbf{Attori Primari} &  \glossaryItem{Member}, \glossaryItem{Admin}, \glossaryItem{Owner} \\ 
@@ -658,7 +680,8 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'editor.
         
         \textbf{Precondizioni}  & Il \glossaryItem{Document Element} con il relativo attributo \glossaryItem{Row} esistono nella sessione corrente. \\ 
         
-        \textbf{Postcondizioni} & Viene creata un'associazione tra \glossaryItem{Action Element} e l'attributo \glossaryItem{Row} del \glossaryItem{Document Element} indicato dall'utente. 
+        \textbf{Postcondizioni} & Viene creata un'associazione tra \glossaryItem{Action Element} e l'attributo \glossaryItem{Row} del \glossaryItem{Document Element} indicato dall'utente. \\
+        \textbf{Scenario principale} & 1. L'utente associa un \glossaryItem{Action Element} ad un attributo \glossaryItem{Row} di un \glossaryItem{Document Element}. \\ 
       \end{longtable}
       \egroup
     \end{center}
@@ -713,7 +736,8 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'editor.
         
         \textbf{Precondizioni}  & L'utente si è riferito a un \glossaryItem{Input Element} presente nella sessione corrente dell'editor. \\ 
         
-        \textbf{Postcondizioni} & Il sistema agisce sull'\glossaryItem{Input Element} aggiungendo o rimuovendo un attributo.
+        \textbf{Postcondizioni} & Il sistema agisce sull'\glossaryItem{Input Element} aggiungendo o rimuovendo un attributo.\\
+        \textbf{Scenario principale} & 1. L'utente crea/elimina un attributo di un \glossaryItem{Input Element} selezionato. \\ 
       \end{longtable}
       \egroup
     \end{center}
@@ -734,7 +758,8 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'editor.
         
         \textbf{Precondizioni}  & L'\glossaryItem{Input Element} selezionato dall'utente possiede l'attributo da modificare. \\ 
         
-        \textbf{Postcondizioni} & Il sistema ha modificato la chiave o il valore dell'attributo selezionato dall'utente.
+        \textbf{Postcondizioni} & Il sistema ha modificato la chiave o il valore dell'attributo selezionato dall'utente.\\
+        \textbf{Scenario principale} & 1. L'utente modifica la chiave o il valore di un attributo dell'\glossaryItem{Input Element}. \\ 
       \end{longtable}
       \egroup
     \end{center}
@@ -755,7 +780,8 @@ Di seguito vengono elencati i \glossaryItem{casi d'uso} per l'editor.
         
         \textbf{Precondizioni}  & L'\glossaryItem{Input Element} che possiede l'attributo da espandere esiste nella sessione corrente dell'editor. \\ 
         
-        \textbf{Postcondizioni} & Il sistema ha memorizzato la struttura complessa associata all'attributo selezionato dall'utente.
+        \textbf{Postcondizioni} & Il sistema ha memorizzato la struttura complessa associata all'attributo selezionato dall'utente.\\
+        \textbf{Scenario principale} & 1. L'utente definisce strutture complesse associate ad un attributo. \\ 
       \end{longtable}
       \egroup
     \end{center}
@@ -819,7 +845,8 @@ e. date. \\
         
         \textbf{Precondizioni}  & Il \glossaryItem{Cell Element} su cui si vuole operare esiste nella sessione attiva dell'editor. \\ 
         
-        \textbf{Postcondizioni} & Il sistema memorizza il tipo di dato per il \glossaryItem{Cell Element}. 
+        \textbf{Postcondizioni} & Il sistema memorizza il tipo di dato per il \glossaryItem{Cell Element}. \\
+        \textbf{Scenario principale} & 1. L'utente seleziona il tipo di dato per \glossaryItem{Cell Element}.  \\
       \end{longtable}
       \egroup
     \end{center}
@@ -875,11 +902,12 @@ e. date. \\
         
         \textbf{Precondizioni}  & Il \glossaryItem{Dashboard Element} e il \glossaryItem{DashRow Element} da collegare esistono nella sessione corrente dell'editor. \\ 
         
-        \textbf{Postcondizioni} & Il sistema ha memorizzato il collegamento tra l'attributo \glossaryItem{Row} del \glossaryItem{Dashboard Element} e il \glossaryItem{DashRow Element}.
+        \textbf{Postcondizioni} & Il sistema ha memorizzato il collegamento tra l'attributo \glossaryItem{Row} del \glossaryItem{Dashboard Element} e il \glossaryItem{DashRow Element}.\\
+        \textbf{Scenario principale} & 1. L'utente definisce la struttura di una \glossaryItem{Row} e la collega a una \glossaryItem{Dashboard}. \\ 
       \end{longtable}
       \egroup
     \end{center}
-\subsubsection{Aggiungere/Rimuovere un attributo Row dalDashboard Element}
+\subsubsection{Aggiungere/Rimuovere un attributo Row dal Dashboard Element}
 
     %Tabella 
     \begin{center}
@@ -896,7 +924,8 @@ e. date. \\
         
         \textbf{Precondizioni}  & Il \glossaryItem{Dashboard Element} esiste nella sessione corrente dell'editor. \\ 
         
-        \textbf{Postcondizioni} & Il sistema ha aggiunto o rimosso l'attributo \glossaryItem{Row} dalla \glossaryItem{Dashboard Element}. 
+        \textbf{Postcondizioni} & Il sistema ha aggiunto o rimosso l'attributo \glossaryItem{Row} dalla \glossaryItem{Dashboard Element}.\\
+        \textbf{Scenario principale} & 1. L'utente definisce un nuovo attributo \glossaryItem{Row} all'interno della \glossaryItem{Dashboard}. \\
       \end{longtable}
       \egroup
     \end{center}
@@ -953,7 +982,8 @@ e. date. \\
         
         \textbf{Precondizioni}  & Il \glossaryItem{Cell Element} e il \glossaryItem{DashRow Element} da associare esistono nella sessione corrente dell'editor. \\ 
         
-        \textbf{Postcondizioni} & Il sistema ha memorizzato il collegamento tra i due elementi.
+        \textbf{Postcondizioni} & Il sistema ha memorizzato il collegamento tra i due elementi.\\
+        \textbf{Scenario principale} & 1. L'utente associa un \glossaryItem{Cell Element} ad un \glossaryItem{DashRow Element}. \\ 
       \end{longtable}
       \egroup
     \end{center}
@@ -974,7 +1004,8 @@ e. date. \\
         
         \textbf{Precondizioni}  & Il \glossaryItem{Document Element} e il \glossaryItem{DashRow Element} esistono nella sessione corrente dell'editor. \\ 
         
-        \textbf{Postcondizioni} & Il sistema ha memorizzato il collegamento tra i due elementi.
+        \textbf{Postcondizioni} & Il sistema ha memorizzato il collegamento tra i due elementi.\\
+        \textbf{Scenario principale} & 1. L'utente associa un \glossaryItem{Document Element} ad un \glossaryItem{DashRow Element}. \\ 
       \end{longtable}
       \egroup
     \end{center}
@@ -995,7 +1026,8 @@ e. date. \\
         
         \textbf{Precondizioni}  & Il \glossaryItem{Collection Element} e il \glossaryItem{DashRow Element} esistono nella sessione corrente dell'editor. \\ 
         
-        \textbf{Postcondizioni} & Il sistema ha memorizzato il collegamento tra i due elementi.
+        \textbf{Postcondizioni} & Il sistema ha memorizzato il collegamento tra i due elementi.\\
+        \textbf{Scenario principale} & 1. L'utente associa un \glossaryItem{Collection Element} ad un \glossaryItem{DashRow Element}. \\ 
       \end{longtable}
       \egroup
     \end{center}
@@ -1048,7 +1080,8 @@ e. date. \\
         
         \textbf{Precondizioni}  & L'\glossaryItem{Action Element} su cui operare esiste nella sessione corrente dell'editor. \\ 
         
-        \textbf{Postcondizioni} & Il sistema ha memorizzato l'input da associare all'\glossaryItem{Action Element}.
+        \textbf{Postcondizioni} & Il sistema ha memorizzato l'input da associare all'\glossaryItem{Action Element}.\\
+        \textbf{Scenario principale} & 1. L'utente seleziona l'input per l'\glossaryItem{Action Element}. \\ 
       \end{longtable}
       \egroup
     \end{center}
@@ -1070,7 +1103,8 @@ e. date. \\
         
         \textbf{Precondizioni}  & L'azione e l'\glossaryItem{Action Element} da collegare sono presenti nella sessione attiva dell'editor. \\ 
         
-        \textbf{Postcondizioni} & Il sistema ha associato l'azione all'\glossaryItem{Action Element}.
+        \textbf{Postcondizioni} & Il sistema ha associato l'azione all'\glossaryItem{Action Element}.\\
+        \textbf{Scenario principale} & 1. L'utente definisce l'azione legata all'\glossaryItem{Action Element}. \\ 
       \end{longtable}
       \egroup
     \end{center}
@@ -1126,7 +1160,8 @@ e. date. \\
         
         \textbf{Precondizioni}  & L'utente visualizza l'editor e ha definito una specifica \glossaryItem{DSL}\\ 
         
-        \textbf{Postcondizioni} & Il sistema ha preso in carico la richiesta di salvataggio della specifica \glossaryItem{DSL}.
+        \textbf{Postcondizioni} & Il sistema ha preso in carico la richiesta di salvataggio della specifica \glossaryItem{DSL}.\\
+        \textbf{Scenario principale} & 1. L'utente chiede all'applicazione di eseguire le operazioni necessarie affinché la specifica \glossaryItem{DSL} venga salvata ed eseguita con successo. \\ 
       \end{longtable}
       \egroup
     \end{center}
@@ -1147,7 +1182,8 @@ e. date. \\
         \textbf{Precondizioni}  & L'utente ha fatto richiesta di salvataggio del \glossaryItem{DSL} \\ 
         
         \textbf{Postcondizioni} & Il \glossaryItem{DSL} \`e stato correttamente validato. \\ 
-        \textbf{Estensioni} & 1. Il \glossaryItem{DSL} non \`e valido (UC-E3.4)
+        \textbf{Scenario principale} & 1. Il sistema esegue i controlli di \glossaryItem{validazione} per il \glossaryItem{DSL} creato. \\
+        \textbf{Estensioni} & 1. Il \glossaryItem{DSL} non \`e valido. (UC-E3.4) \\
       \end{longtable}
       \egroup
     \end{center}
@@ -1170,6 +1206,7 @@ e. date. \\
         \textbf{Precondizioni}  & La specifica \glossaryItem{DSL} in input deve essere valida. \\ 
         
         \textbf{Postcondizioni} & La specifica \glossaryItem{DSL} \`e stato correttamente memorizzata nel sistema. \\ 
+        \textbf{Scenario principale} & 1. Il sistema esegue la \glossaryItem{procedura} di memorizzazione della specifica \glossaryItem{DSL}. \\
       \end{longtable}
       \egroup
     \end{center}
@@ -1189,7 +1226,8 @@ e. date. \\
         
         \textbf{Precondizioni}  & La specifica \glossaryItem{DSL} non \`e corretto. \\ 
         
-        \textbf{Postcondizioni} & L'utente \`e stato avvisato tramite un messaggio della presenza di errori nella specifica \glossaryItem{DSL}.
+        \textbf{Postcondizioni} & L'utente \`e stato avvisato tramite un messaggio della presenza di errori nella specifica \glossaryItem{DSL}.\\
+        \textbf{Scenario principale} & 1. L'utente visualizza un messaggio di errore che evidenzia i punti della specifica \glossaryItem{DSL} non validi. \\ 
       \end{longtable}
       \egroup
     \end{center}

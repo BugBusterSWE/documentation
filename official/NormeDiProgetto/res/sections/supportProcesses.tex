@@ -233,11 +233,14 @@ si faranno carico della revisione mirata dell'architettura.
 
 \paragraph*{Procedura di verifica del codice}
 \begin{itemize}
-
 \item \textbf{Controlli statici}: Vengono eseguiti controlli di tipo statico sul codice tramite l'utilizzo del \textit{linter} \textit{TsLint}, che permette di trovare eventuali errori di forma o logici prima della compilazione.
 
 \item \textbf{Controlli dinamici}: Dopo una compilazione avvenuta con successo e dopo aver passato con successo i test di tipo statico vengono eseguiti i test di tipo dinamico tramite il programma \textit{mocha}, che si occupa di eseguire i test di unità e segnalare eventuali test falliti. È possibile generare un report di tipo \textit{xUnit}, che consente di avere un storico dell'esecuzione dei test e di tracciare il loro andamento. I test saranno scritti in TypeScript utilizzando la seguente struttura:
 \begin{verbatim}
+describe("NomeDellaClasse", () => {
+    let subject : TipoDelSoggetto;
+
+
 describe("NomeDellaClasse", () => {
     let subject : TipoDelSoggetto;
 
