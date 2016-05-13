@@ -91,7 +91,8 @@ Ciascuna classe deve implementare un modello definito da MongooseJS e deve defin
 \item UserModel;
 \item DSLModel;
 \item CompanyModel;
-\item DatabaseModel.
+\item DatabaseModel;
+\item MongooseConnection.
 \end{itemize}
 
 \begin{figure}[H]
@@ -109,7 +110,7 @@ Viene utilizzata come base per UserModel, CompanyModel, DSLModel e DatabaseModel
 
 \paragraph*{Relazione con altri \glossaryItem{moduli}}
 \begin{itemize}
-\item Mongoose, per l'interazione con il database MondoDB dell'applicazione MaaS;
+\item MongooseConenction, per la connessione con il database MongoDB dell'applicazione MaaS;
 \item UserModel, per estensione;
 \item CompanyModel, per estensione;
 \item DSLModel, per estensione;
@@ -125,7 +126,7 @@ Il modello viene utilizzato sia per la rappresentazione di un utente nell'applic
 
 \paragraph*{Relazioni con altri moduli}
 \begin{itemize}
-\item Mongoose, per l'interazione con il database MondoDB dell'applicazione MaaS;
+\item Mongoose, per l'interazione con il database MongoDB dell'applicazione MaaS;
 \item Mongoose-validator, per la validazione degli schemi e dei dati memorizzati;
 \item Lib::AuthenticationChecker, per il controllo dell'avvenuta autenticazione dell'utente;
 \item Router::UserRouter, per la gestione delle richieste dirette verso il modello degli utenti.
@@ -140,7 +141,7 @@ Il modello rappresenta una \glossaryItem{Company} nel sistema.
 
 \paragraph*{Relazioni con altri \glossaryItem{moduli}}
 \begin{itemize}
-\item Mongoose, per l'interazione con il database MondoDB dell'applicazione MaaS;
+\item Mongoose, per l'interazione con il database MongoDB dell'applicazione MaaS;
 \item Mongoose-validator, per la validazione degli schemi e dei dati memorizzati;
 \item Router::CompanyRouter, per la gestione delle richieste dirette verso il modello delle Company;
 \end{itemize}
@@ -155,7 +156,7 @@ Il modello rappresenta la connessione ad un database aziendale di una \glossaryI
 
 \paragraph*{Relazioni con altri \glossaryItem{moduli}}
 \begin{itemize}
-\item Mongoose, per l'interazione con il database MondoDB dell'applicazione MaaS;
+\item Mongoose, per l'interazione con il database MongoDB dell'applicazione MaaS;
 \item Mongoose-validator, per la validazione degli schemi e dei dati memorizzati;
 \item Router::DatabaseRouter, per la gestione delle richieste dirette verso il modello dei database.
 \end{itemize}
@@ -170,12 +171,24 @@ Il modello viene utilizzato per la rappresentazione delle specifiche \glossaryIt
 
 \paragraph*{Relazioni con altri \glossaryItem{moduli}}
 \begin{itemize}
-\item Mongoose, per l'interazione con il database MondoDB dell'applicazione MaaS;
+\item Mongoose, per l'interazione con il database MongoDB dell'applicazione MaaS;
 \item Mongoose-validator, per la validazione degli schemi e dei dati memorizzati;
 \item Lib::DSLChecker, per il controllo di validità (sintattica e per la verifica dei permessi di accesso alle Collections di un database) della specifica DSL;
 \item Router::DSLRouter, per la gestione delle richieste dirette verso il modello delle specifiche DSL.
 \end{itemize}
 
+\paragraph{MongooseConnection}
+\paragraph*{Descrizione}
+
+Si occupa della connessione al database MongoDB dell'applicazione utilizzando Mongoose.
+
+\paragraph*{Utilizzo}
+Attraverso questa classe è possibile connettersi al database MongoDB dell'applicazione e operare sulla connessione ad esso.
+
+\paragraph*{Relazioni con altri \glossaryItem{moduli}}
+\begin{itemize}
+\item Mongoose, per la connessione al database MongoDB dell'applicazione MaaS.
+\end{itemize}
 
 \subsubsection{Package Routes}
 \paragraph*{Descrizione}
@@ -261,15 +274,12 @@ Sarà poi l'applicazione a dover recuperare la corretta configurazione in base a
 
 \paragraph*{Moduli contenuti}
 \begin{itemize}
-\item \glossaryItem{Configuration}
-\item DevConfiguration
-\item TestConfiguration
-\item ProdConfiguration
-\end{itemize}
-
-\paragraph*{Interfacce contenute}
-\begin{itemize}
-\item \glossaryItem{Configuration}
+\item \glossaryItem{Configuration};
+\item DevConfiguration;
+\item TestConfiguration;
+\item ProdConfiguration;
+\item MongoDBConnection;
+\item ConfigurationChooser.
 \end{itemize}
 
 \begin{figure}[H]
@@ -301,14 +311,42 @@ Viene utilizzata per configurare l'ambiente di lavoro per la consegna di \glossa
 
 \paragraph{Configuration}
 \paragraph*{Descrizione}
-Interfaccia comune alle configurazioni usate da \glossaryItem{MaaS}.
+Classe astratta comune alle configurazioni usate da \glossaryItem{MaaS}.
 
 \paragraph*{Utilizzo}
 Viene utilizzata come base per DevConfiguration, TestConfiguration e ProdConfiguration.
 
 \paragraph*{Relazione con altri \glossaryItem{moduli}}
 \begin{itemize}
-\item MaaSServer, per la scelta della configurazione dell'applicazione.
+\item MongoDBConnection, per i parametri della connessione al database MongoDB;
+\item Model, per fornire i parametri della connessione.
+\end{itemize}
+
+\paragraph{ConfigurationChooser}
+\paragraph*{Descrizione}
+Classe utilizzata per scegliere la configurazione da adottare.
+
+\paragraph*{Utilizzo}
+Viene utilizzata per scegliere la configurazione di MaaS da adottare.
+
+\paragraph*{Relazione con altri \glossaryItem{moduli}}
+\begin{itemize}
+\item MaaSServer, per la scelta della configurazione dell'applicazione;
+\item DevConfiguration, creata nel caso di configurazione di sviluppo;
+\item TestConfiguration, creata nel caso di configurazione di test;
+\item ProdConfiguration, creata nel caso di configurazione di produzione.
+\end{itemize}
+
+\paragraph{MongoDBConnection}
+\paragraph*{Descrizione}
+Classe utilizzata per memorizzare i parametri della connessione al database MongoDB.
+
+\paragraph*{Utilizzo}
+Viene utilizzata per ottenere i parametri della connessione.
+
+\paragraph*{Relazione con altri \glossaryItem{moduli}}
+\begin{itemize}
+\item Model, per fornire i parametri della connessione.
 \end{itemize}
 
 \subsubsection{Package Lib}
