@@ -7,7 +7,6 @@ Di seguito vengono riportati gli esiti delle misurazioni effettuate sulle classi
 \begin{tabular}{|l|l|}
 \cline{1-2}
 \textbf{Backend} & 35 \\ \cline{1-2}
-\textbf{Frontend} & 0 \\ \cline{1-2}
 \textbf{Totale} & 35 \\ \cline{1-2}
 \end{tabular}
 \caption{KLOCS}
@@ -18,19 +17,15 @@ Di seguito vengono riportati gli esiti delle misurazioni effettuate sulle classi
 \begin{center}
 \begin{longtable}{| >{\centering}p{7cm} | >{\centering}p{1.8cm} |}
 \textbf{Classe} & \textbf{Valore} \tabularnewline \hline 
+Config::ChooseConfiguration & 4 \tabularnewline \hline
+Config::Configuration & 1 \tabularnewline \hline
+Config::DevConfiguration & 4 \tabularnewline \hline
+Config::ProdConfiguration & 4 \tabularnewline \hline
+Config::TestConfiguration & 4 \tabularnewline \hline
+Config::MongoConnection & 1 \tabularnewline \hline
 Models::Model & 1 \tabularnewline \hline
 Models::MongooseConnection & 3 \tabularnewline \hline %
 \caption{Misurazioni della complessità ciclomatica per le classi del backend}
-\end{longtable}
-\end{center}
-\textbf{Esito}: Superato.
-
-\subparagraph{Frontend} \mbox{} \\
-\begin{center}
-\begin{longtable}{| >{\centering}p{7cm} | >{\centering}p{1.8cm} |}
-\textbf{Classe} & \textbf{Valore} \tabularnewline \hline %
-
-\caption{Misurazioni della complessità ciclomatica per le classi del frontend}
 \end{longtable}
 \end{center}
 \textbf{Esito}: Superato.
@@ -40,19 +35,16 @@ Models::MongooseConnection & 3 \tabularnewline \hline %
 \begin{center}
 \begin{longtable}{| >{\centering}p{7cm} | >{\centering}p{1.8cm} |}
 \textbf{Classe} & \textbf{Valore} \tabularnewline \hline 
+Config::ChooseConfiguration & 1 \tabularnewline \hline
+Config::Configuration & 4 \tabularnewline \hline
+Config::Configuration & 1 \tabularnewline \hline
+Config::DevConfiguration & 1 \tabularnewline \hline
+Config::ProdConfiguration & 1 \tabularnewline \hline
+Config::TestConfiguration & 1 \tabularnewline \hline
+Config::MongoConnection & 6 \tabularnewline \hline
 Models::Model & 2 \tabularnewline \hline
 Models::MongooseConnection & 4 \tabularnewline \hline %
 \caption{Numero di metodi delle classi del backend}
-\end{longtable}
-\end{center}
-\textbf{Esito}: Superato.
-
-\subparagraph{Frontend} \mbox{} \\
-\begin{center}
-\begin{longtable}{| >{\centering}p{7cm} | >{\centering}p{1.8cm} |}
-\textbf{Classe} & \textbf{Valore} \tabularnewline \hline %
-
-\caption{Numero di metodi delle classi del frontend}
 \end{longtable}
 \end{center}
 \textbf{Esito}: Superato.
@@ -63,7 +55,6 @@ Models::MongooseConnection & 4 \tabularnewline \hline %
 \begin{tabular}{|l|l|}
 \cline{1-2}
 \textbf{Backend} & 0 \\ \cline{1-2}
-\textbf{Frontend} & 0 \\ \cline{1-2}
 \textbf{Totale} & 0 \\ \cline{1-2}
 \end{tabular}
 \caption{Variabili non utilizzate e/o non definite}
@@ -75,19 +66,16 @@ Models::MongooseConnection & 4 \tabularnewline \hline %
 \begin{center}
 \begin{longtable}{| >{\centering}p{7cm} | >{\centering}p{1.8cm} | >{\centering}p{1.8cm} | >{\centering}p{1.8cm} |}
 \textbf{Classe} & \textbf{Minimo} & \textbf{Massimo} & \textbf{Medio} \tabularnewline \hline 
+Config::ChooseConfiguration & 0 & 0 & 0 \tabularnewline \hline
+Config::Configuration & 0 & 3 & 0.75 \tabularnewline \hline
+Config::Configuration & 1 \tabularnewline \hline
+Config::DevConfiguration & 2 & 2 & 2 \tabularnewline \hline
+Config::ProdConfiguration & 2 & 2 & 2 \tabularnewline \hline
+Config::TestConfiguration & 2 & 2 & 2 \tabularnewline \hline
+Config::MongoConnection & 5 & 0 & 0.83 \tabularnewline \hline
 Models::Model & 0 & 0 & 0 \tabularnewline \hline
 Models::MongooseConnection & 0 & 1 & 0.25 \tabularnewline \hline %
 \caption{Numero di parametri per metodo delle classi del backend}
-\end{longtable}
-\end{center}
-\textbf{Esito}: Superato.
-
-\subparagraph{Frontend} \mbox{} \\
-\begin{center}
-\begin{longtable}{| >{\centering}p{7cm} | >{\centering}p{1.8cm} | >{\centering}p{1.8cm} | >{\centering}p{1.8cm} |}
-\textbf{Classe} & \textbf{Minimo} & \textbf{Massimo} & \textbf{Medio} \tabularnewline \hline %
-
-\caption{Numero di parametri per metodo delle classi del frontend}
 \end{longtable}
 \end{center}
 \textbf{Esito}: Superato.
