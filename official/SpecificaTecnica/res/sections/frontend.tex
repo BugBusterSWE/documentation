@@ -151,7 +151,7 @@ Viene utilizzata per creare le \textit{action} relative agli utenti: la classe f
 \item Dispatcher: le Action create vengono poi instradate prima al Dispatcher, che poi provvede ad inoltrarle al giusto store.
 \item Pages: le pagine definite nel package Pages possono richiamare i metodi di questa classe per effettuare operazioni sulla gestione degli utenti.
 \item webAPIs::WebAPIFacade: questa classe viene utilizzata per permettere all'ActionCreator di interagire con le API esposte dal backend.
-\item Stores::UserStore: le Action create da UserActionCreator poi vengono utilizzate da UserSotre per aggiornare lo stato dei dati relativi agli utenti nel frontend.
+\item Stores::UserStore: le Action create da UserActionCreator poi vengono utilizzate da UserStore per aggiornare lo stato dei dati relativi agli utenti nel frontend.
 \end{itemize}
 
 \subsubsection{CompanyActionCreator}
@@ -202,8 +202,8 @@ Classe raffigurante il \textit{dispatcher} descritto nell'architettura Flux.
 Il dispatcher viene utilizzato come \textit{hub} centrale delle \textit{action} circolanti per l'applicazione. Esso deve fornire le informazioni per instradare le \textit{action} create dagli ActionCreators verso il giusto Store di destinazione
 \paragraph*{Relazione con altre classi}
 \begin{itemize}
-\item Stores: il Dispatcher fornisce i metodi agli Store dichiarare come instradare correttamente le Action.
-\item ActionCreators: il Dispatcher mette a disposizione i metodi per dichiarare quali tipi di Action sono legittime all'interno del frontend.
+\item Stores: il Dispatcher fornisce il metodo agli store per definire quali action lo store può ricevere.
+\item ActionCreators: il Dispatcher mette a disposizione i metodi per definire le Action utilizzate nel frontend.
 \end{itemize}
 
 
@@ -245,7 +245,7 @@ Questa classe viene utilizzata per mantenere i dati riguardanti gli utenti e di 
 \paragraph*{Relazione con altre classi}
 \begin{itemize}
 \item Pages: UserStore fornisce i dati riferiti agli utenti alle pagine che devono mostrarli e/o modificarli;
-\item Dispatcher: UserStore usa i metodi di Dispatcher per dichiarare quali Action è in grado di ricevere ed elaborare.
+\item Dispatcher: UserStore usa il metodo register di Dispatcher per dichiarare quali Action è in grado di ricevere ed elaborare.
 \end{itemize}
 
 \subsubsection{DatabaseStore}
@@ -255,8 +255,8 @@ Classe che si occupa di contenere i dati relativi alle connessioni ai database d
 Questa classe viene utilizzata per contenere i dati riguardanti le connessioni dei database definiti per le \glossaryItem{Company}. Si occupa di ricevere dal dispatcher le \textit{action} relative a questi dati e di mantenere i dati riferiti.
 \paragraph*{Relazione con altre classi}
 \begin{itemize}
-\item Pages;
-\item Dispatcher.
+\item Pages: DatabaseStore fornisce i dati riferiti ai database alle pagine che devono mostrarli e/o modificarli;
+\item Dispatcher: DatabaseStore usa il metodo register di Dispatcher per dichiarare quali Action è in grado di ricevere ed elaborare.
 \end{itemize}
 
 \subsubsection{CompanyStore}
@@ -266,7 +266,7 @@ Classe che si occupa di contenere i dati relativi alle \glossaryItem{Company}.
 Questa classe viene utilizzata per ricevere le \textit{action} relative alle \glossaryItem{Company} al fine di mantenere i dati relativi ad esse. Inoltre fornisce i metodi per fornire tali dati alle pagine che li richiedono
 \paragraph*{Relazione con altre classi}
 \begin{itemize}
-\item Dispatcher: CompanyStore usa i metodi di Dispatcher per dichiarare quali Action è in grado di ricevere ed elaborare.
+\item Dispatcher: CompanyStore usa il metodo register di Dispatcher per dichiarare quali Action è in grado di ricevere ed elaborare.
 \item Pages: CompanyStore fornisce i dati relativi alla Company alle pagine che possono mostrarli o modificarli.
 \end{itemize}
 
@@ -277,7 +277,7 @@ Classe che si occupa di contenere i dati delle specifiche \glossaryItem{DSL}
 Questa classe fornisce i metodi per ricevere le \glossaryItem{Action} relative alle specifiche \glossaryItem{DSL} e per mantenere i dati relativi ad esse. Fornisce inoltre i metodi per disporre quei dati per le pagine che li richiedono.
 \paragraph*{Relazione con altre classi}
 \begin{itemize}
-\item Dispatcher: DSLStore usa i metodi di Dispatcher per dichiarare quali Action è in grado di ricevere ed elaborare.
+\item Dispatcher: DSLStore usa il metodo register di Dispatcher per dichiarare quali Action è in grado di ricevere ed elaborare.
 \item Pages: DSLStore fornisce i dati relativi alle specifiche DSL alle pagine che possono mostrarli, elaborarli o modificarli.
 \end{itemize}
 
