@@ -6,11 +6,12 @@ Di seguito vengono riportati gli esiti delle misurazioni effettuate sulle classi
 \centering
 \begin{tabular}{|l|l|}
 \cline{1-2}
-\textbf{Backend} & 107 \\ \cline{1-2} %solo config
-\textbf{Totale} & 107 \\ \cline{1-2}
+\textbf{Backend} & 303 \\ \cline{1-2} %solo config e lib
+\textbf{Totale} & 303 \\ \cline{1-2}
 \end{tabular}
 \caption{SLOC}
 \end{table}
+% linee documentazione = 410 (di config e lib)
 
 \paragraph{Complessità ciclomatica} \mbox{} \\
 \subparagraph{Backend} \mbox{} \\
@@ -23,6 +24,10 @@ Config::DevConfiguration & 4 \tabularnewline \hline
 Config::ProdConfiguration & 4 \tabularnewline \hline
 Config::TestConfiguration & 4 \tabularnewline \hline
 Config::MongoConnection & 1 \tabularnewline \hline
+Lib::AuthenticationChecker & 6 \tabularnewline \hline
+Lib::DSLChecker & 11 \tabularnewline \hline
+Lib::LevelChecker & 5 \tabularnewline \hline
+Lib::Map & 1 \tabularnewline \hline
 Models::Model & 1 \tabularnewline \hline
 Models::MongooseConnection & 3 \tabularnewline \hline %
 \caption{Misurazioni della complessità ciclomatica per le classi del backend}
@@ -42,6 +47,10 @@ Config::DevConfiguration & 1 \tabularnewline \hline
 Config::ProdConfiguration & 1 \tabularnewline \hline
 Config::TestConfiguration & 1 \tabularnewline \hline
 Config::MongoConnection & 6 \tabularnewline \hline
+Lib::AuthenticationChecker & 6 \tabularnewline \hline
+Lib::DSLChecker & 10 \tabularnewline \hline
+Lib::LevelChecker & 4 \tabularnewline \hline
+Lib::Map & 0 \tabularnewline \hline
 Models::Model & 2 \tabularnewline \hline
 Models::MongooseConnection & 4 \tabularnewline \hline %
 \caption{Numero di metodi delle classi del backend}
@@ -73,6 +82,10 @@ Config::DevConfiguration & 2 & 2 & 2 \tabularnewline \hline
 Config::ProdConfiguration & 2 & 2 & 2 \tabularnewline \hline
 Config::TestConfiguration & 2 & 2 & 2 \tabularnewline \hline
 Config::MongoConnection & 5 & 0 & 0.83 \tabularnewline \hline
+Lib::AuthenticationChecker & 1& 3 & 2 \tabularnewline \hline
+Lib::DSLChecker & 2 & 2 & 2 \tabularnewline \hline
+Lib::LevelChecker & 1 & 3 & 2 \tabularnewline \hline
+Lib::Map & 0 & 0 & 0 \tabularnewline \hline
 Models::Model & 0 & 0 & 0 \tabularnewline \hline
 Models::MongooseConnection & 0 & 1 & 0.25 \tabularnewline \hline %
 \caption{Numero di parametri per metodo delle classi del backend}
