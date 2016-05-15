@@ -154,8 +154,9 @@ Di seguito vengono riportati gli esiti del calcolo degli indici di produttività
 \begin{tabular}{|l|l|}
 \cline{1-2}
 \textbf{Di Documentazione (Manuali)} & ?? \\ \cline{1-2} % (ore di stesura manuali)/(numero righe di codice dei manuali)
-\textbf{Di Documentazione (Codice)} & ?? \\ \cline{1-2} % (ore di stesura codice)/(numero righe di documentazione del codice => vedi "logical sloc" nel tool di misura) 
-\textbf{Di Codifica} & ?? \\ \cline{1-2} % (ore di stesura del codice)/(numero di righe di codice => vedi misurazione sloc nella sezione di misurazione del codice)
+\textbf{Di Documentazione (Codice)} & 0.07 \\ \cline{1-2} % (ore di stesura codice)/(numero righe di documentazione del codice => vedi commento SLOC misure codice) 
+\textbf{Di Codifica} & 0.17 \\ \cline{1-2} % (ore di stesura del codice)/(numero di righe di codice => vedi misurazione sloc nella sezione di misurazione del codice)
 \end{tabular}
 \caption{Valori di produttività di documentazione e codifica del periodo di Progettazione di Dettaglio e Codifica}
 \end{table}
+Il valore molto basso della produttività di documentazione del codice è dovuto all'alto numero di righe di documentazione scritte, in particolare per le classi del package routes, per le quali è stata inserita, oltre al TypeDoc di TypeScript anche la spiegazione di ciascuna API implementata, completa di parametri, valori ritornati ed esempi d'uso (sia in caso di successo che di fallimento). Il totale di righe di documentazione scritte, infatti, ammonta a 2070, più del doppio delle righe di codice (pari a 855).
