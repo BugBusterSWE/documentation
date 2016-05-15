@@ -61,18 +61,6 @@ Rappresenta la media di occorrenze di metodi per \glossaryItem{package}: un \glo
 \end{itemize}
 
 
-\textbf{Bugs per linee di codice}\\
-
-Rappresenta il numero di \glossaryItem{bug} trovati in un insieme di linee di codice: con la crescita del prodotto è utile misurare il rapporto tra i difetti trovati e la dimensione del prodotto (in termini di \glossaryItem{KLOC}s), tenendo conto del fatto che un \glossaryItem{incremento} del sorgente comporta un aumento della possibilità di inserimento di un errore. \\
-
-\textbf{Range utilizzati}:
-
-\begin{itemize}
-	\item Range di accettazione : [0 - 60]
-	\item Range ottimale: [0 - 20]
-\end{itemize}
-Misurati sull'intera dimensione in \glossaryItem{KLOC}s del prodotto.\\
-
 \textbf{Variabili non utilizzate e/o non definite}\\
 
 Rappresenta il numero di variabili che vengono definite, ma non utilizzate, o viceversa. Questo viene considerato \glossaryItem{pollution}, e pertanto considerato inaccettabile. La misurazione avviene mediante un'analisi dell'\textbf{\glossaryItem{AST}} (\textbf{A}bstract \textbf{S}yntax \textbf{T}ree). \\
@@ -92,16 +80,6 @@ Rappresenta il numero di parametri formali di un metodo. Un metodo con troppi pa
 \begin{itemize}
 	\item Range di accettazione : [0 - 6]
 	\item Range ottimale: [0 - 4]
-\end{itemize}
-
-\textbf{Numero di funzioni d'interfaccia per \glossaryItem{package}}\\
-
-Rappresenta il numero di funzioni che il \glossaryItem{package} mette a disposizione dei suoi utenti. \\
-
-\textbf{Range utilizzati}:
-\begin{itemize}
-	\item Range di accettazione : [0 - 20]
-	\item Range ottimale: [1 - 10]
 \end{itemize}
 
 \paragraph{Documentazione}\mbox{}\\
