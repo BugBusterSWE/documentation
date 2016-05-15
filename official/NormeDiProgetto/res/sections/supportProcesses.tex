@@ -137,6 +137,14 @@ In questa sezione vengono trattate le convenzioni riguardanti tipografia, ortogr
 \textbf{Citazione di termini da glossario}
 I termini presenti nel glossario possono essere utilizzati durante la stesura dei documenti riportandoli con la sintassi \glossaryItem{nome elemento}.
 
+\textbf{Nomi delle fasi}
+\`E stato stabilito che i nomi delle fasi dovranno avere iniziale maiuscola.		
+Nel caso in cui una voce sia composta da pi\`u termini, tutti i singoli termini dovranno avere l'iniziale maiuscola.
+
+\textbf{Nomi dei file}
+I nomi dei file andranno in inglese, in minuscolo e seguendo la convenzione \textit{camelCase}.
+
+
 
 \textbf{Formati} 
 \begin{itemize}
@@ -233,11 +241,14 @@ si faranno carico della revisione mirata dell'architettura.
 
 \paragraph*{Procedura di verifica del codice}
 \begin{itemize}
-
 \item \textbf{Controlli statici}: Vengono eseguiti controlli di tipo statico sul codice tramite l'utilizzo del \textit{linter} \textit{TsLint}, che permette di trovare eventuali errori di forma o logici prima della compilazione.
 
 \item \textbf{Controlli dinamici}: Dopo una compilazione avvenuta con successo e dopo aver passato con successo i test di tipo statico vengono eseguiti i test di tipo dinamico tramite il programma \textit{mocha}, che si occupa di eseguire i test di unità e segnalare eventuali test falliti. È possibile generare un report di tipo \textit{xUnit}, che consente di avere un storico dell'esecuzione dei test e di tracciare il loro andamento. I test saranno scritti in TypeScript utilizzando la seguente struttura:
 \begin{verbatim}
+describe("NomeDellaClasse", () => {
+    let subject : TipoDelSoggetto;
+
+
 describe("NomeDellaClasse", () => {
     let subject : TipoDelSoggetto;
 
@@ -260,3 +271,17 @@ describe("NomeDellaClasse", () => {
 \end{verbatim}
 
 \end{itemize}
+
+\subsection{Processo di validazione}
+\subsubsection{Scopo del processo}
+Il processo di validazione serve per determinare se il prodotto finale è conforme a quanto è stato pianificato. Si procederà dapprima ad una validazione interna da parte dei componenti del team e poi sarà il proponente a rivalidare il prodotto, per garantire l'indipendenza del processo. \\
+L'attività di validazione consiste nel condurre i test per poi analizzare i risultati e assicurarsi che il prodotto rispecchi le indicazioni per cui è stato sviluppato. \\
+Per le norme sulla sintassi dei test si rimanda alla sezione dedicata al processo di verifica.
+
+\subsubsection{Risultati attesi dal processo}
+Il processo di validazione deve produrre una conferma sul fatto che il prodotto realizzato è conforme ai requisiti e soddisfa i bisogni espressi dal committente.
+
+\subsubsection{1. Attività di validazione}
+\paragraph*{Procedura di validazione}
+I test verranno dapprima eseguiti dai verificatori, che ne tracceranno il risultato. Al termine dell'esecuzione dei test, il responsabile analizzerà i risultati e deciderà se accetarli, chiedere una ripetizione di alcuni test oppure di tutti, eventualmente con verificatori diversi. \\
+Una volta accettati, i risultati verranno consegnati al proponente dal responsabile, che lo informerà sulle modalità di esecuzione indipendente della validazione.
