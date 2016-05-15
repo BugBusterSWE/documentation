@@ -20,7 +20,7 @@ zip:
 	for i in $(wildcard official/*/*.pdf); do \
 		pathFile=`dirname $$i`; \
 		nameFile=`basename \`dirname $$i\``; \
-		if [ "$$pathFile" == "official/NormeDiProgetto" ]; then \
+		if [ "$$pathFile" = "official/NormeDiProgetto" ]; then \
 			cp $$i $(PATH_ZIP)/Interni/$$nameFile.pdf; \
 		else \
 			cp $$i $(PATH_ZIP)/Esterni/$$nameFile.pdf; \
