@@ -73,7 +73,7 @@ Contiene le operazioni CRUD per interagire con le informazioni riguardanti le \g
 
 \paragraph*{Relazione con altre classi}
 \begin{itemize}
-\item ActionCreators::CompanyActionCreator. La classe CompanyAPIs fornisce i metodi affinchè CompanyActionCreator possa interagire con le API riguardanti le Company fornite dal backend.
+\item ActionCreators::CompanyActionCreator. La classe CompanyAPIs fornisce i metodi affinchè CompanyActionCreator possa interagire con le \glossaryItem{API} riguardanti le \glossaryItem{Company} fornite dal backend.
 \end{itemize}
 
 \subsubsection{DSLAPIs}
@@ -85,7 +85,7 @@ Viene utilizzata per lanciare le operazioni CRUD associate alle \glossaryItem{AP
 
 \paragraph*{Relazione con altre classi}
 \begin{itemize}
-\item ActionCreators::DSLActionCreator. La classe DSLAPIs fornisce i metodi affinchè DSLActionCreator possa interagire con le API righardanti le specifiche DSL fornite dal backend.
+\item ActionCreators::DSLActionCreator. La classe DSLAPIs fornisce i metodi affinchè DSLActionCreator possa interagire con le \glossaryItem{API} righardanti le specifiche \glossaryItem{DSL} fornite dal backend.
 \end{itemize}
 
 \subsubsection{DatabaseAPIs}
@@ -97,7 +97,7 @@ Viene utilizzata questa classe per lanciare le operazioni CRUD esposte dalle \gl
 
 \paragraph*{Relazione con altre classi}
 \begin{itemize}
-\item ActionCreators::DatabaseActionCreator. La classe DatabaseAPIs fornisce i metodi affinchè DatabaseActionCreator possa interagire con le API riguardanti le connessioni ai database fornite dal server.
+\item ActionCreators::DatabaseActionCreator. La classe DatabaseAPIs fornisce i metodi affinchè DatabaseActionCreator possa interagire con le \glossaryItem{API} riguardanti le connessioni ai database fornite dal server.
 \end{itemize}
 
 \subsubsection{WebAPIFacade}
@@ -107,8 +107,8 @@ Classe che implementa il \textit{design pattern} \textit{Facade} al fine di crea
 Questa classe viene utilizzata come interfaccia per il frontend per comunicare con le \glossaryItem{API} esposte dal backend.
 \paragraph*{Relazione con altre classi}
 \begin{itemize}
-\item WebAPIs. WebAPIFacade include le altre classi contenute nel package per fornire un interfaccia unica al sistema per comunicare con il backend.
-\item ActionCreators. WebAPIFacade è utilizzato dalle classi del package actionCreators per permettere alle classi di quest'ultimo di poter accedere alle API esposte dal server. 
+\item WebAPIs. WebAPIFacade include le altre classi contenute nel \glossaryItem{package} per fornire un interfaccia unica al sistema per comunicare con il backend.
+\item ActionCreators. WebAPIFacade è utilizzato dalle classi del \glossaryItem{package} actionCreators per permettere alle classi di quest'ultimo di poter accedere alle \glossaryItem{API} esposte dal server. 
 \end{itemize} 
 
 \subsection{ActionCreators}
@@ -140,10 +140,10 @@ Viene utilizzata per richiedere il login di un utente e per emanare le \textit{a
 
 \paragraph*{Relazione con altre classi}
 \begin{itemize}
-\item Dispatcher: le Action create vengono poi instradate prima al Dispatcher, che poi provvede ad inoltrarle al giusto store.
-\item Pages: le pagine definite nel package Pages possono richiamare i metodi di questa classe per effettuare operazioni sulla sessione corrente.
-\item WebAPIs::WebAPIFacade: questa classe viene utilizzata per permettere all'ActionCreator di interagire con le API esposte dal backend.
-\item Stores::SessionStore: le Action create da SessionActionCreator poi vengono utilizzate da SessionStore per aggiornare lo stato di questi dati nel frontend.
+\item Dispatcher: le \glossaryItem{Action} create vengono poi instradate prima al Dispatcher, che poi provvede ad inoltrarle al giusto store.
+\item Pages: le pagine definite nel \glossaryItem{package} Pages possono richiamare i metodi di questa classe per effettuare operazioni sulla sessione corrente.
+\item WebAPIs::WebAPIFacade: questa classe viene utilizzata per permettere all'ActionCreator di interagire con le \glossaryItem{API} esposte dal backend.
+\item Stores::SessionStore: le \glossaryItem{Action} create da SessionActionCreator poi vengono utilizzate da SessionStore per aggiornare lo stato di questi dati nel frontend.
 \end{itemize}
 
 \subsubsection{UserActionCreator}
@@ -154,10 +154,10 @@ Viene utilizzata per creare le \textit{action} relative agli utenti: la classe f
 
 \paragraph*{Relazione con altre classi}
 \begin{itemize}
-\item Dispatcher: le Action create vengono poi instradate prima al Dispatcher, che poi provvede ad inoltrarle al giusto store.
-\item Pages: le pagine definite nel package Pages possono richiamare i metodi di questa classe per effettuare operazioni sulla gestione degli utenti.
-\item webAPIs::WebAPIFacade: questa classe viene utilizzata per permettere all'ActionCreator di interagire con le API esposte dal backend.
-\item Stores::UserStore: le Action create da UserActionCreator poi vengono utilizzate da UserStore per aggiornare lo stato dei dati relativi agli utenti nel frontend.
+\item Dispatcher: le \glossaryItem{Action} create vengono poi instradate prima al Dispatcher, che poi provvede ad inoltrarle al giusto store.
+\item Pages: le pagine definite nel \glossaryItem{package} Pages possono richiamare i metodi di questa classe per effettuare operazioni sulla gestione degli utenti.
+\item webAPIs::WebAPIFacade: questa classe viene utilizzata per permettere all'ActionCreator di interagire con le \glossaryItem{API} esposte dal backend.
+\item Stores::UserStore: le \glossaryItem{Action} create da UserActionCreator poi vengono utilizzate da UserStore per aggiornare lo stato dei dati relativi agli utenti nel frontend.
 \end{itemize}
 
 \subsubsection{CompanyActionCreator}
@@ -168,10 +168,10 @@ La classe viene utilizzata per creare le \textit{action} relative alle \glossary
 
 \paragraph*{Relazione con altre classi}
 \begin{itemize}
-\item Dispatcher: le Action create vengono poi instradate prima al Dispatcher, che poi provvede ad inoltrarle al giusto store.
-\item Pages: le pagine definite nel package Pages possono richiamare i metodi di questa classe per effettuare operazioni sulla gestione degli utenti.
-\item webAPIs::WebAPIFacade: questa classe viene utilizzata per permettere all'ActionCreator di interagire con le API esposte dal backend.
-\item Stores::CompanyStore: le Action create da CompanyActionCreator poi vengono utilizzate da CompanyStore per aggiornare i dati relativi alle Company nel frontend.
+\item Dispatcher: le \glossaryItem{Action} create vengono poi instradate prima al Dispatcher, che poi provvede ad inoltrarle al giusto store.
+\item Pages: le pagine definite nel \glossaryItem{package} Pages possono richiamare i metodi di questa classe per effettuare operazioni sulla gestione degli utenti.
+\item webAPIs::WebAPIFacade: questa classe viene utilizzata per permettere all'ActionCreator di interagire con le \glossaryItem{API} esposte dal backend.
+\item Stores::CompanyStore: le \glossaryItem{Action} create da CompanyActionCreator poi vengono utilizzate da CompanyStore per aggiornare i dati relativi alle \glossaryItem{Company} nel frontend.
 \end{itemize}
 
 \subsubsection{DSLActionCreator}
@@ -182,10 +182,10 @@ Tale classe viene utilizzata per sfruttare i metodi dichiarati dalle webAPIs per
 
 \paragraph*{Relazione con altre classi}
 \begin{itemize}
-\item Dispatcher: le Action create vengono poi instradate prima al Dispatcher, che poi provvede ad inoltrarle al giusto store.
-\item Pages: le pagine definite nel package Pages possono richiamare i metodi di questa classe per effettuare operazioni sulla gestione degli utenti.
-\item webAPIs::WebAPIFacade: questa classe viene utilizzata per permettere all'ActionCreator di interagire con le API esposte dal backend.
-\item Stores::DSLStore: le Action create da DSLActionCreator vengono utilizzate da DSLStore per per aggiornare i dati relativi alle specifiche DSL nel frontend.
+\item Dispatcher: le \glossaryItem{Action} create vengono poi instradate prima al Dispatcher, che poi provvede ad inoltrarle al giusto store.
+\item Pages: le pagine definite nel \glossaryItem{package} Pages possono richiamare i metodi di questa classe per effettuare operazioni sulla gestione degli utenti.
+\item webAPIs::WebAPIFacade: questa classe viene utilizzata per permettere all'ActionCreator di interagire con le \glossaryItem{API} esposte dal backend.
+\item Stores::DSLStore: le \glossaryItem{Action} create da DSLActionCreator vengono utilizzate da DSLStore per per aggiornare i dati relativi alle specifiche \glossaryItem{DSL} nel frontend.
 \end{itemize}
 
 \subsubsection{DatabaseActionCreator}
@@ -195,10 +195,10 @@ Classe che si occupa di lanciare \textit{action} riguardanti le connessioni ai d
 La classe viene utilizzata per richiamare i metodi definiti dalle \textit{webAPIs} relativi ai database delle \glossaryItem{Company} e creare le \glossaryItem{action} contenenti le risposte dai metodi chiamati.
 \paragraph*{Relazione con altre classi}
 \begin{itemize}
-\item Dispatcher: le Action create vengono poi instradate prima al Dispatcher, che poi provvede ad inoltrarle al giusto store.
-\item Pages: le pagine definite nel package Pages possono richiamare i metodi di questa classe per effettuare operazioni sulla gestione degli utenti.
-\item webAPIs::WebAPIFacade: questa classe viene utilizzata per permettere all'ActionCreator di interagire con le API esposte dal backend.
-\item Store::DatabaseStore: le Action create da DatabaseActionCreator vengono utilizzate da DatabaseStore per per aggiornare i dati relativi alle connessioni ai database nel frontend.
+\item Dispatcher: le \glossaryItem{Action} create vengono poi instradate prima al Dispatcher, che poi provvede ad inoltrarle al giusto store.
+\item Pages: le pagine definite nel \glossaryItem{package} Pages possono richiamare i metodi di questa classe per effettuare operazioni sulla gestione degli utenti.
+\item webAPIs::WebAPIFacade: questa classe viene utilizzata per permettere all'ActionCreator di interagire con le \glossaryItem{API} esposte dal backend.
+\item Store::DatabaseStore: le \glossaryItem{Action} create da DatabaseActionCreator vengono utilizzate da DatabaseStore per per aggiornare i dati relativi alle connessioni ai database nel frontend.
 \end{itemize}
 
 \subsection{Dispatcher}
@@ -208,8 +208,8 @@ Classe raffigurante il \textit{dispatcher} descritto nell'architettura Flux.
 Il dispatcher viene utilizzato come \textit{hub} centrale delle \textit{action} circolanti per l'applicazione. Esso deve fornire le informazioni per instradare le \textit{action} create dagli ActionCreators verso il giusto Store di destinazione
 \paragraph*{Relazione con altre classi}
 \begin{itemize}
-\item Stores: il Dispatcher fornisce il metodo agli store per definire quali action lo store può ricevere.
-\item ActionCreators: il Dispatcher mette a disposizione i metodi per definire le Action utilizzate nel frontend.
+\item Stores: il Dispatcher fornisce il metodo agli store per definire quali \glossaryItem{action} lo store può ricevere.
+\item ActionCreators: il Dispatcher mette a disposizione i metodi per definire le \glossaryItem{Action} utilizzate nel frontend.
 \end{itemize}
 
 
@@ -251,7 +251,7 @@ Questa classe viene utilizzata per mantenere i dati riguardanti gli utenti e di 
 \paragraph*{Relazione con altre classi}
 \begin{itemize}
 \item Pages: UserStore fornisce i dati riferiti agli utenti alle pagine che devono mostrarli e/o modificarli;
-\item Dispatcher: UserStore usa il metodo register di Dispatcher per dichiarare quali Action è in grado di ricevere ed elaborare.
+\item Dispatcher: UserStore usa il metodo register di Dispatcher per dichiarare quali \glossaryItem{Action} è in grado di ricevere ed elaborare.
 \end{itemize}
 
 \subsubsection{DatabaseStore}
@@ -262,7 +262,7 @@ Questa classe viene utilizzata per contenere i dati riguardanti le connessioni d
 \paragraph*{Relazione con altre classi}
 \begin{itemize}
 \item Pages: DatabaseStore fornisce i dati riferiti ai database alle pagine che devono mostrarli e/o modificarli;
-\item Dispatcher: DatabaseStore usa il metodo register di Dispatcher per dichiarare quali Action è in grado di ricevere ed elaborare.
+\item Dispatcher: DatabaseStore usa il metodo register di Dispatcher per dichiarare quali \glossaryItem{Action} è in grado di ricevere ed elaborare.
 \end{itemize}
 
 \subsubsection{CompanyStore}
@@ -272,8 +272,8 @@ Classe che si occupa di contenere i dati relativi alle \glossaryItem{Company}.
 Questa classe viene utilizzata per ricevere le \textit{action} relative alle \glossaryItem{Company} al fine di mantenere i dati relativi ad esse. Inoltre fornisce i metodi per fornire tali dati alle pagine che li richiedono
 \paragraph*{Relazione con altre classi}
 \begin{itemize}
-\item Dispatcher: CompanyStore usa il metodo register di Dispatcher per dichiarare quali Action è in grado di ricevere ed elaborare.
-\item Pages: CompanyStore fornisce i dati relativi alla Company alle pagine che possono mostrarli o modificarli.
+\item Dispatcher: CompanyStore usa il metodo register di Dispatcher per dichiarare quali \glossaryItem{Action} è in grado di ricevere ed elaborare.
+\item Pages: CompanyStore fornisce i dati relativi alla \glossaryItem{Company} alle pagine che possono mostrarli o modificarli.
 \end{itemize}
 
 \subsubsection{DSLStore}
@@ -283,8 +283,8 @@ Classe che si occupa di contenere i dati delle specifiche \glossaryItem{DSL}
 Questa classe fornisce i metodi per ricevere le \glossaryItem{Action} relative alle specifiche \glossaryItem{DSL} e per mantenere i dati relativi ad esse. Fornisce inoltre i metodi per disporre quei dati per le pagine che li richiedono.
 \paragraph*{Relazione con altre classi}
 \begin{itemize}
-\item Dispatcher: DSLStore usa il metodo register di Dispatcher per dichiarare quali Action è in grado di ricevere ed elaborare.
-\item Pages: DSLStore fornisce i dati relativi alle specifiche DSL alle pagine che possono mostrarli, elaborarli o modificarli.
+\item Dispatcher: DSLStore usa il metodo register di Dispatcher per dichiarare quali \glossaryItem{Action} è in grado di ricevere ed elaborare.
+\item Pages: DSLStore fornisce i dati relativi alle specifiche \glossaryItem{DSL} alle pagine che possono mostrarli, elaborarli o modificarli.
 \end{itemize}
 
 
