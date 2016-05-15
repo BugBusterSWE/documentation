@@ -5,15 +5,13 @@ Nella progettazione di \glossaryItem{MaaS} sono stati utilizzati i seguenti \tex
 \item \textbf{Builder};
 \item \textbf{Facade};
 \item \textbf{Singleton};
-\item \textbf{Chain of Responsibility};
-\item \textbf{Model-View-Controller}.
+\item \textbf{Chain of Responsibility}.
 \end{itemize}
 Verrà presentata una descrizione di questi \textit{design pattern}, dividendoli in base al loro tipo, ovvero:
 \begin{itemize}
 \item \textbf{Creazionali}: Builder e Singleton;
 \item \textbf{Strutturali}: Facade;
-\item \textbf{Comportamentali}: Chain of responsibility;
-\item \textbf{Architetturali}: Model-View-Controller.
+\item \textbf{Comportamentali}: Chain of responsibility.
 \end{itemize}
 Nella descrizione dell'architettura sono stati evidenziati i punti di applicazione dei singoli \textit{design pattern}. In questa sezione vengono riportati solamente i componenti che li realizzano nel concreto o, ove risultasse più chiaro, il \glossaryItem{diagramma delle classi} vero e proprio.
 \subsection{Creazionali}
@@ -103,6 +101,7 @@ Questo \textit{design pattern} fornisce un'interfaccia unificata per un insieme 
 \caption{Design pattern Facade}
 \end{figure}
 \paragraph{Contestualizzazione}\mbox{} \\
+È opinione del team che i vantaggi del design pattern Facade superino i suoi svantaggi. Essendo MaaS un prodotto complesso, con molti sottosistemi che interagiscono tra loro, l'utilizzo del Facade permette di semplificare la loro gestione e le loro interazioni. Inoltre l'accoppiamento dei sottosistemi viene ridotto, favorendo quindi il riuso dei singoli componenti dell'applicazione. Gli aspetti negativi non possono tuttavia essere sottovalutati: il Facade rischia di diventare un \textit{Single point of failure}; di conseguenza sarà fatta molta attenzione a verificarne il funzionamento attraverso casi di test creati ad hoc.
 Il \textit{design pattern} \textit{Facade} è utilizzato nel backend per fornire un'interfaccia semplice per il sottosistema complesso del \glossaryItem{package} \texttt{Routes}. Un \glossaryItem{modulo}, FacadeRouter, fornisce l'interfaccia, ed evita a MaaSServer di dover interagire con i singoli \glossaryItem{moduli} rappresentanti le diverse \textit{Routes}. \\
 Di seguito è riportato il \glossaryItem{diagramma delle classi} che realizza il \textit{design pattern} \textit{Facade} nel backend.
 \begin{figure}[H]
@@ -138,38 +137,3 @@ La classe \texttt{DSLInterpreter::DSLInterpreter} implementa il \textit{Chain of
 \includegraphics[width=0.9\textwidth]{res/sections/frontend/chainOfResponsability.png}
 \caption{Design pattern Chain of responsability nel frontend}
 \end{figure}
-\subsection{Architetturali}
-\subsubsection{Model-View-Controller}
-\paragraph{Descrizione} \mbox{} \\
-Il pattern è basato sulla separazione dei compiti fra i componenti software che interpretano tre ruoli principali:
-\begin{itemize}
-\item il \textbf{Model} fornisce i metodi per accedere ai dati utili all'applicazione;
-\item il \textbf{View} visualizza i dati contenuti nel \textbf{Model} e si occupa dell'interazione con utenti e agenti;
-\item il \textbf{Controller} riceve i comandi dell'utente (in genere attraverso il \textbf{View}) e li attua modificando lo stato degli altri due componenti.
-\end{itemize}
-Questo schema, fra l'altro, implica anche la tradizionale separazione fra la logica applicativa (in questo contesto spesso chiamata \textit{business logic}), a carico del \textbf{Controller} e del \textbf{Model}, e l'interfaccia utente a carico del \textbf{View}. \\
-Quasi sempre la relazione fra \textbf{View} e \textbf{Model} è descrivibile anche come istanza del pattern \textit{Observer}. A volte, quando è necessario cambiare il comportamento standard dell'applicazione a seconda delle circostanze, il \textbf{Controller} implementa anche il pattern \textit{Strategy}.
-\paragraph{Vantaggi} \mbox{} \\
-\begin{itemize}
-\item \glossaryItem{Riuso} dei componenti dei model: miglior manutenzione e test;
-\item Supporto più semplice per nuovi tipi di client: basta creare un nuovo \textbf{View} e un nuovo \textbf{Controller}.
-\end{itemize}
-\paragraph{Svantaggi} \mbox{} \\
-\begin{itemize}
-\item Maggiore complessità di progettazione: c'è bisogno di molte più classi per garantire la separazione.
-\end{itemize}
-\paragraph{Struttura} \mbox{} \\
-Il seguente diagramma, non \glossaryItem{UML}, mostra la struttura generale del design pattern MVC.
-\begin{figure}[H]
-\centering
-\includegraphics[height=5cm]{res/sections/backend/mvc.png}
-\caption{Design pattern Model-View-Controller}
-\end{figure}
-\paragraph{Contestualizzazione} \mbox{} \\
-In \glossaryItem{MaaS}, i componenti che realizzano il design pattern MVC sono i seguenti:
-\begin{itemize}
-\item \glossaryItem{Package} \texttt{Models} -> \textbf{Model};
-\item \glossaryItem{Package} \texttt{Routes} -> \textbf{Controller};
-\item Viste di \texttt{React.js} -> \textbf{View}.
-\end{itemize}
-L'utente interagisce con le viste create tramite il \glossaryItem{framework} React.js. I dati vengono richiesti al server attraverso le \glossaryItem{API} \glossaryItem{REST} messe a disposizione. Le richieste vengono gestite con le routes di ExpressJS, e i \glossaryItem{moduli} del \glossaryItem{package} Models vengono utilizzati per accedere ai dati memorizzati dall'applicazione.
