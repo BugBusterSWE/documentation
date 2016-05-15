@@ -6,12 +6,12 @@ Di seguito vengono riportati gli esiti delle misurazioni effettuate sulle classi
 \centering
 \begin{tabular}{|l|l|}
 \cline{1-2}
-\textbf{Backend} & 528 \\ \cline{1-2} %config, router e lib
-\textbf{Totale} & 528 \\ \cline{1-2}
+\textbf{Backend} & 855 \\ \cline{1-2} 
+\textbf{Totale} & 855 \\ \cline{1-2}
 \end{tabular}
 \caption{SLOC}
 \end{table}
-% linee documentazione = 1663 (di config, lib e routes)
+% linee documentazione = 2070
 
 \paragraph{Complessità ciclomatica} \mbox{} \\
 \subparagraph{Backend} \mbox{} \\
@@ -28,8 +28,13 @@ lib::AuthenticationChecker & 6 \tabularnewline \hline
 lib::DSLChecker & 11 \tabularnewline \hline
 lib::LevelChecker & 5 \tabularnewline \hline
 lib::Map & 1 \tabularnewline \hline
+models::CompanyModel & 4 \tabularnewline \hline
+models::CustomModelInterface & 1 \tabularnewline \hline
+models::DatabaseModel & 1 \tabularnewline \hline
+models::DSLModel & 1 \tabularnewline \hline
 models::Model & 1 \tabularnewline \hline
 models::MongooseConnection & 3 \tabularnewline \hline 
+models::UserModel & 1 \tabularnewline \hline
 routes::CompanyRouter & 1 \tabularnewline \hline
 routes::DatabaseRouter & 1 \tabularnewline \hline
 routes::DSLRouter & 1 \tabularnewline \hline
@@ -40,6 +45,7 @@ routes::UserRouter & 1 \tabularnewline \hline %
 \textbf{Esito}: Superato.
 
 \paragraph{Number of methods} \mbox{} \\
+Nel calcolo del numero di metodi di una classe non sono contati quelli di eventuali superclassi dei quali non è stato fatto \textit{override}.
 \subparagraph{Backend} \mbox{} \\
 \begin{center}
 \begin{longtable}{| >{\centering}p{7cm} | >{\centering}p{1.8cm} |}
@@ -55,8 +61,13 @@ lib::AuthenticationChecker & 6 \tabularnewline \hline
 lib::DSLChecker & 10 \tabularnewline \hline
 lib::LevelChecker & 4 \tabularnewline \hline
 lib::Map & 0 \tabularnewline \hline
-models::Model & 2 \tabularnewline \hline
-models::MongooseConnection & 4 \tabularnewline \hline 
+models::CompanyModel & 3 \tabularnewline \hline
+models::CustomModelInterface & 0 \tabularnewline \hline
+models::DatabaseModel & 8 \tabularnewline \hline
+models::DSLModel & 4 \tabularnewline \hline
+models::Model & 7 \tabularnewline \hline
+models::MongooseConnection & 3 \tabularnewline \hline 
+models::UserModel & 9 \tabularnewline \hline
 routes::CompanyRouter & 7 \tabularnewline \hline
 routes::DatabaseRouter & 7 \tabularnewline \hline
 routes::DSLRouter & 7 \tabularnewline \hline
@@ -85,7 +96,6 @@ routes::UserRouter & 10 \tabularnewline \hline %
 \textbf{Classe} & \textbf{Minimo} & \textbf{Massimo} & \textbf{Medio} \tabularnewline \hline 
 config::ChooseConfiguration & 0 & 0 & 0 \tabularnewline \hline
 config::Configuration & 0 & 3 & 0.75 \tabularnewline \hline
-config::Configuration & 1 \tabularnewline \hline
 config::DevConfiguration & 2 & 2 & 2 \tabularnewline \hline
 config::ProdConfiguration & 2 & 2 & 2 \tabularnewline \hline
 config::TestConfiguration & 2 & 2 & 2 \tabularnewline \hline
@@ -94,8 +104,13 @@ lib::AuthenticationChecker & 1& 3 & 2 \tabularnewline \hline
 lib::DSLChecker & 2 & 2 & 2 \tabularnewline \hline
 lib::LevelChecker & 1 & 3 & 2 \tabularnewline \hline
 lib::Map & 0 & 0 & 0 \tabularnewline \hline
-models::Model & 0 & 0 & 0 \tabularnewline \hline107
+models::CompanyModel & 0 & 0 & 0 \tabularnewline \hline
+models::CustomModelInterface & 0 & 0 & 0 \tabularnewline \hline
+models::DatabaseModel & 0 & 5 & 1.37 \tabularnewline \hline
+models::DSLModel & 0 & 1 & 0.25 \tabularnewline \hline
+models::Model & 0 & 2 & 0.71 \tabularnewline \hline
 models::MongooseConnection & 0 & 1 & 0.25 \tabularnewline \hline 
+models::UserModel & 0 & 4 & 1.22 \tabularnewline \hline
 routes::CompanyRouter & 0 & 2 & 1.42 \tabularnewline \hline
 routes::DatabaseRouter & 0 & 2 & 1.42 \tabularnewline \hline
 routes::DSLRouter & 0 & 2 & 1.42 \tabularnewline \hline
