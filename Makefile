@@ -5,7 +5,7 @@ include common/make/flags.inc
 
 FOLDERS= internal official presentations verbal
 
-PATH_ZIP= RP
+PATH_ZIP= RQ
 GROUP_NAME= BugBusters
 
 
@@ -47,14 +47,13 @@ $(FOLDERS):
 		echo "Document: $$i"; \
 		bak=$(shell pwd); \
 		cd $$i; \
-		if [ "$$i" != "official/Glossario/" ]; then \
-			echo "****Compilation with $(CC). Flags: $(CCFLAGS)****"; \
-			$(CC) -C; \
-			$(CC) $(CCFLAGS); \
-		else \
+		if [ "$$i" = "official/Glossario/" ]; then \
 			echo "****This is the glossary, calling \"build.sh\" script****"; \
 			bash build.sh; \
 		fi; \
+		echo "****Compilation with $(CC). Flags: $(CCFLAGS)****"; \
+		$(CC) -C; \
+		$(CC) $(CCFLAGS); \
 		cd $$bak; \
 	done; \
 	echo "!!! Make for $@ COMPLETE! !!!"; \
