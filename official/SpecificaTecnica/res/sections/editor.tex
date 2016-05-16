@@ -1,6 +1,6 @@
 \section{Editor di MaaS}
         \subsection{Diagrammi delle classi}
-        L'editor di \glossaryItem{MaaS} è stato progettato seguendo un approccio bottom-up, ossia progettando prima le componenti ``foglia'', raggruppando in modo coeso funzionalità vicine, e poi i \glossaryItem{package}, per una suddivisione delle componenti ad alto livello.
+        L'editor di \glossaryItem{MaaS} è stato progettato seguendo un approccio \textit{bottom-up}, ossia progettando prima le componenti ``foglia'', raggruppando in modo coeso funzionalità vicine, e poi i \glossaryItem{package}, per una suddivisione delle componenti ad alto livello.
         \subsection{Package DSLCreator}
         \begin{figure}[H]
           \centering
@@ -10,7 +10,7 @@
         \end{figure}
         \subsubsection{Descrizione}
         In questo \glossaryItem{package} vengono inserite tutte le classi che contribuiscono a creare (e perciò a descrivere) un \glossaryItem{DSL} Element. La classe \glossaryItem{DSL} Element è in relazione di aggregazione con le classi PView e PModel. Queste due classi descrivono aspetti diversi di un \glossaryItem{DSL} Element: la prima ne indica le proprietà grafiche (ad esempio la sua posizione nel piano); la seconda ne descrive il modello (richiesto da \glossaryItem{MaaS}).\\
-        Sono stati usati i pattern Facade (in cui le componenti dell'editor rappresentano il sottosistema complesso) e Builder (in cui l'oggetto complesso da costruire è rappresentato da PModel).
+        Sono stati usati i pattern Facade (in cui le componenti dell'editor rappresentano il sottosistema complesso) e \textit{Builder} (in cui l'oggetto complesso da costruire è rappresentato da PModel).
 
         \subsubsection{DSLCreator::DSLElement}
         \begin{itemize}
@@ -20,9 +20,9 @@
           %viene usata dal Facade nei tipi di ritorno, ha gli stessi metodi
         \item \textbf{Relazioni con altre classi} \hfill 
           \begin{itemize}
-          \item DSLCreator::PView
-          \item DSLCreator::PModel
-          \item DSLCreator::DSL
+          \item DSLCreator::PView. La classe \texttt{DSLCreator::DSLElement} possiede un suo riferimento per memorizzare informazioni grafiche sul DSLElement.
+          \item DSLCreator::PModel. La classe \texttt{DSLCreator::DSLElement} possiede un suo riferimento per memorizzare il modello richiesto da MaaS. 
+          \item DSLCreator::DSL. La classe \texttt{DSLCreator::DSLElement} implementa i metodi esposti da questa interfaccia, per la gestione di un DSLElement qualsiasi.
           \end{itemize}
         \end{itemize}
 
@@ -58,15 +58,15 @@
           Questa classe viene usata per offrire un'interfaccia semplice che consente di costruire i \glossaryItem{DSL} Element.
         \item \textbf{Relazioni con altre classi} \hfill 
           \begin{itemize}
-          \item DSLCreator::Builder
-          \item DSLCreator::DSL
+          \item DSLCreator::Builder. Viene usata dalla classe \texttt{DSLCreator::FacadeEditorCreator} per costruire la componente \texttt{DSLCreator::PModel} di un DSLElement.
+          \item DSLCreator::DSL. Viene usata dalla classe \texttt{DSLCreator::FacadeEditorCreator} come tipo di ritorno nei metodi di costruzione di un DSLElement.
           \end{itemize}
         \end{itemize}
 
         \subsubsection{DSLCreator::Builder}
         \begin{itemize}
         \item \textbf{Descrizione} \hfill \\
-          Questa è l'interfaccia da cui derivano tutti i builder concreti del \glossaryItem{package} \texttt{DSLCreator}.
+          Questa è l'interfaccia da cui derivano tutti i \textit{builder} concreti del \glossaryItem{package} \texttt{DSLCreator}.
         \item \textbf{Utilizzo}  \hfill \\
           Questa classe viene utilizzata da \texttt{DSLCreator::Facade} per costruire i \texttt{DSLCreator::PModel} dei \glossaryItem{DSL} Element.
         \item \textbf{Relazioni con altre classi} \hfill 
@@ -98,22 +98,22 @@
                             Questa interfaccia espone le funzionalità di accesso/aggiunta/rimozione a/di \glossaryItem{DashRow Element} (righe della \glossaryItem{Dashboard}), e permette di ottenere/modificare il nome della \glossaryItem{Dashboard}.
                         \item \textbf{Relazioni con altre classi} \hfill 
                             \begin{itemize}
-                              \item DSLCreator::Dashboard::DashboardBuilder
-                              \item DSLCreator::Dashboard::DashboardImpl
+                              \item DSLCreator::Dashboard::DashboardBuilder. Questa classe usa l'interfaccia \texttt{DSLCreator::Dashboard::Dashboard} come tipo di ritorno nel metodo per la costruzione dell'intero prodotto (la dashboard).
+                              \item DSLCreator::Dashboard::DashboardImpl. Questa classe implementa i metodi esposti dall'interfaccia \texttt{DSLCreator::Dashboard::Dashboard}.
                             \end{itemize}
                     \end{itemize}
 
                 \subsubsection{DSLCreator::Dashboard::DashboardBuilder}
                     \begin{itemize}
                         \item \textbf{Descrizione} \hfill \\
-                            Questa classe costituisce la componente concreta del Builder nel Builder Pattern.
+                            Questa classe costituisce la componente concreta del \textit{Builder} nel \textit{Builder} Pattern.
                         \item \textbf{Utilizzo} \hfill \\
                             Questa classe permette di costruire oggetti \glossaryItem{Dashboard}, di definire un nome e di aggiungere DashRows.
                         \item \textbf{Relazioni con altre classi}
                             \begin{itemize}
                               \item DSLCreator::Dashboard::Dashboard
-                              \item DSLCreator::Dashboard::DashboardImpl
-                              \item DSLCreator::Dashboard::DashboardStruct
+                              \item DSLCreator::Dashboard::DashboardImpl. Un'istanza di questa classe viene creata da \texttt{DSLCreator::Dashboard::DashboardBuilder}.
+                              \item DSLCreator::Dashboard::DashboardStruct. \\ La classe \texttt{DSLCreator::Dashboard::DashboardBuilder} possiede un suo riferimento per memorizzare le informazioni sulla Dashboard che un utente può richiedere di aggiungere (come parti del prodotto da costruire).
                             \end{itemize}
                     \end{itemize}
 
@@ -127,7 +127,7 @@
                             \begin{itemize}
                               \item DSLCreator::Dashboard::Dashboard
                               \item DSLCreator::Dashboard::DashboardBuilder
-                              \item DSLCreator::Dashboard::DashboardStruct
+                              \item DSLCreator::Dashboard::DashboardStruct. \\ La classe \texttt{DSLCreator::Dashboard::DashboardImpl} possiede un suo riferimento, che usa per implementare i metodi esposti dall'interfaccia \texttt{DSLCreator::\-Dashboard::Dashboard}.
                             \end{itemize}
                     \end{itemize}
 
@@ -140,10 +140,12 @@
                         \item \textbf{Relazioni con altre classi}
                             \begin{itemize}
                               \item DSLCreator::Dashboard::DashboardBuilder
-                              \item DSLCreator::Dashboard::DashboardStruct
+                              \item DSLCreator::Dashboard::DashboardImpl
                             \end{itemize}
                     \end{itemize}
-
+                    
+        \subsection{Relazioni fra classi all'interno dei packages}
+        Nei packages seguenti, le relazioni tra classi e interfacce sono analoghe a quelle descritte per il package \texttt{DSLCreator::Dashboard}. Esiste in ogni package una classe \textit{builder} che si occupa di costruire il DSLElement e aggiungerne delle proprietà a richiesta. Esiste sempre un'interfaccia, la relativa implementazione e una classe ``struttura'' che contiene le informazioni del DSLElement corrente e che viene usata dal \textit{builder} e dall'implementazione.
 
         \subsection{Package DSLCreator::DashRow}
                 \subsubsection{DSLCreator::DashRow::DashRow}
@@ -168,7 +170,7 @@
                 \subsubsection{DSLCreator::DashRow::DashRowBuilder}
                     \begin{itemize}
                         \item \textbf{Descrizione} \hfill \\
-                            Questa classe costituisce la componente concreta del Builder nel Builder Pattern.
+                            Questa classe costituisce la componente concreta del \textit{Builder} nel \textit{Builder} Pattern.
                         \item \textbf{Utilizzo} \hfill \\
                             Questa classe permette di costruire oggetti DashRow e di agganciarci \glossaryItem{Cell} Elements, Documents Elements, \glossaryItem{Collection} Elements.
                         \item \textbf{Relazioni con altre classi}
@@ -203,7 +205,6 @@
                             \begin{itemize}
                               \item DSLCreator::DashRow::DashRowBuilder
                               \item DSLCreator::DashRow::DashRowImpl
-                              \item DSLCreator::DashRow::DashRowItem
                             \end{itemize}
                     \end{itemize}
 
@@ -230,7 +231,7 @@
  \subsubsection{DSLCreator::Collection::CollectionBuilder}
                     \begin{itemize}
                         \item \textbf{Descrizione} \hfill \\
-                            Questa classe costituisce la componente concreta del Builder nel Builder Pattern.
+                            Questa classe costituisce la componente concreta del \textit{Builder} nel \textit{Builder} Pattern.
                         \item \textbf{Utilizzo} \hfill \\
                             Questa classe ha il compito di costruire oggetti \glossaryItem{Collection}, definendone le proprietà.
                         \item \textbf{Relazioni con altre classi}
@@ -292,7 +293,7 @@
  \subsubsection{DSLCreator::Document::DocumentBuilder}
                     \begin{itemize}
                         \item \textbf{Descrizione} \hfill \\
-                            Questa classe costituisce la componente concreta del Builder nel Builder Pattern.
+                            Questa classe costituisce la componente concreta del \textit{Builder} nel \textit{Builder} Pattern.
                         \item \textbf{Utilizzo} \hfill \\
                             Questa classe ha il compito di costruire oggetti \glossaryItem{Document}, definendone le proprietà.
                         \item \textbf{Relazioni con altre classi}
@@ -353,7 +354,7 @@
  \subsubsection{DSLCreator::Cell::CellBuilder}
                     \begin{itemize}
                         \item \textbf{Descrizione} \hfill \\
-                            Questa classe costituisce la componente concreta del Builder nel Builder Pattern.
+                            Questa classe costituisce la componente concreta del \textit{Builder} nel \textit{Builder} Pattern.
                         \item \textbf{Utilizzo} \hfill \\
                             Questa classe ha il compito di costruire oggetti di tipo \glossaryItem{Cell}, definendone le proprietà.
                         \item \textbf{Relazioni con altre classi}
@@ -416,7 +417,7 @@
  \subsubsection{DSLCreator::Index::IndexBuilder}
                     \begin{itemize}
                         \item \textbf{Descrizione} \hfill \\
-                            Questa classe costituisce la componente concreta del Builder nel Builder Pattern.
+                            Questa classe costituisce la componente concreta del \textit{Builder} nel \textit{Builder} Pattern.
                         \item \textbf{Utilizzo} \hfill \\
                             Questa classe ha il compito di creare oggetti \glossaryItem{Index}, definendone le proprietà.
                         \item \textbf{Relazioni con altre classi}
@@ -490,7 +491,7 @@
  \subsubsection{DSLCreator::Row::RowBuilder}
                     \begin{itemize}
                         \item \textbf{Descrizione} \hfill \\
-                          Questa classe costituisce la componente concreta del Builder nel Builder Pattern.
+                          Questa classe costituisce la componente concreta del \textit{Builder} nel \textit{Builder} Pattern.
                         \item \textbf{Utilizzo} \hfill \\
                           Questa classe viene usata per costruire oggetti \glossaryItem{Row} e settarne le proprietà.
                         \item \textbf{Relazioni con altre classi}
@@ -553,7 +554,7 @@
  \subsubsection{DSLCreator::ColumnBuilder}
                     \begin{itemize}
                         \item \textbf{Descrizione} \hfill \\
-                          Questa classe costituisce la componente concreta del Builder nel Builder Pattern.
+                          Questa classe costituisce la componente concreta del \textit{Builder} nel \textit{Builder} Pattern.
                         \item \textbf{Utilizzo} \hfill \\
                           Questa classe ha il compito di costruire oggetti \glossaryItem{Column} e di definirne le proprietà.
                         \item \textbf{Relazioni con altre classi}
@@ -603,7 +604,7 @@
                         \item \textbf{Descrizione} \hfill \\
                           Questa interfaccia rappresenta un \glossaryItem{Action} Element. Specifica quale azione l'utente può agganciare ad un \glossaryItem{Document} o ad una \glossaryItem{Collection}. Ad esempio, l'utente può specificare che tipo di azione desidera (export o send mail) e, nel caso la applichi ad una \glossaryItem{Collection}, quale insieme avrà in input (tutta la \glossaryItem{collection} o solamente quello correntemente visualizzato).
                         \item \textbf{Utilizzo} \hfill \\
-                          Questa interfaccia espone le funzionalità di accesso e modifica delle proprieta della \glossaryItem{Action}.
+                          Questa interfaccia espone le funzionalità di accesso e modifica delle proprietà della \glossaryItem{Action}.
                         \item \textbf{Relazioni con altre classi}
                             \begin{itemize}
                               \item DSLCreator::Action::ActionImpl
@@ -614,7 +615,7 @@
  \subsubsection{DSLCreator::Action::ActionBuilder}
                     \begin{itemize}
                         \item \textbf{Descrizione} \hfill \\
-                          Questa classe costituisce la componente concreta del Builder nel Builder Pattern.
+                          Questa classe costituisce la componente concreta del \textit{Builder} nel \textit{Builder} Pattern.
                         \item \textbf{Utilizzo} \hfill \\
                           Questa classe ha il compito di costruire oggetti di tipo \glossaryItem{Action} e di definirne le proprietà.
                         \item \textbf{Relazioni con altre classi}
@@ -702,7 +703,7 @@
  \subsubsection{DSLCreator::Input::InputBuilder}
                     \begin{itemize}
                         \item \textbf{Descrizione} \hfill \\
-                          Questa classe costituisce la componente concreta del Builder nel Builder Pattern.
+                          Questa classe costituisce la componente concreta del \textit{Builder} nel \textit{Builder} Pattern.
                         \item \textbf{Utilizzo} \hfill \\
                           Questa classe ha il compito di costruire oggetti Input e di agganciare all'oggetto in costruzione altri oggetti Input o altre proprietà (coppia chiave-valore).
                         \item \textbf{Relazioni con altre classi}
@@ -763,7 +764,7 @@
  \subsubsection{DSLCreator::Function::FunctionBuilder}
                     \begin{itemize}
                         \item \textbf{Descrizione} \hfill \\
-                          Questa classe costituisce la componente concreta del Builder nel Builder Pattern.
+                          Questa classe costituisce la componente concreta del \textit{Builder} nel \textit{Builder} Pattern.
                         \item \textbf{Utilizzo} \hfill \\
                           Questa classe ha il compito di costruire oggetti di tipo Function, definendone le proprietà.
                         \item \textbf{Relazioni con altre classi}
