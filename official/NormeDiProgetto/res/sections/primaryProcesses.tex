@@ -4,7 +4,7 @@
 	\subsection{Processo di fornitura}	
 	\subsubsection{Oggetto del processo}
 	L'oggetto del presente \glossaryItem{processo} è la stesura dello \textit{Studio di Fattibilità}, compito
-	di cui si occupa un \textit{Analista}. Il \textit{Responsabile di Progetto} deve invece organizzare delle riunioni preventive, 
+	di cui si occupa un \textit{Analista}. Il \textit{Responsabile di \glossaryItem{Progetto}} deve invece organizzare delle riunioni preventive, 
 	per permettere lo scambio di opinioni tra i membri del gruppo sui capitolati proposti.
 	\subsubsection{Struttura dello \textit{Studio di Fattibilità}}
 		\begin{itemize}
@@ -60,7 +60,7 @@
 				\item Requisiti incompleti;
 				\item Volatilità di specifiche e requisiti.
 				\end{itemize}
-				Per analizzare e trovare i requisiti si utilizza la tecnica dei casi d’uso. Il tracciamento dei requisiti avviene 
+				Per analizzare e trovare i requisiti si utilizza la tecnica dei \glossaryItem{casi} d’uso. Il \glossaryItem{tracciamento} dei requisiti avviene 
 			        tramite il software \textit{Tracy}.
 			
 			%casi d'uso: si parte da 0 nella numerazione
@@ -69,7 +69,7 @@
                         ognuno avente la seguente forma:
 				\begin{itemize}
 				\item Codice identificativo: \textbf{UC-{X} x.y.z} (la numerazione \textbf{x.y.z} potrebbe non essere continua nel caso in cui vengano
-                                      rimossi alcuni dei casi d'uso numerati precedentemente.)
+                                      rimossi alcuni dei \glossaryItem{casi} d'uso numerati precedentemente.)
 						\begin{itemize}
 						\item \textbf{X}: rappresenta uno degli ambiti di riferimento individuati
 						nell'Analisi dei Requisiti, in particolare:
@@ -126,7 +126,7 @@
 				noto a tutti i membri del gruppo in quanto trattato durante il corso
 				di \textit{Ingegneria del Software}.
 				Si \`e scelto inoltre di adottare l'editor \glossaryItem{UML} \textit{Astah}.   %riferimento per astah
-                                Per mantenere la tracciabilità dei casi d'uso si è deciso di adottare l'utilizzo di \textit{Tracy} come base di dati.
+                                Per mantenere la tracciabilità dei \glossaryItem{casi} d'uso si è deciso di adottare l'utilizzo di \textit{Tracy} come base di dati.
 			
 			
 		\paragraph*{2. Attività di Progettazione}
@@ -142,7 +142,7 @@
                         \item \glossaryItem{Specifica Tecnica}, documento proposto in sede di \textit{Revisione di Progettazione minima}, nel quale vengono individuate 
 			 le componenti macroscopiche del sistema, suddivisione utile per garantire che il lavoro successivo proceda in modo parallelo e soddisfi i principi di ortogonalità;
                         \item \glossaryItem{Definizione di Prodotto}, documento che fornisce ai \glossaryItem{programmatori} tutte le direttive necessarie per la codifica;
-					    esso descrive in dettaglio la progettazione del sistema, integrando quanto scritto nella Specifica Tecnica. Il documento specifica i diagrammi UML e le
+					    esso descrive in dettaglio la progettazione del sistema, integrando quanto scritto nella Specifica Tecnica. Il documento specifica i \glossaryItem{diagrammi} \glossaryItem{UML} e le
 					    definizioni delle classi. Viene proposto in sede di \textit{Revisione di Progettazione massima} oppure in sede di \textit{Revisione di Qualifica}.
                         \end{itemize}
 		    %si useranno Design patterns
@@ -173,7 +173,7 @@
 			\item \glossaryItem{Diagrammi} delle \textit{classi};	
 			\item \glossaryItem{Diagrammi} di \textit{attivit\`a}.
 		        \end{itemize}
-                        Anche in questo caso per mantenere una tracciabilità viene utilizzato \textit{Tracy} come base di dati per poter mantenere tutti i diagrammi prodotti e la loro descrizione.
+                        Anche in questo caso per mantenere una tracciabilità viene utilizzato \textit{Tracy} come base di dati per poter mantenere tutti i \glossaryItem{diagrammi} prodotti e la loro descrizione.
 			 
 		
 		\paragraph*{3. Attività di Codifica}
@@ -185,13 +185,13 @@
                 Per il codice \glossaryItem{Typescript} si \`e stabilito di adottare delle direttive proprie del gruppo, definite tramite l'uso di un lint.
                 \paragraph*{Regole definite nel lint}
                 Si \`e deciso di utilizzare il lint per Typescript, \textit{TsLint}, che permette di impostare regole di codifica controllate staticamente.
-                Questo lint \`e configurabile tramite l'utilizzo di un file JSON, di cui sono state utilizzate le seguenti regole:
+                Questo lint \`e configurabile tramite l'utilizzo di un file \glossaryItem{JSON}, di cui sono state utilizzate le seguenti regole:
                 \begin{itemize}
 
                 \item \textit{member-access}: questa regola impone di dichiarare esplicitamente la visibilit\`a dei membri di una classe;
                 \item \textit{member-ordering}: questa regola impone un ordinamento consistente dei membri delle classi, per fornire una lettura del codice pi\`u facile e maggiormente navigabile. In particolare, \`e stato deciso di scrivere prima le variabili e dopo i metodi, e per i metodi, prima quelli pubblici e poi quelli privati;
                 \item \textit{no-any}: questa regola impedisce la dichiarazione di variabili di tipo \textit{any} nel codice Typescript, eliminando di fatto la non determinazione di tipo a \textit{static time};
-                \item \textit{no-internal-module}: questa regole impedisce l'uso di moduli interni, che portano confusione all'interno del codice. \`E invece imposto l'utilizzo della \textit{keyword} \textit{namespace};
+                \item \textit{no-internal-module}: questa regole impedisce l'uso di \glossaryItem{moduli} interni, che portano confusione all'interno del codice. \`E invece imposto l'utilizzo della \textit{keyword} \textit{namespace};
                 \item \textit{no-var-requires}: questa regola impedisce l'utilizzo della \textit{keyword} Javascript \textit{require}, per favorire l'utilizzo della nuova \textit{keyword} \textit{import} introdotta da Typescript;
                 \item \textit{typedef}: questa regola impone di definire i tipi per metodi di ritorno, parametri, definizioni di variabili e di membri di classi;
                 \item \textit{typedef-whitespace}: questa regola impone di inserire degli spazi tra il tipo dichiarato e il suo nome, in maniera tale da aumentare la leggibilit\`a del codice;
@@ -204,8 +204,8 @@
                 \item \textit{no-eval}: questa regola impedisce l'uso della funzione \textit{eval()} in Typescript, in quanto \`e ritenuta pericolosa dal punto di vista della sicurezza e pu\`o permettere l'esecuzione arbitraria di codice passato come una stringa;
                 \item \textit{no-null-keyword}: questa regola impedisce l'uso della \textit{keyword} \textit{null} in favore dell'utilizzo della \textit{keyword} \textit{undefined}. Questo permette di uniformare il codice con l'utilizzo di una sola \textit{keyword};
                 \item \textit{no-string-literal}: questa regola impedisce l'accesso ad oggetti tramite \textit{string literals}, incoraggiando l'utilizzo delle propriet\`a di accesso di tipo fortemente tipate;
-                \item \textit{no-swith-case-fall-through}: questa regola impedisce l'utilizzo di \textit{switch} senza l'utilizzo della \textit{keyword} \textit{break} per ogni caso. In questa maniera si evitano errori in cui tutti i casi successivi a quello voluto vengono eseguiti involontariamente;
-                \item \textit{no-unreachable}: questa regola impedisce la scrittura di codice dopo gli \textit{statements: break, catch, throw, return}, che sarebbe non raggiungibile. In questa maniera \`e pi\`u facile riconoscere eventuali errori logici al programmatore;
+                \item \textit{no-swith-case-fall-through}: questa regola impedisce l'utilizzo di \textit{switch} senza l'utilizzo della \textit{keyword} \textit{break} per ogni caso. In questa maniera si evitano errori in cui tutti i \glossaryItem{casi} successivi a quello voluto vengono eseguiti involontariamente;
+                \item \textit{no-unreachable}: questa regola impedisce la scrittura di codice dopo gli \textit{statements: break, catch, throw, return}, che sarebbe non raggiungibile. In questa maniera \`e pi\`u facile riconoscere eventuali errori logici al \glossaryItem{programmatore};
                 \item \textit{no-unused-expression}: questa regola impedisce la dichiarazione di oggetti senza un loro effettivo utilizzo. 
                 \item \textit{no-use-before-declare}: questa regola impedisce l'utilizzo di variabili senza prima una loro dichiarazione. Questo tipo di codifica di solito porta a errori e all'inquinamento dello \textit{scope} globale, creando quindi confusione nel codice e una minore leggibilit\`a;
                 \item \textit{no-var-keyword}: questa regola disabilita la dichiarazione di variabili tramite la \textit{keyword} \textit{var}, ma impone l'utilizzo di \textit{let} per la dichiarazione di variabili, come consigliato da Typescript;
@@ -223,7 +223,7 @@
                 \item \textit{jsdoc-format}: questa regola impone lo stile \textit{JSDoc} per i commenti confacenti alla documentazione di una determinata classe o per un determinato metodo;
                 \item \textit{one-line}: questa regola impone che una singola istruzione sia presente su una riga e non venga mandata a capo, per migliorare la lettura del codice;
                 \item \textit{quotemark}: questa regola impone l'utilizzo di doppi apici durante la stesura di tutto il codice;
-                \item \textit{semicolon}: questa regola impone l'utilizzo del punto e virgola alla fine di ogni istruzione in cui andrebbe posta. Questo permette di evitare errori in fase di codifica e di facilitare la lettura del codice;
+                \item \textit{semicolon}: questa regola impone l'utilizzo del punto e virgola alla fine di ogni istruzione in cui andrebbe posta. Questo permette di evitare errori in \glossaryItem{fase} di codifica e di facilitare la lettura del codice;
                 \item \textit{variable-name}: questa regola impone che i nomi delle variabili seguano la notazione \textit{camelCase}. Inoltre viene anche vietato che i nomi delle variabili corrispondano a eventuali \textit{keywords};
                   \item \textit{whitespace}: questa regola impone l'inserimento di spazi in vari punti del codice, facilitando la lettura dello stesso e aiutando a mantenere uno stile uniforme.
                 \end{itemize}

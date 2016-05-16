@@ -21,7 +21,7 @@
         \item \textbf{Relazioni con altre classi} \hfill 
           \begin{itemize}
           \item DSLCreator::PView. La classe \texttt{DSLCreator::DSLElement} possiede un suo riferimento per memorizzare informazioni grafiche sul DSLElement.
-          \item DSLCreator::PModel. La classe \texttt{DSLCreator::DSLElement} possiede un suo riferimento per memorizzare il modello richiesto da MaaS. 
+          \item DSLCreator::PModel. La classe \texttt{DSLCreator::DSLElement} possiede un suo riferimento per memorizzare il modello richiesto da \glossaryItem{MaaS}. 
           \item DSLCreator::DSL. La classe \texttt{DSLCreator::DSLElement} implementa i metodi esposti da questa interfaccia, per la gestione di un DSLElement qualsiasi.
           \end{itemize}
         \end{itemize}
@@ -88,7 +88,7 @@
                 \begin{figure}[H]
                   \centering
                   \includegraphics[width=0.7\textwidth]{res/img/Dashboard.png}
-                  \caption{Package Dashboard}
+                  \caption{Package \glossaryItem{Dashboard}}
                   \label{fig:diagram_model}
                 \end{figure}
                     \begin{itemize}
@@ -98,7 +98,7 @@
                             Questa interfaccia espone le funzionalità di accesso/aggiunta/rimozione a/di \glossaryItem{DashRow Element} (righe della \glossaryItem{Dashboard}), e permette di ottenere/modificare il nome della \glossaryItem{Dashboard}.
                         \item \textbf{Relazioni con altre classi} \hfill 
                             \begin{itemize}
-                              \item DSLCreator::Dashboard::DashboardBuilder. Questa classe usa l'interfaccia \texttt{DSLCreator::Dashboard::Dashboard} come tipo di ritorno nel metodo per la costruzione dell'intero prodotto (la dashboard).
+                              \item DSLCreator::Dashboard::DashboardBuilder. Questa classe usa l'interfaccia \texttt{DSLCreator::Dashboard::Dashboard} come tipo di ritorno nel metodo per la costruzione dell'intero prodotto (la \glossaryItem{dashboard}).
                               \item DSLCreator::Dashboard::DashboardImpl. Questa classe implementa i metodi esposti dall'interfaccia \texttt{DSLCreator::Dashboard::Dashboard}.
                             \end{itemize}
                     \end{itemize}
@@ -113,7 +113,7 @@
                             \begin{itemize}
                               \item DSLCreator::Dashboard::Dashboard
                               \item DSLCreator::Dashboard::DashboardImpl. Un'istanza di questa classe viene creata da \texttt{DSLCreator::Dashboard::DashboardBuilder}.
-                              \item DSLCreator::Dashboard::DashboardStruct. \\ La classe \texttt{DSLCreator::Dashboard::DashboardBuilder} possiede un suo riferimento per memorizzare le informazioni sulla Dashboard che un utente può richiedere di aggiungere (come parti del prodotto da costruire).
+                              \item DSLCreator::Dashboard::DashboardStruct. \\ La classe \texttt{DSLCreator::Dashboard::DashboardBuilder} possiede un suo riferimento per memorizzare le informazioni sulla \glossaryItem{Dashboard} che un utente può richiedere di aggiungere (come parti del prodotto da costruire).
                             \end{itemize}
                     \end{itemize}
 
@@ -145,7 +145,7 @@
                     \end{itemize}
                     
         \subsection{Relazioni fra classi all'interno dei packages}
-        Nei packages seguenti, le relazioni tra classi e interfacce sono analoghe a quelle descritte per il package \texttt{DSLCreator::Dashboard}. Esiste in ogni package una classe \textit{builder} che si occupa di costruire il DSLElement e aggiungerne delle proprietà a richiesta. Esiste sempre un'interfaccia, la relativa implementazione e una classe ``struttura'' che contiene le informazioni del DSLElement corrente e che viene usata dal \textit{builder} e dall'implementazione.
+        Nei \glossaryItem{packages} seguenti, le relazioni tra classi e interfacce sono analoghe a quelle descritte per il \glossaryItem{package} \texttt{DSLCreator::Dashboard}. Esiste in ogni \glossaryItem{package} una classe \textit{builder} che si occupa di costruire il DSLElement e aggiungerne delle proprietà a richiesta. Esiste sempre un'interfaccia, la relativa implementazione e una classe ``struttura'' che contiene le informazioni del DSLElement corrente e che viene usata dal \textit{builder} e dall'implementazione.
 
         \subsection{Package DSLCreator::DashRow}
                 \subsubsection{DSLCreator::DashRow::DashRow}
@@ -213,7 +213,7 @@
  \begin{figure}[H]
    \centering
    \includegraphics[width=0.7\textwidth]{res/img/Collection.png}
-   \caption{Package Collection}
+   \caption{Package \glossaryItem{Collection}}
    \label{fig:diagram_model}
  \end{figure}
                     \begin{itemize}
@@ -275,7 +275,7 @@
                 \begin{figure}[H]
                   \centering
                   \includegraphics[width=0.7\textwidth]{res/img/Document.png}
-                  \caption{Package Document}
+                  \caption{Package \glossaryItem{Document}}
                   \label{fig:diagram_model}
                 \end{figure}
                     \begin{itemize}
@@ -336,7 +336,7 @@
                  \begin{figure}[H]
                   \centering
                   \includegraphics[width=0.7\textwidth]{res/img/Cell.png}
-                  \caption{Package Cell}
+                  \caption{Package \glossaryItem{Cell}}
                   \label{fig:diagram_model}
                 \end{figure}
                     \begin{itemize}
@@ -399,7 +399,7 @@
                 \begin{figure}[H]
                   \centering
                   \includegraphics[width=0.7\textwidth]{res/img/Index.png}
-                  \caption{Package Index}
+                  \caption{Package \glossaryItem{Index}}
                   \label{fig:diagram_model}
                 \end{figure}
                     \begin{itemize}
@@ -473,7 +473,7 @@
                  \begin{figure}[H]
                   \centering
                   \includegraphics[width=0.7\textwidth]{res/img/Row.png}
-                  \caption{Package Row}
+                  \caption{Package \glossaryItem{Row}}
                   \label{fig:diagram_model}
                 \end{figure}
                     \begin{itemize}
@@ -536,7 +536,7 @@
                  \begin{figure}[H]
                   \centering
                   \includegraphics[width=0.7\textwidth]{res/img/Column.png}
-                  \caption{Package Column}
+                  \caption{Package \glossaryItem{Column}}
                   \label{fig:diagram_model}
                 \end{figure}
                     \begin{itemize}
@@ -597,7 +597,7 @@
                  \begin{figure}[H]
                   \centering
                   \includegraphics[width=0.7\textwidth]{res/img/Action.png}
-                  \caption{Package Action}
+                  \caption{Package \glossaryItem{Action}}
                   \label{fig:diagram_model}
                 \end{figure}
                     \begin{itemize}
