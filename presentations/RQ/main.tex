@@ -1,0 +1,36 @@
+\documentclass[]{beamer}
+
+\usetheme{Warsaw} %theme
+
+\setbeamercolor{structure}{fg=red!90!black}
+
+\usepackage[utf8]{inputenc} %utf-8 input
+
+
+\title{Presentazione progetto}
+\author[BugBuster]{\includegraphics[width=0.4\textwidth]{logo.png}}
+\date{23-05-2016}
+\institute{Progetto MaaS}
+
+\graphicspath{{res/img/}}
+
+\addtobeamertemplate{navigation symbols}{}{%
+    \usebeamerfont{footline}%
+    \usebeamercolor[fg]{footline}%
+    \hspace{1em}%
+    \insertframenumber/\inserttotalframenumber
+}
+
+\setbeamercolor{footline}{fg=red}
+\setbeamerfont{footline}{series=\bfseries}
+
+\begin{document}
+\graphicspath{ {res/img/} }
+
+%\begin{frame}
+%  \tableofcontents
+%\end{frame}
+
+\input{res/listOfSlide}
+
+\end{document}
