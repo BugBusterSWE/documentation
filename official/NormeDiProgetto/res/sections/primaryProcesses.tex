@@ -253,9 +253,37 @@
                         	\item \textit{Il codice va compilato da subito usando il compilatore nel modo più restrittivo}
 			\end{enumerate}
 
+
                 \paragraph*{Strumenti}
                 Il gruppo ha stabilito di utilizzare i seguenti editor:
                 \begin{itemize}
                   \item \textbf{Emacs}(\url{https://www.gnu.org/software/emacs/}) per la stesura del codice \LaTeX; 
                   \item \textbf{WebStorm}(\url{https://www.jetbrains.com/webstorm/}) per il codice \glossaryItem{Typescript}.
                 \end{itemize}
+             
+\subsubsection{Procedure automatiche}
+Per guidare la codifica e rendere più chiaro lo scopo di ciascun componente (metodo o classe), il team utilizza la documentazione inline realizzata con JSDoc: JSDoc sfrutta delle annotazioni simili a JavaDoc per documentare il codice direttamente nei file sorgenti. A partire da questa documentazione viene generato, attraverso TypeDoc, un sito web contentente il riepilogo di ciascun componente codificato. È pertanto necessario attenersi ad alcune regole, in modo tale da generare una documentazione facilmente consultabile, consistente e precisa. Di seguito verranno specificate tali regole.
+\paragraph*{File}
+I file dovranno avere la seguente intestazione:
+\begin{verbatim}
+/**
+ * Descrizione della classe contenuta nel file.
+ *
+ * * @history
+ * |      Author     | Action Performed |      Data      |
+ * |       ---       |        ---       |       ---      |
+ * | Nome Componente | Azione		    | Data		     |
+ *
+ * @author Autore iniziale
+ * @license MIT
+ */
+\end{verbatim}
+In questo modo verrà generata un'intestazione comune che consente di tenere sotto controllo le modifiche ai file.
+\paragraph*{Campi dati}
+Ogni attributo della classe dovrà essere preceduto dalla seguente intestazione:
+\begin{verbatim}
+/**
+ * @description Descrizione dell'attributo
+ */
+\end{verbatim}
+In questo modo sarà possibile disporre di una descrizione dell'attributo, e quindi di avere una chiara indicazione sul suo utilizzo.
