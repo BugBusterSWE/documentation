@@ -337,6 +337,18 @@ Essendo MaaS basato su delle API REST, il team documenta anche le API esposte da
  * @apiError nomeErrore Descrizione dell'errore.
  * @apiError nomeALtroErrore Descrizione dell'altro errore.
  *
+ * @apiExample Response (example)
+ * HTTP/1.1 200
+ * {
+ *	"done": true,
+ *	"message": "ok",
+ *	"data": "Esempio di un dato ritornato",
+ *	"json": {
+ *		"uno": "Esempio di oggetto JSON ritornato",
+ *		"due": 2
+ *	}
+ * }
+ *
  * @apiErrorExample Response (example):
  *     HTTP/1.1 404
  *     {
