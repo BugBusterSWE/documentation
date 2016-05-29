@@ -22,13 +22,13 @@ Le tabelle e le figure inserite nel documento vengono automaticamente indicizzat
 Il glossario dei termini a supporto dei documenti è interamente generato con l'utilizzo di uno script Perl (\textbf{P}ractical \textbf{E}xtraction and \textbf{R}eport \textbf{L}anguage) sviluppato internamente. Un file XML (e\textbf{X}tensible \textbf{M}arkup \textbf{L}anguage) contente le definizioni dei termini in ordine casuale. Ogni voce del glossario corrisponde al seguente tag:
 \begin{verbatim}
 <term>
-	<word>Termine</word>
-	<extended>Opzionale, descrizione estesa dell'acronimo.</extended>
-	<plural>Opzionale, plurale del termine.</plural>
-	<definition>Definizione.</definition>
+    <word>Termine</word>
+    <extended>Opzionale, descrizione estesa dell'acronimo.</extended>
+    <plural>Opzionale, plurale del termine.</plural>
+    <definition>Definizione.</definition>
 </term>
 \end{verbatim}
-regolamentato dal seguente schema:
+regolamentato dalla seguente istanza di XML Schema:
 \begin{verbatim}
 <xs:element name="glossary">
     <xs:complexType>
@@ -47,7 +47,7 @@ regolamentato dal seguente schema:
     </xs:complexType>
 </xs:element>
 \end{verbatim}
-Lo script Perl ordina i termini inseriti nel file XML e genera il codice \LaTeX{} che verrà, successivamente, usato per la generazione del documento. \\
+Lo script Perl ordina i termini inseriti nel file XML attraverso una trasformata XSL (e\textbf{X}tensible \textbf{S}tylesheet \textbf{L}anguage) e genera il codice \LaTeX{} che verrà, successivamente, usato per la generazione del documento. \\
 Oltre a questo, un secondo script Perl si occupa di marcare i termini da glossario presenti nei documenti scritti dal team. Oltre al termine al singolare vengono marcati anche i termini al plurale, se questo è inserito nel file XML sopra citato. Lo script è stato progettato per la ricerca ricorsiva di file con estensione .tex di \LaTeX. A partire da una directory indicata in fase di avvio dello script vengono ricercati, ricorsivamente, tutti i file .tex, e su di essi viene eseguita la marcatura dei termini, qualora ce ne fossero di non marcati.
 %###################################################
 
