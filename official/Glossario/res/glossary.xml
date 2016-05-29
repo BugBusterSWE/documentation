@@ -804,4 +804,17 @@ descrivere i dettagli di un metodo complesso.</definition>
 		<word>Web server</word>
 		<definition>Applicazione software in grado di gestire richieste HTTP o HTTPS provvenienti dai client.</definition>
     </term>
+    <term>
+        <word>Tag</word>
+        <definition>Marcatori utilizzati per aggiungere semantica ad un documento XML. I tag possono contenere informazioni in due modi: attraverso dei parametri oppure racchiudendo del testo o altri tipi di informazioni. Segue che possono essere tag di apertura, necessariamente seguiti da tag di chiusura (tra i quali si può avere un contenuto) oppure tag che si aprono e chiudono, e possono quindi fornire informazioni solo attraverso i loro parametri. Ogni tag inizia e finisce con delle parentesi angolari (che in altri contesti sarebbero i segni di minore e maggiore), mentre la chiusura del tag o il tag di chiusura è rappresentato dalla barra /. </definition>
+    </term>
+    <term>
+        <word>XML Schema</word>
+        <definition>Linguaggio di descrizione del contenuto di un file XML, l'unico che finora abbia raggiunto la validazione ufficiale del W3C. Come tutti i linguaggi di descrizione del contenuto XML, il suo scopo è delineare quali elementi sono permessi, quali tipi di dati sono ad essi associati e quale relazione gerarchica hanno fra loro gli elementi contenuti in un file XML. Ciò permette principalmente la convalida del file XML, ovvero la verifica che i suoi elementi siano in accordo con la descrizione in linguaggio XML Schema.</definition>
+    </term>
+    <term>
+        <word>XSL</word>
+        <extended>eXtensible Stylesheet Language</extended>
+        <definition>Linguaggio di descrizione dei fogli di stile per i documenti in formato XML. Massimizza la possibilità di associare molti e diversi linguaggi di marcatura agli elementi del documento, arricchendone le proprietà semantiche. L'XSL permette di visualizzare lo stesso documento XML in formati diversi.</definition>
+    </term>
 </glossary>
