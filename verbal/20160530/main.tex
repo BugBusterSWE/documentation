@@ -1,0 +1,69 @@
+\documentclass[11pt]{meetingmins}
+\usepackage[utf8]{inputenc}
+
+\setcommittee{BugBusters}
+
+\setmembers{
+
+  D.~Polonio,
+  D.~Rigoni,
+  M.~Di Pirro,
+  G.~Mazzocchin,
+  L.~Bianco,
+  A.~Mantovani,
+  E.~Carraro
+}
+
+\setdate{May 24, 2016}
+
+\setpresent{
+  
+  D.~Polonio,
+  E.~Carraro,
+  D.~Rigoni,
+}
+
+\absent{
+
+  A.~Mantovani
+  L.~Bianco,
+  M.~Di Pirro,
+  G.~Mazzocchin
+
+}
+
+\alsopresent{None}
+
+\begin{document}
+
+\maketitle
+
+\section{Ordine del giorno}
+
+\begin{enumerate}
+
+\item Decidere il formato migliore per il manuale sviluppatore
+\item Spiegazione del Workflow per Heroku
+\end{enumerate}
+
+\section{Orari}
+
+\begin{itemize}
+\item[Inizio]: ore xx:xx
+\item[Fine]: ore xx:xx
+\item[Tempo]: Previsto di xx min, effettivo di xx min
+
+\end{itemize}
+
+\section{Verbale}
+
+\subsubsection{Decidere il formato migliore per il manuale sviluppatore}
+
+\subsubsection{Spiegazione del Workflow per Heroku}
+L'amministratore spiega il workflow per Heroku. Vengono descritte le funzionalità di Heroku, e viene spiegato il sistema di automatizzazione implementato: è presente una pipeline, e a ogni pull request viene creata una istanza temporanea di Heroku (di durata massima di cinque giorni) che permette a un verificatore, oltre ai test, di vedere i risultati di un lavoro svolto da un membro del gruppo.
+Una particolare istanza di Heroku viene aggiornata a ogni modifica nel branch master del repository se e solo se i controlli di Travis CI passano, mentre a ogni nuova release di MaaS viene aggiornata una istanza diversa di Heroku posta in ``produzione''.
+Con questo workflow viene evidenziato come non sia necessario l'intervento dei membri del gruppo, a meno di interventi di manutenzione o di modifica del workflow stesso.
+
+\nextmeeting{June 06, 2016}
+
+\end{document}
