@@ -253,9 +253,115 @@
                         	\item \textit{Il codice va compilato da subito usando il compilatore nel modo più restrittivo}
 			\end{enumerate}
 
+
                 \paragraph*{Strumenti}
                 Il gruppo ha stabilito di utilizzare i seguenti editor:
                 \begin{itemize}
                   \item \textbf{Emacs}(\url{https://www.gnu.org/software/emacs/}) per la stesura del codice \LaTeX; 
                   \item \textbf{WebStorm}(\url{https://www.jetbrains.com/webstorm/}) per il codice \glossaryItem{Typescript}.
                 \end{itemize}
+             
+\subsubsection{Procedure automatiche}
+\paragraph{JSDoc} \mbox{} \\
+Per guidare la codifica e rendere più chiaro lo scopo di ciascun componente (metodo o classe), il team utilizza la documentazione inline realizzata con JSDoc: JSDoc sfrutta delle annotazioni simili a JavaDoc per documentare il codice direttamente nei file sorgenti. A partire da questa documentazione viene generato, attraverso TypeDoc, un sito web contentente il riepilogo di ciascun componente codificato. È pertanto necessario attenersi ad alcune regole, in modo tale da generare una documentazione facilmente consultabile, consistente e precisa. Di seguito verranno specificate tali regole.
+\paragraph*{File}
+I file dovranno avere la seguente intestazione:
+\begin{verbatim}
+/**
+ * Descrizione della classe contenuta nel file.
+ *
+ * * @history
+ * |      Author     | Action Performed |      Data      |
+ * |       ---       |        ---       |       ---      |
+ * | Nome Componente |      Azione      |      Data	     |
+ *
+ * @author Autore iniziale
+ * @license MIT
+ */
+\end{verbatim}
+In questo modo verrà generata un'intestazione comune che consente di tenere sotto controllo le modifiche ai file.
+\paragraph*{Campi dati}
+Ogni attributo della classe dovrà essere preceduto dalla seguente intestazione:
+\begin{verbatim}
+/**
+ * @description Descrizione dell'attributo
+ */
+\end{verbatim}
+In questo modo sarà possibile disporre di una descrizione dell'attributo, e quindi di avere una chiara indicazione sul suo utilizzo.
+\paragraph*{Metodi}
+Ogni metodo presente nelle classi dovrà essere preceduto dalla seguente intestazione:
+\begin{verbatim}
+/**
+ * @description Descrizione generale del metodo.
+ * @param nomeParametro {tipoParametro} Descrizione del parametro.
+ * @returns {tipoDiRitorno} Descrizione del valore ritornato.
+ */
+\end{verbatim}
+In questo modo è possibile conoscere immediatamente lo scopo del metodo, i dati generali sui parametri e sul valore ritornato.
+\paragraph*{Costruttore}
+Il costruttore della classe dovrà essere preceduto dalla seguente intestazione:
+\begin{verbatim}
+/**
+ * @description Descrizione.
+ * @param nomeParametro {tipoParametro} Descrizione del parametro.
+ * @constructor
+ */
+\end{verbatim}
+Diversamente da un generico metodo della classe, quindi, il costruttore non presenta valore di ritorno, ma presenta un'annotazione specifica per indicare che si tratta di un costruttore.
+
+\paragraph{APIDoc} \mbox{} \\
+Essendo MaaS basato su delle API REST, il team documenta anche le API esposte dal server. Tale documentazione viene realizzata con l'aiuto di APIDoc, che consente di specificare qualsiasi informazione possa servire a codificare, o modificare, lo specifico servizio esposto dal server. Anche in questo caso viene generato, automaticamente, un sito web che consente di consultare la documentazione associata, ed è pertanto necessario regolamentare le annotazioni da utilizzare per la documentazione. Di seguito viene presentato un esempio.
+\begin{verbatim}
+/**
+ * @api {MetodoHTTP} URL corrispondente all'endpoint sul server
+ * Breve descrizione del servizio offerto.
+ * @apiVersion Versione
+ * @apiName Nome del metodo che implementa il servizio
+ * @apiGroup Nome del gruppo di API, usato per raggruppare i servizi 
+ *           esposti.
+ * @apiPermission Livello minimo dell'utente.
+ *
+ * @apiDescription Descrizione del servizio offerto.
+ *
+ * @apiParam {tipoParametro1} nomeParametro1 Descrizione del parametro 1.
+ * @apiParam {tipoParametroN} nomeParametroN Descrizione del parametro N.
+ *
+ * @apiExample Example usage:
+ * Esempio d'uso del servizio. Eventualmente specificando esempi dei 
+ * valori dei parametri.
+ *
+ * @apiSuccess {tipoValoreRitornato1} Descrizione del valore ritornato 1.
+ * @apiSuccess {tipoValoreRitornato2} Descrizione del valore ritornato 2.
+ * @apiSuccess {tipoValoreRitornatoM} Descrizione del valore ritornato M.
+ *
+ * @apiError nomeErrore Descrizione dell'errore.
+ * @apiError nomeALtroErrore Descrizione dell'altro errore.
+ *
+ * @apiExample Response (example)
+ * HTTP/1.1 200
+ * {
+ *	"done": true,
+ *	"message": "ok",
+ *	"data": "Esempio di un dato ritornato",
+ *	"json": {
+ *		"uno": "Esempio di oggetto JSON ritornato",
+ *		"due": 2
+ *	}
+ * }
+ *
+ * @apiErrorExample Response (example):
+ *     HTTP/1.1 404
+ *     {
+ *       "done": false,
+ *       "error": "Cannot get companies data"
+ *     }
+ */
+\end{verbatim}
+Dove \textit{MetodoHTTP} (\textbf{H}yper\textbf{T}ext \textbf{T}ransfer \textbf{P}rotocol) può assumere uno dei seguenti valori:
+\begin{itemize}
+\item GET;
+\item POST;
+\item PUT;
+\item DELETE.
+\end{itemize}
+Inoltre, il numero di @apiParam, @apiSuccess e @apiError è totalmente arbitrario e dipendente dal numero di parametri richiesti, dei valori ritornati, in un oggetto JSON (\textbf{J}ava\textbf{S}cript \textbf{O}bject \textbf{N}otation), e dei tipi di errori che possono essere sollevati.
