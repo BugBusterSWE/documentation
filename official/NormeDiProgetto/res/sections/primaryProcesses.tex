@@ -210,7 +210,7 @@
 			\item Diagrammi di sequenza.
 		        \end{itemize}
 			Per le descrizioni testuali delle singole classi deve essere utilizzato lo strumento di generazione automatica della 
-                        documentazione \textbf{Typedoc}(\url{http://typedoc.io/}). Ad ogni classe sarà associata la descrizione dei seguenti campi:
+                        documentazione \textbf{TypeDoc} (\url{http://typedoc.io/}). Ad ogni classe sarà associata la descrizione dei seguenti campi:
 			\begin{itemize}
 				\item Nome;
 				\item Autore della classe;
@@ -235,9 +235,9 @@
 
                 \item \textit{member-access}: questa regola impone di dichiarare esplicitamente la visibilit\`a dei membri di una classe;
                 \item \textit{member-ordering}: questa regola impone un ordinamento consistente dei membri delle classi, per fornire una lettura del codice pi\`u facile e maggiormente navigabile. In particolare, \`e stato deciso di scrivere prima le variabili e dopo i metodi, e per i metodi, prima quelli pubblici e poi quelli privati;
-                \item \textit{no-any}: questa regola impedisce la dichiarazione di variabili di tipo \textit{any} nel codice Typescript, eliminando di fatto la non determinazione di tipo a \textit{static time};
+                \item \textit{no-any}: questa regola impedisce la dichiarazione di variabili di tipo \textit{any} nel codice TypeScript, eliminando di fatto la non determinazione di tipo a \textit{static time};
                 \item \textit{no-internal-module}: questa regole impedisce l'uso di \glossaryItem{moduli} interni, che portano confusione all'interno del codice. \`E invece imposto l'utilizzo della \textit{keyword} \textit{namespace};
-                \item \textit{no-var-requires}: questa regola impedisce l'utilizzo della \textit{keyword} Javascript \textit{require}, per favorire l'utilizzo della nuova \textit{keyword} \textit{import} introdotta da Typescript;
+                \item \textit{no-var-requires}: questa regola impedisce l'utilizzo della \textit{keyword} JavaScript \textit{require}, per favorire l'utilizzo della nuova \textit{keyword} \textit{import} introdotta da TypeScript;
                 \item \textit{typedef}: questa regola impone di definire i tipi per metodi di ritorno, parametri, definizioni di variabili e di membri di classi;
                 \item \textit{typedef-whitespace}: questa regola impone di inserire degli spazi tra il tipo dichiarato e il suo nome, in maniera tale da aumentare la leggibilit\`a del codice;
                 \item \textit{curly}: questa regola impone l'utilizzo di parentesi graffe anche per \textit{statements} condizionali con istruzioni da una riga. Questo permette una maggiore leggibilit\`a del codice e contribuisce a mantenerlo ordinato e a prevenire errori;
@@ -246,14 +246,14 @@
                 \item \textit{no-duplicate-key}: questa regola impedisce la dichiarazioni di \textit{object literals} con la stessa chiave;
                 \item \textit{no-duplicate-variable}: questa regola impedisce la dichiarazioni di variabile con lo stesso nome nello stesso \textit{scope}, evitando ridichiarazioni del compilatore e quindi evitando errori identificabili solamente a tempo di esecuzione;
                 \item \textit{no-empty}: questa regola impedisce l'utilizzo di blocchi vuoti di codice, in quanto potrebbero indicare del codice mancante, non implementato (e fonte d'errore);
-                \item \textit{no-eval}: questa regola impedisce l'uso della funzione \textit{eval()} in Typescript, in quanto \`e ritenuta pericolosa dal punto di vista della sicurezza e pu\`o permettere l'esecuzione arbitraria di codice passato come una stringa;
+                \item \textit{no-eval}: questa regola impedisce l'uso della funzione \textit{eval()} in TypeScript, in quanto \`e ritenuta pericolosa dal punto di vista della sicurezza e pu\`o permettere l'esecuzione arbitraria di codice passato come una stringa;
                 \item \textit{no-null-keyword}: questa regola impedisce l'uso della \textit{keyword} \textit{null} in favore dell'utilizzo della \textit{keyword} \textit{undefined}. Questo permette di uniformare il codice con l'utilizzo di una sola \textit{keyword};
                 \item \textit{no-string-literal}: questa regola impedisce l'accesso ad oggetti tramite \textit{string literals}, incoraggiando l'utilizzo delle propriet\`a di accesso di tipo fortemente tipate;
                 \item \textit{no-swith-case-fall-through}: questa regola impedisce l'utilizzo di \textit{switch} senza l'utilizzo della \textit{keyword} \textit{break} per ogni caso. In questa maniera si evitano errori in cui tutti i \glossaryItem{casi} successivi a quello voluto vengono eseguiti involontariamente;
                 \item \textit{no-unreachable}: questa regola impedisce la scrittura di codice dopo gli \textit{statements: break, catch, throw, return}, che sarebbe non raggiungibile. In questa maniera \`e pi\`u facile riconoscere eventuali errori logici al \glossaryItem{programmatore};
                 \item \textit{no-unused-expression}: questa regola impedisce la dichiarazione di oggetti senza un loro effettivo utilizzo. 
                 \item \textit{no-use-before-declare}: questa regola impedisce l'utilizzo di variabili senza prima una loro dichiarazione. Questo tipo di codifica di solito porta a errori e all'inquinamento dello \textit{scope} globale, creando quindi confusione nel codice e una minore leggibilit\`a;
-                \item \textit{no-var-keyword}: questa regola disabilita la dichiarazione di variabili tramite la \textit{keyword} \textit{var}, ma impone l'utilizzo di \textit{let} per la dichiarazione di variabili, come consigliato da Typescript;
+                \item \textit{no-var-keyword}: questa regola disabilita la dichiarazione di variabili tramite la \textit{keyword} \textit{var}, ma impone l'utilizzo di \textit{let} per la dichiarazione di variabili, come consigliato da TypeScript;
                 \item \textit{switch-default}: questa regola impone che quando uno \textit{switch} viene utilizzato sia sempre definito il caso \textit{default};
                 \item \textit{use-strict}: questa regola impone l'utilizzo della \textit{keyword} \textit{use-strict} definita nello standard ECMAScript 5;
                 \item \textit{eofline}: questa regola impone l'inserimento di una linea vuota alla fine del file, per seguire la convenzione UNIX;
@@ -324,15 +324,20 @@
                         	\item \textit{Limitare la lunghezza di ogni singolo sottoprogramma a 60 linee}
                         	\item \textit{Controllare che tutti i parametri in ingresso e in uscita siano validi}
                         	\item \textit{Limitare al massimo la compilazione condizionale}
-                        	\item \textit{Puntare ad un uso intensivo di asserzioni(almeno 2 per sottoprogramma)}
+                        	\item \textit{Puntare ad un uso intensivo di asserzioni (almeno 2 per sottoprogramma)}
                         	\item \textit{Puntare al massimo livello architetturale di \textit{data hiding}}
                         	\item \textit{Limitare al massimo l'uso dei puntatori e il livello di dereferenziazione}
                         	\item \textit{Il codice va compilato da subito usando il compilatore nel modo più restrittivo}
 			\end{enumerate}
 
+		\paragraph*{Test}
+		La creazione dei test di unità e dei test di integrazione è compito dei Programmatori. Per la stesura dei test di unità
+		(nel nostro progetto le unità corrispondono alle classi TypeScript) il gruppo ha stabilito di utilizzare il framework
+	        \textbf{Chai} (\url{http://chaijs.com/}).	
+
                 \paragraph*{Strumenti}
                 Il gruppo ha stabilito di utilizzare i seguenti editor:
                 \begin{itemize}
-                  \item \textbf{Emacs}(\url{https://www.gnu.org/software/emacs/}) per la stesura del codice \LaTeX; 
-                  \item \textbf{WebStorm}(\url{https://www.jetbrains.com/webstorm/}) per il codice \glossaryItem{Typescript}.
+                  \item \textbf{Emacs} (\url{https://www.gnu.org/software/emacs/}) per la stesura del codice \LaTeX; 
+                  \item \textbf{WebStorm} (\url{https://www.jetbrains.com/webstorm/}) per il codice \glossaryItem{TypeScript}.
                 \end{itemize}
