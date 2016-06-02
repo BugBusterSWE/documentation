@@ -133,7 +133,7 @@
 			\paragraph*{Scopo}
 		     %Costruzione a priori perseguendo la correttezza per costruzione
 		     %invece che inseguendo la correttezza per correzione     <<  slide PROGETTAZIONE
-		     %Procede dall'Analisi dei Requisiti   <<  slide PROGETTAZIONE	
+		     %Procede dall'Analisi dei Requisiti   <<  slide PROGETTAZIONE
 		        La presente attivit\`a, che procede dall'Analisi dei Requisiti, persegue l'obiettivo
 		        della correttezza del prodotto per costruzione, permettendo di ridurre al minimo le attività di correzione
 		        in \glossaryItem{fase} di codifica.
@@ -148,15 +148,45 @@
 		    %si useranno Design patterns
 		        Per la progettazione del prodotto sarà opportuno utilizzare \glossaryItem{design pattern} globalmente affermati.
 			I membri del gruppo hanno acquisito conoscenze approfondite di tali design pattern durante il corso di \textit{Ingegneria del Software}.
-                 
+			Per rendere la progettazione e le scelte progettuali più comprensibili i progettisti dovranno fornire per ciascun design pattern
+			utilizzato:
+			\begin{itemize}
+                		\item Descrizione testuale (comprendente vantaggi e svantaggi del pattern in esame);
+				\item Descrizione tramite diagramma della struttura;
+				\item Contestualizzazione all'interno del progetto.
+			\end{itemize} 
+			I design pattern utilizzati dovranno inoltre essere classificati correttamente secondo la loro tipologia.
                         %diagrammi \glossaryItem{UML} prodotti
+
+			\paragraph*{Progettazione architetturale}
+			La definizione dell'architettura (Progettazione architetturale) di un software deve 
+			necessariamente essere preceduta dalla valutazione delle seguenti procedure:
+                        \begin{itemize}
+                                \item Individuazione dei prodotti che devono essere realizzati;
+                                \item Definizione delle responsabilità e dei ruoli per i prodotti;
+                                \item Definizione delle interazioni tra i prodotti;
+                                \item Verifica della corrispondenza tra prodotti e requisiti.
+                        \end{itemize}
+                        In seguito andranno eseguiti, documentati, e verificati i seguenti task relativi ad ogni prodotto individuato:
+                        \begin{itemize}
+                                \item Suddivisione del prodotto in componenti;
+                                \item Definizione del ruolo e degli obiettivi di ogni componenente;
+                                \item Verifica della corrispondenza tra componenti e requisiti;
+                                \item Progettazione dei test di unità e dei test di integrazione per verificare il corretto funzionamento di
+                                      più componenti integrate in un unico prodotto.
+                        \end{itemize}
+			
                         \paragraph*{Diagrammi prodotti}
                         Nel corso di questa \glossaryItem{fase} verranno prodotti quattro tipi di \glossaryItem{diagrammi} \glossaryItem{UML}:
                         \begin{itemize}
-                        \item \glossaryItem{Diagrammi} delle classi;
-                        \item \glossaryItem{Diagrammi} dei \glossaryItem{package};
-                        \item \glossaryItem{Diagrammi} di sequenza;
-                        \item \glossaryItem{Diagrammi} di attivit\`a.
+			\item Diagrammi dei package: hanno lo scopo di descrivere gruppi di classi correlate;
+                        \item \glossaryItem{Diagrammi} delle classi: hanno lo scopo di descrivere le entità e i loro tipi. Questi diagrammi
+                                                verranno utilizzati per la descrizione dettagliata delle classi e delle relazioni che intercorrono tra di
+                                                esse;
+               
+                        \item \glossaryItem{Diagrammi} di sequenza:  hanno lo scopo di descrivere le relazioni (in forma di messaggi) che intercorrono tra gli oggetti del sistema;
+                        \item \glossaryItem{Diagrammi} di attivit\`a: hanno lo scopo di mostrare come determinate interazioni tra componenti
+                                                realizzino una funzionalità che si vuole offrire.
                         \end{itemize}
                         I tipi di \glossaryItem{diagrammi} sopra elencati andranno a far parte dei due documenti menzionati sopra.
 		
@@ -164,15 +194,30 @@
 			Ogni requisito deve essere riferito al componente che lo soddisfa. Tramite questa operazione è possibile garantire che ogni requisito venga
 			soddisfatto, inoltre questo aiuta nella misurazione del progresso dell'attività di progettazione.		
 			
+			\paragraph*{Test di unità}
+			Per quanto riguarda la realizzazione dei test di unità, i Programmatori devono essere conformi 
+			alla regola di non-sovrapposizione dei ruoli: chi realizza il test non deve essere lo stesso individuo 
+			che implementa la classe da testare.
+		
 		 %parlare degli STRUMENTI utilizzati
 		        \paragraph*{Strumenti}
 		        Come per l'attivit\`a precedente e per gli stessi motivi, i membri del gruppo hanno stabilito l'utilizzo del linguaggio \glossaryItem{UML} 2.0 per i seguenti
 		        \glossaryItem{diagrammi}:
 		        \begin{itemize}
 			\item \glossaryItem{Diagrammi} dei \glossaryItem{package}; 
-			\item \glossaryItem{Diagrammi} delle \textit{classi};	
-			\item \glossaryItem{Diagrammi} di \textit{attivit\`a}.
+						
+			\item \glossaryItem{Diagrammi} di \textit{attivit\`a};
+			\item Diagrammi di sequenza.
 		        \end{itemize}
+			Per le descrizioni testuali delle singole classi deve essere utilizzato lo strumento di generazione automatica della 
+                        documentazione \textbf{Typedoc}(\url{http://typedoc.io/}). Ad ogni classe sarà associata la descrizione dei seguenti campi:
+			\begin{itemize}
+				\item Nome;
+				\item Autore della classe;
+				\item Descrizione generica di scopo e responsabilità della classe;
+				\item Proprietà della classe;
+				\item Metodi della classe.
+			\end{itemize}
                         Anche in questo caso per mantenere una tracciabilità viene utilizzato \textit{Tracy} come base di dati per poter mantenere tutti i \glossaryItem{diagrammi} prodotti e la loro descrizione.
 			 
 		
