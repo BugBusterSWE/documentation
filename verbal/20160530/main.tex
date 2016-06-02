@@ -1,48 +1,46 @@
-\documentclass[11pt]{meetingmins}
-\usepackage[utf8]{inputenc}
-\usepackage{graphicx}
-\usepackage{float}
 \input{../../common/style/global.tex}
+\input{../../common/style/layout.tex}
+\input{res/local}
 
-\setcommittee{BugBusters}
+\title{\textbf{Norme di Progetto}}
+\author{BugBuster}
 
-\setmembers{
-
-  D.~Polonio,
-  D.~Rigoni,
-  M.~Di Pirro,
-  G.~Mazzocchin,
-  L.~Bianco,
-  A.~Mantovani,
-  E.~Carraro
-}
-
-\setdate{May 24, 2016}
-
-\setpresent{
-  
-  D.~Polonio,
-  E.~Carraro,
-}
-
-\absent{
-  D.~Rigoni,
-  A.~Mantovani,
-  L.~Bianco,
-  M.~Di Pirro,
-  G.~Mazzocchin
-}
-
-\alsopresent{None}
+\date{17 giugno 2016}
 
 \begin{document}
 
-\begin{figure}[H]
+\makeFrontPage
 
-  \centering
-  \includegraphics[scale=0.45]{../../common/style/logo.png}
-\end{figure}
-\maketitle
+\paragraph*{Data}: 2016/05/24
+
+\paragraph*{Membri del gruppo}
+\begin{itemize}
+
+\item D. Polonio
+\item D. Rigoni
+\item M. Di Pirro
+\item G. Mazzocchin
+\item L. Bianco
+\item A. Mantovani
+\item E. Carraro
+\end{itemize}
+
+\paragraph*{Membri presenti}
+\begin{itemize}
+
+\item D. Polonio
+\item E. Carraro
+\end{itemize}
+
+\paragraph*{Membri assenti}
+\begin{itemize}
+
+\item D. Rigoni
+\item M. Di Pirro
+\item G. Mazzocchin
+\item L. Bianco
+\item A. Mantovani
+\end{itemize}
 
 \section{Ordine del giorno}
 
@@ -71,6 +69,7 @@ L'amministratore spiega il workflow per Heroku. Vengono descritte le funzionalit
 Una particolare istanza di Heroku viene aggiornata a ogni modifica nel branch master del repository se e solo se i controlli di Travis CI passano, mentre a ogni nuova release di MaaS viene aggiornata una istanza diversa di Heroku posta in ``produzione''.
 Con questo workflow viene evidenziato come non sia necessario l'intervento dei membri del gruppo, a meno di interventi di manutenzione o di modifica del workflow stesso.
 
-\nextmeeting{June 06, 2016}
+\paragraph*{Prossimo incontro}: 2016/06/06
+
 
 \end{document}
