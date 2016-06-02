@@ -812,7 +812,7 @@ descrivere i dettagli di un metodo complesso.</definition>
 		<word>Driver</word>
 		<definition>Componente attivo fittizio usato per pilotare l'esecuzione di porzioni di codice con lo scopo di verificarne il funzionamento.</definition>
     </term>
-    term>
+    <term>
 		<word>Logger</word>
 		<definition>Componente non intrusivo usato nelle fasi di test di un prodotto software con lo scopo di registrare dei dati sull'esecuzione del codice per favorire l'analisi dei risultati.</definition>
     </term>
