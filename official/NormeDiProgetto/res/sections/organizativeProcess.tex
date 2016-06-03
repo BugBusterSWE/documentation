@@ -114,8 +114,14 @@ dove:
 
 \subsubsection{Attività di organizzazione dell'infrastruttura}
 
-\paragraph*{Sistema di versionamento e suo utilizzo} Il gruppo ha stabilito di utilizzare per tutti i file che richiedono versionamento di il \glossaryItem{CVS} \glossaryItem{Git}, tramite il servizio \glossaryItem{GitHub}.
+\paragraph*{Sistema di versionamento scelto} Il gruppo ha stabilito di utilizzare per tutti i file che richiedono versionamento 
+il \glossaryItem{CVS} \glossaryItem{Git}, tramite il servizio \glossaryItem{GitHub}. \\
+Nonostante esistano varie alternative, come \textit{Mercurial}, \textit{Subversion} e \textit{Bazaar}, è stato scelto Git in quanto soddisfa
+appieno le necessità di versionamento dei file per questo progetto e, inoltre, permette di versionare i file localmente, senza bisogno di una connessione
+internet attiva. Le scelte di Git e GitHub sono state effettuate anche perché più membri del gruppo avevano già avuto l'opportunità 
+di lavorare con tali strumenti. \\
 
+\textbf{Utilizzo di Git/GitHub}
 È stato stabilito che ogni commit debba appartenere a un \glossaryItem{task}. I \glossaryItem{task}, assegnati dal \textit{Responsabile} ai vari membri del gruppo corrispondono a \glossaryItem{issue} su \glossaryItem{GitHub}. All'apertura della \glossaryItem{issue} corrisponde alla creazione di un branch, il cui nome sarà conforme alla seguente nomenclatura: \textbf{issue\#\textit{numero issue}}. In caso di una attivit\`a, viene creata una issue su \glossaryItem{GitHub} che corrisponde ad un branch (creato dall'assegnatario dell'attivit\`a) con la seguente nomenclatura: \textbf{activity\#\textit{numeroissue}}. Da li, tutti i \glossaryItem{task} di quella attivit\`a deriveranno da quel branch. L'assegnatario del \glossaryItem{task}, durante il suo svolgimento, viene coadiuvato da un sistema di \glossaryItem{Continuous Integration}. Al termine dello svolgimento di tale \glossaryItem{task} l'assegnatario esegue una \glossaryItem{Pull Request}, seguita da un controllo di contenuto da parte di un verificatore umano. La Pull Request deve avere label e \glossaryItem{Milestone} uguali a quelle del \glossaryItem{task} corrispondente. In seguito il verificatore
 chiude il \glossaryItem{task}. Al completamento di un \glossaryItem{task} la issue ad esso corrispondente va chiusa. In caso di conflitto il verificatore operer\`a congiuntamente all'assegnatario della issue per risolvere problema.
 In questa maniera vengono inseriti dei \glossaryItem{Configuration Item} che sono stati verificati sia da sistemi di integrazione continua e sia da umani, coprendo rispettivamente la parte prettamente sintattica (scrittura di codice corretto) e la parte di contenuto (che una macchina non pu\`o controllare), comportando nel \glossaryItem{repository} l'inserimento di codice sempre corretto e verificato e generando \glossaryItem{baseline} sempre consistenti.

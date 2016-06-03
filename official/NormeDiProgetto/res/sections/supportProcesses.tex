@@ -227,6 +227,12 @@ Il \glossaryItem{processo} di \glossaryItem{verifica} deve raggiungere questi ob
 \subsubsection{1. Attivit\`a di verifica}
 A seguito viene descritto il \glossaryItem{processo} di \glossaryItem{verifica} per la documentazione e per la codifica affinchè i Verificatori possano garantire che al termine del loro lavoro, la documentazione e il codice prodotto sia conforme alla struttura decisa dal \glossaryItem{Team} e che sia corretta rispetto alle regole decise dal Gruppo e dal punto di vista sintattico per il linguaggio deciso per il documento.
 
+\paragraph*{Issue tracking}
+L'\textit{issue tracking} è un'attività di supporto eseguita grazie alla funzionalità \textit{Issues} offerta da GitHub.
+Essa permette ai verificatori di tenere traccia di anomalie e potenziali errori, segnalandoli ai 
+redattori/programmatori del documento/codice verificato, oppure al \textit{Responsabile di progetto}.
+
+
 \paragraph*{Procedura di \glossaryItem{verifica} dei documenti}
 \begin{itemize}
 \item \textbf{Controllo sintattico e del periodo}: Un passaggio preliminare per la correzione di errori grammaticali viene garantito dal software \textit{GNU Aspell} in \glossaryItem{fase} di \glossaryItem{pre}-commit. Questo passaggio non risulta sufficiente a garantire la correttezza del documento perciò, in \glossaryItem{fase} di \glossaryItem{verifica}, il Verificatore incaricato deve sottoporre il documento in esame ad un walkthrough per evidenziare e correggere errori sintattici;
@@ -235,8 +241,8 @@ A seguito viene descritto il \glossaryItem{processo} di \glossaryItem{verifica} 
   \item \textbf{In caso di \glossaryItem{anomalie}}: Il Verificatore deve aprire una issue nel \glossaryItem{repository} dei documenti dando riferimenti al redatore su come procedere per apportare le modifiche necessarie al documento esaminato.
 
 \paragraph*{Procedura di \glossaryItem{verifica} della Progettazione Architetturale}
-Il \textit{Verificatore} deve accertarsi che tutti i requisiti individuati nell'\AnalisiDeiRequisiti vengano soddisfatti
-nell'architettura proposta nel documento di \SpecificaTecnica.
+Il \textit{Verificatore} deve accertarsi che tutti i requisiti individuati nell'\textit{Analisi dei Requisiti} vengano soddisfatti
+nell'architettura proposta nel documento di \textit{SpecificaTecnica}.
 Nel caso in cui un requisito non sia soddisfatto, il \textit{Verificatore} deve comunicarlo ai \textit{Progettisti}, i quali
 si faranno carico della revisione mirata dell'architettura. 
 
