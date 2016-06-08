@@ -804,4 +804,16 @@ descrivere i dettagli di un metodo complesso.</definition>
 		<word>Web server</word>
 		<definition>Applicazione software in grado di gestire richieste HTTP o HTTPS provvenienti dai client.</definition>
     </term>
+    <term>
+		<word>Stub</word>
+		<definition>Frammento di codice passivo e fittizio usato per simulare il comportamento di codice esistente o per sostituire codice non ancora implementato.</definition>
+    </term>
+    <term>
+		<word>Driver</word>
+		<definition>Componente attivo fittizio usato per pilotare l'esecuzione di porzioni di codice con lo scopo di verificarne il funzionamento.</definition>
+    </term>
+    <term>
+		<word>Logger</word>
+		<definition>Componente non intrusivo usato nelle fasi di test di un prodotto software con lo scopo di registrare dei dati sull'esecuzione del codice per favorire l'analisi dei risultati.</definition>
+    </term>
 </glossary>
