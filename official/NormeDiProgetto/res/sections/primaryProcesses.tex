@@ -6,6 +6,13 @@
 	L'oggetto del presente \glossaryItem{processo} è la stesura dello \textit{Studio di Fattibilità}, compito
 	di cui si occupa un \textit{Analista}. Il \textit{Responsabile di \glossaryItem{Progetto}} deve invece organizzare delle riunioni preventive, 
 	per permettere lo scambio di opinioni tra i membri del gruppo sui capitolati proposti.
+	Tale documento deve essere redatto accuratamente e rapidamente sulla base di quanto emerso nelle presentazioni dei capitolati e 
+	nelle prime riunioni interne al gruppo, nelle quali è opportuna l'analisi dei seguenti punti:
+	\begin{itemize}
+		\item Rischi intrinseci al capitolato;
+		\item Area tecnologico-applicativa del capitolato;
+		\item Fruibilità del prodotto nel mercato attuale e futuro.
+	\end{itemize}
 	\subsubsection{Struttura dello \textit{Studio di Fattibilità}}
 		\begin{itemize}
 			\item Capitolato scelto;
@@ -133,7 +140,7 @@
 			\paragraph*{Scopo}
 		     %Costruzione a priori perseguendo la correttezza per costruzione
 		     %invece che inseguendo la correttezza per correzione     <<  slide PROGETTAZIONE
-		     %Procede dall'Analisi dei Requisiti   <<  slide PROGETTAZIONE	
+		     %Procede dall'Analisi dei Requisiti   <<  slide PROGETTAZIONE
 		        La presente attivit\`a, che procede dall'Analisi dei Requisiti, persegue l'obiettivo
 		        della correttezza del prodotto per costruzione, permettendo di ridurre al minimo le attività di correzione
 		        in \glossaryItem{fase} di codifica.
@@ -148,31 +155,76 @@
 		    %si useranno Design patterns
 		        Per la progettazione del prodotto sarà opportuno utilizzare \glossaryItem{design pattern} globalmente affermati.
 			I membri del gruppo hanno acquisito conoscenze approfondite di tali design pattern durante il corso di \textit{Ingegneria del Software}.
-                 
+			Per rendere la progettazione e le scelte progettuali più comprensibili i progettisti dovranno fornire per ciascun design pattern
+			utilizzato:
+			\begin{itemize}
+                		\item Descrizione testuale (comprendente vantaggi e svantaggi del pattern in esame);
+				\item Descrizione tramite diagramma della struttura;
+				\item Contestualizzazione all'interno del progetto.
+			\end{itemize} 
+			I design pattern utilizzati dovranno inoltre essere classificati correttamente secondo la loro tipologia.
                         %diagrammi \glossaryItem{UML} prodotti
+
+			\paragraph*{Progettazione architetturale}
+			La definizione dell'architettura (Progettazione architetturale) di un software deve 
+			necessariamente essere preceduta dalla valutazione delle seguenti procedure:
+                        \begin{itemize}
+                                \item Individuazione dei prodotti che devono essere realizzati;
+                                \item Definizione delle responsabilità e dei ruoli per i prodotti;
+                                \item Definizione delle interazioni tra i prodotti;
+                                \item Verifica della corrispondenza tra prodotti e requisiti.
+                        \end{itemize}
+                        In seguito andranno eseguiti, documentati, e verificati i seguenti task relativi ad ogni prodotto individuato:
+                        \begin{itemize}
+                                \item Suddivisione del prodotto in componenti;
+                                \item Definizione del ruolo e degli obiettivi di ogni componente;
+                                \item Verifica della corrispondenza tra componenti e requisiti;
+                                \item Progettazione dei test di unità e dei test di integrazione per verificare il corretto funzionamento di
+                                      più componenti integrate in un unico prodotto.
+                        \end{itemize}
+			
                         \paragraph*{Diagrammi prodotti}
                         Nel corso di questa \glossaryItem{fase} verranno prodotti quattro tipi di \glossaryItem{diagrammi} \glossaryItem{UML}:
                         \begin{itemize}
-                        \item \glossaryItem{Diagrammi} delle classi;
-                        \item \glossaryItem{Diagrammi} dei \glossaryItem{package};
-                        \item \glossaryItem{Diagrammi} di sequenza;
-                        \item \glossaryItem{Diagrammi} di attivit\`a.
+			\item Diagrammi dei package: hanno lo scopo di descrivere gruppi di classi correlate;
+                        \item \glossaryItem{Diagrammi} delle classi: hanno lo scopo di descrivere le entità e i loro tipi. Questi diagrammi
+                                                verranno utilizzati per la descrizione dettagliata delle classi e delle relazioni che intercorrono tra di
+                                                esse;
+               
+                        \item \glossaryItem{Diagrammi} di sequenza:  hanno lo scopo di descrivere le relazioni (in forma di messaggi) che intercorrono tra gli oggetti del sistema;
+                        \item \glossaryItem{Diagrammi} di attivit\`a: hanno lo scopo di mostrare come determinate interazioni tra componenti
+                                                realizzino una funzionalità che si vuole offrire.
                         \end{itemize}
                         I tipi di \glossaryItem{diagrammi} sopra elencati andranno a far parte dei due documenti menzionati sopra.
 		
-			\paragraph*{Tracciamento dei componenti}
-			Ogni requisito deve essere riferito al componente che lo soddisfa. Tramite questa operazione è possibile garantire che ogni requisito venga
+			\paragraph*{Tracciamento delle componenti}
+			Ogni requisito deve essere riferito alla componente che lo soddisfa. Tramite questa operazione è possibile garantire che ogni requisito venga
 			soddisfatto, inoltre questo aiuta nella misurazione del progresso dell'attività di progettazione.		
 			
+			\paragraph*{Test di unità}
+			Per quanto riguarda la realizzazione dei test di unità, i Programmatori devono essere conformi 
+			alla regola di non-sovrapposizione dei ruoli: chi realizza il test non può essere lo stesso individuo 
+			che implementa la classe da testare.
+		
 		 %parlare degli STRUMENTI utilizzati
 		        \paragraph*{Strumenti}
 		        Come per l'attivit\`a precedente e per gli stessi motivi, i membri del gruppo hanno stabilito l'utilizzo del linguaggio \glossaryItem{UML} 2.0 per i seguenti
 		        \glossaryItem{diagrammi}:
 		        \begin{itemize}
 			\item \glossaryItem{Diagrammi} dei \glossaryItem{package}; 
-			\item \glossaryItem{Diagrammi} delle \textit{classi};	
-			\item \glossaryItem{Diagrammi} di \textit{attivit\`a}.
+						
+			\item \glossaryItem{Diagrammi} di \textit{attivit\`a};
+			\item Diagrammi di sequenza.
 		        \end{itemize}
+			Per le descrizioni testuali delle singole classi deve essere utilizzato lo strumento di generazione automatica della 
+                        documentazione \textbf{TypeDoc} (\url{http://typedoc.io/}). Ad ogni classe sarà associata la descrizione dei seguenti campi:
+			\begin{itemize}
+				\item Nome;
+				\item Autore della classe;
+				\item Descrizione generica di scopo e responsabilità della classe;
+				\item Proprietà della classe;
+				\item Metodi della classe.
+			\end{itemize}
                         Anche in questo caso per mantenere una tracciabilità viene utilizzato \textit{Tracy} come base di dati per poter mantenere tutti i \glossaryItem{diagrammi} prodotti e la loro descrizione.
 			 
 		
@@ -190,9 +242,9 @@
 
                 \item \textit{member-access}: questa regola impone di dichiarare esplicitamente la visibilit\`a dei membri di una classe;
                 \item \textit{member-ordering}: questa regola impone un ordinamento consistente dei membri delle classi, per fornire una lettura del codice pi\`u facile e maggiormente navigabile. In particolare, \`e stato deciso di scrivere prima le variabili e dopo i metodi, e per i metodi, prima quelli pubblici e poi quelli privati;
-                \item \textit{no-any}: questa regola impedisce la dichiarazione di variabili di tipo \textit{any} nel codice Typescript, eliminando di fatto la non determinazione di tipo a \textit{static time};
+                \item \textit{no-any}: questa regola impedisce la dichiarazione di variabili di tipo \textit{any} nel codice TypeScript, eliminando di fatto la non determinazione di tipo a \textit{static time};
                 \item \textit{no-internal-module}: questa regole impedisce l'uso di \glossaryItem{moduli} interni, che portano confusione all'interno del codice. \`E invece imposto l'utilizzo della \textit{keyword} \textit{namespace};
-                \item \textit{no-var-requires}: questa regola impedisce l'utilizzo della \textit{keyword} Javascript \textit{require}, per favorire l'utilizzo della nuova \textit{keyword} \textit{import} introdotta da Typescript;
+                \item \textit{no-var-requires}: questa regola impedisce l'utilizzo della \textit{keyword} JavaScript \textit{require}, per favorire l'utilizzo della nuova \textit{keyword} \textit{import} introdotta da TypeScript;
                 \item \textit{typedef}: questa regola impone di definire i tipi per metodi di ritorno, parametri, definizioni di variabili e di membri di classi;
                 \item \textit{typedef-whitespace}: questa regola impone di inserire degli spazi tra il tipo dichiarato e il suo nome, in maniera tale da aumentare la leggibilit\`a del codice;
                 \item \textit{curly}: questa regola impone l'utilizzo di parentesi graffe anche per \textit{statements} condizionali con istruzioni da una riga. Questo permette una maggiore leggibilit\`a del codice e contribuisce a mantenerlo ordinato e a prevenire errori;
@@ -201,14 +253,14 @@
                 \item \textit{no-duplicate-key}: questa regola impedisce la dichiarazioni di \textit{object literals} con la stessa chiave;
                 \item \textit{no-duplicate-variable}: questa regola impedisce la dichiarazioni di variabile con lo stesso nome nello stesso \textit{scope}, evitando ridichiarazioni del compilatore e quindi evitando errori identificabili solamente a tempo di esecuzione;
                 \item \textit{no-empty}: questa regola impedisce l'utilizzo di blocchi vuoti di codice, in quanto potrebbero indicare del codice mancante, non implementato (e fonte d'errore);
-                \item \textit{no-eval}: questa regola impedisce l'uso della funzione \textit{eval()} in Typescript, in quanto \`e ritenuta pericolosa dal punto di vista della sicurezza e pu\`o permettere l'esecuzione arbitraria di codice passato come una stringa;
+                \item \textit{no-eval}: questa regola impedisce l'uso della funzione \textit{eval()} in TypeScript, in quanto \`e ritenuta pericolosa dal punto di vista della sicurezza e pu\`o permettere l'esecuzione arbitraria di codice passato come una stringa;
                 \item \textit{no-null-keyword}: questa regola impedisce l'uso della \textit{keyword} \textit{null} in favore dell'utilizzo della \textit{keyword} \textit{undefined}. Questo permette di uniformare il codice con l'utilizzo di una sola \textit{keyword};
                 \item \textit{no-string-literal}: questa regola impedisce l'accesso ad oggetti tramite \textit{string literals}, incoraggiando l'utilizzo delle propriet\`a di accesso di tipo fortemente tipate;
                 \item \textit{no-swith-case-fall-through}: questa regola impedisce l'utilizzo di \textit{switch} senza l'utilizzo della \textit{keyword} \textit{break} per ogni caso. In questa maniera si evitano errori in cui tutti i \glossaryItem{casi} successivi a quello voluto vengono eseguiti involontariamente;
                 \item \textit{no-unreachable}: questa regola impedisce la scrittura di codice dopo gli \textit{statements: break, catch, throw, return}, che sarebbe non raggiungibile. In questa maniera \`e pi\`u facile riconoscere eventuali errori logici al \glossaryItem{programmatore};
                 \item \textit{no-unused-expression}: questa regola impedisce la dichiarazione di oggetti senza un loro effettivo utilizzo. 
                 \item \textit{no-use-before-declare}: questa regola impedisce l'utilizzo di variabili senza prima una loro dichiarazione. Questo tipo di codifica di solito porta a errori e all'inquinamento dello \textit{scope} globale, creando quindi confusione nel codice e una minore leggibilit\`a;
-                \item \textit{no-var-keyword}: questa regola disabilita la dichiarazione di variabili tramite la \textit{keyword} \textit{var}, ma impone l'utilizzo di \textit{let} per la dichiarazione di variabili, come consigliato da Typescript;
+                \item \textit{no-var-keyword}: questa regola disabilita la dichiarazione di variabili tramite la \textit{keyword} \textit{var}, ma impone l'utilizzo di \textit{let} per la dichiarazione di variabili, come consigliato da TypeScript;
                 \item \textit{switch-default}: questa regola impone che quando uno \textit{switch} viene utilizzato sia sempre definito il caso \textit{default};
                 \item \textit{use-strict}: questa regola impone l'utilizzo della \textit{keyword} \textit{use-strict} definita nello standard ECMAScript 5;
                 \item \textit{eofline}: questa regola impone l'inserimento di una linea vuota alla fine del file, per seguire la convenzione UNIX;
@@ -236,6 +288,38 @@
 		  \item L’\glossaryItem{efficacia} dei metodi di analisi statica \`e strettamente correlata alla qualit\`a di strutturazione del codice.
                 \end{itemize}
 
+		\paragraph*{Documentazione nel codice}
+		Tutti i commenti al codice dovranno essere conformi alla sintassi richiesta dallo strumento \textit{TypeDoc}. \\
+		L'intestazione dei file contenenti codice dovrà essere conforme all'esempio seguente:
+		\begin{lstlisting}
+		/**
+ 		* Descrizione della classe.
+ 		* @history
+ 		* | Author | Action Performed | Data |
+ 		* | ---    | ---              | ---  |
+ 		* | Nome dell'autore | Azione compiuta | Data |
+ 		*
+ 		* @author Nome dell'autore
+ 		* @license Licenza della classe
+ 		*/
+		\end{lstlisting}
+		\begin{itemize}
+			\item \textit{Template} di commento TypeDoc per i metodi:
+				\begin{lstlisting}
+					/**
+    					 * @description descrizione.
+     					 * @returns {tipo}.
+  				         * @override
+     					*/
+				\end{lstlisting}
+			\item \textit{Template} di commento TypeDoc per gli attributi:
+				\begin{lstlisting}
+					/**
+    					 * @description descrizione.
+     					*/
+				\end{lstlisting}
+		\end{itemize}
+	
 		\paragraph*{\textit{10 regole d'oro}}
 		Perseguendo l'obiettivo della semplificazione dell'analisi (sia statica sia dinamica),
            	i \glossaryItem{programmatori} del gruppo cercheranno di essere quanto più conformi possibile alle 10 regole
@@ -247,23 +331,27 @@
                         	\item \textit{Limitare la lunghezza di ogni singolo sottoprogramma a 60 linee}
                         	\item \textit{Controllare che tutti i parametri in ingresso e in uscita siano validi}
                         	\item \textit{Limitare al massimo la compilazione condizionale}
-                        	\item \textit{Puntare ad un uso intensivo di asserzioni(almeno 2 per sottoprogramma)}
+                        	\item \textit{Puntare ad un uso intensivo di asserzioni (almeno 2 per sottoprogramma)}
                         	\item \textit{Puntare al massimo livello architetturale di \textit{data hiding}}
                         	\item \textit{Limitare al massimo l'uso dei puntatori e il livello di dereferenziazione}
                         	\item \textit{Il codice va compilato da subito usando il compilatore nel modo più restrittivo}
 			\end{enumerate}
 
+		\paragraph*{Test}
+		La creazione dei test di unità e dei test di integrazione è compito dei Programmatori. Per la stesura dei test di unità
+		(nel nostro progetto le unità corrispondono alle classi TypeScript) il gruppo ha stabilito di utilizzare il framework
+	        \textbf{Chai} (\url{http://chaijs.com/}).	
 
                 \paragraph*{Strumenti}
                 Il gruppo ha stabilito di utilizzare i seguenti editor:
                 \begin{itemize}
-                  \item \textbf{Emacs}(\url{https://www.gnu.org/software/emacs/}) per la stesura del codice \LaTeX; 
-                  \item \textbf{WebStorm}(\url{https://www.jetbrains.com/webstorm/}) per il codice \glossaryItem{Typescript}.
+                  \item \textbf{Emacs} (\url{https://www.gnu.org/software/emacs/}) per la stesura del codice \LaTeX; 
+                  \item \textbf{WebStorm} (\url{https://www.jetbrains.com/webstorm/}) per il codice \glossaryItem{TypeScript}.
                 \end{itemize}
              
 \subsubsection{Procedure automatiche}
 \paragraph{JSDoc} \mbox{} \\
-Per guidare la codifica e rendere più chiaro lo scopo di ciascun componente (metodo o classe), il team utilizza la documentazione inline realizzata con JSDoc: JSDoc sfrutta delle annotazioni simili a JavaDoc per documentare il codice direttamente nei file sorgenti. A partire da questa documentazione viene generato, attraverso TypeDoc, un sito web contentente il riepilogo di ciascun componente codificato. È pertanto necessario attenersi ad alcune regole, in modo tale da generare una documentazione facilmente consultabile, consistente e precisa. Di seguito verranno specificate tali regole.
+Per guidare la codifica e rendere più chiaro lo scopo di ciascun componente (metodo o classe), il team utilizza la documentazione inline realizzata con JSDoc: JSDoc sfrutta delle annotazioni simili a JavaDoc per documentare il codice direttamente nei file sorgenti. A partire da questa documentazione viene generato, attraverso TypeDoc, un sito web contenente il riepilogo di ciascun componente codificato. È pertanto necessario attenersi ad alcune regole, in modo tale da generare una documentazione facilmente consultabile, consistente e precisa. Di seguito verranno specificate tali regole.
 \paragraph*{File}
 I file dovranno avere la seguente intestazione:
 \begin{verbatim}
