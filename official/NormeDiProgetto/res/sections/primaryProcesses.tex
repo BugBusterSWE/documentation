@@ -288,37 +288,6 @@
 		  \item L’\glossaryItem{efficacia} dei metodi di analisi statica \`e strettamente correlata alla qualit\`a di strutturazione del codice.
                 \end{itemize}
 
-		\paragraph*{Documentazione nel codice}
-		Tutti i commenti al codice dovranno essere conformi alla sintassi richiesta dallo strumento \textit{TypeDoc}. \\
-		L'intestazione dei file contenenti codice dovrà essere conforme all'esempio seguente:
-		\begin{lstlisting}
-		/**
- 		* Descrizione della classe.
- 		* @history
- 		* | Author | Action Performed | Data |
- 		* | ---    | ---              | ---  |
- 		* | Nome dell'autore | Azione compiuta | Data |
- 		*
- 		* @author Nome dell'autore
- 		* @license Licenza della classe
- 		*/
-		\end{lstlisting}
-		\begin{itemize}
-			\item \textit{Template} di commento TypeDoc per i metodi:
-				\begin{lstlisting}
-					/**
-    					 * @description descrizione.
-     					 * @returns {tipo}.
-  				         * @override
-     					*/
-				\end{lstlisting}
-			\item \textit{Template} di commento TypeDoc per gli attributi:
-				\begin{lstlisting}
-					/**
-    					 * @description descrizione.
-     					*/
-				\end{lstlisting}
-		\end{itemize}
 	
 		\paragraph*{\textit{10 regole d'oro}}
 		Perseguendo l'obiettivo della semplificazione dell'analisi (sia statica sia dinamica),
@@ -340,7 +309,7 @@
 		\paragraph*{Test}
 		La creazione dei test di unità e dei test di integrazione è compito dei Programmatori. Per la stesura dei test di unità
 		(nel nostro progetto le unità corrispondono alle classi TypeScript) il gruppo ha stabilito di utilizzare il framework
-	        \textbf{Chai} (\url{http://chaijs.com/}).	
+	        \textbf{Mocha} (\url{https://mochajs.org/}), abbinato alla libreria di asserzioni \textbf{Chai} (\url{http://chaijs.com/}).	
 
                 \paragraph*{Strumenti}
                 Il gruppo ha stabilito di utilizzare i seguenti editor:
