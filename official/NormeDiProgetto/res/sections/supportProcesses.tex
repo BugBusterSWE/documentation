@@ -6,12 +6,50 @@
 \subsubsection{Scopo del processo}
 Questo \glossaryItem{processo} ha come scopi la produzione e la manutenzione della documentazione necessaria durante il \glossaryItem{ciclo di vita del software}.
 \subsubsection{Risultati attesi dal processo}
-Tale \glossaryItem{processo} deve garanire:
+Tale \glossaryItem{processo} deve garantire:
 \begin{itemize}
 \item l'individuazione dei documenti da produrre per le varie \glossaryItem{fasi} del ciclo di sviluppo;
 \item la corretta stesura dei documenti segnalati;
 \item l'individuazione degli standard a cui tali documenti devono aderire.
 \end{itemize}
+
+\subsubsection{Procedure automatiche a supporto}
+Nello sviluppo della documentazione vengono utilizzate delle procedure automatiche per supportare la generazione di interi documenti o di alcune loro parti. Di seguito verranno descritte le procedure automatiche per la generazione dell'elenco di tabelle e figure e per la generazione del glossario.
+\paragraph{Generazione della lista delle tabelle e della lista delle figure} \mbox{} \\
+Le tabelle e le figure inserite nel documento vengono automaticamente indicizzate durante la compilazione del codice \LaTeX{} attraverso l'uso dei comandi \textit{listoftables} e \textit{listoffigures}. Questi due comandi si basano sull'associazione della tabella, o figura, ad una didascalia (\textit{caption}). Grazie a questa associazione viene mostrato, subito dopo l'indice del documento, la lista delle tabelle e/o delle figure. È compito di ogni membro del team inserire tale \textit{caption} durante la stesura di una tabella o l'inserimento di una figura.
+
+\paragraph{Generazione del glossario} \mbox{} \\
+Il glossario dei termini a supporto dei documenti è interamente generato con l'utilizzo di uno script Perl (\textbf{P}ractical \textbf{E}xtraction and \textbf{R}eport \textbf{L}anguage) sviluppato internamente. Un file XML (e\textbf{X}tensible \textbf{M}arkup \textbf{L}anguage) contente le definizioni dei termini in ordine casuale. Ogni voce del glossario corrisponde al seguente tag:
+\begin{verbatim}
+<term>
+    <word>Termine</word>
+    <extended>Opzionale, descrizione estesa dell'acronimo.</extended>
+    <plural>Opzionale, plurale del termine.</plural>
+    <definition>Definizione.</definition>
+</term>
+\end{verbatim}
+regolamentato dalla seguente istanza di XML Schema:
+\begin{verbatim}
+<xs:element name="glossary">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="term" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="word" type="xs:ID" />
+                        <xs:element name="plural" type="xs:string" minOccurs="0" />
+                        <xs:element name="extended" type="xs:string" minOccurs="0" />
+                        <xs:element name="definition" type="xs:string"
+                                    maxOccurs="unbounded" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+\end{verbatim}
+Lo script Perl ordina i termini inseriti nel file XML attraverso una trasformata XSL (e\textbf{X}tensible \textbf{S}tylesheet \textbf{L}anguage) e genera il codice \LaTeX{} che verrà, successivamente, usato per la generazione del documento. \\
+Oltre a questo, un secondo script Perl si occupa di marcare i termini da glossario presenti nei documenti scritti dal team. Oltre al termine al singolare vengono marcati anche i termini al plurale, se questo è inserito nel file XML sopra citato. Lo script è stato progettato per la ricerca ricorsiva di file con estensione .tex di \LaTeX. A partire da una directory indicata in fase di avvio dello script vengono ricercati, ricorsivamente, tutti i file .tex, e su di essi viene eseguita la marcatura dei termini, qualora ce ne fossero di non marcati.
 %###################################################
 
 
@@ -19,10 +57,14 @@ Tale \glossaryItem{processo} deve garanire:
 \subsubsection{1. Attivit\`a di implementazione di processo}    %NUOVO
   \paragraph*{Procedura}
   Per produrre la documentazione si è stabilito di utilizzare il \glossaryItem{linguaggio di markup} \LaTeX. Tale scelta è stata effettuata per permettere un miglior versionamento dei file e una formattazione uniforme dei testi.
-  Per la realizzazione di ciascun documento \`e stato allestito un modello .tex reperibile presso il \glossaryItem{repository} dei documenti.
-
+  Per la realizzazione di ciascun documento \`e stato allestito un modello .tex reperibile presso il \glossaryItem{repository} dei documenti. Al fine di 
+  semplificare l'applicazione delle norme tipografiche sono stati definiti dei comandi \LaTeX, i quali si occupano della corretta formattazione del testo
+  secondo le norme definite.\\
+  Per la stesura dei manuali invece (per l'utente e l'amministratore) è stato deciso di utilizzare lo strumento \textbf{GitBook} (\url{https://www.gitbook.com/}), offerto 
+  da \textbf{FriendCode Inc}.
   \paragraph*{Linguaggio da utilizzare}
   Nel capitolato viene espresso l'obbligo di documentazione in lingua inglese. Il Responsabile di \glossaryItem{Progetto}, dopo aver contattato il \glossaryItem{Committente}, ha specificato che la richiesta di documentare in tale lingua è obbligatoria solo per i documenti rivolti all'utente finale. Si è deciso quindi che la documentazione interna (Norme di \glossaryItem{Progetto}) e la documentazione non riservata all'utente finale (Analisi dei Requisiti, Piano di Qualifica e Piano di \glossaryItem{Progetto}) venga stesa utilizzando la lingua italiana.  
+  
  %###################################################
 
 
@@ -159,7 +201,7 @@ I nomi dei file andranno in inglese, in minuscolo e seguendo la convenzione \tex
   \begin{itemize}
   \item AAAA rappresenta l'anno con quattro cifre;
   \item MM rappresenta il mese con due cifre;
-  \item GG rappresenta il gorno con due cifre.
+  \item GG rappresenta il giorno con due cifre.
   \end{itemize}
 \item Sigle previste nella documentazione:
   \begin{itemize}
@@ -222,18 +264,34 @@ Il \glossaryItem{processo} di \glossaryItem{verifica} deve raggiungere questi ob
 \end{itemize}
 
 \subsubsection{1. Attivit\`a di verifica}
-A seguito viene descritto il \glossaryItem{processo} di \glossaryItem{verifica} per la documentazione e per la codifica affinchè i Verificatori possano garantire che al termine del loro lavoro, la documentazione e il codice prodotto sia conforme alla struttura decisa dal \glossaryItem{Team} e che sia corretta rispetto alle regole decise dal Gruppo e dal punto di vista sintattico per il linguaggio deciso per il documento.
+A seguito viene descritto il \glossaryItem{processo} di \glossaryItem{verifica} per la documentazione e per la codifica affinchè i Verificatori possano garantire che al termine del loro lavoro, la documentazione e il codice prodotto sia conforme alla struttura decisa dal \glossaryItem{team} e che sia corretta rispetto alle regole decise dal Gruppo e dal punto di vista sintattico per il linguaggio deciso per il documento.
+
+\paragraph*{Issue tracking}
+L'\textit{issue tracking} è un'attività di supporto eseguita grazie alla funzionalità \textit{Issues} offerta da GitHub.
+Essa permette ai verificatori di tenere traccia di anomalie e potenziali errori, segnalandoli ai 
+redattori/programmatori del documento/codice verificato, oppure al \textit{Responsabile di Progetto}.
+
+\paragraph*{Modalità di analisi statica}
+L'analisi statica è applicabile sia al codice sia alla documentazione, secondo due modalità possibili:
+\begin{itemize}
+  \item \textit{Walkthrough}: questa tecnica va applicata nel momento in cui non si è a conoscenza degli errori
+			    e delle problematiche che si stanno cercando. La tecnica consiste nell'analizzare il 
+			    codice sorgente o il documento completamente per individuare varie anomalie;
+  \item \textit{Inspection}: tecnica applicabile quando si è a conoscenza della problematica cercata, consiste in una lettura
+		    	     mirata sulla base di una lista di errori presenti nel prodotto esaminato.
+\end{itemize}
+
 
 \paragraph*{Procedura di \glossaryItem{verifica} dei documenti}
 \begin{itemize}
 \item \textbf{Controllo sintattico e del periodo}: Un passaggio preliminare per la correzione di errori grammaticali viene garantito dal software \textit{GNU Aspell} in \glossaryItem{fase} di \glossaryItem{pre}-commit. Questo passaggio non risulta sufficiente a garantire la correttezza del documento perciò, in \glossaryItem{fase} di \glossaryItem{verifica}, il Verificatore incaricato deve sottoporre il documento in esame ad un walkthrough per evidenziare e correggere errori sintattici;
   \item \textbf{Rispetto delle Norme di \glossaryItem{Progetto}}: Ciascun Verificatore incaricato di esaminare la correttezza di un documento deve sottoporre il testo ad una \glossaryItem{verifica} delle convenzioni stilistiche e di forma scelte dal gruppo e reperibili nel documento Norme di \glossaryItem{Progetto} pi\`u aggiornato presente nel \glossaryItem{repository} dei documenti;
   \item \textbf{\glossaryItem{Verifica} dei vocaboli del Glossario}: Il Verificatore deve controllare la presenza effettiva dei termini marcati all'interno del Glossario e che questi presentino anche la loro descrizione;
-  \item \textbf{In caso di \glossaryItem{anomalie}}: Il Verificatore deve aprire una issue nel \glossaryItem{repository} dei documenti dando riferimenti al redatore su come procedere per apportare le modifiche necessarie al documento esaminato.
+  \item \textbf{In caso di \glossaryItem{anomalie}}: Il Verificatore deve aprire una issue nel \glossaryItem{repository} dei documenti dando riferimenti al redattore su come procedere per apportare le modifiche necessarie al documento esaminato.
 
 \paragraph*{Procedura di \glossaryItem{verifica} della Progettazione Architetturale}
-Il \textit{Verificatore} deve accertarsi che tutti i requisiti individuati nell'\AnalisiDeiRequisiti vengano soddisfatti
-nell'architettura proposta nel documento di \SpecificaTecnica.
+Il \textit{Verificatore} deve accertarsi che tutti i requisiti individuati nell'\textit{Analisi dei Requisiti} vengano soddisfatti
+nell'architettura proposta nel documento di \textit{SpecificaTecnica}.
 Nel caso in cui un requisito non sia soddisfatto, il \textit{Verificatore} deve comunicarlo ai \textit{Progettisti}, i quali
 si faranno carico della revisione mirata dell'architettura. 
 
@@ -283,5 +341,5 @@ Il \glossaryItem{processo} di \glossaryItem{validazione} deve produrre una confe
 
 \subsubsection{1. Attività di validazione}
 \paragraph*{Procedura di \glossaryItem{validazione}}
-I test verranno dapprima eseguiti dai verificatori, che ne tracceranno il risultato. Al termine dell'esecuzione dei test, il responsabile analizzerà i risultati e deciderà se accetarli, chiedere una ripetizione di alcuni test oppure di tutti, eventualmente con verificatori diversi. \\
+I test verranno dapprima eseguiti dai verificatori, che ne tracceranno il risultato. Al termine dell'esecuzione dei test, il responsabile analizzerà i risultati e deciderà se accettarli, chiedere una ripetizione di alcuni test oppure di tutti, eventualmente con verificatori diversi. \\
 Una volta accettati, i risultati verranno consegnati al proponente dal responsabile, che lo informerà sulle modalità di esecuzione indipendente della \glossaryItem{validazione}.
