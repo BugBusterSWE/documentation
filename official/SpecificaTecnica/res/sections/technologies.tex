@@ -21,8 +21,6 @@ L'utilizzo di \glossaryItem{Node.js} \`e stato richiesto dal proponente. Si trat
 \item \textbf{Architettura modulare}: \`e molto facile organizzare il lavoro in librerie, importare e combinare i \glossaryItem{moduli}.
 \item \textbf{Vasto supporto dalla comunity}: Tramite il gestore di pacchetti npm è possibile accedere a una vasta gamma di moduli già sviluppati ed ottimizzati. 
 \end{itemize}
-\subsubsection{Svantaggi}
-\item \textbf{Non supporta appieno ES6}: Node in versione LTS 4.4 non supporta tutte le specifiche di ECMAScript6
 
 \subsection{ExpressJS}
 È un \glossaryItem{framework} minimale per creare applicazioni web con \glossaryItem{Node.js}. Fornisce una struttura base per un server web a cui successivamente possono essere aggiunti dei \glossaryItem{moduli} di terze parti per arricchirne le funzionalità. ExpressJS non oscura le funzionalità di base fornite da \glossaryItem{Node.js}: questo permette di utilizzare \glossaryItem{moduli} specifici a seconda dei bisogni dell'applicazione.
@@ -54,7 +52,8 @@ Una componente React dovrebbe idealmente occuparsi di un solo compito, seguendo 
 \subsubsection{Vantaggi}
 \begin{itemize}
 \item \textbf{Semplice}: basta esprimere come l'applicazione dovrebbe apparire in ciascun momento e React automaticamente gestir\`a tutti gli aggiornamenti dell'interfaccia utente.
-\item \textbf{Dichiarativo}: quando i dati cambiano, \glossaryItem{Reactjs} effettua un refresh concettuale della pagina e aggiorna solo i dati che sono cambiati.
+\item \textbf{Dichiarativo}: quando i dati cambiano, \glossaryItem{Reactjs} effettua un refresh concettuale della pagina e aggiorna solo i dati che sono cambiati
+\item \textbf{Rapido nella renderizzazione delle pagine}: A parità di contenuto React risulta più rapido nel fornire le pagine all'utente rispetto a framework come AngularJS.
 \item \textbf{Facilit\`a di debugging}: attraverso una specifica estensione di \glossaryItem{Google Chrome} (React Developer \glossaryItem{Tools}).
 \end{itemize}
 \subsubsection{Svantaggi}
@@ -107,6 +106,7 @@ Mongoose \`e una libreria per interfacciarsi a \glossaryItem{MongoDB} che permet
 \item \textbf{Diffusione}: \`e la libreria pi\`u diffusa per interfacciarsi con \glossaryItem{MongoDB}.
 \item \textbf{Funzionalit\`a aggiuntive}: permette di definire strumenti per la \glossaryItem{validazione} dei dati e per il cast dei tipi.
 \item \textbf{Permette di eseguire dei join tra collections}: Sibbene non sia previsto da MongoDB, mongoose prevede la funzione populate per imitare la funzione di join in modo completamente trasparente per l'utilizzatore.
+\item \textbf{Rapido ed intuitivo}: La strutturazione dei dati con questa libreria è rapida ed inutitiva, ciò dovuto anche dalla sintassi dichiarativa della libreria stessa.
 \end{itemize}
 \subsubsection{Svantaggi}
 \begin{itemize}
@@ -158,5 +158,5 @@ Aggiunge a \glossaryItem{JavaScript} tipi statici (opzionale) e meccanismi propr
 \subsubsection{Svantaggi}
 \begin{itemize}
 \item \textbf{Supporto}, molti \glossaryItem{framework} supportano file \glossaryItem{JavaScript}, ma ancora non file TypeScript.
-
+\item \textbf{Più prolisso rispetto a Javscript}: La maggiore rigidità di Typescript si rispecchia in maggiore prolissità del linguaggio.
 \end{itemize}
