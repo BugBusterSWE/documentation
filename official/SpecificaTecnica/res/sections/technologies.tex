@@ -21,6 +21,10 @@ L'utilizzo di \glossaryItem{Node.js} \`e stato richiesto dal proponente. Si trat
 \item \textbf{Architettura modulare}: \`e molto facile organizzare il lavoro in librerie, importare e combinare i \glossaryItem{moduli}.
 \item \textbf{Vasto supporto dalla comunity}: Tramite il gestore di pacchetti npm è possibile accedere a una vasta gamma di moduli già sviluppati ed ottimizzati. 
 \end{itemize}
+\subsubsection{Svantaggi}
+\begin{itemize}
+\item \textbf{Supporto incompleto alle feature di ES6}: Molte delle feature di ES6 non sono supportate in Node nella versione 4.4 scelta come versione di riferimento per lo sviluppo del progetto.
+\end{itemize}
 
 \subsection{ExpressJS}
 È un \glossaryItem{framework} minimale per creare applicazioni web con \glossaryItem{Node.js}. Fornisce una struttura base per un server web a cui successivamente possono essere aggiunti dei \glossaryItem{moduli} di terze parti per arricchirne le funzionalità. ExpressJS non oscura le funzionalità di base fornite da \glossaryItem{Node.js}: questo permette di utilizzare \glossaryItem{moduli} specifici a seconda dei bisogni dell'applicazione.
@@ -93,7 +97,7 @@ L'utilizzo di \glossaryItem{MongoDB} \`e stato richiesto dal proponente. Si trat
 \end{itemize}
 \subsubsection{Svantaggi}
 \begin{itemize}
-\item \textbf{Flessibilità}: per i tipi di dato. Sebbene questo possa essere visto come vantaggio, è opinione del \glossaryItem{team} che un'eccessiva flessibilità possa portare più problemi che benefici: allo scopo di aggiungere rigidità è stato infatti scelto, come verrà descritto in seguito, di utilizzare TypeScript e non \glossaryItem{JavaScript}.
+\item \textbf{Flessibilità}: per i tipi di dato. Sebbene questo possa essere visto come vantaggio, è opinione del \glossaryItem{team} che un'eccessiva flessibilità possa portare più problemi che benefici: allo scopo di aggiungere rigidità è stato infatti scelto, come verrà descritto in seguito, Mongoose, che introduce una costruzione a schemi per le collections di \glossaryItem{MongoDB} e quindi vincola i documenti inseriti ad avere una struttura uniforme.
 \item \textbf{Nessun supporto per le transazioni}: sono supportate alcune operazioni atomiche, ma a livello di documento.
 \item \textbf{Nessun \glossaryItem{join}}: va simulato via codice attraverso query multiple.
 \item \textbf{Problemi di concorrenza}: per le operazioni di scrittura viene creato un lock sull'intero database. Questo lock blocca anche le operazioni di lettura.
