@@ -1,0 +1,40 @@
+<html>
+<head>
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      //google.charts.load('current', {'packages':['bar']});
+      google.charts.load("visualization", '1', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Ruoli', 'Preventivo', 'Effettive'],
+          ['Amministratore', 2300, 1940],
+          ['Analista', 1500, 1575],
+          ['Progettista', 6248, 5666],
+          ['Programmatore', 2190, 3030],
+          ['Responsabile', 1350, 1260],
+          ['Verificatore', 3675, 3690],
+        ]);
+
+        var options = {
+			width: 800,
+			height: 400
+        };
+
+        var chart_div = document.getElementById('chart_div');
+		var chart = new google.charts.Bar(chart_div);
+
+      // Wait for the chart to finish drawing before calling the getImageURI() method.
+      google.visualization.events.addListener(chart, 'ready', function () {
+        chart_div.innerHTML = '<img src="' + chart.getImageURI() + '">';
+        console.log(chart_div.innerHTML);
+      });
+
+      chart.draw(data, options);
+
+  }
+  </script>
+
+<div id='chart_div'></div>
