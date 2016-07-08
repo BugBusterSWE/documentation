@@ -1,0 +1,75 @@
+\input{../../common/style/global.tex}
+\input{../../common/style/layout.tex}
+\input{res/local}
+
+\title{\textbf{Norme di Progetto}}
+\author{BugBuster}
+
+\date{17 giugno 2016}
+
+\begin{document}
+
+\makeFrontPage
+
+\paragraph*{Data}: 2016/05/24
+
+\paragraph*{Membri del gruppo}
+\begin{itemize}
+
+\item D. Polonio
+\item D. Rigoni
+\item M. Di Pirro
+\item G. Mazzocchin
+\item L. Bianco
+\item A. Mantovani
+\item E. Carraro
+\end{itemize}
+
+\paragraph*{Membri presenti}
+\begin{itemize}
+
+\item D. Polonio
+\item E. Carraro
+\end{itemize}
+
+\paragraph*{Membri assenti}
+\begin{itemize}
+
+\item D. Rigoni
+\item M. Di Pirro
+\item G. Mazzocchin
+\item L. Bianco
+\item A. Mantovani
+\end{itemize}
+
+\section{Ordine del giorno}
+
+\begin{enumerate}
+
+\item Decidere il formato migliore per il manuale sviluppatore
+\item Spiegazione del Workflow per Heroku
+\end{enumerate}
+
+\section{Orari}
+
+\begin{itemize}
+\item[Inizio]: ore 10:38
+\item[Fine]: ore 11:00
+\item[Tempo]: Previsto di 20 min, effettivo di 15 min
+
+\end{itemize}
+
+\section{Verbale}
+
+\subsubsection{Decidere il formato migliore per il manuale sviluppatore}
+Viene deciso dai presenti che per rendere più facile la consultazione del documento verrà creata una pagina di presentazione. Bisognerà quindi creare uno script per poter generare automaticamente ogni volta che viene invocato il comando ``npm run doc'' generi anche codesta pagina.
+
+\subsubsection{Spiegazione del Workflow per Heroku}
+L'amministratore spiega il workflow per Heroku. Vengono descritte le funzionalità di Heroku, e viene spiegato il sistema di automatizzazione implementato: è presente una pipeline, e a ogni pull request viene creata una istanza temporanea di Heroku (di durata massima di cinque giorni) che permette a un verificatore, oltre ai test, di vedere i risultati di un lavoro svolto da un membro del gruppo.
+Una particolare istanza di Heroku viene aggiornata a ogni modifica nel branch master del repository se e solo se i controlli di Travis CI passano, mentre a ogni nuova release di MaaS viene aggiornata una istanza diversa di Heroku posta in ``produzione''.
+Con questo workflow viene evidenziato come non sia necessario l'intervento dei membri del gruppo, a meno di interventi di manutenzione o di modifica del workflow stesso.
+
+\paragraph*{Prossimo incontro}: 2016/06/06
+
+
+\end{document}
