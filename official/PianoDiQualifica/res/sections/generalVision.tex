@@ -233,16 +233,20 @@ Rappresenta il livello di copertura che i test eseguiti forniscono rispetto alle
 	\item Range ottimale: [80 - 100]
 \end{itemize}
 
+\subsection{Organizzazione}
+Viene verificata la qualità di ogni processo e di ogni output da esso prodotto. Ogni periodo descritto nel \PianoDiProgetto{} produce output di diverso tipo, per questo è necessario programmare le attività di verifica in modo mirato:
 
+\begin{itemize}
+	\item \textbf{Analisi}: in questo periodo si controlla che i processi e la documentazione prodotta rispettino le \NormeDiProgetto{} e si verifica che ogni requisito abbia corrispondenza in un caso d’uso.
+	\item \textbf{Progettazione architetturale}: in questo periodo si verificano i processi incrementali relativi all'analisi e ai nuovi documenti di progettazione, e che i test siano adeguatamente progettati. La decisione del gruppo di sostenere la RPmin comporta che i vengano progettati tutti i test fino a quelli di integrazione.
+	\item \textbf{Progettazione di dettaglio e codifica}: in questo periodo vanno verificati i processi incrementali relativi alla progettazione assieme alla verifica delle attività di codifica grazie a tecniche di analisi statica e dinamica. Vengono inoltre progettati i test di unità che verranno eseguiti sulle componenti atomiche del prodotto.
+	\item \textbf{Validazione}: in questo periodo si eseguono tutti i test progettati e programmati, al fine di garantire la qualità attesa per il prodotto. Lo scopo è quello di arrivare al collaudo nei tempi pianificati. Inoltre viene ultimata la stesura del codice e dei manuali associati a MaaS.
+\end{itemize}
 
-
-
-
-
-
+Il \textit{Diario delle modifiche} viene incluso in ogni documento al fine di tracciarne uno storico dell'evoluzione.
 
 \subsection{Strategia}
-Nel \PianoDiProgetto vengono fissate delle scadenze che devono necessariamente essere rispettate: è dunque necessario definire un'efficace strategia di qualifica. I controlli saranno effettuati in maniera automatica secondo quanto previsto nelle \NormeDiProgetto. 
+Nel \PianoDiProgetto{} vengono fissate delle scadenze che devono necessariamente essere rispettate: è dunque necessario definire un'efficace strategia di qualifica. I controlli saranno effettuati in maniera automatica secondo quanto previsto nelle \NormeDiProgetto. 
 
 \subsection{Responsabilità}
 La responsabilità della \glossaryItem{verifica} viene affidata al \textit{Responsabile} e ai \textit{Verificatori} secondo quanto previsto nel \PianoDiProgetto.
@@ -250,6 +254,42 @@ La responsabilità della \glossaryItem{verifica} viene affidata al \textit{Respo
 \subsection{Risorse}
 Vengono consumati due tipi di risorse:
 \begin{itemize}
-	\item \textbf{umane}: in particolare il \textit{Responsabile} e il \textit{Verificatore}; le ore impiegate vengono contabilizzate e messe a calendario secondo quanto previsto dal \PianoDiProgetto e dalle \href{http://www.math.unipd.it/~tullio/IS-1/2015/Dispense/PD01.pdf}{regole} del \glossaryItem{progetto} didattico. Ai fini della qualifica, tuttavia, si può tralasciare l'aspetto economico, in quanto esso non rientra nel dominio del presente documento;
+	\item \textbf{umane}: in particolare il \textit{Responsabile} e il \textit{Verificatore}; le ore impiegate vengono contabilizzate e messe a calendario secondo quanto previsto dal \PianoDiProgetto{} e dalle \href{http://www.math.unipd.it/~tullio/IS-1/2015/Dispense/PD01.pdf}{regole} del \glossaryItem{progetto} didattico. Ai fini della qualifica, tuttavia, si può tralasciare l'aspetto economico, in quanto esso non rientra nel dominio del presente documento;
 		\item \textbf{tecnologiche}: i \glossaryItem{tool} utilizzati per il controllo della \glossaryItem{qualità}. Le operazioni effettuate  consumeranno unità di calcolo considerate a costo nullo, in quanto le elaborazioni verranno effettuate su macchine per le quali non è richiesto nessun contributo e per un tempo non degno di nota.
 \end{itemize}
+
+\subsection{Tecniche di analisi}
+\subsubsection{Analisi statica}
+L'analisi statica è una tecnica di analisi applicabile sia alla documentazione che al codice. Permette di effettuare la verifica di quanto prodotto individuando errori ed anomalie. \\
+L'analisi statica può essere svolta in due modi distinti e complementari, svolti in modalità e obiettivi distinti.
+\paragraph{Walkthrough} \mbox{} \\
+Il walkthrough si svolge effettuando una lettura critica e a largo spettro del documento. È una tecnica utilizzata soprattutto nelle prime attività del progetto, quando ancora non è presente un'esperienza tale da permettere una verifica più mirata e precisa. Il \textit{verificatore} è in grado, infatti, di stilare una lista di controllo con gli errori più frequenti in modo da favorire il miglioramento della verifica nei periodo successivi. \\
+Il walkthrough è molto oneroso; è un'attività collaborativa che richiede l'intervento di più persone per essere efficace. Dopo una prima fase di lettura e di individuazione degli errori segue una fse di discussione con la finalità di esaminare i difetti riscontrati e di proporre le dovute correzioni. Infine si correggono gli errori rilevati e si scrive un rapporto che elenchi le modifiche effettuate. 
+
+\paragraph{Inspection} \mbox{} \\
+L'inspection consiste nell'analisi mirata di alcune parti del documenti o del codice ritenute fonti maggiori di errore. Deve essere seguita una lista di controllo per svolgere efficacemente questa attività; tale lista deve essereredatta anticipatamente ed è sostanzialmente frutto dell'esperienza maturata dai membri del team con tecniche di walkthrough. L'inspection è dunque più rapida del walkthrough, in quanto il documento viene analizzato solo in alcune sue parti e con una lista di controllo ben precisa. In questa attività sono coivolte solo i \textit{verificatori} che, dopo aver individuato gli errori, procedono alla loro correzione e alla redazione di un rapporto che tenga traccia del lavoro svolto.
+
+\subsubsection{Analisi dinamica}
+L'analisi dinamica si applica solamente al prodotto \textit{software} e viene svolta durante l'esecuzione del codice mediante l'uso di test progettati per rilevare la presenza di difetti nel \textit{software}. L'obiettivo del test del \textit{software} è, infatti, quello di realizzare un prodotto il più possibile esente da errori. Il principale ostacolo alla fase di test è sintetizzato nella tesi di Dijkstra, che afferma che il test può indicare la presenza di errori, ma non ne può garantire l'assenza. \\
+Affinché tale attività sia utile e generi risultati attendibili è necessario che i test effettuati siano ripetibili: dato un certo input deve essere prodotto sempre uno stesso output in uno specifico ambiente. Di conseguenza, i tre elementi fondamentali di un test sono:
+\begin{itemize}
+\item \textbf{Ambiente}: sistema hardware e software sui quali è stato pianificato l'utilizzo del prodotto software sviluppato. Su di essi deve essere specificato uno stato iniziale dal quale poter eseguire il test;
+\item \textbf{Specifica}: definizione di input e output;
+\item \textbf{Procedure}: definizione di come devono essere svolti i test, in che ordine devono essere eseguiti e come devono essere analizzati i risultati.
+\end{itemize}
+
+\paragraph{Test di unità} \mbox{} \\
+Consiste nel verificare una singola unità del prodotto software tramite l'utilizzo di stub, driver e logger. Pe unità si intende la più piccola quantità di software che è utile verificare singolarmente e che viene prodotta da un singolo programmatore. Attraverso tali test si vuole verificare il corretto funzionamento dei moduli che compongono l'intero sistema in modo da esaminare possibili errori di implementazione da parte dei programmatori.
+
+\paragraph{Test di integrazione} \mbox{} \\
+Consiste nella verifica dei componenti del sistema che vengono aggiunti incrementalmente al prodotto e si prefigge di analizzare che la combinazione di due o più unità software funzioni come previsto. \\ 
+Questo tipo di test ha lo scopo di individuare errori residui nella relizzazione dei singoli moduli, modifiche delle interfacce e comportamenti inaspettati di componenti software preesistenti forniti da terze parti che non si conoscono a fondo. Anche in questo caso sono necessarie componenti fittizie per sostituire le componenti non ancora sviluppate, in modo da non influenzare negativamente l'esito dell'analisi.
+
+\paragraph{Test di sistema} \mbox{} \\
+Consiste nella validazione del prodotto software nel momento in cui lo si ritiene completato. Deve verificare che la copertura dei requisiti software sia totale.
+
+\paragraph{Test di regressione} \mbox{} \\
+Consiste nell'eseguire un sottoinsieme dei test progettati per essere sicuri che le modifiche apportate non abbiano introdotto dei difetti nella parte modificata o in quelle che ne fanno uso. Tale operazione è facilitata dal tracciamento e dalla ripetibilità dei test.
+
+\paragraph{Test di accetazione} \mbox{} \\
+È il collaudo vero e proprio del prosotto software, e viene eseguito in presenza del proponente. Se l'esito è positivo si può procedere al rilascio ufficiale del prodotto.

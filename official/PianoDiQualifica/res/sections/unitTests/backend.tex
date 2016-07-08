@@ -3,56 +3,56 @@ TU-2 & Verificare che i parametri impostati nel file di configurazione vengano l
 TU-3 & Verificare che la connessione al database \glossaryItem{MongoDB} dell'applicazione venga aperta correttamente. & S \tabularnewline \hline
 TU-4 & Verificare che la connessione al database \glossaryItem{MongoDB} dell'applicazione venga chiusa correttamente. & S \tabularnewline \hline
 TU-5 & Verificare che ci sia una sola istanza attiva della connessione al database \glossaryItem{MongoDB} dell'applicazione. & S \tabularnewline \hline
-TU-6 & Verificare che un utente venga correttamente inserito da un \glossaryItem{Owner} nel database \glossaryItem{MongoDB} dell'applicazione. & N.E. \tabularnewline \hline
-TU-7 & Verificare che la ricerca di un utente funzioni correttamente. & N.E. \tabularnewline \hline
-TU-8 & Verificare che una \glossaryItem{Company} venga correttamente inserita nel database \glossaryItem{MongoDB} dell'applicazione. & N.E. \tabularnewline \hline
-TU-9 & Verificare che un utente venga correttamente inserito, ma senza conferma dell'email, nel database MongoDb dell'applicazione. & N.E. \tabularnewline \hline
-TU-10 & Verificare che l'aggiornamento delle credenziali utente funzioni correttamente. & N.E. \tabularnewline \hline
-TU-11 & Verificare che un \glossaryItem{Owner} possa eliminare un utente dal database \glossaryItem{MongoDB} dell'applicazione. & N.E. \tabularnewline \hline
-TU-12 & Verificare che i dati di una \glossaryItem{Company} vengano correttamente recuperati dal database \glossaryItem{MongoDB} dell'applicazione. & N.E. \tabularnewline \hline
-TU-13 & Verificare che un Admin possa aggiornare correttamente i dati di una \glossaryItem{Company}. & N.E. \tabularnewline \hline
-TU-14 & Verificare che un \glossaryItem{Owner} possa elimiare una \glossaryItem{Company} dal database \glossaryItem{MongoDB} dell'applicazione, e con lei tutti gli utenti facenti parte di quella \glossaryItem{Company}. & N.E. \tabularnewline \hline
-TU-15 & Verificare che un utente possa vedere tutte le specifiche \glossaryItem{DSL} cui ha accesso. & N.E. \tabularnewline \hline
-TU-16 & Verificare che un Member possa leggere il codice di una specifica \glossaryItem{DSL} cui ha accesso. & N.E. \tabularnewline \hline
-TU-17 & Verificare che un Member possa aggiungere una specifica \glossaryItem{DSL} nel database \glossaryItem{MongoDB} dell'applicazione. & N.E. \tabularnewline \hline
-TU-18 & Verificare che un Member possa modificare il codice di una specifica \glossaryItem{DSL} cui ha accesso. & N.E. \tabularnewline \hline
-TU-19 & Verificare che un Member possa cancellare una specifica \glossaryItem{DSL} da lui creata. & N.E. \tabularnewline \hline
-TU-20 & Verificare che un utente possa ottenere una \glossaryItem{dashboard} personalizzata da lui definita. & N.E. \tabularnewline \hline
-TU-21 & Verificare che un utente possa eseguire una specifica \glossaryItem{DSL} cui ha accesso e visualizzarne i risultati. & N.E. \tabularnewline \hline
-TU-22 & Verificare che un Member possa vedere l'elenco dei database delle \glossaryItem{Company} utilizzabili in una specifica \glossaryItem{DSL}. & N.E. \tabularnewline \hline
-TU-23 & Verificare che un Admin possa vedere le informazioni di un database della propria \glossaryItem{Company}. & N.E. \tabularnewline \hline
-TU-24 & Verificare che un Admin possa aggiungere un database alla propria \glossaryItem{Company}. & N.E. \tabularnewline \hline
-TU-25 & Verificare che un Admin possa aggiornare le informazioni di un database della propria \glossaryItem{Company}. & N.E. \tabularnewline \hline
-TU-26 & Verificare che un Admin possa elimiare un database della propria \glossaryItem{Company}. & N.E. \tabularnewline \hline
-TU-27 & Verificare che un Member possa vedere i nomi delle Collections da lui accessibili di un database della \glossaryItem{Company}. & N.E. \tabularnewline \hline
-TU-28 & Verificare che un Super Admin possa ottenere le informazioni sulle \glossaryItem{Company} registrate a \glossaryItem{MaaS}. & N.E. \tabularnewline \hline
-TU-29 & Verificare che un Super Admin possa aggiungere un altro Super Admin. & N.E. \tabularnewline \hline
-TU-30 & Verificare che un Super Admin possa aggiungere un utente ad una \glossaryItem{Company} di \glossaryItem{MaaS}. & N.E. \tabularnewline \hline
-TU-31 & Verificare che il controllo di avvenuta autenticazione funzioni correttamente. & N.E. \tabularnewline \hline
-TU-32 & Verificare che il controllo del livello di un utente funzioni correttamente. & N.E. \tabularnewline \hline
-TU-33 & Verificare che il controllo di validità sul codice di una specifica \glossaryItem{DSL} funzioni correttamente. & N.E. \tabularnewline \hline
-TU-34 & Verificare che l'endpoint POST /api/login corrisponda all'operazione di login. & N.E. \tabularnewline \hline
-TU-35 & Verificare che l'endpoint POST /api/register/:unique\_code corrisponda all'operazione di registrazione di un utente. & N.E. \tabularnewline \hline
-TU-36 & Verificare che l'endpoint POST /api/companies corrisponda all'operazione di inserimento di una \glossaryItem{Company}. & N.E. \tabularnewline \hline
-TU-37 & Verificare che l'endpoint POST /api/companies/:company\_id/users corrisponda all'operazione di inserimento di un utente. & N.E. \tabularnewline \hline
-TU-38 & Verificare che l'endpoint PUT /api/companies/:company\_id/users/:user\_id/credentials corrisponda all'operazione di aggiornamento delle credenziali di accesso. & N.E. \tabularnewline \hline
-TU-39 & Verificare che l'endpoint DELETE /api/companies/:company\_id/users/:user\_id corrisponda all'operazione di cancellazione di un utente. & N.E. \tabularnewline \hline
-TU-40 & Verificare che l'endpoint GET /api/companies/:company\_id/ corrisponda all'operazione di ottenimento dei dati di una \glossaryItem{Company}. & N.E. \tabularnewline \hline
-TU-41 & Verificare che l'endpoint PUT /api/companies/:company\_id/ corrisponda all'operazione di aggiornamento dei dati di una \glossaryItem{Company}. & N.E. \tabularnewline \hline
-TU-42 & Verificare che l'endpoint DELETE /api/companies/:company\_id/ corrisponda all'operazione di cancellazione di una \glossaryItem{Company}. & N.E. \tabularnewline \hline
-TU-43 & Verificare che l'endpoint GET /api/companies/:company\_id/DSLs corrisponda all'operazione di ottenimento delle specifiche \glossaryItem{DSL} accedibili dall'utente autenticato. & N.E. \tabularnewline \hline
-TU-44 & Verificare che l'endpoint GET /api/companies/:company\_id/DSLs/:dsl\_id corrisponda all'operazione di lettura del codice di una specifica \glossaryItem{DSL}. & N.E. \tabularnewline \hline
-TU-45 & Verificare che l'endpoint POST /api/companies/:company\_id/DSLs corrisponda all'operazione di aggiunta di una specifica \glossaryItem{DSL}. & N.E. \tabularnewline \hline
-TU-46 & Verificare che l'endpoint PUT /api/companies/:company\_id/DSLs/:dsl\_id corrisponda all'operazione di aggiornamento del codice di una specifica \glossaryItem{DSL}. & N.E. \tabularnewline \hline
-TU-47 & Verificare che l'endpoint DELETE /api/companies/:company\_id/DSLs/:dsl\_id corrisponda all'operazione di cancellazione di una specifica \glossaryItem{DSL}. & N.E. \tabularnewline \hline
-TU-48 & Verificare che l'endpoint GET /api/companies/:company\_id/users/:user\_id/dashboard corrisponda all'operazione di ottenimento della \glossaryItem{dashboard} di un utente. & N.E. \tabularnewline \hline
-TU-49 & Verificare che l'endpoint GET /api/companies/:company\_id/DSLs/:dsl\_id/execute corrisponda all'operazione di esecuzione di una specifica \glossaryItem{DSL}. & N.E. \tabularnewline \hline
-TU-50 & Verificare che l'endpoint GET /api/companies/:company\_id/databases corrisponda all'operazione di ottenimento dei database di una \glossaryItem{Company}. & N.E. \tabularnewline \hline
-TU-51 & Verificare che l'endpoint GET /api/companies/:company\_id/databases/:database\_id corrisponda all'operazione di ottenimento delle informazioni di un database di una \glossaryItem{Company}. & N.E. \tabularnewline \hline
-TU-52 & Verificare che l'endpoint POST /api/companies/:company\_id/databases corrisponda all'operazione di aggiunta di un database ad una \glossaryItem{Company}. & N.E. \tabularnewline \hline
-TU-53 & Verificare che l'endpoint PUT /api/companies/:company\_id/databases/:database\_id corrisponda all'operazione di aggiornamento delle informazioni di una \glossaryItem{company}. & N.E. \tabularnewline \hline
-TU-54 & Verificare che l'endpoint DELETE /api/companies/:company\_id/databases/:database\_id corrisponda all'operazione di cancellazione di un database di una \glossaryItem{Company}. & N.E. \tabularnewline \hline
-TU-55 & Verificare che l'endpoint GET /api/companies/:company\_id/databases/:database\_id/collections corrisponda all'operazione di ottenimento delle collections di un database di una \glossaryItem{Company}. & N.E. \tabularnewline \hline
-TU-56 & Verificare che l'endpoint GET /api/admin/companies corrisponda all'operazione di ottenimento di tutte le \glossaryItem{Company} registrate a  \glossaryItem{MaaS}. & N.E. \tabularnewline \hline
-TU-57 & Verificare che l'endpoint POST /api/admin/superadmins corrisponda all'operazione di aggiunta di un nuovo Super Admin. & N.E. \tabularnewline \hline
-TU-58 & Verificare che l'endpoint POST /api/admin/companies/:company\_id/users corrisponda all'operazione di aggiunta di un nuovo utente. & N.E. \tabularnewline \hline
+TU-6 & Verificare che un utente venga correttamente inserito da un \glossaryItem{Owner} nel database \glossaryItem{MongoDB} dell'applicazione. & S \tabularnewline \hline
+TU-7 & Verificare che la ricerca di un utente funzioni correttamente. & S \tabularnewline \hline
+TU-8 & Verificare che una \glossaryItem{Company} venga correttamente inserita nel database \glossaryItem{MongoDB} dell'applicazione. & S \tabularnewline \hline
+TU-9 & Verificare che un utente venga correttamente inserito, ma senza conferma dell'email, nel database MongoDb dell'applicazione. & S \tabularnewline \hline
+TU-10 & Verificare che l'aggiornamento delle credenziali utente funzioni correttamente. & S \tabularnewline \hline
+TU-11 & Verificare che un \glossaryItem{Owner} possa eliminare un utente dal database \glossaryItem{MongoDB} dell'applicazione. & S \tabularnewline \hline
+TU-12 & Verificare che i dati di una \glossaryItem{Company} vengano correttamente recuperati dal database \glossaryItem{MongoDB} dell'applicazione. & S \tabularnewline \hline
+TU-13 & Verificare che un Admin possa aggiornare correttamente i dati di una \glossaryItem{Company}. & S \tabularnewline \hline
+TU-14 & Verificare che un \glossaryItem{Owner} possa elimiare una \glossaryItem{Company} dal database \glossaryItem{MongoDB} dell'applicazione, e con lei tutti gli utenti facenti parte di quella \glossaryItem{Company}. & S \tabularnewline \hline
+TU-15 & Verificare che un utente possa vedere tutte le specifiche \glossaryItem{DSL} cui ha accesso. & S \tabularnewline \hline
+TU-16 & Verificare che un Member possa leggere il codice di una specifica \glossaryItem{DSL} cui ha accesso. & S \tabularnewline \hline
+TU-17 & Verificare che un Member possa aggiungere una specifica \glossaryItem{DSL} nel database \glossaryItem{MongoDB} dell'applicazione. & S \tabularnewline \hline
+TU-18 & Verificare che un Member possa modificare il codice di una specifica \glossaryItem{DSL} cui ha accesso. & S \tabularnewline \hline
+TU-19 & Verificare che un Member possa cancellare una specifica \glossaryItem{DSL} da lui creata. & S \tabularnewline \hline
+TU-20 & Verificare che un utente possa ottenere una \glossaryItem{dashboard} personalizzata da lui definita. & S \tabularnewline \hline
+TU-21 & Verificare che un utente possa eseguire una specifica \glossaryItem{DSL} cui ha accesso e visualizzarne i risultati. & S \tabularnewline \hline
+TU-22 & Verificare che un Member possa vedere l'elenco dei database delle \glossaryItem{Company} utilizzabili in una specifica \glossaryItem{DSL}. & S \tabularnewline \hline
+TU-23 & Verificare che un Admin possa vedere le informazioni di un database della propria \glossaryItem{Company}. & S \tabularnewline \hline
+TU-24 & Verificare che un Admin possa aggiungere un database alla propria \glossaryItem{Company}. & S \tabularnewline \hline
+TU-25 & Verificare che un Admin possa aggiornare le informazioni di un database della propria \glossaryItem{Company}. & S \tabularnewline \hline
+TU-26 & Verificare che un Admin possa elimiare un database della propria \glossaryItem{Company}. & S \tabularnewline \hline
+TU-27 & Verificare che un Member possa vedere i nomi delle Collections da lui accessibili di un database della \glossaryItem{Company}. & S \tabularnewline \hline
+TU-28 & Verificare che un Super Admin possa ottenere le informazioni sulle \glossaryItem{Company} registrate a \glossaryItem{MaaS}. & S \tabularnewline \hline
+TU-29 & Verificare che un Super Admin possa aggiungere un altro Super Admin. & S \tabularnewline \hline
+TU-30 & Verificare che un Super Admin possa aggiungere un utente ad una \glossaryItem{Company} di \glossaryItem{MaaS}. & S \tabularnewline \hline
+TU-31 & Verificare che il controllo di avvenuta autenticazione funzioni correttamente. & S \tabularnewline \hline
+TU-32 & Verificare che il controllo del livello di un utente funzioni correttamente. & S \tabularnewline \hline
+TU-33 & Verificare che il controllo di validità sul codice di una specifica \glossaryItem{DSL} funzioni correttamente. & S \tabularnewline \hline
+TU-34 & Verificare che l'endpoint POST /api/login corrisponda all'operazione di login. & S \tabularnewline \hline
+TU-35 & Verificare che l'endpoint POST /api/register/:unique\_code corrisponda all'operazione di registrazione di un utente. & S \tabularnewline \hline
+TU-36 & Verificare che l'endpoint POST /api/companies corrisponda all'operazione di inserimento di una \glossaryItem{Company}. & S \tabularnewline \hline
+TU-37 & Verificare che l'endpoint POST /api/companies/:company\_id/users corrisponda all'operazione di inserimento di un utente. & S \tabularnewline \hline
+TU-38 & Verificare che l'endpoint PUT /api/companies/:company\_id/users/:user\_id/credentials corrisponda all'operazione di aggiornamento delle credenziali di accesso. & S \tabularnewline \hline
+TU-39 & Verificare che l'endpoint DELETE /api/companies/:company\_id/users/:user\_id corrisponda all'operazione di cancellazione di un utente. & S \tabularnewline \hline
+TU-40 & Verificare che l'endpoint GET /api/companies/:company\_id/ corrisponda all'operazione di ottenimento dei dati di una \glossaryItem{Company}. & S \tabularnewline \hline
+TU-41 & Verificare che l'endpoint PUT /api/companies/:company\_id/ corrisponda all'operazione di aggiornamento dei dati di una \glossaryItem{Company}. & S \tabularnewline \hline
+TU-42 & Verificare che l'endpoint DELETE /api/companies/:company\_id/ corrisponda all'operazione di cancellazione di una \glossaryItem{Company}. & S \tabularnewline \hline
+TU-43 & Verificare che l'endpoint GET /api/companies/:company\_id/DSLs corrisponda all'operazione di ottenimento delle specifiche \glossaryItem{DSL} accedibili dall'utente autenticato. & S \tabularnewline \hline
+TU-44 & Verificare che l'endpoint GET /api/companies/:company\_id/DSLs/:dsl\_id corrisponda all'operazione di lettura del codice di una specifica \glossaryItem{DSL}. & S \tabularnewline \hline
+TU-45 & Verificare che l'endpoint POST /api/companies/:company\_id/DSLs corrisponda all'operazione di aggiunta di una specifica \glossaryItem{DSL}. & S \tabularnewline \hline
+TU-46 & Verificare che l'endpoint PUT /api/companies/:company\_id/DSLs/:dsl\_id corrisponda all'operazione di aggiornamento del codice di una specifica \glossaryItem{DSL}. & S \tabularnewline \hline
+TU-47 & Verificare che l'endpoint DELETE /api/companies/:company\_id/DSLs/:dsl\_id corrisponda all'operazione di cancellazione di una specifica \glossaryItem{DSL}. & S \tabularnewline \hline
+TU-48 & Verificare che l'endpoint GET /api/companies/:company\_id/users/:user\_id/dashboard corrisponda all'operazione di ottenimento della \glossaryItem{dashboard} di un utente. & S \tabularnewline \hline
+TU-49 & Verificare che l'endpoint GET /api/companies/:company\_id/DSLs/:dsl\_id/execute corrisponda all'operazione di esecuzione di una specifica \glossaryItem{DSL}. & S \tabularnewline \hline
+TU-50 & Verificare che l'endpoint GET /api/companies/:company\_id/databases corrisponda all'operazione di ottenimento dei database di una \glossaryItem{Company}. & S \tabularnewline \hline
+TU-51 & Verificare che l'endpoint GET /api/companies/:company\_id/databases/:database\_id corrisponda all'operazione di ottenimento delle informazioni di un database di una \glossaryItem{Company}. & S \tabularnewline \hline
+TU-52 & Verificare che l'endpoint POST /api/companies/:company\_id/databases corrisponda all'operazione di aggiunta di un database ad una \glossaryItem{Company}. & S \tabularnewline \hline
+TU-53 & Verificare che l'endpoint PUT /api/companies/:company\_id/databases/:database\_id corrisponda all'operazione di aggiornamento delle informazioni di una \glossaryItem{company}. & S \tabularnewline \hline
+TU-54 & Verificare che l'endpoint DELETE /api/companies/:company\_id/databases/:database\_id corrisponda all'operazione di cancellazione di un database di una \glossaryItem{Company}. & S \tabularnewline \hline
+TU-55 & Verificare che l'endpoint GET /api/companies/:company\_id/databases/:database\_id/collections corrisponda all'operazione di ottenimento delle collections di un database di una \glossaryItem{Company}. & S \tabularnewline \hline
+TU-56 & Verificare che l'endpoint GET /api/admin/companies corrisponda all'operazione di ottenimento di tutte le \glossaryItem{Company} registrate a  \glossaryItem{MaaS}. & S \tabularnewline \hline
+TU-57 & Verificare che l'endpoint POST /api/admin/superadmins corrisponda all'operazione di aggiunta di un nuovo Super Admin. & S \tabularnewline \hline
+TU-58 & Verificare che l'endpoint POST /api/admin/companies/:company\_id/users corrisponda all'operazione di aggiunta di un nuovo utente. & S \tabularnewline \hline

@@ -116,6 +116,28 @@ Di seguito vengono riportati gli esiti del calcolo dell'indice \glossaryItem{Gul
 		\end{table}
 \paragraph*{SV e BV}
 Di seguito vengono riportati gli esiti del calcolo degli indici SV e BV per il periodo di Progettazione di Dettaglio e Codifica.
+
+
+\subsubsection{Revisione di accettazione}
+\paragraph*{Indice \glossaryItem{Gulpease}}
+Di seguito vengono riportati gli esiti del calcolo dell'indice \glossaryItem{Gulpease} per la Revisione di accettazione.
+\begin{table}[H]
+			\centering
+				\begin{tabular}{|l|l|l|ll}
+					\cline{1-3}
+					 \textbf{Macro-attività}  & \textbf{Indice \glossaryItem{Gulpease}}  & \textbf{Esito}  &  \\ \cline{1-3}
+					 Norme di \glossaryItem{Progetto} & 50 & Superato &  \\ \cline{1-3}
+					 Studio Fattibilità & 57 & Superato &  \\ \cline{1-3}
+					 Analisi dei Requisiti & 59 & Superato &  \\ \cline{1-3}
+					 Piano di \glossaryItem{Progetto} & 55 & Superato &  \\ \cline{1-3}
+					 Piano di Qualifica & 64 & Superato &  \\ \cline{1-3}
+					 Specifica Tecnica & 56 & Superato & \\ \cline{1-3}
+					 Glossario & 60 & Superato &  \\ \cline{1-3}
+				\end{tabular}
+				\caption{Esiti \glossaryItem{verifica} documenti - Revisione di accettazione}
+		\end{table}
+\paragraph*{SV e BV}
+Di seguito vengono riportati gli esiti del calcolo degli indici SV e BV per la Revisione di accettazione.
 \begin{table}[H]
 \centering
 \begin{tabular}{|l|l|}
@@ -158,3 +180,43 @@ Di seguito vengono riportati gli esiti del calcolo degli indici di produttività
 \caption{Valori di produttività di documentazione e codifica del periodo di Progettazione di Dettaglio e Codifica}
 \end{table}
 Il valore molto basso della produttività di documentazione del codice è dovuto all'alto numero di righe di documentazione scritte, in particolare per le classi del \glossaryItem{package} routes, per le quali è stata inserita, oltre al TypeDoc di TypeScript anche la spiegazione di ciascuna \glossaryItem{API} implementata, completa di parametri, valori ritornati ed esempi d'uso (sia in caso di successo che di fallimento). Il totale di righe di documentazione scritte, infatti, ammonta a 2070, più del doppio delle righe di codice (pari a 855).
+
+\subsubsection{Validazione}
+\paragraph*{SV e BV}
+Di seguito vengono riportati gli esiti del calcolo degli indici SV e BV per il periodo di Validazione.
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|}
+\cline{1-2}
+\textbf{Schedule Variance} & +11 ore \\ \cline{1-2}
+\textbf{Budget Variance} & +76 \euro{} \\ \cline{1-2}
+\end{tabular}
+\caption{SV e BV del periodo di Validazione}
+\end{table}
+In quest'occasione il team ha sforato quanto pianificato, soprattutto per le difficoltà incontrate nel codificare MaaS. Tuttavia, sebbene sia stato speso più di quanto preventivato, i risparmi degli altri periodo hanno permesso al team di non superare il costo inizialmente preventivato di 13.647 \euro{}. In totale, infatti, il risparmio complessivo è stato di 355 \euro.
+\paragraph*{Numero di cambiamenti} 
+In seguito alle indicazioni date in sede di revisione sono stati apportati alcuni cambiamenti ai documenti, nessuno dei quali ha avuto grande impatto sul prodotto, in quanto gli errori segnalati riguardavano la profondità dei contenuti. L'unico cambiamento degno di nota è stato quello apportato al \ManualeSviluppatore{} per renderlo più facilmente consultabile e per migliorare la qualità delle descrizioni delle funzionalità esposte dal server.  \\
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|}
+\cline{1-2}
+\textbf{Esito}  & \textbf{Range di appartenenza}  \\ \cline{1-2}
+1 & Ottimale \\ \cline{1-2}
+\end{tabular}
+\caption{Numero di cambiamenti del periodo di Validazione}
+\end{table}
+
+\paragraph*{Produttività}
+Di seguito vengono riportati gli esiti del calcolo degli indici di produttività per il periodo di Validazione.
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|}
+\cline{1-2}
+\textbf{Di Documentazione (Manuali)} & 0.1 \\ \cline{1-2} % (ore di stesura manuali)/(numero righe di codice dei manuali)
+\textbf{Di Documentazione (Codice)} & 0.08 \\ \cline{1-2} % (ore di stesura codice)/(numero righe di documentazione del codice => vedi commento SLOC misure codice) 
+\textbf{Di Codifica} & 0.14 \\ \cline{1-2} % (ore di stesura del codice)/(numero di righe di codice => vedi misurazione sloc nella sezione di misurazione del codice)
+\textbf{Di Validazione} & 1 \\ \cline{1-2} %(#test accettazione)/(#test accetazione superati)
+\end{tabular}
+\caption{Valori di produttività del periodo di Validazione}
+\end{table}
+Rispetto all'ultimo periodo la produttività di documentazione è leggermente migliorata. Per contro, però, è calata quella di codifica. Questa riduzione è stata causata dal minor tempo, e dalle minori energie, dei membri del team, impegnati con stage, lavoro e tesi. Questi altri impegni hanno causato molte difficoltà nella codifica di MaaS, sia per il minor tempo a disposizione che per la minore freschezza mentale durante lo sviluppo. Inoltre, i problemi rilevati con le tecnologie usate hanno contribuito a questo abbassamento.

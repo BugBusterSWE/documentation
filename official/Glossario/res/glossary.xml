@@ -805,6 +805,18 @@ descrivere i dettagli di un metodo complesso.</definition>
 		<definition>Applicazione software in grado di gestire richieste HTTP o HTTPS provvenienti dai client.</definition>
     </term>
     <term>
+		<word>Stub</word>
+		<definition>Frammento di codice passivo e fittizio usato per simulare il comportamento di codice esistente o per sostituire codice non ancora implementato.</definition>
+    </term>
+    <term>
+		<word>Driver</word>
+		<definition>Componente attivo fittizio usato per pilotare l'esecuzione di porzioni di codice con lo scopo di verificarne il funzionamento.</definition>
+    </term>
+    <term>
+		<word>Logger</word>
+		<definition>Componente non intrusivo usato nelle fasi di test di un prodotto software con lo scopo di registrare dei dati sull'esecuzione del codice per favorire l'analisi dei risultati.</definition> 
+    </term>
+    <term>
         <word>Tag</word>
         <definition>Marcatori utilizzati per aggiungere semantica ad un documento XML. I tag possono contenere informazioni in due modi: attraverso dei parametri oppure racchiudendo del testo o altri tipi di informazioni. Segue che possono essere tag di apertura, necessariamente seguiti da tag di chiusura (tra i quali si può avere un contenuto) oppure tag che si aprono e chiudono, e possono quindi fornire informazioni solo attraverso i loro parametri. Ogni tag inizia e finisce con delle parentesi angolari (che in altri contesti sarebbero i segni di minore e maggiore), mentre la chiusura del tag o il tag di chiusura è rappresentato dalla barra /. </definition>
     </term>
@@ -816,5 +828,6 @@ descrivere i dettagli di un metodo complesso.</definition>
         <word>XSL</word>
         <extended>eXtensible Stylesheet Language</extended>
         <definition>Linguaggio di descrizione dei fogli di stile per i documenti in formato XML. Massimizza la possibilità di associare molti e diversi linguaggi di marcatura agli elementi del documento, arricchendone le proprietà semantiche. L'XSL permette di visualizzare lo stesso documento XML in formati diversi.</definition>
+
     </term>
 </glossary>
