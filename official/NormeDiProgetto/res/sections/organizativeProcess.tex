@@ -25,7 +25,7 @@ Questo \glossaryItem{processo} produce:
 
 \paragraph*{Assegnazione dei \glossaryItem{task}} Il responsabile si occuperà di assegnare i \glossaryItem{task} in base alla disponibilità dei membri del gruppo e alla rotazione dei ruoli.
 
-\paragraph*{Assegnazione \glossaryItem{verifica} delle pull request} Le pull request create dall'assegnatario di un \glossaryItem{task} per la \glossaryItem{verifica} sono assegnate in automatico. L'assegnatario di un \glossaryItem{task}, nel momento di creazione di una Pull Ruquest, dovrà lasciare vuoto il campo \textit{Assignee}. Il procedimento d'assegnazione dovrà valutare il verificatore in base ai seguenti criteri:
+\paragraph*{Assegnazione \glossaryItem{verifica} delle pull request} Le pull request create dall'assegnatario di un \glossaryItem{task} per la \glossaryItem{verifica} sono assegnate in automatico. L'assegnatario di un \glossaryItem{task}, nel momento di creazione di una Pull Request, dovrà lasciare vuoto il campo \textit{Assignee}. Il procedimento d'assegnazione dovrà valutare il verificatore in base ai seguenti criteri:
 \begin{itemize}
 \item Il verificatore della Pull Request deve essere diverso dall'assegnatario del \glossaryItem{task}.
 \item Il verificatore è un membro del gruppo \textit{BugBusters} con il numero minore di Pull Request assegnate.
@@ -54,7 +54,7 @@ Esistono due tipi principali di incongruenze riscontrabili:
 
 \end{itemize}
 
-Il resposabile nell'azione di assegnazione dei \textit{ticket} dovr\`a indicare il ruolo che il destinatario ricopre nell'adempimento di tale \glossaryItem{task}. Questo \`e necessario per il rendiconto economico. I ruoli sono assegnati basandosi sul \PianoDiProgetto.
+Il responsabile nell'azione di assegnazione dei \textit{ticket} dovr\`a indicare il ruolo che il destinatario ricopre nell'adempimento di tale \glossaryItem{task}. Questo \`e necessario per il rendiconto economico. I ruoli sono assegnati basandosi sul \PianoDiProgetto.
 
 
 
@@ -79,7 +79,7 @@ dove:
 \item[Amministratore] \hfill \\ L'\textit{Amministratore} equipaggia, organizza e gestisce l'ambiente di lavoro e di produzione. Collabora con il \textit{Responsabile} alla stesura delle \textit{Norme di \glossaryItem{Progetto}} e del \textit{Piano di \glossaryItem{Progetto}}, e si assicura di:
   \begin{itemize}
 
-  \item Attuare scelte tecnologice concordate con il \textit{Responsabile};
+  \item Attuare scelte tecnologiche concordate con il \textit{Responsabile};
   \item Gestire le liste di distribuzione e assicurarne il rispetto;
   \item Controllare \glossaryItem{versioni} e configurazioni del prodotto;
   \item Risolvere i problemi legati alla gestione dei \glossaryItem{processi}.
@@ -114,8 +114,14 @@ dove:
 
 \subsubsection{Attività di organizzazione dell'infrastruttura}
 
-\paragraph*{Sistema di versionamento e suo utilizzo} Il gruppo ha stabilito di utilizzare per tutti i file che richiedono versionamento di il \glossaryItem{CVS} \glossaryItem{Git}, tramite il servizio \glossaryItem{GitHub}.
+\paragraph*{Sistema di versionamento scelto} Il gruppo ha stabilito di utilizzare per tutti i file che richiedono versionamento 
+il \glossaryItem{CVS} \glossaryItem{Git}, tramite il servizio \glossaryItem{GitHub}. \\
+Nonostante esistano varie alternative, come \textit{Mercurial}, \textit{Subversion} e \textit{Bazaar}, è stato scelto Git in quanto soddisfa
+appieno le necessità di versionamento dei file per questo progetto e, inoltre, permette di versionare i file localmente, senza bisogno di una connessione
+internet attiva. Le scelte di Git e GitHub sono state effettuate anche perché più membri del gruppo avevano già avuto l'opportunità 
+di lavorare con tali strumenti. \\
 
+\textbf{Utilizzo di Git/GitHub}
 È stato stabilito che ogni commit debba appartenere a un \glossaryItem{task}. I \glossaryItem{task}, assegnati dal \textit{Responsabile} ai vari membri del gruppo corrispondono a \glossaryItem{issue} su \glossaryItem{GitHub}. All'apertura della \glossaryItem{issue} corrisponde alla creazione di un branch, il cui nome sarà conforme alla seguente nomenclatura: \textbf{issue\#\textit{numero issue}}. In caso di una attivit\`a, viene creata una issue su \glossaryItem{GitHub} che corrisponde ad un branch (creato dall'assegnatario dell'attivit\`a) con la seguente nomenclatura: \textbf{activity\#\textit{numeroissue}}. Da li, tutti i \glossaryItem{task} di quella attivit\`a deriveranno da quel branch. L'assegnatario del \glossaryItem{task}, durante il suo svolgimento, viene coadiuvato da un sistema di \glossaryItem{Continuous Integration}. Al termine dello svolgimento di tale \glossaryItem{task} l'assegnatario esegue una \glossaryItem{Pull Request}, seguita da un controllo di contenuto da parte di un verificatore umano. La Pull Request deve avere label e \glossaryItem{Milestone} uguali a quelle del \glossaryItem{task} corrispondente. In seguito il verificatore
 chiude il \glossaryItem{task}. Al completamento di un \glossaryItem{task} la issue ad esso corrispondente va chiusa. In caso di conflitto il verificatore operer\`a congiuntamente all'assegnatario della issue per risolvere problema.
 In questa maniera vengono inseriti dei \glossaryItem{Configuration Item} che sono stati verificati sia da sistemi di integrazione continua e sia da umani, coprendo rispettivamente la parte prettamente sintattica (scrittura di codice corretto) e la parte di contenuto (che una macchina non pu\`o controllare), comportando nel \glossaryItem{repository} l'inserimento di codice sempre corretto e verificato e generando \glossaryItem{baseline} sempre consistenti.
@@ -130,6 +136,23 @@ In questa maniera vengono inseriti dei \glossaryItem{Configuration Item} che son
 \item \glossaryItem{TeamWork} per l'assegnazione e la gestione dei \glossaryItem{task}
 \item \glossaryItem{Chronos}, software sviluppato internamente al gruppo; è in grado di fornire al \textit{Responsabile} una visione globale dell'andamento dei \glossaryItem{processi}
 \item \glossaryItem{Mephisto} \glossaryItem{progetto} proveniente dal \textit{fork} di \glossaryItem{Tracy}, software di \glossaryItem{tracciamento} dei requisiti sviluppato da un gruppo di questo corso. Tale software è stato accuratamente modificato e riadattato alle nostre necessità.
+\end{itemize}
+
+\paragraph*{Comunicazioni} 
+\begin{itemize}
+	\item \textbf{Interne} 
+	Per le comunicazioni interne deve essere utilizzata l'applicazione Slack, la quale permette sia comunicazioni di gruppo sia messaggi
+	privati. Essa inoltre mette a disposizione la possibilità di creare più canali di comunicazione su argomenti specifici (ad esempio per il documento 
+	\textit{Norme di Progetto} può essere creato il canale ad esso dedicato). I membri del gruppo saranno dunque tenuti ad inviare i propri messaggi
+	nel canale più adatto ad essi. \\
+	Per le videochiamate vengono utilizzati gli applicativi \textit{Google Hangouts} e \textit{TeamSpeak}. \\
+	I componenti del gruppo sono tenuti a prestare attenzione alla quantità e alla qualità dei messaggi spediti al fine 
+	di non creare confusione e difficoltà di comunicazione. \\
+	\item \textbf{Esterne}
+	Per le comunicazioni esterne è stato creato un indirizzo di posta elettronica dedicato: \href{mailto:me@somewhere.com}{bugbusterswe@gmail.com}. \\
+	Il \textit{Responsabile di Progetto} ha l'incarico di mantenere i contatti tra il team e le componenti esterne utilizzando 
+	tale indirizzo di posta elettronica. Inoltre egli ha il dovere di informare i membri del gruppo delle discussioni avvenute con
+	componenti esterne tramite l'applicazione Slack.
 \end{itemize}
 
 \subsection{Processo di miglioramento}
